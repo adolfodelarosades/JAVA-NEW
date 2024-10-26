@@ -2,7 +2,7 @@
 
 ## Contenido
 
-### 1. Comienza con Java 59m
+### 1. [Comienza con Java](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/001_Java_8_desde_Cero/01_Comienza_con_Java.md) 59m
 
 * Presentación del profesor y curso 5:12 
 * Instalación de Java 16:13 
