@@ -1,4 +1,17 @@
-# Java 8 desde Cero
+# Java 8 desde Cero 🕙9:02:50
+
+Aprende programación en Java realizando esta formación Java online, y comienza a crear aplicaciones web, aplicaciones móviles y aplicaciones de escritorio.
+
+## Con este Curso aprenderás
+
+* Instalar un entorno de desarrollo para Java
+* Conocerás las variables y su uso en Java.
+* Aprenderás sobre tipos de datos, operadores y estructuras de control
+* Obtendrás conocimientos de programación orientada a objetos con Java
+* Programar clases y objetos en Java
+* Uso de la herencia
+* Manejar de Excepciones
+* Aprenderás el uso básico de la API de Java
 
 ## Contenido
 
