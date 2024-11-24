@@ -53,6 +53,11 @@
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/95e06fcb-48c8-470f-a246-29758a842916">
 
+<img width="1511" alt="image" src="https://github.com/user-attachments/assets/239ca117-6569-4bd9-9013-cdb5c6419970">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8af21b31-02b3-42e2-99db-6c18f1d513cf">
+
+
 
 ## Cerrando conexiones, recursos y manejo de errores
 ## Añadiendo la clase singleton de conexión a la base de datos
