@@ -5,6 +5,15 @@
 
 ## Instalación MySQL
 ## Creando el esquema de base de datos
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/048a920e-6f2a-4c99-abe3-8504f4227126">
+
+<img width="1330" alt="image" src="https://github.com/user-attachments/assets/66d6148d-f169-4ad1-ac68-2149d4f2c3d8">
+
+<img width="938" alt="image" src="https://github.com/user-attachments/assets/9c5164ff-1fe1-4692-b360-d04de834fc48">
+
+
+
 ## Introducción al API JDBC
 ## Actualización creando proyecto Maven en Intellij
 ## Creando nuestro proyecto Java con JDBC
