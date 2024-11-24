@@ -41,6 +41,9 @@
 <img width="1012" alt="image" src="https://github.com/user-attachments/assets/78b072cc-7823-46db-83b8-d6b4978f118f">
 
 ## Introducción al API JDBC
+
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/616c1d92-cb32-4533-9337-b1007690af93">
+
 ## Actualización creando proyecto Maven en Intellij
 ## Creando nuestro proyecto Java con JDBC
 ## Cerrando conexiones, recursos y manejo de errores
