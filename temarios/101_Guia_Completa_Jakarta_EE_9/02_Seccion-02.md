@@ -57,6 +57,39 @@
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/8af21b31-02b3-42e2-99db-6c18f1d513cf">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8e98e862-4d9a-4d14-9f66-8ef5718f8092">
+
+<img width="1021" alt="image" src="https://github.com/user-attachments/assets/8ad05b96-67b9-4b57-bc58-0e355f203fac">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bec010b5-6f45-4894-b613-568e94fea8a4">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e30adbab-067f-4937-b15c-5217092cdfd3">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6b20b156-a9fd-421a-8f1e-9c8ce8110aa7">
+
+<img width="514" alt="image" src="https://github.com/user-attachments/assets/04b2b4a9-ebd8-4a77-a7d9-fb1c2a104bd7">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/5a0ee36c-bd67-4ac3-b293-df241aeae89a">
+
+Crear clase EjemploJDBC.java
+
+<img width="1137" alt="image" src="https://github.com/user-attachments/assets/4ebd7367-b3bd-4c83-97e2-9acbd3105bcd">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/429340e4-e840-4954-af6d-820ae0708cf3">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/51374bff-97c1-49b0-9aa9-94b5a52f75e7">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2d7c9e41-1729-4af0-859e-856e7c475fac">
+
+ServerTimeZone
+
+https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/9827bea5-1b76-49a4-8b90-bcd8c91c1b85">
+
+```String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";```java
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3eab8b5a-c24c-4356-94e3-a6924a7c08eb">
 
 
 ## Cerrando conexiones, recursos y manejo de errores
