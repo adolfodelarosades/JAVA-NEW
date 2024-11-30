@@ -92,6 +92,7 @@ https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/3eab8b5a-c24c-4356-94e3-a6924a7c08eb">
 
+**```EjemploJDBC.java```**
 ```java
 package org.example;
 
@@ -150,6 +151,7 @@ Si modificamos el error en el nombre de la tabla el código se ejecuta.
 
 Como se puede apreciar el código crecio para asegurar el cierre de las conexiones se haga en caso de error.
 
+**```EjemploJDBC_02.java```**
 ```java
 package org.example;
 
@@ -217,6 +219,7 @@ Si nuestra ejecución es correcta hemos garantizado que se cierre todo lo declar
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/ba66f1c9-73f5-4a41-8daf-061509c2ad13">
 
+**```EjemploJDBC_03.java```**
 ```java
 package org.example;
 
@@ -245,9 +248,13 @@ public class EjemploJDBC_03 {
     }
 }
 ```
+
 #### 💻 EjemploJDBC_04.java - Imprimiendo todos los registros con todos sus campos
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/1db67c3c-65e4-4227-9778-76751b9c3d5a">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/12a8f8a6-cc32-43eb-9da1-c821520fa40a">
+
 
 **```EjemploJDBC_04.java```**
 
@@ -285,6 +292,23 @@ public class EjemploJDBC_04 {
     }
 }
 ```
+
+### Botón Maven
+
+<img width="537" alt="image" src="https://github.com/user-attachments/assets/40b7ed52-22ed-4c34-85aa-5518e316cfe1">
+
+<img width="362" alt="image" src="https://github.com/user-attachments/assets/be94d892-71ff-454e-97f7-c4788264d417">
+
+<img width="707" alt="image" src="https://github.com/user-attachments/assets/26a78627-cabe-4a71-a645-8e0a194cc294">
+
+**JAR: Java ARchive** , Archivo comprimido de Java. Empaqueta la aplicación con el código compilado (.class), listo para ejecutarlo.
+
+**WAR: Java Web Application ARchive** Archivo comprimido de Java para Web.
+
+
+
+
+
 
 ## 8. Añadiendo la clase singleton de conexión a la base de datos
 
