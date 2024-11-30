@@ -203,6 +203,20 @@ public class EjemploJDBC_02 {
 
 Existe una forma más sencilla de hacer esto usando los **try con recursos**.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/dccb33b6-2051-4498-9b74-04dcd2b9f681">
+
+Como se puede observar el código queda mucho más compacto. Todo lo que se ponga como parámetros en el ```try```, se cerrara automaticamente al finalizar el try, independientemente de si ha existido error o no.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/7187cd56-2308-419a-bfcf-ded1e672e2d8">
+
+Podríamos provocar otro error diferente por ejemplo un usuario inexistente o un password incorrecto.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b42aeb90-f8f1-466b-a5cb-78d12bb4b6dc">
+
+Si nuestra ejecución es correcta hemos garantizado que se cierre todo lo declarado en el **try con recursos**.
+
+
+
 
 
 
