@@ -301,16 +301,50 @@ public class EjemploJDBC_04 {
 
 <img width="707" alt="image" src="https://github.com/user-attachments/assets/26a78627-cabe-4a71-a645-8e0a194cc294">
 
+<img width="701" alt="image" src="https://github.com/user-attachments/assets/3b1e2bdc-29bb-4608-9649-525971e26cfc">
+
+**```clean```** : 
+
+**```validate```** : 
+
+**```compile```** : 
+
+**```test```** : 
+
+**```package```** : Empaqueta y crea JAR o WAR
+
+**```verify```** : 
+
+**```install```** : Crea JAR o WAR y lo copia en nuestro repositorio local de Maven, de esa forma podemos añadirlo como libreria en otros proyectos con una dependencia.
+
+**```site```** : 
+
+**```deploy```** : 
+
 **JAR: Java ARchive** , Archivo comprimido de Java. Empaqueta la aplicación con el código compilado (.class), listo para ejecutarlo.
 
 **WAR: Java Web Application ARchive** Archivo comprimido de Java para Web.
 
 
-
-
-
-
 ## 8. Añadiendo la clase singleton de conexión a la base de datos
+
+Problemas actuales de nuestro código. 
+
+La conexión a la BD esta muy acoplada en nuestra clase, donde definimos la conexión para su uso, podríamos tener más clases que realicen diferentes tareas sobre la BD como puede ser otras consultas, insertar registros, eliminar productos, etc. No deberíamos hacer una conexión a la BD en cada clase, ya que eso implicaria realizar una conexión nueva cada que queramos trabajar sobre la BD. Esto es incorrecto por varias razones:
+
+* Debebos reutilizar el código.
+* En el problema que ponemos encima de la mesa existiria duplicación de código, duplicando la conexión en varios sitios. 
+* Duplicariamos los datos de la conexión a la BD y que pasa si estos cambian, tendríamos que ir a cada sitio donde se han definido, por lo que el mantenimiento sería muy engorrozo.
+* Al usar el ```DriverManager``` estariamos creando una nueva conexión a la BD en cada lugar donde se use. La conexión a la BD es un recurso costoso que impacta directamente el rendimiento de nuestra aplicación.
+* Necesitamos definir una sola conexión a la BD y reutilizarla en nuestro código, usando el patrón Singelton.
+
+#### 💻 ConexionBD.java - Clase de Utilidad para conectarse a la BD.
+
+
+
+
+
+
 
 ## 9. La interface Repositorio
 
