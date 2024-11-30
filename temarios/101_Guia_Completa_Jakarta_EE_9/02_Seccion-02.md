@@ -47,8 +47,9 @@
 ## 5. Actualización creando proyecto Maven en Intellij
 ## 6. Creando nuestro proyecto Java con JDBC
 
-### 💻 101_Guia_Completa_Jakarta_EE_9
+### 💻 Proyecto 101_Guia_Completa_Jakarta_EE_9
 
+#### 💻 EjemploJDBC.java
 <img width="1511" alt="image" src="https://github.com/user-attachments/assets/a153414c-6e73-4c9b-823d-a8fee7da6d8c">
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/95e06fcb-48c8-470f-a246-29758a842916">
