@@ -92,8 +92,120 @@ https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/3eab8b5a-c24c-4356-94e3-a6924a7c08eb">
 
+```java
+package org.example;
+
+import java.sql.*;
+
+public class EjemploJDBC {
+
+    public static void main(String[] args) {
+
+        String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";
+        String username = "root";
+        String password = "root";
+
+        try {
+            Connection conn = DriverManager.getConnection(url, username, password);
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM productos");
+
+            while (rs.next()){
+                System.out.println(rs.getString("nombre"));
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+```
+
 
 ## 7. Cerrando conexiones, recursos y manejo de errores
+
+#### 💻 EjemploJDBC_02.java - Cerrando conexiones
+
+¿Qué pasa si ocurre un error? Por ejemplo que no encuentre la tabla.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/08253ba2-4802-4723-9020-4d544a8af403">
+
+El error indica que no encuentra la tabla ```productos2```, al ejecutar la sentencia del query y fallar se va al interior del ```catch```por lo que no ejecuta las sentencias de cierre del ```ResultSet```, ```Statement``` y ```Connection```, las conexiones se quedan abiertas.
+
+Pasa solucionar esto se debe añadir ```finaly```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/02490974-c4c9-44f4-b86f-5f8d9d6a4f33">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a2213f5b-2672-4480-80ae-909dd344ae1d">
+
+Con este cambio hemos garantizado que si existe un error todas las conexiones se cierran.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b403b3fc-f8b6-4f37-b2b6-d862ae14857f">
+
+Si modificamos el error en el nombre de la tabla el código se ejecuta.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c833248a-a677-4baf-a515-f0e056ea231e">
+
+Como se puede apreciar el código crecio para asegurar el cierre de las conexiones se haga en caso de error.
+
+```java
+package org.example;
+
+import java.sql.*;
+
+public class EjemploJDBC_02 {
+
+    public static void main(String[] args) {
+
+        String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";
+        String username = "root";
+        String password = "root";
+
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DriverManager.getConnection(url, username, password);
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery("SELECT * FROM productos");
+
+            while (rs.next()){
+                System.out.println(rs.getString("nombre"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (rs != null){
+                    rs.close();
+                }
+                if (stmt != null) {
+                    stmt.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException throwables) {
+                throwables.fillInStackTrace();
+            }finally {
+
+            }
+        }
+    }
+}
+
+```
+
+#### 💻 EjemploJDBC_03.java - try con recursos
+
+Existe una forma más sencilla de hacer esto usando los **try con recursos**.
+
+
+
+
 
 ## 8. Añadiendo la clase singleton de conexión a la base de datos
 
