@@ -245,9 +245,46 @@ public class EjemploJDBC_03 {
     }
 }
 ```
+#### 💻 EjemploJDBC_04.java - Imprimiendo todos los registros con todos sus campos
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1db67c3c-65e4-4227-9778-76751b9c3d5a">
 
+**```EjemploJDBC_04.java```**
 
+```java
+package org.example;
+
+import java.sql.*;
+
+public class EjemploJDBC_04 {
+
+    public static void main(String[] args) {
+
+        String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";
+        String username = "root";
+        String password = "root";
+
+        try (
+                Connection conn = DriverManager.getConnection(url, username, password);
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM productos")
+                )
+        {
+            while (rs.next()){
+                System.out.print(rs.getInt("id"));
+                System.out.print(" | ");
+                System.out.print(rs.getString("nombre"));
+                System.out.print(" | ");
+                System.out.print(rs.getInt("precio"));
+                System.out.print(" | ");
+                System.out.println(rs.getDate("fecha_registro"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+```
 
 ## 8. Añadiendo la clase singleton de conexión a la base de datos
 
