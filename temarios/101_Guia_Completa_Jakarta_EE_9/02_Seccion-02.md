@@ -1,10 +1,10 @@
 # Sección 2: Introducción a Base de Datos con JDBC
 
 
-## Introducción SQL 12 min
+## 1. Introducción SQL 12 min
 
-## Instalación MySQL
-## Creando el esquema de base de datos
+## 2. Instalación MySQL
+## 3. Creando el esquema de base de datos
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/048a920e-6f2a-4c99-abe3-8504f4227126">
 
@@ -40,14 +40,14 @@
 
 <img width="1012" alt="image" src="https://github.com/user-attachments/assets/78b072cc-7823-46db-83b8-d6b4978f118f">
 
-## Introducción al API JDBC
+## 4. Introducción al API JDBC
 
 
 
-## Actualización creando proyecto Maven en Intellij
-## Creando nuestro proyecto Java con JDBC
+## 5. Actualización creando proyecto Maven en Intellij
+## 6. Creando nuestro proyecto Java con JDBC
 
-101_Guia_Completa_Jakarta_EE_9
+### 💻 101_Guia_Completa_Jakarta_EE_9
 
 <img width="1511" alt="image" src="https://github.com/user-attachments/assets/a153414c-6e73-4c9b-823d-a8fee7da6d8c">
 
@@ -87,32 +87,54 @@ https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/9827bea5-1b76-49a4-8b90-bcd8c91c1b85">
 
-```String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";```java
+```String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";```
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/3eab8b5a-c24c-4356-94e3-a6924a7c08eb">
 
 
-## Cerrando conexiones, recursos y manejo de errores
-## Añadiendo la clase singleton de conexión a la base de datos
-## La interface Repositorio
-## Implementando la clase Repositorio
-## Implementando la clase Repositorio parte 2
-## Implementando la clase Repositorio parte 3 el CRUD
-## La clase Repositorio parte 4 probando el CRUD
-## Relaciones de tablas creando esquema DDL
-## Relaciones de objetos del modelo o DTO
-## Una conexión por sentencia u operación
-## Introducción Pool de conexiones
-## Implementando pool de conexiones
-## Introducción Transacciones JDBC
-## Ejemplo Transacciones Singleton
-## Ejemplo Transacciones Singleton parte 2
-## Ejemplo Transacciones con pool de conexiones
-## Ejemplo Transacciones con pool de conexiones parte 2
-## Ejemplo Transacciones con pool de conexiones parte 3 (obtener último insert id)
-## Ejemplo Transacciones con pool de conexiones parte 4
-## Agregando la interface Service y su clase de implementación transaccional
-## Implementando los metodos de la clase Service
-## Utilizando la clase Service en la clase de ejemplo con el main
-## Descargar Código Fuente
+## 7. Cerrando conexiones, recursos y manejo de errores
+
+## 8. Añadiendo la clase singleton de conexión a la base de datos
+
+## 9. La interface Repositorio
+
+## 10. Implementando la clase Repositorio
+
+## 11. Implementando la clase Repositorio parte 2
+
+## 12. Implementando la clase Repositorio parte 3 el CRUD
+
+## 13. La clase Repositorio parte 4 probando el CRUD
+
+## 14. Relaciones de tablas creando esquema DDL
+
+## 15. Relaciones de objetos del modelo o DTO
+
+## 16. Una conexión por sentencia u operación
+
+## 17. Introducción Pool de conexiones
+
+## 18. Implementando pool de conexiones
+
+## 19. Introducción Transacciones JDBC
+
+## 20. Ejemplo Transacciones Singleton
+
+## 21. Ejemplo Transacciones Singleton parte 2
+
+## 22. Ejemplo Transacciones con pool de conexiones
+
+## 23. Ejemplo Transacciones con pool de conexiones parte 2
+
+## 24. Ejemplo Transacciones con pool de conexiones parte 3 (obtener último insert id)
+
+## 25. Ejemplo Transacciones con pool de conexiones parte 4
+
+## 26. Agregando la interface Service y su clase de implementación transaccional
+
+## 27. Implementando los metodos de la clase Service
+
+## 28. Utilizando la clase Service en la clase de ejemplo con el main
+
+## 29. Descargar Código Fuente
 
