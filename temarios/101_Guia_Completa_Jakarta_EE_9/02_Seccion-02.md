@@ -203,11 +203,11 @@ public class EjemploJDBC_02 {
 
 Existe una forma más sencilla de hacer esto usando los **try con recursos**.
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/dccb33b6-2051-4498-9b74-04dcd2b9f681">
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b4f825ef-373c-4e35-9aef-39b9a06711c6">
 
 Como se puede observar el código queda mucho más compacto. Todo lo que se ponga como parámetros en el ```try```, se cerrara automaticamente al finalizar el try, independientemente de si ha existido error o no.
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/7187cd56-2308-419a-bfcf-ded1e672e2d8">
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a13dbc7d-82b7-429e-a5b3-b4d87e109df6">
 
 Podríamos provocar otro error diferente por ejemplo un usuario inexistente o un password incorrecto.
 
@@ -215,8 +215,36 @@ Podríamos provocar otro error diferente por ejemplo un usuario inexistente o un
 
 Si nuestra ejecución es correcta hemos garantizado que se cierre todo lo declarado en el **try con recursos**.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ba66f1c9-73f5-4a41-8daf-061509c2ad13">
 
+```java
+package org.example;
 
+import java.sql.*;
+
+public class EjemploJDBC_03 {
+
+    public static void main(String[] args) {
+
+        String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";
+        String username = "root";
+        String password = "root";
+
+        try (
+                Connection conn = DriverManager.getConnection(url, username, password);
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM productos")
+                )
+        {
+            while (rs.next()){
+                System.out.println(rs.getString("nombre"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+```
 
 
 
