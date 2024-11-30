@@ -340,11 +340,71 @@ La conexión a la BD esta muy acoplada en nuestra clase, donde definimos la cone
 
 #### 💻 ConexionBD.java - Clase de Utilidad para conectarse a la BD.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1faaae5b-d1a6-4ec3-807f-87000c786387">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/559d0aa0-abf6-40ec-9e13-1470c7f5369c">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/75b2e844-5f89-4578-8323-f6c785b535c0">
 
+**```ConexionBD.java```**
 
+```java
+package org.example.util;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConexionBD {
+
+    private static String url = "jdbc:mysql://localhost:3306/101_JakartaEE9?serverTimezone=Europe/Madrid";
+    private static String username = "root";
+    private static String password = "root";
+    private static Connection connection;
+
+    public static Connection getInstance() throws SQLException {
+        if(connection == null){
+            connection = DriverManager.getConnection(url, username, password);
+        }
+        return connection;
+    }
+}
+```
+
+**```EjemploJDBC_05_Conexion.java```**
+
+```java
+package org.example;
+
+import org.example.util.ConexionBD;
+
+import java.sql.*;
+
+public class EjemploJDBC_05_Conexion {
+
+    public static void main(String[] args) {
+
+        try (
+                Connection conn = ConexionBD.getInstance();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM productos")
+                )
+        {
+            while (rs.next()){
+                System.out.print(rs.getInt("id"));
+                System.out.print(" | ");
+                System.out.print(rs.getString("nombre"));
+                System.out.print(" | ");
+                System.out.print(rs.getInt("precio"));
+                System.out.print(" | ");
+                System.out.println(rs.getDate("fecha_registro"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+```
 
 ## 9. La interface Repositorio
 
