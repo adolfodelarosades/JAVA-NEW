@@ -406,7 +406,124 @@ public class EjemploJDBC_05_Conexion {
 }
 ```
 
-## 9. La interface Repositorio
+## 9. Clase de Modelo y la interface Repositorio
+
+La Clase de Modelo representa los datos de la tabla, la tabla Producto con sus atributos:
+
+<img width="774" alt="image" src="https://github.com/user-attachments/assets/136aab1d-7866-416d-a545-222a0b37386c">
+
+Mapearemos cada atributo con cada campo de la tabla, lo que nos permitira en ver de trabajar con registros, con el ResultSet, nos permitira trabajar más orientado a objetos. Una clase con métodos getters y setters, constructores, etc.
+
+Existe el patron de diseño **DAO Data Access Object - Objeto de Acceso a Datos**, el que se encarga de acceder a los datos, implementar un CRUD. El DAO se refiere a una abstracción de los datos de la percistencia, es decir a todo lo que es la BD, tablas, campos, etc.
+
+Alternativamente al uso de los DAOs existen los **Repository** el cual es una semantica, es una abstracción de una colección de objetos, como si fuera el API Collection por ejemplo para añadir, buscar, eliminar objetos en la lista. Nos permite implementar, Altas, Bajas, Modificaciones de una colección de objetos.
+
+El acceso a los datos por lo tanto lo podemos implementar a través del patrón DAO o del patrón Repository.
+
+#### 💻
+
+#### Clase del Modelo - Producto 
+
+<img width="404" alt="image" src="https://github.com/user-attachments/assets/7e207f26-87cf-4ae9-b896-f5352f650953">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8452e34f-3780-41d4-ac76-60a6773f6450">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e9b29a60-b67c-4412-a507-efa1aa60f30e">
+
+
+**```Producto.java```**
+
+```java
+package org.example.model;
+
+import java.util.Date;
+
+public class Producto {
+
+    private Long id;
+    private String nombre;
+    private Integer precio;
+    private Date fechaRegistro;
+
+    public Producto() {
+    }
+
+    public Producto(Long id, String nombre, Integer precio, Date fechaRegistro) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Integer precio) {
+        this.precio = precio;
+    }
+
+    public Date getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(Date fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
+}
+```
+
+#### Repository
+
+Un repositorio consta de la Interface y su implementación. En la Interface solo defimos la firma de los métodos y en la implementación justo hacemos eso, implementar cada método.
+
+En nuestro caso podemos tener un Repositorio para Producto, pero lo que vamos hacer es generar una Interface Generica para ver si más adelante la podemos reutilzar.
+
+<img width="1034" alt="image" src="https://github.com/user-attachments/assets/158b799c-2eae-4617-845a-e48ded973cbc">
+
+Contamos con cuatro métodos que nos van a permitir:
+
+* Recuperar todos los registros
+* Recuperar un registro por su ID
+* Crear o Modificar un nuevo registro
+* Eliminar un registro.
+
+**```Repositorio.java```**
+
+```java
+package org.example.repository;
+
+import java.util.List;
+
+public interface Repositorio<T> {
+
+    List<T> getFindAll();
+
+    T getById(Long id);
+
+    void save(T t);
+
+    void delete(Long id);
+}
+```
+
+Existe otro patrón de diseño llamado **DTO Data Transfer Object** se utiliza mucho en aplicaciones distribuidas, con EJBs, con API Rest, son clases con atributos y métodos getters y setters, cuando necesitamos distribuir un API Rest podemos hacerlo sin transferir todos los campos del DTO, podemos colocar solo los que nos importe transferir, lo que nos permite aligerar la respuesta. Para eso usamos los DTOs para transferir los datos del Entity o del POJO según los requerimientos, según la implementación, pero también podriamos distribuir el objeto completo con todas sus relaciones.
 
 ## 10. Implementando la clase Repositorio
 
