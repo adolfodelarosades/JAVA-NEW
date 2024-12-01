@@ -491,6 +491,8 @@ public class Producto {
 
 #### Repository
 
+<img width="401" alt="image" src="https://github.com/user-attachments/assets/8699c8c9-6447-4d2d-8bb4-0ca77973c7f2">
+
 Un repositorio consta de la Interface y su implementación. En la Interface solo defimos la firma de los métodos y en la implementación justo hacemos eso, implementar cada método.
 
 En nuestro caso podemos tener un Repositorio para Producto, pero lo que vamos hacer es generar una Interface Generica para ver si más adelante la podemos reutilzar.
