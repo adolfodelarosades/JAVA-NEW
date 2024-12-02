@@ -529,6 +529,114 @@ Existe otro patrón de diseño llamado **DTO Data Transfer Object** se utiliza m
 
 ## 10. Implementando la clase Repositorio
 
+#### 💻
+
+En la siguiente clase vamos a implementar cada uno de los métodos de la interface:
+
+<img width="1134" alt="image" src="https://github.com/user-attachments/assets/c991ea8a-aec4-4884-8492-b326a5144104">
+
+**```ProductoRepositirioImpl.java```**
+
+```java
+package org.example.repository;
+
+import org.example.model.Producto;
+import org.example.util.ConexionBD;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductoRepositirioImpl implements Repositorio<Producto>{
+
+    private Connection getConnection() throws SQLException {
+        return ConexionBD.getInstance();
+    }
+
+    @Override
+    public List<Producto> getFindAll() {
+        List<Producto> productos = new ArrayList<>();
+
+        try(
+                Statement stmt = getConnection().createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM productos")
+                ){
+            while (rs.next()){
+                Producto p = new Producto();
+                p.setId(rs.getLong("id"));
+                p.setNombre(rs.getString("nombre"));
+                p.setPrecio(rs.getInt("precio"));
+                p.setFechaRegistro(rs.getDate("fecha_registro"));
+                productos.add(p);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return productos;
+    }
+
+    @Override
+    public Producto getById(Long id) {
+        return null;
+    }
+
+    @Override
+    public void save(Producto producto) {
+
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
+}
+```
+
+Vamos a usar el método `getFindAll()` en la siguiente clase:
+
+**```EjemploJDBC_06_Repositorio.java```**
+
+<img width="1122" alt="image" src="https://github.com/user-attachments/assets/8b4c66ff-e3ab-48b8-82b6-e96264cf3529">
+
+
+```java
+package org.example;
+
+import org.example.model.Producto;
+import org.example.repository.ProductoRepositirioImpl;
+import org.example.repository.Repositorio;
+import org.example.util.ConexionBD;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EjemploJDBC_06_Repositorio {
+
+    public static void main(String[] args) {
+
+        try (Connection conn = ConexionBD.getInstance()){
+            Repositorio<Producto> repositorio = new ProductoRepositirioImpl();
+            repositorio.getFindAll().forEach(p -> System.out.println(p.getNombre()));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+```
+
+
+<img width="422" alt="image" src="https://github.com/user-attachments/assets/9eea1020-4f90-40e6-9608-955b7737c8b3">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/52751500-b74e-4a15-b916-fef1f0f97300">
+
+
+
 ## 11. Implementando la clase Repositorio parte 2
 
 ## 12. Implementando la clase Repositorio parte 3 el CRUD
