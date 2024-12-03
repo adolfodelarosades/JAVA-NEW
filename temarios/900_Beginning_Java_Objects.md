@@ -2,6 +2,8 @@
 
 By Jacquie Barker
 
+![image](https://github.com/user-attachments/assets/6c448c5c-5019-4ce9-8095-ba2487dccd93)
+
 * TIEMPO PARA COMPLETAR: 16h 39min
 * NIVEL: Intermedio a avanzado
 * HABILIDADES: Java
