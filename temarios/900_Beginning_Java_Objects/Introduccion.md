@@ -11,8 +11,6 @@ Mi libro se basa en principios atemporales que son independientes de la versión
 
 También hemos incluido mención de algunas de las mejoras significativas del lenguaje Java desde las versiones 8 a la 17 (la versión más nueva que se lanzará al momento de escribir la tercera edición).
 
-Como siempre, agradezco los comentarios de los lectores y espero recibir noticias suyas en jacquie.barker@gmail.com.
-
 Atentamente,
 
 Jacquie
@@ -23,20 +21,23 @@ Este es un libro, ante todo, sobre objetos de software: qué son, por qué son t
 
 Este también es un libro sobre Java: no es un libro específico que explica todo lo que hay que saber sobre Java, sino más bien una introducción suave pero completa al lenguaje, con especial énfasis en cómo hacer la transición desde un modelo de objetos a una aplicación Java funcional, algo que pocos libros, si es que hay alguno, ofrecen.
 
-Objetivos de este libro
+### Objetivos de este libro
+
 Mis objetivos al escribir este libro (y, espero, los suyos por comprarlo) son:
-Hacer que se sienta cómodo con la terminología y los conceptos fundamentales orientados a objetos (OO).
 
-Proporcionarle experiencia práctica con el modelado de objetos , es decir, con el desarrollo de un “plano” orientado a objetos que pueda usarse como base para construir posteriormente un sistema de software orientado a objetos.
+* **Hacer que se sienta cómodo con la terminología y los conceptos fundamentales orientados a objetos (OO)**.
 
-Ilustre los conceptos básicos de cómo dicho modelo de objetos se traduce en una aplicación de software funcional (una aplicación Java, para ser específico, aunque las técnicas que aprenderá para el modelado de objetos se aplican igualmente bien a cualquier lenguaje OO).
+* **Proporcionarle experiencia práctica con el modelado de objetos**, es decir, con el desarrollo de un “blueprint” orientado a objetos que pueda usarse como base para construir posteriormente un sistema de software orientado a objetos.
 
-Le ayudaremos a convertirse en un programador Java competente a lo largo del camino.
+* **Ilustre los conceptos básicos de cómo dicho modelo de objetos se traduce en una aplicación de software funcional - una aplicación Java, para ser específico**, aunque las técnicas que aprenderá para el modelado de objetos se aplican igualmente bien a cualquier lenguaje OO).
 
-Si ya tienes experiencia con el lenguaje Java (pero no con los fundamentos de la programación orientada a objetos), es fundamental para que puedas utilizarlo con éxito que aprendas sobre sus raíces orientadas a objetos. Por otro lado, si eres nuevo en Java, este libro te ayudará a empezar de la mejor manera. De cualquier manera, este libro es una lectura obligada para cualquiera que desee dominar un lenguaje de programación orientado a objetos como Java.
+* **Le ayudaremos a convertirse en un programador Java competente a lo largo del camino**.
 
-Igualmente importante es que este libro no pretende...
-Convertirse en un profesional del modelado de objetos de la noche a la mañana: como todas las habilidades avanzadas, sentirse totalmente cómodo con el modelado de objetos requiere dos cosas: una buena base teórica y mucha práctica. En este libro le doy las bases, incluida una introducción al lenguaje de modelado unificado (UML) , el estándar de la industria para representar un "plano" orientado a objetos de una aplicación de software. (UML se adoptó por primera vez como estándar para modelar sistemas de software orientados a objetos en 1997 y sigue siendo relevante hoy en día). Dicho esto, la única forma en que realmente llegará a ser competente en el modelado de objetos es participando en proyectos de desarrollo y modelado OO a lo largo del tiempo.
+Si ya tienes experiencia con el lenguaje Java (pero no con los fundamentos de la programación orientada a objetos), es fundamental para que puedas utilizarlo con éxito que aprendas sobre sus raíces orientadas a objetos. Por otro lado, si eres nuevo en Java, este libro te ayudará a empezar de la mejor manera. **De cualquier manera, este libro es una lectura obligada para cualquiera que desee dominar un lenguaje de programación orientado a objetos como Java**.
+
+Igualmente importante es que este libro **no** pretende...
+
+* **Convertirse en un profesional del modelado de objetos de la noche a la mañana**: como todas las habilidades avanzadas, sentirse totalmente cómodo con el modelado de objetos requiere dos cosas: una buena base teórica y mucha práctica. En este libro le doy las bases, incluida una introducción al lenguaje de modelado unificado (UML) , el estándar de la industria para representar un "plano" orientado a objetos de una aplicación de software. (UML se adoptó por primera vez como estándar para modelar sistemas de software orientados a objetos en 1997 y sigue siendo relevante hoy en día). Dicho esto, la única forma en que realmente llegará a ser competente en el modelado de objetos es participando en proyectos de desarrollo y modelado OO a lo largo del tiempo.
 
 Mi libro le brindará las habilidades y, con suerte, la confianza para comenzar a aplicar técnicas de objetos en un entorno profesional, que es donde tendrá lugar su verdadero aprendizaje, particularmente si tiene un mentor con experiencia en OO que lo guíe en su primer proyecto de "fuerza industrial".
 
