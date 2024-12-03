@@ -531,7 +531,11 @@ Existe otro patrón de diseño llamado **DTO Data Transfer Object** se utiliza m
 
 #### 💻
 
-En la siguiente clase vamos a implementar cada uno de los métodos de la interface:
+En la siguiente clase vamos a implementar cada uno de los métodos de la interface. 
+
+Lo primero que hacemos es crear un método privado que nos permite generar una conexión a la BD.
+
+A continuación vamos a implementar el primer método de la interface `getFindAll()`.
 
 <img width="1134" alt="image" src="https://github.com/user-attachments/assets/c991ea8a-aec4-4884-8492-b326a5144104">
 
