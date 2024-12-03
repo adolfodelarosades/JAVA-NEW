@@ -9,56 +9,63 @@
 * What Does It Take to Be a Successful Object Modeler?​
 * Summary
 
-Como seres humanos, estamos inundados de información todos los días de nuestra vida. Incluso si pudiéramos apagar temporalmente todas las fuentes de “información electrónica” que nos bombardean constantemente (correos electrónicos, mensajes de voz, podcasts, tuits y similares), nuestros cinco sentidos por sí solos recopilan millones de bits de información por día solo de nuestro entorno. Sin embargo, logramos darle sentido a toda esta información, generalmente sin agobiarnos. Nuestros cerebros simplifican naturalmente los detalles de todo lo que observamos para que estos detalles sean manejables a través de un proceso conocido como abstracción .
+Como seres humanos, estamos inundados de información todos los días de nuestra vida. Incluso si pudiéramos apagar temporalmente todas las fuentes de “información electrónica” que nos bombardean constantemente (correos electrónicos, mensajes de voz, podcasts, tuits y similares), nuestros cinco sentidos por sí solos recopilan millones de bits de información por día solo de nuestro entorno. Sin embargo, logramos darle sentido a toda esta información, generalmente sin agobiarnos. Nuestros cerebros simplifican naturalmente los detalles de todo lo que observamos para que estos detalles sean manejables a través de un proceso conocido como **abstracción**.
 
 En este capítulo aprenderás
-Cómo la abstracción sirve para simplificar nuestra visión del mundo
 
-Cómo organizamos nuestro conocimiento jerárquicamente para minimizar la cantidad de información que tenemos que manejar mentalmente en un momento dado
+* Cómo la abstracción sirve para simplificar nuestra visión del mundo
 
-La relevancia de la abstracción para el desarrollo de software
+* Cómo organizamos nuestro conocimiento jerárquicamente para minimizar la cantidad de información que tenemos que manejar mentalmente en un momento dado
 
-Los desafíos inherentes que enfrentamos como desarrolladores de software cuando intentamos modelar una situación del mundo real en el software
+* La relevancia de la abstracción para el desarrollo de software
 
-Simplificación a través de la abstracción
+* Los desafíos inherentes que enfrentamos como desarrolladores de software cuando intentamos modelar una situación del mundo real en el software
+
+## Simplificación a través de la abstracción
+
 Tómate un momento para mirar alrededor de la habitación en la que estás leyendo este libro. Al principio, puedes pensar que en realidad no hay muchas cosas para observar: algunos muebles, lámparas, tal vez algunas plantas, obras de arte, incluso otras personas o mascotas. Tal vez haya una ventana por la que mirar y que abra el mundo exterior a la observación.
 
 Ahora mira de nuevo. Para cada cosa que ves, hay una miríada de detalles que observar: su tamaño, su color, su propósito previsto, los componentes con los que está ensamblada (las patas de una mesa, las bombillas de una lámpara), etc. Además, cada uno de estos componentes a su vez tiene detalles asociados a él: el tipo de material utilizado para hacer las patas de la mesa (madera o metal), el vataje de las bombillas, etc. Ahora ten en cuenta tus otros sentidos: el sonido de alguien roncando (¡espero que no mientras lees este libro!), el olor a palomitas de maíz que sale del horno microondas del pasillo, etc. Por último, piensa en todos los detalles invisibles de estos objetos: quién los fabricó o cuál es su composición química, molecular o genética.
 
-Está claro que la cantidad de información que debe procesar nuestro cerebro es realmente abrumadora. Sin embargo, para la gran mayoría de las personas, esto no supone un problema, ya que tenemos una habilidad innata para la abstracción , un proceso que implica reconocer y centrarse en las características importantes de una situación u objeto y filtrar o ignorar todos los detalles no esenciales.
+Está claro que la cantidad de información que debe procesar nuestro cerebro es realmente abrumadora. Sin embargo, para la gran mayoría de las personas, esto no supone un problema, ya que tenemos una habilidad innata para la abstracción, un proceso que implica reconocer y centrarse en las características importantes de una situación u objeto y filtrar o ignorar todos los detalles no esenciales.
 
-Un ejemplo conocido de abstracción es un mapa de carreteras . Como abstracción, un mapa de carreteras representa aquellas características de un área geográfica dada que son relevantes para alguien que intenta navegar con el mapa, tal vez en automóvil: carreteras principales y lugares de interés, obstáculos como grandes masas de agua, etc. Por necesidad, un mapa de carreteras no puede incluir todos los edificios, árboles, señales de calle, vallas publicitarias, semáforos, restaurantes de comida rápida, etc. que existen físicamente en el mundo real. Si así fuera, estaría tan desordenado que sería prácticamente inutilizable; ninguna de las características importantes se destacaría. Comparemos un mapa de carreteras con un mapa topográfico, un mapa climatológico y un mapa de densidad de población de la misma región: cada uno abstrae diferentes características del mundo real, es decir, aquellas relevantes para el usuario previsto del mapa en cuestión.
+Un ejemplo conocido de abstracción es un mapa de carreteras. Como abstracción, un mapa de carreteras representa aquellas características de un área geográfica dada que son relevantes para alguien que intenta navegar con el mapa, tal vez en automóvil: carreteras principales y lugares de interés, obstáculos como grandes masas de agua, etc. Por necesidad, un mapa de carreteras no puede incluir todos los edificios, árboles, señales de calle, vallas publicitarias, semáforos, restaurantes de comida rápida, etc. que existen físicamente en el mundo real. Si así fuera, estaría tan desordenado que sería prácticamente inutilizable; ninguna de las características importantes se destacaría. Comparemos un mapa de carreteras con un mapa topográfico, un mapa climatológico y un mapa de densidad de población de la misma región: cada uno abstrae diferentes características del mundo real, es decir, aquellas relevantes para el usuario previsto del mapa en cuestión.
 
-Como otro ejemplo, considere un paisaje . Un artista puede mirar el paisaje desde la perspectiva de los colores, las texturas y las formas como un tema potencial para una pintura. Un constructor de viviendas puede mirar el mismo paisaje desde la perspectiva de cuál puede ser el mejor sitio para construir en la propiedad, evaluando cuántos árboles necesitará talar para dejar paso a un proyecto de construcción. Un ecologista puede estudiar de cerca las especies individuales de árboles y otras formas de vida vegetal y animal en busca de su biodiversidad, con el objetivo de preservarlas y protegerlas, mientras que un niño puede simplemente mirar todos los árboles en busca del mejor sitio para una casa en el árbol. Algunos elementos son comunes a las abstracciones del paisaje de los cuatro observadores (los tipos, tamaños y ubicaciones de los árboles, por ejemplo), mientras que otros no son relevantes para todas las abstracciones.
+Como otro ejemplo, considere un paisaje. Un artista puede mirar el paisaje desde la perspectiva de los colores, las texturas y las formas como un tema potencial para una pintura. Un constructor de viviendas puede mirar el mismo paisaje desde la perspectiva de cuál puede ser el mejor sitio para construir en la propiedad, evaluando cuántos árboles necesitará talar para dejar paso a un proyecto de construcción. Un ecologista puede estudiar de cerca las especies individuales de árboles y otras formas de vida vegetal y animal en busca de su biodiversidad, con el objetivo de preservarlas y protegerlas, mientras que un niño puede simplemente mirar todos los árboles en busca del mejor sitio para una casa en el árbol. Algunos elementos son comunes a las abstracciones del paisaje de los cuatro observadores (los tipos, tamaños y ubicaciones de los árboles, por ejemplo), mientras que otros no son relevantes para todas las abstracciones.
 
-Generalización a través de la abstracción
+## Generalización a través de la abstracción
+
 Si eliminamos suficientes detalles de una abstracción, esta se vuelve lo suficientemente genérica como para poder aplicarse a una amplia gama de situaciones o instancias específicas. Estas abstracciones genéricas pueden resultar a menudo muy útiles. Por ejemplo, un diagrama de una célula genérica del cuerpo humano, como el de la Figura 1-1 , podría incluir solo algunas características de las estructuras que se encuentran en una célula real.
 
-Figura 1-1Una abstracción genérica de una célula.
+![image](https://github.com/user-attachments/assets/77af9bf8-6bcf-4f81-aa6c-73a9db16387d)
+Figura 1-1 Una abstracción genérica de una célula.
+
 Este diagrama excesivamente simplificado no parece una célula nerviosa real, ni una célula muscular real, ni una célula sanguínea real; y, sin embargo, puede usarse en un entorno educativo para describir ciertos aspectos de la estructura y función de todos estos tipos de células, es decir, aquellas características que los diversos tipos de células tienen en común.
 
 Cuanto más simple sea una abstracción (es decir, cuantas menos características presente), más general será y más versátil será para describir una variedad de situaciones del mundo real. Cuanto más compleja sea una abstracción, más restrictiva será y, por lo tanto, menos situaciones podrá describir.
 
-Organización de abstracciones en jerarquías de clasificación
-Aunque nuestro cerebro es experto en abstraer conceptos como mapas de carreteras y paisajes, todavía nos quedamos con millones de abstracciones independientes con las que lidiar a lo largo de nuestra vida. Para hacer frente a este aspecto de la complejidad, los seres humanos organizan sistemáticamente la información en categorías según criterios establecidos; este proceso se conoce como clasificación..
+### Organización de abstracciones en jerarquías de clasificación
+
+Aunque nuestro cerebro es experto en abstraer conceptos como mapas de carreteras y paisajes, todavía nos quedamos con millones de abstracciones independientes con las que lidiar a lo largo de nuestra vida. Para hacer frente a este aspecto de la complejidad, los seres humanos organizan sistemáticamente la información en categorías según criterios establecidos; este proceso se conoce como **clasificación**.
 
 Por ejemplo, la ciencia clasifica todos los objetos naturales como pertenecientes al reino animal, vegetal o mineral. Para que un objeto natural se clasifique como animal, debe cumplir las siguientes reglas:
-Debe ser (o haber sido en algún momento) un ser vivo.
 
-Debe ser capaz de movimiento espontáneo.
-
-Debe ser capaz de responder motoramente rápidamente a la estimulación.
+* Debe ser (o haber sido en algún momento) un ser vivo.
+* Debe ser capaz de movimiento espontáneo.
+* Debe ser capaz de responder motoramente rápidamente a la estimulación.
 
 Las reglas sobre lo que constituye una planta, por otro lado, son diferentes:
-Debe ser un ser vivo (lo mismo que un animal).
 
-Debe faltarle un sistema nervioso evidente.
+* Debe ser un ser vivo (lo mismo que un animal).
+* Debe faltarle un sistema nervioso evidente.
+* Debe poseer paredes celulares de celulosa.
 
-Debe poseer paredes celulares de celulosa.
+Dadas reglas claras como estas, colocar un objeto en la categoría o clase apropiada es bastante sencillo. Luego podemos “profundizar” y especificar reglas adicionales que diferencien varios tipos de animales, por ejemplo, hasta que hayamos construido una jerarquía de abstracciones cada vez más complejas de arriba a abajo. En la Figura 1-2 se muestra un ejemplo simple de una jerarquía de abstracciones de este tipo.
 
-Dadas reglas claras como estas, colocar un objeto en la categoría o clase apropiada es bastante sencillo. Luego podemos “profundizar” y especificar reglas adicionales que diferencien varios tipos de animales, por ejemplo, hasta que hayamos construido una jerarquía de abstracciones cada vez más complejas de arriba a abajo. En la Figura 1-2 se muestra un ejemplo simple de una jerarquía de abstracciones de este tipo .
+![image](https://github.com/user-attachments/assets/1020a179-1ed8-4462-9b04-560aacd2c8f8)
+Figura 1-2 Una simple jerarquía de abstracción de objetos naturales.
 
-Figura 1-2Una simple jerarquía de abstracción de objetos naturales.
+
 Cuando pensamos en una jerarquía de abstracción como la que se muestra en la Figura 1-2 , avanzamos mentalmente hacia arriba y hacia abajo en la jerarquía, concentrándonos automáticamente solo en la capa o subconjunto de la jerarquía (conocido como subárbol ) que es importante para nosotros en un momento dado. Por ejemplo, podemos estar interesados ​​solo en los mamíferos y, por lo tanto, podemos centrarnos en el subárbol de mamíferos, que se muestra en la Figura 1-3 , ignorando temporalmente el resto de la jerarquía.
 
 Figura 1-3Centrarse en un pequeño subconjunto de la jerarquía es menos abrumador
