@@ -650,7 +650,7 @@ Vamos a implementar el método `getById(Long id)`, el cual regresa un Producto s
 
 En este caso no usaremos un `Statement` sino un `PreparedStatement` una sentencia preparada ya que necesita un `WHERE` y el paso de un parámetro. Para pasar el parametro necesitamos settear el valor del parámetro indicando un indice y el valor que queremos pasar. Una vez hecho esto necesitamos ejecutar el `PreparedStatement`. Al ejecutar el `PreparedStatement` retorna un cursor, el `ResultSet`. En teoría el `ResultSet` solo retornara un valor por eso usamos un `if` en lugar de un `while`. Dentro del `if` setteamos lo que que nos regresa el `ResultSet` dentro del `Producto`, que es lo que retornara nuestro método.
 
-<img width="1067" alt="image" src="https://github.com/user-attachments/assets/3a151ea6-df05-4fec-9056-40232f698918">
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/19880196-9a10-4ebd-9fbe-b10b8dcd3b80">
 
 **`ProductoRepositirioImpl.java`**
 
@@ -770,7 +770,21 @@ Al ejecutar la clase tenemos:
 
 Hay varias cosas a observar en estas clases:
 
-* En el método `getById(Long id)` en el try con recursos que usamos 
+* En el método `getById(Long id)` en el try con recursos que usamos no estamos incluyendo el `ResultSet` solo tenemos el `PreparedStatement`, esto es por que necesitamos indicarle el valor del parámetro que necesita el `PreparedStatement` y posteriormente ejecutarlo y asignar el resultado al `ResultSet`, como no se ha incluido en el try con recursos debemos cerrarlo manualmente.
+* Por otro lado estamos duplicando un grupo de sentencias, en los dos métodos implementados hasta ahora. Es la parte donde setteamos los resultados del `ResultSet` al `Producto`, podemos refactorizar el código para optimizarlo. Podemos crear un método para mappear del `ResultSet` al `Producto`. Podemos usar la potencia de IntelliJ IDEA para crear un método a partir de las sentencias marcadas.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3f56ea1c-15da-41f0-becd-76923a7428de">
+
+<img width="1455" alt="image" src="https://github.com/user-attachments/assets/a9e0b15d-615f-4d0b-892b-845d53afffc8">
+
+Vamos a cambiar el nombre del método y moverlo al final de la clase. Y 
+
+
+
+
+
+
+  
 
 
 
