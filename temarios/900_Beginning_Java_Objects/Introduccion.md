@@ -73,36 +73,38 @@ Lamentablemente, muchos programadores terminan creando una aplicación orientada
 
 ### ¿Para quién está escrito este libro?
 
-¡Cualquiera que quiera sacar el máximo partido a un lenguaje de programación orientado a objetos como Java! Ha sido escrito para
-Cualquiera que aún no se haya enfrentado a Java, pero quiera empezar con el pie derecho con el lenguaje.
+**¡Cualquiera que quiera sacar el máximo partido a un lenguaje de programación orientado a objetos como Java!** Ha sido escrito para:
 
-Cualquiera que haya comprado alguna vez un libro sobre Java y lo haya leído fielmente, que comprenda los “bits y bytes” del lenguaje, pero que no sepa exactamente cómo estructurar una aplicación para aprovechar al máximo las características orientadas a objetos de Java.
+* Cualquiera que aún no se haya enfrentado a Java, pero quiera empezar con el pie derecho con el lenguaje.
 
-Cualquiera que haya creado una aplicación Java, pero se haya sentido decepcionado por lo difícil que fue mantenerla o modificarla cuando se presentaron nuevos requisitos más adelante en el ciclo de vida de la aplicación.
+* Cualquiera que haya comprado alguna vez un libro sobre Java y lo haya leído fielmente, que comprenda los “bits y bytes” del lenguaje, pero que no sepa exactamente cómo estructurar una aplicación para aprovechar al máximo las características orientadas a objetos de Java.
 
-Cualquier persona que haya aprendido algo previamente sobre modelado de objetos, pero no esté segura de cómo realizar la transición de un modelo de objetos a un código real en vivo (Java o de otro tipo).
+* Cualquiera que haya creado una aplicación Java, pero se haya sentido decepcionado por lo difícil que fue mantenerla o modificarla cuando se presentaron nuevos requisitos más adelante en el ciclo de vida de la aplicación.
 
-La conclusión es que cualquiera que realmente quiera dominar un lenguaje OO como Java debe convertirse en un experto en objetos PRIMERO.
+* Cualquier persona que haya aprendido algo previamente sobre modelado de objetos, pero no esté segura de cómo realizar la transición de un modelo de objetos a un código real en vivo (Java o de otro tipo).
+
+La conclusión es que **cualquiera que realmente quiera dominar un lenguaje OO como Java debe convertirse en un experto en objetos PRIMERO**.
 
 Para sacar el máximo provecho de este libro, debes tener algo de experiencia en programación; prácticamente cualquier lenguaje servirá. Debes comprender conceptos de programación simples como
 
-* Tipos de datos simples (enteros, de punto flotante, etc.)
+* Tipos de datos simples (integer, floating point, etc.)
 
 * Variables y su alcance (incluida la noción de datos globales)
 
-* Control de flujo (declaraciones “ if … then … else ”, bucles for /do/while, etc.)
+* Control de flujo (declaraciones “`if ... then ... else`”, bucles `for`/`do`/`while`, etc.)
 
 * ¿Qué son los arrays y cómo utilizarlos?
 
-El concepto de función/subrutina/procedimiento de software: cómo pasar datos y obtener resultados
+* El concepto de function/subroutine/procedure de software: cómo pasar datos y obtener resultados
 
-Pero no es necesario que hayas tenido ningún contacto previo con Java. Y tampoco es necesario que hayas estado expuesto a objetos, ¡al menos en el sentido de software! Como aprenderás en el Capítulo 2 , los seres humanos naturalmente vemos el mundo entero desde la perspectiva de los objetos.
+Pero no es necesario que hayas tenido ningún contacto previo con Java. Y tampoco es necesario que hayas estado expuesto a objetos, ¡al menos en el sentido de software! Como aprenderás en el Capítulo 2, los seres humanos naturalmente vemos el mundo entero desde la perspectiva de los objetos.
 
 Incluso si ya ha desarrollado una aplicación Java completa, ciertamente no es demasiado tarde para leer este libro si aún no está seguro de los aspectos de los objetos a la hora de estructurar una aplicación; en última instancia, conocer los "porqués" de la orientación a objetos en lugar de simplemente la mecánica del lenguaje hace que alguien sea un mejor programador de Java. Es muy probable que vea algunos puntos de referencia familiares (en forma de ejemplos de código Java) en este libro, pero es de esperar que obtenga muchas nuevas perspectivas a medida que aprenda la lógica de por qué hacemos muchas de las cosas que hacemos cuando programamos en Java (o cualquier otro lenguaje de programación orientado a objetos, de hecho).
 
 Debido a que este libro tiene sus raíces en cursos que enseño a nivel universitario, es ideal para usarse como libro de texto para un curso universitario de un semestre de duración o un curso avanzado de escuela secundaria, ya sea sobre modelado de objetos o programación Java.
 
-¿Qué pasa si estás interesado en el modelado de objetos, pero no necesariamente en la programación Java?
+### ¿Qué pasa si estás interesado en el modelado de objetos, pero no necesariamente en la programación Java?
+
 ¿Mi libro seguirá siendo de utilidad para usted? ¡Sin duda! Incluso si no tiene pensado dedicarse profesionalmente a la programación (como es el caso de muchos de mis estudiantes de modelado de objetos), he descubierto que estar expuesto a ejemplos de código escritos en un lenguaje orientado a objetos como Java realmente ayuda a consolidar los conceptos de objetos. Por lo tanto, le recomiendo que lea las partes 1 y 3 incluso si nunca tiene intención de poner las manos sobre el teclado para programar en Java después.
 
 ###  Cómo está organizado este libro
@@ -111,15 +113,15 @@ El libro está estructurado en torno a tres temas principales, como se detalla a
 
 #### Parte 1: El ABC de los objetos
 
-Antes de profundizar en los procedimientos de modelado de objetos y los detalles de la programación orientada a objetos en Java, es importante que todos hablemos el mismo idioma con respecto a los objetos. La Parte 1, que consta de los Capítulos 1 a 7 , comienza lentamente, definiendo los conceptos básicos que sustentan todos los enfoques de desarrollo de software, orientados a objetos o de otro tipo. Pero los capítulos avanzan rápidamente hacia una discusión de conceptos avanzados de objetos, de modo que, al final de la Parte 1, usted será un "experto en objetos".
+Antes de profundizar en los procedimientos de modelado de objetos y los detalles de la programación orientada a objetos en Java, es importante que todos hablemos el mismo idioma con respecto a los objetos. La Parte 1, que consta de los Capítulos 1 a 7, comienza lentamente, definiendo los conceptos básicos que sustentan todos los enfoques de desarrollo de software, orientados a objetos o de otro tipo. Pero los capítulos avanzan rápidamente hacia una discusión de conceptos avanzados de objetos, de modo que, al final de la Parte 1, usted será un "experto en objetos".
 
 #### Parte 2: Modelado de objetos 101
 
-En la Parte 2 (capítulos 8 a 12 del libro) me centro en los principios subyacentes de cómo y, lo que es más importante, por qué hacemos lo que hacemos cuando desarrollamos un modelo de objetos de una aplicación: principios que son comunes a todas las técnicas de modelado de objetos. Es importante estar familiarizado con el UML, por lo que le enseñaré los conceptos básicos del UML y lo utilizaré para todos los ejemplos de modelado concretos de mi libro. Utilizando las técnicas de modelado presentadas en estos capítulos, desarrollaremos un "modelo" de modelo de objetos para un Sistema de Registro de Estudiantes (SRS) , cuya especificación de requisitos se presenta al final de esta introducción.
+En la Parte 2 (capítulos 8 a 12 del libro) me centro en los principios subyacentes de **cómo** y, lo que es más importante, **por qué** hacemos lo que hacemos cuando desarrollamos un modelo de objetos de una aplicación: principios que son comunes a todas las técnicas de modelado de objetos. Es importante estar familiarizado con el UML, por lo que le enseñaré los conceptos básicos del UML y lo utilizaré para todos los ejemplos de modelado concretos de mi libro. Utilizando las técnicas de modelado presentadas en estos capítulos, desarrollaremos un "blueprint" de modelo de objetos para un **Sistema de Registro de Estudiantes (SRS)**, cuya especificación de requisitos se presenta al final de esta introducción.
 
-#### Parte 3: Traducir un “plano” de un objeto a código Java
+#### Parte 3: Traducir un “blueprint” de un objeto a código Java
 
-En la Parte 3 del libro (capítulos 13 a 15 ) ilustro cómo convertir el modelo de objetos SRS que hemos desarrollado en la Parte 2 en una aplicación Java completamente funcional, para que sirva como capa de modelo en una aplicación de tres niveles, y también hablaremos conceptualmente sobre cómo se pueden aprovechar las tecnologías de terceros para proporcionar tanto una interfaz de usuario (conocida como capa de presentación o tier ) como persistencia de datos (conocida como capa de datos o tier ). El código fuente de SRS está disponible para descargar desde GitHub ( github.com/Apress/Beginning-Java-Objects-3e ), y le recomiendo encarecidamente que descargue y experimente con este código cuando llegue a ese capítulo.
+En la Parte 3 del libro (capítulos 13 a 15 ) ilustro cómo convertir el modelo de objetos SRS que hemos desarrollado en la Parte 2 en una aplicación Java completamente funcional, para que sirva como **capa de modelo - model layer** en una aplicación de tres niveles, y también hablaremos conceptualmente sobre cómo se pueden aprovechar las tecnologías de terceros para proporcionar tanto una interfaz de usuario (conocida como **capa de presentación o tier - presentation layer or tier**) como persistencia de datos (conocida como **capa de datos o tier - data layer or tier**). El código fuente de SRS está disponible para descargar desde GitHub([github.com/Apress/Beginning-Java-Objects-3e](https://github.com/Apress/Beginning-Java-Objects-3rd-ed.)), y le recomiendo encarecidamente que descargue y experimente con este código cuando llegue a ese capítulo.
 
 La especificación de requisitos para el SRS está escrita en el estilo narrativo con el que se expresan a menudo los requisitos del sistema de software. Puede estar seguro de que podría crear una aplicación hoy para resolver este problema, pero al final de mi libro, debería sentirse mucho más seguro de su capacidad para crearla como una aplicación orientada a objetos . En el Apéndice se presentan tres estudios de caso adicionales (para un sistema de seguimiento de recetas médicas , un sistema de reserva de salas de conferencias y un sistema de reserva de aerolíneas , respectivamente); estos sirven como base para muchos de los ejercicios presentados al final de cada capítulo.
 
