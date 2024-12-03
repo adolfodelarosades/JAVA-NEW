@@ -38,6 +38,7 @@ Como otro ejemplo, considere un paisaje. Un artista puede mirar el paisaje desde
 Si eliminamos suficientes detalles de una abstracción, esta se vuelve lo suficientemente genérica como para poder aplicarse a una amplia gama de situaciones o instancias específicas. Estas abstracciones genéricas pueden resultar a menudo muy útiles. Por ejemplo, un diagrama de una célula genérica del cuerpo humano, como el de la Figura 1-1 , podría incluir solo algunas características de las estructuras que se encuentran en una célula real.
 
 ![image](https://github.com/user-attachments/assets/77af9bf8-6bcf-4f81-aa6c-73a9db16387d)
+
 Figura 1-1 Una abstracción genérica de una célula.
 
 Este diagrama excesivamente simplificado no parece una célula nerviosa real, ni una célula muscular real, ni una célula sanguínea real; y, sin embargo, puede usarse en un entorno educativo para describir ciertos aspectos de la estructura y función de todos estos tipos de células, es decir, aquellas características que los diversos tipos de células tienen en común.
@@ -63,69 +64,80 @@ Las reglas sobre lo que constituye una planta, por otro lado, son diferentes:
 Dadas reglas claras como estas, colocar un objeto en la categoría o clase apropiada es bastante sencillo. Luego podemos “profundizar” y especificar reglas adicionales que diferencien varios tipos de animales, por ejemplo, hasta que hayamos construido una jerarquía de abstracciones cada vez más complejas de arriba a abajo. En la Figura 1-2 se muestra un ejemplo simple de una jerarquía de abstracciones de este tipo.
 
 ![image](https://github.com/user-attachments/assets/1020a179-1ed8-4462-9b04-560aacd2c8f8)
+
 Figura 1-2 Una simple jerarquía de abstracción de objetos naturales.
 
+Cuando pensamos en una jerarquía de abstracción como la que se muestra en la Figura 1-2, avanzamos mentalmente hacia arriba y hacia abajo en la jerarquía, concentrándonos automáticamente solo en la capa o subconjunto de la jerarquía (conocido como subárbol) que es importante para nosotros en un momento dado. Por ejemplo, podemos estar interesados ​​solo en los mamíferos y, por lo tanto, podemos centrarnos en el subárbol de mamíferos, que se muestra en la Figura 1-3 , ignorando temporalmente el resto de la jerarquía.
 
-Cuando pensamos en una jerarquía de abstracción como la que se muestra en la Figura 1-2 , avanzamos mentalmente hacia arriba y hacia abajo en la jerarquía, concentrándonos automáticamente solo en la capa o subconjunto de la jerarquía (conocido como subárbol ) que es importante para nosotros en un momento dado. Por ejemplo, podemos estar interesados ​​solo en los mamíferos y, por lo tanto, podemos centrarnos en el subárbol de mamíferos, que se muestra en la Figura 1-3 , ignorando temporalmente el resto de la jerarquía.
+![image](https://github.com/user-attachments/assets/c195369c-b399-42f4-b347-f8f349e3992a)
 
-Figura 1-3Centrarse en un pequeño subconjunto de la jerarquía es menos abrumador
+Figura 1-3 Centrarse en un pequeño subconjunto de la jerarquía es menos abrumador
+
 Al hacerlo, reducimos automáticamente la cantidad de conceptos que necesitamos manejar mentalmente en cualquier momento a un subconjunto manejable de la jerarquía de abstracción general; en nuestro ejemplo simplista, ahora estamos tratando con solo cuatro conceptos en lugar de los 13 originales. No importa cuán compleja se vuelva una jerarquía de abstracción, no tiene por qué abrumarnos si está organizada adecuadamente.
 
 No siempre es fácil determinar con precisión qué reglas son necesarias para clasificar correctamente un objeto dentro de una jerarquía de abstracción. Tomemos, por ejemplo, las reglas que podríamos definir para lo que constituye un pájaro: es decir, algo que
-Tiene plumas
 
-Tiene alas
-
-Pone huevos
-
-Es capaz de volar
+* Tiene plumas
+* Tiene alas
+* Pone huevos
+* Es capaz de volar
 
 Dadas estas reglas, ni un avestruz ni un pingüino podrían clasificarse como aves (aunque ambos deberían serlo), porque ninguno de ellos puede volar (ver Figura 1-4 ).
 
-Figura 1-4Derivar las reglas de clasificación correctas puede ser difícil
+![image](https://github.com/user-attachments/assets/666e398d-c25a-4593-a5a3-380bf7dd8c36)
+
+Figura 1-4 Derivar las reglas de clasificación correctas puede ser difícil
+
 Si intentamos hacer que el conjunto de reglas sea menos restrictivo eliminando la regla de “es capaz de volar”, nos quedamos con
-Tiene plumas
 
-Tiene alas
-
-Pone huevos
+* Tiene plumas
+* Tiene alas
+* Pone huevos
 
 De acuerdo con este conjunto de reglas, ahora podemos clasificar correctamente tanto al avestruz como al pingüino como aves, como se muestra en la Figura 1-5 .
 
-Figura 1-5Se han establecido reglas de clasificación adecuadas
+
+![image](https://github.com/user-attachments/assets/926a3c42-bcdc-47bd-9c3a-22d19cb03a2c)
+
+Figura 1-5 Se han establecido reglas de clasificación adecuadas
+
 Este conjunto de reglas sigue siendo innecesariamente complicado, porque resulta que la regla de “pone huevos” es redundante: ya sea que la mantengamos o la eliminemos, no cambia nuestra decisión de qué constituye un pájaro o un no pájaro. Por lo tanto, simplificamos el conjunto de reglas una vez más:
-Tiene plumas
 
-Tiene alas
+* Tiene plumas
+* Tiene alas
 
-Sintiéndonos particularmente atrevidos (!), tratamos de llevar nuestro proceso de simplificación un paso más allá eliminando otra regla, definiendo un pájaro como algo que
-Tiene alas
+Sintiéndonos particularmente atrevidos(!), tratamos de llevar nuestro proceso de simplificación un paso más allá eliminando otra regla, definiendo un pájaro como algo que
+
+* Tiene alas
 
 Como muestra la Figura 1-6 , esta vez hemos ido demasiado lejos: ¡la abstracción de un pájaro es ahora tan general que incluiríamos aviones, insectos y todo tipo de otros seres que no son pájaros en la mezcla!
 
-Figura 1-6Un conjunto de reglas demasiado laxo es un problema tan grande como un conjunto de reglas demasiado restrictivo.
+![image](https://github.com/user-attachments/assets/dd52f6a2-2eff-429e-87ad-e28184edb169)
+
+Figura 1-6 Un conjunto de reglas demasiado laxo es un problema tan grande como un conjunto de reglas demasiado restrictivo.
+
 El proceso de definición de reglas para fines de categorización implica seleccionar el conjunto correcto de reglas (no demasiado generales, ni demasiado restrictivas, y sin redundancias) para definir la membresía correcta en una clase particular.
 
-La abstracción como base para el desarrollo de software
-Al determinar los requisitos para un proyecto de desarrollo de sistemas de información , normalmente comenzamos por recopilar detalles sobre la situación real en la que se basará el sistema. Estos detalles suelen ser una combinación de
-Aquellos que se nos ofrecen explícitamente a medida que entrevistamos a los usuarios previstos del sistema.
+#### La abstracción como base para el desarrollo de software
 
-Aquellos que de otra manera observamos
+Al determinar los requisitos para un proyecto de desarrollo de sistemas de información, normalmente comenzamos por recopilar detalles sobre la situación real en la que se basará el sistema. Estos detalles suelen ser una combinación de:
+
+* Aquellos que se nos ofrecen explícitamente a medida que entrevistamos a los usuarios previstos del sistema.
+* Aquellos que de otra manera observamos
 
 Debemos tomar una decisión sobre cuáles de estos detalles son relevantes para el propósito final del sistema. Esto es esencial, ya que no podemos automatizarlos todos. Incluir demasiados detalles es complicar excesivamente el sistema resultante, haciéndolo mucho más difícil de diseñar, programar, probar, depurar, documentar, mantener y ampliar en el futuro.
 
-Al igual que con todas las abstracciones, todas nuestras decisiones de inclusión o eliminación al crear un sistema de software deben realizarse dentro del contexto del propósito general y el dominio , o el enfoque temático, del futuro sistema. Al representar a una persona en un sistema de software , por ejemplo, ¿es importante su color de ojos? ¿Y su perfil genético? ¿Su salario? ¿Sus pasatiempos? La respuesta es que cualquiera de estas características de una persona puede ser relevante o irrelevante, dependiendo de si el sistema que se va a desarrollar es un
-Sistema de nómina
+Al igual que con todas las abstracciones, todas nuestras decisiones de inclusión o eliminación al crear un sistema de software deben realizarse dentro del contexto del propósito general y el dominio, o el enfoque temático, del futuro sistema. Al representar a una persona en un sistema de software, por ejemplo, ¿es importante su color de ojos? ¿Y su perfil genético? ¿Su salario? ¿Sus pasatiempos? La respuesta es que cualquiera de estas características de una persona puede ser relevante o irrelevante, dependiendo de si el sistema que se va a desarrollar es un
 
-Sistema de demografía de marketing
-
-Base de datos de pacientes del optometrista
-
-El sistema de rastreo de los “más buscados” del FBI
+* Sistema de nómina
+* Sistema de demografía de marketing
+* Base de datos de pacientes del optometrista
+* El sistema de rastreo de los “más buscados” del FBI
 
 Una vez que hemos determinado los aspectos esenciales de una situación (algo que exploraremos en la Parte 2 de este libro), podemos preparar un modelo de esa situación. El modelado es el proceso mediante el cual desarrollamos un patrón para que algo se haga. Un plano de una casa personalizada, un diagrama esquemático de un circuito impreso y un cortador de galletas son ejemplos de tales patrones. Como veremos en las Partes 2 y 3, un modelo de objeto de un sistema de software es un patrón de este tipo. El modelado y la abstracción van de la mano, porque un modelo es esencialmente una representación física o gráfica de una abstracción; antes de que podamos modelar algo de manera efectiva, debemos haber determinado los detalles esenciales del tema que se va a modelar.
 
-Reutilización de abstracciones
+## Reutilización de abstracciones
+
 Cuando aprendemos algo nuevo, automáticamente buscamos en nuestro archivo mental otras abstracciones/modelos que hemos construido y dominado previamente, para buscar similitudes sobre las que podamos construir. Cuando aprendiste a andar en una bicicleta de dos ruedas por primera vez, por ejemplo, es posible que hayas recurrido a lecciones que aprendiste sobre andar en triciclo cuando eras niño (ver Figura 1-7 ). Ambos tienen manubrios que se usan para conducir; ambos tienen pedales que se usan para impulsar la bicicleta hacia adelante. Aunque las abstracciones no coincidían perfectamente (una bicicleta de dos ruedas introdujo el nuevo desafío de tener que mantener el equilibrio), había suficiente similitud para permitirte recurrir a la experiencia de dirección y pedaleo que ya dominabas y concentrarte en aprender la nueva habilidad de cómo mantener el equilibrio sobre dos ruedas.
 
 Figura 1-7El cerebro humano es experto en aprender basándose en abstracciones ya establecidas.
