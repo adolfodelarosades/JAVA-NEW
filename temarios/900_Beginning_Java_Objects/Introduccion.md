@@ -4,6 +4,7 @@
 #### 3rd ed.
 
 ## Prefacio
+
 ¡Bienvenidos a la tercera edición de Beginning Java Objects (BJO)! Desde que se publicó la primera edición de BJO en noviembre de 2000 y la segunda edición en 2005, me han encantado los numerosos correos electrónicos y críticas positivas que he recibido de lectores que encontraron que mi libro era un "inicio" perfecto en Java y la programación orientada a objetos (OO) . Muchos libros de Java para principiantes se sumergen en una discusión del lenguaje en sí sin fundamentar adecuadamente a los lectores sobre cómo "pensar" y estructurar una aplicación desde cero para aprovechar al máximo los principios orientados a objetos; estoy encantado de que haya elegido BJO para comenzar su viaje en Java.
 
 Mi libro se basa en principios atemporales que son independientes de la versión del lenguaje, lo que significa que no es necesario revisarlo cada vez que se lanza una nueva versión de Java. Lo que sí cambia, a veces aparentemente en un abrir y cerrar de ojos, son las tecnologías de terceros que se utilizan junto con el lenguaje Java central, por lo que hemos reemplazado el material que detallaba las tecnologías obsoletas con un solo capítulo (Capítulo 15 ) que explica conceptualmente cómo avanzar en la creación de una aplicación que logre una separación adecuada entre el modelo , la capa de datos y la capa de presentación.
@@ -16,7 +17,8 @@ Atentamente,
 
 Jacquie
 
-Introducción
+## Introducción
+
 Este es un libro, ante todo, sobre objetos de software: qué son, por qué son tan “mágicos” y a la vez tan sencillos, y cómo estructurar una aplicación de software para utilizar los objetos de forma adecuada.
 
 Este también es un libro sobre Java: no es un libro específico que explica todo lo que hay que saber sobre Java, sino más bien una introducción suave pero completa al lenguaje, con especial énfasis en cómo hacer la transición desde un modelo de objetos a una aplicación Java funcional, algo que pocos libros, si es que hay alguno, ofrecen.
@@ -63,7 +65,8 @@ Cuando le dices esto a tu cliente, ¡se pone furioso ! Otro motivo por el que el
 
 Lamentablemente, muchos programadores terminan creando una aplicación orientada a objetos sin la formación adecuada en las propiedades fundamentales de los componentes básicos de dicha aplicación, es decir, los objetos de software. Peor aún, la gran mayoría de los aspirantes a programadores orientados a objetos ignoran por completo la necesidad de comprender los objetos para programar en un lenguaje orientado a objetos. Por eso, comienzan a programar con un lenguaje como Java y terminan con un resultado que dista mucho de ser ideal: una aplicación que carece de flexibilidad cuando se produce una inevitable "corrección a mitad de camino" en respuesta a los requisitos cambiantes después de que se haya implementado la aplicación.
 
-¿Para quién está escrito este libro?
+### ¿Para quién está escrito este libro?
+
 ¡Cualquiera que quiera sacar el máximo partido a un lenguaje de programación orientado a objetos como Java! Ha sido escrito para
 Cualquiera que aún no se haya enfrentado a Java, pero quiera empezar con el pie derecho con el lenguaje.
 
@@ -76,13 +79,14 @@ Cualquier persona que haya aprendido algo previamente sobre modelado de objetos,
 La conclusión es que cualquiera que realmente quiera dominar un lenguaje OO como Java debe convertirse en un experto en objetos PRIMERO.
 
 Para sacar el máximo provecho de este libro, debes tener algo de experiencia en programación; prácticamente cualquier lenguaje servirá. Debes comprender conceptos de programación simples como
-Tipos de datos simples (enteros, de punto flotante, etc.)
 
-Variables y su alcance (incluida la noción de datos globales)
+* Tipos de datos simples (enteros, de punto flotante, etc.)
 
-Control de flujo (declaraciones “ if … then … else ”, bucles for /do/while, etc.)
+* Variables y su alcance (incluida la noción de datos globales)
 
-¿Qué son los arrays y cómo utilizarlos?
+* Control de flujo (declaraciones “ if … then … else ”, bucles for /do/while, etc.)
+
+* ¿Qué son los arrays y cómo utilizarlos?
 
 El concepto de función/subrutina/procedimiento de software: cómo pasar datos y obtener resultados
 
@@ -95,23 +99,28 @@ Debido a que este libro tiene sus raíces en cursos que enseño a nivel universi
 ¿Qué pasa si estás interesado en el modelado de objetos, pero no necesariamente en la programación Java?
 ¿Mi libro seguirá siendo de utilidad para usted? ¡Sin duda! Incluso si no tiene pensado dedicarse profesionalmente a la programación (como es el caso de muchos de mis estudiantes de modelado de objetos), he descubierto que estar expuesto a ejemplos de código escritos en un lenguaje orientado a objetos como Java realmente ayuda a consolidar los conceptos de objetos. Por lo tanto, le recomiendo que lea las partes 1 y 3 incluso si nunca tiene intención de poner las manos sobre el teclado para programar en Java después.
 
-Cómo está organizado este libro
+###  Cómo está organizado este libro
+
 El libro está estructurado en torno a tres temas principales, como se detalla a continuación.
 
-Parte 1: El ABC de los objetos
+#### Parte 1: El ABC de los objetos
+
 Antes de profundizar en los procedimientos de modelado de objetos y los detalles de la programación orientada a objetos en Java, es importante que todos hablemos el mismo idioma con respecto a los objetos. La Parte 1, que consta de los Capítulos 1 a 7 , comienza lentamente, definiendo los conceptos básicos que sustentan todos los enfoques de desarrollo de software, orientados a objetos o de otro tipo. Pero los capítulos avanzan rápidamente hacia una discusión de conceptos avanzados de objetos, de modo que, al final de la Parte 1, usted será un "experto en objetos".
 
-Parte 2: Modelado de objetos 101
+#### Parte 2: Modelado de objetos 101
+
 En la Parte 2 (capítulos 8 a 12 del libro) me centro en los principios subyacentes de cómo y, lo que es más importante, por qué hacemos lo que hacemos cuando desarrollamos un modelo de objetos de una aplicación: principios que son comunes a todas las técnicas de modelado de objetos. Es importante estar familiarizado con el UML, por lo que le enseñaré los conceptos básicos del UML y lo utilizaré para todos los ejemplos de modelado concretos de mi libro. Utilizando las técnicas de modelado presentadas en estos capítulos, desarrollaremos un "modelo" de modelo de objetos para un Sistema de Registro de Estudiantes (SRS) , cuya especificación de requisitos se presenta al final de esta introducción.
 
-Parte 3: Traducir un “plano” de un objeto a código Java
+#### Parte 3: Traducir un “plano” de un objeto a código Java
+
 En la Parte 3 del libro (capítulos 13 a 15 ) ilustro cómo convertir el modelo de objetos SRS que hemos desarrollado en la Parte 2 en una aplicación Java completamente funcional, para que sirva como capa de modelo en una aplicación de tres niveles, y también hablaremos conceptualmente sobre cómo se pueden aprovechar las tecnologías de terceros para proporcionar tanto una interfaz de usuario (conocida como capa de presentación o tier ) como persistencia de datos (conocida como capa de datos o tier ). El código fuente de SRS está disponible para descargar desde GitHub ( github.com/Apress/Beginning-Java-Objects-3e ), y le recomiendo encarecidamente que descargue y experimente con este código cuando llegue a ese capítulo.
 
 La especificación de requisitos para el SRS está escrita en el estilo narrativo con el que se expresan a menudo los requisitos del sistema de software. Puede estar seguro de que podría crear una aplicación hoy para resolver este problema, pero al final de mi libro, debería sentirse mucho más seguro de su capacidad para crearla como una aplicación orientada a objetos . En el Apéndice se presentan tres estudios de caso adicionales (para un sistema de seguimiento de recetas médicas , un sistema de reserva de salas de conferencias y un sistema de reserva de aerolíneas , respectivamente); estos sirven como base para muchos de los ejercicios presentados al final de cada capítulo.
 
 En el capítulo final se ofrecen sugerencias sobre cómo puede continuar con su proceso de descubrimiento orientado a objetos después de terminar mi libro. En ese capítulo, le proporciono una lista de libros recomendados que lo llevarán al siguiente nivel de competencia, según cuál sea su intención de aplicar lo que ha aprendido en mi libro.
 
-Convenciones
+#### Convenciones
+
 Para ayudarle a aprovechar al máximo el texto y realizar un seguimiento de lo que sucede, hemos utilizado una serie de convenciones a lo largo del libro.
 
 Por ejemplo:
@@ -135,10 +144,13 @@ para (int i = 0; i <= 10; i++) {
     //¡Esto es pseudocódigo!
     Calcular la calificación del i-ésimo estudiante
 }
-¿En qué versión de Java se basa este libro?
+
+#### ¿En qué versión de Java se basa este libro?
+
 Como se mencionó anteriormente, Oracle Corporation continúa lanzando nuevas versiones del lenguaje Java de manera regular. La buena noticia es que, como en mi libro me concentro únicamente en la sintaxis básica del lenguaje Java (características del lenguaje que han sido estables desde el inicio de Java), este libro no es específico de una versión. Las técnicas y los conceptos que aprenderá leyendo mi libro le serán igualmente útiles cuando aparezcan nuevas versiones de Java. Dicho esto, todos los ejemplos de código en BJO son compatibles con las versiones de Java 8 a 17. (En términos generales, las nuevas versiones del lenguaje Java son compatibles con versiones posteriores, lo que significa que el código escrito para una versión anterior del lenguaje se compilará correctamente en una versión más nueva).
 
-Una última reflexión antes de empezar
+#### Una última reflexión antes de empezar
+
 Gran parte del material de mi libro (en particular, el comienzo de la Parte 1) puede parecer demasiado simplista para los programadores experimentados. Esto se debe a que gran parte de la tecnología de objetos se basa en principios básicos de ingeniería de software que se han puesto en práctica durante muchos años y, en muchos casos, simplemente se han reempaquetado de forma ligeramente diferente. De hecho, hay algunos trucos nuevos que hacen que los lenguajes orientados a objetos sean extremadamente poderosos y que eran prácticamente imposibles de lograr con lenguajes no orientados a objetos , por ejemplo, la herencia y el polimorfismo, sobre los que aprenderá más en los Capítulos 5 y 7 , respectivamente. (Estas técnicas se pueden simular a mano en un lenguaje no orientado a objetos, de la misma manera que los programadores podrían programar su propio sistema de gestión de bases de datos (DBMS) desde cero en lugar de utilizar un producto comercial como Oracle o SQL Server, pero ¿quién querría hacerlo?)
 
 El mayor desafío para los programadores experimentados a la hora de dominar los objetos es reorientar la manera en que piensan sobre el problema que van a automatizar:
@@ -163,7 +175,9 @@ Si se cumplen los puntos (a) y (b), pero no (c), el estudiante pasa a una lista 
 Cualquier código fuente u otro material complementario al que hace referencia el autor en este libro está disponible para los lectores en GitHub a través de la página del producto del libro, ubicada en https://github.com/Apress/Beginning-Java-Objects-3e.
 
 ### Acerca del autor
+
 Jacquie Barker
+
 Jacquie es ingeniera de software profesional, autora y ex miembro de la facultad adjunta de la Universidad George Mason en Fairfax, Virginia, y de la Universidad George Washington en Washington, DC. Con más de 30 años de experiencia como desarrolladora de software y gerente de proyectos, Jacquie ha pasado los últimos 15 años enfocada en la tecnología de objetos y es competente como modeladora de objetos y programadora Java certificada por Sun Microsystems.
 
 Jacquie obtuvo una licenciatura en Ciencias en ingeniería informática con los máximos honores del Case Institute of Technology/Case Western Reserve University en Cleveland, Ohio, y una maestría en Ciencias de la Computación, con énfasis en ingeniería de sistemas de software, de la Universidad de California, Los Ángeles. Posteriormente, realizó estudios de posgrado en tecnología de la información en la Universidad George Mason en Fairfax, Virginia. La fórmula ganadora de Jacquie para enseñar los fundamentos de los objetos sigue recibiendo elogios de lectores de todo el mundo, y Beginning Java Objects: From Concepts to Code ha sido adoptado por muchas universidades como un libro de texto clave en sus programas básicos de TI.
@@ -171,10 +185,10 @@ Jacquie obtuvo una licenciatura en Ciencias en ingeniería informática con los 
 En lo personal, las pasiones de Jacquie incluyen a su esposo, Steve, y sus tres gatos, Walter, Rocky y Tanner; su trabajo como fundadora y directora ejecutiva de Pets Bring Joy, una organización de rescate de animales sin fines de lucro 501(c)(3) (visite pbj.org); y su reciente lanzamiento de un servicio de consultoría informática pro bono para organizaciones sin fines de lucro emergentes (visite probonoit.org). Puede comunicarse con Jacquie en jacquie.barker@gmail.com.
 
  
-Acerca del revisor técnico
-Manuel Jordán
+#### Acerca del revisor técnico
 
-es un desarrollador e investigador autodidacta que disfruta aprendiendo nuevas tecnologías para sus propios experimentos sobre la creación de nuevas integraciones entre ellas.
+Manuel Jordán es un desarrollador e investigador autodidacta que disfruta aprendiendo nuevas tecnologías para sus propios experimentos sobre la creación de nuevas integraciones entre ellas.
+
 Manuel ganó el premio Springy 2010 : Campeón de la comunidad y Campeón de primavera 2013. En su poco tiempo libre, lee la Biblia y compone música con su bajo y guitarra.
 
 Manuel considera que la formación y la capacitación constantes son muy valiosas para cualquier desarrollador, al igual que la refactorización y el testing. Manuel puede ofrecer estos servicios para su empresa gracias a su experiencia en Java y Spring.
