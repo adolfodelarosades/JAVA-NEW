@@ -123,7 +123,7 @@ En la Parte 2 (capítulos 8 a 12 del libro) me centro en los principios subyacen
 
 En la Parte 3 del libro (capítulos 13 a 15 ) ilustro cómo convertir el modelo de objetos SRS que hemos desarrollado en la Parte 2 en una aplicación Java completamente funcional, para que sirva como **capa de modelo - model layer** en una aplicación de tres niveles, y también hablaremos conceptualmente sobre cómo se pueden aprovechar las tecnologías de terceros para proporcionar tanto una interfaz de usuario (conocida como **capa de presentación o tier - presentation layer or tier**) como persistencia de datos (conocida como **capa de datos o tier - data layer or tier**). El código fuente de SRS está disponible para descargar desde GitHub([github.com/Apress/Beginning-Java-Objects-3e](https://github.com/Apress/Beginning-Java-Objects-3rd-ed.)), y le recomiendo encarecidamente que descargue y experimente con este código cuando llegue a ese capítulo.
 
-La especificación de requisitos para el SRS está escrita en el estilo narrativo con el que se expresan a menudo los requisitos del sistema de software. Puede estar seguro de que podría crear una aplicación hoy para resolver este problema, pero al final de mi libro, debería sentirse mucho más seguro de su capacidad para crearla como una aplicación orientada a objetos . En el Apéndice se presentan tres estudios de caso adicionales (para un sistema de seguimiento de recetas médicas , un sistema de reserva de salas de conferencias y un sistema de reserva de aerolíneas , respectivamente); estos sirven como base para muchos de los ejercicios presentados al final de cada capítulo.
+La especificación de requisitos para el SRS está escrita en el estilo narrativo con el que se expresan a menudo los requisitos del sistema de software. Puede estar seguro de que podría crear una aplicación hoy para resolver este problema, pero al final de mi libro, debería sentirse mucho más seguro de su capacidad para crearla como una aplicación orientada a objetos . En el Apéndice se presentan tres estudios de caso adicionales - para un **Prescription Tracking System (PTS) - sistema de seguimiento de recetas médicas**, un **Conference Room Reservation System - sistema de reserva de salas de conferencias** y un **Airline Reservation System - sistema de reserva de aerolíneas**, respectivamente; estos sirven como base para muchos de los ejercicios presentados al final de cada capítulo.
 
 En el capítulo final se ofrecen sugerencias sobre cómo puede continuar con su proceso de descubrimiento orientado a objetos después de terminar mi libro. En ese capítulo, le proporciono una lista de libros recomendados que lo llevarán al siguiente nivel de competencia, según cuál sea su intención de aplicar lo que ha aprendido en mi libro.
 
@@ -135,42 +135,43 @@ Por ejemplo:
 
 Las notas se muestran de esta manera y reflejan información de fondo importante.
 
+![image](https://github.com/user-attachments/assets/a86de3bc-89ef-4381-9d79-dd814cebc1c0)
+
 En cuanto a los estilos en el texto:
-Cuando introducimos palabras importantes, las ponemos en negrita para resaltarlas.
 
-Mostramos nombres de archivos, URL y código dentro del texto de la siguiente manera: objectstart.com .
+* Cuando introducimos palabras importantes, las ponemos en negrita para resaltarlas.
+* Mostramos nombres de archivos, URL y código dentro del texto de la siguiente manera:
+  `objectstart.com`.
 
-Ponemos en negrita las líneas de código dentro de pasajes de código largos si queremos llamar su atención sobre esas líneas en particular:
-// El uso de negrita se utiliza para llamar la atención sobre código nuevo o significativo:
-Estudiante s = nuevo Estudiante();
-// mientras que el código sin negrita es código que es menos importante en el
-// contexto actual, o ya visto antes.
-int x = 3;
-Usamos fuente de código cursiva en lugar de regular para representar pseudocódigo :
-// Este es el código real:
-para (int i = 0; i <= 10; i++) {
-    //¡Esto es pseudocódigo!
-    Calcular la calificación del i-ésimo estudiante
-}
+* Ponemos en negrita las líneas de código dentro de pasajes de código largos si queremos llamar su atención sobre esas líneas en particular:
+
+   ![image](https://github.com/user-attachments/assets/20f40f76-a00b-4e17-99bc-2ab0a6c5293f)
+
+* Usamos fuente de código cursiva en lugar de regular para representar pseudocódigo:
+
+   ![image](https://github.com/user-attachments/assets/b28f53e0-3b9b-4063-a6d0-76a90cf3c02a)
+
 
 #### ¿En qué versión de Java se basa este libro?
 
-Como se mencionó anteriormente, Oracle Corporation continúa lanzando nuevas versiones del lenguaje Java de manera regular. La buena noticia es que, como en mi libro me concentro únicamente en la sintaxis básica del lenguaje Java (características del lenguaje que han sido estables desde el inicio de Java), este libro no es específico de una versión. Las técnicas y los conceptos que aprenderá leyendo mi libro le serán igualmente útiles cuando aparezcan nuevas versiones de Java. Dicho esto, todos los ejemplos de código en BJO son compatibles con las versiones de Java 8 a 17. (En términos generales, las nuevas versiones del lenguaje Java son compatibles con versiones posteriores, lo que significa que el código escrito para una versión anterior del lenguaje se compilará correctamente en una versión más nueva).
+Como se mencionó anteriormente, Oracle Corporation continúa lanzando nuevas versiones del lenguaje Java de manera regular. La **buena noticia** es que, como en mi libro me concentro únicamente en la sintaxis básica del lenguaje Java (características del lenguaje que han sido estables desde el inicio de Java), este libro no es específico de una versión. Las técnicas y los conceptos que aprenderá leyendo mi libro le serán igualmente útiles cuando aparezcan nuevas versiones de Java. Dicho esto, todos los ejemplos de código en BJO son compatibles con las versiones de **Java 8 a 17**. (En términos generales, las nuevas versiones del lenguaje Java son compatibles con versiones posteriores, lo que significa que el código escrito para una versión anterior del lenguaje se compilará correctamente en una versión más nueva).
 
 #### Una última reflexión antes de empezar
 
-Gran parte del material de mi libro (en particular, el comienzo de la Parte 1) puede parecer demasiado simplista para los programadores experimentados. Esto se debe a que gran parte de la tecnología de objetos se basa en principios básicos de ingeniería de software que se han puesto en práctica durante muchos años y, en muchos casos, simplemente se han reempaquetado de forma ligeramente diferente. De hecho, hay algunos trucos nuevos que hacen que los lenguajes orientados a objetos sean extremadamente poderosos y que eran prácticamente imposibles de lograr con lenguajes no orientados a objetos , por ejemplo, la herencia y el polimorfismo, sobre los que aprenderá más en los Capítulos 5 y 7 , respectivamente. (Estas técnicas se pueden simular a mano en un lenguaje no orientado a objetos, de la misma manera que los programadores podrían programar su propio sistema de gestión de bases de datos (DBMS) desde cero en lugar de utilizar un producto comercial como Oracle o SQL Server, pero ¿quién querría hacerlo?)
+Gran parte del material de mi libro (en particular, el comienzo de la Parte 1) puede parecer demasiado simplista para los programadores experimentados. Esto se debe a que gran parte de la tecnología de objetos se basa en principios básicos de ingeniería de software que se han puesto en práctica durante muchos años y, en muchos casos, simplemente se han reempaquetado de forma ligeramente diferente. De hecho, hay algunos trucos nuevos que hacen que los lenguajes orientados a objetos sean extremadamente poderosos y que eran prácticamente imposibles de lograr con lenguajes no orientados a objetos, por ejemplo, la ***herencia*** y el ***polimorfismo***, sobre los que aprenderá más en los Capítulos 5 y 7, respectivamente. (Estas técnicas se pueden simular a mano en un lenguaje no orientado a objetos, de la misma manera que los programadores podrían programar su propio sistema de gestión de bases de datos (DBMS) desde cero en lugar de utilizar un producto comercial como Oracle o SQL Server, pero ¿quién querría hacerlo?)
 
 El mayor desafío para los programadores experimentados a la hora de dominar los objetos es reorientar la manera en que piensan sobre el problema que van a automatizar:
-Los ingenieros de software/programadores que han desarrollado aplicaciones utilizando métodos no orientados a objetos a menudo tienen que “desaprender” ciertos enfoques utilizados en los métodos tradicionales de análisis y diseño de software.
 
-Paradójicamente, a las personas que recién comienzan como programadores (o como modeladores OO) a veces les resulta más fácil aprender el enfoque OO para el desarrollo de software como su único enfoque.
+* Los ingenieros de software/programadores que han desarrollado aplicaciones utilizando métodos no orientados a objetos a menudo tienen que “desaprender” ciertos enfoques utilizados en los métodos tradicionales de análisis y diseño de software.
 
-Afortunadamente, la forma en que necesitamos pensar sobre los objetos cuando desarrollamos software resulta ser la forma natural en que la gente piensa sobre el mundo en general. Por lo tanto, aprender a “pensar” en objetos (y a programarlos en Java) es tan fácil como (Parte) 1, (Parte) 2, (Parte) 3.
+* Paradójicamente, a las personas que recién comienzan como programadores (o como modeladores OO) a veces les resulta más fácil aprender el enfoque OO para el desarrollo de software como su único enfoque.
 
-El código fuente de este libro se puede encontrar en https://​github.​com/​Apress/​Beginning-Java-Objects-3rd-ed .
+Afortunadamente, la forma en que necesitamos pensar sobre los objetos cuando desarrollamos software resulta ser la forma natural en que la gente piensa sobre el mundo en general. Por lo tanto, aprender a “pensar” en objetos (y a programarlos en Java) es tan fácil como (Parte)1, (Parte)2, (Parte)3.
 
-Caso práctico del sistema de registro de estudiantes (SRS)
+El código fuente de este libro se puede encontrar en [https://​github.​com/​Apress/​Beginning-Java-Objects-3rd-ed](https://​github.​com/​Apress/​Beginning-Java-Objects-3rd-ed).
+
+### Caso práctico - Student Registration System (SRS) 
+
 ESPECIFICACIÓN DE REQUISITOS DEL SISTEMA DE REGISTRO DE ESTUDIANTES (SRS)
 Se nos ha pedido que desarrollemos un sistema automatizado de registro de estudiantes (SRS). Este sistema permitirá a los estudiantes registrarse en línea para los cursos cada semestre, así como realizar un seguimiento del progreso del estudiante hacia la finalización de su título.
 
