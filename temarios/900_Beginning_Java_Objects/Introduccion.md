@@ -45,17 +45,21 @@ Igualmente importante es que este libro **no** pretende...
 
 Con los fundamentos que obtenga de este libro, estará preparado para apreciar un tratamiento más exhaustivo de Java, como el que ofrecen las muchas otras referencias de Java que se encuentran actualmente en el mercado, o una revisión más profunda de las técnicas de modelado de objetos a partir de una referencia UML en profundidad. Haremos recomendaciones de dichos libros en el Capítulo 15 .
 
-¿Por qué es tan importante comprender los objetos para ser un programador OO exitoso?
-Una y otra vez me encuentro con desarrolladores de software (en mi lugar de trabajo, en las oficinas de los clientes, en conferencias profesionales, en campus universitarios) que han intentado dominar un lenguaje de programación orientado a objetos (OOPL) como Java tomando un curso de Java, leyendo un libro sobre Java o instalando y usando un entorno de desarrollo integrado (IDE) de Java como Eclipse , IntelliJ IDEA , NetBeans o BlueJ . Sin embargo, hay algo que falta fundamentalmente en prácticamente todos estos enfoques: una comprensión básica de qué son los objetos y, lo que es más importante, el conocimiento de cómo estructurar una aplicación de software desde cero para aprovechar al máximo los objetos .
+### ¿Por qué es tan importante comprender los objetos para ser un programador OO exitoso?
+
+Una y otra vez me encuentro con desarrolladores de software (en mi lugar de trabajo, en las oficinas de los clientes, en conferencias profesionales, en campus universitarios) que han intentado dominar un lenguaje de programación orientado a objetos (OOPL) como Java tomando un curso de Java, leyendo un libro sobre Java o instalando y usando un entorno de desarrollo integrado (IDE) de Java como **Eclipse**, **IntelliJ IDEA**, **NetBeans** o **BlueJ**. Sin embargo, hay algo que falta fundamentalmente en prácticamente todos estos enfoques: una comprensión básica de qué son los objetos y, lo que es más importante, **el conocimiento de cómo estructurar una aplicación de software desde cero para aprovechar al máximo los objetos**.
 
 Imagina que te han pedido que construyas una casa y que conoces los conceptos básicos de la construcción de viviendas. De hecho, eres un constructor de viviendas de renombre mundial cuyos servicios tienen una gran demanda. Has construido casas de todos los estilos arquitectónicos posibles, utilizando todos los tipos de materiales de construcción conocidos: ladrillo, madera, piedra, metal, etc. Por lo tanto, cuando tu cliente te dice que quiere que utilices un nuevo tipo de material de construcción, que él te proporcionará, estás encantado de complacerlo.
 
+![image](https://github.com/user-attachments/assets/15dcb34c-d6f7-4d09-986b-e7500250c5aa)
 
 El día en que se van a iniciar las obras, un camión se detiene en el lugar de las obras y descarga una gran pila de bloques de aspecto extraño con forma de estrella azul y agujeros en el medio. ¡Estás totalmente desconcertado! Has construido innumerables casas con materiales más conocidos, pero no tienes ni idea de cómo montar una casa con estrellas azules.
 
+![image](https://github.com/user-attachments/assets/1433896c-2b3c-4ca8-88b8-198f797ac11d)
 
 Rascándote la cabeza, sacas un martillo y unos clavos e intentas unir las estrellas azules como si estuvieras trabajando con madera, pero las estrellas no encajan muy bien. Luego intentas rellenar los huecos con el mismo mortero que usarías para unir los ladrillos entre sí, pero el mortero no se adhiere muy bien a las estrellas azules. Sin embargo, como estás trabajando con limitaciones de costo y tiempo para construir esta casa para tu cliente (y porque te da vergüenza admitir que, como experto constructor de viviendas, no sabes cómo trabajar con estos materiales modernos), sigues adelante. Al final, terminas con algo que parece (al menos en la superficie) una casa.
 
+![image](https://github.com/user-attachments/assets/c65be2cf-d33e-4d76-a9c7-39558b13441b)
 
 Su cliente viene a inspeccionar el trabajo y se queda muy decepcionado. Una de las razones por las que había elegido las estrellas azules como material de construcción era que son extremadamente eficientes energéticamente; pero, como ha utilizado clavos y mortero para ensamblarlas, han perdido gran parte de su capacidad inherente para aislar la casa.
 
@@ -63,6 +67,7 @@ Para compensar, su cliente le pide que reemplace todas las ventanas de la casa p
 
 Cuando le dices esto a tu cliente, ¡se pone furioso ! Otro motivo por el que eligieron las estrellas azules como material de construcción fue por su modularidad y, por lo tanto, por su facilidad para adaptarse a los cambios de diseño; pero, debido a la forma ineficaz en que has ensamblado estas estrellas, también han perdido esta flexibilidad.
 
+![image](https://github.com/user-attachments/assets/59fbdd87-5d71-46aa-9a4c-49af58fbf561)
 
 Lamentablemente, muchos programadores terminan creando una aplicación orientada a objetos sin la formación adecuada en las propiedades fundamentales de los componentes básicos de dicha aplicación, es decir, los objetos de software. Peor aún, la gran mayoría de los aspirantes a programadores orientados a objetos ignoran por completo la necesidad de comprender los objetos para programar en un lenguaje orientado a objetos. Por eso, comienzan a programar con un lenguaje como Java y terminan con un resultado que dista mucho de ser ideal: una aplicación que carece de flexibilidad cuando se produce una inevitable "corrección a mitad de camino" en respuesta a los requisitos cambiantes después de que se haya implementado la aplicación.
 
