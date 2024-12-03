@@ -172,8 +172,9 @@ El código fuente de este libro se puede encontrar en [https://​github.​com/
 
 ### Caso práctico - Student Registration System (SRS) 
 
-ESPECIFICACIÓN DE REQUISITOS DEL SISTEMA DE REGISTRO DE ESTUDIANTES (SRS)
-Se nos ha pedido que desarrollemos un sistema automatizado de registro de estudiantes (SRS). Este sistema permitirá a los estudiantes registrarse en línea para los cursos cada semestre, así como realizar un seguimiento del progreso del estudiante hacia la finalización de su título.
+**ESPECIFICACIÓN DE REQUISITOS DEL SISTEMA DE REGISTRO DE ESTUDIANTES (SRS)**
+
+Se nos ha pedido que desarrollemos un **Student Registration System (SRS) - Sistema Automatizado de Registro de Estudiantes (SRS)**. Este sistema permitirá a los estudiantes registrarse en línea para los cursos cada semestre, así como realizar un seguimiento del progreso del estudiante hacia la finalización de su título.
 
 Cuando un estudiante se inscribe por primera vez en la universidad, utiliza el SRS para establecer un plan de estudios en cuanto a los cursos que planea tomar para satisfacer un programa de grado en particular y elegir un asesor docente. El SRS verificará si el plan de estudios propuesto satisface o no los requisitos del título que el estudiante está buscando. Una vez que se ha establecido un plan de estudios, durante el período de inscripción anterior a cada semestre, los estudiantes pueden ver el cronograma de clases en línea y elegir las clases a las que desean asistir, indicando la sección preferida (día de la semana y hora del día) si la clase es ofrecida por más de un profesor. El SRS verificará si el estudiante ha cumplido o no con los requisitos previos necesarios para cada curso solicitado consultando el expediente académico en línea del estudiante de los cursos completados y las calificaciones recibidas (el estudiante puede revisar su expediente académico en línea en cualquier momento).
 
@@ -181,25 +182,23 @@ Suponiendo que (a) se cumplen los requisitos previos para los cursos solicitados
 
 Si se cumplen los puntos (a) y (b), pero no (c), el estudiante pasa a una lista de espera por orden de llegada. Si una clase o sección para la que estaba en lista de espera se vuelve disponible (ya sea porque otro estudiante ha abandonado la clase o porque se ha aumentado la capacidad de asientos para la clase), el estudiante queda inscrito automáticamente en la clase en lista de espera y se le envía un mensaje de correo electrónico a tal efecto. Es su responsabilidad abandonar la clase si ya no la desea; de lo contrario, se le facturará el curso.
 
-Cualquier código fuente u otro material complementario al que hace referencia el autor en este libro está disponible para los lectores en GitHub a través de la página del producto del libro, ubicada en https://github.com/Apress/Beginning-Java-Objects-3e.
+Cualquier código fuente u otro material complementario al que hace referencia el autor en este libro está disponible para los lectores en GitHub a través de la página del producto del libro, ubicada en [https://​github.​com/​Apress/​Beginning-Java-Objects-3rd-ed](https://​github.​com/​Apress/​Beginning-Java-Objects-3rd-ed).
+.
 
 ### Acerca del autor
 
-Jacquie Barker
+**Jacquie Barker**
 
 Jacquie es ingeniera de software profesional, autora y ex miembro de la facultad adjunta de la Universidad George Mason en Fairfax, Virginia, y de la Universidad George Washington en Washington, DC. Con más de 30 años de experiencia como desarrolladora de software y gerente de proyectos, Jacquie ha pasado los últimos 15 años enfocada en la tecnología de objetos y es competente como modeladora de objetos y programadora Java certificada por Sun Microsystems.
 
 Jacquie obtuvo una licenciatura en Ciencias en ingeniería informática con los máximos honores del Case Institute of Technology/Case Western Reserve University en Cleveland, Ohio, y una maestría en Ciencias de la Computación, con énfasis en ingeniería de sistemas de software, de la Universidad de California, Los Ángeles. Posteriormente, realizó estudios de posgrado en tecnología de la información en la Universidad George Mason en Fairfax, Virginia. La fórmula ganadora de Jacquie para enseñar los fundamentos de los objetos sigue recibiendo elogios de lectores de todo el mundo, y Beginning Java Objects: From Concepts to Code ha sido adoptado por muchas universidades como un libro de texto clave en sus programas básicos de TI.
 
-En lo personal, las pasiones de Jacquie incluyen a su esposo, Steve, y sus tres gatos, Walter, Rocky y Tanner; su trabajo como fundadora y directora ejecutiva de Pets Bring Joy, una organización de rescate de animales sin fines de lucro 501(c)(3) (visite pbj.org); y su reciente lanzamiento de un servicio de consultoría informática pro bono para organizaciones sin fines de lucro emergentes (visite probonoit.org). Puede comunicarse con Jacquie en jacquie.barker@gmail.com.
+En lo personal, las pasiones de Jacquie incluyen a su esposo, Steve, y sus tres gatos, Walter, Rocky y Tanner; su trabajo como fundadora y directora ejecutiva de Pets Bring Joy, una organización de rescate de animales sin fines de lucro 501(c)(3) (visite pbj.org); y su reciente lanzamiento de un servicio de consultoría informática pro bono para organizaciones sin fines de lucro emergentes (visite probonoit.org). 
 
- 
 #### Acerca del revisor técnico
 
 Manuel Jordán es un desarrollador e investigador autodidacta que disfruta aprendiendo nuevas tecnologías para sus propios experimentos sobre la creación de nuevas integraciones entre ellas.
 
-Manuel ganó el premio Springy 2010 : Campeón de la comunidad y Campeón de primavera 2013. En su poco tiempo libre, lee la Biblia y compone música con su bajo y guitarra.
+Manuel ganó el premio 2010 Springy Award: Campeón de la comunidad y Spring Champion 2013. En su poco tiempo libre, lee la Biblia y compone música con su bajo y guitarra.
 
 Manuel considera que la formación y la capacitación constantes son muy valiosas para cualquier desarrollador, al igual que la refactorización y el testing. Manuel puede ofrecer estos servicios para su empresa gracias a su experiencia en Java y Spring.
-
-Puedes contactarlo principalmente a través de su cuenta de Twitter @dr_pompeii.
