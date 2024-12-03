@@ -647,7 +647,7 @@ public class EjemploJDBC_06_Repositorio {
 
 Vamos a implementar el método `getById(Long id)`, el cual regresa un Producto si lo encuentra de acuerdo al id que se le pase y si no lo encuentra retornara un nulo.
 
-En este caso no usaremos un `Statement` sino un `PreparedStatement` una sentencia preparada ya que necesita un `WHERE` y el paso de un parámetro. Para pasar el parametro necesitamos settear el valor del parámetro indicando un indice y el valor que queremos pasar. Una vez hecho esto necesitamos ejecutar el `PreparedStatement`. Al ejecutar el `PreparedStatement` retorna un cursor el `ResultSet`.
+En este caso no usaremos un `Statement` sino un `PreparedStatement` una sentencia preparada ya que necesita un `WHERE` y el paso de un parámetro. Para pasar el parametro necesitamos settear el valor del parámetro indicando un indice y el valor que queremos pasar. Una vez hecho esto necesitamos ejecutar el `PreparedStatement`. Al ejecutar el `PreparedStatement` retorna un cursor, el `ResultSet`. En teoría el `ResultSet` solo retornara un valor por eso usamos un `if` en lugar de un `while`. Dentro del `if` setteamos lo que que nos regresa el `ResultSet` dentro del `Producto`, que es lo que retornara nuestro método.
 
 <img width="1067" alt="image" src="https://github.com/user-attachments/assets/3a151ea6-df05-4fec-9056-40232f698918">
 
