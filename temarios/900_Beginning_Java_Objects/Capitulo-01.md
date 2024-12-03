@@ -140,22 +140,27 @@ Una vez que hemos determinado los aspectos esenciales de una situación (algo qu
 
 Cuando aprendemos algo nuevo, automáticamente buscamos en nuestro archivo mental otras abstracciones/modelos que hemos construido y dominado previamente, para buscar similitudes sobre las que podamos construir. Cuando aprendiste a andar en una bicicleta de dos ruedas por primera vez, por ejemplo, es posible que hayas recurrido a lecciones que aprendiste sobre andar en triciclo cuando eras niño (ver Figura 1-7 ). Ambos tienen manubrios que se usan para conducir; ambos tienen pedales que se usan para impulsar la bicicleta hacia adelante. Aunque las abstracciones no coincidían perfectamente (una bicicleta de dos ruedas introdujo el nuevo desafío de tener que mantener el equilibrio), había suficiente similitud para permitirte recurrir a la experiencia de dirección y pedaleo que ya dominabas y concentrarte en aprender la nueva habilidad de cómo mantener el equilibrio sobre dos ruedas.
 
-Figura 1-7El cerebro humano es experto en aprender basándose en abstracciones ya establecidas.
-Esta técnica de comparación de características para encontrar una abstracción que sea lo suficientemente similar como para ser reutilizada con éxito se conoce como coincidencia y reutilización de patrones . Como veremos más adelante en el libro, la reutilización de patrones también es una técnica importante para el desarrollo de software orientado a objetos, ya que nos ahorra tener que reinventar la rueda con cada nuevo proyecto. Si podemos reutilizar una abstracción o un modelo de un proyecto anterior, podemos centrarnos en aquellos aspectos del nuevo proyecto que difieren del anterior, lo que genera una enorme cantidad de productividad en el proceso.
+![image](https://github.com/user-attachments/assets/58545889-6da5-4bd1-992c-94c502fb613b)
 
-Desafíos inherentes
-A pesar de que la abstracción es un proceso tan natural para los seres humanos, desarrollar un modelo apropiado para un sistema de software es quizás el aspecto más difícil de la ingeniería de software , porque
-Las posibilidades son ilimitadas. La abstracción depende hasta cierto punto del observador: es casi seguro que varios observadores diferentes que trabajen independientemente llegarán a diferentes modelos. ¿Quién es el mejor? ¡ Han surgido apasionadas discusiones!
+Figura 1-7 El cerebro humano es experto en aprender basándose en abstracciones ya establecidas.
 
-Para complicar aún más las cosas, prácticamente nunca existe un único modelo “mejor” o “correcto” , sino sólo modelos “mejores” o “peores” en relación con el problema que se debe resolver. La misma situación se puede modelar de diversas formas igualmente válidas. Cuando nos pongamos a hacer algunos modelos en la Parte 2 de este libro, veremos una serie de abstracciones alternativas válidas para nuestro caso de estudio del Sistema de Registro de Estudiantes (SRS) que se presentó al final de la Introducción.
+Esta técnica de comparación de características para encontrar una abstracción que sea lo suficientemente similar como para ser reutilizada con éxito se conoce como **pattern matching and reuse - coincidencia y reutilización de patrones**. Como veremos más adelante en el libro, la reutilización de patrones también es una técnica importante para el desarrollo de software orientado a objetos, ya que nos ahorra tener que reinventar la rueda con cada nuevo proyecto. Si podemos reutilizar una abstracción o un modelo de un proyecto anterior, podemos centrarnos en aquellos aspectos del nuevo proyecto que difieren del anterior, lo que genera una enorme cantidad de productividad en el proceso.
 
-Sin embargo, hay que tener en cuenta que existen modelos incorrectos, es decir, aquellos que tergiversan la situación del mundo real (por ejemplo, modelar a una persona como si tuviera dos tipos de sangre diferentes).
+### Desafíos inherentes
 
-No existe una prueba de fuego para determinar si un modelo ha capturado adecuadamente todos los requisitos de un usuario. La prueba definitiva de si una abstracción fue apropiada o no está en el éxito que resulte el sistema de software resultante. Por ello, es fundamental que aprendamos formas de comunicar nuestro modelo de forma concisa e inequívoca con frecuencia a lo largo del ciclo de vida del desarrollo ágil.
+A pesar de que la abstracción es un proceso tan natural para los seres humanos, desarrollar un modelo apropiado para un sistema de software es quizás el aspecto más difícil de la ingeniería de software, porque:
 
-Los futuros usuarios previstos de nuestra aplicación, para que puedan proporcionar una comprobación de nuestra comprensión del problema que se debe resolver antes de embarcarnos en el desarrollo del software.
+* Las posibilidades son ilimitadas. La abstracción depende hasta cierto punto del observador: es casi seguro que varios observadores diferentes que trabajen independientemente llegarán a diferentes modelos. ¿Quién es el mejor? ¡Han surgido apasionadas discusiones!
 
-Nuestros colegas ingenieros de software, para que los miembros del equipo puedan compartir una visión común de lo que vamos a construir de manera colaborativa.
+* Para complicar aún más las cosas, prácticamente nunca existe un único modelo “mejor” o “correcto”, sino sólo modelos “mejores” o “peores” en relación con el problema que se debe resolver. La misma situación se puede modelar de diversas formas igualmente válidas. Cuando nos pongamos a hacer algunos modelos en la Parte 2 de este libro, veremos una serie de abstracciones alternativas válidas para nuestro caso de estudio del Sistema de Registro de Estudiantes (SRS) que se presentó al final de la Introducción.
+
+* Sin embargo, hay que tener en cuenta que existen modelos incorrectos, es decir, aquellos que tergiversan la situación del mundo real (por ejemplo, modelar a una persona como si tuviera dos tipos de sangre diferentes).
+
+* No existe una prueba de fuego para determinar si un modelo ha capturado adecuadamente todos los requisitos de un usuario. La prueba definitiva de si una abstracción fue apropiada o no está en el éxito que resulte el sistema de software resultante. Por ello, es fundamental que aprendamos formas de comunicar nuestro modelo de forma concisa e inequívoca con frecuencia a lo largo del ciclo de vida del desarrollo ágil.
+
+* Los futuros usuarios previstos de nuestra aplicación, para que puedan proporcionar una comprobación de nuestra comprensión del problema que se debe resolver antes de embarcarnos en el desarrollo del software.
+
+* Nuestros colegas ingenieros de software, para que los miembros del equipo puedan compartir una visión común de lo que vamos a construir de manera colaborativa.
 
 A pesar de todos estos desafíos, es fundamental lograr que la abstracción inicial sea “correcta” antes de comenzar a construir un sistema. Cuanto más tarde en el ciclo de vida del software se detecte un error de modelado, más costoso será solucionarlo en órdenes de magnitud. Esto no implica que una abstracción deba ser rígida, ¡todo lo contrario! El arte y la ciencia del modelado de objetos, cuando se aplica correctamente, produce un modelo que es lo suficientemente flexible como para soportar una amplia variedad de cambios funcionales. Además, las propiedades especiales de los objetos de software se prestan aún más a soluciones de software flexibles, como aprenderá a lo largo del resto del libro.
 
