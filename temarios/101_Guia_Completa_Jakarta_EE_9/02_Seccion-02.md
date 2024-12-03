@@ -535,7 +535,9 @@ En la siguiente clase vamos a implementar cada uno de los métodos de la interfa
 
 Lo primero que hacemos es crear un método privado que nos permite generar una conexión a la BD.
 
-A continuación vamos a implementar el primer método de la interface `getFindAll()`.
+A continuación vamos a implementar el primer método de la interface `getFindAll()`. En este método solo definimos en el try con recursos las sentencias `Statement` y `ResultSet` que se autocerraran cuando termine el try, la conexión no la pasamos ya que se necesita abierta para su uso en los 3 restantes métodos. La conexión se debe cerrar al final de la aplicación, al final del método `main`, pero también podríamos añadirla en el try con recursos y lo que estaríamos haciendo es abrir y cerrar una conexión en cada uno de nuestros métodos, depende de como queramos hacer la implementación.
+
+Nota: Un `java.sql.Date` es un `java.util.Date` por eso se puede settear en la propiedad `setFechaRegistro`.
 
 <img width="1134" alt="image" src="https://github.com/user-attachments/assets/c991ea8a-aec4-4884-8492-b326a5144104">
 
@@ -600,9 +602,11 @@ public class ProductoRepositirioImpl implements Repositorio<Producto>{
 }
 ```
 
-Vamos a usar el método `getFindAll()` en la siguiente clase:
+Vamos a usar el método `getFindAll()` en la siguiente clase principal:
 
 **```EjemploJDBC_06_Repositorio.java```**
+
+Observese que aquí si que metemos en el try con recursos la conexión, esto lo hacemos para que al terminar la aplicación se autocierre dicha conexión.
 
 <img width="1122" alt="image" src="https://github.com/user-attachments/assets/8b4c66ff-e3ab-48b8-82b6-e96264cf3529">
 
