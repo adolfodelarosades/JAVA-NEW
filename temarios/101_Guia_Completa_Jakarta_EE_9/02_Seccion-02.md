@@ -610,6 +610,7 @@ Observese que aquí si que metemos en el try con recursos la conexión, esto lo 
 
 <img width="1122" alt="image" src="https://github.com/user-attachments/assets/8b4c66ff-e3ab-48b8-82b6-e96264cf3529">
 
+**`EjemploJDBC_06_Repositorio.java`**
 
 ```java
 package org.example;
@@ -650,6 +651,127 @@ Vamos a implementar el método `getById(Long id)`, el cual regresa un Producto s
 En este caso no usaremos un `Statement` sino un `PreparedStatement` una sentencia preparada ya que necesita un `WHERE` y el paso de un parámetro. Para pasar el parametro necesitamos settear el valor del parámetro indicando un indice y el valor que queremos pasar. Una vez hecho esto necesitamos ejecutar el `PreparedStatement`. Al ejecutar el `PreparedStatement` retorna un cursor, el `ResultSet`. En teoría el `ResultSet` solo retornara un valor por eso usamos un `if` en lugar de un `while`. Dentro del `if` setteamos lo que que nos regresa el `ResultSet` dentro del `Producto`, que es lo que retornara nuestro método.
 
 <img width="1067" alt="image" src="https://github.com/user-attachments/assets/3a151ea6-df05-4fec-9056-40232f698918">
+
+**`ProductoRepositirioImpl.java`**
+
+```java
+package org.example.repository;
+
+import org.example.model.Producto;
+import org.example.util.ConexionBD;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductoRepositirioImpl implements Repositorio<Producto>{
+
+    private Connection getConnection() throws SQLException {
+        return ConexionBD.getInstance();
+    }
+
+    @Override
+    public List<Producto> getFindAll() {
+        List<Producto> productos = new ArrayList<>();
+
+        try(
+                Statement stmt = getConnection().createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM productos")
+                ){
+            while (rs.next()){
+                Producto p = new Producto();
+                p.setId(rs.getLong("id"));
+                p.setNombre(rs.getString("nombre"));
+                p.setPrecio(rs.getInt("precio"));
+                p.setFechaRegistro(rs.getDate("fecha_registro"));
+                productos.add(p);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return productos;
+    }
+
+    @Override
+    public Producto getById(Long id) {
+        Producto producto = null;
+
+        try(PreparedStatement prStmt = getConnection()
+                .prepareStatement("SELECT * FROM productos WHERE id = ?")) {
+            prStmt.setLong(1, id);
+            ResultSet rs = prStmt.executeQuery();
+            if(rs.next()){
+                producto= new Producto();
+                producto.setId(rs.getLong("id"));
+                producto.setNombre(rs.getString("nombre"));
+                producto.setPrecio(rs.getInt("precio"));
+                producto.setFechaRegistro(rs.getDate("fecha_registro"));
+            }
+            rs.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return producto;
+    }
+
+    @Override
+    public void save(Producto producto) {
+
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
+}
+
+```
+
+Vamos a crear la clase **`EjemploJDBC_06_Repositorio_02.java`** para usar el método `getById(Long id)`.
+
+<img width="1074" alt="image" src="https://github.com/user-attachments/assets/63844002-fd51-4d9e-922f-2f545066ab3b">
+
+**`EjemploJDBC_06_Repositorio_02.java`**
+
+```java
+package org.example;
+
+import org.example.model.Producto;
+import org.example.repository.ProductoRepositirioImpl;
+import org.example.repository.Repositorio;
+import org.example.util.ConexionBD;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class EjemploJDBC_06_Repositorio_02 {
+
+    public static void main(String[] args) {
+
+        try (Connection conn = ConexionBD.getInstance()){
+            Repositorio<Producto> repositorio = new ProductoRepositirioImpl();
+            Producto producto = repositorio.getById(2L);
+            System.out.println(producto.getId() + " | "
+                             + producto.getNombre() + " | "
+                             + producto.getPrecio() + " | "
+                             + producto.getFechaRegistro());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+```
+
+Al ejecutar la clase tenemos:
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/9441201b-93cc-4cff-98b6-2d8d52396755">
+
+Hay varias cosas a observar en estas clases:
+
+* En el método `getById(Long id)` en el try con recursos que usamos 
+
 
 
 ## 12. Implementando la clase Repositorio parte 3 el CRUD
