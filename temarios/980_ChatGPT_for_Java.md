@@ -38,7 +38,8 @@ Desarrolladores Java principiantes e intermedios que tengan conocimientos básic
 
 ## Table of Contents
 
-* Introduction
+* [Introduction](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Introduction.md)
+  
 ### Chapter 1:​ Introducing ChatGPT for Java Developers
 
 * Who Is This Book For?​
