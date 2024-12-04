@@ -24,25 +24,50 @@
 * Conclusion
 
 ## ¿Para quién es este libro?
+
 En primer lugar, este libro está dirigido a desarrolladores de Java que no tienen formación ni experiencia en inteligencia artificial, procesamiento de lenguaje natural, aprendizaje automático o aprendizaje profundo. Es posible que hayas oído hablar del término "modelo de lenguaje", pero supongo que NO es un término que uses todos los días.
 
-En segundo lugar, es posible que esté familiarizado con (o haya probado) ChatGPT , pero no comprende bien cómo funciona todo "debajo del capó" y no está seguro de cómo comenzar para usar Java y ChatGPT programáticamente juntos para "habilitar IA" sus propias aplicaciones y servicios.
+En segundo lugar, es posible que esté familiarizado con (o haya probado) ChatGPT, pero no comprende bien cómo funciona todo "debajo del capó" y no está seguro de cómo comenzar para usar Java y ChatGPT programáticamente juntos para "habilitar IA" a sus propias aplicaciones y servicios.
 
-NotaAunque ChatGPT es un nombre muy conocido, OpenAI, la empresa que lo respalda, carece de un amplio reconocimiento y no es tan conocida. Por lo tanto, aunque este libro trata sobre cómo usar ChatGPT de manera programática dentro de sus aplicaciones Java, las API que usaremos son oficialmente las API REST de OpenAI. Por lo tanto, usaremos los términos "API de ChatGPT" y "API de OpenAI" como sinónimos.
-Resumen del capítulo
+Nota: Aunque ChatGPT es un nombre muy conocido, OpenAI, la empresa que lo respalda, carece de un amplio reconocimiento y no es tan conocida. Por lo tanto, aunque este libro trata sobre cómo usar ChatGPT de manera programática dentro de sus aplicaciones Java, las API que usaremos son oficialmente las API REST de OpenAI. Por lo tanto, usaremos los términos "API de ChatGPT" y "API de OpenAI" como sinónimos.
+
+## Resumen del capítulo
+
 En este capítulo, vamos a profundizar en el tema y a explicar algunos términos con los que quizás no estés familiarizado, para luego pasar directamente a Playground de ChatGPT. Playground es, en esencia, una interfaz web para desarrolladores que se basa en la API REST de ChatGPT. Por lo tanto, una vez que te familiarices con Playground, las llamadas y respuestas de la API de ChatGPT te resultarán algo natural.
 
-¡Descarga el código ahora!
+### ¡Descarga el código ahora!
+
+![image](https://github.com/user-attachments/assets/6244bc49-8506-4352-9335-2b795f2fbcbd)
 
 Este libro está repleto de ejemplos y códigos de ejemplo, así que ¿por qué molestarse en escribir todo usted mismo? A continuación se muestra la URL del repositorio de GitHub para acceder al código fuente.
 
 https://github.com/Apress/ChatGPT-for-Java
 
-Entonces, ¿qué es exactamente ChatGPT y por qué necesito utilizar las API de OpenAI?
-En términos simples, ChatGPT es un grupo de modelos de lenguaje (que son el resultado del entrenamiento de algoritmos de aprendizaje profundo) desarrollados por OpenAI que son capaces de generar respuestas de texto similares a las humanas en función de indicaciones dadas . Entonces, ¿qué es una indicación? Una indicación es simplemente el texto de entrada que le das a ChatGPT. Entonces, comencemos dándole a ChatGPT una indicación para preguntarle qué tan familiarizado está con los patrones de diseño de Java (Listado 1-1 ).
+## Entonces, ¿qué es exactamente ChatGPT y por qué necesito utilizar las API de OpenAI?
+
+En términos simples, ChatGPT es un grupo de **modelos de lenguaje** (que son el resultado del entrenamiento de algoritmos de aprendizaje profundo) desarrollados por OpenAI que son capaces de generar respuestas de texto similares a las humanas en función de indicaciones(**prompts**) dadas. Entonces, ¿qué es un **prompt**? Un **prompt**-indicación es simplemente el texto de entrada que le das a ChatGPT. Entonces, comencemos dándole a ChatGPT una indicación para preguntarle qué tan familiarizado está con los patrones de diseño de Java (Listado 1-1 ).
+
+```sh
+Describe 3 commonly used design patterns used by Java developers and why those patterns are important
 Describe tres patrones de diseño comúnmente utilizados por los desarrolladores de Java y por qué esos patrones son importantes.
-Listado 1-1PROMPT. Un mensaje sencillo con ChatGPT sobre patrones de diseño de Java
+```
+
+**Listado 1-1 PROMPT. Un mensaje sencillo con ChatGPT sobre patrones de diseño de Java**
+
 Si ha tenido la oportunidad de trabajar en una empresa que utiliza Java de manera profesional, es probable que haya recibido una pregunta muy similar a la anterior en una entrevista. La lista 1-2 es la respuesta de ChatGPT .
+
+```sh
+Certainly! Design patterns are reusable solutions to common problems that arise in software design. They are best practices that experienced developers have discovered and refined over time. Java developers frequently utilize design patterns due to the language's object-oriented nature. Here are three commonly used design patterns in Java:
+1. Singleton Pattern:
+   - Purpose: This pattern ensures that a class has only one instance and provides a global point of access to that instance. It's particularly useful when you want to control access to shared resources, such as configuration managers or connection pools.
+   - Importance: The Singleton pattern is important because it provides a controlled mechanism to prevent creating multiple instances of a class, which can save memory and synchronize access to resources. Moreover, it ensures that operations using the singleton are using the same instance and data, which is critical in scenarios where consistent state or coordinated actions are required.
+2. Observer Pattern:
+   - Purpose: This pattern defines a one-to-many dependency between objects. When one object (known as the subject or observable) changes its state, all of its dependents (observers) are notified and updated automatically. It's the underlying principle behind the Model-View-Controller (MVC) architecture, where the model is the subject and the views are observers.
+   - Importance: The Observer pattern is vital for building systems that are modular and decoupled. Changes in one part of the system don't directly affect others, allowing for easier maintenance and scalability. This pattern also makes it easier to add new observers without modifying existing code, enhancing the system's extensibility.
+3. Factory Pattern:
+   - Purpose: The Factory pattern provides an interface for creating instances of a class, but it's up to the derived subclasses to implement the method and determine which class to instantiate. It promotes the loose coupling by eliminating the need to bind application-specific classes into the code. Instead, the code interacts only with the resulting interface or abstract class, so the system can evolve without altering the calling code.
+   - Importance: Using the Factory pattern, a system can be more flexible and scalable. If there's a need to introduce a new product or modify an existing one, it can be done without disturbing the existing code. It encapsulates the object creation process and separates it from the main logic of the program, promoting the Single Responsibility Principle. This ensures that a class is only responsible for one reason to change.
+All these patterns, and many more, provide a vocabulary for developers, making it easier to communicate complex software designs and concepts. They embody solutions to recurring problems and can significantly speed up the development process, reduce errors, and improve code quality.
 
 ¡Por supuesto! Los patrones de diseño son soluciones reutilizables para problemas comunes que surgen en el diseño de software. Son prácticas recomendadas que los desarrolladores experimentados han descubierto y perfeccionado con el tiempo. Los desarrolladores de Java utilizan con frecuencia patrones de diseño debido a la naturaleza orientada a objetos del lenguaje. A continuación, se muestran tres patrones de diseño de uso común en Java:
 1. Patrón Singleton:
@@ -55,7 +80,9 @@ Si ha tenido la oportunidad de trabajar en una empresa que utiliza Java de maner
    - Propósito: El patrón Factory proporciona una interfaz para crear instancias de una clase, pero las subclases derivadas son las que implementan el método y determinan qué clase instanciar. Promueve el acoplamiento flexible al eliminar la necesidad de vincular clases específicas de la aplicación al código. En cambio, el código interactúa solo con la interfaz resultante o la clase abstracta, por lo que el sistema puede evolucionar sin alterar el código de llamada.
    - Importancia: Al utilizar el patrón Factory, un sistema puede ser más flexible y escalable. Si es necesario introducir un nuevo producto o modificar uno existente, se puede hacer sin alterar el código existente. Encapsula el proceso de creación de objetos y lo separa de la lógica principal del programa, promoviendo el principio de responsabilidad única. Esto garantiza que una clase solo sea responsable de un motivo de cambio.
 Todos estos patrones, y muchos más, proporcionan un vocabulario a los desarrolladores, lo que facilita la comunicación de conceptos y diseños de software complejos. Incorporan soluciones a problemas recurrentes y pueden acelerar significativamente el proceso de desarrollo, reducir errores y mejorar la calidad del código.
-Listado 1-2RESPUESTA. Respuesta de ChatGPT a la solicitud del listado 1-1
+```
+
+**Listado 1-2 2RESPONSE. Respuesta de ChatGPT a la solicitud del listado 1-1
 No está mal, ¿no? ChatGPT no solo pudo proporcionar una lista de patrones de diseño comunes utilizados por los desarrolladores de Java, sino que también explicó razones válidas de por qué son importantes, todo en lenguaje natural.
 
 Entonces, al final del día, ¿qué significa esto para los desarrolladores de Java? Bueno, en realidad es algo muy importante. Esto se debe a que los desarrolladores ahora pueden crear aplicaciones que pueden tener algún tipo de "comprensión" del texto en lenguaje natural. Antes de la llegada de herramientas de IA como ChatGPT, los desarrolladores normalmente tenían que crear expresiones regulares (también llamadas "regex") para realizar una coincidencia rudimentaria de caracteres y patrones de cadenas dentro de un cuerpo de texto. Sin embargo, la coincidencia de patrones y la comprensión del lenguaje natural son dos cosas totalmente diferentes.
