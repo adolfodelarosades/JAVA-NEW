@@ -82,13 +82,21 @@ All these patterns, and many more, provide a vocabulary for developers, making i
 Todos estos patrones, y muchos más, proporcionan un vocabulario a los desarrolladores, lo que facilita la comunicación de conceptos y diseños de software complejos. Incorporan soluciones a problemas recurrentes y pueden acelerar significativamente el proceso de desarrollo, reducir errores y mejorar la calidad del código.
 ```
 
-**Listado 1-2 2RESPONSE. Respuesta de ChatGPT a la solicitud del listado 1-1
+**Listado 1-2 2 RESPONSE. Respuesta de ChatGPT a la solicitud del listado 1-1
+
+Respuestas del 04/12/2024:
+
+![image](https://github.com/user-attachments/assets/1eb9c4aa-2c21-47b9-bb0f-94803284a595)
+
+
 No está mal, ¿no? ChatGPT no solo pudo proporcionar una lista de patrones de diseño comunes utilizados por los desarrolladores de Java, sino que también explicó razones válidas de por qué son importantes, todo en lenguaje natural.
 
 Entonces, al final del día, ¿qué significa esto para los desarrolladores de Java? Bueno, en realidad es algo muy importante. Esto se debe a que los desarrolladores ahora pueden crear aplicaciones que pueden tener algún tipo de "comprensión" del texto en lenguaje natural. Antes de la llegada de herramientas de IA como ChatGPT, los desarrolladores normalmente tenían que crear expresiones regulares (también llamadas "regex") para realizar una coincidencia rudimentaria de caracteres y patrones de cadenas dentro de un cuerpo de texto. Sin embargo, la coincidencia de patrones y la comprensión del lenguaje natural son dos cosas totalmente diferentes.
 
-Regex vs. ChatGPT: ¡Pelea!
-Nota Si ya sabe que una expresión regular no puede realizar comprensión del lenguaje natural ni análisis de sentimientos, puede omitir esta sección.
+## Regex vs. ChatGPT: ¡Pelea!
+
+**Nota**: Si ya sabe que una expresión regular no puede realizar comprensión del lenguaje natural ni análisis de sentimientos, puede omitir esta sección.
+
 Estoy completamente convencido de que todos los programadores, en algún momento de su vida, han conocido a alguien que resulta ser un experto en la escritura de expresiones regulares. Las expresiones regulares son geniales porque sirven para analizar grandes cantidades de texto con el fin de encontrar patrones dentro del texto mediante programación.
 
 Sin embargo, una de las mayores desventajas de las expresiones regulares es que una vez escritas, son extremadamente difíciles de leer (en mi opinión, incluso para el desarrollador que las escribió originalmente).
@@ -96,29 +104,59 @@ Sin embargo, una de las mayores desventajas de las expresiones regulares es que 
 Entonces, veamos cómo se comporta regex frente a ChatGPT, que tiene capacidades de procesamiento de lenguaje natural (NLP) y comprensión del lenguaje natural (NLU) .
 
 El listado 1-3 es la historia de una situación triste y poco práctica. Sin embargo, pone de manifiesto que, si bien las expresiones regulares se pueden utilizar para buscar palabras y frases dentro de un cuerpo de texto, no se pueden utilizar para proporcionar ningún tipo de NLU.
+
+```sh
+In the city of Buttersville,USA on Milkmaid street, there’s a group of three friends: Marion Yogurt, Janelle de Queso, and Steve Cheeseworth III. On a hot summer’s day, they heard the music from an ice cream truck, and decided to buy something to eat.
+Marion likes strawberries, Janelle prefers chocolate, and Steve is lactose intolerant. That day, only two kids ate ice cream, and one of them bought a bottle of room-temperature water. The ice cream truck was fully stocked with the typical flavors of ice cream.
+
 En la ciudad de Buttersville, Estados Unidos, en la calle Milkmaid, hay un grupo de tres amigos: Marion Yogurt, Janelle de Queso y Steve Cheeseworth III. Un caluroso día de verano, oyeron la música de un camión de helados y decidieron comprar algo para comer.
 A Marion le gustan las fresas, a Janelle el chocolate y a Steve no le gusta la lactosa. Ese día, solo dos niños comieron helado y uno de ellos compró una botella de agua a temperatura ambiente. El camión de helados estaba repleto de los sabores típicos de helado.
-Listado 1-3Sadstory.txt - Una historia triste sobre un niño que no comía helado
-Pregunta de análisis n.° 1: ¿Quién no recibió helado y por qué?
+```
+
+**Listado 1-3 Sadstory.txt - Una historia triste sobre un niño que no comía helado**
+
+### Pregunta de análisis n.° 1: ¿Quién no recibió helado y por qué?
+
 Ahora analicemos esto un poco y hagamos algunas preguntas entre nosotros. En primer lugar, ¿quién no compró helado y por qué? La respuesta obvia es que Steve no compró helado debido a su intolerancia a la lactosa. Sin embargo, dado que la historia no dice directamente que Steve no compró helado, no hay forma de que una expresión regular coincida con un patrón de texto en la historia.
 
 La expresión regular podría buscar palabras clave como “no tenía”, “no había helado” o los nombres de los niños. Sin embargo, solo podría proporcionar una respuesta basada en la presencia de estos patrones. Por ejemplo, si la expresión regular coincide con el patrón “no tenía” o “no había helado” con el nombre de Steve, podría mostrarle el resultado del patrón de texto. Sin embargo, ciertamente no podría explicar por qué Steve fue el que no comió helado ni proporcionar ningún razonamiento específico del contexto.
 
 Ahora, proporcionemos la misma historia a ChatGPT y hagamos la pregunta: "¿Quién no recibió helado?". El Listado 1-4 toma nuestra pregunta y la historia anterior y las reúne como un mensaje.
+
+```sh
+Using the information in the following story, who didn't get any ice cream and why?
+###
+In the city of Buttersville,USA on Milkmaid street, there’s a group of three friends: Marion Yogurt, Janelle de Queso, and Steve Cheeseworth III. On a hot summer’s day, they heard the music from an ice cream truck, and decided to buy something to eat.
+Marion likes strawberries, Janelle prefers chocolate, and Steve is lactose intolerant. That day, only two kids ate ice cream, and one of them bought a bottle of room-temperature water. The ice cream truck was fully stocked with the typical flavors of ice cream.
+
 Utilizando la información de la siguiente historia, ¿quién no recibió helado y por qué?
 ###
 En la ciudad de Buttersville, Estados Unidos, en la calle Milkmaid, hay un grupo de tres amigos: Marion Yogurt, Janelle de Queso y Steve Cheeseworth III. Un caluroso día de verano, oyeron la música de un camión de helados y decidieron comprar algo para comer.
 A Marion le gustan las fresas, a Janelle el chocolate y a Steve no le gusta la lactosa. Ese día, solo dos niños comieron helado y uno de ellos compró una botella de agua a temperatura ambiente. El camión de helados estaba repleto de los sabores típicos de helado.
-Listado 1-4PROMPT. La triste historia plasmada en un mensaje
+```
+
+**Listado 1-4 PROMPT. La triste historia plasmada en un mensaje**
+
 Observe que es una buena práctica proporcionar algún tipo de separación, en este caso, “###”, al crear un mensaje (como el anterior) en el que se tienen instrucciones y datos juntos. Más adelante, cuando comencemos a usar Playground o Java para invocar programáticamente la API ChatGPT, verá que hay una forma mucho mejor de proporcionar esa separación.
 
-Entonces, después de enviar el mensaje, ChatGPT le proporcionará una respuesta como se muestra en el Listado 1-5 .
+Entonces, después de enviar el mensaje, ChatGPT le proporcionará una respuesta como se muestra en el Listado 1-5.
+
+```sh
+Based on the given information, Steve is lactose intolerant and therefore cannot eat ice cream. Therefore, Steve is the one who didn't get any ice cream.
 
 Según la información proporcionada, Steve es intolerante a la lactosa y, por lo tanto, no puede comer helado. Por lo tanto, Steve es el que no tomó ningún helado.
-Listado 1-5RESPUESTA. Respuesta de ChatGPT a la pregunta de análisis n.° 1
+```
+
+**Listado 1-5 5RESPONSE. Respuesta de ChatGPT a la pregunta de análisis n.° 1**
+
+![image](https://github.com/user-attachments/assets/70803d48-ff50-4a0b-a36d-bf9b58a8f08e)
+
+![image](https://github.com/user-attachments/assets/b9780856-1673-4ec3-a8c8-8a40aadf3451)
+
 Como puede ver, ChatGPT puede utilizar NLP y NLU y, por lo tanto, puede comprender (de manera artificialmente inteligente, claro está) el contexto del escenario. Puede interpretar las relaciones entre los niños, sus preferencias y la intolerancia a la lactosa de Steve. Es capaz de entender que los apellidos de los niños, el nombre de la calle y el nombre de la ciudad son nombres de productos lácteos, pero obviamente son irrelevantes para la pregunta en cuestión.
 
-Pregunta de análisis n.° 2: ¿Qué niño probablemente quedó triste?
+### Pregunta de análisis n.° 2: ¿Qué niño probablemente quedó triste?
+
 Ahora, para demostrar aún más el punto de que una expresión regular no puede proporcionar ningún tipo de procesamiento del lenguaje natural (PLN) o lenguaje natural del lenguaje (NLU), ahora usemos un nuevo término llamado análisis de sentimientos . Por lo tanto, después de que el camión de helados se fue, ¿qué niño se quedó triste?
 
 Dado que la historia no menciona ninguno de los sentimientos o emociones de los niños, no existe ningún patrón de texto que permita que cualquier expresión regular devuelva una coincidencia.
