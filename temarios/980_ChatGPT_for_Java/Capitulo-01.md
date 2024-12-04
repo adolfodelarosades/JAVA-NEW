@@ -161,130 +161,129 @@ Ahora, para demostrar aún más el punto de que una expresión regular no puede 
 
 Dado que la historia no menciona ninguno de los sentimientos o emociones de los niños, no existe ningún patrón de texto que permita que cualquier expresión regular devuelva una coincidencia.
 
-Sin embargo, si plantea la misma pregunta a ChatGPT, devolverá una respuesta como la que se muestra en el Listado 1-6 .
+Sin embargo, si plantea la misma pregunta a ChatGPT, devolverá una respuesta como la que se muestra en el Listado 1-6.
+
+```sh
+Since Steve is lactose intolerant and cannot eat ice cream, he would be the kid left sad because he couldn't enjoy the ice cream like Marion and Janelle.
 
 Como Steve es intolerante a la lactosa y no puede comer helado, él sería el niño que quedaría triste porque no podría disfrutar del helado como Marion y Janelle.
-Listado 1-6RESPUESTA. Respuesta de ChatGPT a la pregunta de análisis n.° 2
+```
+
+**Listado 1-6 RESPONSE. Respuesta de ChatGPT a la pregunta de análisis n.° 2**
+
+![image](https://github.com/user-attachments/assets/77893cdc-9ca1-47ba-a82f-2900334f8e7d)
+
+![image](https://github.com/user-attachments/assets/a2c56e35-5772-4440-9ccd-c3f949ad1c34)
+
+
 Por lo tanto, ChatGPT es capaz de comprender el escenario, razonar la información y proporcionar una respuesta correcta junto con una explicación para esa respuesta.
 
-Desaprenderemos algunas palabras para aprender más sobre la API ChatGPT
+## Desaprenderemos algunas palabras para aprender más sobre la API ChatGPT
+
 En primer lugar, antes de comenzar a trabajar con las API de ChatGPT y OpenAI, hay algunas palabras y términos con los que debe familiarizarse; de ​​lo contrario, las cosas no tendrán mucho sentido. Por lo tanto, asegurémonos de que todos tenemos clara la definición de modelos, indicaciones, tokens y temperatura al usar ChatGPT de forma programática.
 
-Modelos. ¿Modelos? ¡¡¡Modelos!!!
+### Modelos. ¿Modelos? ¡¡¡Modelos!!!
+
 Como desarrollador de Java, cuando escuchas el término "modelo", es posible que pienses inmediatamente en la programación orientada a objetos y en la representación de entidades del mundo real en tu clase Java, ¿verdad? Por ejemplo, piensa en el término "modelo de objetos". Además, si alguna vez has trabajado con algún tipo de base de datos, entonces el término "modelo" TAMBIÉN puede evocar en tu mente la idea de la representación de datos y sus relaciones en tu base de datos. Por ejemplo, piensa en el término "modelo de datos".
 
-Sin embargo, al trabajar con las API de ChatGPT (y con la inteligencia artificial en general), es necesario olvidarse de ambas definiciones, porque no son aplicables. En el ámbito de la inteligencia artificial, un "modelo" es una red neuronal entrenada previamente .
+Sin embargo, al trabajar con las API de ChatGPT (y con la inteligencia artificial en general), es necesario olvidarse de ambas definiciones, porque no son aplicables. **En el ámbito de la inteligencia artificial, un *"modelo"* es una red neuronal entrenada previamente**.
 
-Recuerde que, como mencioné anteriormente, no necesitará un doctorado en aprendizaje automático para leer este libro. Entonces, ¿qué es una red neuronal? En términos simples, una red neuronal es un componente fundamental de los sistemas de inteligencia artificial, porque están diseñados para simular la forma en que funciona el cerebro humano mediante el uso de capas interconectadas de neuronas artificiales para procesar y analizar datos. Estas redes se pueden entrenar con grandes cantidades de datos para aprender patrones, relaciones y hacer predicciones.
+Recuerde que, como mencioné anteriormente, no necesitará un doctorado en aprendizaje automático para leer este libro. Entonces, ¿qué es una red neuronal? En términos simples, ***una red neuronal es un componente fundamental de los sistemas de inteligencia artificial***, porque están diseñados para simular la forma en que funciona el cerebro humano mediante el uso de capas interconectadas de neuronas artificiales para procesar y analizar datos. Estas redes se pueden entrenar con grandes cantidades de datos para aprender patrones, relaciones y hacer predicciones.
 
-Figura 1-1Un modelo de IA se entrena con grandes cantidades de datos
-En el contexto de la IA, un “ modelo preentrenado ” se refiere a una red neuronal que ha sido entrenada en una tarea o conjunto de datos específicos antes de estar disponible para su uso por parte de los desarrolladores. Este proceso de entrenamiento implica exponer el modelo a grandes cantidades de datos etiquetados y categorizados (también llamados “anotados”) y ajustar sus parámetros internos para optimizar su rendimiento en la tarea determinada.
+![image](https://github.com/user-attachments/assets/f376dde0-e1eb-46c3-a8c0-c5fef031bd30)
+
+**Figura 1-1 Un modelo de IA se entrena con grandes cantidades de datos**
+
+En el contexto de la IA, ***un “modelo preentrenado” se refiere a una red neuronal que ha sido entrenada en una tarea o conjunto de datos específicos antes de estar disponible para su uso por parte de los desarrolladores***. Este proceso de entrenamiento implica exponer el modelo a grandes cantidades de datos etiquetados y categorizados (también llamados “anotados”) y ajustar sus parámetros internos para optimizar su rendimiento en la tarea determinada.
 
 Veamos algunos de los modelos proporcionados por OpenAI para que los desarrolladores los utilicen para habilitar IA en sus aplicaciones.
-GPT-4
 
-GPT-4 es la última generación del conjunto de modelos GPT de OpenAI. GPT significa Generative Pre-trained Transformer (Transformador generativo preentrenado ) y estos modelos han sido entrenados para comprender el lenguaje natural, así como varios lenguajes de programación. Los modelos GPT-4 toman texto e imágenes como entradas como indicaciones y proporcionan texto como salida.
 
-Algunos de los modelos GPT-4 disponibles son
+### GPT-4
 
-•  gpt-4
+   GPT-4 es la última generación del conjunto de modelos GPT de OpenAI. **GPT significa Generative Pre-trained Transformer (Transformador generativo preentrenado)** y estos modelos han sido entrenados para comprender el lenguaje natural, así como varios lenguajes de programación. Los modelos GPT-4 toman texto e imágenes como entradas como indicaciones y proporcionan texto como salida.
 
-•  gpt-4-32k
+   Algunos de los modelos GPT-4 disponibles son
 
-•  gpt-4-visión
+   * **gpt-4**
+   * **gpt-4-32k**
+   * **gpt-4-visión**
 
-GPT-3.5
+### GPT-3.5
 
-GPT-3.x es la generación anterior del conjunto de modelos GPT de OpenAI. El ChatGPT original lanzado al público en noviembre de 2022 utilizaba GPT 3.
+   GPT-3.x es la generación anterior del conjunto de modelos GPT de OpenAI. El ChatGPT original lanzado al público en noviembre de 2022 utilizaba GPT 3.
 
-Algunos de los modelos GPT-3 disponibles son
+   Algunos de los modelos GPT-3 disponibles son
 
-•  gpt-3.5-turbo
+   * **gpt-3.5-turbo**
+   * **gpt-3.5-turbo-16k**
 
-•  gpt-3.5-turbo-16k
+### DALL·É
 
-DALL·É
+   El modelo DALL·E puede generar y editar imágenes a partir de una indicación en lenguaje natural.
 
-El modelo DALL·E puede generar y editar imágenes a partir de una indicación en lenguaje natural.
+   Más adelante en este libro, en el Capítulo 4, nos divertiremos un poco con el modelo DALL·E para visualizar la conversación de lo que se está discutiendo en su episodio de podcast favorito.
 
-Más adelante en este libro, en el Capítulo 4 , nos divertiremos un poco con el modelo DALL·E para visualizar la conversación de lo que se está discutiendo en su episodio de podcast favorito.
+   Algunos de los modelos DALL·E disponibles son
 
-Algunos de los modelos DALL·E disponibles son
+   * **de-e-3**
+   * **de-e-2**
 
-•  de-e-3
+### TTS
 
-•  de-e-2
+   El modelo TTS toma texto y lo convierte en audio con resultados sorprendentemente buenos. En la mayoría de los casos, el audio es casi indistinguible de una voz humana.
 
-TTS
+   Algunos de los modelos TTS disponibles son
 
-El modelo TTS toma texto y lo convierte en audio con resultados sorprendentemente buenos. En la mayoría de los casos, el audio es casi indistinguible de una voz humana.
+   * **tts-1**
+   * **tts-1-hd**
 
-Algunos de los modelos TTS disponibles son
+### Whisper
 
-•  tts-1
+   En términos simples, el modelo Whisper convierte el audio en texto.
 
-•  tts-1-hd
+   En este libro, utilizaremos el modelo Whisper para buscar texto en un episodio de podcast.
 
-Susurro
+### Embeddings
 
-En términos simples, el modelo Whisper convierte el audio en texto.
+   El modelo de incrustaciones puede convertir grandes cantidades de texto en una representación numérica de cómo se relacionan las cadenas del texto. ¿Por qué es útil? Las incrustaciones permiten a los desarrolladores realizar tareas específicas utilizando conjuntos de datos personalizados. Sí, esto significa que puede entrenar el modelo de incrustaciones con datos específicos que sean relevantes para su aplicación. Esto le permite realizar operaciones como
 
-En este libro, utilizaremos el modelo Whisper para buscar texto en un episodio de podcast.
+   * Búsqueda dentro de su propio cuerpo de texto
+   * Agrupar datos de modo que las cadenas de texto se agrupen por su similitud
+   * Obtener recomendaciones (donde se recomiendan elementos con cadenas de texto relacionadas)
+   * Detección de anomalías (donde se identifican valores atípicos con poca relación)
+   * Medición de la diversidad (donde se analizan distribuciones de similitud)
+   * Clasificación de datos (donde las cadenas de texto se clasifican por su etiqueta más similar)
 
-Incrustaciones
+### Moderation
 
-El modelo de incrustaciones puede convertir grandes cantidades de texto en una representación numérica de cómo se relacionan las cadenas del texto. ¿Por qué es útil? Las incrustaciones permiten a los desarrolladores realizar tareas específicas utilizando conjuntos de datos personalizados. Sí, esto significa que puede entrenar el modelo de incrustaciones con datos específicos que sean relevantes para su aplicación. Esto le permite realizar operaciones como
+   Los modelos de moderación son modelos afinados que pueden detectar si un texto puede ser sensible o inseguro. Estos modelos pueden analizar el contenido del texto y clasificarlo según las siguientes categorías:
 
-• Búsqueda dentro de su propio cuerpo de texto
+   * Odiar
+   * Odio/amenaza
+   * Acoso
+   * Acoso/amenaza
+   * Autolesión
+   * Autolesión/intención
+   * Autolesión/instrucciones
+   * Sexual
+   * Sexual/menores
+   * Violencia
+   * Violencia/gráfica
 
-• Agrupar datos de modo que las cadenas de texto se agrupen por su similitud
+   Los modelos de moderación disponibles son
 
-• Obtener recomendaciones (donde se recomiendan elementos con cadenas de texto relacionadas)
+   * Moderación de textos más reciente
+   * Moderación de texto estable
 
-• Detección de anomalías (donde se identifican valores atípicos con poca relación)
+### Legacy and Deprecated
 
-• Medición de la diversidad (donde se analizan distribuciones de similitud)
+   Desde el debut de ChatGPT, OpenAI ha seguido dando soporte a sus modelos de IA más antiguos, pero se los ha etiquetado como modelos “heredados” u “obsoletos” . Estos modelos siguen existiendo; sin embargo, han lanzado otros modelos que son más precisos, más rápidos y más económicos de usar.
 
-• Clasificación de datos (donde las cadenas de texto se clasifican por su etiqueta más similar)
+**Nota**: ¡Esta no es de ninguna manera una lista exhaustiva de los modelos disponibles para desarrolladores proporcionados por OpenAI! A medida que se publiquen modelos más nuevos, los modelos más antiguos se marcarán como heredados o en desuso. Por lo tanto, es importante mantenerse actualizado consultando la lista de modelos disponibles en la lista de modelos de la documentación de OpenAI: https://platform.openai.com/docs/models
 
-Moderación
+### Cuando hablamos de tokens, pensemos en StringTokenizer y no en tokens de acceso
 
-Los modelos de moderación son modelos afinados que pueden detectar si un texto puede ser sensible o inseguro. Estos modelos pueden analizar el contenido del texto y clasificarlo según las siguientes categorías:
-
-• Odiar
-
-• Odio/amenaza
-
-• Acoso
-
-• Acoso/amenaza
-
-• Autolesión
-
-• Autolesión/intención
-
-• Autolesión/instrucciones
-
-• Sexual
-
-• Sexual/menores
-
-• Violencia
-
-• Violencia/gráfica
-
-Los modelos de moderación disponibles son
-
-•  Moderación de textos más reciente
-
-•  Moderación de texto estable
-
-Legado y obsoleto
-
-Desde el debut de ChatGPT, OpenAI ha seguido dando soporte a sus modelos de IA más antiguos, pero se los ha etiquetado como modelos “heredados” u “obsoletos” . Estos modelos siguen existiendo; sin embargo, han lanzado otros modelos que son más precisos, más rápidos y más económicos de usar.
-
-Nota¡Esta no es de ninguna manera una lista exhaustiva de los modelos disponibles para desarrolladores proporcionados por OpenAI! A medida que se publiquen modelos más nuevos, los modelos más antiguos se marcarán como heredados o en desuso. Por lo tanto, es importante mantenerse actualizado consultando la lista de modelos disponibles en la lista de modelos de la documentación de OpenAI: https://platform.openai.com/docs/models
-Cuando hablamos de tokens, pensemos en StringTokenizer y no en tokens de acceso
 Al utilizar una API de terceros, es posible que piense en un token en el mismo sentido que en un token de acceso , que normalmente es un UUID que le permite identificarse y mantener una sesión con el servicio. Bueno, olvídese de esa definición por ahora.
 
 Ahora bien, como desarrollador de Java, probablemente hayas tenido la oportunidad de usar la clase java.util.StringTokenizer para tomar una cadena y dividirla en una matriz de cadenas más pequeñas para poder iterarla con el propósito que necesites. Por ejemplo, si tienes un párrafo de texto, puedes dejar que tu delimitador sea “.” para obtener una matriz de oraciones en el párrafo.
