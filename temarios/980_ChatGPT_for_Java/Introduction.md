@@ -7,20 +7,22 @@ Afortunadamente, muchas de estas preguntas se abordan de manera concreta en este
 
 Los ejemplos prácticos y concisos de este libro no solo le permitirán comenzar rápidamente a crear proyectos con ChatGPT, sino que también le permitirán comenzar a afinar su intuición sobre cómo pensar en esta tecnología. De hecho, si bien el enfoque está puesto en trabajar en Java, los desarrolladores que usan cualquier lenguaje de programación se beneficiarán de profundizar en él.
 
-Patricia Thaine
+*Patricia Thaine*
 
-Cofundador y director ejecutivo de Private AI
+*Cofundador y director ejecutivo de Private AI*
 
 www.private-ai.com
 
 Cualquier código fuente u otro material complementario al que hace referencia el autor en este libro está disponible para los lectores en GitHub. Para obtener información más detallada, visite https://www.apress.com/gp/services/source-code.
 
 ### Acerca del autor
+
 Bruce Hopkins
 
-es un escritor técnico y un experto de renombre mundial. Es un Oracle Java Champion y un Intel Software Innovator. Bruce también es el autor del libro de Apress Bluetooth for Java .
+Es un escritor técnico y un experto de renombre mundial. Es un Oracle Java Champion y un Intel Software Innovator. Bruce también es el autor del libro de Apress Bluetooth for Java.
  
-Acerca del revisor técnico
+### Acerca del revisor técnico
+
 De Van Arsdale
 
- es un líder tecnológico con más de 30 años de experiencia en la industria del software. Tiene una licenciatura en Sistemas de Información Informática de la Universidad de Massachusetts Lowell y una maestría en CIS de la Universidad Estatal de Missouri. Ha trabajado como ingeniero de software, arquitecto, gerente y profesor. Van actualmente lidera un equipo en una importante empresa de servicios financieros y es profesor adjunto en la Universidad Estatal de Missouri.
+Es un líder tecnológico con más de 30 años de experiencia en la industria del software. Tiene una licenciatura en Sistemas de Información Informática de la Universidad de Massachusetts Lowell y una maestría en CIS de la Universidad Estatal de Missouri. Ha trabajado como ingeniero de software, arquitecto, gerente y profesor. Van actualmente lidera un equipo en una importante empresa de servicios financieros y es profesor adjunto en la Universidad Estatal de Missouri.
