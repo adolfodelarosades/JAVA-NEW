@@ -360,21 +360,21 @@ El campo User (Figura 1-5, elemento 2) en el Playground de ChatGPT es donde escr
 
 #### 3. Assistant - Asistente (opcional)
 
-Cuando cargas por primera vez el Chat Playground, el campo Asistente (Figura 1-5, elemento 3) no está visible. Para que aparezca, debes hacer clic en el símbolo “ + ” junto a “Agregar mensaje”. Ahora, te estarás preguntando: “¿Por qué es necesario este campo?”. Bueno, esa es una buena pregunta. Si quieres que ChatGPT recuerde algo que ya te ha dicho en una conversación anterior, entonces debes escribir en el campo Asistente todo lo que ya te haya dicho y que creas que es relevante para continuar con la conversación. Recuerda, es una IA muy poderosa, ¡pero tiene amnesia!
+Cuando cargas por primera vez el Chat Playground, el campo Asistente (Figura 1-5, elemento 3) no está visible. Para que aparezca, debes hacer clic en el símbolo “ + ” junto a “**Add Message**”. Ahora, te estarás preguntando: “¿Por qué es necesario este campo?”. Bueno, esa es una buena pregunta. Si quieres que ChatGPT recuerde algo que ya te ha dicho en una conversación anterior, entonces debes escribir en el campo Asistente todo lo que ya te haya dicho y que creas que es relevante para continuar con la conversación. Recuerda, es una IA muy poderosa, ¡pero tiene amnesia!
 
 #### 4. Agregar mensaje - Message  (opcional)
 
-El símbolo “ + ” de **Add Message- Agregar mensaje** (Figura 1-5 , elemento 4) es donde debe hacer clic para agregar un mensaje del Asistente a la conversación u otro mensaje de Usuario . Ahora, puede preguntarse: “¿Qué sentido tiene agregar otro mensaje de Usuario a la conversación cuando puedo escribir lo que quiero en el campo de Usuario original que se encuentra arriba?” Buena pregunta.
+El símbolo “ + ” de **Add Message** (Figura 1-5, elemento 4) es donde debe hacer clic para agregar un mensaje del Asistente a la conversación u otro mensaje de Usuario. Ahora, puede preguntarse: “¿Qué sentido tiene agregar otro mensaje de Usuario a la conversación cuando puedo escribir lo que quiero en el campo de Usuario original que se encuentra arriba?” Buena pregunta.
 
 Si desea separar su comando de sus datos, deberá utilizar un mensaje de usuario separado para eso.
 
-¿Recuerdas que en el Listado 1-4 anterior de este capítulo teníamos que usar el “###” para separar el comando a ChatGPT de los datos que queríamos que analizara? Bueno, esto ya no es necesario porque el comando sería el primer mensaje de usuario y los datos serían el segundo mensaje de usuario .
+¿Recuerdas que en el Listado 1-4 anterior de este capítulo teníamos que usar el “###” para separar el comando a ChatGPT de los datos que queríamos que analizara? Bueno, esto ya no es necesario porque el comando sería el primer mensaje de usuario y los datos serían el segundo mensaje de usuario.
 
 #### 5. Ver código (opcional)
 
-Después de haber enviado su mensaje usando el Playground, puede hacer clic en el botón Ver código (Figura 1-5 , elemento 5) para ver el código necesario para enviar el mismo mensaje usando cualquiera de los idiomas que admiten.
+Después de haber enviado su mensaje usando el Playground, puede hacer clic en el botón **View code** (Figura 1-5 , elemento 5) para ver el código necesario para enviar el mismo mensaje usando cualquiera de los idiomas que admiten.
 
-Es posible que notes que Java no es un lenguaje admitido oficialmente, pero lo solucionaremos en el Capítulo 2 , cuando usemos ChatGPT como programador en pareja y portemos su interfaz REST a Java nosotros mismos.
+Es posible que notes que Java no es un lenguaje admitido oficialmente, pero lo solucionaremos en el Capítulo 2, cuando usemos ChatGPT como programador en pareja y portemos su interfaz REST a Java nosotros mismos.
 
 #### 6. Modelo (opcional)
 
@@ -388,19 +388,30 @@ Como se señaló anteriormente en este capítulo, el selector de temperatura var
 
 #### 8. Longitud máxima (opcional)
 
-¿Recuerdas la discusión anterior en este capítulo sobre los tokens? Al seleccionar cualquier elemento en el rango de este elemento, puedes ajustar la cantidad de tokens (que afecta directamente la cantidad de palabras ) en la respuesta.
+¿Recuerdas la discusión anterior en este capítulo sobre los tokens? Al seleccionar cualquier elemento en el rango de este elemento, puedes ajustar la cantidad de tokens (que afecta directamente la cantidad de palabras) en la respuesta.
 
-¡Pruébelo ahora! Experimente con el rol de “sistema”
+### ¡Pruébelo ahora! Experimente con el rol de “sistema”
+
 Ahora que estamos familiarizados con varias de las funciones de Chat Playground, enviemos nuestro primer mensaje usando las configuraciones que mencionamos anteriormente. Los listados 1-7 y 1-8 usan el mismo mensaje para pedirle a ChatGPT que escriba algunos párrafos sobre telemedicina, pero la función del sistema es muy diferente entre sí.
-Sistema : Eres un investigador estrictamente factual.
-Usuario : Escribe 3 párrafos sobre los pros y contras de la telemedicina.
-Listado 1-7PROMPT. Pros y contras de la telemedicina para investigadores
-Sistema : Eres un bloguero de salud con muchas opiniones que siempre tiene historias con experiencias de primera mano.
-Usuario : Escribe 3 párrafos sobre los pros y contras de la telemedicina.
-Listado 1-8PROMPT. Los pros y contras de la telemedicina según un bloguero de salud con opiniones
+
+![image](https://github.com/user-attachments/assets/4d37b4a4-532d-4415-a65f-e3f05cafb63e)
+
+```sh
+System: You are a strictly factual researcher
+User: Write 3 paragraphs on pros and cons of telemedicine
+```
+**Listado 1-7 PROMPT. Pros y contras de la telemedicina para investigadores**
+
+```sh
+System: You are a highly opinionated health blogger who always has stories with first hand experience
+User: Write 3 paragraphs on pros and cons of telemedicine
+```
+**Listado 1-8PROMPT. Los pros y contras de la telemedicina según un bloguero de salud con opiniones**
+
 Se le recomienda que pruebe estas dos indicaciones usted mismo y vea cuáles son las respuestas. Ajuste la configuración de la temperatura y la longitud de la ficha para familiarizarse con la forma en que esos parámetros afectan el resultado.
 
-Conclusión
+### Conclusión
+
 Acabas de aprender más sobre cómo los desarrolladores pueden usar ChatGPT. Cubrimos algunos de los conceptos básicos de Chat Playground, que es una interfaz web para que los desarrolladores interactúen con la API de ChatGPT.
 
 Hablamos sobre cómo configurar los roles de sistema, usuario y asistente en el Chat Playground y cómo ajustar configuraciones como la temperatura y la duración máxima de salida.
