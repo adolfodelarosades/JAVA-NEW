@@ -208,154 +208,46 @@ La Tabla 2-4 describe el formato del objeto JSON necesario para el request body 
 ![image](https://github.com/user-attachments/assets/8743560b-1415-4079-8888-709e51071810)
 
 
-**Nota**: En este libro, trabajaremos con el parámetro "stream" configurado en su configuración predeterminada, que es falsa. Esto significa que recibiremos todos los resultados de ChatGPT a la vez como una única respuesta HTTP.
+**Nota**: En este libro, trabajaremos con el parámetro "stream" configurado, en su configuración predeterminada, que es falsa. Esto significa que recibiremos todos los resultados de ChatGPT a la vez como una única respuesta HTTP. Sin embargo, hay casos en los que desearía que esta configuración se establezca en verdadero. Digamos que está creando, por ejemplo, un bot de chat interactivo habilitado por voz. Digamos también que está interesado en convertir el texto de ChatGPT a audio para que sus usuarios puedan escuchar una respuesta audible. En tal caso, definitivamente querrá establecer el parámetro "stream" en verdadero. ¿Por qué es así? Cuando la respuesta se transmite de vuelta a su aplicación Java, tiene la oportunidad en ese momento de convertir el fragmento de texto a audio. Esto le permitirá trabajar en paralelo con la conversión de fragmentos de texto a audio mientras recibe más texto simultáneamente. Esto hará que la respuesta parezca más natural para el usuario final y ayudará a que la conversación se sienta como una conversación real.
 
-Sin embargo, hay casos en los que desearía que esta configuración se establezca en verdadero. Digamos que está creando, por ejemplo, un bot de chat interactivo habilitado por voz. Digamos también que está interesado en convertir el texto de ChatGPT a audio para que sus usuarios puedan escuchar una respuesta audible. En tal caso, definitivamente querrá establecer el parámetro "stream" en verdadero. ¿Por qué es así? Cuando la respuesta se transmite de vuelta a su aplicación Java, tiene la oportunidad en ese momento de convertir el fragmento de texto a audio. Esto le permitirá trabajar en paralelo con la conversión de fragmentos de texto a audio mientras recibe más texto simultáneamente. Esto hará que la respuesta parezca más natural para el usuario final y ayudará a que la conversación se sienta como una conversación real .
+El listado 2-4 es un ejemplo de cómo se vería el objeto JSON para invocar correctamente el Endpoint Chat.
 
-El listado 2-4 es un ejemplo de cómo se vería el objeto JSON para invocar correctamente el punto final de chat.
+```json
 {
-  "modelo": "gpt-3.5-turbo",
-  "mensajes": [
-    {
-      "rol": "sistema",
-      "contenido": "Eres un comercializador de productos"
-    },
-    {
-      "rol": "usuario",
-      "content": "Explique por qué Java se utiliza tan ampliamente en la empresa"
-    }
-  ],
-  "temperatura": 1,
-  "máximo_tokens": 256,
-  "arriba_p": 1,
-  "penalización de frecuencia": 0,
-  "penalización por presencia": 0
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a product marketer"
+    },
+    {
+      "role": "user",
+      "content": "Explain why Java is so widely used in the enterprise "
+    }
+  ],
+  "temperature": 1,
+  "max_tokens": 256,
+  "top_p": 1,
+  "frequency_penalty": 0,
+  "presence_penalty": 0
 }
-Listado 2-4Ejemplo del objeto JSON Chat
-Manejo de la respuesta
-Después de invocar correctamente el punto final de chat, la API responderá con un objeto de finalización de chat o con un flujo de fragmentos de finalización si la transmisión está habilitada. A continuación, se muestra un desglose del objeto de finalización de chat.
+```
 
-Finalización del chat (JSON)
-Tabla 2-5La estructura del objeto JSON de la competencia de chat
-Campo
+**Listado 2-4 Ejemplo del Chat JSON Object**
 
-Tipo
+### Manejo de la Response
 
-Descripción
+Después de invocar correctamente el  Endpoint Chat, la API responderá con un Chat Completion object o con un stream de fragmentos de finalización si la transmisión está habilitada. A continuación, se muestra un desglose del objeto de finalización de chat.
 
-identificación
+#### Chat Completion (JSON)
 
-Cadena
+**Tabla 2-5 La estructura del Chat Competion JSON Object**
 
-El identificador único para la finalización del chat.
 
-objeto
-
-Cadena
-
-Esto siempre devuelve el literal "chat.completion".
-
-huella digital del sistema
-
-Cadena
-
-Utilice este parámetro como "semilla" en una solicitud posterior si desea obtener resultados reproducibles de una conversación anterior.
-
-creado
-
-entero
-
-La marca de tiempo de la finalización del chat.
-
-modelo
-
-Cadena
-
-El modelo utilizado para completar el chat.
-
-opciones
-
-Formación
-
-Una lista de opciones de finalización de chat disponibles.
-
-Puede obtener más de una opción de mensajes si especifica la cantidad de respuestas deseadas con el parámetro "n" en la solicitud JSON de Chat. Consulte la Tabla 2-4 .
-
-  ↳ índice
-
-entero
-
-El índice de la elección en la lista.
-
-  ↳ mensaje
-
-Formación
-
-Un mensaje de finalización de chat generado por el modelo.
-
-  ↳ motivo_de_finalización
-
-Cadena
-
-Cada respuesta incluirá un finish_reason. Los valores posibles para finish_reason son
-
-stop: La API devolvió un mensaje completo o un mensaje finalizado por una de las secuencias de detención proporcionadas a través del parámetro de detención.
-
-longitud: La salida del modelo estaba incompleta debido al parámetro max_tokens en la solicitud o al límite de token del modelo en sí.
-
-tool_call: El modelo llama a una herramienta, como una función.
-
-content_filter: La respuesta se terminó debido a una violación de los filtros de contenido.
-
-null: La respuesta de la API aún está en proceso o incompleta.
-
-uso
-
-Formación
-
-Estadísticas de uso de la solicitud de finalización, incluida la cantidad de tokens en la solicitud, la finalización y la solicitud total.
-
-  ↳ tokens_de_aviso
-
-entero
-
-La cantidad de tokens utilizados en el mensaje.
-
-  ↳ tokens de finalización
-
-entero
-
-La cantidad de tokens utilizados en la respuesta.
-
-  ↳ total_tokens
-
-entero
-
-La suma total de todos los tokens en la solicitud y la respuesta.
 
 El listado 2-5 es un ejemplo de la respuesta JSON después de invocar el punto final de chat.
 
-{
-  "identificación": "chatcmpl-7wUOFQ3S34scDLmrLdWTTqvHmXztQ",
-  "objeto": "chat.completado",
-  "creado": 1694174199,
-  "modelo": "gpt-3.5-turbo-0613",
-  "opciones": [
-    {
-      "índice": 0,
-      "mensaje": {
-        "rol": "asistente",
-        "content": "Java se utiliza ampliamente en las empresas porque es independiente de la plataforma, lo que permite que las aplicaciones se ejecuten en cualquier sistema. Además, Java tiene un ecosistema grande y maduro con una amplia gama de bibliotecas, marcos y herramientas, lo que facilita a los desarrolladores la creación de aplicaciones empresariales sólidas y escalables".
-      },
-      "finish_reason": "detenerse"
-    }
-  ],
-  "uso": {
-    "tokens_de_aviso": 32,
-    "tokens_de_finalización": 55,
-    "total_tokens": 87
-  }
-}
+
 Listado 2-5El objeto JSON de finalización de chat
 Espera, ¿cuántos tokens hay en mi mensaje?
 En un momento dado, comenzarás a pensar en los mensajes que planeas enviar a ChatGPT y a pensar mucho en las limitaciones de tokens (y los costos) con respecto al modelo que deseas utilizar. En caso de que lo hayas olvidado, asegúrate de volver a consultar la Tabla 1-1 para obtener una lista de modelos y el precio de los tokens. Además, OpenAI creó un sitio web fácil de usar que te permite ver cuántos tokens hay en tu mensaje, como se muestra en la Figura 2-1 .
