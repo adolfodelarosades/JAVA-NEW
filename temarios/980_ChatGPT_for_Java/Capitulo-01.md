@@ -284,135 +284,110 @@ Veamos algunos de los modelos proporcionados por OpenAI para que los desarrollad
 
 ### Cuando hablamos de tokens, pensemos en StringTokenizer y no en tokens de acceso
 
-Al utilizar una API de terceros, es posible que piense en un token en el mismo sentido que en un token de acceso , que normalmente es un UUID que le permite identificarse y mantener una sesión con el servicio. Bueno, olvídese de esa definición por ahora.
+Al utilizar una API de terceros, es posible que piense en un token en el mismo sentido que en un token de acceso, que normalmente es un UUID que le permite identificarse y mantener una sesión con el servicio. Bueno, olvídese de esa definición por ahora.
 
-Ahora bien, como desarrollador de Java, probablemente hayas tenido la oportunidad de usar la clase java.util.StringTokenizer para tomar una cadena y dividirla en una matriz de cadenas más pequeñas para poder iterarla con el propósito que necesites. Por ejemplo, si tienes un párrafo de texto, puedes dejar que tu delimitador sea “.” para obtener una matriz de oraciones en el párrafo.
+Ahora bien, como desarrollador de Java, probablemente hayas tenido la oportunidad de usar la clase `java.util.StringTokenizer` para tomar una cadena y dividirla en una matriz de cadenas más pequeñas para poder iterarla con el propósito que necesites. Por ejemplo, si tienes un párrafo de texto, puedes dejar que tu delimitador sea “.” para obtener una matriz de oraciones en el párrafo.
 
-La buena noticia es que el concepto de token de la API de OpenAI es muy similar al concepto de Java en el sentido de que es un fragmento de texto. Para las API de OpenAI, un token es un fragmento de texto de aproximadamente 4 caracteres de longitud. Eso es todo, nada más especial.
+La buena noticia es que el concepto de token de la API de OpenAI es muy similar al concepto de Java en el sentido de que es un fragmento de texto. **Para las API de OpenAI, un token es un fragmento de texto de aproximadamente 4 caracteres de longitud**. Eso es todo, nada más especial.
 
 Entonces, si un token es un fragmento de texto de aproximadamente 4 caracteres, ¿por qué nos importa?
 
-Al trabajar con los modelos textuales de OpenAI, los desarrolladores deben tener en cuenta las limitaciones de tokens, ya que afectan el costo y el rendimiento de las llamadas a la API. Por ejemplo, el modelo gpt-3.5-turbo tiene una limitación de tokens de 4096 tokens, mientras que el modelo gpt-4-vision tiene una limitación de 128 000 tokens (que es aproximadamente el tamaño de una novela de 300 páginas). Las limitaciones de tokens para los modelos se denominan ventanas de contexto .
+Al trabajar con los modelos textuales de OpenAI, los desarrolladores deben tener en cuenta las limitaciones de tokens, ya que afectan el costo y el rendimiento de las llamadas a la API. Por ejemplo, el modelo gpt-3.5-turbo tiene una limitación de tokens de 4096 tokens, mientras que el modelo gpt-4-vision tiene una limitación de 128 000 tokens (que es aproximadamente el tamaño de una novela de 300 páginas). Las limitaciones de tokens para los modelos se denominan **context windows-ventanas de contexto**.
 
 Como resultado, los desarrolladores deben tener en cuenta la longitud de las indicaciones como entradas y salidas de los modelos, asegurándose de que se ajusten a las restricciones de token del modelo.
 
 La Tabla 1-1 proporciona una lista de algunos de los modelos más actuales con las limitaciones de token y sus precios.
-Tabla 1-1Lista de modelos con sus limitaciones de tokens y el costo por token
-Modelo
 
-Máximo de tokens
+**Tabla 1-1 Lista de modelos con sus limitaciones de tokens y el costo por token**
 
-Costo de entrada del token
+![image](https://github.com/user-attachments/assets/83698081-4bad-4fba-9b71-b248a7dead84)
 
-Costo de la salida del token
+### La temperatura es cuestión de creatividad
 
-gpt-4
-
-8,192
-
-$0,03 / 1000 tokens
-
-$0,06 / 1K tokens
-
-gpt-4-32k
-
-32.768
-
-$0,06 / 1K tokens
-
-$0,12/1000 tokens
-
-gpt-4-visión
-
-128.000
-
-$0,01 / 1K tokens
-
-$0,03 / 1000 tokens
-
-instrucciones gpt-3.5-turbo
-
-4.096
-
-$0,0015 / 1000 tokens
-
-$0.002 / 1K tokens
-
-gpt-3.5-turbo-16k
-
-16.384
-
-$0.0010 / 1K tokens
-
-$0.002 / 1K tokens
-
-incrustacion-de-texto-ada-002
-
-8192
-
-$0.0001 / 1K tokens
-
-La temperatura es cuestión de creatividad
 Por supuesto, ChatGPT no es un ser consciente, por lo que no es capaz de pensar como lo hacemos los humanos. Sin embargo, al ajustar la configuración de temperatura en sus mensajes a la API de ChatGPT, puede permitir que las respuestas sean más creativas. Pero comprender lo que entiende es crucial si desea aprovechar al máximo su potencial.
 
-Figura 1-2Modificar la temperatura para obtener respuestas más (o menos) creativas
-Introducción a OpenAI Playground
-¡Ahora es el momento de tomar los conceptos que hemos aprendido hasta ahora y comenzar a ponerlos en práctica! Sin embargo, debemos hacer lo primero y, por lo tanto, necesitarás tener una cuenta de desarrollador con OpenAI y crear una clave API .
+![image](https://github.com/user-attachments/assets/8cd7a103-90c1-4887-8df1-466dda914b64)
 
-Dirígete a la siguiente URL para crear tu cuenta de desarrollador y clave API :
+**Figura 1-2 Modificar la temperatura para obtener respuestas más (o menos) creativas**
+
+## Introducción a OpenAI Playground
+
+¡Ahora es el momento de tomar los conceptos que hemos aprendido hasta ahora y comenzar a ponerlos en práctica! Sin embargo, debemos hacer lo primero y, por lo tanto, necesitarás tener una cuenta de desarrollador con OpenAI y crear una clave API.
+
+Dirígete a la siguiente URL para crear tu cuenta de desarrollador y clave API:
 
 https://platform.openai.com/account/api-keys
 
-Como puede ver en la imagen de la Figura 1-3 , puede nombrar su clave API como desee.
+Como puede ver en la imagen de la Figura 1-3, puede nombrar su clave API como desee.
 
-Figura 1-3Antes de poder acceder al área de juegos o realizar llamadas API, necesita tener una clave API
-Debe tener en cuenta que, como requisito para crear una clave API, deberá proporcionar a OpenAI una tarjeta de crédito para que se le pueda facturar el uso de sus modelos.
+![image](https://github.com/user-attachments/assets/005ca599-4ce6-4c36-a4ee-61645504db6a)
+
+**Figura 1-3 Antes de poder acceder al área de juegos o realizar llamadas API, necesita tener una clave API**
+
+**Debe tener en cuenta que, como requisito para crear una clave API, deberá proporcionar a OpenAI una tarjeta de crédito para que se le pueda facturar el uso de sus modelos.**
 
 Ahora que tienes tu clave API, vayamos directamente al Chat Playground en la siguiente URL:
 
 https://platform.openai.com/playground
 
-Al ingresar al Patio de juegos, haga clic en el cuadro combinado en la parte superior y seleccione la opción Chat para finalizar el Patio de juegos de chat, como se muestra en la Figura 1-4 .
+Al ingresar al Playground, haga clic en el cuadro combinado en la parte superior y seleccione la opción Chat para finalizar el Playground de chat, como se muestra en la Figura 1-4.
 
-Figura 1-4Después de ingresar al patio de juegos, seleccione la opción de chat
-La Figura 1-5 muestra el área de juegos de chat, con ciertas partes numeradas para que puedan identificarse fácilmente .
+![image](https://github.com/user-attachments/assets/d74a2130-a171-4e8b-9896-2a3c46bf972b)
 
-Figura 1-5El patio de juegos de chat puede resultar un poco intimidante a primera vista
-1. Sistema
+**Figura 1-4 Después de ingresar al Playground, seleccione la opción de chat**
+
+La Figura 1-5 muestra el Playground de chat, con ciertas partes numeradas para que puedan identificarse fácilmente.
+
+![image](https://github.com/user-attachments/assets/5c8dedc7-5717-49ae-9f60-90c2d725b634)
+
+**Figura 1-5 El Playground de chat puede resultar un poco intimidante a primera vista**
+
+#### 1. System
+
 Como puede ver, la interfaz de usuario de Chat Playground es mucho más compleja que la del sitio web ChatGPT que utilizan todos los demás. Hablemos ahora del campo Sistema (consulte la Figura 1-5 , elemento 1).
 
 En mi opinión, ChatGPT puede describirse como “una forma de inteligencia artificial sumamente poderosa… con amnesia”. Por lo tanto, cuando uses ChatGPT de manera programática, ¡debes informarle al sistema quién participa en la conversación!
 
-La Figura 1-6 , que se muestra a continuación, le brinda una idea de los miles de roles diferentes que ChatGPT puede desempeñar en una conversación.
+La Figura 1-6, que se muestra a continuación, le brinda una idea de los miles de roles diferentes que ChatGPT puede desempeñar en una conversación.
 
-Figura 1-6El campo Sistema en el área de chat le permite establecer el rol que desempeñará ChatGPT en la conversación
-2. Usuario
-El usuarioEl campo (Figura 1-5 , elemento 2) en el Playground de ChatGPT es donde escribe su mensaje para ChatGPT, que puede ser cualquier cosa que desee, por ejemplo, "describe cómo la telemedicina afectará la industria médica".
+![image](https://github.com/user-attachments/assets/77103341-1cde-4a1e-97bf-7d9b34dcd3cc)
 
-3. Asistente (opcional)
-Cuando cargas por primera vez el Chat Playground, el campo Asistente (Figura 1-5 , elemento 3) no está visible. Para que aparezca, debes hacer clic en el símbolo “ + ” junto a “Agregar mensaje”. Ahora, te estarás preguntando: “¿Por qué es necesario este campo?”. Bueno, esa es una buena pregunta. Si quieres que ChatGPT recuerde algo que ya te ha dicho en una conversación anterior, entonces debes escribir en el campo Asistente todo lo que ya te haya dicho y que creas que es relevante para continuar con la conversación. Recuerda, es una IA muy poderosa, ¡pero tiene amnesia!
+**Figura 1-6 El campo Sistema en el área de chat le permite establecer el rol que desempeñará ChatGPT en la conversación**
 
-4. Agregar mensaje (opcional)
-El símbolo “ + ” de Agregar mensaje (Figura 1-5 , elemento 4) es donde debe hacer clic para agregar un mensaje del Asistente a la conversación u otro mensaje de Usuario . Ahora, puede preguntarse: “¿Qué sentido tiene agregar otro mensaje de Usuario a la conversación cuando puedo escribir lo que quiero en el campo de Usuario original que se encuentra arriba?” Buena pregunta.
+#### 2. User
+
+El campo User (Figura 1-5, elemento 2) en el Playground de ChatGPT es donde escribe su mensaje para ChatGPT, que puede ser cualquier cosa que desee, por ejemplo, "describe how telemedicine will affect the medical industry - describe cómo la telemedicina afectará la industria médica".
+
+#### 3. Assistant - Asistente (opcional)
+
+Cuando cargas por primera vez el Chat Playground, el campo Asistente (Figura 1-5, elemento 3) no está visible. Para que aparezca, debes hacer clic en el símbolo “ + ” junto a “Agregar mensaje”. Ahora, te estarás preguntando: “¿Por qué es necesario este campo?”. Bueno, esa es una buena pregunta. Si quieres que ChatGPT recuerde algo que ya te ha dicho en una conversación anterior, entonces debes escribir en el campo Asistente todo lo que ya te haya dicho y que creas que es relevante para continuar con la conversación. Recuerda, es una IA muy poderosa, ¡pero tiene amnesia!
+
+#### 4. Agregar mensaje - Message  (opcional)
+
+El símbolo “ + ” de **Add Message- Agregar mensaje** (Figura 1-5 , elemento 4) es donde debe hacer clic para agregar un mensaje del Asistente a la conversación u otro mensaje de Usuario . Ahora, puede preguntarse: “¿Qué sentido tiene agregar otro mensaje de Usuario a la conversación cuando puedo escribir lo que quiero en el campo de Usuario original que se encuentra arriba?” Buena pregunta.
 
 Si desea separar su comando de sus datos, deberá utilizar un mensaje de usuario separado para eso.
 
 ¿Recuerdas que en el Listado 1-4 anterior de este capítulo teníamos que usar el “###” para separar el comando a ChatGPT de los datos que queríamos que analizara? Bueno, esto ya no es necesario porque el comando sería el primer mensaje de usuario y los datos serían el segundo mensaje de usuario .
 
-5. Ver código (opcional)
+#### 5. Ver código (opcional)
+
 Después de haber enviado su mensaje usando el área de juegos, puede hacer clic en el botón Ver código (Figura 1-5 , elemento 5) para ver el código necesario para enviar el mismo mensaje usando cualquiera de los idiomas que admiten.
 
 Es posible que notes que Java no es un lenguaje admitido oficialmente, pero lo solucionaremos en el Capítulo 2 , cuando usemos ChatGPT como programador en pareja y portemos su interfaz REST a Java nosotros mismos.
 
-6. Modelo (opcional)
+#### 6. Modelo (opcional)
+
 Anteriormente en este capítulo, hablamos sobre los distintos modelos que están disponibles para los desarrolladores. Haga clic en el campo de modelo para ver una lista de los modelos disponibles.
 
 También puede ver que algunos modelos tienen un mes y un día asociados a su nombre, que es simplemente una instantánea de ese modelo. La selección programática de una instantánea permite a los desarrolladores tener algún tipo de previsibilidad en las respuestas que recibirán de ChatGPT, porque los modelos actuales siempre se actualizan.
 
-7. Temperatura (opcional)
+#### 7. Temperatura (opcional)
+
 Como se señaló anteriormente en este capítulo, el selector de temperatura varía entre 0 y 2 y le permite seleccionar la “aleatoriedad” de la respuesta.
 
-8. Longitud máxima (opcional)
+#### 8. Longitud máxima (opcional)
+
 ¿Recuerdas la discusión anterior en este capítulo sobre los tokens? Al seleccionar cualquier elemento en el rango de este elemento, puedes ajustar la cantidad de tokens (que afecta directamente la cantidad de palabras ) en la respuesta.
 
 ¡Pruébelo ahora! Experimente con el rol de “sistema”
