@@ -37,6 +37,7 @@ Después de invocar con éxito el endpoint **List Models**, el servicio proporci
 #### Modelo (JSON)
 
 **Tabla 2-2 La estructura del Model JSON Object**
+
 ![image](https://github.com/user-attachments/assets/4f07bd32-0262-49eb-8950-060b532a3788)
 
 **Nota**: Dado que los objetos JSON pueden contener matrices (que pueden ser difíciles de representar en una tabla), utilizamos la notación “↳” para indicar los elementos de una matriz. Como puede ver en la tabla anterior, “id”, “object”, “created” y “owned_by” son todos elementos de la matriz “data” en la respuesta JSON.
@@ -55,6 +56,9 @@ User: curl https://api.openai.com/v1/models \
 **Listado 2-1 INSTRUCCIÓN. Uso de ChatGPT para crear la aplicación `ListModels.java`**
 
 Entonces, después de enviar el mensaje, ChatGPT le proporcionará una respuesta como se muestra en el Listado 2-2 .
+
+
+![image](https://github.com/user-attachments/assets/7aa8ea62-6f85-4e6f-801f-0d9865e82ebd)
 
 ```java
 import java.io.BufferedReader;
@@ -98,372 +102,114 @@ public class ListModels {
 }
 ```
 
+**Listado 2-2 RESPONSE. `ListModels.java`**
 
-Listado 2-2RESPUESTA. ListModels.java
 ¡Fantástico! Ahora todo lo que tienes que hacer es reemplazar “$OPENAI_API_KEY” con el valor de tu clave API actual.
 
 Después de ejecutar esta clase, obtendrá un archivo JSON que contiene todos los modelos ofrecidos por la API de OpenAI, como se muestra en el Listado 2-3 .
 
+![image](https://github.com/user-attachments/assets/795a97cc-039c-465f-9072-11eec5305ef5)
+
+```json
 {
-  "objeto": "lista",
-  "datos": [
-    {
-      "id": "busqueda-de-texto-babbage-doc-001",
-      "objeto": "modelo",
-      "creado": 1651172509,
-      "propiedad_de": "openai-dev"
-    },
-    {
-      "id": "gpt-4",
-      "objeto": "modelo",
-      "creado": 1687882411,
-      "propiedad_de": "openai"
-    },
-    {
-      "id": "gpt-3.5-turbo-16k",
-      "objeto": "modelo",
-      "creado": 1683758102,
-      "propiedad_de": "openai-interno"
-    },
-    {
-      "id": "consulta de búsqueda de curie",
-      "objeto": "modelo",
-      "creado": 1651172509,
-      "propiedad_de": "openai-dev"
-    },
-    {
-      "id": "texto-davinci-003",
-      "objeto": "modelo",
-      "creado": 1669599635,
-      "propiedad_de": "openai-interno"
-    },
-    {
-      "id": "búsqueda de texto-consulta-babbage-001",
-      "objeto": "modelo",
-      "creado": 1651172509,
-      "propiedad_de": "openai-dev"
-    },
-    {
-      "id": "babbage",
-      "objeto": "modelo",
-      "creado": 1649358449,
-      "propiedad_de": "openai"
-    },
+  "object": "list",
+  "data": [
+    {
+      "id": "text-search-babbage-doc-001",
+      "object": "model",
+      "created": 1651172509,
+      "owned_by": "openai-dev"
+    },
+    {
+      "id": "gpt-4",
+      "object": "model",
+      "created": 1687882411,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gpt-3.5-turbo-16k",
+      "object": "model",
+      "created": 1683758102,
+      "owned_by": "openai-internal"
+    },
+    {
+      "id": "curie-search-query",
+      "object": "model",
+      "created": 1651172509,
+      "owned_by": "openai-dev"
+    },
+    {
+      "id": "text-davinci-003",
+      "object": "model",
+      "created": 1669599635,
+      "owned_by": "openai-internal"
+    },
+    {
+      "id": "text-search-babbage-query-001",
+      "object": "model",
+      "created": 1651172509,
+      "owned_by": "openai-dev"
+    },
+    {
+      "id": "babbage",
+      "object": "model",
+      "created": 1649358449,
+      "owned_by": "openai"
+    },
 ...
-Listado 2-3RESPUESTA. La respuesta JSON parcial después de ejecutar ListModels.java
+```
+
+**Listado 2-3 3RESPONSE. La respuesta JSON parcial después de ejecutar `ListModels.java`**
+
 Los listados 2 y 3 son una lista parcial debido a la gran cantidad de modelos disponibles para que los utilicen los desarrolladores. Sin embargo, la buena noticia es que la respuesta completa se proporciona como una tabla en el Apéndice.
 
-Ahora que podemos obtener mediante programación una lista de modelos disponibles para usar, es momento de enviar mensajes a ChatGPT mediante Java. Esto se logra mediante el punto final de chat.
+Ahora que podemos obtener mediante programación una lista de modelos disponibles para usar, es momento de enviar mensajes a ChatGPT mediante Java. Esto se logra mediante el Endpoint Chat.
 
-Punto final de chat
-El punto final de chat (anteriormente llamado “Finalización de chat”) es un servicio REST que es básicamente una representación 1 a 1 de lo que puede hacer en el área de juegos de chat; por lo tanto,Este servicio debería resultarle algo natural.
+### Endpoint Chat
 
-Creando la solicitud
+El Endpoint Chat (anteriormente llamado “Chat Completion”) es un servicio REST que es básicamente una representación 1 a 1 de lo que puede hacer en el Chat Playground; por lo tanto, este servicio debería resultarle algo natural.
+
+#### Creando la Request
+
 En la Tabla 2-3 se enumeran todos los parámetros HTTP necesarios para llamar al punto final de chat.
-Tabla 2-3Los parámetros HTTP para el punto final del chat
-Parámetro HTTP
 
-Descripción
+**Tabla 2-3 Los parámetros HTTP para el endpoint Chat**
 
-URL del punto final
+![image](https://github.com/user-attachments/assets/0620dec6-b350-4ef7-8e55-b3759efc38f9)
 
-https://api.openai.com/v1/chat/completions
+La Tabla 2-4 describe el formato del objeto JSON necesario para el request body del endpoint Chat. Después de un vistazo rápido, puede ver que solo se requieren algunos campos para invocar el servicio correctamente.
 
-Método
+#### Chat (JSON)
 
-CORREO
+**Tabla 2-4 La estructura del objeto JSON de Chat**
 
-Encabezamiento
+![image](https://github.com/user-attachments/assets/6bdc54fb-02fb-4d72-9438-36072d11744f)
 
-Autorización: Portador $OPENAI_API_KEY
+![image](https://github.com/user-attachments/assets/f1a2b780-e235-4e55-af26-f9b564808f68)
 
-Tipo de contenido
+![image](https://github.com/user-attachments/assets/252287c9-35ae-4620-b45c-699db538739e)
 
-aplicación/json
+![image](https://github.com/user-attachments/assets/9397eb29-d2b4-45b2-9e6c-d3e3f8ff3617)
 
-La Tabla 2-4 describe el formato del objeto JSON necesario para el cuerpo de la solicitud del punto final de chat. Después de un vistazo rápido, puede ver que solo se requieren algunos campos para invocar el servicio correctamente.
+![image](https://github.com/user-attachments/assets/7b917425-5533-4a7c-960c-42e53e082acb)
 
-Chat (JSON)
-Tabla 2-4La estructura del objeto JSON de Chat
-Campo
+![image](https://github.com/user-attachments/assets/a36b61e3-fe97-406c-a72a-ee4ae443276f)
 
-Tipo
+![image](https://github.com/user-attachments/assets/50d5f0aa-43f8-41ce-90ec-710d59a9881b)
 
-¿Requerido?
+![image](https://github.com/user-attachments/assets/0d24e6fe-37a6-4f13-976f-b6c5434c4958)
 
-Descripción
+![image](https://github.com/user-attachments/assets/9ef33b8f-9321-4fc3-95f8-fd52a4eaab34)
 
-modelo
+![image](https://github.com/user-attachments/assets/6edbd5a6-6f8b-4cda-a728-78b6e297e5c7)
 
-Cadena
+![image](https://github.com/user-attachments/assets/b2aba6d4-e490-4dea-a902-ff187e5db477)
 
-Requerido
+![image](https://github.com/user-attachments/assets/8743560b-1415-4079-8888-709e51071810)
 
-El ID del modelo que desea utilizar para completar el chat. Los modelos compatibles incluyen
 
-•  gpt-4
+**Nota**: En este libro, trabajaremos con el parámetro "stream" configurado en su configuración predeterminada, que es falsa. Esto significa que recibiremos todos los resultados de ChatGPT a la vez como una única respuesta HTTP.
 
-•  gpt-4-0613
-
-•  gpt-4-32k
-
-•  gpt-4-32k-0613
-
-•  gpt-3.5-turbo
-
-•  gpt-3.5-turbo-0613
-
-•  gpt-3.5-turbo-16k
-
-•  gpt-3.5-turbo-16k-0613
-
-mensajes
-
-Formación
-
-Requerido
-
-Un conjunto de mensajes que forman parte de la conversación en curso.
-
-Cada mensaje de la matriz tiene dos propiedades: "rol" y "contenido".
-
-  ↳ papel
-
-Cadena
-
-Requerido
-
-Especifica la función del mensaje, que puede ser cualquiera de las siguientes:
-
-•  "sistema"
-
-•  "usuario"
-
-•  "asistente"
-
-•  "herramienta"
-
-  ↳ contenido
-
-Cadena
-
-Requerido
-
-Contiene el texto del mensaje para el rol especificado.
-
-herramientas
-
-Formación
-
-Opcional
-
-Esto le permite especificar una lista de herramientas que el modelo puede llamar. Actualmente, el único tipo de herramienta compatible es una función.
-
-Este parámetro le permite definir un conjunto de funciones para las que el modelo puede generar entradas JSON.
-
-  ↳ tipo
-
-Cadena
-
-Requerido
-
-Este es un tipo de herramienta, que puede ser cualquiera de las siguientes:
-
-•  "función"
-
-Función   ↳
-
-Formación
-
-Opcional
-
-Una matriz de funciones que el modelo puede usar para llamar en la finalización del chat.
-
-  ↳↳ nombre
-
-Cadena
-
-Requerido
-
-El nombre de la función que se llamará. Los nombres válidos deben ser az, AZ, 0-9 o contener guiones bajos y guiones.
-
-La longitud máxima es de 64 caracteres.
-
-  ↳↳ descripción
-
-Cadena
-
-Opcional
-
-Una descripción de lo que hace la función. Esto ayuda al modelo a decidir si llamar a la función en la finalización del chat.
-
-  ↳↳ parámetros
-
-Objeto JSON
-
-Requerido
-
-Los parámetros que acepta la función en el formato de un objeto de esquema JSON.
-
-elección de herramienta
-
-Objeto de cadena o JSON
-
-por defecto:
-
-"ninguno" cuando no se incluyen funciones en la solicitud
-
-"auto" cuando se incluyen funciones en la solicitud
-
-Opcional
-
-Esto le permite determinar qué función, si hay alguna, debe invocar el modelo.
-
-Cuando se establece en "ninguno", el modelo se abstendrá de llamar a ninguna función y solo generará una respuesta de mensaje.
-
-Cuando se establece en "automático", el modelo tiene la flexibilidad de elegir entre generar una respuesta de mensaje o invocar una función basada en su proceso interno de toma de decisiones.
-
-temperatura
-
-Número o nulo
-
-predeterminado: 1
-
-Opcional
-
-Los valores válidos oscilan entre 0 y 2.
-
-Controla la aleatoriedad de la salida del modelo.
-
-La mejor práctica es ajustar top_p o la temperatura, pero no ambos.
-
-arriba_p
-
-Número o valor nulo predeterminado: 1
-
-Opcional
-
-Los valores válidos oscilan entre 0 y 1. Indica si se deben considerar pocas posibilidades (0) o todas las posibilidades (1).
-
-La mejor práctica es ajustar top_p o la temperatura, pero no ambos.
-
-norte
-
-entero o nulo
-
-predeterminado: 1
-
-Opcional
-
-Especifica cuántas opciones de finalización de chat debe generar el modelo para cada mensaje de entrada.
-
-arroyo
-
-Booleano o nulo
-
-predeterminado: falso
-
-Opcional
-
-Si "stream" se establece en "true", las actualizaciones parciales de mensajes se enviarán como eventos enviados por el servidor.
-
-Esto significa que los tokens se enviarán como eventos de solo datos a medida que estén disponibles, y la transmisión finalizará con un mensaje "datos: [DONE]".
-
-detener
-
-Cadena / matriz / nulo
-
-predeterminado: nulo
-
-Opcional
-
-Puede proporcionar hasta 4 secuencias en las que la API debería dejar de generar más tokens.
-
-Esto puede ser útil para controlar la longitud o el contenido de las respuestas.
-
-máximo_tokens
-
-entero o nulo
-
-predeterminado: inf
-
-Opcional
-
-Este parámetro establece la cantidad máxima de tokens que puede tener la finalización de chat generada.
-
-formato_respuesta
-
-Objeto JSON
-
-Opcional
-
-Tienes dos opciones:
-
-{ "type": "json_object" } para una respuesta de objeto JSON
-
-o
-
-{ "type": "text" } para una respuesta de texto
-
-semilla
-
-entero o nulo
-
-Opcional
-
-Al especificar una semilla, el sistema intentará generar resultados repetibles.
-
-En teoría, esto significa que si realiza solicitudes repetidas con la misma semilla y parámetros, debe esperar recibir el mismo resultado.
-
-Para obtener el valor de semilla que se colocará en la solicitud posterior, copie el system_fingerprint de su última respuesta.
-
-penalización por presencia
-
-Número o nulo
-
-predeterminado: 0
-
-Opcional
-
-Un número entre -2,0 y 2,0.
-
-Los valores positivos penalizan los nuevos tokens en función de si aparecen en el historial de conversaciones, lo que anima al modelo a hablar sobre nuevos temas.
-
-penalización de frecuencia
-
-Número o nulo
-
-valores predeterminados: 0
-
-Opcional
-
-Un número entre -2,0 y 2,0.
-
-Los valores positivos penalizan los tokens en función de su frecuencia existente en el historial de conversación, lo que reduce la probabilidad de repetir las mismas líneas textualmente.
-
-sesgo logit
-
-Mapa JSON
-
-predeterminado: nulo
-
-Opcional
-
-Le permite modificar la probabilidad de que aparezcan tokens específicos en la finalización.
-
-Proporciona un objeto JSON que asigna tokens (especificados por su ID de token en el tokenizador) a valores de sesgo asociados de -100 a 100.
-
-Este sesgo se agrega a los logits del modelo antes del muestreo.
-
-usuario
-
-Cadena
-
-Opcional
-
-Se trata de una identificación única que puedes generar de forma opcional para representar a tu usuario final. Esto ayudará a OpenAI a monitorear y detectar abusos.
-
-NotaEn este libro, trabajaremos con el parámetro "stream" configurado en su configuración predeterminada, que es falsa. Esto significa que recibiremos todos los resultados de ChatGPT a la vez como una única respuesta HTTP.
 Sin embargo, hay casos en los que desearía que esta configuración se establezca en verdadero. Digamos que está creando, por ejemplo, un bot de chat interactivo habilitado por voz. Digamos también que está interesado en convertir el texto de ChatGPT a audio para que sus usuarios puedan escuchar una respuesta audible. En tal caso, definitivamente querrá establecer el parámetro "stream" en verdadero. ¿Por qué es así? Cuando la respuesta se transmite de vuelta a su aplicación Java, tiene la oportunidad en ese momento de convertir el fragmento de texto a audio. Esto le permitirá trabajar en paralelo con la conversión de fragmentos de texto a audio mientras recibe más texto simultáneamente. Esto hará que la respuesta parezca más natural para el usuario final y ayudará a que la conversación se sienta como una conversación real .
 
 El listado 2-4 es un ejemplo de cómo se vería el objeto JSON para invocar correctamente el punto final de chat.
