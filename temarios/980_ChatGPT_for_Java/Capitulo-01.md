@@ -322,7 +322,7 @@ Como puede ver en la imagen de la Figura 1-3, puede nombrar su clave API como de
 
 ![image](https://github.com/user-attachments/assets/005ca599-4ce6-4c36-a4ee-61645504db6a)
 
-**Figura 1-3 Antes de poder acceder al área de juegos o realizar llamadas API, necesita tener una clave API**
+**Figura 1-3 Antes de poder acceder al Playground o realizar llamadas API, necesita tener una clave API**
 
 **Debe tener en cuenta que, como requisito para crear una clave API, deberá proporcionar a OpenAI una tarjeta de crédito para que se le pueda facturar el uso de sus modelos.**
 
@@ -372,7 +372,7 @@ Si desea separar su comando de sus datos, deberá utilizar un mensaje de usuario
 
 #### 5. Ver código (opcional)
 
-Después de haber enviado su mensaje usando el área de juegos, puede hacer clic en el botón Ver código (Figura 1-5 , elemento 5) para ver el código necesario para enviar el mismo mensaje usando cualquiera de los idiomas que admiten.
+Después de haber enviado su mensaje usando el Playground, puede hacer clic en el botón Ver código (Figura 1-5 , elemento 5) para ver el código necesario para enviar el mismo mensaje usando cualquiera de los idiomas que admiten.
 
 Es posible que notes que Java no es un lenguaje admitido oficialmente, pero lo solucionaremos en el Capítulo 2 , cuando usemos ChatGPT como programador en pareja y portemos su interfaz REST a Java nosotros mismos.
 
