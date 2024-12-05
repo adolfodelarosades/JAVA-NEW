@@ -1,154 +1,104 @@
-# 2. Usar ChatGPT como su programador en pareja de Java
+# 2. Usar ChatGPT como su pareja programador de Java
+
 Bruce Hopkins 1  
 (1)
 Beaverton, Oregón, Estados Unidos
+<hr>
  
-Soy un gran admirador de algunas de las prácticas de XP (eXtreme Programming ), y especialmente de la programación en pareja. No importa qué tipo de programación en pareja prefieras, implica que dos ingenieros se sienten frente a la misma pantalla y resuelvan el mismo problema juntos. Uno de los mayores beneficios que obtienes es un par de ojos nuevos sobre un problema y, por supuesto, ahora tienes dos ingenieros que han "tocado" el código base en lugar de uno solo. A veces puedes hacer que un ingeniero escriba el código y el otro escriba las pruebas y los comentarios. No importa cómo lo mires, todo es bueno.
+Soy un gran admirador de algunas de las prácticas de XP (eXtreme Programming), y especialmente de la programación en pareja. No importa qué tipo de programación en pareja prefieras, implica que dos ingenieros se sienten frente a la misma pantalla y resuelvan el mismo problema juntos. Uno de los mayores beneficios que obtienes es un par de ojos nuevos sobre un problema y, por supuesto, ahora tienes dos ingenieros que han "tocado" el código base en lugar de uno solo. A veces puedes hacer que un ingeniero escriba el código y el otro escriba las pruebas y los comentarios. No importa cómo lo mires, todo es bueno.
 
-Ahora, las API REST de OpenAI para ChatGPT y sus otros modelos son oficialmente compatibles con Python, Typescript y, por supuesto, cURL (que es el estándar de facto para las API REST ).
+Ahora, las API REST de OpenAI para ChatGPT y sus otros modelos son oficialmente compatibles con Python, Typescript, y por supuesto, cURL (que es el estándar de facto para las API REST ).
 
 Existen algunas API de Java creadas por desarrolladores externos, pero el mayor problema (en mi opinión) es que este espacio está cambiando rápidamente. OpenAI actualiza constantemente sus modelos y sus interfaces HTTP y, como resultado, agregan o eliminan características y funcionalidades con frecuencia. Si elige utilizar una API de Java de terceros para su proyecto, corre el riesgo de usar una API que esté desactualizada o que no esté sincronizada con la API REST de OpenAI.
 
 Entonces, en este capítulo, vamos a usar ChatGPT como nuestro programador en pareja y simplemente trasladaremos las API REST oficiales de OpenAI directamente a Java. Cada vez que OpenAI realiza algún cambio en sus lenguajes e interfaces oficialmente compatibles, tenemos todo lo necesario para actualizar nuestra propia biblioteca al instante. ¡Hagámoslo!
 
-Cómo crear su primera aplicación Java ChatGPT: ListModels.java
+## Cómo crear su primera aplicación Java ChatGPT: `ListModels.java`
+
 En realidad, aquí vamos a realizar dos tareas a la vez. Vamos a crear una aplicación básica en Java utilizando las API de OpenAI y, en el proceso, vamos a verificar que hayamos obtenido una clave API correctamente. Por lo tanto, no hace falta decir que, en caso de que aún no lo haya hecho, siga las instrucciones del Capítulo 1 para crear su cuenta de desarrollador de OpenAI y obtener su clave API. De ahora en adelante, todos los ejemplos de código de este libro requieren una clave API válida.
 
-Punto final de los modelos de lista
-Uno de los servicios más básicos (pero también esenciales) a los que podemos recurrir es el punto de conexión List Models . ¿Por qué?, te preguntarás. El punto de conexión List Models te permite obtener una lista de todos los modelos de IA que están actualmente disponibles para que los utilicen los desarrolladores a través de la API REST.
+### List Models Endpoint
 
-Creando la solicitud
+Uno de los servicios más básicos (pero también esenciales) a los que podemos recurrir es el endpoint **List Models**. ¿Por qué?, te preguntarás. El endpoint List Models te permite obtener una lista de todos los modelos de IA que están actualmente disponibles para que los utilicen los desarrolladores a través de la API REST.
+
+#### Creando la Request
+
 En la Tabla 2-1 se enumeran todos los parámetros HTTP necesarios para llamar al punto final de Modelos de lista.
-Tabla 2-1Los parámetros HTTP necesarios para llamar al punto final de los modelos de lista
-Parámetro HTTP
 
-Descripción
+**Tabla 2-1 Los parámetros HTTP necesarios para llamar al Endpoint List Models**
+![image](https://github.com/user-attachments/assets/11fa126f-edbf-431c-a239-9d6e742415b4)
 
-URL del punto final
 
-https://api.openai.com/v1/models
 
-Método
+#### Manejo de la JSON Response
 
-CONSEGUIR
+Después de invocar con éxito el endpoint **List Models**, el servicio proporcionará una respuesta JSON con la estructura que se muestra en la Tabla 2-2 .
 
-Encabezamiento
+#### Modelo (JSON)
 
-Autorización: Portador $OPENAI_API_KEY
+**Tabla 2-2 La estructura del Model JSON Object**
+![image](https://github.com/user-attachments/assets/4f07bd32-0262-49eb-8950-060b532a3788)
 
-Manejo de la respuesta JSON
-Después de invocar con éxito el punto final de Modelos de lista, el servicio proporcionará una respuesta JSON con la estructura que se muestra en la Tabla 2-2 .
+**Nota**: Dado que los objetos JSON pueden contener matrices (que pueden ser difíciles de representar en una tabla), utilizamos la notación “↳” para indicar los elementos de una matriz. Como puede ver en la tabla anterior, “id”, “object”, “created” y “owned_by” son todos elementos de la matriz “data” en la respuesta JSON.
 
-Modelo (JSON)
-Tabla 2-2La estructura del objeto JSON del modelo
-Campo
+Ahora que tenemos los detalles de la solicitud y la respuesta HTTP, podemos crear la aplicación ListModel.java usando el mensaje que se muestra en el Listado 2-1.
 
-Tipo
+![image](https://github.com/user-attachments/assets/09b073e4-9a62-4d31-b0aa-d62a4cc2864e)
 
-Descripción
+```sh
+System: You are a Java developer
+User: Take the following cURL command and convert it to Java. Name the file, "ListModels.java"
+User: curl https://api.openai.com/v1/models \
+  -H "Authorization: Bearer $OPENAI_API_KEY"
+```
 
-objeto
+**Listado 2-1 INSTRUCCIÓN. Uso de ChatGPT para crear la aplicación `ListModels.java`**
 
-Cadena
-
-Esto siempre devuelve el literal "lista".
-
-datos
-
-Formación
-
-Una lista de modelos de IA ofrecidos por OpenAI
-
-  ↳ identificación
-
-Cadena
-
-El identificador único del modelo de IA, que es esencialmente el nombre completo del modelo.
-
-  ↳ objeto
-
-Cadena
-
-Esto siempre devuelve el literal "modelo".
-
-  ↳ creado
-
-entero
-
-La fecha de creación del modelo.
-
-  ↳ propiedad de
-
-Cadena
-
-El nombre de la organización propietaria del modelo.
-
-permiso
-
-Formación
-
-Esta es una matriz de metadatos para los permisos del modelo.
-
-raíz
-
-Cadena
-
-Normalmente, se trata de una copia del campo data.id, que es el nombre del modelo.
-
-padre
-
-Cadena
-
-Este es un campo actualmente sin uso
-
-NotaDado que los objetos JSON pueden contener matrices (que pueden ser difíciles de representar en una tabla), utilizamos la notación “↳” para indicar los elementos de una matriz. Como puede ver en la tabla anterior, “id”, “object”, “created” y “owned_by” son todos elementos de la matriz “data” en la respuesta JSON.
-Ahora que tenemos los detalles de la solicitud y la respuesta HTTP, podemos crear la aplicación ListModel.java usando el mensaje que se muestra en el Listado 2-1 .
-Sistema : Eres un desarrollador de Java
-Usuario : tome el siguiente comando cURL y conviértalo a Java. Nombre el archivo "ListModels.java"
-Usuario : curl https://api.openai.com/v1/models \
-  -H "Autorización: Portador $OPENAI_API_KEY"
-Listado 2-1INSTRUCCIÓN. Uso de ChatGPT para crear la aplicación ListModels.java
 Entonces, después de enviar el mensaje, ChatGPT le proporcionará una respuesta como se muestra en el Listado 2-2 .
 
-importar java.io.BufferedReader;
-importar java.io.InputStreamReader;
-importar java.net.HttpURLConnection;
-importar java.net.URL;
-clase pública ListModels {
-        public static void principal (cadena [] argumentos) {
-        intentar {
-            // Crear objeto URL para el punto final de la API
-            URL URL = nueva URL ("https://api.openai.com/v1/models");
-            // Crear objeto HttpURLConnection
-            Conexión HttpURL conn = (ConexiónHttpURL) url.openConnection();
-            // Establecer el método de solicitud
-            conn.setRequestMethod("OBTENER");
-            // Establecer encabezado de autorización
-            conn.setRequestProperty("Autorización", "Portador $OPENAI_API_KEY");
-            // Obtener código de respuesta
-            int responseCode = conn.getResponseCode();
-            // Si la solicitud fue exitosa (código de estado 200)
-            si (código de respuesta == HttpURLConnection.HTTP_OK) {
-                //Leer la respuesta de la API
-                BufferedReader en = nuevo BufferedReader(nuevo InputStreamReader(conn.getInputStream()));
-                Cadena de entrada Linea;
-                Respuesta de StringBuilder = new StringBuilder();
-                mientras ((inputLine = in.readLine()) != null) {
-                respuesta.append(inputLine);
-                }
-                cercar();
-                //Imprime la respuesta
-                Sistema.out.println(respuesta.toString());
-            } demás {
-                System.out.println("La solicitud falló. Código de respuesta: " + responseCode);
-            }
-            //Cerrar la conexión
-            conn.desconectar();
-        } captura (Excepción e) {
-            es.printStackTrace();
-        }
-        }
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+public class ListModels {
+    public static void main(String[] args) {
+        try {
+            // Create URL object for the API endpoint
+            URL url = new URL("https://api.openai.com/v1/models");
+            // Create HttpURLConnection object
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            // Set request method
+            conn.setRequestMethod("GET");
+            // Set Authorization header
+            conn.setRequestProperty("Authorization", "Bearer $OPENAI_API_KEY");
+            // Get response code
+            int responseCode = conn.getResponseCode();
+            // If the request was successful (status code 200)
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                // Read the response from the API
+                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                String inputLine;
+                StringBuilder response = new StringBuilder();
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                in.close();
+                // Print the response
+                System.out.println(response.toString());
+            } else {
+                System.out.println("Request failed. Response Code: " + responseCode);
+            }
+            // Close the connection
+            conn.disconnect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
+```
+
+
 Listado 2-2RESPUESTA. ListModels.java
 ¡Fantástico! Ahora todo lo que tienes que hacer es reemplazar “$OPENAI_API_KEY” con el valor de tu clave API actual.
 
