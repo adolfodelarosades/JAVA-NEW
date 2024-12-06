@@ -104,6 +104,90 @@ public class ListModels {
 
 **Listado 2-2 RESPONSE. `ListModels.java`**
 
+**CASO Ejecutado en mi Cuenta**
+
+![image](https://github.com/user-attachments/assets/4c6dcf01-6369-49a1-af6e-976564e453cd)
+
+![image](https://github.com/user-attachments/assets/9799ddbf-18cc-4329-911a-6faf8506a027)
+
+![image](https://github.com/user-attachments/assets/6f1c636f-27dc-4721-abd7-a8a750aec2c3)
+
+
+Certainly! Below is the Java code that corresponds to your cURL command. It uses the `HttpURLConnection` class to send a GET request to the OpenAI API to list the models. Save the file as `ListModels.java`.
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class ListModels {
+    private static final String API_URL = "https://api.openai.com/v1/models";
+    private static final String API_KEY = System.getenv("OPENAI_API_KEY"); // Use environment variable for the API key
+
+    public static void main(String[] args) {
+        try {
+            // Create a URL object
+            URL url = new URL(API_URL);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            
+            // Set the request method to GET
+            connection.setRequestMethod("GET");
+            
+            // Set the Authorization header
+            connection.setRequestProperty("Authorization", "Bearer " + API_KEY);
+            
+            // Get the response code
+            int responseCode = connection.getResponseCode();
+            System.out.println("Response Code: " + responseCode);
+            
+            // Read the response
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String inputLine;
+                StringBuilder response = new StringBuilder();
+
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                in.close();
+
+                // Print the response from the API
+                System.out.println("Response: " + response.toString());
+            } else {
+                System.out.println("GET request failed. Response Code: " + responseCode);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Instructions to use the code:
+1. **Create the File**: Open your text editor or IDE and create a file named `ListModels.java`.
+2. **Copy the Code**: Copy and paste the provided code into the file.
+3. **Set the API Key**: Ensure that your OpenAI API key is set as an environment variable named `OPENAI_API_KEY`. On Linux or macOS, you can set it using:
+   ```bash
+   export OPENAI_API_KEY=your_api_key_here
+   ```
+   On Windows, use:
+   ```cmd
+   set OPENAI_API_KEY=your_api_key_here
+   ```
+4. **Compile the Java File**: Open your terminal or command prompt and navigate to the directory where your `ListModels.java` file is located. Compile the Java file using:
+   ```bash
+   javac ListModels.java
+   ```
+5. **Run the Java Program**: Execute the compiled program with:
+   ```bash
+   java ListModels
+   ```
+
+This will perform the equivalent of the cURL command, making an authorized request to list the models from the OpenAI API and printing the response.
+
+
 ¡Fantástico! Ahora todo lo que tienes que hacer es reemplazar “$OPENAI_API_KEY” con el valor de tu clave API actual.
 
 Después de ejecutar esta clase, obtendrá un archivo JSON que contiene todos los modelos ofrecidos por la API de OpenAI, como se muestra en el Listado 2-3 .
