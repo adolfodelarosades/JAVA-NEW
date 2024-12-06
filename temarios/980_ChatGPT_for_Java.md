@@ -65,7 +65,7 @@ Desarrolladores Java principiantes e intermedios que tengan conocimientos básic
 * Try It Now! Experimenting with the “System” Role
 * Conclusion
 
-### [Chapter 2:​ Using ChatGPT As Your Java Pair-Programmer](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Capitulo-01.md)
+### [Chapter 2:​ Using ChatGPT As Your Java Pair-Programmer](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Capitulo-02.md)
 
 * Creating Your First Java ChatGPT App:​ ListModels.​java
 * List Models Endpoint
