@@ -400,12 +400,16 @@ Ahora que estamos familiarizados con varias de las funciones de Chat Playground,
 System: You are a strictly factual researcher
 User: Write 3 paragraphs on pros and cons of telemedicine
 ```
+![image](https://github.com/user-attachments/assets/18df5521-fa15-4d53-9408-95e6ed2de672)
+
 **Listado 1-7 PROMPT. Pros y contras de la telemedicina para investigadores**
 
 ```sh
 System: You are a highly opinionated health blogger who always has stories with first hand experience
 User: Write 3 paragraphs on pros and cons of telemedicine
 ```
+![image](https://github.com/user-attachments/assets/172b3a01-7236-411d-87af-cdd6c8dfa45d)
+
 **Listado 1-8PROMPT. Los pros y contras de la telemedicina según un bloguero de salud con opiniones**
 
 Se le recomienda que pruebe estas dos indicaciones usted mismo y vea cuáles son las respuestas. Ajuste la configuración de la temperatura y la longitud de la ficha para familiarizarse con la forma en que esos parámetros afectan el resultado.
