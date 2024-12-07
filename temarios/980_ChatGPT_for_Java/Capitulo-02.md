@@ -635,27 +635,36 @@ Después de invocar correctamente el  Endpoint Chat, la API responderá con un C
 
 ![image](https://github.com/user-attachments/assets/0a356588-c371-4279-92d9-1e77ed7af0b6)
 
-XXXXXXX
-![image](https://github.com/user-attachments/assets/d30b6480-995a-4fa4-9e51-3801beb54b34)
-
-![image](https://github.com/user-attachments/assets/d85b4bf1-b9b1-4b4c-933c-1ce13be2c125)
-
-![image](https://github.com/user-attachments/assets/0624481a-4c32-4ad5-b403-a0d97a9bd55c)
-
-![image](https://github.com/user-attachments/assets/f9c9500b-b0c2-41a2-bff6-9dfc4b202c96)
-
-![image](https://github.com/user-attachments/assets/6de88f49-1c9a-43aa-910d-ac8e382d8ba5)
-
-![image](https://github.com/user-attachments/assets/f21e32b0-1086-472b-a3c5-db27bbb79855)
-
-YYYYYYYYY
-
-
 El listado 2-5 es un ejemplo de la respuesta JSON después de invocar el punto final de chat.
 
 **Listado 2-5 El JSON response después de invocaar el endpoint Chat.**
 
 ![image](https://github.com/user-attachments/assets/099cce5c-f582-4a40-9560-6b7feee95be9)
+
+
+```json
+{
+  "id": "chatcmpl-7wUOFQ3S34scDLmrLdWTTqvHmXztQ",
+  "object": "chat.completion",
+  "created": 1694174199,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Java is widely used in the enterprise because it is platform-independent, allowing applications to run on any system. Additionally, Java has a large and mature ecosystem with a vast array of libraries, frameworks, and tools, making it easier for developers to build robust and scalable enterprise applications."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 32,
+    "completion_tokens": 55,
+    "total_tokens": 87
+  }
+}
+```
 
 ### Espera, ¿cuántos tokens hay en mi Prompt(mensaje)?
 
