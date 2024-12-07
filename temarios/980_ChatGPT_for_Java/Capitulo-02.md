@@ -565,14 +565,10 @@ La Tabla 2-4 describe el formato del objeto JSON necesario para el request body 
 
 ![image](https://github.com/user-attachments/assets/8743560b-1415-4079-8888-709e51071810)
 
+XXXXXXX
 ![image](https://github.com/user-attachments/assets/d30b6480-995a-4fa4-9e51-3801beb54b34)
 
-XXXXXXX
-
 ![image](https://github.com/user-attachments/assets/d85b4bf1-b9b1-4b4c-933c-1ce13be2c125)
-
-
-
 
 ![image](https://github.com/user-attachments/assets/0624481a-4c32-4ad5-b403-a0d97a9bd55c)
 
