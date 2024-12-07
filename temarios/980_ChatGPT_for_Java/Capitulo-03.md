@@ -581,4 +581,123 @@ Ahora que se han solicitado todos los permisos, es momento de instalar el bot en
 
 <img width="828" alt="image" src="https://github.com/user-attachments/assets/671a4a4f-2056-4a01-9b10-1c35ab1b9194">
 
+**Figura 3-7 “Instalación” de una nueva aplicación de bot de Slack**
 
+Haga clic en el botón **Allow** para autorizar el bot y permitir los permisos que asignó en el paso anterior.
+
+**Nota**: Es importante entender qué significa "instalar" aquí. En el sentido tradicional de Java, instalar una aplicación significa cargar un archivo JAR, WAR o EAR en otra máquina y ejecutarlo. Eso no es lo que sucede aquí.
+
+Aquí, cuando "instalas" una aplicación de bot, estás habilitando tu espacio de trabajo de Slack para que una aplicación se una al espacio de trabajo, eso es todo. El código de tu bot se ejecutará en tu propia máquina, no en los servidores de Slack.
+
+#### Cómo obtener tu Slack Bot (Access) Token
+
+Esta vez, “token” en realidad significa token de acceso. Para conectarse a la API de Slack y acceder a los mensajes y a la información del usuario mediante programación, necesita un token OAuth específico generado para su bot de Slack.
+
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/7b1bb8f3-7cac-4fa9-b9ea-c82edb1ab203">
+
+**Figura 3-8 Copia tu OAuth Token para tu Slack Bot App**
+
+De regreso a la página **OAuth & Permissions**, asegúrese de copiar el token del bot (que generalmente comienza con “`xoxb-`”) desde la page here, como se muestra en la Figura 3-8 .
+
+### Invitar tu Bot a tu Channel
+
+A continuación, irás al canal que deseas usar para probar tu bot y escribirás el siguiente comando en el canal.
+
+<img width="831" alt="image" src="https://github.com/user-attachments/assets/a6c1a44f-a2a1-473f-953f-fceef9fef8d9">
+
+Seleccione la opción “**Add apps to this channel**”, y luego seleccione el nombre del bot de Slack que especificó anteriormente cuando registró el bot con Slack.
+
+<img width="828" alt="image" src="https://github.com/user-attachments/assets/152a83df-c000-43b4-9245-1ba9c13bbd3c">
+
+**Figura 3-9 Cómo agregar su Slack Bot a su Channel**
+
+¡Felicitaciones! Ya registraste correctamente una aplicación de bot de Slack con Slack, la habilitaste para leer mensajes en tu espacio de trabajo y agregaste el bot de Slack a un canal. Antes de que podamos escribir el código Java para acceder al canal en nuestro espacio de trabajo, necesitamos saber cuál es el ID interno que Slack usa para nuestro canal.
+
+#### Cómo encontrar el ID de tu canal
+
+Vale, este es un paso sencillo de realizar. En Slack, haz clic con el botón derecho en el nombre de tu canal y selecciona la opción “**View Channel details**”. En la parte inferior de la ventana emergente aparece el ID de tu canal. Copia ese número y guárdalo para más adelante. Tu aplicación Java necesitará esto para unirse al canal correcto en tu espacio de trabajo de Slack.
+
+### Cómo usar la aplicación Slack Bot para capturar automáticamente mensajes de un canal
+
+Muy bien, ahora que hemos cumplido con todos los requisitos previos y conocemos el ID de nuestro canal, vayamos al código en Java que accede a todos los mensajes de un canal de Slack en particular.
+
+#### Configurando sus dependencias
+
+La biblioteca de API de Slack para Java proporciona métodos prácticos para interactuar con la plataforma Slack. Casi todo lo que necesitamos proviene de los paquetes `com.slack.api.methods.*` o `com.slack.api.model.*`, que existen en los archivos jar `slack-api-client-<VERSION>` y el `slack-api-model-<VERSION>`.
+
+La API de Java de Slack tiene sus propias dependencias, que son:
+
+* GSON
+   * `gson-<VERSION>.jar`
+
+* Kotlin
+   * `kotlin-stdlib-<VERSION>.jar`
+   * `kotlin-stdlib-jdk8-<VERSION>.jar`
+
+* OK HTTP y OK IO
+   * `okhttp-<VERSION>.jar`
+   * `okio-<VERSION>.jar`
+   * `okio-jvm-<VERSION>.jar`
+
+* SL4J
+   * `slf4j-api-<VERSION>.jar`
+ 
+Por lo tanto, los listados 3-14 y 3-15 son fragmentos de los archivos Maven `pom.xml` y Gradle `build.gradle` necesarios (con las versiones con las que hice pruebas) para poder compilar todo.
+
+```xml
+<dependencies>
+        <!-- Gson library -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <!-- Kotlin standard libraries -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>1.6.20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>1.6.20</version>
+        </dependency>
+        <!-- OkHttp library -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.11.0</version>
+        </dependency>
+        <!-- Okio library -->
+        <dependency>
+            <groupId>com.squareup.okio</groupId>
+            <artifactId>okio</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okio</groupId>
+            <artifactId>okio-jvm</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <!-- Slack SDK libraries -->
+        <dependency>
+            <groupId>com.slack.api</groupId>
+            <artifactId>slack-api-client</artifactId>
+            <version>1.30.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.slack.api</groupId>
+            <artifactId>slack-api-model</artifactId>
+            <version>1.30.0</version>
+        </dependency>
+        <!-- SLF4J logging facade -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+    </dependencies>
+```
+
+**Listado 3-14 Maven `pom.xml`**
