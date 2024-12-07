@@ -564,6 +564,18 @@ La Tabla 2-4 describe el formato del objeto JSON necesario para el request body 
 
 ![image](https://github.com/user-attachments/assets/8743560b-1415-4079-8888-709e51071810)
 
+![image](https://github.com/user-attachments/assets/d30b6480-995a-4fa4-9e51-3801beb54b34)
+
+![image](https://github.com/user-attachments/assets/d85b4bf1-b9b1-4b4c-933c-1ce13be2c125)
+
+![image](https://github.com/user-attachments/assets/0624481a-4c32-4ad5-b403-a0d97a9bd55c)
+
+![image](https://github.com/user-attachments/assets/f9c9500b-b0c2-41a2-bff6-9dfc4b202c96)
+
+![image](https://github.com/user-attachments/assets/6de88f49-1c9a-43aa-910d-ac8e382d8ba5)
+
+![image](https://github.com/user-attachments/assets/f21e32b0-1086-472b-a3c5-db27bbb79855)
+
 
 **Nota**: En este libro, trabajaremos con el parámetro "stream" configurado, en su configuración predeterminada, que es falsa. Esto significa que recibiremos todos los resultados de ChatGPT a la vez como una única respuesta HTTP. Sin embargo, hay casos en los que desearía que esta configuración se establezca en verdadero. Digamos que está creando, por ejemplo, un bot de chat interactivo habilitado por voz. Digamos también que está interesado en convertir el texto de ChatGPT a audio para que sus usuarios puedan escuchar una respuesta audible. En tal caso, definitivamente querrá establecer el parámetro "stream" en verdadero. ¿Por qué es así? Cuando la respuesta se transmite de vuelta a su aplicación Java, tiene la oportunidad en ese momento de convertir el fragmento de texto a audio. Esto le permitirá trabajar en paralelo con la conversión de fragmentos de texto a audio mientras recibe más texto simultáneamente. Esto hará que la respuesta parezca más natural para el usuario final y ayudará a que la conversación se sienta como una conversación real.
 
