@@ -701,3 +701,161 @@ Por lo tanto, los listados 3-14 y 3-15 son fragmentos de los archivos Maven `pom
 ```
 
 **Listado 3-14 Maven `pom.xml`**
+
+```xml
+dependencies {
+    // Gson library
+    implementation 'com.google.code.gson:gson:2.10.1'
+    // Kotlin standard libraries
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.20'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.20'
+    // OkHttp library
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    // Okio library
+    implementation 'com.squareup.okio:okio:3.2.0'
+    implementation 'com.squareup.okio:okio-jvm:3.2.0'
+    // Slack SDK libraries
+    implementation 'com.slack.api:slack-api-client:1.30.0'
+    implementation 'com.slack.api:slack-api-model:1.30.0'
+    // SLF4J logging facade
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+```
+
+**Listado 3-15 Gradle `build.gradle`**
+
+Ahora que tenemos nuestro token de acceso, así como todas las dependencias necesarias, veamos el código necesario para acceder a un canal y obtener todo el historial de chat dentro de un rango de tiempo específico. Por razones obvias, queremos el nombre de usuario, la marca de tiempo y el contenido del mensaje de cada publicación en el canal.
+
+### Lectura programática de mensajes de Slack con `ChannelReaderSlackBot.java`**
+
+El listado 3-16 es un bot Slack de Java simple que obtiene el nombre de usuario, la marca de tiempo y el contenido del mensaje de cada publicación en el canal dentro de un período de tiempo designado.
+
+```java
+import com.slack.api.Slack;
+import com.slack.api.methods.MethodsClient;
+import com.slack.api.methods.request.conversations.ConversationsHistoryRequest;
+import com.slack.api.methods.response.conversations.ConversationsHistoryResponse;
+import com.slack.api.methods.request.users.UsersInfoRequest;
+import com.slack.api.methods.response.users.UsersInfoResponse;
+import com.slack.api.model.Message;
+import com.slack.api.model.User;
+import com.slack.api.model.block.LayoutBlock;
+import java.time.*;
+import java.util.Collections;
+import java.util.List;
+public class ChannelReaderSlackBot {
+        private static final String SLACK_BOT_TOKEN = "YOUR_SLACK_API_TOKEN";
+        public static void main(String[] args) {
+        Slack slack = Slack.getInstance();
+        MethodsClient methods = slack.methods(SLACK_BOT_TOKEN);
+        String channelId = "YOUR_CHANNEL_ID";
+        LocalDateTime startTimeUTC = LocalDateTime.of(2023, Month.AUGUST, 3, 10, 0);
+        LocalDateTime endTimeUTC = LocalDateTime.of(2023, Month.AUGUST, 12, 15, 0);
+        long startTime = startTimeUTC.atZone(ZoneOffset.UTC).toEpochSecond();
+        long endTime = endTimeUTC.atZone(ZoneOffset.UTC).toEpochSecond();
+        ConversationsHistoryRequest request = ConversationsHistoryRequest.builder()
+            .channel(channelId)
+            .oldest(String.valueOf(startTime))
+            .latest(String.valueOf(endTime))
+            .build();
+        try {
+            ConversationsHistoryResponse response = methods.conversationsHistory(request);
+            if (response != null && response.isOk()) {
+                List<Message> messages = response.getMessages();
+                Collections.reverse(messages);
+                for (Message message : messages) {
+                    String userId = message.getUser();
+                    String timestamp = formatTimestamp(message.getTs());
+                    UsersInfoRequest userInfoRequest = UsersInfoRequest.builder()
+                        .user(userId)
+                        .build();
+                    UsersInfoResponse userInfoResponse = methods.usersInfo(userInfoRequest);
+                    if (userInfoResponse != null && userInfoResponse.isOk()) {
+                        User user = userInfoResponse.getUser();
+                        System.out.println("User: " + user.getName());
+                        System.out.println("Timestamp: " + timestamp);
+                        System.out.println("Message: " + message.getText());
+                        System.out.println();
+                    }
+                }
+            } else {
+                System.out.println("Failed to fetch messages: " + response.getError());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private static String formatTimestamp(String ts) {
+        double timestamp = Double.parseDouble(ts);
+        Instant instant = Instant.ofEpochSecond((long) timestamp);
+        LocalDateTime dateTime = LocalDateTime.ofInstant(instant, ZoneOffset.UTC);
+        return dateTime.toString();
+    }
+}
+```
+
+**Listado 3-16 `ChannelReaderSlackBot.java`**
+
+Por supuesto, debes reemplazar “YOUR_SLACK_API_TOKEN” con tu token de API de Slack real y “YOUR_CHANNEL_ID” con el ID del canal de Slack desde el que deseas leer los mensajes.
+
+Si quieres hacer algo muy básico, la API de Java de Slack es bastante sencilla de usar. No puedes hacer nada sin obtener primero una instancia de la clase “Slack” mediante el método de llamada estática “`Slack.getInstance()`”. Esto se conecta a la infraestructura subyacente de la API de Slack, lo que te permite interactuar con los métodos expuestos y recuperar la información que queremos.
+
+A continuación, necesitamos una instancia de la clase “MethodsClient” invocando el método “`slack.methods()`”, donde proporcionamos nuestro token de acceso.
+
+Para recuperar el historial de chat, utilizamos la clase `ConversationsHistoryRequest`, que es otra clase proporcionada por la API de Slack. Aquí, todo lo que necesitas hacer es especificar el ID del canal deseado, la marca de tiempo más antigua y la marca de tiempo más reciente para definir el rango de tiempo del historial de chat. En este ejemplo, recuperamos los mensajes desde el 3 de agosto de 2023 a las 10:00 hasta el 12 de agosto de 2023 a las 15:00. Muy fácil.
+
+El listado 3-17 muestra el resultado después de ejecutar `ChannelReaderSlackBot.java`, que se trunca aquí porque ya tiene el texto completo en el listado 3-5 anteriormente en este capítulo.
+
+<img width="836" alt="image" src="https://github.com/user-attachments/assets/a0dcc38e-273a-4887-baff-d4e976f24572">
+
+```text
+Fatima [2023-08-11T09:04:20] : Hey everyone, I have an urgent issue to discuss. I just got off a call with a client who's experiencing app crashes as soon as they load it. They're really frustrated. Can we get this sorted ASAP? :tired_face:
+Keith [2023-08-11T09:04:35] : Thanks for bringing this to our attention, Fatima. Let's jump on this right away. John, can you take the lead in investigating the issue since our architect is out sick today?
+John [2023-08-11T09:04:52] : Sure thing, Keith. I'll dive into the codebase and see if I can find any potential culprits for the crashes.
+John [2023-08-11T09:05:30] : Fatima, could you gather some additional information from the client? Ask them about the specific device, operating system, and any recent updates they might have installed.
+...
+```
+
+**Listing 3-17 The Output from Executing `ChannelReaderSlackBot.java`**
+
+```text
+Fatima [2023-08-11T09:04:20] : Hola a todos, tengo un problema urgente que tratar. Acabo de terminar una llamada con un cliente que experimenta fallas en la aplicación apenas la carga. Está muy frustrado. ¿Podemos solucionar esto lo antes posible? :tired_face:
+Keith [2023-08-11T09:04:35]: Gracias por informarnos sobre esto, Fátima. Vamos a ocuparnos de esto de inmediato. John, ¿puedes encargarte de investigar el problema, ya que nuestro arquitecto está de baja hoy por enfermedad?
+John [2023-08-11T09:04:52] : Por supuesto, Keith. Analizaré el código base y veré si puedo encontrar posibles culpables de los fallos.
+John [2023-08-11T09:05:30] : Fátima, ¿podrías obtener información adicional del cliente? Pregúntales sobre el dispositivo específico, el sistema operativo y las actualizaciones recientes que puedan haber instalado.
+...
+```
+
+**Listado 3-17 El resultado de la ejecución de `ChannelReaderSlackBot.java`**
+
+### Ejercicios que quedan para el lector
+
+Entonces, obviamente hay algunas cosas adicionales que podemos hacer aquí, y estos pasos quedarán para que usted (el lector) los lleve a cabo, por ejemplo:
+
+* Hacer que `ChatGPTClient.java` (las clases relacionadas) sea aún más seguro para los usuarios novatos. Por ejemplo, para ChatGPT, el valor válido para el parámetro P superior solo está entre 0 y 1. El constructor de la clase `Chat.java` debe generar una excepción si el usuario especifica algo que esté fuera del rango de valores válidos.
+
+* Conectar el código en `ChannelReaderSlackBot.java` que lee los mensajes de Slack a `ChatGPTClient.java` para que capturar los mensajes y obtener un resumen sea un proceso de un solo paso.
+
+* Agregar más funciones al bot de Slack, como agregar comandos para que cualquier persona en el canal pueda solicitar un resumen. En su estado actual, el bot no publica nada en el canal. Sin embargo, la "interfaz de usuario" del bot es el canal en sí; por lo tanto, alguien debería poder interactuar con el bot de Slack escribiendo un comando (como solicitar un resumen).
+
+* Asegurarse de que el bot no empeore una situación que ya es mala. Siempre que el bot proporcione un resumen, no debe publicarlo en el canal porque eso podría agregar mucho ruido a una situación que ya es ruidosa. La mejor práctica es que el bot envíe un mensaje privado a la persona que solicita un resumen (o cualquier comando nuevo que cree).
+
+### Conclusión
+
+En este capítulo, hablamos sobre una de las diversas formas en las que la inteligencia artificial puede utilizarse en la práctica en las empresas actuales. Le mostramos cómo mejorar nuestra aplicación `ChatGPTClient.java` utilizando el patrón de construcción para permitir que la construcción de su clase sea mucho más flexible que en el capítulo anterior.
+
+Sin embargo, lo más destacable es que analizamos qué es realmente la “prompt engineering”, al señalar que la ingeniería rápida no se puede lograr simplemente ingresando texto a ChatGPT. Definitivamente, es necesario comprender las ramificaciones de todos los parámetros de entrada a la API de ChatGPT para poder realizar la ingeniería rápida de manera adecuada y eficaz.
+
+Gracias a lo que aprendimos sobre ingeniería de mensajes, pudimos obtener resúmenes de cualquier gran volumen de texto que se nos proporcionara. Finalmente, vimos el código necesario para ejecutar un bot automatizado que obtenga mensajes de cualquier canal de Slack de manera programática, si especificamos un rango de fechas válido.
+
+En este capítulo (así como en el capítulo anterior), trabajamos exclusivamente con el endpoint Chat Completions de las API de OpenAI. En el próximo capítulo, vamos a ampliar los límites de lo posible experimentando con los Endpoints **Whisper** y **DALL·E**.
