@@ -465,7 +465,8 @@ Response: {  "object": "list",  "data": [    {      "id": "gpt-4o-2024-08-06",  
 
 Después de ejecutar esta clase, obtendrá un archivo JSON que contiene todos los modelos ofrecidos por la API de OpenAI, como se muestra en el Listado 2-3 .
 
-![image](https://github.com/user-attachments/assets/795a97cc-039c-465f-9072-11eec5305ef5)
+![image](https://github.com/user-attachments/assets/2edebc0a-51b7-4d94-9d14-0b27b5e0e2af)
+
 
 ```json
 {
@@ -576,6 +577,19 @@ La Tabla 2-4 describe el formato del objeto JSON necesario para el request body 
 
 ![image](https://github.com/user-attachments/assets/f21e32b0-1086-472b-a3c5-db27bbb79855)
 
+![image](https://github.com/user-attachments/assets/dae1335f-35f1-4f6b-86d2-f8328381418c)
+
+![image](https://github.com/user-attachments/assets/afa250e4-469c-4df3-bf05-f572717e69c5)
+
+![image](https://github.com/user-attachments/assets/93b71ea8-9da7-4b03-83eb-5c8a777ae089)
+
+![image](https://github.com/user-attachments/assets/8e8aef7e-ac52-4add-9865-f02b664d8e19)
+
+![image](https://github.com/user-attachments/assets/600f240b-9fa2-4463-a086-9beed211c672)
+
+![image](https://github.com/user-attachments/assets/5f63a798-2aea-437f-8318-a36c9b7df2a0)
+
+![image](https://github.com/user-attachments/assets/9856add3-7103-4de3-a78f-576d49b578a3)
 
 **Nota**: En este libro, trabajaremos con el parámetro "stream" configurado, en su configuración predeterminada, que es falsa. Esto significa que recibiremos todos los resultados de ChatGPT a la vez como una única respuesta HTTP. Sin embargo, hay casos en los que desearía que esta configuración se establezca en verdadero. Digamos que está creando, por ejemplo, un bot de chat interactivo habilitado por voz. Digamos también que está interesado en convertir el texto de ChatGPT a audio para que sus usuarios puedan escuchar una respuesta audible. En tal caso, definitivamente querrá establecer el parámetro "stream" en verdadero. ¿Por qué es así? Cuando la respuesta se transmite de vuelta a su aplicación Java, tiene la oportunidad en ese momento de convertir el fragmento de texto a audio. Esto le permitirá trabajar en paralelo con la conversión de fragmentos de texto a audio mientras recibe más texto simultáneamente. Esto hará que la respuesta parezca más natural para el usuario final y ayudará a que la conversación se sienta como una conversación real.
 
