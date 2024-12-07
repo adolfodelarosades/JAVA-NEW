@@ -319,7 +319,7 @@ El equipo responde rápidamente al problema de bloqueo de la aplicación de un c
 
 ¡Es fantástico! Ha reducido esa conversación extremadamente larga a un resumen simple y breve de solo 68 palabras. Como puedes ver, ChatGPT no reemplaza un trabajo; sin embargo, definitivamente hará que alguien sea más productivo. Ahora, probemos con algunas indicaciones más, ¿te parece?
 
-Prompt #2: “Explique esto en 3 oraciones o menos”
+#### Prompt #2: “Explique esto en 3 oraciones o menos”
 
 Por lo tanto, si "tl;dr" no le ofrece una explicación lo suficientemente breve, podemos indicarle a ChatGPT que simplifique aún más las cosas. ChatGPT funciona bien con los parámetros, por lo que especificaremos que la explicación no debe tener más de 3 oraciones, como se muestra en el Listado 3-8.
 
@@ -370,3 +370,60 @@ Un cliente informó al equipo sobre un problema urgente de fallas de la aplicaci
 
 **Listado 3-9 RESPONSE. Obtener un resumen de 3 oraciones**
 
+#### Prompt #3: “Soy gerente. Explícame qué sucedió”
+
+Cuando no desea sonar como la única persona que no entiende, ChatGPT tiene la capacidad de reformular lo que se ha dicho y desglosarlo hasta que sea muy simple (Listado 3-10 ).
+
+<img width="917" alt="image" src="https://github.com/user-attachments/assets/7d7da953-d1ac-4e96-971b-1b622dcb024c">
+
+```text
+System: You are a helpful assistant
+User:  Fatima [16:00 | 02/08/2019]: Hey everyone, I have an urgent ...
+User: Summarize this conversation and explain it to me like I'm a manager with little technical experience.
+Model: gpt-3.5-turbo
+Temperature: 0.82
+Maximum length: 750
+Top P: 1
+Frequency penalty: 0
+Presence penalty: 0
+```
+
+**Listing 3-10 PROMPT. Asking for a Simplified Version of a More Complex Conversation**
+
+```text
+Sistema : Eres un asistente útil
+Usuario : Fatima [16:00 | 08/02/2019]: Hola a todos, tengo una consulta urgente...
+Usuario : Resume esta conversación y explícamela como si fuera un gerente con poca experiencia técnica.
+Modelo : gpt-3.5-turbo
+Temperatura : 0,82
+Longitud máxima: 750
+P superior: 1
+Penalización de frecuencia: 0
+Penalización por presencia: 0
+```
+
+**Listado 3-10 PROMPT. Cómo pedir una versión simplificada de una conversación más compleja**
+
+Nuevamente, la temperatura se establece por debajo de 1.0 para que ChatGPT pueda ofrecer una respuesta breve y fácil de entender. Aumentamos la longitud del token para que ChatGPT pueda tomarse el tiempo de explicar algunos conceptos potencialmente técnicos.
+
+<img width="908" alt="image" src="https://github.com/user-attachments/assets/1fb9368d-20ed-4080-a46e-1a10b06d459d">
+
+```text
+In this conversation, Fatima brings up an urgent issue with a client who is experiencing app crashes as soon as they load it. Keith assigns John to investigate the issue since their architect is out sick. John asks Fatima to gather additional information from the client about their device, operating system, and recent updates. Dave emphasizes the importance of keeping the client informed throughout the troubleshooting process.
+John checks the codebase but doesn't find any obvious issues, so he suspects it could be a memory-related problem. Keith agrees to check for memory-related anomalies in recent releases. Fatima provides an update that the client is using an iPhone X running iOS 15.1 and mentioned that the issue started after updating the app. Keith suggests testing the latest app update on an iPhone X simulator with iOS 15.1 to replicate the issue.
+John successfully reproduces the crash on the emulator and identifies a compatibility issue with iOS 15.1, possibly due to a deprecated method call. He fixes the issue and prepares a patch for review and deployment. Keith approves the patch and asks John to update the app in the store. Dave requests that the client be kept informed and that the release notes reflect the upcoming fix.
+John uploads the patch and informs the client about the fix. Keith reviews and approves the patch, and John proceeds with updating the app in the store. Fatima informs the client about the fix, and they express relief and gratitude for the prompt response. Dave commends the team for their collaboration and quick action, emphasizing the importance of maintaining good work.
+In summary, the team quickly addressed an urgent issue where a client's app was crashing on load. They investigated the issue, identified a compatibility problem with iOS 15.1, fixed it, and prepared a patch for deployment. The client was kept informed throughout the process, and the fix was successfully implemented, resulting in a relieved and grateful client.
+```
+
+**Listing 3-11 RESPONSE. Getting a Simplified Version of a More Complex Conversation**
+
+```text
+En esta conversación, Fatima plantea un problema urgente con un cliente que experimenta fallas en la aplicación apenas la carga. Keith le asigna a John la tarea de investigar el problema, ya que su arquitecto está de baja por enfermedad. John le pide a Fatima que recopile información adicional del cliente sobre su dispositivo, sistema operativo y actualizaciones recientes. Dave enfatiza la importancia de mantener informado al cliente durante todo el proceso de resolución de problemas.
+John revisa el código base pero no encuentra ningún problema obvio, por lo que sospecha que podría ser un problema relacionado con la memoria. Keith acepta verificar si hay anomalías relacionadas con la memoria en las versiones recientes. Fatima proporciona una actualización de que el cliente está usando un iPhone X con iOS 15.1 y menciona que el problema comenzó después de actualizar la aplicación. Keith sugiere probar la última actualización de la aplicación en un simulador de iPhone X con iOS 15.1 para replicar el problema.
+John reproduce con éxito el fallo en el emulador e identifica un problema de compatibilidad con iOS 15.1, posiblemente debido a una llamada a un método obsoleto. Soluciona el problema y prepara un parche para su revisión e implementación. Keith aprueba el parche y le pide a John que actualice la aplicación en la tienda. Dave solicita que se mantenga informado al cliente y que las notas de la versión reflejen la próxima corrección.
+John carga el parche e informa al cliente sobre la solución. Keith revisa y aprueba el parche, y John procede a actualizar la aplicación en la tienda. Fatima informa al cliente sobre la solución y este expresa alivio y gratitud por la pronta respuesta. Dave elogia al equipo por su colaboración y acción rápida, y enfatiza la importancia de mantener un buen trabajo.
+En resumen, el equipo abordó rápidamente un problema urgente en el que la aplicación de un cliente se bloqueaba al cargar. Investigaron el problema, identificaron un problema de compatibilidad con iOS 15.1, lo solucionaron y prepararon un parche para su implementación. Se mantuvo informado al cliente durante todo el proceso y la solución se implementó con éxito, lo que resultó en un cliente aliviado y agradecido.
+```
+
+**Listado 3-11 RESPONSE. Cómo obtener una versión simplificada de una conversación más compleja**
