@@ -1127,6 +1127,20 @@ Process finished with exit code 0
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/e62e0606-cdcb-44ca-9055-b9ad3149ba22">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b8d8271d-583a-4332-8d87-9860f0c52786">
+
+
+"content": "Java se utiliza ampliamente en la empresa por varias razones clave:\n\n
+
+1. **Portabilidad**: Java es un lenguaje de programación que se puede ejecutar en cualquier plataforma que tenga una máquina virtual Java (JVM). Esto significa que las aplicaciones desarrolladas en Java pueden funcionar en sistemas operativos Windows, macOS y Linux sin necesidad de realizar grandes modificaciones.\n\n
+
+2. **Seguridad**: Java ha sido diseñado con un fuerte enfoque en la seguridad. La JVM incluye un sistema de seguridad integrado que protege contra amenazas como virus y malware. Además, Java utiliza un modelo de seguridad basado en permisos para controlar el acceso a recursos sensibles.\n\n
+
+3. **Escabilidad**: Java es ideal para el desarrollo de aplicaciones empresariales escalables. Su arquitectura orientada a objetos facilita la creación de sistemas modulares que pueden crecer y adaptarse a medida que la empresa evoluciona.\n\n
+
+4. **Amplia biblioteca estándar**: Java cuenta con una extensa biblioteca estándar (Java API) que proporciona una amplia gama de funcionalidades listas para usar. Esto permite a los desarrolladores acelerar",
+
+        
 
 
 
