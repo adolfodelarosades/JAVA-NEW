@@ -1067,6 +1067,12 @@ Después de ejecutar `ChatGPTClient.java`, el Listado 2-9 tiene la respuesta.
 
 ¿Observaste en la lista anterior que la respuesta a mi solicitud se truncó? “Además, Java tiene un” no es una oración completa, pero como solicité que no se usaran más de 256 tokens en la respuesta, no superó esa limitación.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/29acb03d-9ef9-4dc3-95ae-f1c1a9eb88c9">
+
+
+
+
+
 ### Conclusión
 
 Contrariamente a la creencia popular, ChatGPT no lee la mente. No tiene la capacidad de reemplazar a los desarrolladores y arquitectos porque es (¡ja!) artificialmente inteligente. Es muy útil para hacer una sola pregunta y recibir una respuesta inmediata y directa. Definitivamente se puede usar para convertir un mensaje (o solicitud) en lenguaje natural en código, pero definitivamente se necesita un desarrollador para tomar la decisión de si el código resultante se debe usar, refinar o descartar por completo.
