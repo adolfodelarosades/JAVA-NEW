@@ -565,27 +565,9 @@ La Tabla 2-4 describe el formato del objeto JSON necesario para el request body 
 
 ![image](https://github.com/user-attachments/assets/8743560b-1415-4079-8888-709e51071810)
 
-XXXXXXX
-![image](https://github.com/user-attachments/assets/d30b6480-995a-4fa4-9e51-3801beb54b34)
-
-![image](https://github.com/user-attachments/assets/d85b4bf1-b9b1-4b4c-933c-1ce13be2c125)
-
-![image](https://github.com/user-attachments/assets/0624481a-4c32-4ad5-b403-a0d97a9bd55c)
-
-![image](https://github.com/user-attachments/assets/f9c9500b-b0c2-41a2-bff6-9dfc4b202c96)
-
-![image](https://github.com/user-attachments/assets/6de88f49-1c9a-43aa-910d-ac8e382d8ba5)
-
-![image](https://github.com/user-attachments/assets/f21e32b0-1086-472b-a3c5-db27bbb79855)
-
-YYYYYYYYY
-
 ![image](https://github.com/user-attachments/assets/dae1335f-35f1-4f6b-86d2-f8328381418c)
 
 ![image](https://github.com/user-attachments/assets/afa250e4-469c-4df3-bf05-f572717e69c5)
-
-
-
 
 ![image](https://github.com/user-attachments/assets/93b71ea8-9da7-4b03-83eb-5c8a777ae089)
 
@@ -652,6 +634,21 @@ Después de invocar correctamente el  Endpoint Chat, la API responderá con un C
 ![image](https://github.com/user-attachments/assets/8fc0a1ed-f198-47d1-b4d0-e10819f2043e)
 
 ![image](https://github.com/user-attachments/assets/0a356588-c371-4279-92d9-1e77ed7af0b6)
+
+XXXXXXX
+![image](https://github.com/user-attachments/assets/d30b6480-995a-4fa4-9e51-3801beb54b34)
+
+![image](https://github.com/user-attachments/assets/d85b4bf1-b9b1-4b4c-933c-1ce13be2c125)
+
+![image](https://github.com/user-attachments/assets/0624481a-4c32-4ad5-b403-a0d97a9bd55c)
+
+![image](https://github.com/user-attachments/assets/f9c9500b-b0c2-41a2-bff6-9dfc4b202c96)
+
+![image](https://github.com/user-attachments/assets/6de88f49-1c9a-43aa-910d-ac8e382d8ba5)
+
+![image](https://github.com/user-attachments/assets/f21e32b0-1086-472b-a3c5-db27bbb79855)
+
+YYYYYYYYY
 
 
 El listado 2-5 es un ejemplo de la respuesta JSON después de invocar el punto final de chat.
