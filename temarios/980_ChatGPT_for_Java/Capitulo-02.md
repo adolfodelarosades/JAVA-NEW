@@ -1123,6 +1123,13 @@ Response Body: {
 
 Process finished with exit code 0
 
+### Podemos preguntar en Español
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e62e0606-cdcb-44ca-9055-b9ad3149ba22">
+
+
+
+
 ### Conclusión
 
 Contrariamente a la creencia popular, ChatGPT no lee la mente. No tiene la capacidad de reemplazar a los desarrolladores y arquitectos porque es (¡ja!) artificialmente inteligente. Es muy útil para hacer una sola pregunta y recibir una respuesta inmediata y directa. Definitivamente se puede usar para convertir un mensaje (o solicitud) en lenguaje natural en código, pero definitivamente se necesita un desarrollador para tomar la decisión de si el código resultante se debe usar, refinar o descartar por completo.
