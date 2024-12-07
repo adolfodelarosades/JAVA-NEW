@@ -8,9 +8,8 @@ Beaverton, Oregón, Estados Unidos
 https://doi.org/10.1007/979-8-8688-0116-7_3
 
 <hr>
- 
-En el mundo corporativo actual, es muy común que las empresas tengan una instancia de Slack (o Microsoft Teams) para organizarse y la utilicen como un lugar central de comunicación para todos en la empresa. Ahora bien, si alguna vez has utilizado Slack, creo que sabes con qué facilidad un canal puede inundarse con un montón de mensajes porque ALGUNA cosa importante sucedió EN ALGÚN LUGAR de la empresa o del mundo.
 
+En el mundo corporativo actual, es muy común que las empresas tengan una instancia de Slack (o Microsoft Teams) para organizarse y la utilicen como un lugar central de comunicación para todos en la empresa. Ahora bien, si alguna vez has utilizado Slack, creo que sabes con qué facilidad un canal puede inundarse con un montón de mensajes porque ALGUNA cosa importante sucedió EN ALGÚN LUGAR de la empresa o del mundo.
 
 Por supuesto, cuanto mayor sea la responsabilidad que tengas dentro de la empresa (es decir, gerente, líder de equipo, arquitecto, etc.), más canales se espera que utilices. En mi opinión, Slack es un arma de doble filo. Debes usarlo para hacer tu trabajo, pero como desarrollador, definitivamente no puedes asistir a una reunión diaria y decir: "Ayer, eh, pasé todo el día leyendo Slack. No hay obstáculos".
 
@@ -175,7 +174,6 @@ public class Message {
 
 **Listado 3-4 `Message.java`**
 
-AQUIIIIII
 ### ChatGPT está aquí para quitarle el trabajo a todo el mundo (en realidad, no)
 
 En mi humilde opinión, todas las empresas del mundo tienen una mina de oro de información sin explotar. Si utiliza un sistema que lleva un registro de los intercambios entre empleados, una base de datos de solicitudes de asistencia de sus clientes o cualquier gran repositorio de texto (sí, esto incluye su correo electrónico, Microsoft Exchange y Gmail corporativo), entonces tiene un gran repositorio de texto no estructurado que está esperando a ser utilizado.
@@ -232,5 +230,143 @@ Keith [18:27 | 02/08/2019]: Patch reviewed and approved, John. Please proceed wi
 John [18:26 | 02/08/2019]: Understood, Keith. I'm in the process of uploading it now.
 Fatima [18:38 | 02/08/2019]: I just informed the client about the fix. They're relieved and grateful for our prompt response. Thanks, everyone, for your collaboration and quick action. It's a pleasure working with such a competent team!
 Dave [18:40 | 02/08/2019]: Well done, team! Your efforts are greatly appreciated. We managed to turn this urgent problem around in record time. Let's keep up the good work! 
-Listing 3-5Team Members Within a Slack Channel Trying to Analyze a Customer’s Problem
 ```
+
+**Listing 3-5 Team Members Within a Slack Channel Trying to Analyze a Customer’s Problem**
+
+```text
+Fatima [16:00 | 08/02/2019]: Hola a todos, tengo un problema urgente que tratar. Acabo de terminar una llamada con un cliente que está experimentando fallos en la aplicación apenas la carga. Está muy frustrado. ¿Podemos solucionar esto lo antes posible?
+Keith [16:01 | 08/02/2019]: Gracias por informarnos sobre esto, Fátima. Vamos a ocuparnos de esto de inmediato. @John, ¿puedes encargarte de investigar el problema ya que nuestro arquitecto está de baja hoy por enfermedad?
+John [16:02 | 08/02/2019]: Por supuesto, Keith. Analizaré el código base y veré si puedo encontrar posibles culpables de los fallos.
+John [16:02 | 08/02/2019]: Fátima, ¿podrías obtener información adicional del cliente? Pregúntales sobre el dispositivo específico, el sistema operativo y las actualizaciones recientes que hayan podido instalar.
+Fatima [16:03 | 08/02/2019]: Por supuesto, John. Me comunicaré con el cliente de inmediato y reuniré esos detalles. Les informaré a todos cuando los tenga.
+Dave [16:04 | 08/02/2019]: Entiendo la urgencia. Asegurémonos de mantener al cliente informado sobre nuestro progreso Fátima. No queremos que se sientan abandonados a su suerte durante este proceso de resolución de problemas.
+Fátima [16:04 | 08/02/2019]: Definitivamente, Dave. Mantendré al cliente actualizado a intervalos regulares, proporcionándole cualquier información relevante que descubramos.
+John [16:20 | 08/02/2019]: He revisado el código base y, hasta ahora, no he encontrado ningún problema evidente. Es extraño que la aplicación se bloquee al cargar. ¿Podría ser un problema relacionado con la memoria? Keith, ¿tenemos algún informe reciente de fugas de memoria o uso elevado de la memoria?
+Keith [16:22 | 08/02/2019]: John, buscaré los registros de monitoreo y comprobaré si hubo alguna anomalía relacionada con la memoria en las versiones recientes. Te responderé al respecto.
+Fatima [17:01 | 08/02/2019]: Una actualización rápida para todos. El cliente usa un iPhone X con iOS 15.1. Mencionaron que el problema comenzó después de actualizar su aplicación hace unos días.
+Keith [17:05 | 08/02/2019]: Gracias por la actualización, Fatima. Es una información útil. John, centrémonos en probar la última actualización de la aplicación en un simulador de iPhone X con iOS 15.1 para ver si podemos replicar el problema.
+John [17:06 | 08/02/2019]: Buena idea, Keith. Configuraré el emulador y ejecutaré algunas pruebas de inmediato.
+Keith [17:30 | 08/02/2019]: John, ¿hay algún progreso en replicar el problema en el emulador?
+John [17:32 | 08/02/2019]: Sí, Keith. Logré reproducir el error en el emulador. Parece estar relacionado con un problema de compatibilidad con iOS 15.1 Sospecho que se debe a una llamada a un método obsoleto. Lo solucionaré y realizaré más pruebas para confirmarlo.
+John [18:03 | 08/02/2019]: Se solucionó el problema del método obsoleto y la aplicación ya no se bloquea al cargarse. Parece que hemos identificado y resuelto el problema. Prepararé un parche y te lo enviaré, Keith, para que lo revises y lo implementes.
+Keith [18:04 | 08/02/2019]:Gracias, por favor envíenme el parche lo antes posible. Una vez que lo revisemos, implementaremos la solución en la tienda de aplicaciones.
+Dave [18:06 | 08/02/2019]: ¡Buen trabajo, equipo! John, mantén informado al cliente sobre el progreso y hazle saber que tenemos una solución lista para ellos en la próxima actualización de la aplicación. ¿Alguien puede asegurarse de que las notas de la versión reflejen esto?
+John [18:07 | 08/02/2019]: Lo haré, Dave. Informaré al cliente y me aseguraré de que esté al tanto de la próxima solución.
+Keith [18:27 | 08/02/2019]: Revisión revisada y aprobada, John. Continúa con la actualización de la aplicación en la tienda. Intentaremos hacerlo en la próxima hora.
+John [18:26 | 08/02/2019]: Entendido, Keith. Estoy en proceso de subirlo ahora.
+Fatima [18:38 | 08/02/2019]: Acabo de informar al cliente sobre la solución. Están aliviados y agradecidos por nuestra pronta respuesta. Gracias a todos por su colaboración y rápida actuación. ¡Es un placer trabajar con un equipo tan competente!
+Dave [18:40 | 08/02/2019]: ¡Bien hecho, equipo! Sus esfuerzos son muy apreciados. Logramos resolver este problema urgente en un tiempo récord. ¡Sigamos con el buen trabajo!
+```
+
+**Listado 3-5 Miembros del equipo dentro de un canal de Slack que intentan analizar el problema de un cliente**
+
+### Prompt Engineering 101: resumen de texto
+
+Por lo tanto, no hace falta decir que nadie quiere pasar el día navegando constantemente por los canales de Slack leyendo sobre problemas y cuestiones que están en auge. Vamos a utilizar las capacidades de ChatGPT para el resumen de texto. Para simplificar las cosas, probemos algunas indicaciones para enviar la lista completa de mensajes de chat a ChatGPT para que nos brinde un resumen útil de todos los eventos que han sucedido.
+
+#### Prompt #1: “tl;dr”
+
+Este mensaje es breve, conciso y directo. Por si no lo conoces, es un término que se usa en Internet con frecuencia para resumir brevemente un artículo largo. Literalmente significa "Demasiado largo; no lo leí", que es lo que pienso sobre muchas conversaciones en Slack cuando estoy abrumado por el trabajo. Convenientemente, ChatGPT puede entender este término simple (no necesariamente lo llamaría una palabra) como un mensaje, y los resultados son bastante impresionantes.
+
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/740827ee-da8a-4f57-9717-ad941158a714">
+
+```text
+System: You are a helpful assistant
+User:  Fatima [16:00 | 02/08/2019]: Hey everyone, I have an urgent ...
+User: Tl;dr
+Model: gpt-4
+Temperature: 1
+Maximum length: 360
+Top P: 1
+Frequency penalty: 0
+Presence penalty: 0
+```
+**Listing 3-6 PROMPT. Asking for a Summarized Version of a Longer Conversation**
+
+```text
+Sistema : Eres un asistente útil
+Usuario : Fatima [16:00 | 08/02/2019]: Hola a todos, tengo una consulta urgente...
+Usuario : Tl;dr
+Modelo : gpt-4
+Temperatura : 1
+Longitud máxima: 360
+P superior: 1
+Penalización de frecuencia: 0
+Penalización por presencia: 0
+```
+**Listado 3-6 PROMPT. Cómo pedir una versión resumida de una conversación más larga**
+
+**Nota**: Ahora tienes dos opciones para enviar el mensaje anterior a ChatGPT. La primera opción es usar la aplicación `ChatGPTClient.java` y sus clases de soporte. La segunda opción es usar Chat Playground. En cualquier caso, asegúrate de que el primer mensaje de usuario contenga todo el texto que se encuentra en el Listado 3-5. Está truncado en el Listado 3-6 para que sea máslegible.
+
+Observe cómo la cantidad de tokens se mantiene pequeña, en 360, lo que en última instancia ayudará a ChatGPT a crear una respuesta breve. Observe también que la temperatura se deja en 1 (el valor predeterminado), pero que la P superior se aumenta hasta su máximo (que es 1). Por lo tanto, es importante experimentar con la temperatura y otras configuraciones para controlar el tono y la variedad de las respuestas de ChatGPT.
+
+El listado 3-7 muestra el resumen de ChatGPT de la conversación del Listado 3-5.
+
+<img width="915" alt="image" src="https://github.com/user-attachments/assets/586f2491-8266-46c6-be0f-fc3787f81650">
+
+```text
+The team quickly responds to a client's app crashing issue. John investigates the codebase while Fatima gathers information from the client. They discover a compatibility issue with iOS 15.1 and John fixes it. The patch is reviewed and approved, and the app is updated in the store. The client is informed and grateful for the quick resolution. The team is praised for their collaboration and prompt action.
+```
+
+**Listing 3-7 RESPONSE. Getting a Summarized Version of a Very Long Conversation**
+
+```text
+El equipo responde rápidamente al problema de bloqueo de la aplicación de un cliente. John investiga el código base mientras Fatima recopila información del cliente. Descubren un problema de compatibilidad con iOS 15.1 y John lo soluciona. Se revisa y aprueba el parche, y la aplicación se actualiza en la tienda. El cliente está informado y agradecido por la rápida resolución. Se elogia al equipo por su colaboración y su pronta acción.
+```
+
+**Listado 3-7 RESPONSE. Cómo obtener una versión resumida de una conversación muy larga**
+
+¡Es fantástico! Ha reducido esa conversación extremadamente larga a un resumen simple y breve de solo 68 palabras. Como puedes ver, ChatGPT no reemplaza un trabajo; sin embargo, definitivamente hará que alguien sea más productivo. Ahora, probemos con algunas indicaciones más, ¿te parece?
+
+Prompt #2: “Explique esto en 3 oraciones o menos”
+
+Por lo tanto, si "tl;dr" no le ofrece una explicación lo suficientemente breve, podemos indicarle a ChatGPT que simplifique aún más las cosas. ChatGPT funciona bien con los parámetros, por lo que especificaremos que la explicación no debe tener más de 3 oraciones, como se muestra en el Listado 3-8.
+
+
+<img width="907" alt="image" src="https://github.com/user-attachments/assets/076ee004-c129-472d-84ae-e21deef9f87c">
+
+```text
+System: You are a helpful assistant
+User:  Fatima [16:00 | 02/08/2019]: Hey everyone, I have an urgent ...
+User: Explain this in 3 sentences or less.
+Model: gpt-4
+Temperature: 1
+Maximum length: 250
+Top P: 0
+Frequency penalty: 0
+Presence penalty: 0
+```
+
+**Listing 3-8 PROMPT. Asking for a Shorter Version of a Longer Conversation**
+
+```text
+Sistema : Eres un asistente útil
+Usuario : Fatima [16:00 | 08/02/2019]: Hola a todos, tengo una consulta urgente...
+Usuario : Explique esto en 3 oraciones o menos.
+Modelo : gpt-4
+Temperatura : 1
+Longitud máxima: 250
+P superior: 0
+Penalización de frecuencia: 0
+Penalización por presencia: 0
+```
+
+**Listado 3-8 PROMPT. Cómo pedir una versión más corta de una conversación más larga**
+
+Como habrás notado, la temperatura está configurada en 0,82 en este ejemplo. Realmente queremos que ChatGPT nos dé una respuesta concisa, por lo que cuanto más “seca”, mejor.
+
+<img width="915" alt="image" src="https://github.com/user-attachments/assets/3635cce7-d0c3-4ab7-be7c-c316c441b68a">
+
+```text
+A customer reported an urgent issue of app crashes to the team. John investigates the issue and asks Fatima to gather additional information from the client. They discover that the issue is related to a compatibility problem with iOS 15.1. John fixes the problem and Keith approves the deployment of the fix to the client's production environment.
+```
+
+**Listing 3-9 RESPONSE. Getting a 3 Sentence Summary**
+
+```text
+Un cliente informó al equipo sobre un problema urgente de fallas de la aplicación. John investiga el problema y le pide a Fatima que recopile información adicional del cliente. Descubren que el problema está relacionado con un problema de compatibilidad con iOS 15.1. John soluciona el problema y Keith aprueba la implementación de la solución en el entorno de producción del cliente.
+```
+
+**Listado 3-9 RESPONSE. Obtener un resumen de 3 oraciones**
+
