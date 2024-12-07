@@ -6,6 +6,7 @@ Bruce Hopkins 1  
 
 Beaverton, Oregón, Estados Unidos
 https://doi.org/10.1007/979-8-8688-0116-7_3
+
 <hr>
  
 En el mundo corporativo actual, es muy común que las empresas tengan una instancia de Slack (o Microsoft Teams) para organizarse y la utilicen como un lugar central de comunicación para todos en la empresa. Ahora bien, si alguna vez has utilizado Slack, creo que sabes con qué facilidad un canal puede inundarse con un montón de mensajes porque ALGUNA cosa importante sucedió EN ALGÚN LUGAR de la empresa o del mundo.
