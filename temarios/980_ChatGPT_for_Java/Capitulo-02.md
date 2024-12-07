@@ -612,184 +612,237 @@ Después de invocar correctamente el  Endpoint Chat, la API responderá con un C
 
 **Tabla 2-5 La estructura del Chat Competion JSON Object**
 
+![image](https://github.com/user-attachments/assets/cf476d4f-8f54-429c-a982-54b6202f2a67)
+
+![image](https://github.com/user-attachments/assets/eef18105-89f9-49d9-b472-53a8d2e2cda5)
+
+![image](https://github.com/user-attachments/assets/579766f0-8106-4a38-8b43-b386d7c0a394)
+
+![image](https://github.com/user-attachments/assets/51445c8a-41a4-49da-8832-0b8cb69f6cc3)
+
+
+![image](https://github.com/user-attachments/assets/d2977bd4-bf48-43b1-9fb3-9f5cf4de7703)
+
+![image](https://github.com/user-attachments/assets/7732c767-cd3f-4ea2-9edc-b1940ff332d7)
+
+![image](https://github.com/user-attachments/assets/f71cf840-b248-4202-9d51-0b6f582b06d1)
+
+![image](https://github.com/user-attachments/assets/3e258d84-c3d8-4982-99db-da0644509a9b)
+
+![image](https://github.com/user-attachments/assets/8fc0a1ed-f198-47d1-b4d0-e10819f2043e)
+
+![image](https://github.com/user-attachments/assets/0a356588-c371-4279-92d9-1e77ed7af0b6)
 
 
 El listado 2-5 es un ejemplo de la respuesta JSON después de invocar el punto final de chat.
 
+**Listado 2-5 El JSON response después de invocaar el endpoint Chat.**
 
-Listado 2-5El objeto JSON de finalización de chat
-Espera, ¿cuántos tokens hay en mi mensaje?
+![image](https://github.com/user-attachments/assets/099cce5c-f582-4a40-9560-6b7feee95be9)
+
+### Espera, ¿cuántos tokens hay en mi Prompt(mensaje)?
+
 En un momento dado, comenzarás a pensar en los mensajes que planeas enviar a ChatGPT y a pensar mucho en las limitaciones de tokens (y los costos) con respecto al modelo que deseas utilizar. En caso de que lo hayas olvidado, asegúrate de volver a consultar la Tabla 1-1 para obtener una lista de modelos y el precio de los tokens. Además, OpenAI creó un sitio web fácil de usar que te permite ver cuántos tokens hay en tu mensaje, como se muestra en la Figura 2-1 .
 
-Contador de tokens ChatGPT
+#### Contador de tokens ChatGPT
+
 https://platform.openai.com/tokenizer
 
-Figura 2-1El tokenizador ChatGPT puede brindarle un recuento rápido de los tokens en su mensaje
-Creación de la próxima aplicación Java: ChatGPTClient.java
-Ahora es el momento de crear nuestro propio ChatGPTClient . Vamos a empezar y a proporcionarle a ChatGPT la información que necesita a través de ChatGPT Playground.
-Sistema : Eres un desarrollador de Java
-Usuario : Convierte el siguiente comando cURL a Java. Asegúrate de que la URL y las claves API sean variables. Quiero usar la biblioteca Jackson para crear el objeto JSON en la solicitud. Nombra la clase principal ChatGPTClient y crea clases auxiliares si es necesario.
-Usuario:
-rizo https://api.openai.com/v1/chat/completions \
-  -H "Tipo de contenido: aplicación/json" \
-  -H "Autorización: Portador $OPENAI_API_KEY" \
-  -d '{
-  "modelo": "gpt-3.5-turbo",
-  "mensajes": [
-    {
-      "rol": "sistema",
-      "contenido": "Eres un comercializador de productos"
-    },
-    {
-      "rol": "usuario",
-      "content": "Explique por qué Java se utiliza tan ampliamente en la empresa"
-    }
-  ],
-  "temperatura": 1,
-  "máximo_tokens": 256,
-  "arriba_p": 1,
-  "penalización de frecuencia": 0,
-  "penalización por presencia": 0
+![image](https://github.com/user-attachments/assets/960d356c-f798-4a83-83a8-5ac2103851fe)
+
+**Figura 2-1 El tokenizador ChatGPT puede brindarle un recuento rápido de los tokens en su mensaje**
+
+
+### Creación de la próxima aplicación Java: `ChatGPTClient.java`
+
+Ahora es el momento de crear nuestro propio ChatGPTClient. Vamos a empezar y a proporcionarle a ChatGPT la información que necesita a través de ChatGPT Playground.
+
+![image](https://github.com/user-attachments/assets/1fcdf222-fa5a-422d-a8da-3dec6fc3ae04)
+
+**Listado 2-6 La conversación inicial para crear `ChatGPTClient.java`**
+
+```sh
+System: You are a Java developer
+User: Convert the following cURL command to Java. Make sure the URL and API keys to the API are variables. I want to use the Jackson library to create the JSON object in the request. Name the main class, ChatGPTClient, and create helper classes if necessary.
+User:
+curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+  "model": "gpt-3.5-turbo",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a product marketer"
+    },
+    {
+      "role": "user",
+      "content": "Explain why Java is so widely used in the enterprise "
+    }
+  ],
+  "temperature": 1,
+  "max_tokens": 256,
+  "top_p": 1,
+  "frequency_penalty": 0,
+  "presence_penalty": 0
 }'
-Listado 2-6La conversación inicial para crear ChatGPTClient.java
+```
+
 La respuesta de ChatGPT fue un buen comienzo, pero no tenía todo exactamente como yo quería. Ahora bien, como no especifiqué exactamente cómo se debían haber realizado las llamadas HTTP, ChatGPT decidió utilizar la biblioteca Apache HTTPClient. Por lo tanto, agregué el siguiente mensaje de usuario (Listado 2-7 ).
-Usuario : tengo un entorno Java 11, por lo que utilizo clases HTTP de Java 11 para las llamadas a la API. Prefiero utilizar Java puro en lugar de Apache HttpClient
-Listado 2-7AVISO: Cómo añadir información adicional a la conversación para crear ChatGPTClient.java
+
+![image](https://github.com/user-attachments/assets/c23ec256-5ea6-4c30-a75f-d509c4d6ca00)
+
+**Listado 2-7 PROMPT: Cómo añadir información adicional a la conversación para crear `ChatGPTClient.java`**
+
 El objetivo aquí es tener una conversación. No es práctico esperar que ChatGPT produzca exactamente lo que quieres en un solo mensaje. ¡Ni siquiera los desarrolladores hacen eso! Por lo tanto, siéntete libre de tener una conversación con ChatGPT y aclararle cosas que puede haber adivinado o asumido incorrectamente.
 
-El listado 2-8 muestra el resultado final para ChatGPTClient.java .
+**El listado 2-8 muestra el resultado final para `ChatGPTClient.java`.**
 
-importar com.fasterxml.jackson.core.JsonProcessingException;
-importar com.fasterxml.jackson.databind.ObjectMapper;
-importar com.fasterxml.jackson.annotation.JsonProperty;
-importar java.io.BufferedReader;
-importar java.io.IOException;
-importar java.io.InputStreamReader;
-importar java.io.OutputStream;
-importar java.net.HttpURLConnection;
-importar java.net.URL;
-importar java.util.ArrayList;
-importar java.util.List;
-clase pública ChatGPTClient {
-        public static void principal (cadena [] argumentos) {
-        String openAIKey = "inserte su clave API aquí";
-        Punto final de cadena = "https://api.openai.com/v1/chat/completions";
-        Modelo de cadena = "gpt-3.5-turbo";
-        temperatura del flotador = 1.0f;
-        int máximo_tokens = 256;
-        flotante top_p = 1.0f;
-        int frecuencia_penalidad = 0;
-        int presencia_penalidad = 0;
-        Lista<Mensaje> mensajes = nueva ArrayList<>();
-        mensajes.add(new Message("sistema", "Usted es un comercializador de productos.");
-        messages.add(new Message("usuario", "Explique por qué Java se usa tan ampliamente en la empresa"));
-        Cadena jsonInput = nulo;
-        intentar {
-            ObjectMapper mapeador = nuevo ObjectMapper();
-            Chat chat = new Chat(modelo, mensajes, temperatura, max_tokens, top_p, penalización_de_frecuencia, penalización_de_presencia);
+![image](https://github.com/user-attachments/assets/84ac7e49-1683-4006-bcba-aa6209471c19)
+
+```java
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+public class ChatGPTClient {
+        public static void main(String[] args) {
+        String openAIKey = "insert your API key here";
+        String endpoint = "https://api.openai.com/v1/chat/completions";
+        String model = "gpt-3.5-turbo";
+        float temperature = 1.0f;
+        int max_tokens = 256;
+        float top_p = 1.0f;
+        int frequency_penalty = 0;
+        int presence_penalty = 0;
+        List<Message> messages = new ArrayList<>();
+        messages.add(new Message("system", "You are a product marketer."));
+        messages.add(new Message("user", "Explain why Java is so widely used in the enterprise"));
+        String jsonInput = null;
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            Chat chat = new Chat(model, messages, temperature, max_tokens, top_p, frequency_penalty, presence_penalty);
             jsonInput = mapper.writeValueAsString(chat);
-        } captura (JsonProcessingException e) {
-            es.printStackTrace();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
         }
-        intentar {
-            URL url = nueva URL(punto final);
-            HttpURLConnection conexión = (HttpURLConnection) url.openConnection();
-            conexión.setRequestMethod("POST");
-            conexión.setRequestProperty("Tipo-de-contenido", "application/json");
-            connection.setRequestProperty("Autorización", "Portador " + openAIKey);
-            conexión.setDoOutput(true);
-            OutputStream outputStream = conexión.getOutputStream();
-            salidaStream.write(jsonInput.getBytes());
-            salidaStream.flush();
-            flujo de salida.close();
-            int responseCode = conexión.getResponseCode();
-            si (código de respuesta == HttpURLConnection.HTTP_OK) {
-                lector BufferedReader = nuevo BufferedReader(nuevo InputStreamReader(connection.getInputStream()));
-                Respuesta de StringBuilder = new StringBuilder();
-                Línea de cuerda;
-                mientras ((linea = lector.readLine()) != null) {
-                    respuesta.append(linea);
+        try {
+            URL url = new URL(endpoint);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setRequestProperty("Authorization", "Bearer " + openAIKey);
+            connection.setDoOutput(true);
+            OutputStream outputStream = connection.getOutputStream();
+            outputStream.write(jsonInput.getBytes());
+            outputStream.flush();
+            outputStream.close();
+            int responseCode = connection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
                 }
-                lector.close();
-                //Imprime la respuesta
-                Sistema.out.println(respuesta.toString());
-            } demás {
-                System.out.println("Error: " + código de respuesta);
+                reader.close();
+                // Print the response
+                System.out.println(response.toString());
+            } else {
+                System.out.println("Error: " + responseCode);
             }
-            conexión.desconectar();
-        } captura (IOException e) {
-            es.printStackTrace();
+            connection.disconnect();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-    // Clase auxiliar para representar el objeto Chat
-    clase estática Chat {
-        @JsonProperty("modelo")
-        modelo de cadena privada;
-        @JsonProperty("mensajes")
-        Lista privada<Mensaje> mensajes;
-        @JsonProperty("temperatura")
-        temperatura flotante privada;
-        @JsonProperty("máximo_tokens")
-        int privado max_tokens;
+    // Helper class to represent the Chat object
+    static class Chat {
+        @JsonProperty("model")
+        private String model;
+        @JsonProperty("messages")
+        private List<Message> messages;
+        @JsonProperty("temperature")
+        private float temperature;
+        @JsonProperty("max_tokens")
+        private int max_tokens;
         @JsonProperty("top_p")
-        flotante privado top_p;
-        @JsonProperty("penalización de frecuencia")
-        privado int frecuencia_penalty;
-        @JsonProperty("penalización por presencia")
-        privado int presencia_penalty;
-        público Chat(String modelo, List<Mensaje> mensajes, float temperatura, int max_tokens, float top_p, int frequency_penalty, int presence_penalty) {
-            este.modelo = modelo;
-            this.messages = mensajes;
-            esta.temperatura = temperatura;
-            esto.max_tokens = max_tokens;
-            esto.top_p = top_p;
-            esto.frequency_penalty = penalización_de_frecuencia;
-            esto.penalización_de_presencia = pena_de_presencia;
+        private float top_p;
+        @JsonProperty("frequency_penalty")
+        private int frequency_penalty;
+        @JsonProperty("presence_penalty")
+        private int presence_penalty;
+        public Chat(String model, List<Message> messages, float temperature, int max_tokens, float top_p, int frequency_penalty, int presence_penalty) {
+            this.model = model;
+            this.messages = messages;
+            this.temperature = temperature;
+            this.max_tokens = max_tokens;
+            this.top_p = top_p;
+            this.frequency_penalty = frequency_penalty;
+            this.presence_penalty = presence_penalty;
         }
-        // Getters y setters (opcionales, pero pueden ser útiles si necesita modificar el objeto más adelante)
+        // Getters and setters (optional, but can be useful if you need to modify the object later)
         }
-    // Clase auxiliar para representar el mensaje de chat
-    clase estática Mensaje {
-        @JsonProperty("rol")
-        rol de cadena privada;
-        @JsonProperty("contenido")
-        contenido de cadena privada;
-        mensaje público (cadena rol, cadena contenido) {
-            este.role = rol;
-            este.contenido = contenido;
+    // Helper class to represent the Chat Message
+    static class Message {
+        @JsonProperty("role")
+        private String role;
+        @JsonProperty("content")
+        private String content;
+        public Message(String role, String content) {
+            this.role = role;
+            this.content = content;
         }
     }
 }
-Listado 2-8RESPUESTA. ChatGPTClient.java
+```
+
+
+**Listado 2-8 RESPONSE. `ChatGPTClient.java`**
+
 Al examinar la lista de códigos anterior, verá que las llamadas HTTP se realizan utilizando API de Java puras y no utilizando ninguna biblioteca externa, tal como solicité en el mensaje. Sin embargo, tenga en cuenta que crear y analizar objetos JSON en Java puro puede ser una molestia, por lo que especifiqué personalmente que se debe utilizar la API de Jackson, lo que (como puede ver) se refleja en las declaraciones de importación y en el código en sí.
 
 El código resultante incluye dos clases internas, Chat y Message , que se pueden separar fácilmente en archivos Java independientes. Puedo hacerlo manualmente o agregar un nuevo mensaje de "Usuario" a ChatGPT para solicitar que las clases internas se separen en archivos Java distintos.
 
-Después de ejecutar ChatGPTClient.java , el Listado 2-9 tiene la respuesta.
+Después de ejecutar `ChatGPTClient.java`, el Listado 2-9 tiene la respuesta.
 
+![image](https://github.com/user-attachments/assets/299345f6-949b-4270-a52e-2f8d1ba81dc0)
+
+```json
 {
   "id": "chatcmpl-7xIRvjByGobmWH9Vo7OObHCSSwzgI",
-  "objeto": "chat.completado",
-  "creado": 1694366627,
-  "modelo": "gpt-3.5-turbo-0613",
-  "opciones": [
+  "object": "chat.completion",
+  "created": 1694366627,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
     {
-      "índice": 0,
-      "mensaje": {
-        "rol": "asistente",
-        "content": "Java se utiliza ampliamente en las empresas, principalmente debido a sus numerosos beneficios y características que lo convierten en una opción popular entre las grandes organizaciones. A continuación, se muestran algunas de las razones clave por las que Java se adopta tan ampliamente en las empresas:\n\n1. Independencia de la plataforma: una de las mayores ventajas de Java es su independencia de la plataforma. Los programas Java pueden ejecutarse en cualquier sistema operativo, lo que lo hace muy adaptable a una amplia gama de dispositivos y plataformas. Esto facilita que las empresas desarrollen aplicaciones que se puedan implementar en diferentes sistemas sin modificaciones importantes.\n\n2. Robustez y estabilidad: Java es conocido por su fuerte énfasis en la confiabilidad, la estabilidad y el manejo de errores. Tiene un sistema de administración de memoria incorporado que evita fugas de memoria y garantiza un rendimiento sólido. Esta estabilidad es muy valorada en entornos empresariales donde los sistemas deben ejecutarse de manera constante sin interrupciones.\n\n3. Escalabilidad: Java ofrece una excelente escalabilidad, lo que lo hace adecuado para aplicaciones empresariales a gran escala. Proporciona un soporte sólido para subprocesos múltiples, lo que permite que las aplicaciones gestionen una gran cantidad de usuarios simultáneos sin problemas. La capacidad de Java para manejar altas cargas de tráfico y distribuir el procesamiento entre múltiples servidores lo hace ideal para sistemas de nivel empresarial.\n\n4. Biblioteca estándar y marcos de trabajo enriquecidos: Java viene con una biblioteca estándar integral, que ofrece una amplia gama de funciones y clases predefinidas que simplifican el desarrollo. Además, Java tiene una "
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Java is widely used in the enterprise primarily due to its numerous benefits and features that make it a popular choice among large organizations. Here are some key reasons why Java is so widely adopted in the enterprise:\n\n1. Platform Independence: One of the biggest advantages of Java is its platform independence. Java programs can run on any operating system, making it highly adaptable across a wide range of devices and platforms. This makes it easier for enterprises to develop applications that can be deployed on different systems without any major modifications.\n\n2. Robustness and Stability: Java is known for its strong emphasis on reliability, stability, and error handling. It has a built-in memory management system that prevents memory leaks and ensures robust performance. This stability is highly valued in enterprise environments where systems need to run consistently without disruptions.\n\n3. Scalability: Java offers excellent scalability, making it suitable for large-scale enterprise applications. It provides robust support for multi-threading, allowing applications to handle a large number of concurrent users smoothly. Java's ability to handle high traffic loads and distribute processing across multiple servers makes it ideal for enterprise-level systems.\n\n4. Rich Standard Library and Frameworks: Java comes with a comprehensive standard library, offering a wide range of pre-built functions and classes that simplify development. Additionally, Java has a"
       },
-      "finish_reason": "longitud"
+      "finish_reason": "length"
     }
   ],
-  "uso": {
-    "tokens_de_aviso": 28,
-    "tokens_de_finalización": 256,
+  "usage": {
+    "prompt_tokens": 28,
+    "completion_tokens": 256,
     "total_tokens": 284
   }
 }
-Listado 2-9RESPUESTA. Los resultados de llamar a ChatGPTClient.java
+```
+
+**Listado 2-9 9RESPONSE. Los resultados de llamar a `ChatGPTClient.java`**
+
 ¿Observaste en la lista anterior que la respuesta a mi solicitud se truncó? “Además, Java tiene un” no es una oración completa, pero como solicité que no se usaran más de 256 tokens en la respuesta, no superó esa limitación.
 
-Conclusión
+### Conclusión
+
 Contrariamente a la creencia popular, ChatGPT no lee la mente. No tiene la capacidad de reemplazar a los desarrolladores y arquitectos porque es (¡ja!) artificialmente inteligente. Es muy útil para hacer una sola pregunta y recibir una respuesta inmediata y directa. Definitivamente se puede usar para convertir un mensaje (o solicitud) en lenguaje natural en código, pero definitivamente se necesita un desarrollador para tomar la decisión de si el código resultante se debe usar, refinar o descartar por completo.
