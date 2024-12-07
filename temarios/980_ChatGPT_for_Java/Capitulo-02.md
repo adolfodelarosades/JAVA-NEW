@@ -569,6 +569,9 @@ La Tabla 2-4 describe el formato del objeto JSON necesario para el request body 
 
 ![image](https://github.com/user-attachments/assets/d85b4bf1-b9b1-4b4c-933c-1ce13be2c125)
 
+
+XXXXXXX
+
 ![image](https://github.com/user-attachments/assets/0624481a-4c32-4ad5-b403-a0d97a9bd55c)
 
 ![image](https://github.com/user-attachments/assets/f9c9500b-b0c2-41a2-bff6-9dfc4b202c96)
@@ -580,6 +583,9 @@ La Tabla 2-4 describe el formato del objeto JSON necesario para el request body 
 ![image](https://github.com/user-attachments/assets/dae1335f-35f1-4f6b-86d2-f8328381418c)
 
 ![image](https://github.com/user-attachments/assets/afa250e4-469c-4df3-bf05-f572717e69c5)
+
+
+YYYYYYYYY
 
 ![image](https://github.com/user-attachments/assets/93b71ea8-9da7-4b03-83eb-5c8a777ae089)
 
