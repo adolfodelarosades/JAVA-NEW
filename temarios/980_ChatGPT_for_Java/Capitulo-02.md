@@ -714,11 +714,209 @@ curl https://api.openai.com/v1/chat/completions \
 }'
 ```
 
+![image](https://github.com/user-attachments/assets/28e29afb-8cbe-42b9-9c28-a04122a36e3d)
+
+![image](https://github.com/user-attachments/assets/f9919d25-c46b-4815-9562-97ab246d9fbb)
+
+![image](https://github.com/user-attachments/assets/40b6692b-c6fe-4171-a96a-e37034fdc723)
+
+![image](https://github.com/user-attachments/assets/ca219291-dbb5-49f1-86f3-a381ed8a11aa)
+
+![image](https://github.com/user-attachments/assets/cccd2d9e-61dd-4eb5-8bb1-cab6c74f55a3)
+
+### Respuesta de ChapGPT
+
+To convert the given cURL command to Java using the Jackson library, you can create a `ChatGPTClient` class that constructs and sends the HTTP POST request using Java's HttpURLConnection or an HTTP client library like Apache HttpClient or OkHttp. For simplicity, I'll use Java's `HttpURLConnection`. Below is the implementation of `ChatGPTClient`, along with a helper class `Message` to structure the JSON request data.
+
+First, make sure you have Jackson included in your project. If you're using Maven, add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.13.4</version>
+</dependency>
+```
+
+Here's the Java implementation:
+
+```java
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class ChatGPTClient {
+    private final static String API_URL = "https://api.openai.com/v1/chat/completions";
+    private final String apiKey;
+
+    public ChatGPTClient(String apiKey) {
+        this.apiKey = apiKey;
+    }
+
+    public void sendRequest() throws Exception {
+        // Create JSON payload using Jackson
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectNode requestBody = objectMapper.createObjectNode();
+        requestBody.put("model", "gpt-3.5-turbo");
+
+        ArrayNode messagesArray = objectMapper.createArrayNode();
+
+        ObjectNode systemMessage = objectMapper.createObjectNode();
+        systemMessage.put("role", "system");
+        systemMessage.put("content", "You are a product marketer");
+        messagesArray.add(systemMessage);
+
+        ObjectNode userMessage = objectMapper.createObjectNode();
+        userMessage.put("role", "user");
+        userMessage.put("content", "Explain why Java is so widely used in the enterprise ");
+        messagesArray.add(userMessage);
+
+        requestBody.set("messages", messagesArray);
+        requestBody.put("temperature", 1);
+        requestBody.put("max_tokens", 256);
+        requestBody.put("top_p", 1);
+        requestBody.put("frequency_penalty", 0);
+        requestBody.put("presence_penalty", 0);
+
+        // Prepare and send the HTTP request
+        URL url = new URL(API_URL);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("POST");
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setRequestProperty("Authorization", "Bearer " + apiKey);
+        connection.setDoOutput(true);
+
+        // Write JSON payload to request body
+        try (OutputStream os = connection.getOutputStream()) {
+            byte[] input = objectMapper.writeValueAsBytes(requestBody);
+            os.write(input, 0, input.length);
+        }
+
+        // Read response code and handle response (omitted for brevity)
+        int responseCode = connection.getResponseCode();
+        System.out.println("Response Code: " + responseCode);
+        
+        // Additional code to handle the response (read the response, etc.) can be added here
+    }
+
+    public static void main(String[] args) {
+        try {
+            String openaiApiKey = "your-api-key-here"; // Replace with your actual API key
+            ChatGPTClient client = new ChatGPTClient(openaiApiKey);
+            client.sendRequest();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+In the provided example, you need to replace `"your-api-key-here"` with your actual OpenAI API key. Additionally, this example uses `HttpURLConnection` for simplicity. For a more robust and feature-rich HTTP client, consider using Apache HttpClient or OkHttp. To fully handle the response, including reading the response body, you would read from the input stream of the `HttpURLConnection`.
+
 La respuesta de ChatGPT fue un buen comienzo, pero no tenía todo exactamente como yo quería. Ahora bien, como no especifiqué exactamente cómo se debían haber realizado las llamadas HTTP, ChatGPT decidió utilizar la biblioteca Apache HTTPClient. Por lo tanto, agregué el siguiente mensaje de usuario (Listado 2-7 ).
 
 ![image](https://github.com/user-attachments/assets/c23ec256-5ea6-4c30-a75f-d509c4d6ca00)
 
 **Listado 2-7 PROMPT: Cómo añadir información adicional a la conversación para crear `ChatGPTClient.java`**
+
+
+![image](https://github.com/user-attachments/assets/60207177-5f2b-4d53-8fee-cad1b9494770)
+
+![image](https://github.com/user-attachments/assets/5685c39a-ec4d-4ec9-8184-07ac50492595)
+
+![image](https://github.com/user-attachments/assets/af3e3d28-0ab0-411f-b7e1-ed6abd6078e8)
+
+![image](https://github.com/user-attachments/assets/85b3bdb5-dd00-4039-a530-4530ffee961f)
+
+### Respuesta de ChapGPT
+
+Certainly! Java 11 introduced a built-in HTTP client that can be used to send HTTP requests. Below is how you can use Java 11's `HttpClient` to convert the provided cURL command into a Java application:
+
+```java
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+public class ChatGPTClient {
+    private static final String API_URL = "https://api.openai.com/v1/chat/completions";
+    private final String apiKey;
+
+    public ChatGPTClient(String apiKey) {
+        this.apiKey = apiKey;
+    }
+
+    public void sendRequest() throws Exception {
+        // Create JSON payload using Jackson
+        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectNode requestBody = objectMapper.createObjectNode();
+        requestBody.put("model", "gpt-3.5-turbo");
+
+        ArrayNode messagesArray = objectMapper.createArrayNode();
+
+        ObjectNode systemMessage = objectMapper.createObjectNode();
+        systemMessage.put("role", "system");
+        systemMessage.put("content", "You are a product marketer");
+        messagesArray.add(systemMessage);
+
+        ObjectNode userMessage = objectMapper.createObjectNode();
+        userMessage.put("role", "user");
+        userMessage.put("content", "Explain why Java is so widely used in the enterprise ");
+        messagesArray.add(userMessage);
+
+        requestBody.set("messages", messagesArray);
+        requestBody.put("temperature", 1);
+        requestBody.put("max_tokens", 256);
+        requestBody.put("top_p", 1);
+        requestBody.put("frequency_penalty", 0);
+        requestBody.put("presence_penalty", 0);
+
+        // Convert the JSON object to a string
+        String requestBodyString = objectMapper.writeValueAsString(requestBody);
+
+        // Create a HttpClient
+        HttpClient client = HttpClient.newHttpClient();
+        
+        // Build the HttpRequest
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(API_URL))
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + apiKey)
+                .POST(HttpRequest.BodyPublishers.ofString(requestBodyString))
+                .build();
+
+        // Send the request and get the response
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        // Output the response
+        int statusCode = response.statusCode();
+        String responseBody = response.body();
+
+        System.out.println("Response Code: " + statusCode);
+        System.out.println("Response Body: " + responseBody);
+    }
+
+    public static void main(String[] args) {
+        try {
+            String openaiApiKey = "your-api-key-here"; // Replace with your actual API key
+            ChatGPTClient client = new ChatGPTClient(openaiApiKey);
+            client.sendRequest();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+This implementation uses Java 11's `HttpClient` to perform an HTTP POST request. The JSON payload is created with the Jackson library, which is converted into a string and sent in the HTTP request body. The `HttpClient` and `HttpRequest` classes are part of the `java.net.http` package, which was introduced in Java 11, and they provide an easy and concise way to work with HTTP communications in a Java application.
 
 El objetivo aquí es tener una conversación. No es práctico esperar que ChatGPT produzca exactamente lo que quieres en un solo mensaje. ¡Ni siquiera los desarrolladores hacen eso! Por lo tanto, siéntete libre de tener una conversación con ChatGPT y aclararle cosas que puede haber adivinado o asumido incorrectamente.
 
