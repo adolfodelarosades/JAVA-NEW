@@ -427,3 +427,107 @@ En resumen, el equipo abordó rápidamente un problema urgente en el que la apli
 ```
 
 **Listado 3-11 RESPONSE. Cómo obtener una versión simplificada de una conversación más compleja**
+
+#### Prompt #4: “Give Me Suggestions on Next Steps”
+
+Además de hacer un resumen más fácil de entender, ChatGPT puede explicarlo en diferentes estilos y “tonos”. Vamos a aumentar la P superior a 0,75 porque queremos que ChatGPT piense en más posibilidades que las predeterminadas. También vamos a aumentar la penalización por presencia a 0,5 porque queremos fomentar una respuesta versátil.
+
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/da26ccee-fb82-45ad-9939-0e1c934347ec">
+
+```text
+System: You are a helpful assistant
+User:  Fatima [16:00 | 02/08/2019]: Hey everyone, I have an urgent ...
+User: I'm a QA engineer at the company. Give me suggestions on next steps.
+Model: gpt-4
+Temperature: 1
+Maximum length: 1200
+Top P: 0.75
+Frequency penalty: 0
+Presence penalty: 0.5
+```
+
+**Listing 3-12 PROMPT. Asking to ChatGPT for Advice on the Best Next Steps**
+
+```text
+As a QA engineer, here are some suggestions for next steps:
+1. Test the patch: Once the patch has been deployed to the app store, thoroughly test it on various devices and operating systems to ensure that the issue has been resolved and there are no new bugs or regressions introduced.
+2. Conduct regression testing: In addition to testing the specific issue, perform a comprehensive regression test to ensure that the fix does not have any unintended side effects on other functionalities of the app.
+3. Communicate the fix to the client: Keep the client updated on the progress and let them know that the fix is available in the latest app update. Provide them with clear instructions on how to update their app and encourage them to test it on their end as well.
+4. Monitor user feedback: Keep an eye on user feedback after the fix has been deployed. Encourage users to report any issues they encounter, and be proactive in addressing them promptly.
+5. Document the issue and resolution: Create a detailed report documenting the issue, the steps taken to reproduce and resolve it, and any other relevant information. This will serve as a reference for future troubleshooting and help improve the development process.
+6. Conduct a post-mortem analysis: After the issue has been resolved and the fix has been deployed, schedule a post-mortem meeting with the team to discuss the root cause, lessons learned, and any process improvements that can be implemented to prevent similar issues in the future.
+7. Continuous improvement: Use this incident as an opportunity to identify areas of improvement in the development and testing processes. Evaluate if there are any changes that can be made to prevent similar issues from occurring in the future.
+Remember, open communication, collaboration, and continuous learning are key to ensuring the highest quality of your app and maintaining a strong relationship with your clients.
+```
+
+**Listing 3-13 RESPONSE. Suggestions from ChatGPT on Possible Next Steps**
+
+```text
+Sistema : Eres un asistente útil
+Usuario : Fatima [16:00 | 08/02/2019]: Hola a todos, tengo una consulta urgente...
+Usuario : Soy ingeniero de control de calidad en la empresa. Denme sugerencias sobre los próximos pasos.
+Modelo : gpt-4
+Temperatura : 1
+Longitud máxima: 1200
+P superior: 0,75
+Penalización de frecuencia: 0
+Penalización por presencia: 0,5
+```
+
+**Listado 3-12 PROMPT. Pida a ChatGPT que le aconseje sobre los mejores pasos a seguir**
+
+```text
+Como ingeniero de control de calidad, aquí hay algunas sugerencias para los próximos pasos:
+1. Pruebe el parche: una vez que el parche se haya implementado en la tienda de aplicaciones, pruébelo exhaustivamente en varios dispositivos y sistemas operativos para asegurarse de que el problema se haya resuelto y de que no se hayan introducido nuevos errores ni regresiones.
+2. Realice pruebas de regresión: además de probar el problema específico, realice una prueba de regresión integral para asegurarse de que la solución no tenga efectos secundarios no deseados en otras funcionalidades de la aplicación.
+3. Comunique la solución al cliente: mantenga al cliente informado sobre el progreso y hágale saber que la solución está disponible en la última actualización de la aplicación. Bríndele instrucciones claras sobre cómo actualizar su aplicación y anímelo a que la pruebe también en su dispositivo.
+4. Controle los comentarios de los usuarios: esté atento a los comentarios de los usuarios después de que se haya implementado la solución. Incentive a los usuarios a que informen sobre cualquier problema que encuentren y sea proactivo para abordarlo rápidamente.
+5. Documente el problema y su resolución: cree un informe detallado que documente el problema, los pasos que se tomaron para reproducirlo y resolverlo, y cualquier otra información relevante. Esto servirá como referencia para la resolución de problemas en el futuro y ayudará a mejorar el proceso de desarrollo.
+6. Realice un análisis post mortem: después de que se haya resuelto el problema y se haya implementado la solución, programe una reunión post mortem con el equipo para analizar la causa raíz, las lecciones aprendidas y cualquier mejora de proceso que se pueda implementar para evitar problemas similares en el futuro.
+7. Mejora continua: Utilice este incidente como una oportunidad para identificar áreas de mejora en los procesos de desarrollo y prueba. Evalúe si hay cambios que se puedan realizar para evitar que se produzcan problemas similares en el futuro.
+Recuerde, la comunicación abierta, la colaboración y el aprendizaje continuo son clave para garantizar la máxima calidad de su aplicación y mantener una relación sólida con sus clientes.
+```
+
+**Listado 3-13 RESPONSE. Sugerencias de ChatGPT sobre posibles pasos a seguir**
+
+Ahora bien, por supuesto, ChatGPT (como cualquier otra forma de inteligencia artificial del planeta) no es del todo perfecto. Por ejemplo, la recomendación número 3 es válida, salvo por el hecho de que no suele ser responsabilidad de una persona de control de calidad comunicar algo directamente al cliente. Esa comunicación se puede hacer a través del soporte técnico o con un gerente de producto que tenga esos canales de comunicación (especialmente si es un cliente importante). Por lo tanto, la sugerencia está bien, pero no es adecuada para una persona con ese rol dentro de una empresa.
+
+#### Hablemos de ingeniería real
+
+Si buscas en Google el término “prompt engineering - ingeniería de indicaciones”, encontrarás un montón de ejemplos, blogs e incluso sitios web completos con planes de suscripción que intentarán convencerte de que las indicaciones perfectas se pueden crear simplemente utilizando texto. Como has visto en los ejemplos anteriores, la ingeniería de indicaciones no se puede lograr únicamente mediante la elaboración de entradas de texto.
+
+En realidad, el proceso es bastante similar a cocinar un plato sofisticado. Imagínese intentar cocinar, por ejemplo, beef bourguignon utilizando solo sal como condimento y descuidando todos los demás ingredientes y especias. Sinceramente, el resultado palidecería en comparación con el plato en sí.
+
+De manera similar, intente armar una orquesta completa pero use solo un instrumento y un músico. Esa es una vergonzosa "banda de un solo hombre". Por lo tanto, simplemente ajustar el texto al mensaje no es suficiente para realizar una verdadera ingeniería de mensajes. Los parámetros como la temperatura del modelo, que controla la aleatoriedad; el top-p, que afecta la probabilidad de tokens; el modelo específico utilizado; la cantidad de tokens; y los demás parámetros del punto final juegan un papel muy importante para obtener una gran respuesta.
+
+Este libro no trata sobre prompt engineering, ya que (como puede ver en la explicación anterior) involucra varios factores que no tienen nada que ver con Java. Sin embargo, se le recomienda encarecidamente que experimente con TODOS los parámetros de los modelos y puntos finales proporcionados por OpenAI para encontrar lo que funciona mejor para su caso de uso.
+
+### Cómo registrar una Slack Bot App
+
+Ahora que conocemos las distintas formas en que ChatGPT puede resumir un gran cuerpo de texto para nosotros, veamos qué es necesario para crear un bot simple en Java que capture programáticamente todos los mensajes de un canal dentro de una instancia de Slack.
+
+**Nota**: Para llevar a cabo los pasos, necesitarás tener acceso administrativo a un espacio de trabajo de Slack. La mayoría de los desarrolladores NO tendrán estos niveles de permisos; por lo tanto, para experimentar a fondo, te recomiendo que crees tu propio espacio de trabajo personal de Slack para realizar pruebas. De esta manera, tendrás todos los derechos y privilegios para instalar tu bot de Slack.
+
+Pero vayamos paso a paso. Primero, vamos a crear nuestra Slack bot app, así que dirígete al sitio web de la API de Slack (Figura 3-1 ).
+
+https://api.slack.com/
+
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/4376ee6c-7500-4795-a6ad-3869e5f23855">
+
+**Figura 3-1 Para crear un bot de Slack, vaya al sitio web de la API de Slack**
+
+Por supuesto, necesitarás tener una cuenta de Slack para que esto funcione, así que si no tienes una, primero deberás crear una.
+
+Después de iniciar sesión, vaya a la parte superior derecha de la página y navega hasta “**Your apps ➤ Create your first app**”, como se muestra en la Figura 3-1. En la terminología de Slack, un “bot” es una “aplicación” y los bots no pueden ejecutarse en una instancia de Slack a menos que se hayan registrado primero en Slack.
+
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/c16e23d8-14a7-4199-8c52-d6cd4559e0d7">
+
+**Figura 3-2 Creación de una nueva aplicación de bot para Slack**
+
+Como se muestra en la Figura 3-2, accederás a la página **Your Apps**, donde podrás administrar tus aplicaciones de Slack. Inmediatamente, verás una ventana emergente con el botón **Create an App** en el medio de la pantalla.
+
+Selecciona la opción para crear tu aplicación desde cero. Esto se debe a que queremos poder manipular todos los detalles de la aplicación nosotros mismos sin complicar demasiado las cosas con un montón de configuraciones predeterminadas.
+
+Luego, se le pedirá que especifique un nombre para su bot y que seleccione el espacio de trabajo al que desea que su bot tenga acceso, como se muestra en la Figura 3-3 .
+
+Haga clic en el botón **Create App** para continuar.
