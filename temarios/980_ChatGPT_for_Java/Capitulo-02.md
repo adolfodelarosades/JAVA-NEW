@@ -1069,9 +1069,59 @@ Después de ejecutar `ChatGPTClient.java`, el Listado 2-9 tiene la respuesta.
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/29acb03d-9ef9-4dc3-95ae-f1c1a9eb88c9">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/08f3bb5a-0985-422e-919f-79467dcf70c0">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/87f5e7d1-4b00-4baf-8203-ec7720e91c11">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d111c041-11a9-4fbd-8116-b11dcde1e272">
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/677fc859-b6d5-4525-98d0-9bd05e1d6538">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bd5c8490-b02d-4c03-89fc-c31e391dad47">
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0d37b627-4206-487f-8a49-3855a8155ea4">
+
+/Library/Java/JavaVirtualMachines/jdk-17.0.4.1.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=62960:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/adulfodelarosa/Documents/PROYECTOS-2025/IntelliJ/ChapGPT/target/classes:/Users/adulfodelarosa/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.4/jackson-databind-2.13.4.jar:/Users/adulfodelarosa/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar:/Users/adulfodelarosa/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar org.example.ChatGPTClient
+Response Code: 200
+
+```json
+Response Body: {
+  "id": "chatcmpl-AblnGX03jgQ3eGKtl31X58n5SxB6H",
+  "object": "chat.completion",
+  "created": 1733565218,
+  "model": "gpt-3.5-turbo-0125",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Java is widely used in the enterprise for several key reasons:\n\n1. Platform Independence: Java is a platform-independent language, meaning that Java code can run on any device or operating system that has a Java Virtual Machine (JVM) installed. This makes it a versatile choice for enterprise applications that need to run on multiple platforms.\n\n2. Scalability: Java is known for its scalability, making it a suitable choice for developing large, complex applications that can handle high volumes of traffic and data. This makes it a popular choice for enterprise-level applications that need to support a large user base.\n\n3. Strong Ecosystem: Java has a vast ecosystem of libraries, frameworks, tools, and resources that make it easier for developers to build and maintain enterprise applications. This strong ecosystem provides developers with a wide range of options and support to meet their specific needs.\n\n4. Security: Java has built-in security features that help protect enterprise applications from common security vulnerabilities. This includes features such as a strong type system, automatic memory management, and a robust set of security APIs.\n\n5. Performance: Java is known for its performance, with the JVM executing Java bytecode efficiently and optimizing performance through features like Just-In-Time (JIT) compilation. This makes Java a reliable choice for enterprise applications that require high",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 28,
+    "completion_tokens": 256,
+    "total_tokens": 284,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": null
+}
+```
+
+Process finished with exit code 0
 
 ### Conclusión
 
