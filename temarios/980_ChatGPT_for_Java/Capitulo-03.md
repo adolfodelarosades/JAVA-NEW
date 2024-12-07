@@ -531,3 +531,54 @@ Selecciona la opción para crear tu aplicación desde cero. Esto se debe a que q
 Luego, se le pedirá que especifique un nombre para su bot y que seleccione el espacio de trabajo al que desea que su bot tenga acceso, como se muestra en la Figura 3-3 .
 
 Haga clic en el botón **Create App** para continuar.
+
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/532d3345-0fa2-4ac5-ac4b-996661b899ba">
+
+**Figura 3-3 Creando una nueva aplicación de bot para Slack**
+
+#### Cómo especificar lo que su bot puede (y no puede) hacer configurando el alcance
+
+Ahora, verás una pantalla con muchas opciones para bots en espacios de trabajo de Slack. Sin embargo, lo primero que debes hacer es, desde la barra lateral de la izquierda, hacer clic en **OAuth & Permissions**.
+
+Nuestro bot será bastante simple: todo lo que necesita hacer es leer los mensajes de un canal para darnos un resumen de lo que se dijo. Además de leer los mensajes, también necesitamos saber los nombres de las personas en el espacio de trabajo de Slack; de lo contrario, obtendremos una representación UUID de la persona en lugar de su nombre, lo cual no tiene sentido para nosotros.
+
+Entonces, desplácese hacia abajo y asegúrese de agregar los siguientes ámbitos OAuth a su bot de Slack, como se muestra en la Figura 3-4.
+
+
+* channels:history
+
+* channels:read
+
+* users:read
+
+<img width="838" alt="image" src="https://github.com/user-attachments/assets/a6ea2fee-232a-4094-80be-fb4c4a930c92">
+
+**Figura 3-4 Cómo agregar ámbitos para la aplicación Slack Bot**
+
+#### Confirmando su configuración
+
+Después de haber agregado los alcances apropiados para su bot, desplácese hacia arriba y haga clic en **Basic Information** en la barra lateral izquierda.
+
+En la página que sigue, verá que ahora hay una marca de verificación verde junto a "Add features and functionality", lo que confirma que ha agregado sus alcances correctamente, como se muestra en la Figura 3-5.
+
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/6baabbf0-6988-4b74-9d52-9000e2df56e4">
+
+
+**Figura 3-5 Confirme su configuración**
+
+### Visualización de OAuth y Permissions Page
+
+Como se muestra en la Figura 3-6, navegue a la página **OAuth & Permissions** y haga clic en el botón “Install to Workspace”.
+
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/69119cd2-5f0e-449d-b446-aa9a19f25712">
+
+
+**Figura 3-6 La pantalla de OAuth & Permission**
+
+### Cómo instalar la aplicación Slack Bot en tu espacio de trabajo
+
+Ahora que se han solicitado todos los permisos, es momento de instalar el bot en el espacio de trabajo. Durante el proceso de instalación, deberías ver una pantalla como la que se muestra en la Figura 3-7.
+
+<img width="828" alt="image" src="https://github.com/user-attachments/assets/671a4a4f-2056-4a01-9b10-1c35ab1b9194">
+
+
