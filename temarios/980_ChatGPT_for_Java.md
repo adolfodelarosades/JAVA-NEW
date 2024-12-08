@@ -82,7 +82,7 @@ Desarrolladores Java principiantes e intermedios que tengan conocimientos básic
 * Creating the Next Java App:​ ChatGPTClient.​java
 * Conclusion
 
-### Chapter 3:​ Using AI in the Enterprise! Creating a Text Summarizer for Slack Messages
+### [Chapter 3:​ Using AI in the Enterprise! Creating a Text Summarizer for Slack Messages](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Capitulo-03.md)
 
 * So, What Is Prompt Engineering?​
 * Updating ChatGPTClient.​java (and Related Classes) with the Builder Pattern
@@ -108,7 +108,7 @@ Desarrolladores Java principiantes e intermedios que tengan conocimientos básic
 * Exercises Left for the Reader
 * Conclusion
 
-### Chapter 4:​ Multimodal AI:​ Creating a Podcast Visualizer with Whisper and DALL·E 3
+### [Chapter 4:​ Multimodal AI:​ Creating a Podcast Visualizer with Whisper and DALL·E 3](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Capitulo-04.md)
 
 * Introducing the Whisper Model by OpenAI
 * Features and Limitations of the Whisper Model
@@ -131,7 +131,7 @@ Desarrolladores Java principiantes e intermedios que tengan conocimientos básic
 * Conclusion
 * Exercises Left for the Reader
 
-### Chapter 5:​ Creating an Automated Community Manager Bot with Discord and Java
+### [Chapter 5:​ Creating an Automated Community Manager Bot with Discord and Java](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Capitulo-05.md)
 
 * Choosing Discord as Your Community Platform
 * Creating a More Advanced Bot Than Our Slack Bot
@@ -163,7 +163,7 @@ Desarrolladores Java principiantes e intermedios que tengan conocimientos básic
 * Conclusion
 * Exercises Left for the Reader
 
-### Chapter 6:​ Adding Intelligence to Our Discord Bots, Part 1:​ Using the Chat Endpoint for Q&​A
+### [Chapter 6:​ Adding Intelligence to Our Discord Bots, Part 1:​ Using the Chat Endpoint for Q&​A](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Capitulo-06.md)
 
 * Making TechSupportBot.​java More Intelligent
 * Important Changes to Note from the Previous Version of the Tech Support Bot
@@ -175,7 +175,7 @@ Desarrolladores Java principiantes e intermedios que tengan conocimientos básic
 * Update the System Message to ChatGPT and Let’s Try Again
 * Conclusion
 
-### Chapter 7:​ Adding Intelligence to Our Discord Bots, Part 2:​ Using the Chat and Moderation Endpoints for Moderation
+### [Chapter 7:​ Adding Intelligence to Our Discord Bots, Part 2:​ Using the Chat and Moderation Endpoints for Moderation](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java/Capitulo-07.md)
 
 * Moderations Endpoint
 * Creating the Request
