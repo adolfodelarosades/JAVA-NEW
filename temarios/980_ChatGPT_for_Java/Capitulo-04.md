@@ -280,3 +280,274 @@ public class AudioSplitter {
 ```
 
 **Listado 4-3 RESPONSE. `AudioSplitter.java`**
+
+Dado que las libraries estándar de Java no tienen un amplio soporte para varios formatos multimedia, utilizamos una combinación de las libraries **FFmpeg** y **JavaCV** (ambas son gratuitas y de código abierto).
+
+El objetivo es sencillo: dividir un archivo MP3 en segmentos contiguos de no más de 10 minutos de duración utilizando el lenguaje Java. En esta sencilla aplicación, realizamos los siguientes pasos:
+
+* En primer lugar, especificamos la ruta del archivo de entrada, el directorio de salida y la duración del segmento deseado en segundos (10 minutos).
+
+* A continuación, utilizamos **FFmpegFrameGrabber** para abrir el archivo MP3 de entrada y recopilar información sobre él, como la velocidad de cuadros, el códec de audio, la frecuencia de muestreo y más.
+
+* Luego, iteramos a través del archivo MP3 de entrada, segmentándolo en partes más pequeñas de la duración especificada (10 minutos o menos). Para cada segmento, creamos un nuevo **FFmpegFrameRecorder**, configuramos sus parámetros y grabamos los fotogramas dentro de la duración del segmento.
+
+* Por último, incrementamos el tiempo de inicio del segmento y el número de segmento para cada segmento hasta que hayamos procesado todo el archivo MP3 de entrada.
+
+Para que esto funcione, necesitas tener las libraries **JavaCV** y **FFmpeg** instaladas y configuradas correctamente en tu proyecto.
+
+**Nota**: **FFmpeg** es un open source binary que deberá instalar en su máquina y colocarlo en su PATH o hacerlo accesible dentro de su proyecto. **JavaCV** utiliza **FFmpeg** a través de JNI (la interfaz nativa de Java). **FFmpeg** es un conversor de medios extremadamente versátil que no solo maneja archivos de audio MP3, sino también otros formatos de archivos de audio (incluidos M4A, OGG y WAV). Puede convertir formatos de video, así como imágenes estáticas como PNG, JPEG y GIF.
+
+Después de ejecutar la utilidad `AudioSplitter.java` en un archivo MP3, tendrá una carpeta llena de archivos de audio segmentados de diez minutos de duración o menos. Con la utilidad `AudioSplitter.java`, tendrá todo dentro de un solo archivo Java para modificar las configuraciones que funcionen mejor para usted. Para nuestros propósitos, el objetivo aquí es tener archivos de audio que tengan `<` 25 MB, por lo que si está transcribiendo procedimientos legales de 8 horas, por ejemplo, en formato WAV, es posible que deba ajustar la duración para que sea más corta, como 6 minutos de duración.
+
+Al utilizar AudioSplitter, la mejor práctica es que la carpeta de salida sea una carpeta diferente de la de entrada, y verá por qué cuando comencemos a invocar el punto Endpoint Transcriptions utilizando el modelo Whisper.
+
+### Creación del transcriptor de audio: `WhisperClient.java`
+
+Ahora, construyamos nuestra próxima aplicación Java, `WhisperClient.java` Nuevamente, vamos a programar en pares con ChatGPT para obtener una base con la que trabajar. Esta vez, vamos a solicitar que se use la biblioteca HTTP OK para esta aplicación por dos motivos:
+
+* Ya hemos utilizado la library en el Capítulo 3 para la aplicación Slack Bot.
+
+* La library HTTP OK hace que las cosas sean un poco más fáciles de usar cuando se trabaja con formularios HTTP multiparte.
+
+El listado 4-4 es el mensaje que se debe incluir en el Chat Playground para comenzar. Recuerde que solicito un tiempo de espera de solicitud HTTP de 60 segundos, ya que Whisper puede tardar un poco en generar la transcripción.
+
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/d164615a-75fa-4c8b-b122-d7389c3a7677">
+
+```text
+System: You are a Java developer.
+User: Convert the following code from cURL to Java, using OkHttp to send the request. Make sure that I have a 60 second timeout on my request. Iterate over a single folder on my local computer and send all the files in the folder to the webservice. Name the file, WhisperClient.java.
+User: curl https://api.openai.com/v1/audio/transcriptions \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: multipart/form-data" \
+  -F file="@/path/to/file/audio.mp3" \
+  -F model="whisper-1"
+Model: gpt-4
+Temperature: 1
+Maximum Length: 1150
+```
+
+**Listing 4-4 PROMPT: Asking ChatGPT to Convert cURL to Java and Send to Whisper’s API**
+
+```text
+Sistema: Eres un desarrollador de Java.
+Usuario: Convierte el siguiente código de cURL a Java, utilizando OkHttp para enviar la solicitud. Asegúrate de que mi solicitud tenga un tiempo de espera de 60 segundos. Itera sobre una sola carpeta en mi computadora local y envía todos los archivos de la carpeta al servicio web. Nombra el archivo WhisperClient.java.
+Usuario: curl https://api.openai.com/v1/audio/transcriptions \
+  -H "Autorización: Portador $OPENAI_API_KEY" \
+  -H "Tipo de contenido: multipart/form-data" \
+  -F archivo="@/ruta/al/archivo/audio.mp3" \
+  -F modelo="susurro-1"
+Modelo: gpt-4
+Temperatura: 1
+Longitud máxima: 1150
+```
+
+**Listado 4-4 PROMPT: Solicitar a ChatGPT que convierta cURL a Java y lo envíe a la API de Whisper**
+
+Después de algunas idas y vueltas, aquí está la respuesta que nos dio ChatGPT que funcionó, como se muestra en el Listado 4-5.
+
+<img width="932" alt="image" src="https://github.com/user-attachments/assets/f041b9b7-bfbf-4310-b049-a7425713f607">
+
+```java
+import java.io.*;
+import java.nio.file.*;
+import okhttp3.*;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+/**
+ * Client class to transcribe MP3 files using the OpenAI Whisper model.
+ */
+public class WhisperClient {
+    public static void main(String[] args) throws IOException {
+        // API key for OpenAI (this should be replaced with your actual API key)
+        String openAIKey = "";
+        // OpenAI transcription endpoint
+        String endpoint = "https://api.openai.com/v1/audio/transcriptions";
+        // Model used for transcription
+        String model = "whisper-1";
+        // Media type for the MP3 files
+        MediaType MEDIA_TYPE_MP3 = MediaType.parse("audio/mpeg");
+        // Folder containing the MP3 files to be transcribed
+        String mp3FolderPath = "/Users/me/audio/segments";
+        // Desired format for the transcription response
+        String responseFormat = "text";
+        // Configure the HTTP client with specified timeouts
+        OkHttpClient client = new OkHttpClient.Builder()
+            .connectTimeout(60, TimeUnit.SECONDS)
+            .writeTimeout(60, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
+            .build();
+        // List to store all mp3 files from the directory
+        List<File> mp3Files = new ArrayList<>();
+        // Try to collect all mp3 files in the directory and store them in the list
+        try (Stream<Path> paths = Files.walk(Paths.get(mp3FolderPath))) {
+            mp3Files = paths
+                .filter(Files::isRegularFile)
+                .filter(p -> p.toString().endsWith(".mp3"))
+                .map(Path::toFile)
+                .sorted(Comparator.comparing(File::getName)) // Sort the files alphabetically
+                .collect(Collectors.toList());
+        } catch (IOException e) {
+            System.out.println("File reading error: " + e.getMessage());
+            return; // Exit if there's an error reading the files
+        }
+        // Iterate over each MP3 file, transcribe it, and print the response
+        for (File mp3File : mp3Files) {
+            // Construct the request body for transcription
+            RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart(
+                    "file",
+                    mp3File.getName(),
+                    RequestBody.create(mp3File, MEDIA_TYPE_MP3))
+                .addFormDataPart("model", model)
+                .addFormDataPart("response_format", responseFormat)
+                .build();
+            // Build the HTTP request
+            Request request = new Request.Builder()
+                .url(endpoint)
+                .header("Authorization", "Bearer " + openAIKey)
+                .post(requestBody)
+                .build();
+            // Make the request and process the response
+            try (Response response = client.newCall(request).execute()) {
+                if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+                System.out.println(response.body().string());
+            } catch (IOException e) {
+                System.out.println("Request error for file: " + mp3File.getName() + " - " + e.getMessage());
+            }
+        }
+    }
+}
+```
+
+**Listado 4-5 RESPONSE: `WhisperClient.java`**
+
+Como puedes ver, la clase `OkHttpClient` nos permite usar el patrón Builder para crear una instancia de la clase con los tiempos de espera que especificamos.
+
+Ahora bien, esta es la razón por la que es una buena idea, al usar la utilidad `AudioSplitter.java`, separar la carpeta de salida de la carpeta de entrada. Estamos creando una colección de todos los archivos MP3 de un directorio. Más específicamente, es una “`List<File>`” que se llama “`mp3Files`” para almacenar todos los archivos que queremos transcribir. Por lo tanto, si el archivo que queremos dividir en segmentos más pequeños está en la misma carpeta que los segmentos mismos, entonces enviaremos el archivo grande (el que tiene más de 25 MB) junto con los archivos más pequeños al Endpoint Transcription, lo que anula todo el propósito de usar la aplicación `AudioSplitter.java`.
+
+Por lo tanto, el método “`Files.walk()`” nos permite recorrer recursivamente el directorio “`mp3FolderPath`” y recolectar todos los archivos MP3 y filtrar aquellos que no terminen con la extensión “.mp3” (por razones de seguridad y para evitar errores con el servicio web). Luego, asignamos cada “Path” a su objeto “File” correspondiente y ordenamos los archivos alfabéticamente en función de sus nombres. Finalmente, usamos el método “`Collectors.toList()`” para recolectar todos los archivos ordenados en la lista “`mp3Files`”.
+
+Con una colección de archivos MP3 en la mano, ahora es el momento de enviarlos al Endpoint Transcription. A medida que creamos el RequestBody, las líneas más importantes a las que debe prestar atención son:
+
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/3971b8ed-89d7-464a-b2c9-f0322b674ff0">
+
+```java
+           .addFormDataPart("modelo", modelo)
+           .addFormDataPart("formato_de_respuesta", formato_de_respuesta)
+```
+
+Esto se debe al hecho de que si desea agregar parámetros opcionales a la solicitud HTTP (consulte la Tabla 4-2 para ver todos los parámetros), como el mensaje o la temperatura, debe agregarlos aquí de la misma manera que especificamos el modelo y el formato de respuesta.
+
+**Nota** Permítanme reiterar: invocar el Endpoint Transcription es completamente diferente al Endpoint Chat. Es posible que ya hayan notado que una de las principales diferencias entre `ChatGPTClient.java` y `WhisperClient.java` son las declaraciones de importación. `ChatGPTClient.java` (en los capítulos 2 y 3) tiene la library Jackson dentro de sus declaraciones de importación, ya que necesitamos enviar la solicitud como un objeto JSON. Sin embargo, las importaciones en `WhisperClient.java` no mencionan a Jackson, ya que estamos enviando todo como datos de formulario.
+
+### Divertirse un poco y probar cosas nuevas con un podcast
+
+Bien, hagamos una prueba usando el código que hemos presentado hasta ahora. “This American Life” es un programa de radio público semanal (y también un podcast) presentado por Ira Glass y producido en colaboración con WBEZ Chicago.
+
+<img width="615" alt="image" src="https://github.com/user-attachments/assets/1cdd4269-6656-4808-ae20-e64f01c04d1d">
+
+**Figura 4-2 Si buscas un buen podcast con historias cautivadoras, te recomiendo escuchar “This American Life” Crédito de la imagen: WBEZ Chicago**
+
+Cada episodio entrelaza una serie de historias centradas en un tema o tópico específico. Algunas historias son periodismo de investigación y otras son simplemente entrevistas con personas comunes con historias cautivadoras. El episodio 811 se titula “El único lugar al que no puedo ir” y el archivo tiene 56 MB en formato MP3. Como ya sabemos que 56 MB es demasiado grande para enviarlo a Whisper para su transcripción, el Listado 4-6 muestra el resultado de `AudioSplitter.java` en el archivo MP3.
+
+<img width="561" alt="image" src="https://github.com/user-attachments/assets/3fccb1ec-eedb-4ac5-a2a1-a8c9f97858d3">
+
+```text
+[mp3 @ 0x139e9c6a0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from '/Users/me/thislife/ep811.mp3':
+  Metadata:
+    encoder         : Lavf58.78.100
+    comment         : preroll_1;postroll_1
+  Duration: 00:58:58.34, start: 0.000000, bitrate: 128 kb/s
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, fltp, 128 kb/s
+Output #0, mp3, to '/Users/me/thislife/segments/segment_1.mp3':
+  Metadata:
+    TSSE            : Lavf60.3.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s
+[libmp3lame @ 0x139ea92e0] 2 frames left in the queue on closing
+Output #0, mp3, to '/Users/me/thislife/segments/segment_2.mp3':
+  Metadata:
+    TSSE            : Lavf60.3.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s
+[libmp3lame @ 0x13b167720] 2 frames left in the queue on closing
+Output #0, mp3, to '/Users/me/thislife/segments/segment_3.mp3':
+  Metadata:
+    TSSE            : Lavf60.3.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s
+[libmp3lame @ 0x13b166df0] 2 frames left in the queue on closing
+Output #0, mp3, to '/Users/me/thislife/segments/segment_4.mp3':
+  Metadata:
+    TSSE            : Lavf60.3.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s
+[libmp3lame @ 0x13b166df0] 2 frames left in the queue on closing
+Output #0, mp3, to '/Users/me/thislife/segments/segment_5.mp3':
+  Metadata:
+    TSSE            : Lavf60.3.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s
+[libmp3lame @ 0x139ea35f0] 2 frames left in the queue on closing
+Output #0, mp3, to '/Users/me/thislife/segments/segment_6.mp3':
+  Metadata:
+    TSSE            : Lavf60.3.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s
+[libmp3lame @ 0x139ea3540] 2 frames left in the queue on closing
+```
+
+**Listado 4-6 El resultado de ejecutar `AudioSplitter.java` en el episodio 811 de This American Life**
+
+Dado que la utilidad `AudioSplitter.java` utiliza un contenedor JNI para interactuar con FFmpeg, verá muchos mensajes de diagnóstico durante el proceso de división de audio, como se muestra en el Listado 4-6 . A menos que le interesen los códecs, las frecuencias y las tasas de bits, la mayor parte de la información presentada no tendrá sentido para usted. Sin embargo, la buena noticia es que ahora tenemos una carpeta con 6 archivos MP3 listos para la transcripción.
+
+Por supuesto, como puede ver en el código del Listado 4-5, `WhisperClient.java` itera sobre todos los archivos en una carpeta y los envía al Endpoint Transcription para usar el modelo Whisper.
+
+El listado 4-7 es un extracto de la transcripción completa del episodio.
+
+```text
+"...My younger cousin Camille is not really a dog person, but there is one dog she adored. Her name was Foxy, because she looked exactly like a fox, except she was black. She was the neighbor's dog, but she and Camille seemed to have a real kinship, maybe because they both weren't very far from the ground. Camille was around four or five years old back then, and she had a little lisp, so Foxy came out as Fozzie. I thought it was one of the cutest things I'd ever heard.
+The way Camille remembers Foxy, it's almost like a movie. Her memories feel like endless summer, hazy and perfect, like a scene shot on crackly film. I just remembered like the feeling of being excited to go and see Foxy. I have an image in my head of like coming to the house, and I could see Foxy was like outside. I can see Foxy through the door that leads to the garden. There's a story about Camille and Foxy that I think about fairly often. I've talked about it with my sister for years, but never with Camille. And it's this. Once when they were playing..."
+```
+
+**Listing 4-7 The Partial Transcript of Episode 811 of This American Life**
+
+Para abreviar, solo mostramos un extracto de la transcripción. La transcripción completa tiene más de 8000 palabras debido a que el episodio dura casi 1 hora.
+
+### Going Meta: Prompt Engineering GPT-4 para escribir un Prompt para DALL·E
+
+Dado que la transcripción del texto completo del episodio del podcast que queremos visualizar tiene miles de palabras, vamos a utilizar GPT-4 para crear automáticamente el mensaje necesario para el modelo DALL⋅E. DALL⋅E puede tomar una descripción textual en un mensaje y crear una imagen, pero es mejor mantener el mensaje lo más breve posible. El listado 4-8 es el mensaje para que GPT-4 genere un mensaje para DALL⋅E.
+
+
+```text
+System: You are a service that helps to visualize podcasts.
+User: Read the following transcript from a podcast. Describe for a visually impaired person the background and subject that best represents the overall theme of the episode. Start with any of the following phrases:
+- "A photo of"
+- "A painting of"
+- "A macro 35mm photo of"
+- "Digital art of "
+User: Support for This American Life comes from Squarespace...
+Model: gpt-4-32k
+Temperature: 1.47
+Maximum length: 150
+Top P: 0
+Frequency penalty: 0.33
+Presence penalty: 0
+Listing 4-8The Prompt for GPT-4 to Create a Prompt for DALL⋅E
+```
+
+
+```text
+Sistema : Eres un servicio que ayuda a visualizar podcasts.
+Usuario : Lea la siguiente transcripción de un podcast. Describa para una persona con discapacidad visual el contexto y el tema que mejor representen el tema general del episodio. Comience con cualquiera de las siguientes frases:
+- "Una foto de"
+- "Un cuadro de"
+- "Una fotografía macro de 35 mm de"
+- "Arte digital de"
+Usuario: El soporte para This American Life proviene de Squarespace...
+Modelo : gpt-4-32k
+Temperatura : 1,47
+Longitud máxima: 150
+P superior: 0
+Penalización de frecuencia: 0,33
+Penalización por presencia: 0
+Listado 4-8Solicitud de GPT-4 para crear una solicitud para DALL⋅E
+```
