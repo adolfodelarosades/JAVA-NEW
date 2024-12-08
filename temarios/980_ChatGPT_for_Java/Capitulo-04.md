@@ -551,3 +551,227 @@ Penalización de frecuencia: 0,33
 Penalización por presencia: 0
 Listado 4-8Solicitud de GPT-4 para crear una solicitud para DALL⋅E
 ```
+
+Como puede ver en el mensaje, el modelo utilizado es la versión de 32k tokens de GPT-4 para permitirnos procesar transcripciones de texto REALMENTE LARGAS. DALL⋅E necesita saber el tipo de imagen que se va a generar, por lo que debemos especificar que la imagen debe ser una foto, una pintura, una obra de arte digital, etc. Necesitamos asegurarnos de que el texto resultante generado por GPT-4 sea corto, por lo que queremos tener una longitud máxima de 150 tokens. Además, para evitar que GPT-4 repita algunas frases varias veces, introdujimos una penalización de frecuencia de 0,33.
+
+El listado 4-9 muestra los resultados de GPT-4 después de leer la transcripción del Episodio 811 de This American Life.
+
+<img width="830" alt="image" src="https://github.com/user-attachments/assets/10b5fcf4-ccd5-4b3e-8f5f-88799ac2e011">
+
+```text
+Digital art of a young girl sitting in a garden with a black dog that looks like a fox. The girl is smiling and the dog is wagging its tail. The image has a hazy, dream-like quality, with crackly film effects to evoke nostalgia.
+```
+
+**Listing 4-9 The Prompt for DALL⋅E Created by GPT-4**
+
+```text
+Arte digital de una niña sentada en un jardín con un perro negro que parece un zorro. La niña sonríe y el perro mueve la cola. La imagen tiene una calidad onírica y borrosa, con efectos de película crujientes que evocan nostalgia.
+```
+
+**Listado 4-9 El Prompt para DALL⋅E creado por GPT-4**
+
+### Endpoint Create Image 
+
+Para utilizar el modelo DALL⋅E para crear dinámicamente una imagen a partir de un mensaje de texto, debe llamar al Endpoint **Create Image**.
+
+#### Creando la Request
+
+En la Tabla 4-3 se enumeran todos los parámetros HTTP necesarios para llamar al Endpoint Create Image.
+
+**Tabla 4-3 Los parámetros HTTP necesarios para llamar al punto final de creación de imagen**
+
+<img width="752" alt="image" src="https://github.com/user-attachments/assets/83f9a1c0-b64b-4207-b003-7030bb633c8e">
+
+La Tabla 4-4 describe el formato del objeto JSON necesario para el request body del Endpoint Create Image. Por razones obvias, el mensaje es el único parámetro necesario para invocar el servicio correctamente.
+
+#### Create Image (JSON)
+
+**Tabla 4-4 Request Body para el Endpoint Create Image**
+
+<img width="824" alt="image" src="https://github.com/user-attachments/assets/1e0697fe-f1b8-42cb-856d-1bd63dab0379">
+
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/a96af87a-98c8-4b36-87ac-9c77aa7a4fec">
+
+<img width="824" alt="image" src="https://github.com/user-attachments/assets/5e796eb3-0e86-4af6-ae26-2eeed42e526d">
+
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/efc3f4f4-9f94-4397-be1a-153174f4c5cc">
+
+<img width="824" alt="image" src="https://github.com/user-attachments/assets/2ff6fb4b-29ee-4503-835c-6e13a1439771">
+
+
+<img width="823" alt="image" src="https://github.com/user-attachments/assets/d8f155fd-195e-403a-9c50-29790edf3012">
+
+<img width="829" alt="image" src="https://github.com/user-attachments/assets/577086fe-ced2-4026-a4b1-6b37e089d883">
+
+<img width="823" alt="image" src="https://github.com/user-attachments/assets/d0b1e1ce-f66c-4607-8d1e-c3a74a6a96ec">
+
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/ea96029e-cfee-44d6-a6a3-7c4febc80ed5">
+
+<img width="828" alt="image" src="https://github.com/user-attachments/assets/083b78f6-c10c-4e20-8c56-c50b56c3a86c">
+
+#### Manejo de la Response
+
+Después de invocar correctamente el Endpoint Create Image, la API responderá con un objeto JSON Image. A continuación, se muestra un desglose del objeto de imagen, que solo tiene un parámetro (Tabla 4-5 ).
+
+#### Image (JSON)
+
+**Tabla 4-5 La estructura del Image JSON Object**
+
+<img width="822" alt="image" src="https://github.com/user-attachments/assets/552f050e-19ac-4dd4-8339-9168639d2267">
+
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/4d71ce59-c859-49b9-8029-e4d918ac17f5">
+
+### Creación del generador de imágenes-Image: `DALLEClient.java`
+
+Como puede ver en las Tablas 4-4 y 4-5, el Endpoint Create Image se comporta de manera bastante similar al Endpoint Chat: todo lo que necesita especificar al modelo DALL⋅E está encapsulado en un objeto JSON. Por lo tanto, nuestro código en el Listado 4-10 también utilizará la library Jackson, ya que trabajaremos nuevamente con objetos JSON.
+
+```java
+import java.io.IOException;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import okhttp3.*;
+public class DALLEClient {
+    public static void main(String[] args) {
+        String openAIKey = "";
+        String endpoint = "https://api.openai.com/v1/images/generations";
+        String contentType = "application/json";
+        String prompt = "a 35mm macro photo of 3 cute rottweiler puppies with no collars laying down in a field";
+        int numberOfImages = 2;
+        String size = "1024x1024";
+        OkHttpClient client = new OkHttpClient();
+        MediaType mediaType = MediaType.get(contentType);
+        // Create the Create Image JSON object
+        CreateImage createImage = new CreateImage(prompt, numberOfImages, size);
+        // Use Jackson ObjectMapper to convert the object to JSON string
+        String json = "";
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            json = mapper.writeValueAsString(createImage);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        RequestBody body = RequestBody.Companion.create(json, mediaType);
+        Request request = new Request.Builder()
+                .url(endpoint)
+                .method("POST", body)
+                .addHeader("Content-Type", contentType)
+                .addHeader("Authorization", "Bearer " + openAIKey)
+                .build();
+        try {
+            Response response = client.newCall(request).execute();
+            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+                System.out.println(response.body().string());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    // Inner class for the CreateImage JSON Object
+    public static class CreateImage {
+        @JsonProperty("prompt")
+        private String prompt;
+        @JsonProperty("n")
+        private int n;
+        @JsonProperty("size")
+        private String size;
+        public CreateImage(String prompt, int n, String size) {
+            this.prompt = prompt;
+            this.n = n;
+            this.size = size;
+        }
+    }
+}
+```
+
+**Listado 4-10 Uso de la API DALL⋅E con Java en `DALLEClient.java`**
+
+Ahora, como ya estamos usando la library `OkHttp` para realizar nuestras solicitudes HTTP con el Endpoint Transcriptions para el modelo Whisper, continuaremos usándola para el Endpoint Create Image para el modelo DALL⋅E.
+
+Lo más importante que hay que entender aquí es la clase CreateImage inner. Tiene las anotaciones `@JsonProperty` y encapsula los parámetros importantes necesarios para crear una imagen:
+
+* El texto que describe los detalles de la imagen.
+* La cantidad de imágenes que desea generar
+* El tamaño de la imagen que desea generar
+
+Las figuras 4-3 y 4-4 muestran la imagen generada a partir del mensaje de texto del Listado 4-9.
+
+<img width="686" alt="image" src="https://github.com/user-attachments/assets/bbb401e1-f1e9-425f-a612-e76a219d8f11">
+
+**Figura 4-3 La imagen generada por DALL⋅E de una niña y su perro del episodio 811 del podcast “This American Life”**
+
+<img width="687" alt="image" src="https://github.com/user-attachments/assets/95a9cf42-9759-4cf2-a220-4dce4c0ded9c">
+
+**Figura 4-4 La imagen generada por DALL·E de una niña y su perro del episodio 811 del podcast “This American Life”**
+
+### DALL·E Prompt Engineering y Mejores Prácticas
+
+Ahora, crear imágenes con DALL⋅E requiere prompt engineering para obtener resultados consistentes y deseados, es una buena idea experimentar con diferentes indicaciones para practicar y ver qué funciona para usted y su caso de uso. ¿Quizás prefiera pinturas en lugar de imágenes con apariencia 3D? ¿Quizás necesite fotos en lugar de arte digital? ¿Quizás quiera que la imagen sea un primer plano en lugar de un retrato? Hay muchas posibilidades para considerar.
+
+Independientemente de su caso de uso, aquí hay dos reglas de oro para aprovechar al máximo sus indicaciones DALL⋅E.
+
+#### DALL·E Golden Regla #1: Familiarícese con los tipos de imágenes que DALL·E puede generar
+
+En primer lugar, una de las cosas más importantes que DALL⋅E debe comprender es el tipo de imagen que se debe generar. A continuación, se incluye una lista de varios de los tipos de imágenes más comunes que DALL⋅E puede crear:
+
+* 3-D render
+* Painting
+* Abstract painting
+* Expressive oil painting
+* Oil painting (in the style of any deceased artist)
+* Oil pastel
+* Digital art
+* Photo
+* Photorealistic
+* Hyperrealistic
+* Neon photo
+* 35-mm macro photo
+* High-quality photo
+* Silhouette
+* Vaporware
+* Cartoon
+* Plush object
+* Marble sculpture
+* Hand sketch
+* Poster
+* Pencil and watercolor
+* Synth wave
+* Comic book style
+* Hand drawn
+
+#### DALL·E Golden Rule #2: Sea descriptivo con lo que desea en primer plano y en segundo plano
+
+No puedo enfatizar lo suficiente que es necesario ser descriptivo con DALL⋅E para obtener resultados consistentes y deseables. Puede sonar extraño, pero la mejor manera de describir tu imagen a DALL⋅E es actuar como si estuvieras describiendo un sueño a otra persona.
+
+Entonces, como ejercicio mental entre tú y yo, intenta describir tu último sueño. A medida que describes a las personas, los lugares y las cosas de tu sueño, tienes en tu mente las cosas más importantes que recuerdas, así como la experiencia que sentiste. A medida que le describes cosas a otra persona, comienzan a surgir pequeños detalles como:
+
+* ¿Cuántas personas estaban presentes (si había alguna)?
+* ¿En qué posición estaban las personas o los animales? ¿De pie, sentados o acostados?
+* ¿Qué cosas había en el escenario y en el fondo?
+* ¿Qué elementos te llamaron la atención? ¿Sonidos? ¿Olores? ¿Colores?
+* ¿Cómo te sentiste? ¿Feliz, inquietante, emocionado?
+* ¿Cuál fue la hora del día percibida? ¿Mañana, mediodía, noche?
+
+Si puedes describir un sueño a otra persona, entonces no deberías tener problemas en describir lo que quieres DALL⋅E.
+
+### Conclusión
+
+En este capítulo logramos mucho. Con unas cuantas clases creamos un visualizador de podcast.
+
+* Creamos y usamos la clase `AudioSplitter.java`, que funciona como una utilidad para nosotros. Si tienes un archivo de audio que supera las limitaciones del modelo Whisper, esta clase te proporcionará una carpeta con archivos de audio más pequeños para enviar a Whisper.
+
+* Creamos y usamos la clase `WhisperClient.java` para obtener una transcripción de una carpeta de archivos de audio. La carpeta puede contener un solo archivo de audio o varios archivos. La única limitación es la cantidad de solicitudes que puede enviar al Endpoint Transcription y al modelo Whisper.
+
+* Realizamos una pequeña prompt engineering con GPT-4 para obtener una indicación descriptiva de las imágenes en un podcast basada en la transcripción.
+
+* Finalmente, creamos y usamos la clase `DALLEClient.java` para tomar el mensaje generado al llamar al modelo GPT-4 y obtener una imagen que representa visualmente el episodio del podcast.
+
+### Ejercicios que quedan para el lector
+
+Entonces, obviamente hay algunas cosas adicionales que podemos hacer aquí, y estos pasos quedarán para que usted (el lector) los lleve a cabo, por ejemplo:
+
+* La aplicación `AudioSplitter.java` es una interfaz Java para **FFmpeg**. **FFmpeg** no solo puede dividir archivos de audio, sino que también puede hacer mucho más con los archivos multimedia, como convertir formatos y volver a codificarlos. Experimente para ver cuáles de los formatos multimedia compatibles con Whisper son los archivos de audio más pequeños. Sugerencia: definitivamente no es el formato WAV.
+
+* Si planea crear una aplicación o un servicio que genere imágenes automáticamente en función de un mensaje de texto de sus usuarios finales, entonces definitivamente querrá actualizar la clase `DALLEClient.java` para asegurarse de que está rastreando y proporcionando en su solicitud el parámetro de usuario en su solicitud HTTP. Esto se debe al hecho de que su usuario final tiene el potencial de generar imágenes dañinas a través de su clave API. Recuerde, usted tiene una cuenta API con Open AI, ¡y ellos no! Como resultado, debe saber si necesita terminar su relación comercial con un usuario que está violando las reglas de contenido de Open AI a través de su servicio.
+
+
+
