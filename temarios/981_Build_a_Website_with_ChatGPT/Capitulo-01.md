@@ -1,25 +1,29 @@
 # 1 Introducción a la creación de sitios web con ChatGPT
+
 Este capítulo cubre
 
-Presentamos ChatGPT
-Comprender qué tipos de páginas web puedes crear con la ayuda de ChatGPT
-Conociendo las limitaciones de crear páginas web con ChatGPT
-Descubra cómo ChatGPT le permite crear sus propias páginas web
-El escritor de ciencia ficción británico Arthur C. Clarke formuló una vez tres verdades que llegaron a conocerse como las tres leyes de Clarke , la tercera de las cuales es la que se cita con más frecuencia: "Cualquier tecnología suficientemente avanzada es indistinguible de la magia". Si siempre ha querido crear páginas web pero la tecnología lo intimidó, entonces la premisa de este libro (que puede crear su propio sitio web con la ayuda de ChatGPT) puede parecerle magia. Eso no es una sorpresa, porque si alguna tecnología en la memoria reciente merece la descripción de "suficientemente avanzada", es ChatGPT y otras llamadas IA generativas similares : aplicaciones de inteligencia artificial que pueden crear poesía, prosa y, sí, páginas web.
+* Presentamos ChatGPT
+* Comprender qué tipos de páginas web puedes crear con la ayuda de ChatGPT
+* Conociendo las limitaciones de crear páginas web con ChatGPT
+* Descubra cómo ChatGPT le permite crear sus propias páginas web
+
+El escritor de ciencia ficción británico Arthur C. Clarke formuló una vez tres verdades que llegaron a conocerse como las tres leyes de Clarke, la tercera de las cuales es la que se cita con más frecuencia: **"Cualquier tecnología suficientemente avanzada es indistinguible de la magia"**. Si siempre ha querido crear páginas web pero la tecnología lo intimidó, entonces la premisa de este libro (que puede crear su propio sitio web con la ayuda de ChatGPT) puede parecerle magia. Eso no es una sorpresa, porque si alguna tecnología en la memoria reciente merece la descripción de "suficientemente avanzada", es ChatGPT y otras llamadas IA generativas similares: aplicaciones de inteligencia artificial que pueden crear poesía, prosa y, sí, páginas web.
 
 En este capítulo, mi objetivo es desmitificar ChatGPT y hacer que parezca un poco menos mágico y mucho más práctico. En las siguientes páginas, obtendrá una breve explicación de los conceptos básicos de ChatGPT, una descripción general de los tipos de páginas que puede crear con la ayuda de ChatGPT (y, para equilibrar, algunas notas sobre los tipos de páginas que no puede crear) y un recorrido detrás de escena y afortunadamente no técnico sobre cómo puede usar ChatGPT para realizar la hazaña aparentemente mágica, pero en realidad meramente matemática, de tomar una simple solicitud escrita y convertirla en una página web completa y lista para navegar.
 
-1.1 ¿Qué es ChatGPT?
+## 1.1 ¿Qué es ChatGPT?
+
 A menos que hayas estado encerrado en una ermita durante el último año o dos, probablemente hayas oído hablar de GPT y/o ChatGPT, los agentes de inteligencia artificial que han conquistado el mundo (o, al menos, esa parte del mundo que presta atención a las redes sociales). Sin embargo, saber sobre ChatGPT es una cosa, pero saber qué es realmente ChatGPT es otra muy distinta.
 
 Para que te hagas una idea de qué es ChatGPT y qué hace, te resultará útil desglosar cada componente del nombre para ver qué significa. Comenzaré con GPT:
 
-G —La G en GPT significa generativo , lo que significa que GPT puede crear (o generar ) contenido nuevo. GPT es un modelo de lenguaje grande (LLM), lo que generalmente significa que está diseñado para generar texto, como ensayos, historias e incluso poemas. Más específicamente para nuestros propósitos en este libro, las capacidades generativas de GPT también se extienden al código de programación, particularmente el código que sustenta las páginas web.
+* **G** — La G en GPT significa ***generativo***, lo que significa que GPT puede crear (o generar) contenido nuevo. GPT es un **modelo de lenguaje grande - large language model (LLM)**, lo que generalmente significa que está diseñado para generar texto, como ensayos, historias e incluso poemas. Más específicamente para nuestros propósitos en este libro, las capacidades generativas de GPT también se extienden al código de programación, particularmente el código que sustenta las páginas web.
 
-P —La P en GPT significa preentrenado , lo que significa que GPT fue expuesto a enormes cantidades de texto (a eso se refiere el término “grande” en el modelo de lenguaje grande ). Durante este proceso de preentrenamiento , GPT aprendió los patrones y las estructuras del lenguaje, como por ejemplo cómo se forman las oraciones normalmente. En particular, dado un texto existente, el preentrenamiento permite a GPT predecir qué palabra o frase suele venir a continuación. En cierto sentido, eso es todo lo que GPT hace realmente: ¡predecir la siguiente palabra! GPT también fue entrenado en un conjunto inimaginablemente grande de datos de programación; por lo tanto, debido a que el código de programación suele ser más predecible que la escritura normal, GPT se destaca en la generación de código.
+* **P** — La P en GPT significa ***preentrenado***, lo que significa que GPT fue expuesto a enormes cantidades de texto (a eso se refiere el término “grande” en el modelo de lenguaje grande). Durante este proceso de preentrenamiento, GPT aprendió los patrones y las estructuras del lenguaje, como por ejemplo cómo se forman las oraciones normalmente. En particular, dado un texto existente, el preentrenamiento permite a GPT predecir qué palabra o frase suele venir a continuación. En cierto sentido, eso es todo lo que GPT hace realmente: ¡predecir la siguiente palabra! GPT también fue entrenado en un conjunto inimaginablemente grande de datos de programación; por lo tanto, debido a que el código de programación suele ser más predecible que la escritura normal, GPT se destaca en la generación de código.
 
-T : la T de GPT significa transformador , lo que significa que GPT puede tomar una entrada de texto (como una solicitud para crear una página web) y transformar ese texto en sus componentes más importantes mientras ignora o da menor prioridad a los componentes menos importantes del texto. Esto permite que GPT produzca resultados con mayor relevancia y precisión.
+* **T**: la T de GPT significa ***transformador***, lo que significa que GPT puede tomar una entrada de texto (como una solicitud para crear una página web) y transformar ese texto en sus componentes más importantes mientras ignora o da menor prioridad a los componentes menos importantes del texto. Esto permite que GPT produzca resultados con mayor relevancia y precisión.
 
+AQUIIIII
 La parte de chat de ChatGPT significa que tienes acceso conversacional a GPT, lo que significa que puedes intercambiar mensajes con GPT más o menos como lo haces en una conversación de chat. En el contexto de la creación de páginas web, estas "conversaciones" implicarán que solicites algún componente de la página y ChatGPT proporcione el código necesario. Sin embargo, ChatGPT también tiene una capacidad limitada para "recordar" mensajes anteriores en la conversación actual, lo que ocasionalmente puede ser útil en tus tareas de creación de sitios web.
 
 Mientras escribo esto, hay dos versiones principales de GPT disponibles: GPT-3.5, lanzada en noviembre de 2022, y GPT-4, lanzada en marzo de 2023. Si usa la aplicación OpenAI (que analizaremos en un momento) con una cuenta gratuita de ChatGPT (obtenga más información en el apéndice A) o sin cuenta, solo tendrá acceso a GPT-3.5; si tiene una cuenta paga de ChatGPT Plus y usa la aplicación OpenAI, tendrá acceso tanto a GPT-3.5 como a GPT-4.
