@@ -323,7 +323,7 @@ Un enfoque paso a paso para crear sitios web asombrosos con ChatGPT.
 #### 13.8 Where to go from here
 
 #### Appendix [A. Getting ready to build web pages with ChatGPT](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/981_Build_a_Website_with_ChatGPT/Apendice-A.md)
-#### [Appendix B. Deploying your site]((https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/981_Build_a_Website_with_ChatGPT/Apendice-B.md))
-#### [Appendix C. Learning a few ChatGPT best practices]((https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/981_Build_a_Website_with_ChatGPT/Apendice-C.md))
+#### [Appendix B. Deploying your site](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/981_Build_a_Website_with_ChatGPT/Apendice-B.md)
+#### [Appendix C. Learning a few ChatGPT best practices](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/981_Build_a_Website_with_ChatGPT/Apendice-C.md)
 
 * Index
