@@ -1,51 +1,48 @@
 # 2 Creación e implementación de su primera página web
+
 Este capítulo cubre
 
-Comprender el proceso de creación e implementación de una página web
-Uso de un mensaje de ChatGPT para generar una página web completa
-Copiar el código de la página web generada
-Guardar el código en un archivo HTML
-Obtener su archivo de página web en la web
+* Comprender el proceso de creación e implementación de una página web
+* Uso de un mensaje de ChatGPT para generar una página web completa
+* Copiar el código de la página web generada
+* Guardar el código en un archivo HTML
+* Obtener su archivo de página web en la web
+
 Puede que todavía parezca demasiado bueno para ser verdad que ChatGPT te ayude a crear un sitio web completamente funcional sin tener que aprender ningún código de desarrollo web. Si sigues siendo escéptico, te entiendo: incluso sabiendo un poco sobre cómo funciona ChatGPT, todavía hay un innegable tufillo a magia en toda la empresa. Después de todo, no es como si le estuvieras pidiendo a ChatGPT que te cuente un chiste o que escriba un haiku ensalzando el valor nutricional del colinabo. No, estamos hablando de todo el código necesario para crear una página web que realmente haga algo semi-útil. Es una petición compleja desde cualquier punto de vista, por lo que cualquier escepticismo restante que tengas está totalmente justificado.
 
 En este capítulo, mi objetivo es mostrarte que es posible crear una página web con la ayuda de ChatGPT. No voy a hacerlo explorando más la teoría de ChatGPT. No, ya hemos hablado bastante de eso. En su lugar, te mostraré un ejemplo completo en el que convenzo a ChatGPT para que cree el código para una página web funcional que, al final del capítulo, tendrá su propio hogar en la web. Para lograrlo en un solo capítulo, la página web será, necesariamente, extremadamente simple, pero funcionará e incluso proporcionará un poco de diversión (dependiendo, como verás, de tu gusto por los juegos de palabras).
 
-2.1 Comprender el proceso
-Para crear la página web funcional de este capítulo, voy a utilizar el ciclo solicitar-copiar-guardar-implementar que presenté en el capítulo 1 (consulte la figura 2.1):
+## 2.1 Comprender el proceso
 
-Pida a ChatGPT que genere el código de la página web.
+Para crear la página web funcional de este capítulo, voy a utilizar el ciclo prompt-copy-save-deploy(solicitar-copiar-guardar-implementar) que presenté en el capítulo 1 (consulte la figura 2.1):
 
-Copiar el código resultante.
+1. Prompt ChatGPT para que genere el código de la página web.
+2. Copiar el código resultante.
+3. Pegue el código en un editor de texto y luego guárdelo como un archivo HTML.
+4. Deploy el archivo HTML en un servidor web.
 
-Pegue el código en un editor de texto y luego guárdelo como un archivo HTML.
+<img width="921" alt="image" src="https://github.com/user-attachments/assets/214d7c7a-9c5b-467e-9554-95e911d06a9d">
 
-Implemente el archivo HTML en un servidor web.
-
-
-
-Figura 2.1 El ciclo de solicitud-copia-guardado-implementación que utilizará en este capítulo
+**Figura 2.1 El ciclo de prompt-copy-save-deploy que utilizará en este capítulo**
 
 Las secciones del resto de este capítulo amplían cada uno de estos pasos.
 
-2.2 Cómo solicitar a ChatGPT que genere el código de su página web
+## 2.2 Cómo solicitar a ChatGPT que genere el código de su página web
+
 Para comenzar, primero debe tener ChatGPT en pantalla. Tiene las siguientes opciones:
 
-Si no tiene una cuenta OpenAI, vaya a https://chat.openai.com para usar GPT-3.5 como modelo.
-
-Si tiene una cuenta OpenAI pero no tiene una suscripción a ChatGPT Plus, vaya a https://chat.openai.com para usar GPT-3.5 como modelo.
-
-Si tiene una suscripción a ChatGPT Plus, vaya a https://chat.openai.com y luego haga clic en el botón GPT-4.
-
-Si prefiere utilizar Bing Copilot, vaya a https://bing.com , haga clic en Copilot y luego haga clic en el estilo de conversación Preciso.
-
-Si tiene una cuenta Microsoft, vaya a https://copilot.microsoft.com y haga clic en el estilo de conversación preciso.
+* Si no tiene una cuenta OpenAI, vaya a https://chat.openai.com para usar GPT-3.5 como modelo.
+* Si tiene una cuenta OpenAI pero no tiene una suscripción a ChatGPT Plus, vaya a https://chat.openai.com para usar GPT-3.5 como modelo.
+* Si tiene una suscripción a ChatGPT Plus, vaya a https://chat.openai.com y luego haga clic en el botón GPT-4.
+* Si prefiere utilizar Bing Copilot, vaya a https://bing.com, haga clic en Copilot y luego haga clic en el estilo de conversación Preciso.
+* Si tiene una cuenta Microsoft, vaya a https://copilot.microsoft.com y haga clic en el estilo de conversación preciso.
 
 Para mi propia inspiración, utilicé la aplicación ChatGPT con GPT-4 como modelo, como se muestra en la figura 2.2.
 
+<img width="919" alt="image" src="https://github.com/user-attachments/assets/7be52624-e945-4f7f-b8a3-647511cc065b">
 
-
-Figura 2.2 La aplicación ChatGPT con GPT-4 seleccionado como modelo de lenguaje
-
+**Figura 2.2 La aplicación ChatGPT con GPT-4 seleccionado como modelo de lenguaje**
+AQUIIIII
 Ahora que ChatGPT está listo para hacer lo que le pides, el siguiente paso es darle al modelo un mensaje para que genere algún código de página web. Uno de los puntos que quiero destacar en este capítulo es que es posible lograr que ChatGPT muestre el código para una página web funcional con un solo mensaje. Para lograrlo, tenemos que simplificar mucho las cosas, por lo que no puede ser una página complicada y multifunción con un montón de funciones.
 
 Sin embargo, no tiene por qué ser una página de “¡Hola mundo!” de mala calidad. En general, si tienes una idea para una página sencilla, solo tienes que pedirle a ChatGPT que genere el código para la página e incluya una descripción de lo que quieres. Esa descripción variará según la idea, pero es posible que quieras incluir algunos o todos los siguientes elementos:
