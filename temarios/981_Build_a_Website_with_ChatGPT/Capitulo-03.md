@@ -1,0 +1,476 @@
+# 3 Cómo trabajar con fuentes, colores y títulos
+Este capítulo cubre
+
+Comprender el papel de las fuentes en el diseño de páginas web
+Creando un esquema de color para tu página
+Cómo hacer que una página sea más fácil de leer con encabezados
+Incitación a ChatGPT para crear una página de inicio personal
+Examinando y personalizando el código ChatGPT
+En el capítulo 2, te llevé a través del proceso de creación de una página web funcional desde cero usando un mensaje de ChatGPT relativamente simple. La página resultante funcionó bien, pero no tenía mucho que ver. Esa página simple estaba bien porque quería mantener las cosas simples, pero si vas a crear algún tipo de presencia en la web, definitivamente querrás que la página resultante se vea bien.
+
+En este capítulo, darás el primer paso en esa dirección examinando varias opciones de formato de página que pueden ser de gran ayuda para hacer que cualquier página web sea más atractiva y más legible. Estas opciones incluyen tipos de letra, tamaños de letra, colores y encabezados. Aquí, aprenderás por qué son importantes y cómo puedes hacer que ChatGPT te ayude a tomar estas decisiones de diseño para tu página. Toda esta información se incluye en un mensaje detallado que le pasarás a ChatGPT para que produzca el código de página web para una página de inicio personal que te brinde una porción de la web que puedas llamar tuya. Si tienes curiosidad, este capítulo también explica el código generado por ChatGPT y te muestra algunas formas de personalizar el código sin tener que volver a solicitarle a ChatGPT.
+
+3.1 Echando un vistazo al proyecto de este capítulo
+El proyecto con el que le pedirás ayuda a ChatGPT en este capítulo es una página de inicio personal simple que consta de algunos o todos los siguientes componentes:
+
+Un título (que podría ser simplemente tu nombre)
+
+Un subtítulo (un eslogan que resume la página (o a usted) para los lectores)
+
+Una breve biografía
+
+Una breve descripción de lo que haces para ganarte la vida.
+
+Una lista de tus pasatiempos e intereses.
+
+Una lista de tus libros, películas, programas de televisión, bandas favoritas, etc.
+
+La figura 3.1 muestra un ejemplo del tipo de página que creará con la ayuda de ChatGPT.
+
+
+
+Figura 3.1 Una página de inicio personal generada por ChatGPT
+
+Por supuesto, es tu página, así que siéntete libre de agregar cualquier otra cosa que quieras que el mundo sepa sobre ti. También puedes modificar ligeramente esta página para convertirla en un currículum vitae en línea.
+
+Antes de pasar a los detalles de cómo solicitar a ChatGPT que genere el código para tu página de inicio personal, puedes usar el modelo para generar algunas sugerencias de diseño, incluido el título y el subtítulo del sitio, las fuentes y la combinación de colores. Usarás estas sugerencias más adelante cuando crees tu mensaje.
+
+3.2 Creación de la página de inicio personal
+Para ayudarte a usar ChatGPT para crear tu página de inicio personal, las siguientes secciones te guiarán por cada componente de la página, desde el título hasta el tipo de letra y los colores. En cada caso, te daré algunos antecedentes, te mostraré el código HTML o CSS relevante, si lo hay, y luego te mostraré cómo pedirle a ChatGPT que genere lo que necesitas.
+
+3.2.1 Obtener sugerencias de títulos y subtítulos del sitio
+El título más obvio para tu página de inicio personal es tu nombre. Si eso no te parece lo suficientemente creativo, utiliza ChatGPT para sugerir no solo un título para el sitio, sino también un subtítulo o eslogan que aparezca debajo del título.
+
+Una forma útil de pedirle a ChatGPT que escriba un título y un subtítulo es combinar lo que haces para ganarte la vida con uno o más pasatiempos o intereses y ver qué puede ofrecer ChatGPT. Aquí tienes una propuesta genérica que puedes usar:
+
+Eres un creador de palabras capaz de generar títulos y eslóganes atractivos y creativos para páginas de inicio personales. Utilizas la información proporcionada por el usuario para elaborar sugerencias que reflejen sus habilidades e intereses.
+ 
+Soy X y mi pasatiempo favorito es Y.
+ Primero , 
+piense en algunas palabras o frases que se relacionen con X e Y.
+ 
+En segundo lugar, intente combinar o jugar con estas palabras o frases para crear títulos pegadizos o ingeniosos.
+ 
+En tercer lugar, agregue un eslogan que explique o amplíe el título.
+En esta solicitud, reemplácela Xcon su título o descripción laboral y reemplácela Ycon uno o más intereses o pasatiempos. La Figura 3.2 muestra mis resultados (generados con Bing Copilot en modo Creativo). Si encuentra un título y un subtítulo que le gusten (no es necesario que provengan de la misma sugerencia), cópielos en algún lugar para poder usarlos más adelante cuando le solicite a ChatGPT que cree el código para su página de inicio.
+
+
+
+Figura 3.2 Solicitud de ChatGPT para un título de página y un eslogan
+
+La fuente de una página web es el estilo del texto de la página. Se trata de un tema muy amplio, pero para nuestros propósitos, podemos considerar solo tres componentes: el tipo de letra, el tamaño de la letra y el estilo de la letra.
+
+3.2.2 Dar estilo a la tipografía
+La tipografía es un diseño distintivo que es común a cualquier conjunto relacionado de letras, números y símbolos. Un momento, te oigo decir, ¿eso no es una fuente ? ¿Cuál es la diferencia? A todos los efectos prácticos, los dos términos son intercambiables. Sin embargo, técnicamente, una fuente es una implementación particular de una tipografía, lo que significa que la tipografía se representa con un tamaño y estilo específicos. Arial es una tipografía; Arial 16-point bold es una fuente.
+
+Estas son las cinco categorías tipográficas que encontrarás con más frecuencia:
+
+Serif : una tipografía serif (que rima con sheriff ) contiene trazos cruzados finos (llamados pies ) en los extremos de cada carácter. Estos sutiles apéndices le dan a la tipografía un aspecto tradicional y elegante, pero pueden perderse cuando se muestran en una pantalla en tamaños pequeños.
+
+
+
+Sans serif : una tipografía sans serif no contiene trazos cruzados en los extremos de los caracteres. Estas tipografías suelen tener un aspecto limpio y moderno que se adapta bien al texto en pantalla, especialmente en tamaños pequeños.
+
+
+
+Monoespaciado : un tipo de letra monoespaciado (también llamado tipo de letra de ancho fijo ) utiliza la misma cantidad de espacio para cada carácter, por lo que las letras delgadas como i y l ocupan tanto espacio como las letras más anchas como m y w .
+
+
+
+Cursiva : los tipos de letra cursiva están diseñados para parecerse a la escritura manuscrita con bolígrafo o pincel.
+
+
+
+Fantasía : Las tipografías de fantasía suelen ser diseños extravagantes que tienen algunos elementos extremos (como ser extra gruesas).
+
+
+
+En el código CSS, el tipo de letra se especifica mediante la font-familypropiedad:
+
+font-family: tipo de letra ;
+Reemplace el typefacemarcador de posición con el nombre del tipo de letra. (Si el nombre del tipo de letra incluye uno o más espacios, debe encerrarlo entre comillas). Por ejemplo, cada una de las categorías de tipo de letra anteriores tiene su propia palabra clave CSS, por lo que las siguientes son todas declaraciones CSS legítimas:
+
+familia de fuentes: serif;
+familia de fuentes: sans-serif;
+familia de fuentes: monoespaciado;
+familia de fuentes: cursiva;
+familia de fuentes: fantasía;
+Estas cinco palabras clave serif( , sans-serif, monospace, cursivey fantasy) representan los llamados tipos de letra genéricos , que están disponibles en todos los navegadores web. Si desea utilizar uno de estos tipos de letra genéricos para un componente de su página web, puede incluir la palabra clave del tipo de letra correspondiente como parte de sus instrucciones para ChatGPT:
+
+Dale estilo al eslogan de la página web con la tipografía cursiva genérica.
+Tenga en cuenta también que es posible especificar varios tipos de letra en una única declaración y que el navegador web utiliza el primer tipo de letra (de izquierda a derecha) que está instalado en el dispositivo del usuario. Es importante recordar esto porque ChatGPT casi siempre especificará varios tipos de letra en su CSS generado. A continuación, se incluye un ejemplo del código de la página web que examinamos más adelante en este capítulo:
+
+familia de fuentes: 'Roboto Serif', serif;
+Esta declaración significa que el navegador web primero intentará cargar la tipografía Roboto Serif. Si no puede, por algún motivo, volverá a utilizar la seriftipografía genérica.
+
+El siguiente componente principal con el que trabajarás es el tamaño de la fuente.
+
+3.2.3 Configuración del tamaño de la letra
+El tamaño de la fuente es el tamaño relativo de cada carácter. Los tamaños de fuente se miden generalmente en píxeles (abreviado como px) y el tamaño de texto predeterminado del texto de una página normal es de 16 píxeles (escrito 16pxen el código de la página web).
+
+En el código CSS, el tamaño de la fuente se especifica mediante la font-sizepropiedad:
+
+tamaño de fuente: tamaño ;
+Aquí, reemplácelo sizecon el tamaño de fuente que desee. Por ejemplo, muchas personas consideran que el tamaño de fuente predeterminado de 16 px es demasiado pequeño para una lectura cómoda, por lo que es común especificar un tamaño de fuente más grande, como 20 px:
+
+tamaño de fuente: 20px;
+La figura 3.3 muestra algunos tamaños de tipografía comunes.
+
+
+
+Figura 3.3 Algunos tamaños de tipografía comunes
+
+A continuación se muestra un ejemplo de instrucción para ChatGPT para especificar un tamaño de tipo para un componente de página:
+
+Diseñe el eslogan de la página web con un tamaño de fuente de 24 px.
+3.2.4 Trabajar con estilos de tipografía
+El estilo tipográfico es un estilo especial que se aplica a uno o más caracteres o palabras. Los dos estilos más comunes son negrita y cursiva .
+
+Para texto en negrita, CSS utiliza la font-weightpropiedad establecida en la boldpalabra clave:
+
+peso de fuente: negrita;
+A continuación se muestra un ejemplo de instrucción para ChatGPT para poner un componente de página en negrita:
+
+Dale estilo al primer párrafo con negrita.
+Para cursiva, CSS utiliza la font-stylepropiedad establecida en la italicpalabra clave:
+
+estilo de fuente: cursiva;
+A continuación se muestra un ejemplo de instrucción para que ChatGPT aplique estilo a un componente de página con cursiva:
+
+Dale estilo al eslogan de la página web con cursiva.
+NOTA: También puede marcar palabras clave, títulos y otros textos especiales en negrita o cursiva mediante etiquetas HTML. Aprenderá cómo funcionan estas etiquetas en el capítulo 12.
+
+Con solo estos tres aspectos de la tipografía web (el tipo de letra, el tamaño de letra y el estilo de letra) puedes lograr que tus páginas luzcan geniales. Cuando solicitas ChatGPT, puedes incluir instrucciones separadas para que el tipo se aplique a un componente, como se muestra, o puedes poner todo en una sola instrucción, como en este ejemplo:
+
+Diseñe el lema de la página web con la fuente Arial, tamaño de fuente 24px y cursiva.
+Si no está seguro de qué tipo de letra usar en su proyecto, ChatGPT puede ayudarlo, como muestro en la siguiente sección.
+
+3.2.5 Cómo obtener sugerencias de tipografías de ChatGPT
+Las tipografías genéricas que mencioné antes están bien, pero ¿sabías que hay cientos de ellas disponibles? Es una buena noticia porque significa que tus proyectos web pueden destacarse entre la multitud al usar tipografías interesantes, en particular al usar diferentes tipografías para el texto de la página normal y los encabezados. Sin embargo, no puedes simplemente elegir dos tipografías al azar. Debido a que cada tipografía tiene un estilo particular, es fácil elegir dos tipografías que no combinen de alguna manera, al igual que es fácil elegir colores que no combinen. Pero, ¿cómo puedes no solo elegir un par de tipografías, sino también asegurarte de que esas tipografías combinen bien entre sí?
+
+ChatGPT está aquí para ayudarte. En particular, puedes pedirle a ChatGPT que genere sugerencias de Google Fonts ( https://fonts.google.com ), que es un repositorio en línea de más de 1500 fuentes gratuitas. Aquí tienes un mensaje genérico que puedes usar para que ChatGPT sugiera un par de fuentes compatibles (una para los títulos y otra para el texto):
+
+Eres un aficionado a las fuentes y puedes generar combinaciones de fuentes increíbles para páginas de inicio personales. Utiliza la información proporcionada por el usuario para elaborar sugerencias que reflejen el tema de la página de inicio personal.
+ Mi página 
+personal está relacionada con X.
+ 
+Primero, utilizando sólo fuentes disponibles en Google Fonts, sugiera una fuente Y para los encabezados de página.
+ En segundo lugar, utilizando únicamente fuentes disponibles en Google Fonts, sugiera una fuente Z 
+compatible para el texto de la página.
+ 
+En tercer lugar, no incluyas Roboto ni Open Sans en tus sugerencias. Sé creativo y atrevido en tus elecciones.
+Reemplace Xcon una palabra o frase relacionada con su página de inicio personal y reemplace Yy Zcon serifo sans serif. Lamentablemente, ChatGPT a menudo sugiere las fuentes Roboto y Open Sans. Estas son fuentes excelentes y hermosas, sin duda, pero si desea algo más interesante, asegúrese de excluir esas fuentes comunes en su mensaje, como lo hice yo.
+
+En la figura 3.4, puedes ver que ChatGPT sugirió las tipografías Josefin Sans y Roboto Serif para mi página (generadas con Bing Copilot en modo Creativo). Son excelentes tipografías que deberían funcionar bien juntas.
+
+
+
+Figura 3.4 Sugerencias de tipografía de ChatGPT
+
+Si utiliza Bing Copilot, la respuesta puede incluir algunos ejemplos de las tipografías sugeridas. De lo contrario, siga los enlaces a Google Fonts para examinar las tipografías sugeridas y asegurarse de que le guste lo que ve. Si las tipografías sugeridas no funcionan para su diseño, solicite a ChatGPT que lo intente nuevamente:
+
+Las tipografías sugeridas no sirven para el diseño de mi página de inicio personal. Sugiera dos tipografías diferentes.
+Una vez que tengas dos tipos de letra que te gusten, no tendrás que hacer nada más que escribir o recordar sus nombres. Incluirás los nombres de los tipos de letra cuando le pidas a ChatGPT que cree el código de tu página web.
+
+3.2.6 Generación de un esquema de color
+De manera predeterminada, las páginas web utilizan texto negro sobre fondo blanco. Esa combinación de colores hace que el texto sea fácil de leer, pero no va a ganar ningún premio de diseño. No es necesario que te vuelvas loco con el color, pero pensar más allá del texto negro sobre fondo blanco es una manera fácil de ofrecer a tus lectores un poco de placer visual.
+
+Existen muchas formas de especificar el color en la web, pero la más sencilla es utilizar uno de los 140 nombres de color predefinidos (o palabras clave). Van desde alicebluehasta yellowe incluyen no solo colores estándar como red, green, y , bluesino también tonos decididamente no estándar como lemonchiffon, darkorchid, y wheat.
+
+He incluido la lista completa de palabras clave de color en mi sitio Web Design Playground en wdpg.io/2/colorkeywords . La Figura 3.5 muestra una lista completa de palabras clave de color.lista de artículos
+
+
+
+Figura 3.5 Para ver una lista completa de las palabras clave de color CSS en Web Design Playground, navegue a wdpg.io/2/colorkeywords .
+
+En la lista que se muestra en la figura 3.5, solo debe preocuparse por la columna Color y la columna Palabra clave. Puede ignorar con seguridad la rareza de la columna Valor RGB.
+
+CSS define dos propiedades relacionadas con el color. La primera propiedad es color, que se utiliza para aplicar un color a un texto, y la segunda es background-color(a veces abreviada como background), que se utiliza para aplicar un color al fondo de un elemento:
+
+color: palabra clave1 ;
+color de fondo: palabra clave2 ;
+Reemplace keyword1y keyword2con una palabra clave de color, como darkbluey lavender:
+
+color: azul oscuro;
+color de fondo: lavanda;
+ADVERTENCIA: cuando elija colores para sus páginas web, debe asegurarse de que el texto siga siendo legible seleccionando colores de texto y de fondo que tengan el contraste suficiente. El texto oscuro sobre un fondo claro o el texto claro sobre un fondo oscuro es lo que debe buscar.
+
+Tu página de inicio no necesita una combinación de colores compleja, pero es posible que quieras evitar el texto negro sobre blanco y optar por algo más interesante. Aquí tienes un mensaje que puedes usar para que ChatGPT te ayude a generar una combinación de colores para tu página de inicio:
+
+Eres diseñador web y sabes cómo crear esquemas de colores atractivos y atractivos. Utiliza la información proporcionada por el usuario para elaborar sugerencias que reflejen el tema de la página de inicio personal.
+ Mi página 
+personal está relacionada con X.
+ Primero, diseñe un esquema de colores para mi página de inicio personal. Quiero que 
+la página sea visualmente atractiva y agradable a la vista. Estoy pensando en usar Y como tono dominante. Sugiera otros dos colores que combinen bien con Y.
+ 
+En segundo lugar, muestre algunos ejemplos del esquema de color sugerido.
+ 
+En tercer lugar, al sugerir colores, utilice las palabras clave de color CSS estándar, como aliceblue y papayawhip.
+Reemplace Xcon una palabra o frase relacionada con su página de inicio personal y reemplace Ycon la palabra clave del color que desea utilizar como tono principal en su sitio. Le pedí a ChatGPT un esquema de colores con dodgerbluecomo tono principal y la figura 3.6 muestra el resultado (generado con Bing Copilot en modo Creativo).
+
+
+
+Figura 3.6 Sugerencias de esquema de colores de ChatGPT
+
+Tenga en cuenta que el mensaje le pide a ChatGPT que sugiera colores utilizando palabras clave de colores CSS estándar. Utilizará estas palabras clave como parte del mensaje cuando le pida a ChatGPT que genere el código de su página web.
+
+Ya casi está listo para crear el mensaje de inicio de ChatGPT. El último paso es comprender cómo funcionan los encabezados de las páginas web, que es el tema de la siguiente sección.
+
+3.2.7 Comprensión de los encabezados de las páginas web
+Un encabezado de página web es una palabra o frase en negrita que se destaca verticalmente del resto del texto y sirve como título de la página o de una sección de la misma. En la mayoría de las páginas web, solo se utilizan tres tipos de encabezados:
+
+Un único encabezado principal, que es el título de la página.
+
+Uno o más encabezados de segundo nivel, que actúan como títulos de cada artículo o sección principal de la página.
+
+Dentro de cada encabezado de segundo nivel, uno o más encabezados de tercer nivel, que actúan como títulos de subsecciones
+
+Afortunadamente, normalmente no es necesario especificar demasiado todo esto, ya que ChatGPT casi siempre determinará automáticamente la jerarquía de encabezados. Sin embargo, es posible que desee controlar el tamaño de fuente de sus encabezados para obtener el aspecto que desea. Para darle una idea de lo que está tratando, aquí hay algunas notas sobre los tamaños de fuente para los primeros tres niveles de encabezado:
+
+Títulos de primer nivel : el tamaño de fuente predeterminado es 32 px. Según el título, su longitud y el efecto que desee lograr, los títulos de primer nivel (designados en HTML mediante la <h1>etiqueta ) pueden ser mucho más grandes, como 48 px, 72 px o incluso más grandes.
+
+Títulos de segundo nivel : el tamaño de fuente predeterminado es 24 px. Sin embargo, no es raro que los títulos de segundo nivel (designados en HTML mediante la <h2>etiqueta ) sean un poco más grandes, como 28 px o 32 px.
+
+Títulos de tercer nivel : el tamaño de fuente predeterminado es de aproximadamente 18,2 px. Dado que este tamaño predeterminado es solo un poco más grande que el texto de una página normal (16 px), es posible que prefieras darle un estilo <h3>más grande a los títulos de tercer nivel (que se designan en HTML mediante la etiqueta ) como, por ejemplo, 20 px o 24 px.
+
+Nuevamente, no es necesario que se adentre demasiado en los detalles del código web. Para la mayoría de los mensajes de las páginas web, solo necesitará indicarle a ChatGPT qué tamaño de fuente desea para cada encabezado, suponiendo que los tamaños de encabezado predeterminados no se ajusten al diseño de su página.
+
+3.2.8 Elaboración del mensaje
+Ahora tienes todo lo que necesitas para solicitarle a ChatGPT que te proporcione el código web para tu página de inicio. El mensaje debería comenzar de la siguiente manera:
+
+Quiero crear una página personal. No sé programar, así que necesito que me proporciones el código.
+  
+Primero, escriba el código HTML para una página web simple que incluya lo siguiente:
+A continuación, especifique el contenido de su página, incluido lo siguiente (consulte la figura 3.7):
+
+Un encabezado (consulte el capítulo 4) que incluye el título y el subtítulo de la página.
+
+Una sección principal que comienza con un párrafo introductorio (que puede ser algo así como un mensaje de bienvenida al lector).
+
+Uno o más títulos de segundo nivel seguidos de algún texto. Por ejemplo, el título “Películas que me gustan” podría ir seguido de una lista de tus películas favoritas. Para cada elemento, no es necesario que proporciones el texto completo; basta con unas pocas palabras o la primera oración. Puedes completar el texto más tarde, después de que ChatGPT haya generado el código.
+
+
+
+Figura 3.7 Las secciones de la página de inicio personal
+
+A continuación, le pides a ChatGPT que genere el CSS según el formato que deseas para tu página:
+
+En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+A continuación, especifique el formato, incluido lo siguiente:
+
+El color de fondo del encabezado (debe ser el color principal de su esquema de colores).
+
+El tamaño de fuente y el color que desea utilizar para el título y el subtítulo de la página (el color debe ser el color secundario de su esquema de colores).
+
+El tamaño de fuente y el color de los títulos de segundo nivel (el color debe ser el color principal de su esquema de colores).
+
+El tamaño de fuente del texto de la página normal.
+
+Las fuentes a utilizar para los encabezados y el texto de la página normal.
+
+Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800 px es adecuada para la mayoría de las páginas.
+
+A continuación se muestra un ejemplo de mensaje para mi página de inicio:
+
+Quiero crear una página personal. No sé programar, así que necesito que me proporciones el código.
+ 
+Primero, escriba el código HTML para una página web simple que incluya lo siguiente:
+ * Un encabezado que incluye el título "Escritor críptico" y el subtítulo "Resolviendo acertijos con palabras y palabras con acertijos".
+ * Una sección principal donde el primer párrafo contiene el texto entre comillas triples:
+"""¡Hola! Mi nombre es Paul McFedries. Bienvenido a mi humilde hogar en la Web. Me alegro mucho de que hayas venido a conocerme mejor. ¡Disfruta!"".
+ * El encabezado de segundo nivel “Lo que hago (en mi trabajo)” seguido de un párrafo que contiene el texto entre comillas triples:
+"""Soy un escritor técnico con más de 100 libros en mi haber..."""
+* El encabezado de segundo nivel “Lo que hago (por diversión)” seguido de un párrafo que contiene el texto entre comillas triples:
+"""Mis pasatiempos e intereses incluyen crucigramas crípticos, juegos de palabras, juegos de palabras, panificación, tipografía, Art Decó..."""
+* El encabezado de segundo nivel “Lo que leo” seguido de un párrafo que contiene el texto entre comillas triples:
+"Actualmente estoy leyendo Landlines, de Raynor Winn. Mis últimas lecturas son The Faraway Nearby, de Rebecca Solnit, y Journal of a Solitude, de May Sarton..."
+* El encabezado de segundo nivel “Lo que soy” seguido de un párrafo que contiene el texto entre comillas triples:
+"""Aunque nací en Toronto, mis padres son ambos escoceses, lo que explica mi amor por las gaitas y el haggis..."""
+ 
+En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+* El color de fondo del encabezado es azul dodger con un margen de 20 px alrededor. Centra el título y el subtítulo.
+ * El tamaño de fuente del título es 48px con color whitesmoke.
+ * El tamaño de fuente de los subtítulos es de 24 px con color whitesmoke y formato cursiva.
+ * El tamaño de fuente del encabezado de segundo nivel es 32 px con color dodgerblue.
+ *El tamaño de fuente de la sección principal es 20px.
+ * Para los títulos, utilice la fuente Josefin Sans de Google Fonts. Para el resto del texto, utilice la fuente Roboto Serif de Google Fonts.
+ *La página está centrada.
+ *La página es responsiva con un ancho máximo de 800px.
+NOTA: incluí la instrucción para centrar la página porque una página que no ocupa toda la ventana del navegador (como esta página no ocupará ninguna ventana que tenga más de 800 px de ancho) generalmente se ve mejor cuando está centrada dentro de la ventana.
+
+ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado index.html. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+
+<link rel="hoja de estilo" tipo="texto/css" href="estilos.css">
+Este código le indica al navegador web que busque el código CSS en un archivo llamado styles.css, por lo que su próxima tarea es copiar el código CSS generado y luego pegarlo y guardarlo en un archivo llamado styles.css (o cualquier nombre que vea en la <link>etiqueta). Asegúrese de guardar styles.css en la misma carpeta que su archivo index.html. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos HTML y CSS. Envié este mensaje a Bing Copilot en modo Precise y el código que generó dio como resultado la página que se muestra en la figura 3.8.
+
+
+
+Figura 3.8 Mi página de inicio personal generada por ChatGPT
+
+En este punto, si está satisfecho con la página de inicio personal que ChatGPT creó para usted, puede omitir el resto de este capítulo e implementar el código como describo en el apéndice B. Sin embargo, si tiene curiosidad por saber un poco más sobre el código que ChatGPT generó, continúe con la siguiente sección.
+
+3.3 Examinar el código de la página de inicio personal
+En esta sección, le daré una descripción general breve y no técnica del código de la página de inicio personal que ChatGPT generó para mí (y que produjo la página que se muestra en la figura 3.8). Es probable que el código que ChatGPT genere para usted no sea el mismo, por dos razones:
+
+ChatGPT tiene un grado de aleatoriedad incorporado, por lo que incluso indicaciones idénticas a menudo pueden generar respuestas ligeramente diferentes.
+
+El código de la página web generado por ChatGPT varía según la versión del modelo (GPT-3.5 versus GPT-4), la aplicación utilizada (OpenAI versus Copilot) y, para Copilot, el modo utilizado (creativo, equilibrado o preciso).
+
+Dicho esto, el código de tu página de inicio personal probablemente será muy similar al mío, por lo que las anotaciones de código en las próximas dos secciones deberían ser útiles si tienes curiosidad acerca de cómo funciona el código.
+
+3.3.1 Examinar el HTML
+Comenzaré con el código HTML generado por ChatGPT para mi página de inicio personal, que se muestra aquí:
+
+<!DOCTYPE html>
+<html>
+  <cabeza>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Serif"
+rel="hoja de estilo">                                                       ① 
+    <link rel="hoja de estilo" tipo="texto/css" href="estilos.css">           ②
+    <title>Escritor críptico</title>
+  </cabeza>
+  <cuerpo>
+    <header>                                                            ③ 
+      <h1>Escritor críptico</h1>                                           ④ 
+      <h2>Resolver acertijos con palabras y palabras con acertijos.</h2>       ⑤
+    </encabezado>
+    <main>                                                              ⑥ 
+      <p>¡Hola! Mi nombre es Paul McFedries. Bienvenido a mi humilde            ⑦ 
+         hogar lejos de casa en la web. Me alegro mucho de que hayas pasado por aquí            ⑦ 
+         para conocer más sobre mí. ¡Disfruta!</p>                             ⑦ 
+      <h2>Lo que hago (por trabajo)</h2>                                     ⑧
+      <p>Soy un escritor técnico con más de 100 libros en mi haber...</p>
+      <h2>Lo que hago (por diversión)</h2>                                      ⑧
+      <p>Mis pasatiempos e intereses incluyen crucigramas crípticos,
+         juegos de palabras, juegos de palabras, panificación, tipografía, Art Decó...</p>
+      <h2>Lo que leo</h2>                                              ⑧
+      <p>Actualmente estoy leyendo Landlines, de Raynor Winn.
+         Las lecturas son The Faraway Nearby de Rebecca Solnit, Journal
+         De una soledad de May Sarton...</p>
+      <h2>Lo que soy</h2>                                                ⑧
+      <p>Aunque nací en Toronto, mis padres son ambos
+         Escocés, lo que explica mi amor por las gaitas y
+         haggis...</p>
+    </principal>
+  </cuerpo>
+</html>
+① Carga las fuentes Josefin Sans y Roboto Serif de Google Fonts
+
+② Le dice al navegador web dónde encontrar el código CSS
+
+③ Encabezado de página
+
+④ Título de la página
+
+⑤ Subtítulo de la página
+
+⑥ Sección principal de la página
+
+⑦ Párrafo de texto regular
+
+⑧ Encabezados de segundo nivel
+
+Tenga en cuenta, en particular, el código que le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
+
+3.3.2 Examinando el CSS
+El código CSS que ChatGPT generó para mi página de inicio se muestra aquí:
+
+cuerpo {
+  familia de fuentes: 'Roboto Serif', serif;       ① 
+  ancho máximo: 800px;                         ② 
+  margen: automático;                             ③
+}
+ 
+encabezado {
+  color de fondo: dodgerblue;             ④ 
+  relleno: 20px;                            ⑤ 
+  alineación del texto: centro;                       ⑥
+}
+ 
+encabezado h1 {
+  familia de fuentes: 'Josefin Sans', sans-serif; ⑦ 
+  tamaño de fuente: 48px;                          ⑧ 
+  color: whitesmoke;                        ⑧
+}
+ 
+encabezado h2 {
+  familia de fuentes: 'Josefin Sans', sans-serif; ⑦ 
+  tamaño de fuente: 24px;                          ⑨ 
+  color: whitesmoke;                        ⑨
+  estilo de fuente: cursiva;    
+}
+ 
+principal {
+  tamaño de fuente: 20px;                          ⑩
+}
+ 
+principal h2 {
+  familia de fuentes: 'Josefin Sans', sans-serif; ⑦ 
+  tamaño de fuente: 32px;                          ⑪ 
+  color: dodgerblue;                        ⑪ 
+}
+① Aplica Roboto Serif al texto de la página.
+
+② Establece el ancho máximo de página en 800 px
+
+③ Centra la página
+
+④ Establece el fondo del encabezado en dodgerblue
+
+⑤ Agrega 20 px de espacio alrededor del texto del encabezado
+
+⑥ Centra el texto dentro del encabezado
+
+⑦ Aplica Josefin Sans al texto del encabezado
+
+⑧ Aplica estilo al título con tamaño de fuente 48 px y color whitesmoke
+
+⑨ Aplica estilo al subtítulo con tamaño de fuente 24 px, color humo blanco y cursiva
+
+⑩ Establece el tamaño de fuente de la página normal en 20 px
+
+⑪ Aplica estilo a los encabezados de segundo nivel con tamaño de fuente 32 px y color dodgerblue
+
+Si lo desea, puede utilizar estas anotaciones para modificar el código de su página web, como describo en la siguiente sección.
+
+3.4 Personalización de la página de inicio personal
+Si el código de página de inicio personal que ChatGPT generó para usted no es el que deseaba, tiene dos opciones:
+
+Si la página resultante no se acerca a lo que desea, probablemente sea mejor reescribir el mensaje, iniciar una nueva sesión de chat e intentarlo nuevamente.
+
+Si la página resultante es bastante buena pero solo necesita algunos ajustes, solicite a ChatGPT que realice esos ajustes por usted. Asegúrese de enviar esta solicitud en la misma sesión que la solicitud original.
+
+En el segundo caso, si el código producido por ChatGPT realmente solo necesita algunos pequeños retoques, considere modificar el código manualmente según las anotaciones que proporcioné en la sección anterior. Como no conoce el código de las páginas web, es mejor no intentar realizar cambios importantes. Sin embargo, aún quedan algunas formas de alterar el código para obtener la página que desea.
+
+Primero, aquí hay algunas sugerencias de personalización para el código HTML:
+
+En el encabezado, puedes editar el título o el subtítulo. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: <h1>y </h1>para el título; <h2>y </h2>para el subtítulo.
+
+En la sección principal del código HTML, puede agregar, eliminar o editar el texto dentro de cada encabezado de segundo nivel (es decir, el texto entre las etiquetas <h2>y </h2>; asegúrese de no editar ni eliminar estas etiquetas).
+
+En la sección principal del código HTML, puede agregar, eliminar o editar el texto dentro de cada párrafo (es decir, el texto entre las etiquetas <p>y </p>; asegúrese de no editar ni eliminar estas etiquetas).
+
+En la sección principal del código HTML, puede agregar un nuevo párrafo escribiendo una <p>etiqueta, seguido del texto del párrafo, seguido de la </p>etiqueta.
+
+A continuación se muestran algunas ideas de personalización para el código CSS:
+
+Si desea que su página de inicio tenga un ancho máximo diferente, cambie el max-widthvalor a algo distinto de 800px.
+
+Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
+
+Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
+
+Para que el código de su página sea más accesible, considere convertir todas las medidas en px a medidas en rem. 1 rem es, de manera predeterminada, equivalente a 16 px, por lo que 20 px es 1,25 rem, 24 px es 1,5 rem, 32 px es 2 rem, 48 px es 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+
+Resumen
+Al contarle a ChatGPT un poco sobre el contenido de su página, puede incitarlo a generar títulos y subtítulos creativos.
+
+ChatGPT puede ayudarle con tres aspectos clave de la tipografía web: el tipo de letra, el tamaño de letra y el estilo.
+
+Puedes pedirle a ChatGPT que cree un esquema de color utilizando cualquiera de las 140 palabras clave de color que ofrece CSS.
+
+Casi todas las páginas web utilizan encabezados: un encabezado de primer nivel que actúa como título de la página, así como uno o más encabezados de segundo y tercer nivel.
+
+Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+
+Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
