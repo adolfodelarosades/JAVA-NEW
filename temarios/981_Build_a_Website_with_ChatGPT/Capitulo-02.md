@@ -42,76 +42,86 @@ Para mi propia inspiración, utilicé la aplicación ChatGPT con GPT-4 como mode
 <img width="919" alt="image" src="https://github.com/user-attachments/assets/7be52624-e945-4f7f-b8a3-647511cc065b">
 
 **Figura 2.2 La aplicación ChatGPT con GPT-4 seleccionado como modelo de lenguaje**
-AQUIIIII
+
 Ahora que ChatGPT está listo para hacer lo que le pides, el siguiente paso es darle al modelo un mensaje para que genere algún código de página web. Uno de los puntos que quiero destacar en este capítulo es que es posible lograr que ChatGPT muestre el código para una página web funcional con un solo mensaje. Para lograrlo, tenemos que simplificar mucho las cosas, por lo que no puede ser una página complicada y multifunción con un montón de funciones.
 
 Sin embargo, no tiene por qué ser una página de “¡Hola mundo!” de mala calidad. En general, si tienes una idea para una página sencilla, solo tienes que pedirle a ChatGPT que genere el código para la página e incluya una descripción de lo que quieres. Esa descripción variará según la idea, pero es posible que quieras incluir algunos o todos los siguientes elementos:
 
-Objetivo : lo que desea que ChatGPT genere (en este caso, una página web)
-
-Datos : los datos que desea que ChatGPT utilice, si corresponde
-
-Acción : lo que desea que haga la página web, en general o con los datos que especificó
-
-Interfaz : cómo desea que el usuario inicie la acción o interactúe de otro modo con la página
+* **Goal - Objetivo**: lo que desea que ChatGPT genere (en este caso, una página web)
+* **Data - Datos**: los datos que desea que ChatGPT utilice, si corresponde
+* **Action - Acción**: lo que desea que haga la página web, en general o con los datos que especificó
+* **Interface - Interfaz**: cómo desea que el usuario inicie la acción o interactúe de otro modo con la página
 
 Aquí está el mensaje para la página que quiero (consulte la figura 2.3):
 
+<img width="905" alt="image" src="https://github.com/user-attachments/assets/decc3980-0bce-4752-8481-f190a9369537">
+
+```text
+Create web page code that stores 50 puns and displays a random pun each time the user clicks a button.
+```
+
+```text
 Crea un código de página web que almacene 50 juegos de palabras y muestre un juego de palabras aleatorio cada vez que el usuario haga clic en un botón.
+```
 
+<img width="911" alt="image" src="https://github.com/user-attachments/assets/7480b7ef-c7e7-467f-a0be-84ad759ee75f">
 
-Figura 2.3 La aplicación ChatGPT con mi mensaje listo para enviar
+**Figura 2.3 La aplicación ChatGPT con mi mensaje listo para enviar**
 
-Así es como este mensaje encaja en el esquema objetivo-datos-acción-interfaz:
+Así es como este mensaje encaja en el esquema goal-data-action-interface(objetivo-datos-acción-interfaz):
 
-Create web page code—Esta parte del mensaje le dice a ChatGPT que genere el código para una página web completa.
+* **Create web page code**: Esta parte del mensaje le dice a ChatGPT que genere el código para una página web completa.
 
-that stores 50 puns—Le dice a ChatGPT que cree 50 juegos de palabras para usar como datos de la página.
+* **that stores 50 puns**: Le dice a ChatGPT que cree 50 juegos de palabras para usar como datos de la página.
 
-and displays a random pun—Le dice a ChatGPT que seleccione un juego de palabras al azar de los datos.
+* **and displays a random pun**: Le dice a ChatGPT que seleccione un juego de palabras al azar de los datos.
 
-each time the user clicks a button—Le dice a ChatGPT que proporcione un botón que, cuando se hace clic, muestre otro juego de palabras aleatorio.
+* **each time the user clicks a button**: Le dice a ChatGPT que proporcione un botón que, cuando se hace clic, muestre otro juego de palabras aleatorio.
 
-Ingrese el mensaje en el cuadro de texto de ChatGPT, haga clic en el ícono Enviar mensaje y espere el resultado.
+Ingrese el mensaje en el cuadro de texto de ChatGPT, haga clic en el ícono ***Send Message*** y espere el resultado.
 
-2.2.1 Examen del resultado
+### 2.2.1 Examen del resultado
+
 El siguiente código muestra la primera respuesta que recibí de ChatGPT (el código que ChatGPT genera para usted puede ser diferente):
 
+```html
 <!DOCTYPE html>
 <html>
-<cabeza>
-    <title>Generador de juegos de palabras</title>                                                     ①   
-    <estilo>
-        cuerpo {                                                                       ② 
-            familia de fuentes: Arial, sans-serif;                                          ② 
-        }                                                                            ② 
-        #displayPun {                                                                ③ 
-            tamaño de fuente: 24px;                                                         ③ 
-            margen superior: 20px;                                                        ③ 
-        }                                                                            ③
-    </estilo>
-</cabeza>
-<cuerpo>
-    <h1>¡Bienvenido a Pun Generator!</h1>                                               ④
+<head>
+    <title>Pun Generator</title>                                                    ①   
+    <style>
+        body {                                                                      ②
+            font-family: Arial, sans-serif;                                         ②
+        }                                                                           ②
+        #displayPun {                                                               ③
+            font-size: 24px;                                                        ③
+            margin-top: 20px;                                                       ③
+        }                                                                           ③
+    </style>
+</head>
+<body>
+    <h1>Welcome to Pun Generator!</h1>                                              ④
     
-    <button id="generatePun">Generar juego de palabras</button>                                   ⑤
+    <button id="generatePun">Generate Pun</button>                                  ⑤
     
-    ⑥                                                         ​
-    <guión>
-        var puns = [                                                                 ⑦ 
-            "El tiempo vuela como una flecha; la fruta vuela como un plátano.",                  ⑦ 
-            "Solía ​​ser panadero porque amasaba.",                         ⑦ 
-            "Solía ​​tocar el piano de oído, pero ahora uso mis manos.",                  ⑦ 
-            // Agrega el resto de los 50 juegos de palabras aquí...                                   ⑦
+    <p id="displayPun"></p>                                                         ⑥
+    <script>
+        var puns = [                                                                ⑦
+            "Time flies like an arrow; fruit flies like a banana.",                 ⑦
+            "I used to be a baker because I kneaded dough.",                        ⑦
+            "I used to play piano by ear, but now I use my hands.",                 ⑦
+            // Add the rest of the 50 puns here...                                  ⑦
         ];    
-        documento.getElementById("generatePun").
-addEventListener("clic", función() {                                               ⑧ 
-            var randomPunIndex = Math.floor(Math.random() * puns.length);            ⑧ 
-            document.getElementById("displayPun").innerText = puns[randomPunIndex]; ⑧ 
-        });                                                                          ⑧
+        document.getElementById("generatePun").
+addEventListener("click", function() {                                              ⑧
+            var randomPunIndex = Math.floor(Math.random() * puns.length);           ⑧
+            document.getElementById("displayPun").innerText = puns[randomPunIndex]; ⑧
+        });                                                                         ⑧
     </script>
-</cuerpo>
+</body>
 </html>
+```
+
 ① Título de la página
 
 ② Aplica la tipografía Arial a la página.
@@ -130,81 +140,156 @@ addEventListener("clic", función() {                                           
 
 Hay tres cosas que tener en cuenta aquí:
 
-Aunque se trata de una página sencilla, el código en sí es bastante complejo, así que no te preocupes si todo te parece un lenguaje extraño. No necesitas saber cómo funciona este código, solo que funciona (teniendo en cuenta mi tercer punto de esta lista).
+* Aunque se trata de una página sencilla, el código en sí es bastante complejo, así que no te preocupes si todo te parece un lenguaje extraño. No necesitas saber cómo funciona este código, solo que funciona (teniendo en cuenta mi tercer punto de esta lista).
 
-Recuerda que ChatGPT no es determinista, lo que significa que no generará el mismo código cada vez, incluso cuando uses el mismo mensaje. Por lo tanto, si ejecutas mi mensaje en ChatGPT, es muy probable que termines con un código diferente al que ves en el listado 2.1.
+* Recuerda que ChatGPT no es determinista, lo que significa que no generará el mismo código cada vez, incluso cuando uses el mismo mensaje. Por lo tanto, si ejecutas mi mensaje en ChatGPT, es muy probable que termines con un código diferente al que ves en el listado 2.1.
 
-En lugar de crear 50 juegos de palabras, ChatGPT creó solo tres juegos de palabras y luego pasó la pelota:
+* En lugar de crear 50 juegos de palabras, ChatGPT creó solo tres juegos de palabras y luego pasó la pelota:
 
+<img width="886" alt="image" src="https://github.com/user-attachments/assets/c9b97b88-74e7-451e-bbc5-d50fa6aa7ea4">
+
+```text
+// Add the rest of the 50 puns here...
+```
+
+```text
 // Añade el resto de los 50 juegos de palabras aquí...
+```
+
 Esto no sucede siempre, pero debes saber que es un comportamiento muy común en ChatGPT. Afortunadamente, no significa que estés estancado. Logré que ChatGPT completara su misión con un simple mensaje:
 
+<img width="909" alt="image" src="https://github.com/user-attachments/assets/99635356-dba0-417f-ad47-35d793eead01">
+
+```text
+Can you fill in the rest of the puns for me?
+```
+
+```text
 ¿Puedes completarme el resto de los juegos de palabras?
-ChatGPT regeneró el código con el conjunto completo de juegos de palabras (aunque tuve que hacer clic en el botón Continuar generando (consulte la figura 2.4) una vez cuando ChatGPT se quedó bloqueado). Esa es una cantidad considerable de datos para generar, por lo que tardó un par de minutos en aparecer el código completo.a.
+```
 
+ChatGPT regeneró el código con el conjunto completo de juegos de palabras (aunque tuve que hacer clic en el botón Continuar generando (consulte la figura 2.4) una vez cuando ChatGPT se quedó bloqueado). Esa es una cantidad considerable de datos para generar, por lo que tardó un par de minutos en aparecer el código completo.
 
+<img width="810" alt="image" src="https://github.com/user-attachments/assets/bacf015a-e27f-4b14-ab8a-fa7f39bf3cd3">
 
-Figura 2.4 Si ChatGPT se bloquea, es posible que tengas que hacer clic en Continuar generando para desbloquearlo.
+**Figura 2.4 Si ChatGPT se bloquea, es posible que tengas que hacer clic en Continuar generando para desbloquearlo.**
 
-Comprender y personalizar el código (opcional)
+### Comprender y personalizar el código (opcional)
 
 Si deseas comprender y/o personalizar el código generado por ChatGPT (esto es totalmente opcional), aquí te dejamos algunas notas:
 
-HTML consta de una colección de elementos denominados etiquetas para especificar objetos de página, como párrafos, encabezados, listas con viñetas y enlaces. La mayoría de las etiquetas HTML son códigos alfabéticos rodeados de corchetes angulares ( <y >). Por ejemplo, se designa el inicio de un párrafo con la <p>etiqueta y el final del párrafo con la </p>etiqueta . Como otro ejemplo, el código HTML generado por ChatGPT de la sección anterior incluía la siguiente línea:
+* **HTML** consta de una colección de elementos denominados etiquetas para especificar objetos de página, como párrafos, encabezados, listas con viñetas y enlaces. La mayoría de las etiquetas HTML son códigos alfabéticos rodeados de corchetes angulares ( `<` y `>`). Por ejemplo, se designa el inicio de un párrafo con la etiqueta `<p>` y el final del párrafo con la etiqueta `</p>`. Como otro ejemplo, el código HTML generado por ChatGPT de la sección anterior incluía la siguiente línea:
 
-¡Bienvenido a Pun Generator!
-Las etiquetas <h1>y </h1>marcan un encabezado de primer nivel (consulte el capítulo 3 para obtener más información sobre los encabezados), por lo que, en este caso, el texto Welcome to Pun Generator!aparece en la página como dicho encabezado.
+<img width="873" alt="image" src="https://github.com/user-attachments/assets/369ebb8f-b927-486c-9e4b-837c4da70bec">
 
-CSS consta de una colección de elementos denominados propiedades para especificar el estilo aplicado a los objetos de la página. Por ejemplo, la font-sizepropiedad determina el tamaño del texto de un objeto específico, por lo que para establecer el tamaño en 24px(24 píxeles), se utiliza la siguiente declaración CSS:
+Las etiquetas `<h1>` y `</h1>` marcan un encabezado de primer nivel (consulte el capítulo 3 para obtener más información sobre los encabezados), por lo que, en este caso, el texto `Welcome to Pun Generator!` aparece en la página como dicho encabezado.
 
-tamaño de fuente: 24px;
-Tenga en cuenta los dos puntos ( :) después del nombre de la propiedad y el punto y coma ( ;) al final. Las declaraciones CSS se agrupan en reglas , que consisten en el objeto al que se aplican las declaraciones y con esas declaraciones rodeadas por llaves ( {y }), como en este ejemplo del código generado por ChatGPT que se mostró anteriormente:
+* **CSS** consta de una colección de elementos denominados ***properties*** para especificar el estilo aplicado a los objetos de la página. Por ejemplo, la propiedad `font-size` determina el tamaño del texto de un objeto específico, por lo que para establecer el tamaño en `24px`(24 píxeles), se utiliza la siguiente declaración CSS:
 
-#mostrarPun {
-    tamaño de fuente: 24px;
-    margen superior: 20px;
-}    
-En este ejemplo, #displayPunhay una referencia al siguiente elemento en el código HTML:
+<img width="874" alt="image" src="https://github.com/user-attachments/assets/e51ae179-7e2b-4c4e-afa1-ac600ef66f90">
 
-<p id="displayPun"></p>
-El texto entre las <title>etiquetas </title>y es el título de la página que aparece en la pestaña del navegador. Puedes editar este texto (pero no alteres las etiquetas).
+Tenga en cuenta los dos puntos (`:`) después del nombre de la propiedad y el punto y coma (`;`) al final. Las declaraciones CSS se agrupan en reglas, que consisten en el objeto al que se aplican las declaraciones y con esas declaraciones rodeadas por llaves ( `{` y `}` ), como en este ejemplo del código generado por ChatGPT que se mostró anteriormente:
 
-Puedes cambiar el tamaño del texto del juego de palabras modificando el font-sizevalor. Sea cual sea el valor que uses, asegúrate de que esté acompañado de px(para píxeles).
+<img width="869" alt="image" src="https://github.com/user-attachments/assets/64a9f702-952a-470b-b3b8-bb5e62589d51">
+ 
+En este ejemplo, `#displayPun` hay una referencia al siguiente elemento en el código HTML:
 
-El texto entre las etiquetas <h1>y </h1>es el encabezado de la página principal. Puedes editar este texto (pero no toques las etiquetas).
+<img width="869" alt="image" src="https://github.com/user-attachments/assets/c8131a6f-3131-421f-913d-cd4bc1133d18">
 
-El botón en el que hace clic el usuario se especifica mediante la <button>etiqueta. El texto que aparece entre esa etiqueta y la </button>etiqueta es lo que aparece en el botón. Puedes editar este texto si lo deseas.
+* El texto entre las etiquetas `<title>` y `</title>` es el título de la página que aparece en la pestaña del navegador. Puedes editar este texto (pero no alteres las etiquetas).
 
-ChatGPT almacena los datos de la página en un objeto de datos especial llamado matriz . En este caso, cada elemento de la matriz es texto (específicamente, un juego de palabras) rodeado de comillas dobles ( "") y seguido de una coma. Puede editar, agregar o eliminar elementos de la matriz según sea necesario; solo asegúrese de que cuando haya terminado, cada elemento de la matriz esté rodeado de comillas dobles y seguido de una coma. Además, no elimine los corchetes ( [y ]) que inician y finalizan la matriz.
+* Puedes cambiar el tamaño del texto del juego de palabras modificando el valor `font-size`. Sea cual sea el valor que uses, asegúrate de que esté acompañado de `px`(para píxeles).
+
+* El texto entre las etiquetas `<h1>` y `</h1>` es el encabezado de la página principal. Puedes editar este texto (pero no toques las etiquetas).
+
+* El botón en el que hace clic el usuario se especifica mediante la etiqueta `<button>`. El texto que aparece entre esa etiqueta y la etiqueta `</button>` es lo que aparece en el botón. Puedes editar este texto si lo deseas.
+
+* ChatGPT almacena los datos de la página en un objeto de datos especial llamado ***array***. En este caso, cada elemento del array es texto (específicamente, un juego de palabras) rodeado de comillas dobles (`""`) y seguido de una coma. Puede editar, agregar o eliminar elementos del array según sea necesario; solo asegúrese de que cuando haya terminado, cada elemento del array esté rodeado de comillas dobles y seguido de una coma. Además, no elimine los corchetes (`[` y `]`) que inician y finalizan el array.
 
 Antes de pasar al siguiente paso, voy a tomarme un momento para darte algunas otras sugerencias para un sitio web simple de una sola página.
 
-2.2.2 Eche un vistazo a algunas otras indicaciones para sitios web de una sola página
+### 2.2.2 Eche un vistazo a algunas otras indicaciones para sitios web de una sola página
+
 Si estás siguiendo este tutorial y quieres crear tu propio sitio web de una sola página con la ayuda de ChatGPT, puedes usar mi sugerencia de la sección anterior o puedes usar tu propia sugerencia si tienes una idea que siempre quisiste probar. Si no estás seguro de qué hacer, aquí tienes algunas sugerencias:
 
-ADVERTENCIA ChatGPT tiene una especie de "memoria" para lo que solicitaste y para lo que generó anteriormente en la misma sesión de chat. Antes de intentar cualquiera de las siguientes solicitudes, asegúrate de iniciar un nuevo chat para que los resultados de ChatGPT no se vean afectados por nada anterior en la sesión.
+**ADVERTENCIA** ChatGPT tiene una especie de "memoria" para lo que solicitaste y para lo que generó anteriormente en la misma sesión de chat. Antes de intentar cualquiera de las siguientes solicitudes, asegúrate de iniciar un nuevo chat para que los resultados de ChatGPT no se vean afectados por nada anterior en la sesión.
 
-“Crear un código de página web que muestre una lista de diez X cosas para hacer en Y ” (donde X es un adjetivo, como divertido o interesante , e Y es el nombre de una ciudad o un barrio). Ejemplo:
+* “Crear un código de página web que muestre una lista de diez X cosas para hacer en Y” (donde X es un adjetivo, como divertido o interesante, e Y es el nombre de una ciudad o un barrio). Ejemplo:
 
+<img width="883" alt="image" src="https://github.com/user-attachments/assets/f3e5e2b6-911e-43a0-9d28-386fb2ec73e0">
+
+```text
+Create web page code that displays a list of ten entertaining things to do in Miami’s South Beach area.
+```
+
+```text
 Crea un código de página web que muestre una lista de diez cosas entretenidas para hacer en el área de South Beach de Miami.
-“Generar el código para una página web que proporcione una receta para preparar X ” (donde X es una cena, postre u otro tipo de plato que se pueda cocinar desde cero). Ejemplo:
+```
 
+* “Generar el código para una página web que proporcione una receta para preparar X” (donde X es una cena, postre u otro tipo de plato que se pueda cocinar desde cero). Ejemplo:
+
+<img width="889" alt="image" src="https://github.com/user-attachments/assets/fc825199-ada4-4c77-96eb-935ce556e668">
+
+```text
+Generate the code for a web page that provides a recipe for making panna cotta.
+```
+
+```text
 Generar el código para una página web que proporcione una receta para hacer panna cotta.
-“Proporcionar un código de página web que enumere los pasos necesarios para X ” (donde X es un proyecto, un trabajo de reparación, una tarea de mantenimiento u otra tarea). Ejemplo:
+```
 
+* “Proporcionar un código de página web que enumere los pasos necesarios para X” (donde X es un proyecto, un trabajo de reparación, una tarea de mantenimiento u otra tarea). Ejemplo:
+
+<img width="884" alt="image" src="https://github.com/user-attachments/assets/c0f5251d-3a2f-41c3-b691-4a1c4d8ebd69">
+
+```text
+Provide web page code that lists the steps required to replace a bathroom faucet.
+```
+
+```text
 Proporciona el código de la página web que enumera los pasos necesarios para reemplazar un grifo del baño.
-“Crear código de página web que explique cómo funciona X ” (donde X es una máquina, un dispositivo, un principio científico o, en realidad, cualquier cosa). Ejemplo:
+```
 
+* “Crear código de página web que explique cómo funciona X” (donde X es una máquina, un dispositivo, un principio científico o, en realidad, cualquier cosa). Ejemplo:
+
+<img width="881" alt="image" src="https://github.com/user-attachments/assets/c72e6b61-ac44-4a8e-affc-3bc61c528686">
+
+```text
+Create web page code that explains how a hologram works.
+```
+
+```text
 Crear código de página web que explique cómo funciona un holograma.
-“Generar el código para una página web que almacena X y muestra una Y aleatoria cuando el usuario hace clic en un botón” (donde X son algunos datos e Y son los datos combinados de alguna manera). Ejemplo:
+```
 
+* “Generar el código para una página web que almacena X y muestra una Y aleatoria cuando el usuario hace clic en un botón” (donde X son algunos datos e Y son los datos combinados de alguna manera). Ejemplo:
+
+<img width="889" alt="image" src="https://github.com/user-attachments/assets/67d80f11-4d18-4de0-a9fe-4fe202215724">
+
+```text
+Generate the code for a web page that stores a dozen each of the following: names, verbs, colors, adjectives, and nouns. When the user clicks a button, the code should assemble and display a random sentence that uses the template "Name verb the color, adjective noun."
+```
+
+```text
 Generar el código para una página web que almacene una docena de cada uno de los siguientes: nombres, verbos, colores, adjetivos y sustantivos. Cuando el usuario haga clic en un botón, el código debe ensamblar y mostrar una oración aleatoria que utilice la plantilla "Nombre verbo el color, adjetivo sustantivo".
-“Proporcione un código de página web que muestre X en una lista y almacene una Y asociada con cada X. Cuando el usuario elige X de la lista, la página muestra la Y asociada ” (donde X podría ser una palabra, persona u objeto e Y podría ser un poema, una biografía o una descripción).
+```
 
+* “Proporcione un código de página web que muestre X en una lista y almacene una Y asociada con cada X. Cuando el usuario elige X de la lista, la página muestra la Y asociada” (donde X podría ser una palabra, persona u objeto e Y podría ser un poema, una biografía o una descripción).
+
+<img width="881" alt="image" src="https://github.com/user-attachments/assets/6cf78e0b-c8f0-4a96-ad55-d39c8f77d5a8">
+
+```text
+Provide web page code that displays six rarely used adjectives in a dropdown list and stores a limerick associated with each adjective. When the user chooses an adjective from the list, the page displays the associated limerick.
+```
+
+```text
 Proporcionar un código de página web que muestre seis adjetivos poco utilizados en una lista desplegable y almacene un poema asociado con cada adjetivo. Cuando el usuario elige un adjetivo de la lista, la página muestra el poema asociado.
+```
+
 Siéntete libre de utilizar los mensajes de ejemplo tal como están o personalizándolos para adaptarlos a la página que desees.
 
-2.3 Copiar el código de la página web de ChatGPT
+## 2.3 Copiar el código de la página web de ChatGPT
+
 Una vez que ChatGPT haya terminado de generar el código, el siguiente paso es copiarlo. La forma de copiar el código generado depende de si estás usando la aplicación ChatGPT, Bing Copilot o la barra lateral de Copilot en Microsoft Edge. Cada interfaz ofrece una función Copiar código en forma de icono o botón. Para conocer todos los detalles sobre cómo copiar código en cada interfaz, consulta el apéndice A. Si, como yo, estás usando la aplicación ChatGPT, el código aparece en una ventana de código HTML independiente que tiene un botón Copiar código en la esquina superior derecha, como se muestra en la figura 2.5.
 
 
