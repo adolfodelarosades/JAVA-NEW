@@ -292,121 +292,126 @@ Siéntete libre de utilizar los mensajes de ejemplo tal como están o personaliz
 
 Una vez que ChatGPT haya terminado de generar el código, el siguiente paso es copiarlo. La forma de copiar el código generado depende de si estás usando la aplicación ChatGPT, Bing Copilot o la barra lateral de Copilot en Microsoft Edge. Cada interfaz ofrece una función Copiar código en forma de icono o botón. Para conocer todos los detalles sobre cómo copiar código en cada interfaz, consulta el apéndice A. Si, como yo, estás usando la aplicación ChatGPT, el código aparece en una ventana de código HTML independiente que tiene un botón Copiar código en la esquina superior derecha, como se muestra en la figura 2.5.
 
+<img width="786" alt="image" src="https://github.com/user-attachments/assets/2fb23cfc-94be-4f58-a221-3d545ff510d2">
 
-
-Figura 2.5 Para copiar el código generado en la aplicación ChatGPT, haga clic en Copiar código en la esquina superior derecha de la ventana de código.
+**Figura 2.5 Para copiar el código generado en la aplicación ChatGPT, haga clic en Copiar código en la esquina superior derecha de la ventana de código.**
 
 El código copiado ahora se encuentra en el Portapapeles de su computadora, que es un área de memoria especial que almacena los datos copiados más recientemente. Para evitar que el código copiado se sobrescriba en el Portapapeles, asegúrese de pasar al siguiente paso antes de hacer cualquier otra cosa en su computadora (especialmente copiar o cortar cualquier otro dato).
 
-2.3.1 Guardar el código de la página web en un archivo HTML
-Ahora que ha copiado el código de la página web generada por ChatGPT, el siguiente paso es pegar el código copiado en un archivo de texto y luego guardar ese documento como un archivo HTML. Antes de comenzar, utilice el Explorador de archivos (Windows) o Finder (macOS) para crear una subcarpeta para almacenar todos sus proyectos web. Por ejemplo, puede crear una carpeta llamada sites o public_html en la carpeta Documentos de su cuenta de usuario.
+### 2.3.1 Guardar el código de la página web en un archivo HTML
+
+Ahora que ha copiado el código de la página web generada por ChatGPT, el siguiente paso es pegar el código copiado en un archivo de texto y luego guardar ese documento como un archivo HTML. Antes de comenzar, utilice el Explorador de archivos (Windows) o Finder (macOS) para crear una subcarpeta para almacenar todos sus proyectos web. Por ejemplo, puede crear una carpeta llamada `sites` o `public_html` en la carpeta `Documentos` de su cuenta de usuario.
 
 Una vez hecho esto, estos son los pasos a seguir para guardar el código ChatGPT copiado en un archivo HTML:
 
-Abra su editor de texto.
+1. Abra su editor de texto.
 
-Inicia un nuevo archivo de texto. En la mayoría de los editores de texto, elige Archivo > Nuevo (o, según la aplicación, es posible que tengas que elegir un comando diferente, como Nuevo archivo, Nuevo archivo de texto o Nuevo documento). También puedes presionar Ctrl-N (en Windows) o Cmd-N (macOS).
+2. Inicia un nuevo archivo de texto. En la mayoría de los editores de texto, elige ***File > New*** (o, según la aplicación, es posible que tengas que elegir un comando diferente, como ***New File***, ***New Text File+** o ***New Document***). También puedes presionar `Ctrl-N` (en Windows) o `Cmd-N` (macOS).
 
-Seleccione Editar > Pegar para pegar el código copiado en el nuevo archivo de texto. También puede presionar Ctrl+V (en Windows) o Cmd+V (macOS).
+3. Seleccione ***Edit > Paste*** para pegar el código copiado en el nuevo archivo de texto. También puede presionar `Ctrl+V` (en Windows) o `Cmd+V` (macOS).
 
-Seleccione Archivo > Guardar. También puede presionar Ctrl+S (en Windows) o Cmd+S (macOS). La aplicación muestra el cuadro de diálogo Guardar como.
+4. Seleccione ***File > Save***. También puede presionar `Ctrl+S` (en Windows) o `Cmd+S` (macOS). La aplicación muestra el cuadro de diálogo **Save As**.
 
-Navega a la carpeta que creaste anteriormente (la que se llama sites o public_html o como sea) para almacenar tus proyectos web.
+5. Navega a la carpeta que creaste anteriormente (la que se llama `sites` o `public_html` o como sea) para almacenar tus proyectos web.
 
-Haga clic en el botón Nueva carpeta y, a continuación, introduzca un nombre para la carpeta. En la siguiente sección, subirá esta carpeta a la Web, por lo que el nombre que utilice debe constar únicamente de letras minúsculas, números, guiones (-) y/o guiones bajos (_). No se permiten espacios.
+6. Haga clic en el botón ***New Folder*** y, a continuación, introduzca un nombre para la carpeta. En la siguiente sección, subirá esta carpeta a la Web, por lo que el nombre que utilice debe constar únicamente de letras minúsculas, números, guiones (-) y/o guiones bajos (_). No se permiten espacios.
 
-Para el nombre del archivo, escriba index.html.
+7. Para el nombre del archivo, escriba `index.html`.
 
-Haga clic en Guardar. La aplicación guarda su archivo HTML. La figura 2.6 muestra mi generador de juegos de palabras.de guardado como archivo HTML.
+8. Haga clic en ***Save***. La aplicación guarda su archivo HTML. La figura 2.6 muestra mi código Pun Generator guardado como archivo HTML.
 
+<img width="907" alt="image" src="https://github.com/user-attachments/assets/647d0d3b-fead-4ef3-ae0d-27583be187f1">
 
-
-Figura 2.6 El código generado por ChatGPT guardado como un archivo HTML
+**Figura 2.6 El código generado por ChatGPT guardado como un archivo HTML**
 
 Cerca de la parte superior de la figura 2.6, observe que mi editor de texto muestra la ruta del archivo HTML:
 
-paul/Documentos/public_html/pun-generator/index.html
-Esta ruta significa que en la carpeta Documentos de mi cuenta de usuario, creé una subcarpeta llamada public_html para almacenar todos mis sitios web. Siguiendo los pasos anteriores, primero navegué hasta public_html, creé la nueva subcarpeta pun-generator y luego guardé el código como index.html en esa nueva carpeta.
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/8df2ac69-6611-469c-889d-58afcdcdf113">
+
+Esta ruta significa que en la carpeta Documentos de mi cuenta de usuario, creé una subcarpeta llamada `public_html` para almacenar todos mis sitios web. Siguiendo los pasos anteriores, primero navegué hasta `public_html`, creé la nueva subcarpeta `pun-generator` y luego guardé el código como `index.html` en esa nueva carpeta.
 
 Ahora está listo para probar su página en un navegador web.
 
-2.4 Probar su página web en el navegador
+## 2.4 Probar su página web en el navegador
+
 Una vez que el código de su página web esté guardado en un archivo en su computadora, siempre es una buena idea realizar una revisión rápida de la página antes de implementarla. La forma más fácil de probar una página web es abrir el archivo HTML en su navegador web favorito. Estos son los pasos a seguir:
 
-En su navegador web, muestre el cuadro de diálogo Abrir:
+1. En su navegador web, muestre el cuadro de diálogo Open:
 
-Navegador web de Windows: presione Ctrl-O.
+   1. Navegador web de Windows: presione `Ctrl-O`.
 
-Navegador web de Mac: seleccione Archivo > Abrir archivo o presione Cmd-O.
+   2. Navegador web de Mac: seleccione ***File > Open File*** o presione `Cmd-O`.
 
-En el cuadro de diálogo Abrir, navegue hasta la carpeta donde almacenó el archivo HTML en la sección anterior.
+2. En el cuadro de diálogo Open, navegue hasta la carpeta donde almacenó el archivo HTML en la sección anterior.
 
-Seleccione el archivo HTML.
+3. Seleccione el archivo HTML.
 
-Haga clic en Abrir.
+4. Haga clic en Open.
 
 El navegador web abre el archivo HTML y muestra la página web de acuerdo con las etiquetas HTML y las propiedades CSS.
 
-Abrir la página web desde tu computadora es una excelente opción para probarla, pero si quieres verla en la web, debes implementarla.
+Abrir la página web desde tu computadora es una excelente opción para probarla, pero si quieres verla en la web, debes deplegarlo.
 
-2.5 Despliegue de su página web
-Para implementar su página, debe cargar el archivo HTML en su servidor web. La forma de hacerlo depende del servidor, por lo que debe consultar las páginas de soporte del servidor para conocer el procedimiento específico. Estos son los pasos generales que debe seguir en la mayoría de los servidores web:
+## 2.5 Despliegue de su página web
+
+Para desplegar su página, debe cargar el archivo HTML en su servidor web. La forma de hacerlo depende del servidor, por lo que debe consultar las páginas de soporte del servidor para conocer el procedimiento específico. Estos son los pasos generales que debe seguir en la mayoría de los servidores web:
 
    1. Inicie sesión en su proveedor de alojamiento web.
 
    2. Navega a la página donde cargas los archivos de tu página web.
 
-   3. Sube la subcarpeta que creaste en la sección anterior, incluyendo el archivo .archivo de la carpeta del sombrero index.html.
+   3. Sube la subcarpeta que creaste en la sección anterior, incluyendo la carpeta que contiene el archivo `index.html`.
 
-Para este ejemplo, voy a implementar mi generador de juegos de palabras en Cloudflare siguiendo estos pasos (aunque consulte el apéndice B para obtener instrucciones más específicas):
+Para este ejemplo, voy a desplegar mi Pun Generator en Cloudflare siguiendo estos pasos (aunque consulte el apéndice B para obtener instrucciones más específicas):
 
-   4. En la barra lateral de navegación del panel de Cloudflare, en Trabajadores y páginas, haga clic en Descripción general.
+   4. En la barra lateral de navegación del panel de Cloudflare, en Workers & Pages, haga clic en Overview.
 
-   5. Haga clic en el botón Crear aplicación, que se muestra en la figura 2.7. (Si esta es su primera implementación de Cloudflare, no tendrá el botón Crear aplicación en pantalla. En ese caso, omita este paso).
+   5. Haga clic en el botón Create Application, que se muestra en la figura 2.7. (Si esta es su primera implementación de Cloudflare, no tendrá el botón Create Application en pantalla. En ese caso, omita este paso).
 
+<img width="905" alt="image" src="https://github.com/user-attachments/assets/763fd20d-066e-417c-b6cf-a6e5b77da266">
 
+**Figura 2.7 En la página Overview, haga clic en Create Application.**
 
-Figura 2.7 En la página Descripción general, haga clic en Crear aplicación.
+   6. Haga clic en la pestaña Pages.
 
-   6. Haga clic en la pestaña Páginas.
+   7. Desplácese hacia abajo hasta la sección Create Using Direct Upload y luego haga clic en Upload Assets.
 
-   7. Desplácese hacia abajo hasta la sección Crear usando carga directa y luego haga clic en Cargar activos.
+   8. Escriba un nombre para su proyecto y luego haga clic en Create Project, como se muestra en la figura 2.8.
 
-   8. Escriba un nombre para su proyecto y luego haga clic en Crear proyecto, como se muestra en la figura 2.8.
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/1d2e9a42-9f8b-4630-afce-caf347595bff">
 
-
-
-Figura 2.8 Escriba un nombre para el proyecto y luego haga clic en Crear proyecto.
+**Figura 2.8 Escriba un nombre para el proyecto y luego haga clic en Create Project.**
 
    9. Cargue la carpeta de su sitio utilizando uno de los siguientes métodos:
 
-  a) Arrastre la carpeta de su sitio web y suéltela en el área de carga.
+      a) Arrastre la carpeta de su sitio web y suéltela en el área de carga.
 
-  b) Haga clic en Seleccionar desde el equipo y, a continuación, haga clic en Cargar carpeta. En el cuadro de diálogo que aparece, navegue hasta la carpeta del proyecto y, a continuación, haga clic en Cargar.
+      b) Haga clic en Select desde el equipo y, a continuación, haga clic en Upload Folder. En el cuadro de diálogo que aparece, navegue hasta la carpeta del proyecto y, a continuación, haga clic en Upload.
 
-  10. Si su navegador web le pide que confirme la operación, haga clic en Cargar.
+  10. Si su navegador web le pide que confirme la operación, haga clic en Upload.
 
-  11. Haga clic en Implementar sitio.
+  11. Haga clic en Deploy Site.
 
-  12. Haga clic en el enlace para ver el sitio implementado en el navegador web. La Figura 2.9 muestra mi Generador de juegos de palabras implementado en https://pun-generator.pages.dev .
+  12. Haga clic en el enlace para ver el sitio implementado en el navegador web. La Figura 2.9 muestra mi Pun Generator desplegado en https://pun-generator.pages.dev .
 
+<img width="911" alt="image" src="https://github.com/user-attachments/assets/eeb955c8-97d4-4baf-ade7-457d345ef299">
 
-
-Figura 2.9 El sitio web Pun Generator implementado en Cloudflare Pages.
+**Figura 2.9 El sitio web Pun Generator implementado en Cloudflare Pages.**
 
 Ahí lo tienes: una página web creada con la ayuda de ChatGPT y desplegada en la web en tan solo unos pocos pasos. Sí, la página que creaste fue sencilla, pero el resto de este libro está dedicado a mostrarte cómo lograr que ChatGPT te ayude a crear sitios web mucho más sofisticados y útiles.
 
-Resumen
-El proceso básico para obtener la ayuda de ChatGPT para crear una página web es el ciclo solicitar-copiar-guardar-implementar.
+## Resumen
 
-Al solicitar ChatGPT, incluya un objetivo, los datos que necesita, la acción que desea que realice la página y la interfaz con la que el usuario inicia la acción.
+* El proceso básico para obtener la ayuda de ChatGPT para crear una página web es el ciclo prompt-copy-save-deploy(solicitar-copiar-guardar-implementar).
 
-Si ChatGPT no le brinda todo lo que solicita, ejecute un segundo mensaje para solicitar la información faltante.
+* Al solicitar ChatGPT, incluya un objetivo, los datos que necesita, la acción que desea que realice la página y la interfaz con la que el usuario inicia la acción.
 
-Copie el código generado haciendo clic en el icono o botón Copiar código.
+* Si ChatGPT no le brinda todo lo que solicita, ejecute un segundo mensaje para solicitar la información faltante.
 
-Utilice la aplicación de administración de archivos de su sistema operativo para crear una carpeta en la que almacenará todos sus proyectos web.
+* Copie el código generado haciendo clic en el icono o botón Copiar código.
 
-En su editor de texto, pegue el código copiado en un nuevo archivo de texto y luego guarde ese archivo como index.html en una nueva subcarpeta creada para el proyecto.
+* Utilice la aplicación de administración de archivos de su sistema operativo para crear una carpeta en la que almacenará todos sus proyectos web.
 
-Implemente el sitio web cargando los datos del proyecto en su proveedor de alojamiento web.
+* En su editor de texto, pegue el código copiado en un nuevo archivo de texto y luego guarde ese archivo como `index.html` en una nueva subcarpeta creada para el proyecto.
+
+* Implemente el sitio web cargando los datos del proyecto en su proveedor de alojamiento web.
