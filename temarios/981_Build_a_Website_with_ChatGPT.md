@@ -86,7 +86,7 @@ Un enfoque paso a paso para crear sitios web asombrosos con ChatGPT.
 * Repeating as needed
 * Refining and revising your prompts
 
-### [2 Creating and deploying your first web page](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/981_Build_a_Website_with_ChatGPT/Capitulo-03.md)
+### [2 Creating and deploying your first web page](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/981_Build_a_Website_with_ChatGPT/Capitulo-02.md)
 
 #### 2.1 Understanding the process
 #### 2.2 Prompting ChatGPT to generate your web page code
