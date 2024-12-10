@@ -30,7 +30,7 @@ Perfecto para cualquier persona interesada en uno de los avances tecnológicos m
 3. Title Page
 4. Copyright
 5. Dedication
-6. Preface
+6. [Preface](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/983_The_Quick_Guide_to_Prompt_Engineering/Introduction.md)
    1. Why This Book Now?
 7. 1 The Basics of Generative Artificial Intelligence
    1. Understanding AI, Machine Learning, and Deep Learning
