@@ -239,21 +239,54 @@ Aunque se trata de un problema menos destacado a partir de la versión 5 de Midj
 
 A lo largo de este libro se utilizarán los ejemplos: ser compatible con ChatGPT Plus (GPT-4) como modelo de texto y Midjourney v6 o Stable Diffusion XL como modelo de imagen, aunque especificaremos si es importante. Estos modelos básicos son el estado actual de la técnica y son buenos para una amplia gama de tareas. Los principios están pensados ​​para que sean a prueba de futuro tanto como sea posible, por lo que si estás leyendo este libro cuando GPT-5, Midjourney v7 o Stable Diffusion XXL estén disponibles, o si estás usando otro proveedor como Google, todo lo que aprendas aquí debería resultarte útil.
 
-
-AQUIIIIII
+ 
 ## 1. Dar dirección
 
-Uno de los problemas con el texto ingenuoEl problema que se mencionó anteriormente fue que no se le estaba informando a la IA sobre qué tipos de nombres de productos quería. Hasta cierto punto, ponerle nombre a un producto es una tarea subjetiva y, sin darle a la IA una idea de qué nombres le gustan, tiene pocas probabilidades de acertar.
+Uno de los problemas con el texto prompt el problema que se mencionó anteriormente fue que no se le estaba informando a la IA sobre qué tipos de nombres de productos quería. Hasta cierto punto, ponerle nombre a un producto es una tarea subjetiva y sin darle a la IA una idea de qué nombres le gustan, tiene pocas probabilidades de acertar.
 
-Por cierto, un humano también tendría dificultades para completar esta tarea sin un buen resumen , por lo que las agencias creativas y de branding requieren una sesión informativa detallada sobre cualquier tarea de sus clientes.
+Por cierto, un humano también tendría dificultades para completar esta tarea sin un buen *resumen*, por lo que las agencias creativas y de branding requieren una sesión informativa detallada sobre cualquier tarea de sus clientes.
 
-CONSEJO
+**CONSEJO**
+
 Si bien no es un mapeo perfecto, puede ser útil imaginar qué contexto podría necesitar un humano para esta tarea e intentar incluirlo en la indicación.
 
-En el mensaje de ejemplo dimos instruccionesmediante el uso de juegos de rol , en ese caso emulando el estilo de Steve Jobs, quien era famoso por nombrar productos de manera icónica. Si cambia este aspecto del mensaje por el de otra persona que sea famosa en los datos de entrenamiento (además de hacer coincidir los ejemplos con el estilo correcto), obtendrá resultados radicalmente diferentes.
+En el mensaje de ejemplo dimos instrucciones mediante el uso de *role-playing - juegos de rol*, en ese caso emulando el estilo de Steve Jobs, quien era famoso por nombrar productos de manera icónica. Si cambia este aspecto del mensaje por el de otra persona que sea famosa en los datos de entrenamiento (además de hacer coincidir los ejemplos con el estilo correcto), obtendrá resultados radicalmente diferentes.
 
-Aporte:
+<img width="837" alt="image" src="https://github.com/user-attachments/assets/a57c19a8-2971-40a9-9b14-c57ea4a3c5db">
 
+<img width="831" alt="image" src="https://github.com/user-attachments/assets/d8e62680-df39-4aa2-94f4-4a20a27f0ad7">
+
+Input:
+
+```text
+Brainstorm a list of product names for a shoe that fits any
+foot size, in the style of Elon Musk.
+
+Return the results as a comma-separated list, in this format:
+Product description: A shoe that fits any foot size
+Product names: [list of 3 product names]
+
+## Examples
+Product description: A refrigerator that dispenses beer
+Product names: Teslacool, FridgeX, Neuradrink
+
+Product description: A watch that can tell accurate time in
+space
+Product names: WatchX, iSpace, The Watch Company
+
+Product description: A home milkshake maker
+Product names: ShakeX, The Milkshake Company, HyperShake
+```
+
+Output:
+
+```text
+ShoeX, MarsFit, The Shoe Company
+```
+
+Entrada:
+
+```text
 Piense en una lista de nombres de productos para un zapato que se adapte a cualquier persona.
 Tamaño del pie, al estilo de Elon Musk.
 
@@ -271,17 +304,68 @@ Nombres de productos: WatchX, iSpace, The Watch Company
 
 Descripción del producto: Una batidora casera
 Nombres de productos: ShakeX, The Milkshake Company, HyperShake
-Producción:
+```
 
+Salida:
+
+```Text
 ShoeX, MarsFit, la empresa de calzado
-También existen algunas reglas o mejores prácticas que debes seguir.Sería bueno seguirlo, lo que podría incluirse en el mensaje como contexto para guiar a la IA hacia un nombre que funcione. Esta técnica a veces se conoce como precalentamiento o recuperación interna , y es simple pero efectiva ( Liu et al., 2021 ). Comenzar la conversación pidiendo consejos sobre las mejores prácticas y luego pedirle que siga sus propios consejos puede ayudar mucho. En efecto, lo estás usando para generar su propia dirección.
+```
 
-Aporte:
+También existen algunas reglas o mejores prácticas que debes seguir. Sería bueno seguirlo, lo que podría incluirse en el mensaje como contexto para guiar a la IA hacia un nombre que funcione. Esta técnica a veces se conoce como *prewarming - precalentamiento* o *internal retrieval - recuperación interna*, y es simple pero efectiva ( [Liu et al., 2021](https://arxiv.org/abs/2110.08387) ). Comenzar la conversación pidiendo consejos sobre las mejores prácticas y luego pedirle que siga sus propios consejos puede ayudar mucho. En efecto, lo estás usando para generar su propia dirección.
 
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/ba5a5ac1-0bac-41e4-b30e-a418e929570c">
+
+<img width="625" alt="image" src="https://github.com/user-attachments/assets/f6799b23-184d-4299-8f81-6b231b6c37ff">
+
+Input:
+
+```text
+Please give me 5 tips for naming products based on expert
+industry advice.
+```
+
+Output:
+
+```text
+Certainly! Naming a product is crucial as it often gives the
+first impression to potential customers. Here are five expert
+tips to guide you in naming products:
+
+1. **Simplicity & Memorability**: Opt for names that are
+short, easy to spell, and memorable. Long, complicated names
+can be difficult for customers to recall. Remember, the
+easier the name is to remember, the more likely it is that
+consumers will think of your product when making a purchase
+decision.
+
+...
+
+5. **Positive Connotations**: Names that evoke positive
+emotions or imagery can create a favorable perception of
+your product. Avoid names that have negative or
+controversial associations in any of the primary languages
+or cultures where you intend to do business. It's often
+worthwhile to conduct linguistic checks and market testing
+to ensure there aren't unintended meanings.
+
+Lastly, once you've shortlisted a few names, it's a good
+idea to run them by diverse focus groups or conduct surveys
+to gauge reactions. Also, ensure that the name you choose is
+available for trademarking and doesn't infringe on existing
+trademarks.
+```
+
+Entrada:
+
+```text
 Por favor, denme 5 consejos para nombrar productos según los expertos.
 Asesoramiento industrial.
-Producción:
+```
 
+Salida:
+
+```text
 ¡Por supuesto! Ponerle nombre a un producto es crucial, ya que a menudo le da el nombre que necesita.
 La primera impresión que dan a los clientes potenciales. Aquí cinco expertos
 Consejos para guiarte en la denominación de productos:
@@ -308,14 +392,58 @@ idea de ejecutarlos mediante diversos grupos de enfoque o realizar encuestas
 para medir las reacciones. Además, asegúrate de que el nombre que elijas sea
 Disponible para registro de marca y no infringe ninguna marca existente.
 marcas comerciales.
+```
+
 Luego, dentro de la misma ventana de chat, donde el modelo tiene el contexto del consejo pasado que dio, le pides tu mensaje inicial sobre la tarea que querías completar.
 
-Aporte:
+<img width="839" alt="image" src="https://github.com/user-attachments/assets/0fbef287-4ca0-4e35-afaf-4ccf6973f497">
 
+<img width="673" alt="image" src="https://github.com/user-attachments/assets/2d2f8135-b5da-418c-8ded-9a910f06a2a9">
+
+Input:
+
+```text
+Using this advice, can I have a list of product names for a
+pair of shoes that can fit any foot size?
+```
+
+Output:
+
+```text
+Certainly! Based on the criteria given:
+
+1. **Simplicity & Memorability**
+2. **Relevance & Descriptiveness**
+3. **Differentiation & Uniqueness**
+4. **Adaptable & Scalable**
+5. **Positive Connotations**
+
+Here's a list of potential product names for shoes that can
+fit any foot size:
+
+1. **FitAll Walkers**: A simple and memorable name that
+instantly suggests a universal fit.
+
+...
+
+10. **TrueFit Universals**: Emphasizing genuine comfort and
+fit for all.
+
+Before finalizing any name, remember to check for trademarks
+to ensure there's no conflict with existing products or
+brands.
+```
+
+Entrada:
+
+```text
 Con este consejo, ¿puedo tener una lista de nombres de productos para un
 ¿Un par de zapatos que se adapten a cualquier tamaño de pie?
-Producción:
+```
 
+Salida:
+
+```text
 ¡Por supuesto! Según los criterios establecidos:
 
 1. **Simplicidad y memorabilidad**
@@ -338,10 +466,52 @@ Apto para todos.
 Antes de decidir cualquier nombre, recuerde comprobar las marcas comerciales.
 para garantizar que no haya ningún conflicto con productos existentes o
 marcas.
+```
+
 Según nuestra experiencia, otra estrategia fructífera es tomar los mejores consejos disponibles para la tarea que desea realizar e insertar ese contexto en la solicitud. Por ejemplo, puede tomar las 5 reglas de oro de Brandwatch para nombrar un producto u otro recurso externo confiable que encuentre e insertarlo como contexto en la solicitud. Esto aumentará significativamente la longitud de la solicitud, lo que cuesta más dinero (cuando se usa la API como desarrollador), pero puede valer la pena si la calidad de la respuesta mejora.
 
-Aporte:
+<img width="765" alt="image" src="https://github.com/user-attachments/assets/45c789f5-1a17-4bd3-9004-39be515a4cc0">
 
+<img width="756" alt="image" src="https://github.com/user-attachments/assets/bc0b6e91-2f7a-4f11-be2a-2dca59dc86e4">
+
+Input:
+
+```text
+Can I have a list of product names for a pair of shoes that
+can fit any foot size? Please follow the five rules below:
+
+1. It should be readable and writable.
+If your product name is hard to pronounce, people won’t talk about it,
+and if they can’t write it down (and spell it correctly!)
+when they hear it, how do you expect them to Google it?
+
+Keep it simple and don’t go with any wacky spellings just for the sake of it.
+
+...
+
+5. It should evoke an emotion, feeling, or idea.
+Your product name should tie back into what your product is, what the
+feeling you want people to have when experiencing your product is, and/or
+what idea are you trying to get across.
+
+It should be emotive and inspiring.
+```
+
+Output:
+
+```text
+1. FlexFit Footwear
+2. OmniSize Sneakers
+3. AdaptStride Shoes
+...
+18. OmniComfort Kicks
+19. FlexSize Footwear
+20. Boundless Soles
+```
+
+Entrada:
+
+```text
 ¿Puedo tener una lista de nombres de productos para un par de zapatos que...
 ¿Se adapta a cualquier tamaño de pie? Siga las cinco reglas que se indican a continuación:
 
@@ -360,8 +530,11 @@ La sensación que desea que la gente tenga cuando experimente su producto es, y/
 ¿Qué idea estás intentando transmitir?
 
 Debe ser emotivo e inspirador.
-Producción:
+```
 
+Salida:
+
+```text
 1. Calzado FlexFit
 2. Zapatillas OmniSize
 3. Zapatillas AdaptStride
@@ -369,31 +542,60 @@ Producción:
 18. Zapatillas OmniComfort
 19. Calzado FlexSize
 20. Suelas sin límites
-Hay otras innumerables formas deProporcionar una dirección. En el ejemplo de generación de imágenes, la dirección se proporcionó especificando que la reunión de negocios se lleva a cabo alrededor de una mesa con tapa de vidrio. Si cambia solo ese detalle, puede obtener una imagen completamente diferente, como se detalla en la Figura 1-5 .
+```
 
-Aporte:
+Hay otras innumerables formas de proporcionar una dirección. En el ejemplo de generación de imágenes, la dirección se proporcionó especificando que la reunión de negocios se lleva a cabo alrededor de una mesa con tapa de vidrio. Si cambia solo ese detalle, puede obtener una imagen completamente diferente, como se detalla en la Figura 1-5 .
 
+Input:
+
+```text
+https://s.mj.run/TKAsyhNiKmc stock photo of business meeting
+of four people gathered around a campfire outdoors in the
+woods, Panasonic, DC-GH5
+```
+
+Entrada:
+
+```text
 https://s.mj.run/TKAsyhNiKmc foto de archivo de una reunión de negocios
 de cuatro personas reunidas alrededor de una fogata al aire libre en el
 Bosques, Panasonic, DC-GH5
+```
+
 La figura 1-5 muestra la salida.
 
+<img width="821" alt="image" src="https://github.com/user-attachments/assets/02155de3-735f-43ce-b817-aaa5d93cf9cb">
 
-Figura 1-5. Fotografía de archivo de una reunión de negocios en el bosque
-El juego de roles también es importante paraGeneración de imágenes. Una de las formas más eficaces de orientar a Midjourney es proporcionar el nombre de un artista o estilo artístico que emular. Un artista que aparece mucho en el mundo del arte de la IA es Van Gogh, conocido por sus pinceladas audaces y dramáticas y su uso vívido de los colores. Observa lo que sucede cuando incluyes su nombre en la indicación, como se muestra en la Figura 1-6 .
+**Figura 1-5. Fotografía de archivo de una reunión de negocios en el bosque**
 
-Aporte:
+El juego de roles también es importante para generación de imágenes. Una de las formas más eficaces de orientar a Midjourney es proporcionar el nombre de un artista o estilo artístico que emular. Un artista que aparece mucho en el mundo del arte de la IA es Van Gogh, conocido por sus pinceladas audaces y dramáticas y su uso vívido de los colores. Observa lo que sucede cuando incluyes su nombre en la indicación, como se muestra en la Figura 1-6 .
 
+<img width="837" alt="image" src="https://github.com/user-attachments/assets/cd45e669-8e67-49ed-9914-cf95ce819816">
+
+Input:
+
+```text
+people in a business meeting, by Van Gogh
+```
+
+Entrada:
+
+```text
 Personas en una reunión de negocios, de Van Gogh
+```
+
 La figura 1-6 muestra la salida.
 
+<img width="833" alt="image" src="https://github.com/user-attachments/assets/4d47c755-7ccc-411b-b63b-946b21f88817">
 
-Figura 1-6. Personas en una reunión de negocios, de Van Gogh
-Para que funcione ese último mensaje, debes:Elimina muchas de las otras direcciones. Por ejemplo, si eliminas la imagen base y las palabras " foto de archivo" y la cámara Panasonic, DC-GH5, podrás incorporar el estilo de Van Gogh. El problema con el que te puedes encontrar es que, a menudo, si se aplica demasiada dirección, el modelo puede llegar rápidamente a una combinación conflictiva que no puede resolver. Si tu indicación es demasiado específica, es posible que no haya suficientes muestras en los datos de entrenamiento para generar una imagen que sea coherente con todos tus criterios. En casos como estos, debes elegir qué elemento es más importante (en este caso, Van Gogh) y ceñirte a eso.
+**Figura 1-6. Personas en una reunión de negocios, de Van Gogh**
 
-La dirección es uno de los principios más utilizados y más amplios. Puede adoptar la forma de simplemente usar las palabras descriptivas adecuadas para aclarar su intención o canalizar las personalidades de celebridades empresariales relevantes. Si bien demasiada dirección puede limitar la creatividad de la empresa,Modelo, muy poca dirección es el problema más común.
+Para que funcione ese último mensaje, debes: Elimina muchas de las otras direcciones. Por ejemplo, si eliminas la imagen base y las palabras "*stock photo - foto de archivo*" y la cámara Panasonic, DC-GH5, podrás incorporar el estilo de Van Gogh. El problema con el que te puedes encontrar es que, a menudo, si se aplica demasiada dirección, el modelo puede llegar rápidamente a una combinación conflictiva que no puede resolver. Si tu indicación es demasiado específica, es posible que no haya suficientes muestras en los datos de entrenamiento para generar una imagen que sea coherente con todos tus criterios. En casos como estos, debes elegir qué elemento es más importante (en este caso, Van Gogh) y ceñirte a eso.
 
-2. Especificar formato
+La dirección es uno de los principios más utilizados y más amplios. Puede adoptar la forma de simplemente usar las palabras descriptivas adecuadas para aclarar su intención o canalizar las personalidades de celebridades empresariales relevantes. Si bien demasiada dirección puede limitar la creatividad de la empresa, modelo, muy poca dirección es el problema más común.
+
+## 2. Especificar formato
+
 Los modelos de IA son traductores universales. No solo¿Eso significa traducir del francés al inglés, o del urdu al klingon, pero también entre estructuras de datos como JSON a YAML o lenguaje natural?lenguaje a código Python. Estos modelos son capaces de devolver una respuesta en casi cualquier formato, por lo que una parte importante de la ingeniería de indicaciones es encontrar formas de especificar en qué formato desea que esté la respuesta.
 
 De vez en cuando, verás que el mismo mensaje devuelve un formato diferente, por ejemplo, una lista numerada en lugar de separada por comas. Esto no es un gran problema la mayor parte del tiempo, porque la mayoría de los mensajes son únicos y se escriben en ChatGPT o Midjourney. Sin embargo, cuando incorporas herramientas de IA en software de producción, los cambios ocasionales en el formato pueden causar todo tipo de errores.
