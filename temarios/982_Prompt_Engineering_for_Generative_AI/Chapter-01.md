@@ -1,16 +1,45 @@
-# Capítulo 1. Los cinco principios de la incitación
-La ingeniería rápida es el proceso de descubririndicaciones que producen de manera confiable resultados útiles o deseados.
+# Capítulo 1. Los cinco principios del Prompting
 
-Un mensaje es la entrada que usted proporciona, normalmentetexto, al interactuar con un modelo de IA como ChatGPT o Midjourney. El mensaje sirve como un conjunto de instrucciones que el modelo utiliza para predecir elrespuesta deseada: texto de modelos de lenguaje grandes (LLM) como ChatGPT , o imágenes de modelos de difusión como Midjourney .
+La ***Prompt engineering*** es el proceso de descubrir indicaciones que producen de manera confiable resultados útiles o deseados.
 
-A continuación se muestra un ejemplo sencillo de una entrada rápida paraun generador de nombres de productos (inspirado en uno de los ejemplos de OpenAI ) y el resultado de ChatGPT.
+Un ***prompt*** es la entrada que usted proporciona, normalmente texto, al interactuar con un modelo de IA como **ChatGPT** o **Midjourney**. El mensaje sirve como un conjunto de instrucciones que el modelo utiliza para predecir la respuesta deseada: texto de modelos de lenguaje grandes (LLM) como [ChatGPT](https://chatgpt.com/), o imágenes de modelos de difusión como [Midjourney](https://www.midjourney.com/home).
 
-Aporte:
+A continuación se muestra un ejemplo sencillo de una entrada rápida para un generador de nombres de productos (inspirado en uno de los [ejemplos de OpenAI](https://platform.openai.com/examples/) ) y el resultado de ChatGPT.
 
+![image](https://github.com/user-attachments/assets/3eeca345-c46d-4109-8339-f1dd7d444f80)
+
+Input:
+
+```text
+Can I have a list of product names for a pair of shoes that
+can fit any foot size?
+```
+
+Output:
+
+```text
+Certainly! Here's a list of product names for a pair of shoes
+that can fit any foot size:
+
+UniFit SoleStrides
+FlexiSize All-Fit Shoes
+OmniFit FootFlex
+...
+AnyStep AdaptiWalkers
+FlexiRange UniversalSteps
+PerfectGlide MultiFit Shoes
+```
+
+Entrada:
+
+```text
 ¿Puedo tener una lista de nombres de productos para un par de zapatos que...
 ¿Puede adaptarse a cualquier tamaño de pie?
-Producción:
+```
 
+Salida:
+
+```text
 ¡Por supuesto! Aquí tienes una lista de nombres de productos para un par de zapatos
 que puede adaptarse a cualquier tamaño de pie:
 
@@ -21,35 +50,78 @@ Flexibilidad de pies OmniFit
 Andadores adaptables AnyStep
 Escaleras universales FlexiRange
 Zapatillas PerfectGlide MultiFit
+```
+
 Esta es una respuesta notable para un mensaje ingenuo, que parece mágico porque llegamos hasta aquí con muy poco esfuerzo. A medida que los modelos de última generación mejoran, la probabilidad de obtener resultados suficientemente buenos en el primer intento aumenta. Para cualquier interacción descartable con una IA, en la que no planee realizar la misma tarea nuevamente, el enfoque ingenuo es todo lo que necesita.
 
 Sin embargo, si planeas poner este mensaje en producción, te beneficiarás si inviertes más trabajo para hacerlo bien. Los errores te cuestan dinero en términos de las tarifas que cobra OpenAI en función de la longitud del mensaje y la respuesta, así como el tiempo que se dedica a corregir los errores. Si estuvieras creando un generador de nombres de productos con miles de usuarios, hay algunos problemas obvios que querrías intentar solucionar:
 
-Dirección vaga
-No estás informando a la IA sobre qué estilo de¿Qué nombre quieres o qué atributos debería tener? ¿Quieres una sola palabra o una concatenación? ¿Se pueden inventar las palabras o es importante que estén en inglés real? ¿Quieres que la IA emule a alguien a quien admires y que sea famoso por sus fantásticos nombres de productos?
+* **Dirección vaga**
+  
+   No estás informando a la IA sobre qué estilo de ¿Qué nombre quieres o qué atributos debería tener? ¿Quieres una sola palabra o una concatenación? ¿Se pueden inventar las palabras o es importante que estén en inglés real? ¿Quieres que la IA emule a alguien a quien admires y que sea famoso por sus fantásticos nombres de productos?
 
-Salida sin formato
-Obtendrá una lista de nombres separados línea por línea, de longitud no especificada. Cuando ejecute este mensaje varias veces, verá que a veces aparece una lista numerada y, a menudo, tiene texto al principio, lo que dificulta su análisis programático.
+* **Salida sin formato**
+  
+   Obtendrá una lista de nombres separados línea por línea, de longitud no especificada. Cuando ejecute este mensaje varias veces, verá que a veces aparece una lista numerada y, a menudo, tiene texto al principio, lo que dificulta su análisis programático.
 
-Ejemplos faltantes
-No le has dado ningún ejemplo a la IA.Cómo son los buenos nombres. Se completa automáticamente utilizando un promedio de sus datos de entrenamiento, es decir, todo Internet (con todo su sesgo inherente), pero ¿es eso lo que quieres? Lo ideal sería que le proporcionaras ejemplos de nombres exitosos, nombres comunes en una industria o incluso otros nombres que te gusten.
+* **Ejemplos faltantes**
+  
+   No le has dado ningún ejemplo a la IA. Cómo son los buenos nombres. Se completa automáticamente utilizando un promedio de sus datos de entrenamiento, es decir, todo Internet (con todo su sesgo inherente), pero ¿es eso lo que quieres? Lo ideal sería que le proporcionaras ejemplos de nombres exitosos, nombres comunes en una industria o incluso otros nombres que te gusten.
 
-Evaluación limitada
-No tienes una forma consistente o escalable deDefinir qué nombres son buenos o malos, por lo que hay que revisar manualmente cada respuesta. Si se puede implementar un sistema de calificación u otra forma de medición, se puede optimizar el mensaje para obtener mejores resultados e identificar cuántas veces falla.
+* **Evaluación limitada**
+  
+   No tienes una forma consistente o escalable de definir qué nombres son buenos o malos, por lo que hay que revisar manualmente cada respuesta. Si se puede implementar un sistema de calificación u otra forma de medición, se puede optimizar el mensaje para obtener mejores resultados e identificar cuántas veces falla.
 
-Sin división de tareas
-Estás pidiendo mucho.Un solo mensaje aquí: hay muchos factores que intervienen en el nombre del producto, y esta importante tarea se está subcontratando ingenuamente a la IA de una sola vez, sin especialización de tareas ni visibilidad de cómo maneja esta tarea por usted.
+* **Sin división de tareas**
+  
+   Estás pidiendo mucho. Un solo mensaje aquí: hay muchos factores que intervienen en el nombre del producto, y esta importante tarea se está subcontratando ingenuamente a la IA de una sola vez, sin especialización de tareas ni visibilidad de cómo maneja esta tarea por usted.
 
-Abordar estos problemas es la base de los principios básicos que utilizamos a lo largo de este libro. Hay muchosExisten diferentes formas de pedirle a un modelo de IA que haga la misma tarea, e incluso pequeños cambios pueden hacer una gran diferencia. Los LLM funcionan prediciendo continuamente el siguiente token (aproximadamente tres cuartos de una palabra), a partir de lo que estaba en su indicación. Cada nuevo token se selecciona en función de su probabilidad de aparecer a continuación, con unaElemento de aleatoriedad (controlado por el parámetro de temperatura ). Como se muestra en la Figura 1-1 , la palabra shoes tenía una menor probabilidad de aparecer después del inicio del nombre AnyFit (0,88 %), mientras que una respuesta más predecible sería Athletic (72,35 %).
+Abordar estos problemas es la base de los principios básicos que utilizamos a lo largo de este libro. Existen diferentes formas de pedirle a un modelo de IA que haga la misma tarea, e incluso pequeños cambios pueden hacer una gran diferencia. Los LLM funcionan prediciendo continuamente el siguiente token (aproximadamente tres cuartos de una palabra), a partir de lo que estaba en su indicación. Cada nuevo token se selecciona en función de su probabilidad de aparecer a continuación, con un elemento de aleatoriedad (controlado por el parámetro de temperatura). Como se muestra en la Figura 1-1 , la palabra shoes tenía una menor probabilidad de aparecer después del inicio del nombre AnyFit (0,88 %), mientras que una respuesta más predecible sería Athletic(72,35 %).
 
+![image](https://github.com/user-attachments/assets/983f5e20-3fb0-4aea-9d8c-0829ca352302)
 
-Figura 1-1. Cómo se descompone la respuesta en tokens
-Los modelos LLM se entrenan básicamente con todo el texto de Internet y luego se perfeccionan para brindar respuestas útiles. Las indicaciones promedio arrojarán respuestas promedio, lo que hace que algunas personas se sientan decepcionadas cuando sus resultados no estén a la altura de las expectativas. Lo que se incluye en la indicación cambia la probabilidad de que se genere cada palabra, por lo que es muy importante para los resultados que se obtendrán. Estos modelos han visto lo mejor y lo peor de lo que los humanos han producido y son capaces de emular casi cualquier cosa si se sabe la forma correcta de preguntar. OpenAI cobra en función de la cantidad de tokens utilizados en la indicación y la respuesta, por lo que los ingenieros de indicaciones deben hacer que estos tokens cuenten optimizando las indicaciones en términos de costo, calidad y confiabilidad.
+**Figura 1-1. Cómo se descompone la respuesta en tokens**
 
-He aquí el mismo ejemplo con la aplicación de varias técnicas de ingeniería de indicaciones. Pedimos nombres al estilo de Steve Jobs, indicamos que queremos una lista separada por comas y proporcionamos ejemplos de la tarea realizada correctamente.
+Los modelos LLM se entrenan básicamente con todo el texto de Internet y luego se perfeccionan para brindar respuestas útiles. Las indicaciones promedio arrojarán respuestas promedio, lo que hace que algunas personas se sientan decepcionadas cuando sus resultados no estén a la altura de las expectativas. Lo que se incluye en la indicación cambia la probabilidad de que se genere cada palabra, por lo que es muy importante para los resultados que se obtendrán. Estos modelos han visto lo mejor y lo peor de lo que los humanos han producido y son capaces de emular casi cualquier cosa si se sabe la forma correcta de preguntar. OpenAI cobra en función de la cantidad de [tokens utilizados](https://openai.com/chatgpt/pricing/) en la indicación y la respuesta, por lo que los ingenieros de indicaciones deben hacer que estos tokens cuenten optimizando las indicaciones en términos de costo, calidad y confiabilidad.
 
-Aporte:
+He aquí el mismo ejemplo con la aplicación de varias técnicas de prompt engineering. Pedimos nombres al estilo de Steve Jobs, indicamos que queremos una lista separada por comas y proporcionamos ejemplos de la tarea realizada correctamente.
 
+![image](https://github.com/user-attachments/assets/8a60819a-d466-4f3c-b7f3-f71e810a6c74)
+
+![image](https://github.com/user-attachments/assets/d7b539be-7eb2-42a8-bb2b-148c39016f21)
+
+Input:
+
+```text
+Brainstorm a list of product names for a shoe that fits any
+foot size, in the style of Steve Jobs.
+
+Return the results as a comma-separated list, in this format:
+Product description: A shoe that fits any foot size
+Product names: [list of 3 product names]
+
+## Examples
+Product description: A refrigerator that dispenses beer
+Product names: iBarFridge, iFridgeBeer, iDrinkBeerFridge
+
+Product description: A watch that can tell accurate time in
+space
+Product names: iNaut, iSpace, iTime
+
+Product description: A home milkshake maker
+Product names: iShake, iSmoothie, iShake Mini
+```
+
+Output:
+
+```text
+Product description: A shoe that fits any foot size
+Product names: iFitFoot, iPerfectFit, iShoeSize
+```
+
+Entrada:
+
+```text
 Piense en una lista de nombres de productos para un zapato que se adapte a cualquier persona.
 Tamaño del pie, al estilo de Steve Jobs.
 
@@ -67,67 +139,110 @@ Nombres de productos: iNaut, iSpace, iTime
 
 Descripción del producto: Una batidora casera
 Nombres de productos: iShake, iSmoothie, iShake Mini
-Producción:
+```
 
+Salida:
+
+```text
 Descripción del producto: Un zapato que se adapta a cualquier tamaño de pie.
 Nombres de productos: iFitFoot, iPerfectFit, iShoeSize
+```
+
 Si bien ningún mensaje es perfecto, este mensaje está optimizado para ofrecer nombres de productos sólidos y confiables en el formato correcto. El usuario de su generador de nombres de productos puede elegir a alguien que no sea Steve Jobs para obtener los tipos de nombres que le gustan, puede cambiar el formato de respuesta si es necesario y el resultado de este mensaje puede convertirse en la entrada de otro. Por último, puede actualizar periódicamente los ejemplos que utiliza en el mensaje en función de los comentarios de los usuarios, lo que hace que su sistema sea más inteligente con el tiempo.
 
-Descripción general de los cinco principios de la incitación
-El proceso para optimizar este mensaje sigue los cinco principios del mensaje , que analizaremos en detalle utilizando este ejemplo en el resto de este capítulo y recordaremos a lo largo del libro. Se corresponden exactamente con los cinco problemas que planteamos al analizar el mensaje de texto ingenuo. Encontrará referencias a estos principios en el resto del libro para ayudarlo a conectar los puntos con la forma en que se utilizan en la práctica. Los cinco principiosLos principios del Prompting son los siguientes:
+## Descripción general de los cinco principios del Prompting
 
-Dar dirección
-Describir lo deseadoEstilo en detalle, o hacer referencia a una persona relevante
+El proceso para optimizar este mensaje sigue los cinco principios del Prompting, que analizaremos en detalle utilizando este ejemplo en el resto de este capítulo y recordaremos a lo largo del libro. Se corresponden exactamente con los cinco problemas que planteamos al analizar el prompt de texto ingenuo. Encontrará referencias a estos principios en el resto del libro para ayudarlo a conectar los puntos con la forma en que se utilizan en la práctica. Los cinco principiosLos principios del Prompting son los siguientes:
 
-Especificar formato
-Definir qué reglas seguir,y la estructura requerida de la respuesta
+* **Dar dirección**
 
-Proporcionar ejemplos
-Insertar un conjunto diverso deCasos de prueba donde la tarea se realizó correctamente
+   Describir lo deseado estilo en detalle, o hacer referencia a una persona relevante
 
-Evaluar la calidad
-Identificar erroresy evaluar las respuestas, probando qué impulsa el rendimiento.
+* **Especificar formato**
+  
+   Definir qué reglas seguir y la estructura requerida de la respuesta
 
-Dividir el trabajo
-Dividir las tareas enMúltiples pasos, encadenados entre sí para lograr objetivos complejos.
+* **Proporcionar ejemplos**
 
-Estos principios no son consejos ni trucos efímeros , sino convenciones generalmente aceptadas que son útiles para trabajar con cualquier nivel de inteligencia, biológica o artificial. Estos principios son independientes del modelo y deberían funcionar para mejorar su mensaje sin importar qué modelo de texto o imagen generativo esté utilizando. Publicamos estos principios por primera vez en julio de 2022 en la publicación del blog "Prompt Engineering: From Words to Art and Copy" y han resistido la prueba del tiempo, incluida la correspondencia bastante cercana con la propia Prompt Engineering Guide de OpenAI , que se publicó un año después. Es probable que cualquiera que trabaje de cerca con modelos de IA generativa converja en un conjunto similar de estrategias para resolver problemas comunes y, a lo largo de este libro, verá cientos de ejemplos demostrativos de cómo pueden ser útiles para mejorar sus mensajes.
+   Insertar un conjunto diverso de casos de prueba donde la tarea se realizó correctamente
 
-Hemos proporcionado páginas únicas descargables paraGeneración de texto e imágenes que puede utilizar como lista de verificación al aplicar estos principios. Estos se crearon para nuestro popular curso de Udemy The Complete Prompt Engineering for AI Bootcamp (más de 70 000 estudiantes), que se basó en los mismos principios pero con diferentesmaterial para este libro.
+* **Evaluar la calidad**
 
-Generación de texto de una página
+   Identificar errores y evaluar las respuestas, probando qué impulsa el rendimiento.
 
-Generación de imágenes en una sola página
+* **Dividir el trabajo**
+  
+   Dividir las tareas en múltiples pasos, encadenados entre sí para lograr objetivos complejos.
 
-Para demostrar que estos principios se aplican igualmente bien a los modelos de imágenes de estímulo, usemos el siguiente ejemplo y expliquemos cómo aplicar cada uno de los cinco principios de estímulo a este escenario específico. Copie y pegue el mensaje de entrada completo en elBot Midjourney en Discord, incluido el enlace a la imagen al principio, después de escribir /imaginepara activar el cuadro de aviso que aparecerá (requiere una cuenta gratuita de Discord y una cuenta paga de Midjourney ).
+Estos principios no son consejos ni trucos efímeros, sino convenciones generalmente aceptadas que son útiles para trabajar con cualquier nivel de inteligencia, biológica o artificial. Estos principios son independientes del modelo y deberían funcionar para mejorar su mensaje sin importar qué modelo de texto o imagen generativo esté utilizando. Publicamos estos principios por primera vez en julio de 2022 en la publicación del blog "[Prompt Engineering: From Words to Art and Copy](https://www.saxifrage.xyz/post/prompt-engineering)" y han resistido la prueba del tiempo, incluida la correspondencia bastante cercana con la propia [Prompt Engineering Guide de OpenAI](https://platform.openai.com/docs/guides/prompt-engineering), que se publicó un año después. Es probable que cualquiera que trabaje de cerca con modelos de IA generativa converja en un conjunto similar de estrategias para resolver problemas comunes y, a lo largo de este libro, verá cientos de ejemplos demostrativos de cómo pueden ser útiles para mejorar sus mensajes.
 
-Aporte:
+Hemos proporcionado páginas únicas descargables para generación de texto e imágenes que puede utilizar como lista de verificación al aplicar estos principios. Estos se crearon para nuestro popular curso de [Udemy The Complete Prompt Engineering for AI Bootcamp](https://www.udemy.com/course/prompt-engineering-for-ai/?couponCode=KEEPLEARNING) (más de 70 000 estudiantes), que se basó en los mismos principios pero con diferentes material para este libro.
 
+* [Generación de texto de una página](https://github.com/BrightPool/prompt-engineering-for-generative-ai-examples/blob/main/images/OnePager-Text.png)
+* [Generación de imágenes en una sola página](https://github.com/BrightPool/prompt-engineering-for-generative-ai-examples/blob/main/images/OnePager-Images.png)
+
+Para demostrar que estos principios se aplican igualmente bien a los modelos de imágenes de estímulo, usemos el siguiente ejemplo y expliquemos cómo aplicar cada uno de los cinco principios de estímulo a este escenario específico. Copie y pegue el mensaje de entrada completo en el Bot Midjourney en Discord, incluido el enlace a la imagen al principio, después de escribir `/imagine` para activar el cuadro de aviso que aparecerá (requiere una cuenta gratuita de [Discord](https://discord.com/) y una cuenta de paga de [Midjourney](https://www.midjourney.com/)).
+
+![image](https://github.com/user-attachments/assets/d234e247-738c-4348-b331-4aa941984dff)
+
+
+Input:
+
+```text
+https://s.mj.run/TKAsyhNiKmc stock photo of business meeting
+of 4 people watching on white MacBook on top of glass-top
+table, Panasonic, DC-GH5
+```
+
+Entrada:
+
+```text
 https://s.mj.run/TKAsyhNiKmc foto de archivo de una reunión de negocios
 de 4 personas mirando desde una MacBook blanca sobre una cubierta de vidrio
 Mesa Panasonic DC-GH5
+```
 La figura 1-2 muestra la salida.
 
+![image](https://github.com/user-attachments/assets/0d4a5003-0e6d-4584-9539-8ce2ad682d79)
 
-Figura 1-2. Fotografía de archivo de una reunión de negocios
-Este mensaje aprovecha la capacidad de Midjourney para tomarUna imagen base como ejemplo subiendo la imagen a Discord y luego copiando y pegando la URL en el mensaje ( https://s.mj.run/TKAsyhNiKmc ), para lo cual se utiliza la imagen libre de regalías de Unsplash ( Figura 1-3 ). Si te encuentras con un error con el mensaje, intenta subir la imagen tú mismo y revisa la documentación de Midjourney para ver si hay cambios de formato.
+**Figura 1-2. Fotografía de archivo de una reunión de negocios**
 
+Este mensaje aprovecha la capacidad de Midjourney para tomar una imagen base como ejemplo subiendo la imagen a Discord y luego copiando y pegando la URL en el mensaje ( https://s.mj.run/TKAsyhNiKmc ), para lo cual se utiliza la imagen libre de regalías de Unsplash ( Figura 1-3 ). Si te encuentras con un error con el mensaje, intenta subir la imagen tú mismo y revisa la [documentación de Midjourney](https://docs.midjourney.com/docs/image-prompts) para ver si hay cambios de formato.
 
-Figura 1-3. Foto de Mimi Thian en Unsplash
-Comparemos este mensaje bien diseñadoEn comparación con lo que se obtiene de Midjourney si se pide ingenuamente una foto de archivo de la forma más simple posible, la figura 1-4 muestra un ejemplo de lo que se obtiene sin ingeniería rápida: una imagen con un estilo más oscuro y estilizado de una foto de archivo de lo que se esperaría normalmente.
+![image](https://github.com/user-attachments/assets/89f900e5-0934-43ec-ab3f-e1438f37428f)
 
-Aporte:
+**Figura 1-3. Foto de Mimi Thian en Unsplash**
 
+Comparemos este mensaje bien diseñado en comparación con lo que se obtiene de Midjourney si se pide ingenuamente una foto de archivo de la forma más simple posible, la figura 1-4 muestra un ejemplo de lo que se obtiene sin prompt engineering: una imagen con un estilo más oscuro y estilizado de una foto de archivo de lo que se esperaría normalmente.
+
+![image](https://github.com/user-attachments/assets/0e8afc54-40b3-41b3-8c59-47a91073f126)
+
+Input:
+
+```text
+people in a business meeting
+```
+
+Entrada:
+
+```text
 personas en una reunión de negocios
+```
+
 La figura 1-4 muestra la salida.
 
-Aunque se trata de un problema menos destacado a partir de la versión 5 de Midjourney, los mecanismos de retroalimentación de la comunidad (cuando los usuarios seleccionan una imagen para cambiar su tamaño a una resolución más alta, esa elección puede utilizarse para entrenar el modelo) han sesgado el modelo hacia una estética de fantasía , que es menos adecuada para el caso de uso de fotografías de archivo. Los primeros usuarios de Midjourney provenían del mundo del arte digital y naturalmente se inclinaron por los estilos de fantasía y ciencia ficción, lo que se puede reflejar en los resultados del modelo incluso cuando esta estética no es adecuada.
+Aunque se trata de un problema menos destacado a partir de la versión 5 de Midjourney, los mecanismos de retroalimentación de la comunidad (cuando los usuarios seleccionan una imagen para cambiar su tamaño a una resolución más alta, esa elección puede utilizarse para entrenar el modelo) han sesgado el modelo hacia una estética de fantasía, que es menos adecuada para el caso de uso de fotografías de archivo. Los primeros usuarios de Midjourney provenían del mundo del arte digital y naturalmente se inclinaron por los estilos de fantasía y ciencia ficción, lo que se puede reflejar en los resultados del modelo incluso cuando esta estética no es adecuada.
+
+![image](https://github.com/user-attachments/assets/9fba0d6f-47a9-4b21-a5eb-78be72045914)
+
+**Figura 1-4. Personas en una reunión de negocios**
+
+A lo largo de este libro se utilizarán los ejemplos: ser compatible con ChatGPT Plus (GPT-4) como modelo de texto y Midjourney v6 o Stable Diffusion XL como modelo de imagen, aunque especificaremos si es importante. Estos modelos básicos son el estado actual de la técnica y son buenos para una amplia gama de tareas. Los principios están pensados ​​para que sean a prueba de futuro tanto como sea posible, por lo que si estás leyendo este libro cuando GPT-5, Midjourney v7 o Stable Diffusion XXL estén disponibles, o si estás usando otro proveedor como Google, todo lo que aprendas aquí debería resultarte útil.
 
 
-Figura 1-4. Personas en una reunión de negocios
-A lo largo de este libro se utilizarán los ejemplos:ser compatible con ChatGPT Plus (GPT-4) como modelo de texto y Midjourney v6 o Stable Diffusion XL como modelo de imagen, aunque especificaremos si es importante. Estos modelos básicos son el estado actual de la técnica y son buenos para una amplia gama de tareas. Los principios están pensados ​​para que sean a prueba de futuro tanto como sea posible, por lo que si estás leyendo este libro cuando GPT-5, Midjourney v7 o Stable Diffusion XXL estén disponibles, o si estás usando otro proveedor como Google, todo lo que aprendas aquí debería resultarte útil.
+AQUIIIIII
+## 1. Dar dirección
 
-1. Dar dirección
 Uno de los problemas con el texto ingenuoEl problema que se mencionó anteriormente fue que no se le estaba informando a la IA sobre qué tipos de nombres de productos quería. Hasta cierto punto, ponerle nombre a un producto es una tarea subjetiva y, sin darle a la IA una idea de qué nombres le gustan, tiene pocas probabilidades de acertar.
 
 Por cierto, un humano también tendría dificultades para completar esta tarea sin un buen resumen , por lo que las agencias creativas y de branding requieren una sesión informativa detallada sobre cualquier tarea de sus clientes.
