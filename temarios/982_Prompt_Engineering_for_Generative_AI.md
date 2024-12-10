@@ -56,4 +56,4 @@ Los autores traducen con maestría las complejidades de la prompt engineering en
 
 ### [Preface](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/982_Prompt_Engineering_for_Generative_AI/Preface.md)
 
-### Capitulo 1 
+### [Chapter 1. The Five Principles of Prompting](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/982_Prompt_Engineering_for_Generative_AI/Chapter-01.md)
