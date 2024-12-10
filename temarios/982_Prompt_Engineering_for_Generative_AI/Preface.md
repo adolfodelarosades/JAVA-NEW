@@ -51,39 +51,49 @@ También debe asegurarse de que la facturación esté habilitada en su cuenta de
 
 Para la generación de imágenes, utilizamos [Midjourney](https://www.midjourney.com/home), para lo cual necesitas una cuenta de Discord para registrarte, aunque estos principios se aplican igualmente a **DALL-E 3** (disponible con una suscripción a ChatGPT Plus o a través de la API) o **Stable Diffusion** (disponible como [API](https://platform.stability.ai/) o puede [ejecutarse localmente](https://huggingface.co/blog/stable_diffusion) en tu computadora si tiene una GPU). Los ejemplos de generación de imágenes en este libro utilizan Midjourney v6, Stable Diffusion v1.5 (ya que muchas extensiones todavía son compatibles solo con esta versión) o Stable Diffusion XL , y especificamos las diferencias cuando esto es importante.
 
-Proporcionamos ejemplos que utilizan bibliotecas de código abierto siempre que sea posible, aunque incluimos proveedores comerciales cuando corresponde; por ejemplo, el Capítulo 5 sobre bases de datos vectoriales muestra tanto FAISS (una biblioteca de código abierto) como Pinecone (un proveedor pago). Los ejemplos que se muestran en el libro deberían poder modificarse fácilmente para modelos y proveedores alternativos, y las habilidades que se enseñan son transferibles. El Capítulo 4 sobre generación avanzada de texto se centra en el marco LLM LangChain, y el Capítulo 9 sobre generación avanzada de imágenes se basa en la interfaz de usuario web de difusión estable de código abierto de AUTOMATIC1111.
+Proporcionamos ejemplos que utilizan bibliotecas de código abierto siempre que sea posible, aunque incluimos proveedores comerciales cuando corresponde; por ejemplo, el Capítulo 5 sobre bases de datos vectoriales muestra tanto **FAISS**(una biblioteca de código abierto) como **Pinecone**(un proveedor pago). Los ejemplos que se muestran en el libro deberían poder modificarse fácilmente para modelos y proveedores alternativos, y las habilidades que se enseñan son transferibles. El Capítulo 4 sobre generación avanzada de texto se centra en el marco **LLM LangChain**, y el Capítulo 9 sobre generación avanzada de imágenes se basa en la interfaz de usuario web de difusión estable de código abierto de **AUTOMATIC1111**.
 
-Convenciones utilizadas en este libro
+### Convenciones utilizadas en este libro
+
 En este libro se utilizan las siguientes convenciones tipográficas:
 
-Itálico
+*Italic*
+
 Indica nuevos términos, URL, direcciones de correo electrónico, nombres de archivos y extensiones de archivos.
 
-Constant width
+`Constant width`
+
 Se utiliza para listados de programas, así como dentro de párrafos para hacer referencia a elementos del programa, como nombres de variables o funciones, bases de datos, tipos de datos, variables de entorno, declaraciones y palabras clave.
 
-Constant width bold
+`Constant width bold`
+
 Muestra comandos u otro texto que el usuario debe escribir literalmente.
 
-Constant width italic
+`Constant width italic`
+
 Muestra texto que debe reemplazarse con valores proporcionados por el usuario o por valores determinados por el contexto.
 
-CONSEJO
+**CONSEJO**
+
 Este elemento significa un consejo o sugerencia.
 
-NOTA
+**NOTA**
+
 Este elemento significa una nota general.
 
-ADVERTENCIA
+**ADVERTENCIA**
+
 Este elemento indica una advertencia o precaución.
 
-A lo largo del libro reforzamos lo que llamamos los Cinco Principios de la Incitación, identificando qué principio es más aplicable al ejemplo en cuestión. Puede consultar el Capítulo 1 , que describe los principios en detalle.
+A lo largo del libro reforzamos lo que llamamos los Cinco Principios de la Incitación, identificando qué principio es más aplicable al ejemplo en cuestión. Puede consultar el Capítulo 1, que describe los principios en detalle.
 
-NOMBRE DEL PRINCIPIO
+**NOMBRE DEL PRINCIPIO**
+
 Esto explicará cómo se aplica el principio al ejemplo o sección de texto actual.
 
-Usando ejemplos de código
-El material complementario (ejemplos de código, ejercicios, etc.) está disponible para descargar en https://oreil.ly/prompt-engineering-for-generative-ai .
+## Usando ejemplos de código
+
+El material complementario (ejemplos de código, ejercicios, etc.) está disponible para descargar en https://oreil.ly/prompt-engineering-for-generative-ai.
 
 Si tiene una pregunta técnica o un problema al utilizar los ejemplos de código, envíe un correo electrónico a bookquestions@oreilly.com .
 
@@ -93,8 +103,10 @@ Agradecemos la atribución, pero por lo general no la exigimos. Una atribución 
 
 Si considera que su uso de ejemplos de código no se considera un uso justo o no está dentro del permiso otorgado anteriormente, no dude en contactarnos a permissions@oreilly.com .
 
-Aprendizaje en línea de O'Reilly
-NOTA
+### Aprendizaje en línea de O'Reilly
+
+**NOTA**
+
 Durante más de 40 años, O'Reilly Media ha brindado capacitación, conocimiento y perspectiva sobre tecnología y negocios para ayudar a las empresas a tener éxito.
 
 Nuestra red única de expertos e innovadores comparte sus conocimientos y experiencia a través de libros, artículos y nuestra plataforma de aprendizaje en línea. La plataforma de aprendizaje en línea de O'Reilly le brinda acceso a pedido a cursos de capacitación en vivo, rutas de aprendizaje en profundidad, entornos de codificación interactivos y una vasta colección de textos y videos de O'Reilly y más de 200 editoriales. Para obtener más información, visite https://oreilly.com .
@@ -118,23 +130,24 @@ Encuéntrenos en LinkedIn: https://linkedin.com/company/oreilly-media .
 
 Míranos en YouTube: https://youtube.com/oreillymedia .
 
-Expresiones de gratitud
+### Expresiones de gratitud
+
 Nos gustaría agradecer a las siguientes personas por su contribución al realizar una revisión técnica del libro y su paciencia al corregir un objetivo que se mueve rápidamente:
 
-Mayo Oshin, colaborador inicial de LangChain y fundador de SeinnAI Analytics
+* Mayo Oshin, colaborador inicial de LangChain y fundador de SeinnAI Analytics
 
-Ellis Crosby, fundador de Scarlett Panda y la agencia de inteligencia artificial Incremen.to
+* Ellis Crosby, fundador de Scarlett Panda y la agencia de inteligencia artificial Incremen.to
 
-Dave Pawson, autor de O'Reilly XSL-FO
+* Dave Pawson, autor de O'Reilly XSL-FO
 
-Mark Phoenix, ingeniero de software senior
+* Mark Phoenix, ingeniero de software senior
 
-Aditya Goel, consultor de GenAI
+* Aditya Goel, consultor de GenAI
 
-Sanyam Kumar, director asociado, ciencia de datos, Genmab
+* Sanyam Kumar, director asociado, ciencia de datos, Genmab
 
-Lakshmanan Sethu, TAM, Soluciones Gen AI, Google
+* Lakshmanan Sethu, TAM, Soluciones Gen AI, Google
 
-Janit Anjaria, directora general del personal, Aurora Innovation Inc.
+* Janit Anjaria, directora general del personal, Aurora Innovation Inc.
 
 También agradecemos a nuestras familias por su paciencia y comprensión y nos gustaría asegurarles que todavía preferimos hablar con ellos a través de ChatGPT.
