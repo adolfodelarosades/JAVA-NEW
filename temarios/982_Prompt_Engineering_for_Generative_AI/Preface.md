@@ -1,60 +1,55 @@
 # Prefacio
-El rápido ritmo de innovación en IA generativa promete cambiar la forma en que vivimos y trabajamos, pero cada vez es más difícil seguir el ritmo. La cantidad de artículos sobre IA publicados en arXiv está creciendo exponencialmente , Stable Diffusion ha estado entre los proyectos de código abierto de más rápido crecimiento en la historia y el servidor Discord de la herramienta de arte de IA Midjourney tiene decenas de millones de miembros, superando incluso a las comunidades de juegos más grandes. Lo que más capturó la imaginación del público fue el lanzamiento de ChatGPT por parte de OpenAI, que alcanzó los 100 millones de usuarios en dos meses , lo que la convirtió en la aplicación para consumidores de más rápido crecimiento en la historia. Aprender a trabajar con IA se ha convertido rápidamente en una de las habilidades más demandadas.
 
-Todos los que utilizan la IA de manera profesional aprenden rápidamente que la calidad del resultado depende en gran medida de lo que se proporciona como entrada. La disciplina de la ingeniería rápida ha surgido como un conjunto de mejores prácticas para mejorar la fiabilidad, la eficiencia y la precisión de los modelos de IA. "En diez años, la mitad de los empleos del mundo estarán en ingeniería rápida", afirma Robin Li , cofundador y director ejecutivo del gigante tecnológico chino Baidu. Sin embargo, esperamos que la ingeniería rápida sea una habilidad requerida para muchos trabajos, similar a la competencia en Microsoft Excel, en lugar de un título de trabajo popular en sí mismo. Esta nueva ola de disrupción está cambiando todo lo que creíamos saber sobre las computadoras. Estamos acostumbrados a escribir algoritmos que devuelven el mismo resultado cada vez, no es así para la IA, donde las respuestas no son deterministas. El costo y la latencia son factores reales nuevamente, después de décadas de que la ley de Moore nos hiciera complacientes al esperar computación en tiempo real a un costo insignificante. El mayor obstáculo es la tendencia de estos modelos a inventar cosas con confianza, denominada alucinación , lo que nos obliga a repensar la forma en que evaluamos la precisión de nuestro trabajo.
+El rápido ritmo de innovación en IA generativa promete cambiar la forma en que vivimos y trabajamos, pero cada vez es más difícil seguir el ritmo. La [cantidad de artículos sobre IA publicados en arXiv está creciendo exponencialmente](https://x.com/MarioKrenn6240/status/1577102743927652354), [Stable Diffusion](https://x.com/a16z/status/1592922394275872768?s=20) ha estado entre los proyectos de código abierto de más rápido crecimiento en la historia y el [Midjourney’s Discord server](https://x.com/hammer_mt/status/1657730978125869056?s=20) tiene decenas de millones de miembros, superando incluso a las comunidades de juegos más grandes. Lo que más capturó la imaginación del público fue el lanzamiento de ChatGPT por parte de OpenAI, que alcanzó los [100 millones de usuarios en dos meses](https://x.com/kylelf_/status/1623679176246185985), lo que la convirtió en la aplicación para consumidores de más rápido crecimiento en la historia. Aprender a trabajar con IA se ha convertido rápidamente en una de las habilidades más demandadas.
 
-Hemos estado trabajando con IA generativa desde la versión beta de GPT-3 en 2020 y, a medida que vimos que los modelos progresaban, muchos de los primeros trucos y atajos de incitación dejaron de ser necesarios. Con el tiempo, surgió un conjunto coherente de principios que seguían siendo útiles con los modelos más nuevos y funcionaban tanto en la generación de texto como de imágenes. Hemos escrito este libro basándonos en estos principios atemporales, para ayudarte a aprender habilidades transferibles que seguirán siendo útiles sin importar lo que suceda con la IA en los próximos cinco años. La clave para trabajar con IA no es "descubrir cómo hackear la indicación agregando una palabra mágica al final que cambie todo lo demás", como afirma el cofundador de OpenAI, Sam Altman , sino que lo que siempre importará es la "calidad de las ideas y la comprensión de lo que quieres". Si bien no sabemos si lo llamaremos "ingeniería de indicaciones" en cinco años, trabajar de manera efectiva con IA generativa solo será más importante.
+Todos los que utilizan la IA de manera profesional aprenden rápidamente que la calidad del resultado depende en gran medida de lo que se proporciona como entrada. La disciplina de la *prompt engineering* ha surgido como un conjunto de mejores prácticas para mejorar la fiabilidad, la eficiencia y la precisión de los modelos de IA. "En diez años, la mitad de los empleos del mundo estarán en prompt engineering", [afirma Robin Li](https://www.forbes.com/sites/craigsmith/2023/04/05/mom-dad-i-want-to-be-a-prompt-engineer/), cofundador y director ejecutivo del gigante tecnológico chino Baidu. Sin embargo, esperamos que la ingeniería rápida sea una habilidad requerida para muchos trabajos, similar a la competencia en Microsoft Excel, en lugar de un título de trabajo popular en sí mismo. Esta nueva ola de disrupción está cambiando todo lo que creíamos saber sobre las computadoras. Estamos acostumbrados a escribir algoritmos que devuelven el mismo resultado cada vez, no es así para la IA, donde las respuestas no son deterministas. El costo y la latencia son factores reales nuevamente, después de décadas de que la ley de Moore nos hiciera complacientes al esperar computación en tiempo real a un costo insignificante. El mayor obstáculo es la tendencia de estos modelos a inventar cosas con confianza, denominada *alucinación*, lo que nos obliga a repensar la forma en que evaluamos la precisión de nuestro trabajo.
 
-Requisitos de software para este libro
-Todo el código de este libro está en Python y fue diseñado para ejecutarse en un Jupyter Notebook o un notebook de Google Colab . Los conceptos que se enseñan en el libro se pueden transferir a JavaScript o a cualquier otro lenguaje de codificación si se prefiere, aunque el enfoque principal de este libro está en las técnicas de inducción en lugar de las habilidades de codificación tradicionales. Todo el código se puede encontrar en GitHub y enlazaremos a los notebooks relevantes a lo largo del libro. Se recomienda encarecidamente que utilices el repositorio de GitHub y ejecutes los ejemplos proporcionados mientras lees el libro.
+Hemos estado trabajando con IA generativa desde la versión beta de GPT-3 en 2020 y, a medida que vimos que los modelos progresaban, muchos de los primeros trucos y atajos de incitación dejaron de ser necesarios. Con el tiempo, surgió un conjunto coherente de principios que seguían siendo útiles con los modelos más nuevos y funcionaban tanto en la generación de texto como de imágenes. Hemos escrito este libro basándonos en estos principios atemporales, para ayudarte a aprender habilidades transferibles que seguirán siendo útiles sin importar lo que suceda con la IA en los próximos cinco años. La clave para trabajar con IA no es "descubrir cómo hackear la indicación agregando una palabra mágica al final que cambie todo lo demás", como afirma [el cofundador de OpenAI, Sam Altman](https://greylock.com/greymatter/sam-altman-ai-for-the-next-era/), sino que lo que siempre importará es la "calidad de las ideas y la comprensión de lo que quieres". Si bien no sabemos si lo llamaremos "prompt engineering" en cinco años, trabajar de manera efectiva con IA generativa solo será más importante.
 
-Para los ejemplos que no son de cuadernos, puedes ejecutar el script con el formato python content/chapter_x/script.pyen tu terminal, donde xes el número de capítulo y script.pyes el nombre del script. En algunos casos, las claves de API deben configurarse como variables de entorno, y lo dejaremos en claro. Los paquetes utilizados se actualizan con frecuencia, así que instala nuestro requirements.txt en un entorno virtual antes de ejecutar ejemplos de código.
+## Requisitos de software para este libro
 
-El archivo requirements.txt se genera para Python 3.9. Si desea utilizar una versión diferente de Python, puede generar un nuevo archivo requirements.txt a partir de este archivo requirements.in que se encuentra en el repositorio de GitHub ejecutando estos comandos:
+Todo el código de este libro está en Python y fue diseñado para ejecutarse en un [Jupyter Notebook](https://jupyter.org/) o un [notebook de Google Colab](https://colab.research.google.com/). Los conceptos que se enseñan en el libro se pueden transferir a JavaScript o a cualquier otro lenguaje de codificación si se prefiere, aunque el enfoque principal de este libro está en las técnicas de inducción en lugar de las habilidades de codificación tradicionales. Todo el código se puede [encontrar en GitHub](https://github.com/BrightPool/prompt-engineering-for-generative-ai-examples/) y enlazaremos a los notebooks relevantes a lo largo del libro. Se recomienda encarecidamente que utilices el [repositorio de GitHub](https://github.com/BrightPool/prompt-engineering-for-generative-ai-examples/) y ejecutes los ejemplos proporcionados mientras lees el libro.
 
-`pip install pip-tools` 
-`pip-compile requisitos.in`
+Para los ejemplos que no son non-notebook, puedes ejecutar el script con el formato `python content/chapter_x/script.py` en tu terminal, donde `x` es el número de capítulo y `script.py` es el nombre del script. En algunos casos, las claves de API deben configurarse como variables de entorno, y lo dejaremos en claro. Los paquetes utilizados se actualizan con frecuencia, así que instala nuestro [requirements.txt](https://github.com/BrightPool/prompt-engineering-for-generative-ai-examples/blob/main/requirements.txt) en un entorno virtual antes de ejecutar ejemplos de código.
+
+El archivo `requirements.txt` se genera para Python 3.9. Si desea utilizar una versión diferente de Python, puede generar un nuevo archivo `requirements.txt` a partir de este archivo [requirements.in](https://github.com/BrightPool/prompt-engineering-for-generative-ai-examples/blob/main/requirements.in) que se encuentra en el repositorio de GitHub ejecutando estos comandos:
+
+![image](https://github.com/user-attachments/assets/3d32c848-a887-48c3-9e23-857cf39ff78c)
+
+```sh
+pip install pip-tools
+pip-compile requisitos.in
+```
+
 Para usuarios de Mac:
 
-Abrir Terminal: puedes encontrar la aplicación Terminal en tu carpeta Aplicaciones, en Utilidades, o usar Spotlight para buscarla.
-
-Vaya a la carpeta de su proyecto: use el cdcomando para cambiar el directorio a la carpeta de su proyecto. Por ejemplo: cd path/to/your/project.
-
-Cree el entorno virtual: use el siguiente comando para crear un entorno virtual llamado venv(puede nombrarlo como desee): python3 -m venv venv.
-
-Activar el entorno virtual: antes de instalar los paquetes, es necesario activar el entorno virtual. Para ello, utilice el comando source venv/bin/activate.
-
-Instalar paquetes: ahora que su entorno virtual está activo, puede instalar paquetes mediante pip. Para instalar paquetes desde el archivo requirements.txt , utilice pip install -r requirements.txt.
-
-Desactivar el entorno virtual: cuando hayas terminado, puedes desactivar el entorno virtual escribiendo deactivate.
+1. Abrir Terminal: puedes encontrar la aplicación Terminal en tu carpeta Aplicaciones, en Utilidades, o usar Spotlight para buscarla.
+2. Vaya a la carpeta de su proyecto: use el comando `cd` para cambiar el directorio a la carpeta de su proyecto. Por ejemplo: `cd path/to/your/project`.
+3. Cree el entorno virtual: use el siguiente comando para crear un entorno virtual llamado venv(puede nombrarlo como desee): `python3 -m venv venv`.
+4. Activar el entorno virtual: antes de instalar los paquetes, es necesario activar el entorno virtual. Para ello, utilice el comando `source venv/bin/activate`.
+5. Instalar paquetes: ahora que su entorno virtual está activo, puede instalar paquetes mediante `pip`. Para instalar paquetes desde el archivo `requirements.txt`, utilice `pip install -r requirements.txt`.
+6. Desactivar el entorno virtual: cuando hayas terminado, puedes desactivar el entorno virtual escribiendo `deactivate`.
 
 Para usuarios de Windows:
 
-Abrir el símbolo del sistema: puede buscarlo cmden el menú Inicio.
-
-Vaya a la carpeta de su proyecto: use el cdcomando para cambiar el directorio a la carpeta de su proyecto. Por ejemplo: cd path\to\your\project.
-
-Crear el entorno virtual: utilice el siguiente comando para crear un entorno virtual llamado venv: python -m venv venv.
-
-Activar el entorno virtual: Para activar el entorno virtual en Windows, utilice .\venv\Scripts\activate.
-
-Instalar paquetes: Con el entorno virtual activo, instale los paquetes necesarios: pip install -r requirements.txt.
-
-Desactivar el entorno virtual: Para salir del entorno virtual, simplemente escriba: deactivate.
+1. Abrir el símbolo del sistema: puede buscarlo `cmd` en el menú Inicio.
+2. Vaya a la carpeta de su proyecto: use el comando `cd` para cambiar el directorio a la carpeta de su proyecto. Por ejemplo: `cd path\to\your\project`.
+3. Crear el entorno virtual: utilice el siguiente comando para crear un entorno virtual llamado `venv`: `python -m venv venv`.
+4. Activar el entorno virtual: Para activar el entorno virtual en Windows, utilice `.\venv\Scripts\activate`.
+5. Instalar paquetes: Con el entorno virtual activo, instale los paquetes necesarios: `pip install -r requirements.txt`.
+6. Desactivar el entorno virtual: Para salir del entorno virtual, simplemente escriba: `deactivate`.
 
 A continuación se ofrecen algunos consejos adicionales sobre la configuración:
 
-Asegúrese siempre de que su Python esté actualizado para evitar problemas de compatibilidad.
+* Asegúrese siempre de que su Python esté actualizado para evitar problemas de compatibilidad.
+* Recuerda activar tu entorno virtual cada vez que trabajes en el proyecto.
+* El archivo `requirements.txt` debe estar en el mismo directorio donde crea su entorno virtual, o debe especificar la ruta al mismo cuando utilice `pip install -r`.
 
-Recuerda activar tu entorno virtual cada vez que trabajes en el proyecto.
+Se asume que tiene acceso a una cuenta de desarrollador de OpenAI, ya que **OPENAI_API_KEY** debe configurarse como una variable de entorno en cualquier ejemplo que importe la biblioteca OpenAI, para la que usamos la versión 1.0. Puede encontrar instrucciones de inicio rápido para configurar su entorno de desarrollo en la documentación de OpenAI en su sitio web.
 
-El archivo requirements.txt debe estar en el mismo directorio donde crea su entorno virtual, o debe especificar la ruta al mismo cuando utilice pip install -r.
+También debe asegurarse de que la facturación esté habilitada en su cuenta de OpenAI y de que se haya adjuntado un método de pago válido para ejecutar parte del código incluido en el libro. Los ejemplos del libro utilizan GPT-4 cuando no se indica, aunque cubrimos brevemente el modelo competidor [Claude 3](https://www.anthropic.com/news/claude-3-family) de Anthropic, así como el código abierto de Meta [Llama 3](https://www.llama.com/) y [Google Gemini](https://gemini.google.com/) .
 
-Se asume que tiene acceso a una cuenta de desarrollador de OpenAI, ya que OPENAI_API_KEYdebe configurarse como una variable de entorno en cualquier ejemplo que importe la biblioteca OpenAI, para la que usamos la versión 1.0. Puede encontrar instrucciones de inicio rápido para configurar su entorno de desarrollo en la documentación de OpenAI en su sitio web.
-
-También debe asegurarse de que la facturación esté habilitada en su cuenta de OpenAI y de que se haya adjuntado un método de pago válido para ejecutar parte del código incluido en el libro. Los ejemplos del libro utilizan GPT-4 cuando no se indica, aunque cubrimos brevemente el modelo competidor Claude 3 de Anthropic , así como Llama 3 y Google Gemini de código abierto de Meta .
-
-Para la generación de imágenes, utilizamos Midjourney , para lo cual necesitas una cuenta de Discord para registrarte, aunque estos principios se aplican igualmente a DALL-E 3 (disponible con una suscripción a ChatGPT Plus o a través de la API) o Stable Diffusion (disponible como API o puede ejecutarse localmente en tu computadora si tiene una GPU). Los ejemplos de generación de imágenes en este libro utilizan Midjourney v6, Stable Diffusion v1.5 (ya que muchas extensiones todavía son compatibles solo con esta versión) o Stable Diffusion XL , y especificamos las diferencias cuando esto es importante.
+Para la generación de imágenes, utilizamos [Midjourney](https://www.midjourney.com/home), para lo cual necesitas una cuenta de Discord para registrarte, aunque estos principios se aplican igualmente a **DALL-E 3** (disponible con una suscripción a ChatGPT Plus o a través de la API) o **Stable Diffusion** (disponible como [API](https://platform.stability.ai/) o puede [ejecutarse localmente](https://huggingface.co/blog/stable_diffusion) en tu computadora si tiene una GPU). Los ejemplos de generación de imágenes en este libro utilizan Midjourney v6, Stable Diffusion v1.5 (ya que muchas extensiones todavía son compatibles solo con esta versión) o Stable Diffusion XL , y especificamos las diferencias cuando esto es importante.
 
 Proporcionamos ejemplos que utilizan bibliotecas de código abierto siempre que sea posible, aunque incluimos proveedores comerciales cuando corresponde; por ejemplo, el Capítulo 5 sobre bases de datos vectoriales muestra tanto FAISS (una biblioteca de código abierto) como Pinecone (un proveedor pago). Los ejemplos que se muestran en el libro deberían poder modificarse fácilmente para modelos y proveedores alternativos, y las habilidades que se enseñan son transferibles. El Capítulo 4 sobre generación avanzada de texto se centra en el marco LLM LangChain, y el Capítulo 9 sobre generación avanzada de imágenes se basa en la interfaz de usuario web de difusión estable de código abierto de AUTOMATIC1111.
 
