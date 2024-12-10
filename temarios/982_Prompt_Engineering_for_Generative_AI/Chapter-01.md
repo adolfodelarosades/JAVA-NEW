@@ -596,16 +596,55 @@ La dirección es uno de los principios más utilizados y más amplios. Puede ado
 
 ## 2. Especificar formato
 
-Los modelos de IA son traductores universales. No solo¿Eso significa traducir del francés al inglés, o del urdu al klingon, pero también entre estructuras de datos como JSON a YAML o lenguaje natural?lenguaje a código Python. Estos modelos son capaces de devolver una respuesta en casi cualquier formato, por lo que una parte importante de la ingeniería de indicaciones es encontrar formas de especificar en qué formato desea que esté la respuesta.
+Los modelos de IA son traductores universales. No solo ¿Eso significa traducir del francés al inglés, o del urdu al klingon, pero también entre estructuras de datos como JSON a YAML ? o lenguaje natural a código Python. Estos modelos son capaces de devolver una respuesta en casi cualquier formato, por lo que una parte importante de la prompt engineering es encontrar formas de especificar en qué formato desea que esté la respuesta.
 
 De vez en cuando, verás que el mismo mensaje devuelve un formato diferente, por ejemplo, una lista numerada en lugar de separada por comas. Esto no es un gran problema la mayor parte del tiempo, porque la mayoría de los mensajes son únicos y se escriben en ChatGPT o Midjourney. Sin embargo, cuando incorporas herramientas de IA en software de producción, los cambios ocasionales en el formato pueden causar todo tipo de errores.
 
-Al igual que cuando trabajas con un humano, puedes evitar el desperdicio de esfuerzo si especificas de antemano el formato en el que esperas que esté la respuesta. Para los modelos de generación de texto, a menudo puede ser útilGenerar JSON en lugar de una simple lista ordenada, ya que es el formato universal para las respuestas de API, lo que puede simplificar el análisis y la detección de errores, así como su uso para representar el HTML del frontend de una aplicación. YAML también es otra opción popular porque impone una estructura analizable y, al mismo tiempo, es simple y legible para humanos.
+Al igual que cuando trabajas con un humano, puedes evitar el desperdicio de esfuerzo si especificas de antemano el formato en el que esperas que esté la respuesta. Para los modelos de generación de texto, a menudo puede ser útil generar JSON en lugar de una simple lista ordenada, ya que es el formato universal para las respuestas de API, lo que puede simplificar el análisis y la detección de errores, así como su uso para representar el HTML del frontend de una aplicación. YAML también es otra opción popular porque impone una estructura analizable y, al mismo tiempo, es simple y legible para humanos.
 
 En el mensaje original, diste instrucciones a través de los dos ejemplos proporcionados y los dos puntos al final del mensaje indicaban que debía completar la lista en línea. Para cambiar el formato a JSON, debes actualizar ambos y dejar el JSON sin completar, para que GPT-4 sepa que debe completarlo.
 
-Aporte:
+<img width="839" alt="image" src="https://github.com/user-attachments/assets/2998210c-4563-44e7-87d4-500aaf364cdb">
 
+<img width="836" alt="image" src="https://github.com/user-attachments/assets/14baffc3-5d0b-4529-bfd8-023657472b45">
+
+Input:
+
+```text
+Return a comma-separated list of product names in JSON for
+"A pair of shoes that can fit any foot size.".
+Return only JSON.
+
+Examples:
+[{
+		"Product description": "A home milkshake maker.",
+		"Product names": ["HomeShaker", "Fit Shaker",
+		"QuickShake", "Shake Maker"]
+	},
+	{
+		"Product description": "A watch that can tell
+		accurate time in space.",
+		"Product names": ["AstroTime", "SpaceGuard",
+		"Orbit-Accurate", "EliptoTime"]}
+]
+```
+
+Output:
+
+```text
+[
+	{
+		"Product description": "A pair of shoes that can \
+		fit any foot size.",
+		"Product names": ["FlexFit Footwear", "OneSize Step",
+		"Adapt-a-Shoe", "Universal Walker"]
+	}
+]
+```
+
+Entrada:
+
+```text
 Devuelve una lista separada por comas de nombres de productos en JSON para
 "Un par de zapatos que se adaptan a cualquier tamaño de pie".
 Devuelve sólo JSON.
@@ -622,8 +661,11 @@ Ejemplos:
 		"Nombres de productos": ["AstroTime", "SpaceGuard",
 		"Precisión de órbita", "EliptoTime"]}
 ]
-Producción:
+```
 
+Salida:
+
+```text
 [
 	{
 		"Descripción del producto": "Un par de zapatos que pueden \
@@ -632,36 +674,91 @@ Producción:
 		"Adapta-un-zapato", "Andador universal"]
 	}
 ]
-El resultado que obtenemos es el JSON completo que contiene los nombres de los productos. Luego, se puede analizar y utilizar de forma programática en una aplicación o en un script local. Desde este punto, también es fácil comprobar si hay un error en el formato utilizando un analizador JSON como el de Python.Biblioteca JSON estándar , ya que el JSON dañado generará un error de análisis, que puede actuar como un disparador para volver a intentar el mensaje o investigar antes de continuar. Si aún no obtiene el formato correcto, puede ser útil especificar al principio o al final del mensaje, o en el mensaje del sistema si usa un modelo de chat: You are a helpful assistant that only responds in JSON, o especificar la salida JSON en los parámetros del modelo cuando esté disponible (esto se llama gramáticas con modelos Llama ).
+```
 
-CONSEJO
-Para familiarizarse con JSON si no está familiarizado, W3Schools tiene una buena introducción .
+El resultado que obtenemos es el JSON completo que contiene los nombres de los productos. Luego, se puede analizar y utilizar de forma programática en una aplicación o en un script local. Desde este punto, también es fácil comprobar si hay un error en el formato utilizando un analizador JSON como el de Python’s standard json library, ya que el JSON dañado generará un error de análisis, que puede actuar como un disparador para volver a intentar el mensaje o investigar antes de continuar. Si aún no obtiene el formato correcto, puede ser útil especificar al principio o al final del mensaje, o en el mensaje del sistema si usa un modelo de chat: `You are a helpful assistant that only responds in JSON`, o especificar la [JSON output](https://community.openai.com/t/openai-api-guide-using-json-mode/557265) en los parámetros del modelo cuando esté disponible (esto se llama gramáticas con [Llama models](https://til.simonwillison.net/llms/llama-cpp-python-grammars) ).
 
-Para la generación de imágenesEn el caso de los modelos, el formato es muy importante, ya que las posibilidades de modificar una imagen son casi infinitas. Van desde formatos obvios como stock photo, illustration, y oil painting, hasta formatos más inusuales como dashcam footage, ice sculpture, o in Minecraft(consulte la Figura 1-7 ).
+**CONSEJO**
 
-Aporte:
+Para familiarizarse con JSON si no está familiarizado, W3Schools tiene [una buena introducción](https://www.w3schools.com/js/js_json_intro.asp).
 
+Para la generación de imágenes en el caso de los modelos, el formato es muy importante, ya que las posibilidades de modificar una imagen son casi infinitas. Van desde formatos obvios como `stock photo`, `illustration`, y `oil painting`, hasta formatos más inusuales como `xdashcam footage`, `ice sculpture`, o in `Minecraft`(consulte la Figura 1-7 ).
+
+<img width="831" alt="image" src="https://github.com/user-attachments/assets/32a56996-a8a2-4891-93d1-8f584cc93fc4">
+
+
+Input:
+
+```text
+business meeting of four people watching on MacBook on top of
+table, in Minecraft
+```
+
+Entrada:
+
+```text
 Reunión de negocios de cuatro personas que miran en MacBook encima de
 mesa, en minecraft
+```
+
 La figura 1-7 muestra la salida.
 
+<img width="773" alt="image" src="https://github.com/user-attachments/assets/ac80c2a3-2789-4e25-8c9e-4978de5b62db">
 
-Figura 1-7. Reunión de negocios en Minecraft
+**Figura 1-7. Reunión de negocios en Minecraft**
+
 Al configurar un formato, a menudo es necesario eliminar otros aspectos del mensaje que podrían entrar en conflicto con el formato especificado. Por ejemplo, si proporciona una imagen base de una foto de archivo, el resultado es una combinación de la foto de archivo y el formato que desea. Hasta cierto punto, los modelos de generación de imágenes pueden generalizarse a nuevos escenarios y combinaciones que no han visto antes en su conjunto de entrenamiento, pero en nuestra experiencia, cuantas más capas de elementos no relacionados, más probabilidades hay de obtener una imagen inadecuada.
 
-A menudo hay cierta superposición entre losEl primer y el segundo principio son dar dirección y especificar el formato. El último trata de definir el tipo de resultado que desea, por ejemplo, el formato JSON o el formato de una foto de archivo. El primero trata del estilo de respuesta que desea, independientemente del formato, por ejemplo, nombres de productos al estilo de Steve Jobs o una imagen de una reunión de negocios al estilo de Van Gogh. Cuando hay conflictos entre el estilo y el formato, a menudo es mejor resolverlos.descartando cualquier elemento que sea menos importante para el resultado final.
+A menudo hay cierta superposición entre el primer y el segundo principio son dar dirección y especificar el formato. El último trata de definir el tipo de resultado que desea, por ejemplo, el formato JSON o el formato de una foto de archivo. El primero trata del estilo de respuesta que desea, independientemente del formato, por ejemplo, nombres de productos al estilo de Steve Jobs o una imagen de una reunión de negocios al estilo de Van Gogh. Cuando hay conflictos entre el estilo y el formato, a menudo es mejor resolverlos descartando cualquier elemento que sea menos importante para el resultado final.
 
-3. Proporcione ejemplos
-El mensaje original no le dio ningún ejemplo a la IA.de cómo crees que se ven los buenos nombres. Por lo tanto, la respuesta se aproxima a un promedio de Internet, y puedes hacerlo mejor que eso. Los investigadores llamarían a un mensaje sin ejemplos cero posibilidades , y esSiempre es una sorpresa agradable cuando la IA puede incluso hacer una tarea sin ningún tipo de preparación: es una señal de que el modelo es potente. Si no proporcionas ningún ejemplo, estás pidiendo mucho sin dar mucho a cambio. Incluso proporcionar un solo ejemplo ( one-shot ) ayuda considerablemente, y es la norma entre los investigadores probar cómo funcionan los modelos con múltiples ejemplos ( few-shot ). Una de esas investigaciones es el famoso artículo de GPT-3 “Language Models are Few-Shot Learners” (Los modelos de lenguaje son aprendices con pocos ejemplos) , cuyos resultados se ilustran en la Figura 1-8 , que muestra que agregar un ejemplo junto con una indicación puede mejorar la precisión en algunas tareas del 10 % a casi el 50 %.
+## 3. Proporcione ejemplos
 
+El mensaje original no le dio ningún ejemplo a la IA de cómo crees que se ven los buenos nombres. Por lo tanto, la respuesta se aproxima a un promedio de Internet, y puedes hacerlo mejor que eso. Los investigadores llamarían a un mensaje sin ejemplos *zero-shot*, y es siempre es una sorpresa agradable cuando la IA puede incluso hacer una tarea sin ningún tipo de preparación: es una señal de que el modelo es potente. Si no proporcionas ningún ejemplo, estás pidiendo mucho sin dar mucho a cambio. Incluso proporcionar un solo ejemplo ( *one-shot* ) ayuda considerablemente, y es la norma entre los investigadores probar cómo funcionan los modelos con múltiples ejemplos ( *few-shot* ). Una de esas investigaciones es el famoso artículo de GPT-3 “[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)” (Los modelos de lenguaje son aprendices con pocos ejemplos) , cuyos resultados se ilustran en la Figura 1-8 , que muestra que agregar un ejemplo junto con una indicación puede mejorar la precisión en algunas tareas del 10% a casi el 50%.
 
-Figura 1-8. Número de ejemplos en contexto
-Cuando se le da una sesión informativa a un colega o se capacita a un empleado junior sobre una nueva tarea, es natural que se incluyan ejemplos de ocasiones en las que esa tarea se había realizado bien anteriormente. Trabajar con IA es lo mismo, y la fuerza de una indicación a menudo se reduce a los ejemplos utilizados. Proporcionar ejemplos a veces puede ser más fácil que tratar de explicar exactamente qué es lo que te gusta de esos ejemplos, por lo que esta técnica es más eficaz cuando no eres un experto en el área temática de la tarea que estás intentando completar. La cantidad de texto que puedes incluir en una indicación es limitada (al momento de escribir esto, alrededor de 6000 caracteres en Midjourney y aproximadamente 32 000 caracteres para la versión gratuita de ChatGPT), por lo que gran parte del trabajo de ingeniería de indicaciones implica seleccionar e insertar ejemplos diversos e instructivos.
+<img width="829" alt="image" src="https://github.com/user-attachments/assets/beeb6f2d-648e-4195-9e55-8592d90519fb">
+
+**Figura 1-8. Número de ejemplos en contexto**
+
+Cuando se le da una sesión informativa a un colega o se capacita a un empleado junior sobre una nueva tarea, es natural que se incluyan ejemplos de ocasiones en las que esa tarea se había realizado bien anteriormente. Trabajar con IA es lo mismo, y la fuerza de una indicación a menudo se reduce a los ejemplos utilizados. Proporcionar ejemplos a veces puede ser más fácil que tratar de explicar exactamente qué es lo que te gusta de esos ejemplos, por lo que esta técnica es más eficaz cuando no eres un experto en el área temática de la tarea que estás intentando completar. La cantidad de texto que puedes incluir en una indicación es limitada (al momento de escribir esto, alrededor de 6000 caracteres en Midjourney y aproximadamente 32 000 caracteres para la versión gratuita de ChatGPT), por lo que gran parte del trabajo de prompt engineering implica seleccionar e insertar ejemplos diversos e instructivos.
 
 Existe un equilibrio entre la fiabilidad y la creatividad: si superas los tres o cinco ejemplos, tus resultados serán más fiables, aunque sacrificarás la creatividad. Cuantos más ejemplos proporciones y menor sea la diversidad entre ellos, más limitada será la respuesta para que coincida con tus ejemplos. Si cambias todos los ejemplos por nombres de animales en la pregunta anterior, tendrás un fuerte efecto en la respuesta, que devolverá de forma fiable solo nombres que incluyan animales.
 
-Aporte:
+<img width="846" alt="image" src="https://github.com/user-attachments/assets/9760150c-149d-4026-8551-ddae53c94b72">
 
+<img width="836" alt="image" src="https://github.com/user-attachments/assets/f86ce0ab-fd70-4648-8835-66fe1a6b4042">
+
+Input:
+
+```text
+Brainstorm a list of product names for a shoe that fits any
+foot size.
+
+Return the results as a comma-separated list, in this format:
+Product description: A shoe that fits any foot size
+Product names: [list of 3 product names]
+
+## Examples:
+Product description: A home milkshake maker.
+Product names: Fast Panda, Healthy Bear, Compact Koala
+
+Product description: A watch that can tell accurate time in
+space.
+Product names: AstroLamb, Space Bear, Eagle Orbit
+
+Product description: A refrigerator that dispenses beer
+Product names: BearFridge, Cool Cat, PenguinBox
+```
+
+Output:
+
+```text
+Product description: A shoe that fits any foot size
+Product names: FlexiFox, ChameleonStep, PandaPaws
+```
+
+Entrada:
+
+```text
 Piense en una lista de nombres de productos para un zapato que se adapte a cualquier persona.
 Tamaño del pie.
 
@@ -679,30 +776,53 @@ Nombres de productos: AstroLamb, Space Bear, Eagle Orbit
 
 Descripción del producto: Un refrigerador que dispensa cerveza.
 Nombres de productos: BearFridge, Cool Cat, PenguinBox
-Producción:
+```
 
+Salida:
+
+```text
 Descripción del producto: Un zapato que se adapta a cualquier tamaño de pie.
 Nombres de productos: FlexiFox, ChameleonStep, PandaPaws
-Por supuesto, esto corre el riesgo de no poder devolver un nombre mucho mejor que no se ajuste al espacio limitado que queda para que la IA juegue. La falta de diversidad y variación en los ejemplos también es un problema a la hora de manejar casos extremos o escenarios poco comunes. Incluir de uno a tres ejemplos es fácil y casi siempre tiene un efecto positivo, pero por encima de esa cantidad se vuelve esencial experimentar con la cantidad de ejemplos que se incluyen, así como con la similitud entre ellos. Hay algunas pruebas ( Hsieh et al., 2023 ) de que la dirección funciona mejor que proporcionar ejemplos, y normalmente no es sencillo recopilar buenos ejemplos, por lo que suele ser prudente intentar primero el principio de dar dirección.
+```
 
-En el espacio de generación de imágenes, proporcionar ejemplos generalmenteSe presenta en forma de una imagen base en el mensaje de solicitud, llamada img2img en la comunidad de código abierto Stable Diffusion . Según el modelo de generación de imágenes que se utilice, estas imágenes se pueden utilizar como punto de partida para generar el modelo, lo que afecta en gran medida los resultados. Puede mantener todo lo relacionado con el mensaje de solicitud igual, pero cambiar la imagen base proporcionada para obtener un efecto radicalmente diferente, como en la Figura 1-9 .
+Por supuesto, esto corre el riesgo de no poder devolver un nombre mucho mejor que no se ajuste al espacio limitado que queda para que la IA juegue. La falta de diversidad y variación en los ejemplos también es un problema a la hora de manejar casos extremos o escenarios poco comunes. Incluir de uno a tres ejemplos es fácil y casi siempre tiene un efecto positivo, pero por encima de esa cantidad se vuelve esencial experimentar con la cantidad de ejemplos que se incluyen, así como con la similitud entre ellos. Hay algunas pruebas ( [Hsieh et al., 2023](https://arxiv.org/pdf/2308.00675) ) de que la dirección funciona mejor que proporcionar ejemplos, y normalmente no es sencillo recopilar buenos ejemplos, por lo que suele ser prudente intentar primero el principio de dar dirección.
 
-Aporte:
+En el espacio de generación de imágenes, proporcionar ejemplos generalmente se presenta en forma de una imagen base en el mensaje de solicitud, llamada ***img2img*** en la comunidad de código abierto [Stable Diffusion](https://stability.ai/news/stable-diffusion-public-release). Según el modelo de generación de imágenes que se utilice, estas imágenes se pueden utilizar como punto de partida para generar el modelo, lo que afecta en gran medida los resultados. Puede mantener todo lo relacionado con el mensaje de solicitud igual, pero cambiar la imagen base proporcionada para obtener un efecto radicalmente diferente, como en la Figura 1-9.
 
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/7d727af7-8825-4343-84a8-c462997d80a4">
+
+Input:
+
+```text
+stock photo of business meeting of 4 people watching on
+white MacBook on top of glass-top table, Panasonic, DC-GH5
+```
+
+Entrada:
+
+```text
 Fotografía de stock de una reunión de negocios de 4 personas mirando
 MacBook blanco sobre una mesa de cristal, Panasonic, DC-GH5
+```
+
 La figura 1-9 muestra la salida.
 
+<img width="899" alt="image" src="https://github.com/user-attachments/assets/c360fbbb-561f-4925-956f-c2f32441881c">
 
-Figura 1-9. Fotografía de archivo de una reunión de negocios de cuatro personas
-En este caso, al sustituir la imagen que se muestra en la Figura 1-10 , también de Unsplash, se puede ver cómo el modelo fue llevado en una dirección diferente y ahora incorpora pizarrones y notas adhesivas.
+**Figura 1-9. Fotografía de archivo de una reunión de negocios de cuatro personas**
 
-PRECAUCIÓN
-Estos ejemplos demuestran las capacidades de los modelos de generación de imágenes, pero debemos tener cuidado al cargar imágenes base para usarlas en los mensajes. Verifique la licencia de la imagen que planea cargar y usar en su mensaje como imagen base y evite usar imágenes con derechos de autor claros. Si lo hace, puede meterse en problemas legales y va en contra de los términos de uso.Servicio para todos los principales proveedores de modelos de generación de imágenes.
+En este caso, al sustituir la imagen que se muestra en la Figura 1-10, también de **Unsplash**, se puede ver cómo el modelo fue llevado en una dirección diferente y ahora incorpora pizarrones y notas adhesivas.
 
+**PRECAUCIÓN**
 
-Figura 1-10. Foto de Jason Goodman en Unsplash
-4. Evaluar la calidad
+Estos ejemplos demuestran las capacidades de los modelos de generación de imágenes, pero debemos tener cuidado al cargar imágenes base para usarlas en los mensajes. Verifique la licencia de la imagen que planea cargar y usar en su mensaje como imagen base y evite usar imágenes con derechos de autor claros. Si lo hace, puede meterse en problemas legales y va en contra de los términos de uso. Servicio para todos los principales proveedores de modelos de generación de imágenes.
+
+<img width="814" alt="image" src="https://github.com/user-attachments/assets/485a9346-c5cb-49b3-8c6d-27492531fbcd">
+
+**Figura 1-10. Foto de Jason Goodman en Unsplash**
+
+## 4. Evaluar la calidad
+
 Hasta el momento, no ha habido un circuito de retroalimentación paraJuzgue la calidad de sus respuestas, además del ensayo y error básico de ejecutar el mensaje y ver los resultados, conocido como mensajes a ciegas . Esto está bien cuando sus mensajes se usan temporalmente para una sola tarea y rara vez se revisan. Sin embargo, cuando reutiliza el mismo mensaje varias veces o crea una aplicación de producción que depende de un mensaje, debe ser más riguroso con la medición de los resultados.
 
 Hay varias formas de evaluar el rendimiento y esto depende en gran medida de las tareas que se esperan lograr. Cuando se lanza un nuevo modelo de IA, el enfoque tiende a estar enqué tan bien se desempeñó el modelo en las evaluaciones , un conjunto estandarizado de preguntas con respuestas predefinidas o criterios de calificación que se utilizan para probar el desempeño en los distintos modelos. Los distintos modelos funcionan de manera diferente en distintos tipos de tareas, y no hay garantía de que una indicación que funcionó anteriormente se traduzca bien a un nuevo modelo. OpenAI ha hecho que su marco de evaluación para evaluar el desempeño de los LLM sea de código abierto y alienta a otros a contribuir con plantillas de evaluación adicionales.
