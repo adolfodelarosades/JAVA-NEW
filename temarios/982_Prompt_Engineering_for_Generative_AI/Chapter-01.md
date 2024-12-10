@@ -1249,159 +1249,198 @@ Uno de los principios básicos de la ingeniería esUtilice la descomposición de
 
 Hay muchos factores que intervienen en la elección del nombre de un producto, y una tarea importante se delega ingenuamente en la IA sin que se sepa cómo se pondera la importancia de estos factores (si es que se sabe). De la forma en que funciona nuestro sistema actual, obtenemos una lista de nombres, pero todos los nombres se muestran con la misma importancia sin ningún contexto adicional que nos ayude a decidir. Afortunadamente, las herramientas de IA son capaces de autoevaluarse; si añadimos un segundo paso a nuestra tarea, podemos comprobar automáticamente si hay resultados no deseados.
 
-Aporte:
+<img width="831" alt="image" src="https://github.com/user-attachments/assets/869bddba-71a2-470b-a0e7-fa65e8a529c6">
 
-Califica esta lista de nombres de productos para un par de zapatos que puedas
-Se adapta a cualquier tamaño de pie. La calificación debe ser de 1 a 10, en línea.
-Al lado del nombre del producto:
+<img width="839" alt="image" src="https://github.com/user-attachments/assets/e718f074-57ce-4555-bf1f-b7bb6707b265">
 
-Zapatillas SoleStrides de UniFit
-Zapatos FlexiSize All-Fit
-Flexibilidad de pies OmniFit
+Input:
+
+```text
+Rate this list of product names for a pair of shoes that can
+fit any foot size. The rating should be out of 10, inline
+next to the product name:
+
+UniFit SoleStrides
+FlexiSize All-Fit Shoes
+OmniFit FootFlex
 ...
-Andadores adaptables AnyStep
-Escaleras universales FlexiRange
-Zapatillas PerfectGlide MultiFit
-Producción:
+AnyStep AdaptiWalkers
+FlexiRange UniversalSteps
+PerfectGlide MultiFit Shoes
+```
 
+Output:
+
+```text
 UniFit SoleStrides: 7/10
-Zapatos FlexiSize All-Fit: 8/10
-Flexibilidad del pie OmniFit: 7/10
+FlexiSize All-Fit Shoes: 8/10
+OmniFit FootFlex: 7/10
 ...
-Andadores adaptables AnyStep: 7/10
-FlexiRange UniversalSteps: 7,5/10
-Zapatillas PerfectGlide MultiFit: 9/10
+AnyStep AdaptiWalkers: 7/10
+FlexiRange UniversalSteps: 7.5/10
+PerfectGlide MultiFit Shoes: 9/10
 
-Esta clasificación se basa en la claridad, la memorabilidad y la calidad
-El nombre comunica el punto de venta único del producto.
-producto (que se adaptan a cualquier tamaño de pie). Recuerde, estos
-Las calificaciones son subjetivas y el éxito final de un producto
-El nombre también depende del mercado objetivo, la marca y
-esfuerzos de marketing.
+This ranking is based on clarity, memorability, and how well
+the name communicates the unique selling point of the
+product (that they can fit any foot size). Remember, these
+ratings are subjective and the ultimate success of a product
+name also depends on the target market, branding, and
+marketing efforts.
+```
+
 Al ejecutar esto varias veces, califica constantemente el nombre “OneSize Glovewalkers” como el peor, lo que proporciona contexto (si lo preguntas) de que el concepto puede ser confuso en un contexto de calzado. Quizás te preguntes por qué, si el modelo sabe que este es un mal nombre, lo sugiere en primer lugar. Los LLM funcionan prediciendo el siguiente token en una secuencia y, por lo tanto, tienen dificultades para saber cuál será la respuesta general cuando termine. Sin embargo, cuando tiene todos los tokens de una respuesta anterior para revisar, puede predecir más fácilmente si esta se etiquetará como una buena o mala respuesta.
 
 Podemos seguir encadenando varias llamadas para mejorar los resultados de nuestra tarea. Por ejemplo, podríamos dividir esto en tres calificaciones independientes: claridad, facilidad de memorización y qué tan bien el nombre comunica el argumento de venta exclusivo del producto. Estas calificaciones podrían entregarse a un humano como contexto adicional para la decisión final, o incluso calcularse juntas para seleccionar el nombre final de manera programática.
 
-La verdadera clave para aprender a trabajar profesionalmente con IA en lugar de simplemente jugar con indicaciones es darse cuenta de que cada parte del sistema se puede dividir en una serie de pasos iterativos. Incluso con una sola indicación, este principio se aplica, ya que simplemente agregar elementos Let's think step by stepa la indicación puede generar mejoras demostrables en el razonamiento y la competencia, además de proporcionar un registro de auditoría para el control de calidad y la depuración. Cuando se dedica tiempo y fichas a razonar, las calificaciones cambian y son más coherentes con los criterios de puntuación.
+La verdadera clave para aprender a trabajar profesionalmente con IA en lugar de simplemente jugar con indicaciones es darse cuenta de que cada parte del sistema se puede dividir en una serie de pasos iterativos. Incluso con una sola indicación, este principio se aplica, ya que simplemente agregar elementos `Let's think step by step` a la indicación puede generar mejoras demostrables en el razonamiento y la competencia, además de proporcionar un registro de auditoría para el control de calidad y la depuración. Cuando se dedica tiempo y fichas a razonar, las calificaciones cambian y son más coherentes con los criterios de puntuación.
 
-Aporte:
+<img width="830" alt="image" src="https://github.com/user-attachments/assets/4d39dc37-a553-4426-b971-7a53b98275c5">
 
-Pensemos paso a paso. Califica esta lista de nombres de productos
-para un par de zapatos que se adapten a cualquier tamaño de pie. La calificación
-Debe estar en una escala de 10, en línea junto al nombre del producto:
+<img width="759" alt="image" src="https://github.com/user-attachments/assets/35416bac-e63c-4f84-ad34-e32684643afc">
 
-Zapatillas SoleStrides de UniFit
-Zapatos FlexiSize All-Fit
-Flexibilidad de pies OmniFit
+Input:
+
+```text
+Let's think step by step. Rate this list of product names
+for a pair of shoes that can fit any foot size. The rating
+should be out of 10, inline next to the product name:
+
+UniFit SoleStrides
+FlexiSize All-Fit Shoes
+OmniFit FootFlex
 ...
-Andadores adaptables AnyStep
-Escaleras universales FlexiRange
-Zapatillas PerfectGlide MultiFit
-Producción:
+AnyStep AdaptiWalkers
+FlexiRange UniversalSteps
+PerfectGlide MultiFit Shoes
+```
 
-Aquí hay una calificación de 10 para cada nombre de producto, considerando
-Factores como la descriptividad, la pegadizabilidad y, en general,
-apelar:
+Ouput:
 
-1. **UniFit SoleStrides**: 7/10 - Suena unificador, pero puede
-No transmite inmediatamente la idea de "se adapta a cualquier talla".
-2. **Zapatillas FlexiSize All-Fit**: 8,5/10 - Combina
-flexibilidad y la noción de que se adapta a todos los tamaños.
-3. **OmniFit FootFlex**: 8/10 - Omnipresencia (se adapta a todos)
-y flexibilidad muy bien transmitida.
+```text
+Here's a rating out of 10 for each product name, considering
+factors like descriptiveness, catchiness, and overall
+appeal:
+
+1. **UniFit SoleStrides**: 7/10 - Sounds unifying but may
+not immediately convey the "fit any size" idea.
+2. **FlexiSize All-Fit Shoes**: 8.5/10 - Combines
+flexibility and the notion that it fits all sizes.
+3. **OmniFit FootFlex**: 8/10 - Omnipresence (fitting all)
+and flexibility nicely conveyed.
 ...
-18. **AnyStep AdaptiWalkers**: 7,5/10 - "AnyStep" sugiere
-versatilidad, pero el nombre general podría ser menos directo.
-19. **FlexiRange UniversalSteps**: 8/10 - Combina
-Flexibilidad y ajuste universal.
-20. **Zapatillas PerfectGlide MultiFit**: 8,5/10 - "MultiFit" es
-claro y "PerfectGlide" sugiere una experiencia cómoda.
+18. **AnyStep AdaptiWalkers**: 7.5/10 - "AnyStep" suggests
+versatility, but the overall name might be less direct.
+19. **FlexiRange UniversalSteps**: 8/10 - Combines
+flexibility and universal fit.
+20. **PerfectGlide MultiFit Shoes**: 8.5/10 - "MultiFit" is
+clear, and "PerfectGlide" suggests a comfortable experience.
 
-Recuerda, el mejor nombre también puede verse influenciado por tu
-Público objetivo, estrategia de marca y mensaje general
-Quieres transmitir.
-OpenAI lo llama “darle tiempo al modelo para pensar”, y es un principio clave de la ingeniería rápida. En efecto, las técnicas de cadena de pensamiento comoEsto, donde se anima al modelo a enumerar sus pasos, es como dividir una tarea dentro de la misma indicación. Una vez que hemos automatizado la denominación del producto dada una idea de producto, podemos llamar a ChatGPT nuevamente para describir cada producto, que a su vez se puede introducir en Midjourney para generar una imagen de cada producto. El uso de un modelo de IA para generar una indicación para un modelo de IA es una indicación meta y funciona porque los LLM son ingenieros de indicaciones de nivel humano ( Zhou, 2022 ).
+Remember, the best name can also be influenced by your
+target audience, branding strategy, and the overall message
+you want to convey.
+```
 
-Aporte:
+OpenAI [lo llama](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) “darle tiempo al modelo para pensar”, y es un principio clave de la ingeniería rápida. En efecto, las técnicas de cadena de pensamiento como esto, donde se anima al modelo a enumerar sus pasos, es como dividir una tarea dentro de la misma indicación. Una vez que hemos automatizado la denominación del producto dada una idea de producto, podemos llamar a ChatGPT nuevamente para describir cada producto, que a su vez se puede introducir en Midjourney para generar una imagen de cada producto. El uso de un modelo de IA para generar una indicación para un modelo de IA es una indicación meta y funciona porque los LLM son ingenieros de indicaciones de nivel humano ( [Zhou, 2022](https://arxiv.org/abs/2211.01910) ).
 
-Describa el nuevo producto "OneFit UltraStride Shoes", un calzado
-que se adapta a cualquier tamaño de pie, con gran detalle:
-Producción:
+<img width="838" alt="image" src="https://github.com/user-attachments/assets/d4d625a9-8914-45df-8304-bb8d8e411337">
 
-Presentamos las revolucionarias "Zapatillas OneFit UltraStride",
-La innovación en calzado diseñada para adaptarse a cualquier tamaño de pie con
-Comodidad y estilo inigualables. Estos zapatos son el resultado de
-Tecnología de vanguardia y artesanía meticulosa,
-asegurando una experiencia de paseo verdaderamente personalizada y placentera.
-Una experiencia de carrera para todos.
+Input:
 
-Diseño y materiales:
-Las zapatillas OneFit UltraStride cuentan con un diseño elegante y moderno.
-Diseño que atrae tanto a personas amantes de la moda como a
-entusiastas del deporte. Presentan un diseño elegante y aerodinámico.
-Silueta, elaborada con materiales de primera calidad para mayor durabilidad.
-y atractivo estético. La parte superior del zapato está hecha de un
-Combinación de malla transpirable y sintético flexible.
-materiales que permiten un excelente flujo de aire y un peso ligero
-sentir.
+```text
+Describe the new product "OneFit UltraStride Shoes," a shoe
+that can fit any foot size, in great detail:
+```
+
+Ouput:
+
+```text
+Introducing the revolutionary "OneFit UltraStride Shoes,"
+the footwear innovation designed to fit any foot size with
+unparalleled comfort and style. These shoes are a result of
+cutting-edge technology and meticulous craftsmanship,
+ensuring a truly personalized and enjoyable walking or
+running experience for everyone.
+
+Design and Materials:
+The OneFit UltraStride Shoes boast an elegant and modern
+design that appeals to both fashion-forward individuals and
+sports enthusiasts. They feature a sleek and streamlined
+silhouette, crafted using premium materials for durability
+and aesthetic appeal. The shoe's upper is constructed from a
+combination of breathable mesh and flexible synthetic
+materials, allowing for excellent airflow and a lightweight
+feel.
 
 ...
 
-Color y personalización:
-Los zapatos OneFit UltraStride están disponibles en una variedad de
-Colores vibrantes y patrones elegantes, que satisfacen diversas necesidades.
-preferencias personales. Puedes elegir entre lo clásico
-Opciones monocromáticas para un look atemporal u opta por lo atrevido.
-y tonos vibrantes para marcar tendencia. La capacidad de
-Personalizar la apariencia del zapato permite a las personas
-Expresar su estilo único mientras disfruta de los beneficios de
-La tecnología OneFit.
+Color and Customization:
+OneFit UltraStride Shoes are available in a variety of
+vibrant colors and stylish patterns, catering to diverse
+personal preferences. You can choose from classic
+monochromatic options for a timeless look or opt for bold
+and vibrant hues to make a fashion statement. The ability to
+customize the shoe's appearance allows individuals to
+express their unique style while enjoying the benefits of
+the OneFit technology.
 
-Conclusión:
-Las zapatillas OneFit UltraStride representan un gran avance en
-Tecnología del calzado, eliminando la molestia de encontrar el
-Ajuste perfecto para tus pies. Con su diseño adaptable,
-Comodidad superior y estética elegante, estos zapatos ofrecen
-Una experiencia verdaderamente personalizada para personas de todos los niveles.
-Tallas. Manténgase cómodo, seguro y a la moda con los
-Zapatillas OneFit UltraStride, la mejor opción para aquellos
-Buscando una versatilidad inigualable y un ajuste perfecto.
-DALL-E es bien conocido por GPT-4 y, por lo tanto,Puedes invocar su nombre dentro de ChatGPT y hace un trabajo razonable al crear un mensaje para una herramienta de generación de imágenes. Si planeabas usar este mensaje en producción, puedes considerar aplicar el principio de mensajes para proporcionar ejemplos, pero hace un trabajo lo suficientemente bueno para nuestros propósitos sin ejemplos.
+Conclusion:
+The OneFit UltraStride Shoes represent a breakthrough in
+footwear technology, eliminating the hassle of finding the
+perfect fit for your feet. With their adaptive design,
+superior comfort, and stylish aesthetics, these shoes offer
+a truly personalized experience for individuals of all foot
+sizes. Stay comfortable, confident, and on-trend with the
+OneFit UltraStride Shoes, the ultimate choice for those
+seeking unmatched versatility and a perfect fit.
+```
 
-Aporte:
+DALL-E es bien conocido por GPT-4 y, por lo tanto, puedes invocar su nombre dentro de ChatGPT y hace un trabajo razonable al crear un mensaje para una herramienta de generación de imágenes. Si planeabas usar este mensaje en producción, puedes considerar aplicar el principio de mensajes para proporcionar ejemplos, pero hace un trabajo lo suficientemente bueno para nuestros propósitos sin ejemplos.
 
-Convierte esta descripción en un breve mensaje para una imagen de IA
-modelo de generación como DALL-E:
-Producción:
+<img width="752" alt="image" src="https://github.com/user-attachments/assets/455c0f33-46fa-4a54-9da9-798d8ef5e1c9">
 
-Crea una imagen llamativa que represente visualmente el
-"OneFit UltraStride Shoes", un producto de calzado revolucionario
-que se adapta a cualquier tamaño de pie. Muestra un estilo elegante y moderno.
-Diseño de calzado que incorpora una parte superior elástica y un sistema ajustable.
-Sistema de cordones y plantilla acolchada para una comodidad óptima.
-Resalte la versatilidad del zapato mostrándolo en acción.
-en diversas superficies, destacando su excelente tracción.
-Incorpora colores y patrones vibrantes para transmitir la
-La naturaleza personalizable del producto. La imagen debe capturar
-La esencia de la innovación, el estilo y el ajuste personalizado que
-Las zapatillas OneFit UltraStride ofrecen.
+Input:
+
+```text
+Convert this description into a short prompt for an AI image
+generation model such as DALL-E:
+```
+
+Ouput:
+
+```text
+Create an eye-catching image that visually represents the
+"OneFit UltraStride Shoes," a revolutionary footwear product
+that adapts to any foot size. Showcase a sleek and modern
+shoe design incorporating a stretchable upper, an adjustable
+lacing system, and a cushioned insole for optimal comfort.
+Emphasize the shoe's versatility by displaying it in action
+on various surfaces, highlighting its excellent traction.
+Incorporate vibrant colors and patterns to convey the
+customizable nature of the product. The image should capture
+the essence of innovation, style, and personalized fit that
+the OneFit UltraStride Shoes offer.
+```
+
 El resultado de este mensaje se puede incorporar a herramientas de generación de imágenes como DALL-E o Midjourney como mensaje, lo que puede brindarle un buen punto de partida para visualizar cómo se vería el producto. Aunque es posible que este no sea el diseño final que elija, ver una imagen es más evocador y ayuda a las personas a formarse una opinión más rápido. Es más fácil, desde el punto de vista cognitivo, criticar o elogiar una imagen existente que imaginar una nueva imagen a partir de una página en blanco o una sección de texto.
 
 La figura 1-15 muestra la salida.
 
+<img width="816" alt="image" src="https://github.com/user-attachments/assets/d2d2f520-987a-4a46-bf7e-7ad732c50fb8">
 
-Figura 1-15. Zapatillas OneFit UltraStride
-Es una práctica común cuando se trabaja conLa IA encadena de forma profesional múltiples llamadas a la IA, e incluso múltiples modelos, para lograr objetivos más complejos. Incluso las aplicaciones con un único mensaje suelen crearse de forma dinámica, basándose en el contexto externo consultado desde varias bases de datos u otras llamadas a un modelo de IA. La biblioteca LangChain ha desarrollado herramientas para encadenar múltiples plantillas de mensajes y consultas, lo que hace que este proceso sea más observable y esté mejor estructurado. Un ejemplo fundamental es el resumen progresivo, en el que el texto que es demasiado grande para caber en una ventana de contexto se puede dividir en varios fragmentos de texto, y cada uno de ellos se resume, antes de resumir finalmente los resúmenes. Si habla con los desarrolladores de los primeros productos de IA, descubrirá que todos ellos encadenan en secreto múltiples mensajes, lo que se denomina encadenamiento de IA , para lograr mejores resultados en el resultado final.
+**Figura 1-15. Zapatillas OneFit UltraStride**
 
-El marco Reason and Act (ReAct) fue uno de los primeros intentos populares de crear agentes de IA, incluidos los proyectos de código abierto BabyAGI , AgentGPT y Microsoft AutoGen . En efecto, estos agentes son el resultado de encadenar múltiples llamadas de IA para planificar, observar, actuar y luego evaluar los resultados de la acción. Los agentes autónomos se tratarán en el Capítulo 6, pero todavía no se utilizan ampliamente en producción al momento de escribir este artículo. Esta práctica de agentes con razonamiento automático aún es temprana y propensa a errores, pero hay señales prometedoras de que este enfoque puede ser útil para lograr tareas complejas y es probable que sea parte de la siguiente etapa en la evolución de los sistemas de IA.
+Es una práctica común cuando se trabaja con la IA encadena de forma profesional múltiples llamadas a la IA, e incluso múltiples modelos, para lograr objetivos más complejos. Incluso las aplicaciones con un único mensaje suelen crearse de forma dinámica, basándose en el contexto externo consultado desde varias bases de datos u otras llamadas a un modelo de IA. La biblioteca [LangChain](https://www.langchain.com/) ha desarrollado herramientas para encadenar múltiples plantillas de mensajes y consultas, lo que hace que este proceso sea más observable y esté mejor estructurado. Un ejemplo fundamental es el resumen progresivo, en el que el texto que es demasiado grande para caber en una ventana de contexto se puede dividir en varios fragmentos de texto, y cada uno de ellos se resume, antes de resumir finalmente los resúmenes. Si habla con los desarrolladores de los primeros productos de IA, descubrirá que todos ellos encadenan en secreto múltiples mensajes, lo que se denomina encadenamiento de IA, para lograr mejores resultados en el resultado final.
 
-Hay una batalla de IA en curso entre grandes empresas de tecnología como Microsoft y Google, así como una amplia gama de proyectos de código abierto en Hugging Face y nuevas empresas financiadas con capital de riesgo como OpenAI y Anthropic. A medida que continúan proliferando nuevos modelos, se están diversificando para competir por diferentes segmentos del creciente mercado. Por ejemplo, Claude 2 de Anthropic tenía una ventana de contexto de 100.000 tokens , en comparación con los 8.192 tokens estándar de GPT-4 . OpenAI pronto respondió con una versión de ventana de 128.000 tokens de GPT-4 , y Google promociona una longitud de contexto de 1 millón de tokens con Gemini 1.5 . A modo de comparación, uno de los libros de Harry Potter tendría alrededor de 185.000 tokens, por lo que puede volverse común que un libro completo quepa dentro de un solo mensaje, aunque procesar millones de tokens con cada llamada a la API puede tener un costo prohibitivo para la mayoría de los casos de uso.
+El marco [Reason and Act](https://til.simonwillison.net/llms/python-react-pattern) (ReAct) fue uno de los primeros intentos populares de crear agentes de IA, incluidos los proyectos de código abierto [BabyAGI](https://github.com/yoheinakajima/babyagi),[AgentGPT](https://github.com/reworkd/AgentGPT) y [Microsoft AutoGen](https://microsoft.github.io/autogen/0.2/). En efecto, estos agentes son el resultado de encadenar múltiples llamadas de IA para planificar, observar, actuar y luego evaluar los resultados de la acción. Los agentes autónomos se tratarán en el Capítulo 6, pero todavía no se utilizan ampliamente en producción al momento de escribir este artículo. Esta práctica de agentes con razonamiento automático aún es temprana y propensa a errores, pero hay señales prometedoras de que este enfoque puede ser útil para lograr tareas complejas y es probable que sea parte de la siguiente etapa en la evolución de los sistemas de IA.
 
-Este libro se centra en GPT-4 para técnicas de generación de texto, así como en Midjourney v6 y Stable Diffusion XL para técnicas de generación de imágenes, pero en cuestión de meses estos modelos pueden dejar de ser de última generación. Esto significa que será cada vez más importante poder seleccionar el modelo adecuado para el trabajo y encadenar varios sistemas de IA. Las plantillas de indicaciones rara vez son comparables cuando se transfieren a un nuevo modelo, pero el efecto de los cinco principios de indicación mejorará constantemente cualquier modelo.le indicamos el uso que le dará, para cualquier modelo, resultados más confiables.
+Hay una batalla de IA en curso entre grandes empresas de tecnología como Microsoft y Google, así como una amplia gama de proyectos de código abierto en Hugging Face y nuevas empresas financiadas con capital de riesgo como OpenAI y Anthropic. A medida que continúan proliferando nuevos modelos, se están diversificando para competir por diferentes segmentos del creciente mercado. Por ejemplo, Claude 2 de Anthropic tenía una ventana de contexto de [100.000 tokens](https://www.anthropic.com/news/claude-2), en comparación con los [8.192 tokens](https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo) estándar de GPT-4 . OpenAI pronto respondió con una versión de ventana de [128.000 tokens de GPT-4](https://openai.com/index/new-models-and-developer-products-announced-at-devday/), y Google promociona una longitud de contexto de 1 millón de tokens con [Gemini 1.5](https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/). A modo de comparación, uno de los libros de Harry Potter tendría alrededor de 185.000 tokens, por lo que puede volverse común que un libro completo quepa dentro de un solo mensaje, aunque procesar millones de tokens con cada llamada a la API puede tener un costo prohibitivo para la mayoría de los casos de uso.
 
-Resumen
+Este libro se centra en GPT-4 para técnicas de generación de texto, así como en Midjourney v6 y Stable Diffusion XL para técnicas de generación de imágenes, pero en cuestión de meses estos modelos pueden dejar de ser de última generación. Esto significa que será cada vez más importante poder seleccionar el modelo adecuado para el trabajo y encadenar varios sistemas de IA. Las plantillas de indicaciones rara vez son comparables cuando se transfieren a un nuevo modelo, pero el efecto de los cinco principios de indicación mejorará constantemente cualquier modelo le indicamos el uso que le dará, para cualquier modelo, resultados más confiables.
+
+## Resumen
+
 En este capítulo, aprendiste sobre la importancia de la ingeniería de indicaciones en el contexto de la IA generativa. Definimos la ingeniería de indicaciones como el proceso de desarrollar indicaciones efectivas que produzcan los resultados deseados al interactuar con modelos de IA. Descubriste que brindar una dirección clara, dar formato a los resultados, incorporar ejemplos, establecer un sistema de evaluación y dividir las tareas complejas en indicaciones más pequeñas son principios clave de la ingeniería de indicaciones. Al aplicar estos principios y usar técnicas de indicaciones comunes, puedes mejorar la calidad y la confiabilidad de los resultados generados por IA.
 
 También exploró el papel de la ingeniería de indicaciones en la generación de nombres e imágenes de productos. Observó cómo especificar el formato deseado y proporcionar ejemplos instructivos puede influir en gran medida en el resultado de la IA. Además, aprendió sobre el concepto de juego de roles, donde puede pedirle a la IA que genere resultados como si fuera una persona famosa como Steve Jobs. El capítulo enfatizó la necesidad de una dirección y un contexto claros para lograr los resultados deseados al usar modelos de IA generativos. Además, descubrió la importancia de evaluar el rendimiento de los modelos de IA y los diversos métodos utilizados para medir los resultados, así como las compensaciones entre la calidad y el uso de tokens, el costo y la latencia.
 
-En el siguiente capítulo, se le presentarán los modelos de generación de texto. Aprenderá sobre los diferentes tipos de modelos básicos y sus capacidades, así como sus limitaciones. El capítulo también revisará las ofertas estándar de OpenAI, así como los competidores y las alternativas de código abierto. Al final del capítulo, tendrá una comprensión sólida de la historia de los modelos de generación de texto y sus fortalezas y debilidades relativas. Este libro volverá a la generación de imágenes mediante indicaciones en los capítulos 7 , 8 y 9 , por lo que puede omitir este capítulo si esa es su necesidad inmediata. Prepárese para profundizar en la disciplina de la ingeniería de indicaciones y ampliar su comodidad al trabajar con IA.
+En el siguiente capítulo, se le presentarán los modelos de generación de texto. Aprenderá sobre los diferentes tipos de modelos básicos y sus capacidades, así como sus limitaciones. El capítulo también revisará las ofertas estándar de OpenAI, así como los competidores y las alternativas de código abierto. Al final del capítulo, tendrá una comprensión sólida de la historia de los modelos de generación de texto y sus fortalezas y debilidades relativas. Este libro volverá a la generación de imágenes mediante indicaciones en los capítulos 7, 8 y 9, por lo que puede omitir este capítulo si esa es su necesidad inmediata. Prepárese para profundizar en la disciplina de la ingeniería de indicaciones y ampliar su comodidad al trabajar con IA.
