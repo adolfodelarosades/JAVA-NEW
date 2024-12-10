@@ -823,38 +823,57 @@ Estos ejemplos demuestran las capacidades de los modelos de generación de imág
 
 ## 4. Evaluar la calidad
 
-Hasta el momento, no ha habido un circuito de retroalimentación paraJuzgue la calidad de sus respuestas, además del ensayo y error básico de ejecutar el mensaje y ver los resultados, conocido como mensajes a ciegas . Esto está bien cuando sus mensajes se usan temporalmente para una sola tarea y rara vez se revisan. Sin embargo, cuando reutiliza el mismo mensaje varias veces o crea una aplicación de producción que depende de un mensaje, debe ser más riguroso con la medición de los resultados.
+Hasta el momento, no ha habido un circuito de retroalimentación para que juzgue la calidad de sus respuestas, además del ensayo y error básico de ejecutar el mensaje y ver los resultados, conocido como mensajes a ciegas - [https://oreil.ly/42rSz](https://mitchellh.com/writing/prompt-engineering-vs-blind-prompting). Esto está bien cuando sus mensajes se usan temporalmente para una sola tarea y rara vez se revisan. Sin embargo, cuando reutiliza el mismo mensaje varias veces o crea una aplicación de producción que depende de un mensaje, debe ser más riguroso con la medición de los resultados.
 
-Hay varias formas de evaluar el rendimiento y esto depende en gran medida de las tareas que se esperan lograr. Cuando se lanza un nuevo modelo de IA, el enfoque tiende a estar enqué tan bien se desempeñó el modelo en las evaluaciones , un conjunto estandarizado de preguntas con respuestas predefinidas o criterios de calificación que se utilizan para probar el desempeño en los distintos modelos. Los distintos modelos funcionan de manera diferente en distintos tipos de tareas, y no hay garantía de que una indicación que funcionó anteriormente se traduzca bien a un nuevo modelo. OpenAI ha hecho que su marco de evaluación para evaluar el desempeño de los LLM sea de código abierto y alienta a otros a contribuir con plantillas de evaluación adicionales.
+Hay varias formas de evaluar el rendimiento y esto depende en gran medida de las tareas que se esperan lograr. Cuando se lanza un nuevo modelo de IA, el enfoque tiende a estar en qué tan bien se desempeñó el modelo en las evaluaciones *evals*, un conjunto estandarizado de preguntas con respuestas predefinidas o criterios de calificación que se utilizan para probar el desempeño en los distintos modelos. Los distintos modelos funcionan de manera diferente en distintos tipos de tareas, y no hay garantía de que una indicación que funcionó anteriormente se traduzca bien a un nuevo modelo. OpenAI ha hecho que su [evals framework](https://github.com/openai/evals) el desempeño de los LLM sea de código abierto y alienta a otros a contribuir con plantillas de evaluación adicionales.
 
-Además de las evaluaciones académicas estándar, también hay pruebas más destacadas como la GPT-4 para aprobar el examen de abogacía . La evaluación es difícil para las tareas más subjetivas y puede llevar mucho tiempo o resultar prohibitivamente costosa para equipos más pequeños. En algunos casos, los investigadores han recurrido al uso de modelos más avanzados como la GPT-4 para evaluar las respuestas de modelos menos sofisticados, como se hizo con el lanzamiento de Vicuna-13B , un modelo perfeccionado basado en el modelo de código abierto Llama de Meta (consulte la Figura 1-11 ).
+Además de las evaluaciones académicas estándar, también hay pruebas más destacadas como la [GPT-4 para aprobar el examen de abogacía](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4389233). La evaluación es difícil para las tareas más subjetivas y puede llevar mucho tiempo o resultar prohibitivamente costosa para equipos más pequeños. En algunos casos, los investigadores han recurrido al uso de modelos más avanzados como la GPT-4 para evaluar las respuestas de modelos menos sofisticados, como se hizo con el lanzamiento de [Vicuna-13B](https://lmsys.org/blog/2023-03-30-vicuna/), un modelo perfeccionado basado en el modelo de código abierto Llama de Meta (consulte la Figura 1-11 ).
 
+<img width="816" alt="image" src="https://github.com/user-attachments/assets/4d0b285f-56a3-4262-8bea-f7b0d964f9b6">
 
-Figura 1-11. Evaluaciones Vicuña GPT-4
+**Figura 1-11. Evaluaciones Vicuna GPT-4**
+
 Se necesitan técnicas de evaluación más rigurosas al escribir artículos científicos o calificar una nueva versión de modelo de base, pero a menudo solo necesitará ir un paso más allá del ensayo y error básico. Es posible que descubra que un simple sistema de calificación de aprobación/desaprobación implementado en un Jupyter Notebook puede ser suficiente para agregar algo de rigor a la optimización de las indicaciones, sin agregar demasiados recursos. Una prueba común es ver si proporcionar ejemplos vale la pena el costo adicional en términos de extensión de la indicación, o si puede salirse con la suya sin proporcionar ejemplos en la indicación. El primer paso es obtener respuestas para múltiples ejecuciones de cada indicación y almacenarlas en una hoja de cálculo, lo que haremos después de configurar nuestro entorno.
 
-Puedes instalar OpenAI PythonPaquete con pip install openai. Si tiene problemas de compatibilidad con este paquete, cree un entorno virtual e instale nuestro requirements.txt (las instrucciones se encuentran en el prólogo).
+Puedes instalar OpenAI Python package con `pip install openai`. Si tiene problemas de compatibilidad con este paquete, cree un entorno virtual e instale nuestro [requirements.txt](https://github.com/BrightPool/prompt-engineering-for-generative-ai-examples/blob/main/requirements.txt) (las instrucciones se encuentran en el prólogo).
 
-Para utilizar la API, deberás:Necesita crear una cuenta OpenAI y luego navegar aquí para obtener su clave API .
+Para utilizar la API, deberás: Necesita [crear una cuenta OpenAI](https://auth.openai.com/authorize?audience=https%3A%2F%2Fapi.openai.com%2Fv1&auth0Client=eyJuYW1lIjoiYXV0aDAtc3BhLWpzIiwidmVyc2lvbiI6IjEuMjEuMCJ9&client_id=DRivsnm2Mu42T3KOpqdtwB3NYviHYzwD&device_id=7238f877-21fa-4a66-855f-b0a1d86e9bdd&issuer=https%3A%2F%2Fauth.openai.com&max_age=0&nonce=MH52ZzVuVDZublZKb3dRNFZETjRicVdDaDN1S1p%2BZWlYdEM0WjVfbzhMcw%3D%3D&redirect_uri=https%3A%2F%2Fplatform.openai.com%2Fauth%2Fcallback&response_mode=query&response_type=code&scope=openid+profile+email+offline_access&screen_hint=signup&state=N0szU1ZreVNrM0txR0locmxaTzVkSDRvdFozaHNIM01JalhKLm9FZFdsTg%3D%3D&flow=treatment) y luego [navegar aquí para obtener su clave API](https://platform.openai.com/api-keys).
 
-ADVERTENCIA
+**ADVERTENCIA**
+
 No se recomienda codificar las claves API en los scripts por razones de seguridad. En su lugar, utilice variables de entorno o archivos de configuración para administrar las claves.
 
-Una vez que tenga una clave API, es fundamental asignarla como una variable de entorno ejecutando el siguiente comando y reemplazándola api_keycon el valor de su clave API real:
+Una vez que tenga una clave API, es fundamental asignarla como una variable de entorno ejecutando el siguiente comando y reemplazándola `api_key` con el valor de su clave API real:
 
+<img width="829" alt="image" src="https://github.com/user-attachments/assets/cdf98208-12a1-411a-bebd-0f22d921955e">
+
+```text
 export OPENAI_API_KEY="api_key"
+```
+
 O en Windows:
 
-set OPENAI_API_KEY=clave api
-Como alternativa, si prefiere no preestablecer una clave API, puede establecer la clave manualmente al inicializar el modelo o cargarla desde un archivo .env mediante python-dotenv . Primero, instale la biblioteca con pip install python-dotenv, y luego cargue las variables de entorno con el siguiente código en la parte superior de su script o cuaderno:
+<img width="828" alt="image" src="https://github.com/user-attachments/assets/4bfa2e98-be36-4656-984e-7743a92ca9fc">
 
+```text
+set OPENAI_API_KEY=api_key
+```
+
+Como alternativa, si prefiere no preestablecer una clave API, puede establecer la clave manualmente al inicializar el modelo o cargarla desde un archivo `.env` mediante [python-dotenv](https://pypi.org/project/python-dotenv/). Primero, instale la biblioteca con `pip install python-dotenv`, y luego cargue las variables de entorno con el siguiente código en la parte superior de su script o cuaderno:
+
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/72de8c94-d3f1-4f5e-bcb7-cce689f8f392">
+
+```text
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
+```
+
 El primer paso es obtener respuestas para múltiples ejecuciones de cada indicación y almacenarlas en una hoja de cálculo.
 
-Aporte:
+Input:
 
+```text
 # Define two variants of the prompt to test zero-shot
 # vs few-shot
 prompt_A = """Product description: A pair of shoes that can
@@ -932,62 +951,68 @@ df = pd.DataFrame(responses)
 df.to_csv("responses.csv", index=False)
 
 print(df)
-Producción:
+```
 
-  indicación de variante
+Ouput:
+
+```text
+variant                                             prompt
   \
-0 A Descripción del producto: Un par de zapatos que pueden...
-1 A Descripción del producto: Un par de zapatos que pueden...
-2 A Descripción del producto: Un par de zapatos que pueden...
-3 A Descripción del producto: Un par de zapatos que pueden...
-4A Descripción del producto: Un par de zapatos que pueden...
-5 B Descripción del producto: Una máquina para hacer batidos en casa.\n...
-6 B Descripción del producto: Una máquina para hacer batidos en casa.\n...
-7 B Descripción del producto: Una máquina para hacer batidos en casa.\n...
-8 B Descripción del producto: Una máquina para hacer batidos en casa.\n...
-9 B Descripción del producto: Una máquina para hacer batidos en casa.\n...
+0       A  Product description: A pair of shoes that can ...
+1       A  Product description: A pair of shoes that can ...
+2       A  Product description: A pair of shoes that can ...
+3       A  Product description: A pair of shoes that can ...
+4       A  Product description: A pair of shoes that can ...
+5       B  Product description: A home milkshake maker.\n...
+6       B  Product description: A home milkshake maker.\n...
+7       B  Product description: A home milkshake maker.\n...
+8       B  Product description: A home milkshake maker.\n...
+9       B  Product description: A home milkshake maker.\n...
 
-                                            respuesta
-0 1. Zapatos Adapt-a-Fit \n2. Calzado Omni-Fit \n...
-1 1. Zapatillas OmniFit\n2. Zapatillas Adapt-a-Sneaks\n3. Zapatillas OneFit
-2 1. Adapt-a-fit\n2. Zapatos Flexi-fit\n3. Omni-fe...
-3 1. Adapt-A-Sole\n2. FitFlex\n3. Omni-FitX\n4. ...
-4 1. Zapatos Omni-Fit\n2. Zapatos Adapt-a-Fit\n3. Un...
-5 Adapt-a-Fit, zapatos de ajuste perfecto, OmniShoe, OneS...
-6 FitAll, Zapatillas OmniFit, SizeLess, AdaptaShoes
-7 AdaptaFit, OmniShoe, PerfectFit, AllSizeFit.
-8 FitMaster, AdaptoShoe, OmniFit, Calzado AnySize...
-9. Adaptar un zapato, PerfectFit, OmniSize, FitForm
-Aquí usamos la API OpenAI para generar el modelo.Respuestas a un conjunto de indicaciones y almacenamiento de los resultados en un marco de datos, que se guarda en un archivo CSV. Así es como funciona:
+                                            response
+0  1. Adapt-a-Fit Shoes \n2. Omni-Fit Footwear \n...
+1  1. OmniFit Shoes\n2. Adapt-a-Sneaks \n3. OneFi...
+2  1. Adapt-a-fit\n2. Flexi-fit shoes\n3. Omni-fe...
+3  1. Adapt-A-Sole\n2. FitFlex\n3. Omni-FitX\n4. ...
+4  1. Omni-Fit Shoes\n2. Adapt-a-Fit Shoes\n3. An...
+5  Adapt-a-Fit, Perfect Fit Shoes, OmniShoe, OneS...
+6       FitAll, OmniFit Shoes, SizeLess, AdaptaShoes
+7       AdaptaFit, OmniShoe, PerfectFit, AllSizeFit.
+8  FitMaster, AdaptoShoe, OmniFit, AnySize Footwe...
+9        Adapt-a-Shoe, PerfectFit, OmniSize, FitForm
+```
 
-Se definen dos variantes del mensaje y cada variante consta de una descripción del producto, palabras clave y posibles nombres de productos, pero prompt_Bse proporcionan dos ejemplos.
+Aquí usamos la API OpenAI para generar el modelo. Respuestas a un conjunto de indicaciones y almacenamiento de los resultados en un marco de datos, que se guarda en un archivo CSV. Así es como funciona:
 
-Se llaman declaraciones de importación para la biblioteca Pandas, la biblioteca OpenAI y la biblioteca del sistema operativo.
+1. Se definen dos variantes del mensaje y cada variante consta de una descripción del producto, palabras clave y posibles nombres de productos, pero `prompt_B` se proporcionan dos ejemplos.
 
-La get_responsefunción toma un mensaje como entrada y devuelve una respuesta del gpt-3.5-turbomodelo. El mensaje se pasa como un mensaje de usuario al modelo, junto con un mensaje del sistema para establecer el comportamiento del modelo.
+2. Se llaman declaraciones de importación para la biblioteca Pandas, la biblioteca OpenAI y la biblioteca del sistema operativo.
 
-Se almacenan dos variantes de solicituden la test_promptslista.
+3. La función `get_response` toma un mensaje como entrada y devuelve una respuesta del modelo `gpt-3.5-turbo`. El mensaje se pasa como un mensaje de usuario al modelo, junto con un mensaje del sistema para establecer el comportamiento del modelo.
 
-responsesSe crea una lista vacía para almacenar elrespuestas generadas y la variable num_testsse establece en 5.
+4. Se almacenan dos variantes de prompt en la lista `test_prompts`.
 
-Un bucle anidado esSe utiliza para generar respuestas. El bucle externo itera sobre cada mensaje y el bucle interno genera num_testsun número de respuestas por mensaje (cinco en este caso).
+5. Se crea una lista vacía `responses` para almacenar las respuestas generadas y la variable `num_tests` se establece en `5`.
 
-La enumeratefunción se utiliza para obtener el índice y el valor de cada mensaje en test_prompts. Luego, este índice se convierte en una letra mayúscula correspondiente (por ejemplo, 0 se convierte en A , 1 se convierte en B ) para usarse como nombre de variante.
+6. Un bucle anidado se utiliza para generar respuestas. El bucle externo itera sobre cada mensaje y el bucle interno genera `num_tests`(cinco en este caso) un número de respuestas por mensaje .
 
-Para cada iteración, get_responsese llama a la función con el mensaje actual para generar una respuesta del modelo.
+   a. La función `enumerate` se utiliza para obtener el índice y el valor de cada mensaje en `test_prompts`. Luego, este índice se convierte en una letra mayúscula correspondiente (por ejemplo, 0 se convierte en A, 1 se convierte en B ) para usarse como nombre de variante.
 
-Se crea un diccionario con el nombre de la variante, el mensaje y la respuesta del modelo, y este diccionario se agrega a la responseslista.
+   b. Para cada iteración, `get_response` se llama a la función con el mensaje actual para generar una respuesta del modelo.
 
-Una vez generadas todas las respuestas, la responseslista (que ahora es una lista de diccionarios) se convierte en un Pandas DataFrame.
+   c. Se crea un diccionario con el nombre de la variante, el mensaje y la respuesta del modelo, y este diccionario se agrega a la lista `responses`.
 
-Luego, este marco de datos se guarda en un archivo CSV con la función incorporada de Pandas to_csv, lo que hace que el archivo responses.csv noindex=False escriba índices de fila.
+7. Una vez generadas todas las respuestas, la lista `responses` (que ahora es una lista de diccionarios) se convierte en un Pandas DataFrame.
 
-Finalmente, el marco de datos se imprime en la consola.
+8. Luego, este marco de datos se guarda en un archivo CSV con la función incorporada de Pandas `to_csv`, lo que hace que el archivo `responses.csv` con `index=False` escriba índices de fila.
 
-Tener estas respuestas en una hoja de cálculo ya es útil, porque se puede ver de inmediato, incluso en la respuesta impresa, que prompt_A(zero-shot) en las primeras cinco filas nos da una lista numerada, mientras que prompt_B(few-shot) en las últimas cinco filas tiende a generar el formato deseado de una lista en línea separada por comas. El siguiente paso es dar una calificación a cada una de las respuestas, lo que se hace mejor de forma ciega y aleatoria para evitar favorecer una pregunta sobre otra.
+9. Finalmente, el marco de datos se imprime en la consola.
 
-Aporte:
+Tener estas respuestas en una hoja de cálculo ya es útil, porque se puede ver de inmediato, incluso en la respuesta impresa, que `prompt_A`(zero-shot) en las primeras cinco filas nos da una lista numerada, mientras que `prompt_B`(few-shot) en las últimas cinco filas tiende a generar el formato deseado de una lista en línea separada por comas. El siguiente paso es dar una calificación a cada una de las respuestas, lo que se hace mejor de forma ciega y aleatoria para evitar favorecer una pregunta sobre otra.
 
+Input:
+
+```text
 import ipywidgets as widgets
 from IPython.display import display
 import pandas as pd
@@ -1052,136 +1077,172 @@ button_box = widgets.HBox([thumbs_down_button,
 thumbs_up_button])
 
 display(response, button_box, count_label)
-La salida se muestra en la Figura 1-12 :
+```
 
+La salida se muestra en la Figura 1-12:
 
-Figura 1-12. Sistema de calificación de pulgares hacia arriba/pulgares hacia abajo
-Si ejecuta esto enEn un Jupyter Notebook, un widget muestra cada respuesta de IA, con un botón de pulgar hacia arriba o pulgar hacia abajo (consulte la Figura 1-12 ). Esto proporciona una interfaz simple para etiquetar rápidamente las respuestas, con una sobrecarga mínima. Si desea hacer esto fuera de un Jupyter Notebook, puede cambiar los emojis de pulgar hacia arriba y pulgar hacia abajo por Y y N , e implementar un bucle utilizando la función incorporada input(), como un reemplazo de solo texto para iPyWidgets.
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/cfbffdc4-1a73-4447-9d43-6415d6899f3e">
+
+**Figura 1-12. Sistema de calificación de pulgares hacia arriba/pulgares hacia abajo**
+
+Si ejecuta esto en un Jupyter Notebook, un widget muestra cada respuesta de IA, con un botón de pulgar hacia arriba o pulgar hacia abajo (consulte la Figura 1-12 ). Esto proporciona una interfaz simple para etiquetar rápidamente las respuestas, con una sobrecarga mínima. Si desea hacer esto fuera de un Jupyter Notebook, puede cambiar los emojis de pulgar hacia arriba y pulgar hacia abajo por Y y N , e implementar un bucle utilizando la función incorporada `input()`, como un reemplazo de solo texto para iPyWidgets.
 
 Una vez que hayas terminado de etiquetar las respuestas, obtendrás el resultado, que te muestra cómo funciona cada mensaje.
 
-Producción:
+<img width="838" alt="image" src="https://github.com/user-attachments/assets/ed207414-b1cb-4c94-8558-8938c4a74485">
 
-Prueba A/B completada. Estos son los resultados:
-  Puntuación del recuento de variantes
-0 A 5 0,2
-1 B 5 0,6
+Output:
+
+```text
+A/B testing completed. Here's the results:
+  variant  count  score
+0       A      5    0.2
+1       B      5    0.6
+```
+
 El marco de datos se barajó al azar y cada respuesta se etiquetó como ciega (sin ver la indicación), de modo que se obtiene una imagen precisa de la frecuencia con la que se ejecutó cada indicación. Aquí se incluye la explicación paso a paso:
 
-Se importan tres módulos: ipywidgets, IPython.display, y pandas. ipywidgetscontiene widgets HTML interactivos para Jupyter Notebooks y el kernel IPython. IPython.displayproporciona clases para mostrar varios tipos de salida como imágenes, sonido, visualización de HTML, etc. Pandas es una poderosa biblioteca de manipulación de datos.
+1. Se importan tres módulos: `ipywidgets`, `IPython.display`, y `pandas`. `ipywidgets` contiene widgets HTML interactivos para Jupyter Notebooks y el kernel IPython. `IPython.display` proporciona clases para mostrar varios tipos de salida como imágenes, sonido, visualización de HTML, etc. Pandas es una poderosa biblioteca de manipulación de datos.
 
-La biblioteca Pandas se utiliza para leer el archivo CSV responses.csv , que contiene las respuestas que desea probar. Esto crea un Pandas DataFrame llamado df.
+2. La biblioteca Pandas se utiliza para leer el archivo CSV `responses.csv`, que contiene las respuestas que desea probar. Esto crea un Pandas DataFrame llamado `df`.
 
-dfse baraja utilizando la sample()función con frac=1, lo que significa que utiliza todas las filas. Se reset_index(drop=True)utiliza para restablecer los índices al índice estándar 0, 1, 2, …​, n.
+3. `df` se baraja utilizando la función `sample()` con `frac=1`, lo que significa que utiliza todas las filas. Se `reset_index(drop=True)` utiliza para restablecer los índices al índice estándar 0, 1, 2, …​, n.
 
-El script se define response_indexcomo 0. Esto se utiliza para rastrear qué respuesta del marco de datos está viendo actualmente el usuario.
+4. El script se define `response_index` como 0. Esto se utiliza para rastrear qué respuesta del marco de datos está viendo actualmente el usuario.
 
-Se agrega una nueva columna feedbackal marco de datos dfcon el tipo de datos como stro cadena.
+5. Se agrega una nueva columna `feedback` al marco de datos `df` con el tipo de datos como `str` o string.
 
-A continuación, el script define una función on_button_clicked(b)que se ejecutará cada vez que se haga clic en uno de los dos botones de la interfaz.
+6. A continuación, el script define una función `on_button_clicked(b)` que se ejecutará cada vez que se haga clic en uno de los dos botones de la interfaz.
 
-La función primero verifica si descriptionel botón en el que se hizo clic fue el de pulgar hacia arriba ( \U0001F44D; ), y lo establece user_feedbackcomo 1, o si fue el de pulgar hacia abajo ( \U0001F44E ), lo establece user_feedbackcomo 0.
+   a. La función primero verifica si `description` el botón en el que se hizo clic fue el de pulgar hacia arriba ( `\U0001F44D;` \U0001F44D; ), y lo establece `user_feedback` como 1, o si fue el de pulgar hacia abajo ( `\U0001F44E;` \U0001F44E; ), lo establece `user_feedback` como 0.
 
-Luego actualiza la feedbackcolumna del marco de datos en el actual response_indexcon user_feedback.
+   b. Luego actualiza la columna `feedback` del marco de datos en el actual `response_index` con `user_feedback`.
 
-Después de eso, se incrementa response_indexpara pasar a la siguiente respuesta.
+   c. Después de eso, se incrementa `response_index` para pasar a la siguiente respuesta.
 
-Si response_indextodavía es menor que el número total de respuestas (es decir, la longitud del marco de datos), llama a la función update_response().
+   d. Si `response_index` todavía es menor que el número total de respuestas (es decir, la longitud del marco de datos), llama a la función `update_response()`.
 
-Si no hay más respuestas, guarda el marco de datos en un nuevo archivo CSV results.csv , luego imprime un mensaje y también imprime un resumen de los resultados por variante, mostrando el recuento de comentarios recibidos y el puntaje promedio (media) para cada variante.
+   e. Si no hay más respuestas, guarda el marco de datos en un nuevo archivo CSV `results.csv`, luego imprime un mensaje y también imprime un resumen de los resultados por variante, mostrando el recuento de comentarios recibidos y el puntaje promedio (media) para cada variante.
 
-La función update_response()obtiene la siguiente respuesta del marco de datos, la envuelve en etiquetas HTML de párrafo (si no es nulo), actualiza el responsewidget para mostrar la nueva respuesta y actualiza el count_labelwidget para reflejar el número de respuesta actual y el número total de respuestas.
+7. La función `update_response()` obtiene la siguiente respuesta del marco de datos, la envuelve en etiquetas HTML de párrafo (si no es nulo), actualiza el `response` widget para mostrar la nueva respuesta y actualiza el `count_label` widget para reflejar el número de respuesta actual y el número total de respuestas.
 
-Se crean dos widgets response(un widget HTML) y un widget de etiqueta). Luego se llama a la función para inicializar estos widgets con la primera respuesta y la etiqueta adecuada.count_labelupdate_response()
+8. Se crean dos widgets `response`(un widget HTML) y `count_label`(un widget de etiqueta). Luego se llama a la función `update_response()` para inicializar estos widgets con la primera respuesta y la etiqueta adecuada. 
 
-Se crean dos widgets más, thumbs_up_buttony thumbs_down_button(ambos widgets de botón), con emojis de pulgar hacia arriba y pulgar hacia abajo como descripciones, respectivamente. Ambos botones están configurados para llamar a la on_button_clicked()función cuando se hace clic en ellos.
+9. Se crean dos widgets más, `thumbs_up_button` y `thumbs_down_button`(ambos widgets de botón), con emojis de pulgar hacia arriba y pulgar hacia abajo como descripciones, respectivamente. Ambos botones están configurados para llamar a la función `on_button_clicked()` cuando se hace clic en ellos.
 
-Los dos botones se agrupan en un cuadro horizontal ( button_box) mediante la HBoxfunción.
+10. Los dos botones se agrupan en un cuadro horizontal (`button_box`) mediante la función `HBox`.
 
-Finalmente, los responsewidgets button_box, y count_labelse muestran al usuario mediante la display()función del IPython.displaymódulo.
+11. Finalmente, los widgets `response`, `button_box`, y `count_label` se muestran al usuario mediante la función `display()` del módulo `IPython.display`.
 
 Un sistema de calificación simple como este puede ser útil para juzgar la calidad de las indicaciones y detectar casos extremos. Por lo general, en menos de 10 ejecuciones de prueba de una indicación, se descubre una desviación que, de otro modo, no se habría detectado hasta que se comenzó a utilizar en producción. La desventaja es que puede resultar tedioso calificar muchas respuestas manualmente, y es posible que las calificaciones no representen las preferencias de la audiencia a la que se dirige. Sin embargo, incluso una pequeña cantidad de pruebas puede revelar grandes diferencias entre dos estrategias de indicaciones y revelar problemas no obvios antes de llegar a producción.
 
 La iteración y prueba de los mensajes puede llevar a reducciones radicales en la longitud del mensaje y, por lo tanto, en el costo y la latencia de su sistema. Si puede encontrar otro mensaje que funcione igual de bien (o mejor) pero que utilice un mensaje más corto, puede permitirse ampliar considerablemente su operación. A menudo, en este proceso encontrará que muchos elementos de un mensaje complejo son completamente superfluos o incluso contraproducentes.
 
-Los pulgares hacia arriba u otros indicadores de calidad etiquetados manualmente no tienen por qué ser los únicos criterios de evaluación. La evaluación humana generalmente se considera la forma más precisa de retroalimentación. Sin embargo, puede ser tedioso y costoso calificar muchas muestras manualmente. En muchos casos, como en los casos de uso de matemáticas o clasificación, puede ser posibleEstablezca la verdad básica (respuestas de referencia para casos de prueba) para evaluar programáticamente los resultados, lo que le permitirá ampliar considerablemente sus esfuerzos de prueba y monitoreo. La siguiente no es una lista exhaustiva porque hay muchas motivaciones para evaluar suIndicar programáticamente:
+Los pulgares hacia arriba u otros indicadores de calidad etiquetados manualmente no tienen por qué ser los únicos criterios de evaluación. La evaluación humana generalmente se considera la forma más precisa de retroalimentación. Sin embargo, puede ser tedioso y costoso calificar muchas muestras manualmente. En muchos casos, como en los casos de uso de matemáticas o clasificación, puede ser posible establezca la verdad básica (respuestas de referencia para casos de prueba) para evaluar programáticamente los resultados, lo que le permitirá ampliar considerablemente sus esfuerzos de prueba y monitoreo. La siguiente no es una lista exhaustiva porque hay muchas motivaciones para evaluar su indicar programáticamente:
 
-Costo
-Los mensajes que utilizan muchos tokens o que funcionan solo con modelos más costosos pueden resultar poco prácticos para el uso en producción.
+* Costo
 
-Estado latente
-Del mismo modo, cuanto más tokens haya o cuanto mayor sea el modelo requerido, más tiempo llevará completar una tarea, lo que puede perjudicar la experiencia del usuario.
+   Los mensajes que utilizan muchos tokens o que funcionan solo con modelos más costosos pueden resultar poco prácticos para el uso en producción.
 
-Llamadas
-Muchos sistemas de IA requieren múltiples llamadas en un bucle para completar una tarea, lo que puede ralentizar gravemente el proceso.
+* Estado latente
 
-Actuación
-Implementar algún tipo de sistema de retroalimentación externa, por ejemplo, un motor de física u otro modelo para predecir resultados del mundo real.
+   Del mismo modo, cuanto más tokens haya o cuanto mayor sea el modelo requerido, más tiempo llevará completar una tarea, lo que puede perjudicar la experiencia del usuario.
 
-Clasificación
-Determinar con qué frecuencia una indicación etiqueta correctamente un texto dado, utilizando otro modelo de IA o etiquetado basado en reglas.
+* Llamadas
 
-Razonamiento
-Determinar en qué casos la IA no aplica el razonamiento lógico o realiza errores matemáticos en comparación con los casos de referencia.
+   Muchos sistemas de IA requieren múltiples llamadas en un bucle para completar una tarea, lo que puede ralentizar gravemente el proceso.
 
-Alucinaciones
-Observa con qué frecuencia tienes alucinaciones, medida según la invención de términos nuevos no incluidos en el contexto del mensaje.
+* Actuación
 
-Seguridad
-Marque cualquier escenario en el que el sistema pueda devolver resultados inseguros o no deseados mediante un filtro de seguridad o un sistema de detección.
+   Implementar algún tipo de sistema de retroalimentación externa, por ejemplo, un motor de física u otro modelo para predecir resultados del mundo real.
 
-Rechazos
-Descubra con qué frecuencia el sistema se niega incorrectamente a satisfacer una solicitud razonable de un usuario marcando el lenguaje de rechazo conocido.
+* Clasificación
 
-Adversario
-Haga que el indicador sea robusto contra ataques de inyección de indicador conocidos que pueden hacer que el modelo ejecute indicadores no deseados en lugar de lo que usted programó.
+   Determinar con qué frecuencia una indicación etiqueta correctamente un texto dado, utilizando otro modelo de IA o etiquetado basado en reglas.
 
-Semejanza
-Utilice palabras y frases compartidas ( BLEU o ROGUE ) o distancia vectorial (explicada en el Capítulo 5 ) para medir la similitud entre el texto generado y el de referencia.
+* Razonamiento
 
-Una vez que comience a calificar qué ejemplos fueron buenos, podrá actualizar más fácilmente los ejemplos utilizados en su solicitud como una forma de hacer que su sistema sea cada vez más inteligente con el tiempo. Los datos de esta retroalimentación también pueden incorporarse a ejemplos para realizar ajustes, lo que comienza a superar la ingeniería de solicitudes una vez que pueda proporcionar unos pocos miles de ejemplos , como se muestra en la Figura 1-13 .
+   Determinar en qué casos la IA no aplica el razonamiento lógico o realiza errores matemáticos en comparación con los casos de referencia.
+
+* Alucinaciones
+
+   Observa con qué frecuencia tienes alucinaciones, medida según la invención de términos nuevos no incluidos en el contexto del mensaje.
+
+* Seguridad
+
+   Marque cualquier escenario en el que el sistema pueda devolver resultados inseguros o no deseados mediante un filtro de seguridad o un sistema de detección.
+
+* Rechazos
+
+   Descubra con qué frecuencia el sistema se niega incorrectamente a satisfacer una solicitud razonable de un usuario marcando el lenguaje de rechazo conocido.
+
+* Adversario
+
+   Haga que el indicador sea robusto contra ataques de inyección de indicador conocidos que pueden hacer que el modelo ejecute indicadores no deseados en lugar de lo que usted programó.
+
+* Semejanza
+
+   Utilice palabras y frases compartidas ( BLEU o ROGUE ) o distancia vectorial (explicada en el Capítulo 5 ) para medir la similitud entre el texto generado y el de referencia.
+
+Una vez que comience a calificar qué ejemplos fueron buenos, podrá actualizar más fácilmente los ejemplos utilizados en su solicitud como una forma de hacer que su sistema sea cada vez más inteligente con el tiempo. Los datos de esta retroalimentación también pueden incorporarse a ejemplos para realizar ajustes, lo que comienza a superar la ingeniería de solicitudes una vez que pueda proporcionar unos pocos miles de ejemplos, como se muestra en la Figura 1-13 .
+
+<img width="558" alt="image" src="https://github.com/user-attachments/assets/749a4899-007a-443a-9b36-60aad10fe60e">
+
+**Figura 1-13. ¿Cuántos puntos de datos vale un prompt?**
+
+Al pasar de un pulgar hacia arriba a un pulgar hacia abajo, puede implementar un sistema de calificación de 3, 5 o 10 puntos para obtener comentarios más detallados sobre la calidad de sus indicaciones. También es posible determinar el rendimiento relativo agregado al comparar las respuestas una al lado de la otra, en lugar de analizar las respuestas una a la vez. A partir de esto, puede construir una comparación justa entre modelos utilizando una [calificación Elo](https://en.wikipedia.org/wiki/Elo_rating_system), como es popular en ajedrez y se usa en [Chatbot Arena](https://lmarena.ai/?arena) de lmsys.org.
+
+Para la generación de imágenes, la evaluación generalmente adopta la forma de una indicación de permutación, en la que se introducen múltiples direcciones o formatos y se genera una imagen para cada combinación. Las imágenes se pueden escanear o disponer posteriormente en una cuadrícula para mostrar el efecto que pueden tener los distintos elementos de la indicación en la imagen final.
 
 
-Figura 1-13. ¿Cuántos puntos de datos vale una solicitud?
-Al pasar de un pulgar hacia arriba a un pulgar hacia abajo, puede implementar un sistema de calificación de 3, 5 o 10 puntos para obtener comentarios más detallados sobre la calidad de sus indicaciones. También es posible determinar el rendimiento relativo agregado al comparar las respuestas una al lado de la otra, en lugar de analizar las respuestas una a la vez. A partir de esto, puede construir una comparación justa entre modelos utilizando una calificación Elo , como es popular en ajedrez y se usa en Chatbot Arena de lmsys.org .
+<img width="834" alt="image" src="https://github.com/user-attachments/assets/99422e74-0ed7-41a0-9853-f4c6096a0b61">
 
-Para la generación de imágenes, la evaluación generalmenteadopta la forma de una indicación de permutación , en la que se introducen múltiples direcciones o formatos y se genera una imagen para cada combinación. Las imágenes se pueden escanear o disponer posteriormente en una cuadrícula para mostrar el efecto que pueden tener los distintos elementos de la indicación en la imagen final.
+Input:
 
-Aporte:
+```text
+{stock photo, oil painting, illustration} of business
+meeting of {four, eight} people watching on white MacBook on
+top of glass-top table
+```
 
-{foto de stock, pintura al óleo, ilustración} de negocios
-Reunión de {cuatro, ocho} ​​personas que miran en una MacBook blanca
-Parte superior de la mesa con tapa de cristal
 En Midjourney esto se compilaría en seis indicaciones diferentes, una para cada combinación de los tres formatos (fotografía de archivo, pintura al óleo, ilustración) y dos números de personas (cuatro, ocho).
 
-Aporte:
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/6c3119be-259a-4ded-ad0e-395707ce33ae">
 
-1. Fotografía de archivo de una reunión de negocios de cuatro personas mirando
-En una MacBook blanca sobre una mesa de cristal
+Input:
 
-2. Fotografía de archivo de una reunión de negocios de ocho personas mirando
-En una MacBook blanca sobre una mesa de cristal
+```text
+1. stock photo of business meeting of four people watching
+on white MacBook on top of glass-top table
 
-3. Pintura al óleo de una reunión de negocios de cuatro personas observando
-En una MacBook blanca sobre una mesa de cristal
+2. stock photo of business meeting of eight people watching
+on white MacBook on top of glass-top table
 
-4. Pintura al óleo de una reunión de negocios de ocho personas observando
-En una MacBook blanca sobre una mesa de cristal
+3. oil painting of business meeting of four people watching
+on white MacBook on top of glass-top table
 
-5. Ilustración de una reunión de negocios de cuatro personas mirando
-En una MacBook blanca sobre una mesa de cristal
+4. oil painting of business meeting of eight people watching
+on white MacBook on top of glass-top table
 
-6. Ilustración de una reunión de negocios de ocho personas observando
-En una MacBook blanca sobre una mesa de cristal
-Cada mensaje genera sus propias cuatro imágenes como de costumbre, lo que hace que el resultado sea un poco más difícil de ver. Hemos seleccionado una de cada mensaje para ampliarla y luego las hemos puesto juntas en una cuadrícula, como se muestra en la Figura 1-14 . Notarás que el modelo no siempre obtiene la cantidad correcta de personas (los modelos de IA generativa son sorprendentemente malos en matemáticas), pero ha inferido correctamente la intención general al agregar más personas a las fotos de la derecha que a las de la izquierda.
+5. illustration of business meeting of four people watching
+on white MacBook on top of glass-top table
+
+6. illustration of business meeting of eight people watching
+on white MacBook on top of glass-top table
+```
+
+Cada prompt genera sus propias cuatro imágenes como de costumbre, lo que hace que el resultado sea un poco más difícil de ver. Hemos seleccionado una de cada mensaje para ampliarla y luego las hemos puesto juntas en una cuadrícula, como se muestra en la Figura 1-14 . Notarás que el modelo no siempre obtiene la cantidad correcta de personas (los modelos de IA generativa son sorprendentemente malos en matemáticas), pero ha inferido correctamente la intención general al agregar más personas a las fotos de la derecha que a las de la izquierda.
 
 La figura 1-14 muestra la salida.
 
+<img width="731" alt="image" src="https://github.com/user-attachments/assets/16fcd079-29d1-4eb0-8adf-ad54e9b2393b">
 
-Figura 1-14. Cuadrícula de permutaciones de indicaciones
-Con modelos que tienen API como Stable Diffusion, puedesPuede manipular las fotos con mayor facilidad y mostrarlas en formato de cuadrícula para escanearlas con facilidad. También puede manipular la semilla aleatoria de la imagen para fijar un estilo en su lugar para lograr la máxima reproducibilidad. Con los clasificadores de imágenes, también puede ser posible clasificar las imágenes programáticamente en función de su contenido seguro o si contienen ciertos elementos asociados.con éxito o con fracaso.
+**Figura 1-14. Cuadrícula de permutaciones de indicaciones**
 
-5. Dividir el trabajo
+Con modelos que tienen API como Stable Diffusion, puede manipular las fotos con mayor facilidad y mostrarlas en formato de cuadrícula para escanearlas con facilidad. También puede manipular la semilla aleatoria de la imagen para fijar un estilo en su lugar para lograr la máxima reproducibilidad. Con los clasificadores de imágenes, también puede ser posible clasificar las imágenes programáticamente en función de su contenido seguro o si contienen ciertos elementos asociados con éxito o con fracaso.
+
+## 5. Dividir el trabajo
+
 A medida que vaya desarrollando su mensaje, comienceLlegar al punto en el que le estás pidiendo mucho en una sola llamada a la IA. Cuando las indicaciones se hacen más largas y más complicadas, es posible que las respuestas se vuelvan menos deterministas y aumenten las alucinaciones o anomalías. Incluso si logras llegar a una indicación confiable para tu tarea, es probable que esa tarea sea solo una de varias tareas interrelacionadas que necesitas para hacer tu trabajo. Es natural comenzar a explorar cuántas otras de estas tareas podría realizar la IA y cómo podrías unirlas.
 
 Uno de los principios básicos de la ingeniería esUtilice la descomposición de tareas para dividir los problemas en sus partes componentes, de modo que pueda resolver más fácilmente cada problema individual y luego volver a agregar los resultados. Dividir su trabajo de IA en múltiples llamadas encadenadas puede ayudarlo a realizar tareas más complejas, así como a brindar más visibilidad sobre qué parte de la cadena está fallando.
