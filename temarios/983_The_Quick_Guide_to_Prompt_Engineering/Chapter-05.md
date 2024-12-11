@@ -1,80 +1,83 @@
-# 5.
-Ingeniería rápida en toda la industria
-Tabla de contenido
-Casos prácticos de cómo dominar la escritura creativa para creadores de contenido
-Lluvia de ideas y generación de ideas
-Cómo combatir el bloqueo del escritor
-Narración adaptativa
-Diversas producciones estilísticas
-Bucle de retroalimentación
-Caso de estudio: El novelista digital
-Transformación de operaciones: aplicaciones empresariales de la ingeniería rápida
-Caso de estudio: La revolución de NexaRetail
-Revolucionando la educación: aplicaciones de ingeniería rápida en el aula
-Rutas de aprendizaje personalizadas
-Materiales de estudio interactivos
-Asistencia para el aprendizaje de idiomas
-Retroalimentación en tiempo real
-Gestión del aula
-Integración de realidad aumentada (RA)
-Caso de estudio: La transformación de EduFutura
-El poder de la prensa Casos de uso en periodismo y medios
-Informes rápidos
-Periodismo de datos
-Personalización de contenido
-Transcripción y traducción automática
-Verificación de hechos
-Narración visual
-Estudio de caso: La evolución de NewsNet
-Optimización de las solicitudes de investigación para académicos y analistas de mercado
-Reseñas de literatura
-Análisis de datos
-Modelado predictivo
-Análisis de encuestas
-Creación de contenido
-Seguimiento en tiempo real
-Estudio de caso: Integración de ScholarSphere
-Navegando por el panorama jurídico Ingeniería rápida en derecho
-Investigación jurídica
-Análisis de contrato
-Predicción de litigios
-Automatización de documentos
-Descubrimiento legal
-Actualizaciones legales en tiempo real
-Estudio de caso: La transformación de LawScape
-Ingeniería rápida en el cuidado de la salud: reinventando la comunicación con los pacientes y el análisis de datos
-Interacción con el paciente
-Análisis de datos médicos
-Planes de tratamiento personalizados
-Monitoreo en tiempo real
-Investigación médica
-Asistencia de telesalud
-Estudio de caso: Integración de HealthLink
-Entretenimiento reinventado: aplicaciones en música, cine y más
-Guion y storyboard
-Composición musical
-Experiencias de entretenimiento personalizadas
-Edición de películas
-Realidad virtual (RV) y realidad aumentada (RA)
-Búsqueda de talentos
-Estudio de caso: La evolución de EchoTunes
-Construyendo ciudades más inteligentes: aplicaciones en planificación urbana y políticas públicas
-Gestión del tráfico y la infraestructura
-Planificación urbana sostenible
-Seguridad y protección pública
-Gestión de recursos
-Toma de decisiones sobre políticas públicas
-Visualización de datos urbanos
-Estudio de caso: La transformación de MetroVille
-La creación de mercados impulsa la ingeniería en finanzas y economía
-Pronóstico financiero
-Gestión de riesgos
-Comercio algorítmico
-Análisis de tendencias económicas
-Productos financieros personalizados
-Monitoreo financiero en tiempo real
-Estudio de caso: La maestría de FinTechPro
-Casos prácticos de cómo dominar la escritura creativa para creadores de contenido
+# 5. Prompt Engineering en toda la industria
+
+## Tabla de contenido
+
+* Casos prácticos de cómo dominar la escritura creativa para creadores de contenido
+   * Lluvia de ideas y generación de ideas
+   * Cómo combatir el bloqueo del escritor
+   * Narración adaptativa
+   * Diversas producciones estilísticas
+   * Bucle de retroalimentación
+   * Caso de estudio: El novelista digital
+* Transformación de operaciones: aplicaciones empresariales de la ingeniería rápida
+   * Caso de estudio: La revolución de NexaRetail
+* Revolucionando la educación: aplicaciones de ingeniería rápida en el aula
+   * Rutas de aprendizaje personalizadas
+   * Materiales de estudio interactivos
+   * Asistencia para el aprendizaje de idiomas
+   * Retroalimentación en tiempo real
+   * Gestión del aula
+   * Integración de realidad aumentada (RA)
+   * Caso de estudio: La transformación de EduFutura
+* El poder de la prensa Casos de uso en periodismo y medios
+   * Informes rápidos
+   * Periodismo de datos
+   * Personalización de contenido
+   * Transcripción y traducción automática
+   * Verificación de hechos
+   * Narración visual
+   * Estudio de caso: La evolución de NewsNet
+* Optimización de las solicitudes de investigación para académicos y analistas de mercado
+   * Reseñas de literatura
+   * Análisis de datos
+   * Modelado predictivo
+   * Análisis de encuestas
+   * Creación de contenido
+   * Seguimiento en tiempo real
+   * Estudio de caso: Integración de ScholarSphere
+* Navegando por el panorama jurídico Ingeniería rápida en derecho
+   * Investigación jurídica
+   * Análisis de contrato
+   * Predicción de litigios
+   * Automatización de documentos
+   * Descubrimiento legal
+   * Actualizaciones legales en tiempo real
+   * Estudio de caso: La transformación de LawScape
+* Ingeniería rápida en el cuidado de la salud: reinventando la comunicación con los pacientes y el análisis de datos
+   * Interacción con el paciente
+   * Análisis de datos médicos
+   * Planes de tratamiento personalizados
+   * Monitoreo en tiempo real
+   * Investigación médica
+   * Asistencia de telesalud
+   * Estudio de caso: Integración de HealthLink
+* Entretenimiento reinventado: aplicaciones en música, cine y más
+   * Guion y storyboard
+   * Composición musical
+   * Experiencias de entretenimiento personalizadas
+   * Edición de películas
+   * Realidad virtual (RV) y realidad aumentada (RA)
+   * Búsqueda de talentos
+   * Estudio de caso: La evolución de EchoTunes
+* Construyendo ciudades más inteligentes: aplicaciones en planificación urbana y políticas públicas
+   * Gestión del tráfico y la infraestructura
+   * Planificación urbana sostenible
+   * Seguridad y protección pública
+   * Gestión de recursos
+   * Toma de decisiones sobre políticas públicas
+   * Visualización de datos urbanos
+   * Estudio de caso: La transformación de MetroVille
+* La creación de mercados impulsa la ingeniería en finanzas y economía
+   * Pronóstico financiero
+   * Gestión de riesgos
+   * Comercio algorítmico
+   * Análisis de tendencias económicas
+   * Productos financieros personalizados
+   * Monitoreo financiero en tiempo real
+   * Estudio de caso: La maestría de FinTechPro
+  
+## Casos prácticos de cómo dominar la escritura creativa para creadores de contenido
+
 La ingeniería rápida, un componente integral del floreciente dominio de la IA, ofrece nuevas posibilidades al mundo de la escritura creativa. Al utilizar y guiar eficazmente los modelos de IA, los creadores de contenido están explorando nuevos caminos, mejorando su productividad y presentando contenido diversificado. A continuación, se presenta una breve exploración de este fenómeno.
 
 Lluvia de ideas y generación de ideas  El punto de partida de cualquier proyecto de escritura suele ser el más desafiante. Con la IA, los escritores pueden introducir temas o tópicos genéricos y recibir una gran cantidad de sugerencias que van desde giros intrincados en la trama hasta ideas expansivas.Exploraciones temáticas. Por ejemplo, si se introduce “un misterio ambientado en el Londres victoriano”, se pueden generar ideas sobre personajes, posibles crímenes o incluso subtramas entrelazadas.
