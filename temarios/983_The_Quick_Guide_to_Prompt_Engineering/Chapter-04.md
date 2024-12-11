@@ -225,37 +225,32 @@ En resumen, una estimulación iterativa eficaz depende de la claridad, la flexib
 
 La incorporación de conocimiento externo y contextos diversos en las indicaciones no solo perfecciona la precisión del contenido generado por IA, sino que también adapta las respuestas para que resuenen más profundamente con la audiencia u objetivo previstos.
 
-Incorporación de comentarios de los usuarios para generar mensajes dinámicos  Aprovechar los comentarios de los usuarios es una técnica avanzada y vital para refinar y mejorar la eficacia de los mensajes en los sistemas impulsados ​​por IA. Los mensajes dinámicos, basados ​​en el principio del bucle de retroalimentación, permiten que el sistema de IA se adapte y evolucione en tiempo real en función de las interacciones y reacciones de los usuarios.
+***Incorporating User Feedback for Dynamic Prompting - Incorporación de comentarios de los usuarios para generar mensajes dinámicos*** Aprovechar los comentarios de los usuarios es una técnica avanzada y vital para refinar y mejorar la eficacia de los mensajes en los sistemas impulsados ​​por IA. Los mensajes dinámicos, basados ​​en el principio del bucle de retroalimentación, permiten que el sistema de IA se adapte y evolucione en tiempo real en función de las interacciones y reacciones de los usuarios.
 
-* **Refinamiento inmediato**: al permitir que los usuarios señalen los resultados imprecisos o insatisfactorios, los sistemas pueden reprocesar instantáneamente la información y brindar una mejor respuesta. Este mecanismo de retroalimentación inmediata garantiza un modelo de generación de contenido más centrado en el usuario.
+* **Immediate refinement - Refinamiento inmediato**: al permitir que los usuarios señalen los resultados imprecisos o insatisfactorios, los sistemas pueden reprocesar instantáneamente la información y brindar una mejor respuesta. Este mecanismo de retroalimentación inmediata garantiza un modelo de generación de contenido más centrado en el usuario.
 
-* **Aprendiendo de los errores**: con el tiempo, la retroalimentación constante permite que los modelos de IA identifiquen errores recurrentes o sesgos en sus respuestas, lo que conduce a una reducción de errores en interacciones futuras.
+* **Learning from mistakes - Aprendiendo de los errores**: con el tiempo, la retroalimentación constante permite que los modelos de IA identifiquen errores recurrentes o sesgos en sus respuestas, lo que conduce a una reducción de errores en interacciones futuras.
 
-* **Personalización**: en aplicaciones como chatbots o inteligencia artificial para atención al cliente, las indicaciones dinámicas ayudan a personalizar las respuestas en función de los comentarios del usuario. Por ejemplo, si un usuario prefiere explicaciones detalladas en lugar de breves, las interacciones futuras podrían adaptarse a esta preferencia.
+* **Customization - Personalización**: en aplicaciones como chatbots o inteligencia artificial para atención al cliente, las indicaciones dinámicas ayudan a personalizar las respuestas en función de los comentarios del usuario. Por ejemplo, si un usuario prefiere explicaciones detalladas en lugar de breves, las interacciones futuras podrían adaptarse a esta preferencia.
 
-* **Control de calidad**: las plataformas que utilizan IA para la generación de contenido o la toma de decisiones pueden tener sistemas de calificación de usuarios. Las respuestas que reciben calificaciones más altas pueden influir en el modelo para que produzca resultados similares en el futuro.
+* **Quality control - Control de calidad**: las plataformas que utilizan IA para la generación de contenido o la toma de decisiones pueden tener sistemas de calificación de usuarios. Las respuestas que reciben calificaciones más altas pueden influir en el modelo para que produzca resultados similares en el futuro.
 
-* **Entrenamiento iterativo**: la retroalimentación acumulada se puede incorporar a los datos de entrenamiento. Este refinamiento continuo del modelo garantiza que el sistema de IA se mantenga actualizado con las últimas preferencias del usuario y los cambios en los datos externos.
+* **Iterative training - Entrenamiento iterativo**: la retroalimentación acumulada se puede incorporar a los datos de entrenamiento. Este refinamiento continuo del modelo garantiza que el sistema de IA se mantenga actualizado con las últimas preferencias del usuario y los cambios en los datos externos.
 
 La incorporación de comentarios de los usuarios para generar mensajes dinámicos fomenta una relación simbiótica entre el usuario y el sistema de IA. A medida que los usuarios se esfuerzan por obtener información más precisa y relevante, los sistemas de IA, a través de mensajes dinámicos, se adaptan mejor a las necesidades de los usuarios, lo que garantiza interacciones más significativas y precisas.
 
-* **Explorando el futuro**: tendencias en evolución en la incitación con IA  El panorama de la incitación con IA está evolucionando rápidamente, con tendencias emergentes que prometen redefinir la interactividad y la inteligencia de los sistemas de IA. A continuación, se presenta un vistazo al futuro de la incitación con IA:
+***Exploring the Future: Evolving Trends in AI Prompting - Explorando el futuro: tendencias en evolución en la incitación con IA**: El panorama de la incitación con IA está evolucionando rápidamente, con tendencias emergentes que prometen redefinir la interactividad y la inteligencia de los sistemas de IA. A continuación, se presenta un vistazo al futuro de la incitación con IA:
 
-* **Avisos personalizados**: con la creciente integración de la IA en la tecnología diaria, los sistemas generarán avisos personalizados para cada usuario, teniendo en cuenta sus preferencias, interacciones pasadas y necesidades contextuales. Este toque personal revolucionará la experiencia del usuario.
+* **Personalized prompting - Avisos personalizados**: con la creciente integración de la IA en la tecnología diaria, los sistemas generarán avisos personalizados para cada usuario, teniendo en cuenta sus preferencias, interacciones pasadas y necesidades contextuales. Este toque personal revolucionará la experiencia del usuario.
 
-* **Indicaciones multimodales**: los futuros modelos de IA no se basarán únicamente en texto, sino que incorporarán entradas multimodales, como imágenes, voz o incluso gestos, para generar una respuesta, lo que enriquecerá la interacción entre humanos e IA.
+* **Multimodal prompts - Indicaciones multimodales**: los futuros modelos de IA no se basarán únicamente en texto, sino que incorporarán entradas multimodales, como imágenes, voz o incluso gestos, para generar una respuesta, lo que enriquecerá la interacción entre humanos e IA.
 
-* **Aprendizaje adaptativo**: los modelos de IA avanzados ajustarán automáticamente sus estrategias de estimulación en función de la retroalimentación en tiempo real. En lugar de esperar a tener grandes conjuntos de datos para entrenarlos, estos modelos realizarán ajustes incrementales de forma continua.
+* **Adaptive learning - Aprendizaje adaptativo**: los modelos de IA avanzados ajustarán automáticamente sus estrategias de estimulación en función de la retroalimentación en tiempo real. En lugar de esperar a tener grandes conjuntos de datos para entrenarlos, estos modelos realizarán ajustes incrementales de forma continua.
 
-* **Solicitud proactiva**: los sistemas de IA anticiparán las necesidades de los usuarios y brindarán solicitudes incluso antes de una consulta directa, gracias al análisis predictivo y al aprendizaje profundo.
+* **Proactive prompting - Solicitud proactiva**: los sistemas de IA anticiparán las necesidades de los usuarios y brindarán solicitudes incluso antes de una consulta directa, gracias al análisis predictivo y al aprendizaje profundo.
 
-* **Controles éticos y de sesgo**: con la creciente conciencia de los sesgos de la IA, habrá un mecanismo sólido para garantizar que las indicaciones no conduzcan a resultados sesgados o poco éticos.
+* **Ethical and bias checks - Controles éticos y de sesgo**: con la creciente conciencia de los sesgos de la IA, habrá un mecanismo sólido para garantizar que las indicaciones no conduzcan a resultados sesgados o poco éticos. Los sistemas estarán capacitados para reconocer y evitar contenido potencialmente dañino.
 
-Los sistemas estarán capacitados para reconocer y evitar contenido potencialmente dañino.
-
-Integración con realidad aumentada (RA) y realidad virtual (RV): a medida que las tecnologías de RA y RV maduren, las indicaciones de IA desempeñarán un papel fundamental en la configuración de experiencias inmersivas, guiando a los usuarios contextualmente dentro de estos entornos virtuales.
+* **Integration with augmented reality (AR) and virtual reality (VR) - Integración con realidad aumentada (RA) y realidad virtual (RV)**: a medida que las tecnologías de RA y RV maduren, las indicaciones de IA desempeñarán un papel fundamental en la configuración de experiencias inmersivas, guiando a los usuarios contextualmente dentro de estos entornos virtuales.
 
 A medida que nos adentramos más en el futuro impulsado por la IA, el arte y la ciencia de la incitación serán cada vez más cruciales. Contienen la clave para que las herramientas de IA no solo sean inteligentes, sino también intuitivas, empáticas y éticamente sólidas.
-
-
-
