@@ -179,22 +179,6 @@ Improved: “I have a fever and sore throat.”
 Best: “Symptoms: fever, sore throat.”
 ```
 
-```text
-Servicio de atención al cliente  deficiente por chatbot: “¡Ayúdenme!”
-
-Mejorado: “¿Cómo restablezco mi contraseña?”
-
-Mejor: “¿Instrucciones para restablecer la contraseña?”
-
-Aquí, la última opción es concisa y clara, eliminando cualquier ambigüedad sobre la intención del usuario y agilizando así el proceso de resolución.
-
-Diagnóstico médico IA  Pobre: ​​“No me siento bien”.
-
-Mejorado: “Tengo fiebre y dolor de garganta”.
-
-Mejor: “Síntomas: fiebre, dolor de garganta”.
-```
-
 El mensaje final proporciona todo el contexto necesario y está libre de palabras adicionales, que pueden resultar fundamentales en una emergencia médica.
 
 <img width="1093" alt="image" src="https://github.com/user-attachments/assets/54bc6b3d-ba23-4248-a8dc-2fbe15e1b1b5">
@@ -215,22 +199,6 @@ Improved: “What's the current value of Apple stocks?”
 Best: “Current value, Apple stocks?”
 ```
 
-```text
-Creación de contenido  deficiente: “Escribe algo sobre el cambio climático”.
-
-Mejorado: “Escribe un ensayo de 500 palabras sobre los impactos del cambio climático”.
-
-Mejor: “Ensayo de 500 palabras, impactos del cambio climático”.
-
-El último mensaje es conciso pero aún así contiene toda la información crítica para generar el contenido requerido.
-
-Herramientas de análisis financiero  deficientes: “Háblame de las acciones”.
-
-Mejorado: "¿Cuál es el valor actual de las acciones de Apple?"
-
-Mejor: “¿Valor actual de las acciones de Apple?”
-```
-
 En finanzas, donde la información en tiempo real es crucial, el último aviso podría producir resultados más rápidos y precisos.
 
 <img width="990" alt="image" src="https://github.com/user-attachments/assets/ec982707-31f7-4018-a001-3408e9921b55">
@@ -241,14 +209,6 @@ Smart Home Devices Poor: “Can you make it cooler here?”
 Improved: “Set the thermostat to 22 degrees.”
 
 Best: “Thermostat, 22 degrees.”
-```
-
-```text
-Dispositivos domésticos inteligentes  Pobre: ​​"¿Puedes hacer que esté más fresco aquí?"
-
-Mejorado: “Ponga el termostato a 22 grados”.
-
-Mejor: “Termostato, 22 grados”.
 ```
 
 Para los dispositivos domésticos inteligentes que dependen de comandos de voz, la brevedad y la claridad pueden hacer que las interacciones sean más naturales y eficientes.
@@ -445,133 +405,5 @@ Consequences: While AI can offer general advice or steps based on data, it lacks
 
 Solution: Understand that AI responses are based on patterns and data, not genuine emotional understanding. For emotional or psychological issues, seek human support or professional counseling.
 ```
-
-```text
-```
-
-
-```text
-```
-
-
-Error de ser demasiado vago  : utilizar un lenguaje general o ambiguo.
-
-Ejemplo: “Cuéntame algo interesante”.
-
-Consecuencias: La IA puede devolver una amplia variedad de resultados, muchos de los cuales podrían no ser relevantes para la intención real del usuario.
-
-Solución: especifique el dominio o contexto, por ejemplo: “Cuéntame un dato interesante sobre el espacio”.
-
-Error al complicar demasiado la instrucción  : utilizar oraciones largas y complejas cuando una más simple sería suficiente.
-
-Ejemplo: “¿Puede proporcionarme una lista de todos los números primos que están por debajo del número 100?”
-
-Consecuencias: Esto puede confundir el modelo o generar un procesamiento computacional innecesario.
-
-Solución: “Enumere los números primos menores de 100”.
-
-Error de no proporcionar suficiente contexto  : omitir detalles clave que guiarían la respuesta del modelo.
-
-Ejemplo: “Traduzca lo siguiente” (sin mencionar el idioma de origen y de destino)
-
-Consecuencias: La IA podría hacer suposiciones, posiblemente eligiendo un idioma predeterminado o solicitar más aclaraciones, lo que ralentizaría la interacción.
-
-Solución: “Traduce lo siguiente del inglés al francés”.
-
-Suponer que el modelo conoce el contexto más reciente  Error: Suponer que la IA recuerda interacciones pasadas o tiene conocimiento de eventos recientes posteriores al entrenamiento.
-
-Ejemplo: “¿Qué pregunté antes?” o “¿Quién ganó los últimos Oscar?”
-
-Consecuencias: Los modelos como GPT-3 no tienen memoria de interacciones pasadas y sus datos de entrenamiento podrían no cubrir los eventos más recientes.
-
-Solución: proporcione siempre el contexto necesario dentro del mensaje o pregunte sobre eventos dentro del último corte de datos de entrenamiento del modelo.
-
-Error al usar jerga o lenguaje excesivamente técnico  : suponer que la IA entenderá términos altamente técnicos sin contexto.
-
-Ejemplo: “Explica los valores propios” (en una conversación no matemática)
-
-Consecuencias: La respuesta podría no estar adaptada al nivel de experiencia asumido del usuario.
-
-Solución: “Explique los valores propios en términos simples”.
-
-Error de redacción ambigua  : utilizar palabras o frases que puedan interpretarse de múltiples maneras.
-
-Ejemplo: “¿Cuánto pesa un grillo?”
-
-Consecuencias: La IA podría interpretar “cricket” como el deporte o el insecto, lo que daría lugar a respuestas confusas.
-
-Solución: “¿Cuál es el peso promedio de un insecto grillo?”
-
-No especificar el formato deseado  Error: no guiar a la IA sobre cómo desea que se presente la respuesta.
-
-Ejemplo: “Cuéntame sobre la Segunda Guerra Mundial”.
-
-Consecuencias: El modelo puede proporcionar una descripción general amplia cuando desea una línea de tiempo o detalles específicos sobre una batalla.
-
-Solución: “Proporcione una cronología de los principales eventos de la Segunda Guerra Mundial”.
-
-No establecer límites  Error: No establecer pautas explícitas, lo que puede dar lugar a respuestas demasiado verbosas o fuera del alcance.
-
-Ejemplo: “Escribe sobre el océano”.
-
-Consecuencias: El modelo podría generar un ensayo general extenso en lugar de centrarse en un aspecto específico.
-
-Solución: “Escribe un párrafo breve sobre las zonas oceánicas”.
-
-Error al confiar únicamente en sesgos implícitos  : no reconocer que los modelos de IA pueden tener sesgos basados ​​en sus datos de entrenamiento.
-
-Ejemplo: “¿Quién es el mejor artista?”
-
-Consecuencias: La respuesta puede reflejar sesgos culturales u opiniones populares de los datos de entrenamiento.
-
-Solución: Formule las preguntas de forma objetiva o busque respuestas respaldadas por datos.
-
-Error al esperar una intuición similar a la humana  : suponer que la IA entenderá los matices humanos, el humor o las referencias culturales.
-
-Ejemplo: “Explica el chiste detrás de ‘¿Por qué la gallina cruzó la calle?’”
-
-Consecuencias: Si bien la IA puede brindar una explicación, no “entiende” el humor como lo hacemos los humanos.
-
-Solución: comprender las fortalezas y limitaciones de la IA. Utilícela para obtener información basada en datos en lugar de una intuición humana.
-
-Error de confiar demasiado en la precisión de la IA  : suponer que cada respuesta que proporciona la IA es 100 % correcta sin verificarla.
-
-Ejemplo: “Dame la lista completa de síntomas de la enfermedad X”.
-
-Consecuencias: Si bien la IA se esfuerza por lograr la precisión, no es infalible y a veces puede pasar por alto matices o actualizaciones recientes en la información.
-
-Solución: Verifique siempre la información crítica utilizando fuentes confiables y no confíe únicamente en la IA para obtener asesoramiento médico o legal.
-
-No iterar ni refinar la propuesta  Error: Aceptar la primera respuesta sin probar diferentes estructuras de propuesta.
-
-Ejemplo: si una indicación vaga no proporciona la respuesta deseada, es posible que algunos usuarios no refinen su pregunta.
-
-Consecuencias: Conformarse con información incompleta o no totalmente relevante.
-
-Solución: Si la primera respuesta no es satisfactoria, reformule o especifique más la consulta.
-
-Malinterpretar las respuestas abiertas  Error: Hacer preguntas abiertas y esperar una respuesta definitiva.
-
-Ejemplo: “¿Cuál es el sentido de la vida?”
-
-Consecuencias: Obtener respuestas filosóficas o generalizadas que podrían no cumplir con las expectativas de los usuarios.
-
-Solución: Haga preguntas más específicas y enfocadas para obtener respuestas específicas.
-
-Error en la configuración de la temperatura  : no ajustar la configuración de “temperatura” (en los modelos donde está disponible), lo que influye en la aleatoriedad de la salida.
-
-Ejemplo: Mantener una temperatura alta para una instrucción que requiere una respuesta precisa.
-
-Consecuencias: Recibir respuestas variadas y potencialmente fuera de tema.
-
-Solución: Para obtener respuestas específicas y claras, utilice una temperatura más baja; para indicaciones más creativas, puede ser adecuado utilizar una temperatura más alta.
-
-Suponer que la IA entiende las emociones  Error: creer que la IA puede empatizar o comprender profundamente las emociones humanas.
-
-Ejemplo: “¿Cómo afronto una ruptura?”
-
-Consecuencias: Si bien la IA puede ofrecer consejos generales o pasos a seguir basados ​​en datos, carece de empatía humana genuina.
-
-Solución: comprenda que las respuestas de la IA se basan en patrones y datos, no en una comprensión emocional genuina. Para problemas emocionales o psicológicos, busque apoyo humano o asesoramiento profesional.
 
 En conclusión, si bien los modelos de IA, especialmente los modelos de lenguaje, han avanzado mucho en la comprensión y generación de textos similares a los humanos, no son infalibles. La elaboración de indicaciones eficaces es una habilidad que requiere comprender tanto el potencial como las limitaciones del sistema de IA. Al evitar estos errores comunes, los usuarios pueden tener interacciones más productivas y precisas con los modelos de IA.
