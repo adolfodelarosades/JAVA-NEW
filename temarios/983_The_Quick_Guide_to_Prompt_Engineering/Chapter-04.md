@@ -1,28 +1,32 @@
-# 4
-Profundizando: Estructura y matices de las indicaciones
-Tabla de contenido
-Comprender los diferentes componentes de un mensaje
-Introducción a la anatomía de un mensaje
-El papel del contexto en la configuración de las respuestas de la IA
-Importancia de la especificidad y la claridad en la formulación rápida
-Uso de la temperatura y de los tokens máximos para guiar las respuestas de la IA
-Definición de temperatura: cómo influye en la aleatoriedad
-La importancia de los tokens máximos para controlar la longitud de la respuesta
-Ejemplos prácticos: Ajuste de la temperatura y la cantidad máxima de tokens para obtener los resultados deseados
-Cómo equilibrar la creatividad y el control en tus indicaciones
-El equilibrio entre indicaciones abiertas y específicas
-Técnicas para aprovechar la creatividad de la IA sin perder el foco
-Casos prácticos: equilibrio exitoso en aplicaciones del mundo real
-El arte de la incitación iterativa
-Importancia de refinar las indicaciones en función de la retroalimentación de la IA
-Estrategias para la mejora iterativa en la estimulación
-Errores comunes y cómo evitarlos
-Técnicas avanzadas de estimulación
-Uso del conocimiento externo y del contexto para mejorar las indicaciones
-Incorporación de comentarios de los usuarios para generar solicitudes dinámicas
-Explorando el futuro: tendencias en evolución en la IA
-Comprender los diferentes componentes de un mensaje
-Introducción a la anatomía de un mensaje
+# 4 Profundizando: Estructura y matices de los Prompts
+
+## Tabla de contenido
+
+* Comprender los diferentes componentes de un mensaje
+   * Introducción a la anatomía de un mensaje
+   * El papel del contexto en la configuración de las respuestas de la IA
+   * Importancia de la especificidad y la claridad en la formulación rápida
+   * Uso de la temperatura y de los tokens máximos para guiar las respuestas de la IA
+      * Definición de temperatura: cómo influye en la aleatoriedad
+      * La importancia de los tokens máximos para controlar la longitud de la respuesta
+      * Ejemplos prácticos: Ajuste de la temperatura y la cantidad máxima de tokens para obtener los resultados deseados
+   * Cómo equilibrar la creatividad y el control en tus indicaciones
+      * El equilibrio entre indicaciones abiertas y específicas
+      * Técnicas para aprovechar la creatividad de la IA sin perder el foco
+      * Casos prácticos: equilibrio exitoso en aplicaciones del mundo real
+   * El arte de la incitación iterativa
+      * Importancia de refinar las indicaciones en función de la retroalimentación de la IA
+   * Estrategias para la mejora iterativa en la estimulación
+   * Errores comunes y cómo evitarlos
+   * Técnicas avanzadas de estimulación
+      * Uso del conocimiento externo y del contexto para mejorar las indicaciones
+      * Incorporación de comentarios de los usuarios para generar solicitudes dinámicas
+      * Explorando el futuro: tendencias en evolución en la IA
+
+## Comprender los diferentes componentes de un mensaje
+
+### Introducción a la anatomía de un mensaje
+
 En el ámbito de la inteligencia artificial, las indicaciones sirven como catalizadores que guían a los modelos de IA para que produzcan los resultados deseados. Sin embargo, detrás de esta aparente simplicidad de una pregunta o afirmación se esconde una intrincada anatomía que hace que cada indicación sea eficaz. Una indicación bien elaborada es más que una simple pregunta; es una amalgama cuidadosa de palabras clave, temas y contexto, que funcionan todos en sintonía. Las palabras clave ponen en marcha la acción y actúan como iniciadores, ya sea para "describir", "enumerar" o "elaborar". A continuación se encuentra el tema, la esencia de la investigación, que informa a la IA sobre el tema central en discusión. Pero una indicación no se detiene en los meros temas.
 
 Los modificadores y las incrustaciones contextuales refinan este tema, agregando capas de especificidad y profundidad. Pueden acotar temas amplios, haciendo que la respuesta de la IA sea más relevante para un contexto o marco temporal en particular. Esta anatomía se enriquece aún más con restricciones que establecen límites e indicadores de tono que guían sutilmente el estilo o la profundidad de la respuesta de la IA. Además, a medida que la IA evoluciona y nuestras interacciones con ella se vuelven más iterativas, se integran mecanismos de retroalimentación, lo que permite un intercambio dinámico que refina el resultado.
