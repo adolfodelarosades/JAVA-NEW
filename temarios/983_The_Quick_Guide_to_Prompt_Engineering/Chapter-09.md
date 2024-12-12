@@ -1,78 +1,80 @@
-# 9
-temas avanzados en ingeniería rápida
-Tabla de contenido
-El papel de la retroalimentación en el refinamiento
-Mecanismos de escucha activa
-Bibliotecas de indicaciones basadas en retroalimentación
-Cómo evitar errores repetidos
-Fomentar la participación de los usuarios
-Mejorar la confiabilidad
-Integración de retroalimentación ética
-La retroalimentación como herramienta educativa
-Evolución continua de los sistemas de IA
-Retroalimentación para diversas aplicaciones
-Pruebas A/B de indicaciones
-Comprender las pruebas A/B
-Por qué las pruebas A/B son cruciales
-Establecer las métricas correctas
-Variaciones de elaboración
-Tamaño y duración de la muestra
-Análisis de resultados
-Pruebas iterativas
-Posibles peligros
-Más allá de las pruebas binarias
-Consideraciones éticas
-Indicaciones personalizadas y adaptables
-El auge de la personalización
-¿Qué es un mensaje personalizado?
-La necesidad de estímulos adaptativos
-Los datos: la columna vertebral de la personalización
-Los bucles de retroalimentación son cruciales
-Aprendizaje dinámico y evolución rápida
-Consideraciones éticas
-Los desafíos de la sobrepersonalización
-Personalización multimodal
-El contexto es el rey
-Pruebas y optimización
-Las implicaciones más amplias para las empresas
-Direcciones futuras
-Diseño de mensajes multilingües
-La importancia del multilingüismo
-Reconociendo los matices culturales
-Desafíos de la traducción
-Dialectos y variaciones
-Diseño para alfabetos no latinos
-Manejo de idiomas de derecha a izquierda (RTL)
-Lenguajes híbridos y alternancia de códigos
-Vocabulario y jerga especializados
-Métricas evaluativas en distintos idiomas
-Mejora continua y ciclo de retroalimentación
-Consideraciones éticas
-Mirando hacia el futuro
-Indicaciones para modelos de IA multimodales
-¿Qué son los modelos de IA multimodal?
-La complejidad de la estimulación multimodal
-Importancia del contexto
-Indicaciones secuenciales versus indicaciones paralelas
-Desafíos en la elaboración de propuestas multimodales
-Aprovechar las fortalezas de cada modalidad
-Los bucles de retroalimentación son cruciales
-Consideraciones éticas
-Datos de entrenamiento y aprendizaje multimodal
-El futuro de la estimulación multimodal
-Técnicas avanzadas: estrategias avanzadas de pruebas A/B
-¿Por qué realizar pruebas A/B avanzadas?
-Pruebas multivariadas
-Pruebas A/B secuenciales
-Asignación dinámica de tráfico
-Prueba de bandidos
-Pruebas en capas
-Pruebas longitudinales
-Prueba de bandidos contextuales
-Pruebas A/B personalizadas
-Integración del circuito de retroalimentación
-Consideraciones éticas
-Desafíos en las pruebas A/B avanzadas
+# 9 Temas avanzados en Prompt Engineering
+
+## Tabla de contenido
+
+* El papel de la retroalimentación en el refinamiento
+   * Mecanismos de escucha activa
+   * Bibliotecas de indicaciones basadas en retroalimentación
+   * Cómo evitar errores repetidos
+   * Fomentar la participación de los usuarios
+   * Mejorar la confiabilidad
+   * Integración de retroalimentación ética
+   * La retroalimentación como herramienta educativa
+   * Evolución continua de los sistemas de IA
+   * Retroalimentación para diversas aplicaciones
+* Pruebas A/B de indicaciones
+   * Comprender las pruebas A/B
+   * Por qué las pruebas A/B son cruciales
+   * Establecer las métricas correctas
+   * Variaciones de elaboración
+   * Tamaño y duración de la muestra
+   * Análisis de resultados
+   * Pruebas iterativas
+   * Posibles peligros
+   * Más allá de las pruebas binarias
+   * Consideraciones éticas
+* Indicaciones personalizadas y adaptables - Personalized and Adaptive Prompts
+   * El auge de la personalización
+   * ¿Qué es un mensaje personalizado?
+   * La necesidad de estímulos adaptativos
+   * Los datos: la columna vertebral de la personalización
+   * Los bucles de retroalimentación son cruciales
+   * Aprendizaje dinámico y evolución rápida
+   * Consideraciones éticas
+   * Los desafíos de la sobrepersonalización
+   * Personalización multimodal
+   * El contexto es el rey
+   * Pruebas y optimización
+   * Las implicaciones más amplias para las empresas
+   * Direcciones futuras
+* Diseño de mensajes multilingües - Multilingual Prompt Design
+   * La importancia del multilingüismo
+   * Reconociendo los matices culturales
+   * Desafíos de la traducción
+   * Dialectos y variaciones
+   * Diseño para alfabetos no latinos
+   * Manejo de idiomas de derecha a izquierda (RTL)
+   * Lenguajes híbridos y alternancia de códigos
+   * Vocabulario y jerga especializados
+   * Métricas evaluativas en distintos idiomas
+   * Mejora continua y ciclo de retroalimentación
+   * Consideraciones éticas
+   * Mirando hacia el futuro
+* Prompts para Modelos de IA Multimodales
+   * ¿Qué son los modelos de IA multimodal?
+   * La complejidad de la estimulación multimodal
+   * Importancia del contexto
+   * Indicaciones secuenciales versus indicaciones paralelas
+   * Desafíos en la elaboración de propuestas multimodales
+   * Aprovechar las fortalezas de cada modalidad
+   * Los bucles de retroalimentación son cruciales
+   * Consideraciones éticas
+   * Datos de entrenamiento y aprendizaje multimodal
+   * El futuro de la estimulación multimodal
+* Técnicas avanzadas: estrategias avanzadas de pruebas A/B
+   * ¿Por qué realizar pruebas A/B avanzadas?
+   * Pruebas multivariadas
+   * Pruebas A/B secuenciales
+   * Asignación dinámica de tráfico
+   * Prueba de bandidos
+   * Pruebas en capas
+   * Pruebas longitudinales
+   * Prueba de bandidos contextuales
+   * Pruebas A/B personalizadas
+   * Integración del circuito de retroalimentación
+   * Consideraciones éticas
+   * Desafíos en las pruebas A/B avanzadas
+
 En el campo de la IA, en particular con los modelos generativos, la ingeniería de indicaciones se ha convertido en un área crucial que permite a los usuarios comunicarse de manera eficaz con la IA y obtener de ella las respuestas deseadas. Como puente entre la intención humana y el resultado de la IA, el diseño de indicaciones debe ser eficaz y adaptativo. Una de las formas más eficaces de lograr esta adaptabilidad es mediante la incorporación de la retroalimentación de los usuarios. A continuación, se ofrece una exploración detallada de cómo se puede integrar la retroalimentación de los usuarios en el diseño de indicaciones y por qué es esencial.
 
 El papel de la retroalimentación en el refinamiento
