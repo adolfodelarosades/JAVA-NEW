@@ -1,83 +1,86 @@
-# 7
-consideraciones éticas en la ingeniería rápida
-Tabla de contenido
-Comprender el sesgo en la IA y las indicaciones
-Desequilibrio de datos
-Sesgos históricos
-Sesgos sutiles e involuntarios
-Bucles de retroalimentación
-Concientización y capacitación
-Datos de formación diversos
-Auditoría periódica
-Mecanismos de retroalimentación
-Esfuerzos de colaboración
-Estrategias para reducir el sesgo en sus indicaciones
-Formación integral
-Revisión de aportes diversos
-Utilice un lenguaje neutral
-Diseño basado en hechos
-Adaptabilidad dinámica
-Uso de herramientas antisesgos
-Pruebas exhaustivas
-Refinamiento iterativo
-Transparencia y apertura
-Colaboración con especialistas en ética
-Compromiso comunitario
-Establecimiento de normas éticas
-Mecanismo de retroalimentación documentado
-Pautas éticas para el diseño de avisos
-Priorizar la equidad y evitar la discriminación
-Mantener la transparencia
-Proteger la privacidad del usuario
-Protección contra resultados nocivos
-Garantizar la rendición de cuentas
-Promover la autonomía del usuario
-Garantizar la sensibilidad cultural
-Evite reforzar estereotipos
-Practique el aprendizaje continuo y la adaptación
-Interactúe con un grupo diverso
-Implementar procesos de revisión ética
-Educar y empoderar a los usuarios
-Comprometerse con la responsabilidad a largo plazo
-Avisos y consideraciones sobre privacidad
-Recopilación de información personal
-Almacenamiento y seguridad
-Anonimización de datos
-Intercambio de datos y acceso de terceros
-Datos de los niños
-Conciencia contextual
-Revocación del consentimiento
-Cumplimiento legal y normativo
-Transparencia y educación de los usuarios
-Límites éticos
-Pistas de auditoría
-Bucles de retroalimentación
-Actualizaciones y revisiones periódicas
-Desafíos éticos futuros en la ingeniería de vanguardia
-Sofisticación de las respuestas de la IA
-Hiperpersonalización
-Autonomía de las decisiones de la IA
-Indicaciones manipulativas
-Inclusión y representación
-La IA como actor social
-Ética de la IA emocional
-Erosión de la privacidad
-Implicaciones económicas y laborales
-Deepfake y distorsión de la realidad
-Transparencia y rendición de cuentas
-Regulación y censura
-Dilemas éticos y morales
-Técnicas avanzadas: detección automatizada de sesgos
-Orígenes del sesgo en la IA
-Detección automática de sesgos
-Beneficios
-Técnicas
-Desafíos
-Consideraciones éticas
-Aplicaciones en Ingeniería Rápida
-Casos prácticos: motores de búsqueda
-El camino por delante
-Comprender el sesgo en la IA y las indicaciones
+# 7 Consideraciones éticas en la Prompt Engineering
+
+## Tabla de contenido
+
+* Comprender el sesgo en la IA y los Prompts
+   * Desequilibrio de datos
+   * Sesgos históricos
+   * Sesgos sutiles e involuntarios
+   * Bucles de retroalimentación
+      * Concientización y capacitación
+      * Datos de formación diversos
+      * Auditoría periódica
+      * Mecanismos de retroalimentación
+      * Esfuerzos de colaboración
+* Estrategias para reducir el sesgo en sus Prompts
+   * Formación integral
+   * Revisión de aportes diversos
+   * Utilice un lenguaje neutral
+   * Diseño basado en hechos
+   * Adaptabilidad dinámica
+   * Uso de herramientas antisesgos
+   * Pruebas exhaustivas
+   * Refinamiento iterativo
+   * Transparencia y apertura
+   * Colaboración con especialistas en ética
+   * Compromiso comunitario
+   * Establecimiento de normas éticas
+   * Mecanismo de retroalimentación documentado
+* Pautas éticas para el diseño de Prompts
+   * Priorizar la equidad y evitar la discriminación
+   * Mantener la transparencia
+   * Proteger la privacidad del usuario
+   * Protección contra resultados nocivos
+   * Garantizar la rendición de cuentas
+   * Promover la autonomía del usuario
+   * Garantizar la sensibilidad cultural
+   * Evite reforzar estereotipos
+   * Practique el aprendizaje continuo y la adaptación
+   * Interactúe con un grupo diverso
+   * Implementar procesos de revisión ética
+   * Educar y empoderar a los usuarios
+   * Comprometerse con la responsabilidad a largo plazo
+* Prompts y consideraciones sobre privacidad
+   * Recopilación de información personal
+   * Almacenamiento y seguridad
+   * Anonimización de datos
+   * Intercambio de datos y acceso de terceros
+   * Datos de los niños
+   * Conciencia contextual
+   * Revocación del consentimiento
+   * Cumplimiento legal y normativo
+   * Transparencia y educación de los usuarios
+   * Límites éticos
+   * Pistas de auditoría
+   * Bucles de retroalimentación
+   * Actualizaciones y revisiones periódicas
+* Desafíos éticos futuros en la ingeniería de vanguardia
+   * Sofisticación de las respuestas de la IA
+   * Hiperpersonalización
+   * Autonomía de las decisiones de la IA
+   * Indicaciones manipulativas
+   * Inclusión y representación
+   * La IA como actor social
+   * Ética de la IA emocional
+   * Erosión de la privacidad
+   * Implicaciones económicas y laborales
+   * Deepfake y distorsión de la realidad
+   * Transparencia y rendición de cuentas
+   * Regulación y censura
+   * Dilemas éticos y morales
+* Técnicas avanzadas: detección automatizada de sesgos
+   * Orígenes del sesgo en la IA
+   * Detección automática de sesgos
+   * Beneficios
+   * Técnicas
+   * Desafíos
+   * Consideraciones éticas
+* Aplicaciones en Prompt Engineering
+   * Casos prácticos: motores de búsqueda
+   * El camino por delante
+
+## Comprender el sesgo en la IA y los Prompts
+
 El concepto de IA se ha promocionado a menudo como una posible panacea para diversos desafíos. Sin embargo, a medida que las tecnologías de IA, en particular los modelos de lenguaje, se integran cada vez más en nuestra vida diaria, el tema de los sesgos en estos modelos y su impacto en la sociedad se ha convertido en una preocupación importante. Este debate profundiza en los matices del sesgo en la IA y cómo se manifiesta en el mundo de la ingeniería rápida.
 
 En esencia, un modelo de lenguaje aprende de grandes cantidades de datos. Estos datos, que a menudo proceden de Internet, reflejan contenido escrito por humanos y, por ende, conllevan los sesgos de sus autores. Por lo tanto, cuando se entrena el modelo, absorbe estos sesgos. Por ejemplo, si un género, una raza o un grupo en particular se representan predominantemente de una manera específica en los datos de entrenamiento, es probable que el modelo refleje estos sesgos en sus resultados.
