@@ -1,78 +1,81 @@
-# 11
-Exploración de indicaciones con ChatGPT
-Tabla de contenido
-Introducción a ChatGPT
-¿Qué papel desempeñan los mensajes en ChatGPT?
-Fundación de Interacción
-Comprensión contextual
-Guía de la conducta de respuesta
-Tonalidad y estilo
-Flujo de conversación continuo
-Manejo de ambigüedades
-Gestión de imprecisiones y sesgos
-Simulación de roles y personajes
-Aplicaciones educativas
-Limitación de la longitud y complejidad de las respuestas
-Bucle de retroalimentación
-Seguridad y moderación
-Casos de uso y ejemplos
-Creación de contenido
-Asistencia Educativa
-Ayuda con la codificación
-Traducción y aprendizaje de idiomas
-Análisis de negocios y mercados
-Información médica y de salud
-Simulación de personajes para juegos y entretenimiento
-Apoyo para la salud mental y el bienestar
-Ejercicios creativos
-Explicaciones técnicas y científicas
-Juegos de rol y escenarios
-Ley e información legal
-Información sobre viajes y geografía
-Orientación culinaria y de cocina
-Curiosidades y conocimientos generales
-Discusiones filosóficas y éticas
-Soluciones para el hogar y bricolaje
-Consejos de moda y belleza
-Recomendaciones de libros y películas
-Regímenes de fitness personalizados
-Lluvia de ideas y generación de ideas
-Perspectivas culturales e históricas
-Explicaciones financieras y económicas
-Simulacros de entrevistas y capacitación
-Consejos sobre relaciones y relaciones sociales
-Música y creación artística
-Actualidad y resúmenes de noticias
-Trucos para mejorar el trabajo y la productividad
-Información ambiental y de sostenibilidad
-Diversión y juegos
-Desafíos y áreas de mejora
-Sesgo del modelo y consideraciones éticas
-Especificidad y vaguedad en las respuestas
-Limitaciones de memoria
-Dependencia excesiva de determinados patrones
-Dificultad con indicaciones ambiguas
-Potencial de desinformación
-Comprensión de emociones y sentimientos
-Resultados inapropiados o dañinos
-Dependencia y exceso de confianza por parte de los usuarios
-Interactividad y adaptabilidad en tiempo real
-Intensidad de recursos
-Manejo de datos multimodales
-Costo y accesibilidad
-Integración con otros sistemas
-ChatGPT: los próximos pasos
-Memoria contextual mejorada
-Reducción de sesgos y refuerzo ético
-Personalización afinada
-Integración con modelos multimodales
-Adaptabilidad mejorada en tiempo real
-Especializaciones de dominio más amplias
-Interfaces y kits de herramientas fáciles de usar
-Colaboración mejorada con la inteligencia humana
-Abordar la eficiencia de los recursos
-Evolución impulsada por la comunidad
-Introducción a ChatGPT
+# 11. Exploración de Prompts con ChatGPT
+
+## Tabla de contenido
+
+* Introducción a ChatGPT
+* ¿Qué papel desempeñan los Prompts en ChatGPT?
+   * Fundación de Interacción
+   * Comprensión contextual
+   * Guía de la conducta de respuesta
+   * Tonalidad y estilo
+   * Flujo de conversación continuo
+   * Manejo de ambigüedades
+   * Gestión de imprecisiones y sesgos
+   * Simulación de roles y personajes
+   * Aplicaciones educativas
+   * Limitación de la longitud y complejidad de las respuestas
+   * Bucle de retroalimentación
+   * Seguridad y moderación
+* Casos de uso y ejemplos
+   * Creación de contenido
+   * Asistencia Educativa
+   * Ayuda con la codificación
+   * Traducción y aprendizaje de idiomas
+   * Análisis de negocios y mercados
+   * Información médica y de salud
+   * Simulación de personajes para juegos y entretenimiento
+   * Apoyo para la salud mental y el bienestar
+   * Ejercicios creativos
+   * Explicaciones técnicas y científicas
+   * Juegos de rol y escenarios
+   * Ley e información legal
+   * Información sobre viajes y geografía
+   * Orientación culinaria y de cocina
+   * Curiosidades y conocimientos generales
+   * Discusiones filosóficas y éticas
+   * Soluciones para el hogar y bricolaje
+   * Consejos de moda y belleza
+   * Recomendaciones de libros y películas
+   * Regímenes de fitness personalizados
+   * Lluvia de ideas y generación de ideas
+   * Perspectivas culturales e históricas
+   * Explicaciones financieras y económicas
+   * Simulacros de entrevistas y capacitación
+   * Consejos sobre relaciones y relaciones sociales
+   * Música y creación artística
+   * Actualidad y resúmenes de noticias
+   * Trucos para mejorar el trabajo y la productividad
+   * Información ambiental y de sostenibilidad
+   * Diversión y juegos
+* Desafíos y áreas de mejora
+   * Sesgo del modelo y consideraciones éticas
+   * Especificidad y vaguedad en las respuestas
+   * Limitaciones de memoria
+   * Dependencia excesiva de determinados patrones
+   * Dificultad con indicaciones ambiguas
+   * Potencial de desinformación
+   * Comprensión de emociones y sentimientos
+   * Resultados inapropiados o dañinos
+   * Dependencia y exceso de confianza por parte de los usuarios
+   * Interactividad y adaptabilidad en tiempo real
+   * Intensidad de recursos
+   * Manejo de datos multimodales
+   * Costo y accesibilidad
+   * Integración con otros sistemas
+* ChatGPT: los próximos pasos
+   * Memoria contextual mejorada
+   * Reducción de sesgos y refuerzo ético
+   * Personalización afinada
+   * Integración con modelos multimodales
+   * Adaptabilidad mejorada en tiempo real
+   * Especializaciones de dominio más amplias
+   * Interfaces y kits de herramientas fáciles de usar
+   * Colaboración mejorada con la inteligencia humana
+   * Abordar la eficiencia de los recursos
+   * Evolución impulsada por la comunidad
+
+## Introducción a ChatGPT
+
 ChatGPT es un agente conversacional desarrollado por OpenAI basado en la poderosa arquitectura Generative Pre-trained Transformer (GPT). Es una de las manifestaciones del objetivo de OpenAI de diseñar y refinar modelos de IA para la comprensión y generación de lenguaje natural.
 
 El origen de ChatGPT se encuentra en el potencial transformador que tienen los modelos GPT. Si bien las versiones iniciales de GPT se mostraban principalmente a través de tareas como la generación, finalización y traducción de texto, la demanda de unSe hizo evidente una interfaz más interactiva y atractiva. Así surgió ChatGPT, diseñado para simular una conversación humana en tiempo real, respondiendo de manera inteligente a una gran cantidad de consultas e insumos de los usuarios.
