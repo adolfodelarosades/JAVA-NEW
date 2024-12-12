@@ -239,7 +239,7 @@ La incorporación de conocimiento externo y contextos diversos en las indicacion
 
 La incorporación de comentarios de los usuarios para generar mensajes dinámicos fomenta una relación simbiótica entre el usuario y el sistema de IA. A medida que los usuarios se esfuerzan por obtener información más precisa y relevante, los sistemas de IA, a través de mensajes dinámicos, se adaptan mejor a las necesidades de los usuarios, lo que garantiza interacciones más significativas y precisas.
 
-***Exploring the Future: Evolving Trends in AI Prompting - Explorando el futuro: tendencias en evolución en la incitación con IA**: El panorama de la incitación con IA está evolucionando rápidamente, con tendencias emergentes que prometen redefinir la interactividad y la inteligencia de los sistemas de IA. A continuación, se presenta un vistazo al futuro de la incitación con IA:
+***Exploring the Future: Evolving Trends in AI Prompting - Explorando el futuro: tendencias en evolución en la incitación con IA***: El panorama de la incitación con IA está evolucionando rápidamente, con tendencias emergentes que prometen redefinir la interactividad y la inteligencia de los sistemas de IA. A continuación, se presenta un vistazo al futuro de la incitación con IA:
 
 * **Personalized prompting - Avisos personalizados**: con la creciente integración de la IA en la tecnología diaria, los sistemas generarán avisos personalizados para cada usuario, teniendo en cuenta sus preferencias, interacciones pasadas y necesidades contextuales. Este toque personal revolucionará la experiencia del usuario.
 
