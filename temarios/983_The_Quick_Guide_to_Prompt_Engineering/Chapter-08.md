@@ -1,79 +1,82 @@
-# 8
-Ingeniería de indicaciones específicas de la aplicación
-Tabla de contenido
-Indicaciones para la escritura creativa
-Un puente entre la imaginación humana y la inteligencia artificial
-Indicaciones específicas del género
-Inspiración y generación de ideas
-Desarrollo del personaje
-Interacción dinámica
-Aplicaciones multimodales
-Consideraciones éticas
-Desafíos y limitaciones
-Potencial futuro
-Avisos para aplicaciones empresariales
-Análisis de datos y perspectivas
-Atención al cliente e interacción
-Investigación de mercado y conocimiento del consumidor
-Generación de contenido
-Pronóstico financiero
-La personalización en el marketing
-Recursos humanos y reclutamiento
-Implicaciones éticas
-Desafíos
-Trayectorias futuras
-Indicaciones para usos educativos
-Rutas de aprendizaje personalizadas
-Tutoría y asistencia con las tareas
-Aprendizaje de idiomas
-Necesidades educativas especiales
-Simulaciones interactivas
-Evaluación y retroalimentación
-Ampliando los debates en el aula
-Contextos históricos y culturales
-Desafíos
-Implicaciones éticas
-Direcciones futuras
-Indicaciones para la codificación y el desarrollo de software
-Generación de código
-Asistencia de depuración
-Optimización de código
-Diseño y arquitectura de sistemas
-Integración y uso de API
-Documentación y comentarios
-Revisión de código y garantía de calidad
-Solución predictiva de problemas
-Aprendizaje personalizado y desarrollo de habilidades
-Implicaciones éticas y mejores prácticas
-Perspectivas futuras
-Indicaciones para el entretenimiento y los juegos
-Generación de la trama
-Diseño y evolución de personajes
-Entornos de juego dinámicos
-Música y efectos de sonido
-Generación de diálogo
-Comentarios de los jugadores en tiempo real
-Tendencias de juegos predictivos
-Experiencias de realidad virtual (RV) y realidad aumentada (RA)
-Prácticas de juego éticas
-Experiencias de juego personalizadas
-Control de multitudes y moderación en línea
-Gamificación de plataformas no relacionadas con juegos
-Merchandising y contenido complementario
-Técnicas avanzadas Indicaciones personalizadas y adaptativas
-La necesidad de personalización y adaptabilidad
-Preguntas personalizadas: más allá de las consultas genéricas
-Indicaciones adaptativas: cómo responder a contextos dinámicos
-Equilibrar la privacidad con la personalización
-Bucles de retroalimentación para estímulos adaptativos
-Indicaciones de ramificación para interacciones de varios pasos
-Aplicación en el mundo real: plataformas de aprendizaje electrónico
-Recomendaciones de atención médica personalizadas
-Entretenimiento y consumo de medios
-Comercio electrónico y venta minorista en línea
-Desafíos futuros
-Aprendizaje y evolución continuos
-Indicaciones para la escritura creativa
+# 8 Prompt Engineering Específicas de la Aplicación
+
+## Tabla de contenido
+
+* Prompts para la escritura creativa
+   * Un puente entre la imaginación humana y la inteligencia artificial
+   * Indicaciones específicas del género
+   * Inspiración y generación de ideas
+   * Desarrollo del personaje
+   * Interacción dinámica
+   * Aplicaciones multimodales
+   * Consideraciones éticas
+   * Desafíos y limitaciones
+   * Potencial futuro
+* Prompts para Aplicaciones Empresariales
+   * Análisis de datos y perspectivas
+   * Atención al cliente e interacción
+   * Investigación de mercado y conocimiento del consumidor
+   * Generación de contenido
+   * Pronóstico financiero
+   * La personalización en el marketing
+   * Recursos humanos y reclutamiento
+   * Implicaciones éticas
+   * Desafíos
+   * Trayectorias futuras
+* Prompts para usos educativos
+   * Rutas de aprendizaje personalizadas
+   * Tutoría y asistencia con las tareas
+   * Aprendizaje de idiomas
+   * Necesidades educativas especiales
+   * Simulaciones interactivas
+   * Evaluación y retroalimentación
+   * Ampliando los debates en el aula
+   * Contextos históricos y culturales
+   * Desafíos
+   * Implicaciones éticas
+   * Direcciones futuras
+* Prompts  para la codificación y el desarrollo de software
+   * Generación de código
+   * Asistencia de depuración
+   * Optimización de código
+   * Diseño y arquitectura de sistemas
+   * Integración y uso de API
+   * Documentación y comentarios
+   * Revisión de código y garantía de calidad
+   * Solución predictiva de problemas
+   * Aprendizaje personalizado y desarrollo de habilidades
+   * Implicaciones éticas y mejores prácticas
+   * Perspectivas futuras
+* Prompts  para el entretenimiento y los juegos
+   * Generación de la trama
+   * Diseño y evolución de personajes
+   * Entornos de juego dinámicos
+   * Música y efectos de sonido
+   * Generación de diálogo
+   * Comentarios de los jugadores en tiempo real
+   * Tendencias de juegos predictivos
+   * Experiencias de realidad virtual (RV) y realidad aumentada (RA)
+   * Prácticas de juego éticas
+   * Experiencias de juego personalizadas
+   * Control de multitudes y moderación en línea
+   * Gamificación de plataformas no relacionadas con juegos
+   * Merchandising y contenido complementario
+* Técnicas avanzadas Indicaciones personalizadas y adaptativas
+   * La necesidad de personalización y adaptabilidad
+   * Preguntas personalizadas: más allá de las consultas genéricas
+      * Indicaciones adaptativas: cómo responder a contextos dinámicos
+      * Equilibrar la privacidad con la personalización
+      * Bucles de retroalimentación para estímulos adaptativos
+      * Indicaciones de ramificación para interacciones de varios pasos
+      * Aplicación en el mundo real: plataformas de aprendizaje electrónico
+      * Recomendaciones de atención médica personalizadas
+      * Entretenimiento y consumo de medios
+      * Comercio electrónico y venta minorista en línea
+      * Desafíos futuros
+   * Aprendizaje y evolución continuos
+
+## Indicaciones para la escritura creativa
+
 La ingeniería de indicaciones ha revolucionado el campo de la IA, ofreciendo una forma estructurada de guiar a los modelos de IA para que produzcan los resultados deseados. En el campo de la escritura creativa, esta capacidad ofrece una combinación de imaginación humana y la vasta base de conocimientos de la IA. Profundicemos en la fascinante interacción entre las indicaciones y la escritura creativa.
 
 Un puente entre la imaginación humana y la inteligencia artificial
