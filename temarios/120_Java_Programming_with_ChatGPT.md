@@ -34,7 +34,7 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 
 ## Contenido del curso - 13 secciones • 73 clases • 7h 13m de duración total
 
-### Introducción 5 clases • 14m
+### 01 Introducción 5 clases • 14m
 
 * Introducción 03:29
 * Primeros pasos en Windows, macOS o Linux 01:21
