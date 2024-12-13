@@ -6,9 +6,13 @@ Serie de varios cursos Java.
 
 * [001 Java 8 desde Cero](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/001_Java_8_desde_Cero.md)
 
-# [Andrés Guzmán](https://www.udemy.com/user/andres-guzman-9/)
+# Udemy
+
+##  [Andrés Guzmán](https://www.udemy.com/user/andres-guzman-9/)
 
 * [101 Guia Completa Jakarta EE 9](https://www.udemy.com/course/curso-jakartaee-java-ee-9-desde-cero-a-experto/)
+
+* [120 Java Programming with ChatGPT: Learn using Generative AI](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/120_Java_Programming_with_ChatGPT.md)
 
 # [O'Reilly](https://learning.oreilly.com)
 
