@@ -13,9 +13,15 @@
 
 ## Futuro de Java 05:38
 
-Hola a todos.
+<img width="1501" alt="image" src="https://github.com/user-attachments/assets/743e6957-29b7-4240-8b86-223a9fc7cf81" />
 
-Bienvenidos aquí, Java Future.
+<img width="1402" alt="image" src="https://github.com/user-attachments/assets/335f53bc-f5d8-44d4-bba9-c5b493885f81" />
+
+<img width="1405" alt="image" src="https://github.com/user-attachments/assets/fcc00716-b1f3-43d6-883e-aa70c598fecc" />
+
+<img width="1376" alt="image" src="https://github.com/user-attachments/assets/4f842ab1-23fb-42b1-8d83-221a5edc92da" />
+
+Bienvenidos, Futuro de Java.
 
 Entonces, ¿cómo vas a comenzar a aprender una carrera?
 
@@ -141,13 +147,15 @@ Y si estás haciendo cosas pequeñas, pequeñas para implementar y aprender, sí
 
 una gran decisión para tu futuro.
 
-Gracias.
-
-Te veo en la próxima conferencia.
-
 ## ¿Por qué es popular en la codificación? 04:09
 
-Hola a todos.
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/8c6f2aa7-a24c-46ce-90a9-a1f9ed41a120" />
+
+<img width="1400" alt="image" src="https://github.com/user-attachments/assets/b0b7b93b-fb8b-48d4-a4c4-995c509a2ead" />
+
+<img width="1379" alt="image" src="https://github.com/user-attachments/assets/7b6e6eac-ee30-4c94-8dff-41a9cf22c240" />
+
+<img width="1388" alt="image" src="https://github.com/user-attachments/assets/964e8f97-da59-4cf7-8dc4-bd1c54c937a3" />
 
 Bienvenidos.
 
@@ -245,79 +253,105 @@ Gracias.
 
 ## IDE populares para codificación 03:04
 
-Hello everyone.
+<img width="1486" alt="image" src="https://github.com/user-attachments/assets/b11b973c-4d9d-44f1-ba22-2eda97770dd8" />
 
-Welcome here.
+<img width="1388" alt="image" src="https://github.com/user-attachments/assets/533c1ac9-f731-4074-96c5-2ef9ea24d0cd" />
 
-In this lecture you are going to knowing and understanding popular ideas for coding.
+<img width="1380" alt="image" src="https://github.com/user-attachments/assets/3dccb8aa-b9b7-4558-9f17-6da9f4c54ca7" />
 
-So here this lecture I am going to showing a few of the more popular ideas to develop Java applications.
+<img width="1391" alt="image" src="https://github.com/user-attachments/assets/b9be0895-25de-45cd-81c8-3286081ebf27" />
 
-Let's see here.
+<img width="1375" alt="image" src="https://github.com/user-attachments/assets/27e85920-2066-48b3-9c26-a60e74b332a1" />
 
-First we are going to suggesting IntelliJ IDE.
+<img width="1353" alt="image" src="https://github.com/user-attachments/assets/f8fbb49a-176b-4f72-9ce4-9fa6f68f8595" />
 
-Yes.
+Bienvenidos.
 
-Integrated Development environment IDE is a most like whenever you are choosing an IDE, it's a highly
+En esta lección, conocerán y comprenderán las ideas más populares para codificar.
 
-important for beginners what libraries it will support, how quickly you can build a clear and real
+En esta lección, mostraré algunas de las ideas más populares para desarrollar aplicaciones Java.
 
-world apps and projects using Java.
+Veamos.
 
-It's a highly important to choose your Ides, so IntelliJ IDE is having a latest and smart features
+Primero, sugeriremos IntelliJ IDE.
 
-to write quickly.
+Sí.
 
-And uh, there itself you can run your code and see and also debug your code quickly by seeing the error
+El entorno de desarrollo integrado (IDE) es lo más parecido a cuando se elige un IDE. Para los principiantes, es muy importante saber qué bibliotecas admitirá y con qué rapidez se pueden crear aplicaciones y proyectos claros y reales
 
-messages and integrated libraries.
+utilizando Java.
 
-Most features are latest available in IntelliJ, and I strongly recommend we are going to conducting
+Es muy importante elegir los IDE, por lo que IntelliJ IDE tiene las últimas funciones inteligentes para escribir rápidamente.
 
-and taking all the sessions using this IntelliJ IDE, which is a Community Center edition.
+Y, además, allí mismo puede ejecutar su código y ver y depurar su código rápidamente al ver los mensajes de error y las bibliotecas integradas.
 
-Absolutely free.
+La mayoría de las funciones son las más recientes disponibles en IntelliJ, y recomiendo encarecidamente que llevemos a cabo
 
-In future lectures we will show you how to install step by step process to install like a getting a
+y tomemos todas las sesiones utilizando este IDE de IntelliJ, que es una edición de Community Center.
 
-Community Center edition, which is a free and also creating a project.
+Absolutamente gratis.
 
-Start learning Java this Ida will use and the next one eclipse.
+En futuras conferencias le mostraremos cómo instalar paso a paso el proceso de instalación, como obtener una
 
-This is the most popular and legacy IDE which is also having like a great library support and also different
+edición de Community Center, que es gratuita, y también crear un proyecto.
 
-different themes are also there in this eclipse IDE.
+Comience a aprender Java, este Ida lo usará y el próximo Eclipse.
 
-The NetBeans IDE, which is the most popular and legacy IDE, and also you can use to learning and apply
+Este es el IDE más popular y heredado, que también tiene un gran soporte de biblioteca y también diferentes
 
-your real world projects.
+temas diferentes en este IDE de Eclipse.
 
-Visual Studio Code, which is absolutely free and open source.
+El IDE NetBeans, que es el IDE más popular y heredado, y también puede usarlo para aprender y aplicar
 
-Visual Studio Code easily you can get and install quickly in less time in your computer system.
+sus proyectos del mundo real.
 
-Blujay IDE yes, which is a most popular for academic purpose and having like a simply you can download
+Visual Studio Code, que es absolutamente gratuito y de código abierto.
 
-a little bit small file and start learning to build your own projects for academic purpose and development
+Visual Studio Code se puede obtener e instalar fácilmente y rápidamente en menos tiempo en su sistema informático.
 
-tools who are entering and start learning with a lower configuration systems.
+Sí, Blujay IDE, que es el más popular para fines académicos y tiene como un simple archivo pequeño que puedes descargar
 
-And here, thanking you very strongly, I would like to show you like a which is the most comfortable
+y comenzar a aprender a construir tus propios proyectos para fines académicos y herramientas de desarrollo que están ingresando y comienzan a aprender con sistemas de configuración más bajos.
 
-your comfortable IDE.
+Y aquí, agradeciéndoles mucho, me gustaría mostrarles cuál es el IDE más cómodo
 
-If you are already learning and working with any one of the IDE which is a more comfortable yes, please
+para ustedes.
 
-go such a IDE and start learning Java, which are the concepts and logic of coding what we are writing
+Si ya están aprendiendo y trabajando con alguno de los IDE que les resulten más cómodos, sí, por favor
 
-and presenting.
+vayan a uno de esos IDE y comiencen a aprender Java, que son los conceptos y la lógica de la codificación de lo que estamos escribiendo
 
-Thanking you.
+y presentando.
+
+Gracias.
 
 ## Instalación de Java (paso a paso) 10:23
 
-Hola a todos.
+<img width="1483" alt="image" src="https://github.com/user-attachments/assets/d4c5e2eb-8b9a-44f6-8413-d267225d396e" />
+
+<img width="1499" alt="image" src="https://github.com/user-attachments/assets/d1ce2122-24b1-40e3-bb9d-c54575032f01" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d53c220a-8de2-4e30-8036-bb60a04a9e54" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2691201c-f978-4aa2-8f82-7cf3cacb445d" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8a5437dd-7306-479e-a2f8-1f61206de022" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ca1435aa-8c78-4ff8-8566-98cce8f1f37c" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8d3f80f2-626e-40a9-9e55-22cac230bedb" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3295e310-9ddf-4694-a9a9-8cbc064ec820" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e2d4ea55-a324-41cd-9f23-7e0baf1f9b62" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/fbfaa5a5-45dd-4f2d-a565-794b15235523" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/447a819b-9cdd-4852-b92c-2ddacf640b2e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c5cc2ab8-e653-440b-94f6-70edd7599b88" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4818df0e-065d-4d4e-94c7-e88480385c15" />
 
 Bienvenidos a esta lección, conocerán y aprenderán el proceso de instalación de Java paso a paso.
 
@@ -623,7 +657,39 @@ Gracias.
 
 ## Configuración de ruta de Java (variables de entorno) 09:38
 
-Hola a todos.
+<img width="1459" alt="image" src="https://github.com/user-attachments/assets/537eae60-94bd-480e-a0d1-581bf42b75e9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0f9fb0bd-9f07-4a9a-b3d7-264653445d65" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/dc414588-c6fd-4602-ad01-0328a4cc6208" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/83630da4-fd21-4348-861d-bc2cf7b555b0" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/29bb6d1c-0747-46d5-abd7-d8dbf1d9fb83" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2b9a4919-2325-4af6-bfb1-f585d9e5533d" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/29ba9641-8338-4bd7-97cb-705ff42f205f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/73a2256a-da27-4890-9b95-4784c53ccd5d" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f040dfb0-7adf-4031-9c22-005570f2b74f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/891ff523-9389-412f-8128-d9cb8b5041e7" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/eeddee00-a482-4e28-92ea-44ce7258348e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0cff76f1-d0df-43f3-bb77-056719e45ee0" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4d8d31db-5a88-4406-8b87-52f1b4d95093" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f8ec580e-33ea-4810-b198-ade2c948329e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/73b24312-973c-44d4-922f-67334e75c11f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6e92806f-6750-4394-94c6-14603685fd9f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f935fbb2-5951-4a0a-bc11-5ee6c0c61fe9" />
 
 Bienvenidos a esta lección, aprenderán Java.
 
