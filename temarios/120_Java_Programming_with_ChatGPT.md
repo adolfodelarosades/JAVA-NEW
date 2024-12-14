@@ -34,7 +34,7 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 
 ## Contenido del curso - 13 secciones • 73 clases • 7h 13m de duración total
 
-### 01 Introducción 5 clases • 14m
+### [01 Introducción](https://github.com/adolfodelarosades/JAVA-NEW/edit/main/temarios/120_Java_Programming_with_ChatGPT/01-Introduccion.md) 5 clases • 14m
 
 * Introducción 03:29
 * Primeros pasos en Windows, macOS o Linux 01:21
@@ -42,7 +42,7 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 * Preguntas frecuentes 01:30
 * Mejores prácticas para aprender un curso en línea 05:14
 
-### Introducción a ChatGPT Gen AI 5 clases • 25m
+### [02 Introducción a ChatGPT Gen AI](https://github.com/adolfodelarosades/JAVA-NEW/edit/main/temarios/120_Java_Programming_with_ChatGPT/02-Introduccion-a-ChatGPT.md) 5 clases • 25m
 
 * ¿Qué es ChatGPT? 04:34
 * IA generativa (Gen AI) para programadores 06:53
