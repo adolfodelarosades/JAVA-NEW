@@ -1567,7 +1567,15 @@ Gracias.
 
 ## Primer programa Hola Mundo en Java 14:37
 
-Hola a todos.
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bd52167d-0cc4-4ee4-acc3-67bbe09cfe8c" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/81fccecc-707f-47c2-b4a0-279c1f3afc90" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/65b0660f-5533-4fd9-b062-a3b7fcba2ef3" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6af52577-de62-4dde-ae94-cf07a913b2c3" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d9a29be8-80ae-4524-89bb-a7e11deedaa8" />
 
 Bienvenidos a esta lección, vamos a aprender el primer programa Hola mundo en Java, cómo iniciar el IDE
 
@@ -2065,7 +2073,15 @@ Gracias.
 
 ## Salida de Java: imprimir desde el código 06:19
 
-Hola a todos.
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/74d28ae0-e588-4b83-b486-180b9cd681fc" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6af26167-bc4e-4d34-87cb-e185eb303723" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bf30c110-7f85-47b1-9b55-24b1cf04d1a9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f59981d2-5dd0-4670-807c-19581fdac73c" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f913e52e-d394-4f8e-944c-e870395477d2" />
 
 Bienvenidos a esta lección, aprenderán la salida de Java.
 
@@ -2299,7 +2315,9 @@ Nos vemos.
 
 ## Comentarios de Java 04:49
 
-Hola a todos.
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/00fbf301-19a7-4701-bdc3-8764b7a32301" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a8c937a2-1c7d-4d02-8689-9a508af8df5c" />
 
 Bienvenidos a esta lección, aprenderán Java.
 
