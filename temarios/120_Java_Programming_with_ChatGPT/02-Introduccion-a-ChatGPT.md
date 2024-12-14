@@ -928,3 +928,407 @@ Haz clic aquí para completar el artículo. Puedes tomar una copia y usarla libr
 No lo hará. Puedes usar el código fuente completo para tus proyectos. Espero que sea una lección súper hermosa y en la próxima lección veremos cómo las actividades del día a día ayudarán a ChatGPT. Luego pasaremos a aprender rápidamente como un maestro en los fundamentos de Java.
 
 ## ChatGPT para tus tareas diarias 05:09
+
+En esta lección aprenderán a usar ChatGPT para sus actividades diarias. Así que para mí es una tarea realmente interesante. 
+
+¿Qué significa la actividad diaria? Eh, solo estoy tratando de pedirle a ChatGPT que prepare un plan de viaje para tres días. Estoy pidiendo mis vacaciones. ChatGPT para tres días es simplemente. Estoy haciendo una consulta. Prepare un plan de viaje para tres días.
+
+Incluso si especificamos un área claramente, nos sugerirá que veamos la llegada y exploración del primer día, la mañana llegada a un destino, check-in y una recomendación de desayuno en una cueva local y visita a algo.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2f7642d8-79d7-4cc4-aa67-36ef3b1472bb" />
+
+Lugares de interés y atracciones.
+
+Cómo lo vamos a planificar y explorar.
+
+Si se especifican como el día uno, estas áreas. El día dos, estas áreas. Día tres, estas áreas y nombres de hoteles. Si especificaste en tu consulta, de forma muy detallada y clara, sí, especificará claramente como una mención toda la información detallada para tus planes de excursión de un día, ¿cierto? Recomendación de almuerzo, platos de la tarde y la noche y todo y desayuno de aventura y naturaleza y las recomendaciones como alojamiento.
+
+¿Ves?
+
+Mira cómo es el día dos. Como una relajación y una partida. Como un día tres por la tarde y la noche, todo se va a preparar paso a paso.
+
+¡Qué emocionante que quieras visitar Praga! Es una ciudad con una rica historia, una arquitectura impresionante y una vibrante vida cultural. Te prepararé un itinerario para un tour de 3 días en Praga que abarque los puntos más emblemáticos, además de algunas sugerencias para disfrutar de la gastronomía local.
+
+### **Itinerario de 3 días en Praga**
+
+---
+
+### **Día 1: Explorando el casco antiguo y la historia medieval**
+**Mañana:**
+1. **Plaza de la Ciudad Vieja (Staroměstské náměstí)**
+   - Comienza tu día en la Plaza de la Ciudad Vieja, uno de los lugares más emblemáticos de Praga.
+   - Admira el **Reloj Astronómico** (Prague Astronomical Clock), el tercero más antiguo del mundo. Si llegas a tiempo, podrás ver el espectáculo que tiene lugar cada hora.
+   - Disfruta del ambiente de la plaza, rodeada de edificios históricos como la **Iglesia de Nuestra Señora de Týn** y el **Ayuntamiento de la Ciudad Vieja**.
+
+2. **Puente de Carlos (Karlův most)**
+   - Desde la Plaza de la Ciudad Vieja, camina hacia el **Puente de Carlos**, uno de los puentes más antiguos y famosos de Europa.
+   - Haz una parada en el puente para disfrutar de las vistas al río Moldava y al Castillo de Praga. Durante el recorrido, encontrarás estatuas de santos y artistas locales vendiendo sus obras.
+
+**Tarde:**
+3. **Castillo de Praga (Pražský hrad)**
+   - Desde el Puente de Carlos, dirígete hacia el **Castillo de Praga**, una de las fortalezas medievales más grandes del mundo.
+   - Explora el **Palacio Real**, la **Catedral de San Vito** (una obra maestra del gótico) y el **Antiguo Palacio Real**.
+   - No te pierdas el cambio de guardia, que ocurre a las horas en la entrada del castillo.
+
+4. **Callejón del Oro (Zlatá ulička)**
+   - Dentro del complejo del castillo, visita el pintoresco **Callejón del Oro**, donde antiguamente vivían los alquimistas. Ahora alberga pequeñas tiendas y exposiciones sobre la historia del lugar.
+
+**Noche:**
+- Cena en un **restaurante típico checo**. Te recomiendo probar platos como el **svíčková** (carne con salsa cremosa), el **goulash checo** o una **plato de cerdo con chucrut** acompañado de una buena cerveza checa.
+
+---
+
+### **Día 2: Arte, cultura y paseos pintorescos**
+**Mañana:**
+1. **Casa Danzante (Tančící dům)**
+   - Comienza el día visitando esta impresionante obra arquitectónica, diseñada por Frank Gehry. Es un ejemplo de la arquitectura moderna de Praga.
+   - Si tienes tiempo, sube al **mirador** para disfrutar de vistas espectaculares de la ciudad.
+
+2. **Barrio Judío (Josefov)**
+   - Dirígete al **barrio judío**, donde puedes explorar la **Sinagoga Vieja-Nueva** (la más antigua de Europa) y el **Antiguo Cementerio Judío**, un lugar lleno de historia.
+   - Visita el **Museo Judío**, que ofrece una visión completa sobre la historia del pueblo judío en Praga.
+
+**Tarde:**
+3. **Paseo por Petrín Hill**
+   - Dirígete hacia la colina de **Petrín** para disfrutar de vistas panorámicas de Praga. Si te gusta la naturaleza, puedes caminar por sus jardines y senderos.
+   - En la cima de la colina, puedes visitar la **Torre de Petrín**, que es una réplica más pequeña de la Torre Eiffel.
+
+4. **Museo Nacional**
+   - Si eres amante de la cultura y la historia, visita el **Museo Nacional** ubicado en la Plaza Wenceslao. El museo alberga una impresionante colección de arte, historia natural y artefactos históricos.
+
+**Noche:**
+- **Cena en el distrito de Malá Strana**, que ofrece muchos restaurantes acogedores. Puedes probar platos tradicionales checos o disfrutar de una cena internacional en un ambiente relajado.
+
+---
+
+### **Día 3: Explorando los alrededores y ambiente local**
+**Mañana:**
+1. **Vyšehrad**
+   - Empieza el día visitando el histórico **Vyšehrad**, un castillo situado en una colina sobre el río Moldava. El lugar ofrece vistas espectaculares de Praga.
+   - Visita la **Iglesia de San Pedro y San Pablo** y pasea por los jardines que rodean el castillo.
+   - Aprovecha para conocer el **Cementerio de Vyšehrad**, donde están enterrados muchos personajes ilustres checos, incluidos compositores y escritores famosos.
+
+2. **Mercado de Havelska**
+   - Luego de Vyšehrad, dirígete a este mercado al aire libre, muy popular entre los locales. Aquí puedes comprar recuerdos, flores y productos típicos checos.
+
+**Tarde:**
+3. **Crucero por el río Moldava**
+   - Haz un recorrido en barco por el río Moldava para ver la ciudad desde una perspectiva diferente. Algunos tours incluyen almuerzos o cenas, lo que puede ser una opción muy relajante.
+
+4. **Parque Letná y el Metronomo**
+   - Si te queda tiempo, visita el parque de **Letná**, famoso por su **metronomo gigante**, una instalación artística ubicada en un lugar que antes albergaba un monumento a Stalin. Desde aquí, tendrás vistas espectaculares de la ciudad.
+
+**Noche:**
+- Para tu última noche, disfruta de una **cena tradicional** checa con **cerveza** en una de las tabernas típicas del barrio de **Malá Strana** o **Nové Město** (Ciudad Nueva). Puedes finalizar la noche con una copa en algún bar o cervecería local.
+
+---
+
+### **Consejos adicionales:**
+- **Transporte:** La ciudad de Praga tiene un excelente sistema de transporte público (tranvías, autobuses y metro). Puedes comprar un pase de transporte para varios días.
+- **Cambio de divisas:** La moneda local es la **Corona checa** (CZK), aunque muchas veces también puedes pagar con tarjeta en los principales puntos turísticos.
+- **Seguridad y propinas:** Praga es bastante segura para los turistas, pero como en cualquier ciudad turística, mantén tus pertenencias a salvo. En restaurantes, es común dejar una propina del 10-15% si el servicio fue bueno.
+- **Idioma:** El idioma oficial es el checo, pero muchas personas en áreas turísticas hablan inglés. Aprende algunas palabras básicas en checo como "Dobrý den" (buenos días) o "Děkuji" (gracias).
+
+---
+
+Este itinerario te dará una excelente mezcla de historia, cultura y diversión en Praga. ¡Disfruta tu viaje y no dudes en pedirme más recomendaciones si las necesitas!
+
+
+Ahora, si quieres, si vas a tener algo como, uh, estás en casa solo y estás como preparando una cena o algo especial, y quieres, uh, bajo, uh, un plan de dieta o quieres tomar una comida por la tarde con alguien no vegetariano o vegetariano o como un pescado, cualquier cosa que tengas en mente.
+
+Así que solo pides, como, uh, preparar un, uh, plan de comidas con, uh, pescado, simplemente envíalo.
+
+Entonces veamos.
+
+Plan de comidas para tres días.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/01c4b21c-cadb-4194-9521-7c3af5e8fc3f" />
+
+¡Por supuesto! A continuación, te prepararé un plan de dieta saludable de 7 días que se centra en un equilibrio adecuado de nutrientes: carbohidratos complejos, proteínas magras, grasas saludables, vitaminas y minerales. Esta dieta está diseñada para promover la salud general, energía y bienestar. Si tienes alguna restricción dietética específica o metas (como perder peso, ganar músculo, etc.), no dudes en comentarlo para ajustar el plan.
+
+### **Objetivo del plan de dieta**:
+- **Balance nutricional**: asegurar una ingesta adecuada de macronutrientes.
+- **Alimentos frescos y naturales**: priorizar alimentos integrales y mínimamente procesados.
+- **Variedad**: asegurarse de consumir diferentes tipos de alimentos para cubrir todas las necesidades nutricionales.
+
+---
+
+### **Día 1: Lunes**
+- **Desayuno**:
+  - **Avena con frutas**: 1/2 taza de avena cocida con leche de almendra o de vaca, agregando 1/2 plátano en rodajas, 1 cucharadita de semillas de chía y un puñado de nueces o almendras.
+  - **Té verde o café sin azúcar**.
+
+- **Almuerzo**:
+  - **Ensalada de pollo**: Pechuga de pollo a la parrilla (150g) sobre una cama de espinacas, lechuga, tomate, pepino, zanahorias ralladas, aderezada con aceite de oliva y limón.
+  - **1 manzana**.
+
+- **Cena**:
+  - **Salmón al horno** (150g) con especias (ajo, romero, sal y pimienta).
+  - **Verduras asadas** (brócoli, calabacín, pimientos).
+  - **1/2 taza de quinoa**.
+
+---
+
+### **Día 2: Martes**
+- **Desayuno**:
+  - **Tostadas integrales** con aguacate (1/2 aguacate) y huevo pochado.
+  - **1 naranja**.
+
+- **Almuerzo**:
+  - **Tacos de pollo**: 2 tortillas integrales con 100g de pollo a la parrilla, lechuga, cebolla, tomate, y un toque de salsa de yogurt natural.
+  - **Ensalada de frutas** con manzana, fresa y arándanos.
+
+- **Cena**:
+  - **Estofado de ternera** (150g de carne magra) con zanahorias, cebolla y papas pequeñas (cocidos en caldo bajo en sodio).
+  - **Espárragos al vapor**.
+
+---
+
+### **Día 3: Miércoles**
+- **Desayuno**:
+  - **Batido de proteínas**: 1 taza de espinacas, 1/2 plátano, 1/2 taza de leche de almendra, 1 cucharada de mantequilla de almendra y 1 cucharada de proteína en polvo (si lo prefieres).
+  - **1 huevo duro**.
+
+- **Almuerzo**:
+  - **Sopa de lentejas** con zanahorias, apio, tomate y especias.
+  - **1 rebanada de pan integral**.
+
+- **Cena**:
+  - **Pechuga de pavo** (150g) al horno con hierbas.
+  - **Puré de coliflor** con ajo y aceite de oliva.
+  - **Ensalada de rúcula** con tomate cherry.
+
+---
+
+### **Día 4: Jueves**
+- **Desayuno**:
+  - **Yogur griego natural** con 1 cucharada de granola casera, 1 cucharadita de semillas de girasol y 1/4 taza de arándanos.
+
+- **Almuerzo**:
+  - **Ensalada de atún**: 1 lata de atún en agua (escurrido), mezclado con lechuga, pepino, tomate, cebolla morada y aderezo de mostaza y vinagre de manzana.
+  - **1 pera**.
+
+- **Cena**:
+  - **Tacos de pescado**: 2 tortillas de maíz con pescado blanco (tilapia o merluza), repollo rallado y salsa de yogurt con cilantro.
+  - **1/2 aguacate**.
+
+---
+
+### **Día 5: Viernes**
+- **Desayuno**:
+  - **Tortilla de claras** (3 claras y 1 huevo entero) con espinacas, cebolla, pimientos y champiñones.
+  - **1 rebanada de pan integral**.
+
+- **Almuerzo**:
+  - **Ensalada de quinoa** con 1/2 taza de quinoa cocida, pepino, tomate, aguacate y garbanzos cocidos, aderezada con aceite de oliva y limón.
+  - **1 manzana**.
+
+- **Cena**:
+  - **Pollo a la parrilla** (150g) con especias.
+  - **Verduras al vapor** (brócoli, zanahorias, espárragos).
+  - **1/2 taza de arroz integral**.
+
+---
+
+### **Día 6: Sábado**
+- **Desayuno**:
+  - **Panqueques integrales** (hechos con harina integral) con 1 cucharadita de miel y rodajas de plátano.
+  - **Café negro o té verde**.
+
+- **Almuerzo**:
+  - **Wrap integral** con pavo, espinacas, aguacate y salsa de yogurt.
+  - **Zanahorias baby o pepinos** como snack.
+
+- **Cena**:
+  - **Filete de pescado al horno** (150g) con limón y especias.
+  - **Puré de calabaza**.
+  - **Ensalada verde** con tomate y pepino.
+
+---
+
+### **Día 7: Domingo**
+- **Desayuno**:
+  - **Avena cocida con manzana y canela**: 1/2 taza de avena con leche de almendra, 1/2 manzana en rodajas y canela al gusto.
+  - **Té verde**.
+
+- **Almuerzo**:
+  - **Sopa de pollo con verduras** (sin fideos, solo con zanahorias, apio, cebolla, espinacas y caldo bajo en sodio).
+  - **1 rebanada de pan integral**.
+
+- **Cena**:
+  - **Pollo a la parrilla** con 1/2 taza de **quinoa**.
+  - **Verduras asadas** (calabacín, berenjena, pimientos).
+  - **1/2 aguacate**.
+
+---
+
+### **Consejos adicionales:**
+- **Hidratación:** Bebe suficiente agua a lo largo del día (al menos 2-2.5 litros). También puedes consumir infusiones de hierbas o agua con rodajas de frutas.
+- **Snacks:** Si tienes hambre entre comidas, puedes optar por frutas, frutos secos (en pequeñas cantidades), yogur natural o zanahorias baby.
+- **Control de porciones:** Las porciones son clave para mantener el equilibrio energético. Si tu objetivo es perder peso, puedes reducir ligeramente las cantidades de carbohidratos o grasas según lo necesites.
+- **Ejercicio:** Complementa la dieta con actividad física regular: caminatas, yoga, entrenamiento de fuerza, etc.
+
+---
+
+Este plan proporciona una variedad de alimentos para asegurarte de obtener todos los nutrientes necesarios durante la semana. Si tienes alguna restricción alimentaria o un objetivo específico (por ejemplo, bajar de peso, aumentar masa muscular, etc.), puedo ajustar el plan según tus necesidades. ¡Espero que encuentres útil este plan y te ayude a sentirte mejor!
+
+
+También dice como un pastel de tres días: día uno, día dos, día tres.
+
+Lo que quiero decir es que entiendo mi consulta. Entiendes claramente lo que te pedí en la consulta anterior: plan de viaje de tres días.
+
+A continuación, te pido que prepares un plan de comidas con pescado, así que lo entiendo.
+
+Por ejemplo, para tres días, junto con el curry de pescado, se sugiere un plan de comidas.
+
+¿Y qué? ¿Almuerzo? Ajo y limón a la parrilla para todos los pescados. Solo te sugerirá un día uno, día dos, día tres. Además, si quieres otros planes, si quieres alguna habilidad increíble, te la mostraré.
+
+Crea un currículum o sugiere un currículum.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/cef45df5-a556-4022-9bbf-812ffd8179e0" />
+
+Crea un currículum para Java Fresher con BTech, CSC, uh grupo o rama o competencias, lo que sea.
+
+Es un CSC, que significa ingeniero en informática. Entonces, de repente, está mostrando BTech CSC. 
+Es una creación como, uh, crear un currículum para principiantes de Java. Si tienes un año de experiencia, dos años, dos años de experiencia, puedes mencionar las palabras y obtener una plantilla más precisa para tu currículum.
+
+No necesitas buscar otros lugares. Esto para este currículum. Solo tienes que pedirle a la herramienta de IA abierta ChatGPT que obtenga esta plantilla.
+
+Veamos tu nombre.
+
+Tienes que especificar la dirección, la ciudad, el código postal, todo y el perfil de LinkedIn.
+
+También tienes que crear para llegar mejor a más personas como, uh, sabes que LinkedIn es como una red profesional objetivo profesional. Mira, este es el objetivo profesional si quieres alguno.
+
+Como si lo supieras, sí, puedes corregirlo o agregar algunas palabras educación, tus habilidades universitarias o GPA, habilidades técnicas, lenguajes de programación como lo que sabes, si eres de algún otro dominio como uh, aparte de Java, solo agrega algo más de IntelliJ.
+
+Estos son los identificadores o uh, uh, eclipse e IntelliJ ID son los identificadores más populares.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3f25492f-76e0-45d5-850f-7775675b1588" />
+
+¡Por supuesto! A continuación, te mostraré un ejemplo de un currículum para un **Desarrollador Java**. El currículum está diseñado para ser claro, conciso y destacar las habilidades clave, la experiencia y los logros relevantes. También incluye secciones importantes como la educación, los proyectos y las habilidades técnicas, que son fundamentales para un perfil de desarrollador.
+
+---
+
+**[Tu nombre completo]**  
+Desarrollador Java  
+Correo electrónico: [tuemail@dominio.com] | Teléfono: [+34 600 000 000] | LinkedIn: [linkedin.com/in/tuperfil] | GitHub: [github.com/tuperfil]  
+Ubicación: [Ciudad, País]
+
+---
+
+### **Resumen Profesional**
+
+Desarrollador Java con [X] años de experiencia en el desarrollo y mantenimiento de aplicaciones de software de alto rendimiento. Experto en la implementación de soluciones escalables y eficientes utilizando Java, Spring Framework, y tecnologías relacionadas. Con habilidades sólidas en la arquitectura de sistemas, la programación orientada a objetos, y la integración de APIs. Comprometido con la mejora continua y la calidad del código. Trabajo bien en equipo y soy capaz de gestionar proyectos de manera autónoma.
+
+---
+
+### **Experiencia Profesional**
+
+#### **Desarrollador Java**  
+**[Nombre de la Empresa]** — [Ciudad, País]  
+*Mes/Año de inicio – Mes/Año de finalización*
+
+- Desarrollo y mantenimiento de aplicaciones Java utilizando **Spring Boot**, **Hibernate** y **JPA**.
+- Diseño e implementación de servicios RESTful para la integración con aplicaciones externas.
+- Implementación de soluciones de bases de datos relacionales y no relacionales (MySQL, MongoDB).
+- Optimización del rendimiento de aplicaciones mediante la refactorización de código y el uso de patrones de diseño.
+- Uso de herramientas de gestión de versiones como **Git** y **SVN**.
+- Participación activa en la revisión de código y mentoría de desarrolladores junior.
+- Colaboración con equipos multidisciplinarios para definir y cumplir los requisitos de producto.
+
+#### **Desarrollador Java Backend**  
+**[Nombre de la Empresa]** — [Ciudad, País]  
+*Mes/Año de inicio – Mes/Año de finalización*
+
+- Desarrollo de microservicios con **Spring Cloud** y **Docker** para la implementación en entornos de producción.
+- Diseño y desarrollo de la arquitectura de bases de datos, migración de datos y optimización de consultas SQL complejas.
+- Implementación de procesos automatizados utilizando herramientas como **Jenkins** y **Maven**.
+- Creación de pruebas unitarias y de integración usando **JUnit** y **Mockito**.
+- Aplicación de prácticas ágiles (Scrum) para la gestión de tareas y entregas continuas.
+
+---
+
+### **Educación**
+
+**Licenciatura en Ingeniería Informática**  
+**[Nombre de la Universidad]** — [Ciudad, País]  
+*Mes/Año de inicio – Mes/Año de finalización*
+
+- Cursos clave: Programación en Java, Estructuras de Datos, Diseño de Software, Bases de Datos, Desarrollo Web, Sistemas Operativos.
+
+---
+
+### **Habilidades Técnicas**
+
+- **Lenguajes de Programación**: Java, SQL, JavaScript, HTML, CSS
+- **Frameworks**: Spring Boot, Spring MVC, Hibernate, JPA, Spring Cloud
+- **Bases de Datos**: MySQL, PostgreSQL, MongoDB, Oracle
+- **Herramientas de Desarrollo**: Git, Maven, Gradle, Jenkins, Docker
+- **Testing**: JUnit, Mockito, Selenium
+- **Metodologías**: Scrum, Agile, DevOps
+- **Otras**: RESTful APIs, Microservicios, CI/CD, AWS, Linux
+
+---
+
+### **Certificaciones**
+
+- **Oracle Certified Professional, Java SE 8 Programmer** — *Oracle, Mes/Año*
+- **Spring Professional Certification** — *Pivotal, Mes/Año*
+
+---
+
+### **Proyectos Destacados**
+
+#### **[Nombre del Proyecto]** — *[Enlace al repositorio de GitHub]*  
+**Descripción**: Desarrollo de una aplicación de gestión de tareas utilizando **Java 8**, **Spring Boot**, y **Hibernate**. Implementación de funcionalidades como autenticación de usuarios, CRUD de tareas, y notificaciones por correo electrónico.  
+**Tecnologías**: Java, Spring Boot, Hibernate, MySQL, Docker.
+
+#### **[Nombre del Proyecto]** — *[Enlace al repositorio de GitHub]*  
+**Descripción**: Implementación de una solución de microservicios para un sistema de pagos en línea, utilizando **Spring Cloud**, **Docker** y **Kubernetes**. Configuración de pipelines de integración continua con **Jenkins**.  
+**Tecnologías**: Java, Spring Cloud, Docker, Jenkins, PostgreSQL.
+
+---
+
+### **Idiomas**
+
+- **Español**: Nativo
+- **Inglés**: Intermedio (B2)
+
+---
+
+### **Intereses Personales**
+
+- Desarrollo de proyectos de código abierto en GitHub.
+- Participación en hackatones y conferencias sobre tecnología.
+- Aprendizaje continuo sobre nuevas tecnologías y frameworks Java.
+
+---
+
+### **Referencias**
+
+Disponibles a solicitud.
+
+---
+
+### **Consejos para Personalizarlo:**
+
+1. **Resumen Profesional**: Asegúrate de personalizarlo según tu experiencia, habilidades y lo que buscas en tu próximo trabajo. Resalta tu experiencia en Java y otras tecnologías que manejes.
+   
+2. **Proyectos**: Si tienes proyectos personales, contribuciones en GitHub o proyectos previos, asegúrate de incluirlos y proporcionar enlaces a tu repositorio de código.
+
+3. **Certificaciones**: Si tienes certificaciones adicionales en Java, Spring o cualquier otro framework relacionado, añádelas. Esto le da valor a tu perfil.
+
+4. **Habilidades Técnicas**: Siempre actualiza esta sección para reflejar las herramientas y tecnologías que más usas en tu trabajo actual.
+
+5. **Experiencia**: Detalla logros y contribuciones específicas en tu trabajo anterior, como la mejora de rendimiento de aplicaciones o la implementación de soluciones innovadoras.
+
+---
+
+Este modelo es solo un ejemplo. Asegúrate de personalizarlo para reflejar tu experiencia y logros de manera auténtica. ¡Buena suerte en tu búsqueda de empleo!
+
+
+Continuaremos con este curso en particular sobre IntelliJ ID como uh de uh PyCharm más popular este es el identificador sí. Y proyectos académicos de control de versiones Gator. Si tiene certificaciones, logros, habilidades personales. Todos estos son uno por uno.
+
+Debe agregarlos de la misma manera si desea otros planes o necesita experimentos que desee hacer, o cualquier información que desee.
+
