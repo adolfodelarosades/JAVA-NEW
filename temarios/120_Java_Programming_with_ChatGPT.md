@@ -50,7 +50,7 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 * Cómo utilizar ChatGPT Gen AI 06:08
 * ChatGPT para tus tareas diarias 05:09
 
-### Configuración de Java para el desarrollo local 10 clases • 1h 16m
+### [03 Configuración de Java para el desarrollo local](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/120_Java_Programming_with_ChatGPT/03-Configuraci%C3%B3n-de-Java.md) 10 clases • 1h 16m
 
 * Futuro de Java 05:38
 * ¿Por qué es popular en la codificación? 04:09
