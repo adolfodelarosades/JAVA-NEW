@@ -63,7 +63,7 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 * Salida de Java: imprimir desde el código 06:19
 * Comentarios de Java 04:49
 
-### Utilice ChatGPT Gen AI para aprender los conceptos básicos de Java 7 clases • 1h 7m
+### [04 Utilice ChatGPT Gen AI para aprender los conceptos básicos de Java](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/120_Java_Programming_with_ChatGPT/04-Utilice-ChatGPT-Gen-AI.md) 7 clases • 1h 7m
   
 * Utilice ChatGPT para aprender variables 17:24
 * Reglas generales para la creación de variables 11:30
