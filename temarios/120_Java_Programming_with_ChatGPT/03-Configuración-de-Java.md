@@ -1,4 +1,4 @@
-# Configuración de Java para el desarrollo local 10 clases • 1h 16m
+# 03 Configuración de Java para el desarrollo local 10 clases • 1h 16m
 
 * Futuro de Java 05:38
 * ¿Por qué es popular en la codificación? 04:09
