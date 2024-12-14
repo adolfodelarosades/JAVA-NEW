@@ -76,35 +76,35 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 * Pregunta de opción múltiple sobre conceptos básicos. - 2 preguntas
 * Ejercicio de prueba práctica sobre variables - 1 preguntas
 
-### Utilice ChatGPT Gen AI para aprender operadores de Java 4 clases • 22m
+### 05 Utilice ChatGPT Gen AI para aprender operadores de Java 4 clases • 22m
 
 * Utilice ChatGPT para aprender operadores aritméticos 06:30
 * Utilice ChatGPT para aprender operadores de incremento y decremento 04:23
 * Utilice ChatGPT para aprender operadores de asignación 05:35
 * Utilice ChatGPT para aprender operadores de comparación 05:41
 
-### Utilice ChatGPT Gen AI para aprender operadores lógicos de Java 4 clases • 21m
+### 06 Utilice ChatGPT Gen AI para aprender operadores lógicos de Java 4 clases • 21m
 
 * ¿Qué son los lógicos? 05:12
 * Utilice ChatGPT para aprender el operador AND 05:23
 * Utilice ChatGPT para aprender el operador OR 04:19
 * Utilice ChatGPT para aprender el operador NOT 05:59
 
-### Utilice ChatGPT Gen AI para aprender cadenas de Java 4 clases • 26m
+### 07 Utilice ChatGPT Gen AI para aprender cadenas de Java 4 clases • 26m
 
 * Utilice ChatGPT para aprender cadenas 05:23
 * Utilice ChatGPT para aprender los métodos integrados de String 08:36
 * Utilice ChatGPT para aprender la indexación de cadenas 07:25
 * Utilice ChatGPT para aprender la concatenación de cadenas 04:14
 
-### Utilice ChatGPT Gen AI para aprender matemáticas avanzadas de Java y fecha y hora 4 clases • 25m
+### 08 Utilice ChatGPT Gen AI para aprender matemáticas avanzadas de Java y fecha y hora 4 clases • 25m
 
 * Utilice ChatGPT para aprender las funciones matemáticas básicas integradas 09:00
 * Utilice ChatGPT para aprender a generar números aleatorios 03:30
 * Utilice ChatGPT para aprender a mostrar la fecha y hora actuales 05:58
 * Utilice ChatGPT para aprender a dar formato a la fecha y la hora 06:16
 
-### Utilice ChatGPT Gen AI para aprender las declaraciones de toma de decisiones en Java 6 clases • 22m
+### 09 Utilice ChatGPT Gen AI para aprender las declaraciones de toma de decisiones en Java 6 clases • 22m
 
 * Utilice ChatGPT para aprender las declaraciones If-else 06:41
 * Utilice ChatGPT para aprender las declaraciones else-if 02:59
@@ -113,7 +113,7 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 * Prueba de evaluación (programa EvenOdd) 01:00
 * Solución para una prueba de evaluación 01:57
 
-### Utilice ChatGPT Gen AI para aprender las declaraciones de flujo de control de Java 8 clases • 56m
+### 10 Utilice ChatGPT Gen AI para aprender las declaraciones de flujo de control de Java 8 clases • 56m
 
 * Diagramas de flujo 03:02
 * Utilice ChatGPT para aprender la declaración del bucle while 09:32
@@ -125,7 +125,7 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 * Utilice ChatGPT para aprender la palabra clave continuar 03:45
 * Escribir la tabla de multiplicar usando el bucle for con IA 1 preguntas
 
-### Utilice ChatGPT Gen AI para aprender arrays de Java 6 clases • 40m
+### 11 Utilice ChatGPT Gen AI para aprender arrays de Java 6 clases • 40m
 
 * Utilice ChatGPT para aprender sobre arrays 09:05
 * Utilice ChatGPT para aprender a crear un array de objetos 04:52
@@ -135,13 +135,13 @@ Descubra los secretos de Java con la asistencia de IA generativa y comience su c
 * Utilice ChatGPT para aprender arrays multidimensionales 08:09
 * Preguntas de opción múltiple sobre arrays 1 preguntas
 
-### Utilice ChatGPT Gen AI para aprender métodos Java 2 clases • 8m
+### 12 Utilice ChatGPT Gen AI para aprender métodos Java 2 clases • 8m
 
 * Utilice ChatGPT para aprender a crear un método 03:57
 * Utilice ChatGPT para aprender a llamar a un método 03:51
 * Escriba un programa en el que se creen métodos Java y se llamen. 1 preguntas
 
-### Utilice ChatGPT Gen AI para aprender sobre proyectos Java 8 clases • 33m
+### 13 Utilice ChatGPT Gen AI para aprender sobre proyectos Java 8 clases • 33m
 
 * Descripción general del proyecto 1:47
 * Creación de un proyecto ATM (método de creación y principal) 05:38
