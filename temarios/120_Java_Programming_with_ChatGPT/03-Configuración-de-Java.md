@@ -999,7 +999,37 @@ Gracias.
 
 ## Instalación de IntelliJ IDEA 09:43
 
-Hola a todos.
+<img width="1481" alt="image" src="https://github.com/user-attachments/assets/aef0c9c7-2714-4aa2-8f0f-6ed206956400" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2aa0c754-6cc9-4a1a-805d-a2d89605e83f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/93fcb893-1d88-4e22-8734-8f9608240a2b" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0185751c-194d-4bd0-99d8-1d7c2aca9880" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3589c0f8-875f-4def-93b2-80d1306d9212" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/317d741c-f699-4da2-80da-c3791d72ba15" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/543769b3-f085-4488-b72b-7f1b27bcef50" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/559ea7e8-dca3-4767-90d4-04b98d7d762b" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3bf400c4-ad93-4ee7-ad61-300c9096f44e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6acecd2b-5809-4fb7-b8e3-f11f96cdbff4" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e14810a7-9424-465b-aeb2-10d90d5f3cdc" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ec639079-78c9-4230-8601-4acc2b71ced2" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a4f0bac4-3f9f-4a68-b8c1-78a48d57b8e5" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/26a2634b-3a73-4fdf-8f2b-178477791749" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/efd01c1f-5470-4784-93ab-aeedb40cccae" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4ecd27be-1731-4f3b-9707-287ad98d59db" />
 
 Bienvenidos a esta lección, aprenderán sobre IntelliJ IDE para desarrollar aplicaciones Java y proyectos Java.
 
@@ -1233,7 +1263,47 @@ Gracias.
 
 ## Introducción a IntelliJ IDEA 07:52
 
-Hola a todos.
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/71013edd-77b6-4c8f-b7f3-5e4cf7004b57" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b37f3665-c997-4207-a700-8890f6691348" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b18da8ec-76bd-46e5-80b0-c640baa40ace" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d6d76666-7401-4641-9616-7c4af9827e60" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/22c7068b-1d49-4f83-9aee-64259e4c5677" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/fb28a429-d76d-4e67-87c2-fc43217e1887" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/477574c3-1fd9-498b-9eb9-6d92cee51d36" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/207f450b-d586-48a2-9adc-0152ea50de41" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/daa9df20-3dda-445a-bc39-feb4adb769c7" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b748ec49-9500-4de5-8116-77350b7ed2c8" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6824567a-48c1-488c-b385-5a60e1a1f72b" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0cbcadee-8302-4789-add9-06eaeafaa798" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/42a32894-86f4-4e6c-b8b3-792cc1933107" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/50e65283-f6ca-4e18-9e05-29760c845643" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b8865207-b762-4cbf-aee4-d55f01334ef3" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4a1b838b-5a6e-4400-a84e-fad438ca2c47" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/31dc479c-d7b3-47d7-bcfc-50b526218e68" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/067f6758-30e4-4411-a8b4-78c4337f7e21" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b1733632-566f-4f7c-9f62-6c3cc6833af6" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/cde2e664-ccce-44b4-8864-41af1a61d31d" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/31d1d3c6-2b88-48f3-8e9f-56727d6dc619" />
 
 Bienvenidos a esta lección, aprenderán a iniciar IntelliJ IDE.
 
