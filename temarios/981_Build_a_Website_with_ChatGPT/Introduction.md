@@ -46,7 +46,7 @@ Este libro está dirigido, en primer lugar, a todo aquel que quiera crear una pr
 
 El ***capítulo 1*** le presenta ChatGPT en general y, en particular, el uso de ChatGPT para generar código de páginas web. Aprenderá qué tipos de páginas puede crear con la ayuda de ChatGPT y obtendrá una visión general del proceso.
 
-El ***capítulo 2*** te lleva a un viaje para crear e implementar tu primera página web con la ayuda de ChatGPT. Aprenderás a solicitarle a ChatGPT que genere el código, lo copie y lo guarde en un archivo. A partir de ahí, probarás el código en un navegador web y luego lo implementarás de forma gratuita en la web.
+El ***capítulo 2*** te lleva a un viaje para crear e desplegar tu primera página web con la ayuda de ChatGPT. Aprenderás a solicitarle a ChatGPT que genere el código, lo copie y lo guarde en un archivo. A partir de ahí, probarás el código en un navegador web y luego lo implementarás de forma gratuita en la web.
 
 El ***capítulo 3*** muestra cómo solicitar a ChatGPT que utilice fuentes, colores y encabezados en una página web. Aprenderá a solicitarle a ChatGPT que le proporcione sugerencias para el título y el eslogan de su sitio, las fuentes que debe utilizar y el esquema de colores que debe aplicar. Luego, reunirá todo esto en un mensaje que le solicite a ChatGPT que genere el código para una página de inicio personal.
 
