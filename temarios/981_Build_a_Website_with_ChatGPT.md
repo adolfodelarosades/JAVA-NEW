@@ -17,13 +17,13 @@ By Paul McFedries
 
 En *Build a Website with ChatGPT*, aprenderás las habilidades importantes de la programación web asistida por IA, como:
 
-* Elaboración de indicaciones eficaces para generar HTML, CSS y JavaScript
+* Elaboración de prompts eficaces para generar HTML, CSS y JavaScript
 * Conversión de texto en imágenes con integración DALL-E
 * Creación de barras de navegación, galerías de imágenes y formularios de contacto.
 * Implementación gratuita de sitios web totalmente funcionales
 * Personalización del código generado para sitios únicos
 
-En *Build a Website with ChatGPT* aprenderás los conceptos de codificación de alto nivel que te permiten verificar y perfeccionar la salida de IA, las habilidades de solicitud que entregan el código exacto que necesitas y cómo implementar correctamente tu sitio en la web, ¡gratis! Los ejemplos de código anotados y los consejos sobre personalización de código te brindan el equilibrio perfecto entre comprensión y conveniencia. Además, tendrás acceso a un repositorio probado y comprobado de solicitudes y código funcional.
+En *Build a Website with ChatGPT* aprenderás los conceptos de codificación de alto nivel que te permiten verificar y perfeccionar la salida de IA, las habilidades de prompting que entregan el código exacto que necesitas y cómo implementar correctamente tu sitio en la web, ¡gratis! Los ejemplos de código anotados y los consejos sobre personalización de código te brindan el equilibrio perfecto entre comprensión y conveniencia. Además, tendrás acceso a un repositorio probado y comprobado de prompts y código funcional.
 
 ### Acerca de la tecnología
 
@@ -35,11 +35,10 @@ Puedes crear sitios web increíbles incluso si no sabes HTML, CSS y JavaScript. 
 
 ### Qué hay dentro
 
-* Cómo escribir indicaciones eficaces para crear código, texto y gráficos
+* Cómo escribir prompts eficaces para crear código, texto y gráficos
 * Agregar barras de navegación, galerías de imágenes y formularios de contacto
-* Implementación gratuita de sus sitios en la web
+* Deploying gratuito de sus sitios en la web
 * Añadiendo toques únicos a páginas generadas por IA
-
 
 #### Acerca del lector
 
@@ -47,7 +46,7 @@ No se requiere experiencia en desarrollo web ni programación. Si puede crear un
 
 #### Acerca del autor
 
-**Paul McFedries** ha escrito más de 100 libros sobre desarrollo web y otros temas tecnológicos, incluido Web Design Playground (Manning Publications).
+**Paul McFedries** ha escrito más de 100 libros sobre desarrollo web y otros temas tecnológicos, incluido [Web Design Playground](https://learning.oreilly.com/library/view/web-design-playground/9781633438323/) (Manning Publications).
 
 El editor técnico de este libro fue **Anirudh V. Prabhu**.
 
