@@ -61,6 +61,12 @@ Para acceder a ChatGPT y ayudarle a crear páginas web, tiene tres opciones pref
 
    **Figura 1.3 Si tiene una cuenta Microsoft, utilice Copilot para trabajar con GPT-4.**
 
+   Mi Microsoft Copilot
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/d0ec9fd0-b3fd-4e4e-8963-b6b0e61d4297" />
+
+   **Figura 1.3 Si tiene una cuenta Microsoft, utilice Copilot para trabajar con GPT-4.**
+
 **Nota**: Hay muchas otras formas de acceder a ChatGPT, ya sea de forma directa o indirecta. Por ejemplo, existen aplicaciones ChatGPT para iOS y Android. Estos otros métodos están bien para jugar con ChatGPT, pero para crear páginas web, es mejor quedarse con la aplicación OpenAI, Bing Copilot o Microsoft Copilot porque le brindan un acceso fácil al código generado por ChatGPT.
 
 ¿Qué método deberías usar para acceder a ChatGPT? Cuando se trata de crear el código de página web relativamente simple que se cubre en este libro, no importa tanto. GPT-4 tiende a producir un código más "moderno", lo que generalmente es algo bueno. (Sin embargo, esto puede significar que tus páginas no funcionen bien en navegadores más antiguos como Internet Explorer. ¿Mi consejo? ¡Ignora esos navegadores antiguos y adopta la web moderna!) Si no tienes una cuenta ChatGPT y no quieres las restricciones que la aplicación Open AI impone a quienes no tienen una cuenta, Bing Copilot es el camino a seguir.
