@@ -114,9 +114,9 @@ El proceso creativo de ChatGPT varía según lo que estés creando, pero para nu
 
 **Figura 1.4 Un diagrama simplificado del proceso que utiliza para que ChatGPT le ayude a crear una página web**
 
-### 1.4.1 Solicitud de ChatGPT
+### 1.4.1 Prompting ChatGPT
 
-El proceso siempre comienza con una solicitud que especifica lo que desea que ChatGPT cree para usted. Esta solicitud se denomina solicitud(**prompt**). Cuando inicia sesión en la aplicación ChatGPT (consulte la figura 1.1) o navega a Bing Copilot (consulte la figura 1.2), verá un cuadro de texto donde escribe su solicitud(**prompt**).
+El proceso siempre comienza con un request que especifica lo que desea que ChatGPT cree para usted. Este request se denomina **prompt**. Cuando inicia sesión en la aplicación ChatGPT (consulte la figura 1.1) o navega a Bing Copilot (consulte la figura 1.2), verá un cuadro de texto donde escribe su **prompt**.
 
 Los mensajes pueden ser tan simples como una sola oración (como se muestra en la figura 1.3) o tan complejos como varios párrafos. Sin embargo, el cielo no es el límite aquí, ya que la mayoría de las versiones de ChatGPT solo aceptan hasta 4000 caracteres por mensaje. Eso es aproximadamente unas 500 palabras, lo que debería ser más que suficiente para la mayoría de los mensajes de creación web.
 
