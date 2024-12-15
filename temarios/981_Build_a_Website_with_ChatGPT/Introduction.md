@@ -44,37 +44,37 @@ Este libro está dirigido, en primer lugar, a todo aquel que quiera crear una pr
 
 ### Cómo está organizado este libro: una hoja de ruta
 
-El *capítulo 1* le presenta ChatGPT en general y, en particular, el uso de ChatGPT para generar código de páginas web. Aprenderá qué tipos de páginas puede crear con la ayuda de ChatGPT y obtendrá una visión general del proceso.
+El ***capítulo 1*** le presenta ChatGPT en general y, en particular, el uso de ChatGPT para generar código de páginas web. Aprenderá qué tipos de páginas puede crear con la ayuda de ChatGPT y obtendrá una visión general del proceso.
 
-El *capítulo 2* te lleva a un viaje para crear e implementar tu primera página web con la ayuda de ChatGPT. Aprenderás a solicitarle a ChatGPT que genere el código, lo copie y lo guarde en un archivo. A partir de ahí, probarás el código en un navegador web y luego lo implementarás de forma gratuita en la web.
+El ***capítulo 2*** te lleva a un viaje para crear e implementar tu primera página web con la ayuda de ChatGPT. Aprenderás a solicitarle a ChatGPT que genere el código, lo copie y lo guarde en un archivo. A partir de ahí, probarás el código en un navegador web y luego lo implementarás de forma gratuita en la web.
 
-El *capítulo 3* muestra cómo solicitar a ChatGPT que utilice fuentes, colores y encabezados en una página web. Aprenderá a solicitarle a ChatGPT que le proporcione sugerencias para el título y el eslogan de su sitio, las fuentes que debe utilizar y el esquema de colores que debe aplicar. Luego, reunirá todo esto en un mensaje que le solicite a ChatGPT que genere el código para una página de inicio personal.
+El ***capítulo 3*** muestra cómo solicitar a ChatGPT que utilice fuentes, colores y encabezados en una página web. Aprenderá a solicitarle a ChatGPT que le proporcione sugerencias para el título y el eslogan de su sitio, las fuentes que debe utilizar y el esquema de colores que debe aplicar. Luego, reunirá todo esto en un mensaje que le solicite a ChatGPT que genere el código para una página de inicio personal.
 
-El *capítulo 4* se centra en la estructura de una página web, por lo que aprenderá sobre encabezados, pies de página, relleno, bordes y márgenes. También aprenderá a agregar imágenes y enlaces a redes sociales a la página. El capítulo culmina con la solicitud a ChatGPT para que proporcione el código para crear una página de club de lectura.
+El ***capítulo 4*** se centra en la estructura de una página web, por lo que aprenderá sobre encabezados, pies de página, relleno, bordes y márgenes. También aprenderá a agregar imágenes y enlaces a redes sociales a la página. El capítulo culmina con la solicitud a ChatGPT para que proporcione el código para crear una página de club de lectura.
 
-El *capítulo 5* cubre la publicación de publicaciones en una página, así como el uso de IA para convertir mensajes de texto en imágenes. Todo esto se combina en un mensaje que le indica a ChatGPT que genere el código para una página de diario en línea.
+El ***capítulo 5*** cubre la publicación de publicaciones en una página, así como el uso de IA para convertir mensajes de texto en imágenes. Todo esto se combina en un mensaje que le indica a ChatGPT que genere el código para una página de diario en línea.
 
-El *capítulo 6* trata sobre enlaces y navegación. Aprenderá cómo funciona el código de enlaces para que pueda crear enlaces manualmente en lugar de pedirle siempre a ChatGPT que lo haga. También aprenderá a indicarle a ChatGPT que cree una barra de navegación de páginas con enlaces a otras páginas del sitio. El proyecto de este capítulo es un sitio de información.
+El ***capítulo 6*** trata sobre enlaces y navegación. Aprenderá cómo funciona el código de enlaces para que pueda crear enlaces manualmente en lugar de pedirle siempre a ChatGPT que lo haga. También aprenderá a indicarle a ChatGPT que cree una barra de navegación de páginas con enlaces a otras páginas del sitio. El proyecto de este capítulo es un sitio de información.
 
-El *capítulo 7* examina la destreza de escritura de ChatGPT mientras aprendes cómo pedirle ideas a Chatbot sobre temas, pautas de escritura y sugerencias de investigación. Incluso aprendes la mejor manera de pedirle a ChatGPT que escriba con tu propia voz. Más adelante en el capítulo, construyes una solicitud para que ChatGPT genere el código para una página de interés o pasatiempo.
+El ***capítulo 7*** examina la destreza de escritura de ChatGPT mientras aprendes cómo pedirle ideas a Chatbot sobre temas, pautas de escritura y sugerencias de investigación. Incluso aprendes la mejor manera de pedirle a ChatGPT que escriba con tu propia voz. Más adelante en el capítulo, construyes una solicitud para que ChatGPT genere el código para una página de interés o pasatiempo.
 
-El *capítulo 8* le proporciona las herramientas que necesita para indicarle a ChatGPT que cree formularios de páginas web que incluyan cuadros de texto, casillas de verificación, botones de opción, listas y más. También aprenderá a registrarse en un servicio que le permite recibir datos de formularios enviados a su dirección de correo electrónico. Todo esto se combina en un mensaje que le pide a ChatGPT que genere el código para una página de registro de eventos.
+El ***capítulo 8*** le proporciona las herramientas que necesita para indicarle a ChatGPT que cree formularios de páginas web que incluyan cuadros de texto, casillas de verificación, botones de opción, listas y más. También aprenderá a registrarse en un servicio que le permite recibir datos de formularios enviados a su dirección de correo electrónico. Todo esto se combina en un mensaje que le pide a ChatGPT que genere el código para una página de registro de eventos.
 
-El *capítulo 9* presenta dos características comunes de las páginas web: listas con viñetas y listas numeradas. Aprenderá a indicarle a ChatGPT que cree estas listas y aprenderá varias formas de personalizarlas para que se adapten a sus necesidades. El capítulo concluye solicitando a ChatGPT el código para crear una página de recetas.
+El ***capítulo 9*** presenta dos características comunes de las páginas web: listas con viñetas y listas numeradas. Aprenderá a indicarle a ChatGPT que cree estas listas y aprenderá varias formas de personalizarlas para que se adapten a sus necesidades. El capítulo concluye solicitando a ChatGPT el código para crear una página de recetas.
 
-El *capítulo 10* le ofrece una visión más detallada del trabajo con imágenes en una página web. Aprenderá a codificar imágenes manualmente, a utilizar imágenes de marcador de posición y a trabajar con versiones en miniatura de las imágenes. El proyecto del capítulo es una página de galería de fotos sofisticada.
+El ***capítulo 10*** le ofrece una visión más detallada del trabajo con imágenes en una página web. Aprenderá a codificar imágenes manualmente, a utilizar imágenes de marcador de posición y a trabajar con versiones en miniatura de las imágenes. El proyecto del capítulo es una página de galería de fotos sofisticada.
 
-El *capítulo 11* le presenta uno de los patrones de páginas web más populares: la card-tarjeta, que puede utilizar para mostrar elementos como obras de arte, pasatiempos, personas o eventos. Puede aprovechar este conocimiento sobre tarjetas al obtener ChatGPT para ayudarlo a crear el proyecto de este capítulo: una página de portafolio.
+El ***capítulo 11*** le presenta uno de los patrones de páginas web más populares: la card-tarjeta, que puede utilizar para mostrar elementos como obras de arte, pasatiempos, personas o eventos. Puede aprovechar este conocimiento sobre tarjetas al obtener ChatGPT para ayudarlo a crear el proyecto de este capítulo: una página de portafolio.
 
-El *capítulo 12* le ofrece un tutorial completo sobre el uso de etiquetas de diseño de páginas web, además de mostrarle cómo marcar palabras importantes y cómo enfatizar palabras en la página. También aprenderá una técnica eficaz para lograr que sus páginas se vean bien en pantallas más pequeñas. El proyecto de este capítulo es una página que muestra un artículo extenso con una barra lateral.
+El ***capítulo 12*** le ofrece un tutorial completo sobre el uso de etiquetas de diseño de páginas web, además de mostrarle cómo marcar palabras importantes y cómo enfatizar palabras en la página. También aprenderá una técnica eficaz para lograr que sus páginas se vean bien en pantallas más pequeñas. El proyecto de este capítulo es una página que muestra un artículo extenso con una barra lateral.
 
-El *capítulo 13* presenta las páginas web basadas en datos, donde la mayor parte del contenido de la página se procesa desde un archivo de datos independiente. Primero aprenderá cómo lograr que ChatGPT cree el archivo de datos a partir de sus datos de Excel. Luego aprenderá cómo permitir que sus usuarios interactúen con los datos filtrándolos, ordenándolos y buscándolos. El proyecto de este capítulo es una página que muestra un catálogo de cursos en línea para una universidad ficticia.
+El ***capítulo 13*** presenta las páginas web basadas en datos, donde la mayor parte del contenido de la página se procesa desde un archivo de datos independiente. Primero aprenderá cómo lograr que ChatGPT cree el archivo de datos a partir de sus datos de Excel. Luego aprenderá cómo permitir que sus usuarios interactúen con los datos filtrándolos, ordenándolos y buscándolos. El proyecto de este capítulo es una página que muestra un catálogo de cursos en línea para una universidad ficticia.
 
-El *Apéndice A* le proporciona información básica útil para prepararse para usar ChatGPT para crear páginas web. Aprenderá a configurar una cuenta de ChatGPT, a probar su código y a trabajar con archivos de páginas web.
+El ***Apéndice A*** le proporciona información básica útil para prepararse para usar ChatGPT para crear páginas web. Aprenderá a configurar una cuenta de ChatGPT, a probar su código y a trabajar con archivos de páginas web.
 
-El *Apéndice B* está dedicado a poner en línea el código web. Aprenderá a implementar el código en dos sitios gratuitos (Netlify y Cloudflare) y en otros sitios.
+El ***Apéndice B*** está dedicado a poner en línea el código web. Aprenderá a implementar el código en dos sitios gratuitos (Netlify y Cloudflare) y en otros sitios.
 
-El *Apéndice C* mejora su juego ChatGPT al guiarlo a través de una extensa lista de mejores prácticas para activar ChatGPT y manejar cualquier error que surja.
+El ***Apéndice C*** mejora su juego ChatGPT al guiarlo a través de una extensa lista de mejores prácticas para activar ChatGPT y manejar cualquier error que surja.
 
 ### Acerca del código
 
