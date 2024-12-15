@@ -87,16 +87,16 @@ A estas alturas, puede que estés pensando que transformar ChatGPT en un asisten
 
 En primer lugar, debes saber que los tipos de páginas web que se crean con mayor facilidad con la ayuda de ChatGPT son los que se describen como estáticos en el sector del desarrollo web. Una página web estática es aquella que contiene texto y datos que no cambian después de que se carga la página. Puede parecer restrictivo, pero en realidad no hay límite en los tipos de páginas estáticas que puedes pedirle a ChatGPT que te ayude a crear. Aquí tienes 10 ideas:
 
-* Página de inicio personal
-* Página de información de un equipo, organización o evento
-* Página de destino del producto
-* Página de pasatiempos
-* Galería de fotos
-* Página de portafolio
-* Página de publicación (ensayo, reseña, fan fiction o lo que sea)
-* Lista de los 10 mejores
-* Instrucciones de cómo hacerlo
-* Guía de viaje
+* Personal home page - Página home Personal
+* Information page for a team, organization, or event - Página de información de un equipo, organización o evento
+* Product landing page - Página del producto
+* Hobby page - Página de pasatiempos
+* Photo gallery - Galería de fotos
+* Portfolio page - Página de portafolio
+* Post page (essay, review, fan fiction, or whatever) - Página de publicación (ensayo, reseña, fan fiction o lo que sea)
+* Top-10 list - Lista de los 10 mejores
+* How-to instructions - Instrucciones de cómo hacerlo
+* Travel guide - Guía de viaje
 
 Apuesto a que puedes crear fácilmente 10 páginas más por tu cuenta. Estos son los tipos de páginas que aprenderás a crear con la ayuda de ChatGPT en este libro. Y la gran noticia es que, a menos que optes por una suscripción de paga a ChatGPT Plus, puedes hacer todo, desde acceder a ChatGPT hasta guardar el código generado e implementar tus páginas, completamente gratis.
 
