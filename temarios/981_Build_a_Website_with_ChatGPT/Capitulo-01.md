@@ -1,4 +1,4 @@
-# 1 Introducción a la creación de sitios web con ChatGPT
+# 1 Introducción a la Creación de Sitios Web con ChatGPT
 
 Este capítulo cubre
 
@@ -17,23 +17,29 @@ A menos que hayas estado encerrado en una ermita durante el último año o dos, 
 
 Para que te hagas una idea de qué es ChatGPT y qué hace, te resultará útil desglosar cada componente del nombre para ver qué significa. Comenzaré con GPT:
 
-* **G** — La G en GPT significa ***generativo***, lo que significa que GPT puede crear (o generar) contenido nuevo. GPT es un **modelo de lenguaje grande - large language model (LLM)**, lo que generalmente significa que está diseñado para generar texto, como ensayos, historias e incluso poemas. Más específicamente para nuestros propósitos en este libro, las capacidades generativas de GPT también se extienden al código de programación, particularmente el código que sustenta las páginas web.
+* **G** — La G en GPT significa ***generative - generativo***, lo que significa que GPT puede crear (o generar) contenido nuevo. GPT es un **Large Language Model (LLM) - Modelo de Lenguaje Grande**, lo que generalmente significa que está diseñado para generar texto, como ensayos, historias e incluso poemas. Más específicamente para nuestros propósitos en este libro, las capacidades generativas de GPT también se extienden al código de programación, particularmente el código que sustenta las páginas web.
 
-* **P** — La P en GPT significa ***preentrenado***, lo que significa que GPT fue expuesto a enormes cantidades de texto (a eso se refiere el término “grande” en el modelo de lenguaje grande). Durante este proceso de preentrenamiento, GPT aprendió los patrones y las estructuras del lenguaje, como por ejemplo cómo se forman las oraciones normalmente. En particular, dado un texto existente, el preentrenamiento permite a GPT predecir qué palabra o frase suele venir a continuación. En cierto sentido, eso es todo lo que GPT hace realmente: ¡predecir la siguiente palabra! GPT también fue entrenado en un conjunto inimaginablemente grande de datos de programación; por lo tanto, debido a que el código de programación suele ser más predecible que la escritura normal, GPT se destaca en la generación de código.
+* **P** — La P en GPT significa ***pretrained - preentrenado***, lo que significa que GPT fue expuesto a enormes cantidades de texto (a eso se refiere el término “large - grande” en el *Large Language Model*). Durante este proceso de preentrenamiento, GPT aprendió los patrones y las estructuras del lenguaje, como por ejemplo cómo se forman las oraciones normalmente. En particular, dado un texto existente, el preentrenamiento permite a GPT predecir qué palabra o frase suele venir a continuación. En cierto sentido, eso es todo lo que GPT hace realmente: *¡predecir la siguiente palabra!* GPT también fue entrenado en un conjunto inimaginablemente grande de datos de programación; por lo tanto, debido a que el código de programación suele ser más predecible que la escritura normal, GPT se destaca en la generación de código.
 
-* **T**: la T de GPT significa ***transformador***, lo que significa que GPT puede tomar una entrada de texto (como una solicitud para crear una página web) y transformar ese texto en sus componentes más importantes mientras ignora o da menor prioridad a los componentes menos importantes del texto. Esto permite que GPT produzca resultados con mayor relevancia y precisión.
+* **T**: la T de GPT significa ***transformer - transformador***, lo que significa que GPT puede tomar una entrada de texto (como un request para crear una página web) y transformar ese texto en sus componentes más importantes mientras ignora o da menor prioridad a los componentes menos importantes del texto. Esto permite que GPT produzca resultados con mayor relevancia y precisión.
 
-La parte de **Chat** de ChatGPT significa que tienes acceso conversacional a GPT, lo que significa que puedes intercambiar mensajes con GPT más o menos como lo haces en una conversación de chat. En el contexto de la creación de páginas web, estas "conversaciones" implicarán que solicites algún componente de la página y ChatGPT proporcione el código necesario. Sin embargo, ChatGPT también tiene una capacidad limitada para "recordar" mensajes anteriores en la conversación actual, lo que ocasionalmente puede ser útil en tus tareas de creación de sitios web.
+La parte de **Chat** de ChatGPT significa que *tienes acceso conversacional a GPT, lo que significa que puedes intercambiar mensajes con GPT más o menos como lo haces en una conversación de chat*. En el contexto de la creación de páginas web, estas "conversaciones" implicarán que solicites algún componente de la página y ChatGPT proporcione el código necesario. Sin embargo, ChatGPT también tiene una capacidad limitada para "recordar" mensajes anteriores en la conversación actual, lo que ocasionalmente puede ser útil en tus tareas de creación de sitios web.
 
-Mientras escribo esto, hay dos versiones principales de GPT disponibles: **GPT-3.5**, lanzada en *noviembre de 2022*, y **GPT-4**, lanzada en *marzo de 2023*. Si usa la aplicación OpenAI (que analizaremos en un momento) con una cuenta gratuita de ChatGPT (obtenga más información en el apéndice A) o sin cuenta, solo tendrá acceso a GPT-3.5; si tiene una cuenta de paga de ChatGPT Plus y usa la aplicación OpenAI, tendrá acceso tanto a GPT-3.5 como a GPT-4.
+Mientras escribo esto, hay dos versiones principales de GPT disponibles: **GPT-3.5**, lanzada en ***noviembre de 2022***, y **GPT-4**, lanzada en ***marzo de 2023***. Si usa la aplicación OpenAI (que analizaremos en un momento) con una cuenta gratuita de ChatGPT (obtenga más información en el apéndice A) o sin cuenta, solo tendrá acceso a GPT-3.5; si tiene una cuenta de paga de ChatGPT Plus y usa la aplicación OpenAI, tendrá acceso tanto a GPT-3.5 como a GPT-4.
 
 Para acceder a ChatGPT y ayudarle a crear páginas web, tiene tres opciones preferidas:
 
 * **OpenAI app**: esta es una aplicación en línea operada por OpenAI, los creadores de GPT y ChatGPT. La aplicación está disponible en https://chat.openai.com . No necesita una cuenta OpenAI para acceder a ella, pero tener una cuenta elimina ciertas restricciones (consulte el apéndice A para saber cómo crear una cuenta para acceder a ChatGPT). Si tiene una cuenta de paga ChatGPT Plus, puede elegir entre GPT-3.5 y GPT-4, como se muestra en la figura1.1.
 
-<img width="827" alt="image" src="https://github.com/user-attachments/assets/6ec26861-ab74-4482-afe3-d14e40c409f8">
+   <img width="827" alt="image" src="https://github.com/user-attachments/assets/6ec26861-ab74-4482-afe3-d14e40c409f8">
 
-**Figura 1.1 Con una cuenta ChatGPT Plus, la aplicación OpenAI le brinda acceso tanto a GPT-3.5 como a GPT-4.**
+   **Figura 1.1 Con una cuenta ChatGPT Plus, la aplicación OpenAI le brinda acceso tanto a GPT-3.5 como a GPT-4.**
+
+   Mi ChatGPT.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/ee290dee-ee54-41b9-a7b3-22875a71e430" />
+
+   **Figura 1.1 Con una cuenta ChatGPT Plus, la aplicación OpenAI le brinda acceso tanto a GPT-3.5 como a GPT-4.**
 
 * **Microsoft Copilot en Bing**: esta es la versión mejorada con IA del motor de búsqueda de Microsoft, que ofrece una función de chat que utiliza GPT-4 en segundo plano y también tiene acceso a la web. Vaya a https://bing.com y seleccione la pestaña Copilot para comenzar, como se muestra en la figura 1.2. Tenga en cuenta que no necesita una cuenta ChatGPT para usar Bing Copilot. (Si tiene dudas sobre las tres opciones de "estilo de conversación", las explico en detalle en el apéndice A).
 
