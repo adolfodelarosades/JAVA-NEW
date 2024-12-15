@@ -39,19 +39,27 @@ Para acceder a ChatGPT y ayudarle a crear páginas web, tiene tres opciones pref
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/ee290dee-ee54-41b9-a7b3-22875a71e430" />
 
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/98640033-303a-4d53-a28d-f7ee97d3f604" />
+
    **Figura 1.1 Con una cuenta ChatGPT Plus, la aplicación OpenAI le brinda acceso tanto a GPT-3.5 como a GPT-4.**
 
 * **Microsoft Copilot en Bing**: esta es la versión mejorada con IA del motor de búsqueda de Microsoft, que ofrece una función de chat que utiliza GPT-4 en segundo plano y también tiene acceso a la web. Vaya a https://bing.com y seleccione la pestaña Copilot para comenzar, como se muestra en la figura 1.2. Tenga en cuenta que no necesita una cuenta ChatGPT para usar Bing Copilot. (Si tiene dudas sobre las tres opciones de "estilo de conversación", las explico en detalle en el apéndice A).
 
-<img width="782" alt="image" src="https://github.com/user-attachments/assets/973439ba-f3c7-456a-930c-67cd99a4a0f6">
+   <img width="782" alt="image" src="https://github.com/user-attachments/assets/973439ba-f3c7-456a-930c-67cd99a4a0f6">
 
-**Figura 1.2 Utilice Bing Copilot para trabajar con GPT-4.**
+   **Figura 1.2 Utilice Bing Copilot para trabajar con GPT-4.**
 
+  Bing Copilot
+
+  <img width="1512" alt="image" src="https://github.com/user-attachments/assets/b867587d-4803-4170-9ee2-cd3f1c238105" />
+
+   **Figura 1.2 Utilice Bing Copilot para trabajar con GPT-4.**
+  
 * **Microsoft Copilot**: esta es la implementación independiente de la versión de Microsoft de ChatGPT, que utiliza el modelo GPT-4. Vaya a https://copilot.microsoft.com, como se muestra en la figura 1.3. Tenga en cuenta que no necesita una cuenta de ChatGPT para usar Microsoft Copilot, pero sí necesita una cuenta de Microsoft. (Nuevamente, explico las tres opciones de "estilo de conversación" en el apéndice A).
 
-<img width="829" alt="image" src="https://github.com/user-attachments/assets/4e4c8fb1-bbd6-42f0-be6c-01d741f4ef5c">
+   <img width="829" alt="image" src="https://github.com/user-attachments/assets/4e4c8fb1-bbd6-42f0-be6c-01d741f4ef5c">
 
-**Figura 1.3 Si tiene una cuenta Microsoft, utilice Copilot para trabajar con GPT-4.**
+   **Figura 1.3 Si tiene una cuenta Microsoft, utilice Copilot para trabajar con GPT-4.**
 
 **Nota**: Hay muchas otras formas de acceder a ChatGPT, ya sea de forma directa o indirecta. Por ejemplo, existen aplicaciones ChatGPT para iOS y Android. Estos otros métodos están bien para jugar con ChatGPT, pero para crear páginas web, es mejor quedarse con la aplicación OpenAI, Bing Copilot o Microsoft Copilot porque le brindan un acceso fácil al código generado por ChatGPT.
 
