@@ -120,13 +120,13 @@ El proceso siempre comienza con un request que especifica lo que desea que ChatG
 
 Los mensajes pueden ser tan simples como una sola oración (como se muestra en la figura 1.3) o tan complejos como varios párrafos. Sin embargo, el cielo no es el límite aquí, ya que la mayoría de las versiones de ChatGPT solo aceptan hasta 4000 caracteres por mensaje. Eso es aproximadamente unas 500 palabras, lo que debería ser más que suficiente para la mayoría de los mensajes de creación web.
 
-No es una exageración decir que activar ChatGPT es el paso más importante porque la calidad de la solicitud determina directamente la calidad del resultado que devuelve ChatGPT. En cierto sentido, este libro trata de proporcionarle solicitudes de alta calidad que hagan que ChatGPT realice tareas específicas de creación de páginas web. También dedico bastantes páginas en el apéndice C a explicar algunas prácticas recomendadas asociadas con activar ChatGPT (un proceso llamado ingeniería de solicitudes(prompt engineering) por los entendidos).
+No es una exageración decir que el prompting  ChatGPT es el paso más importante porque la calidad del prompt determina directamente la calidad del resultado que devuelve ChatGPT. En cierto sentido, este libro trata de proporcionarle prompts de alta calidad que hagan que ChatGPT realice tareas específicas de creación de páginas web. También dedico bastantes páginas en el apéndice C a explicar algunas prácticas recomendadas asociadas con prompting ChatGPT (un proceso llamado **prompt engineering** por los entendidos).
 
-**Advertencia** Aunque es cierto que ChatGPT es un modelo de calidad de entrada y calidad de salida, como todos los modelos de lenguaje grandes, es propenso a producir ocasionalmente resultados inutilizables o francamente extraños incluso cuando el mensaje es bueno. Hablo sobre algunas formas de solucionar estos problemas en el apéndice A.
+**Advertencia** Aunque es cierto que ChatGPT es un modelo de calidad de entrada y calidad de salida, como todos los modelos de lenguaje grandes, es propenso a producir ocasionalmente resultados inutilizables o francamente extraños incluso cuando el prompt es bueno. Hablo sobre algunas formas de solucionar estos problemas en el apéndice A.
 
 ### 1.4.2 Visualización de los resultados de ChatGPT
 
-Cuando envías tu mensaje, ChatGPT se pone a trabajar y normalmente comienza a “escribir” su respuesta en unos pocos segundos. La Figura 1.5 muestra un ejemplo de respuesta al siguiente mensaje:
+Cuando envías tu prompt, ChatGPT se pone a trabajar y normalmente comienza a “escribir” su respuesta en unos pocos segundos. La Figura 1.5 muestra un ejemplo de respuesta al siguiente mensaje:
 
 <img width="826" alt="image" src="https://github.com/user-attachments/assets/3783a264-2679-4610-b465-dc0acccae03f">
 
