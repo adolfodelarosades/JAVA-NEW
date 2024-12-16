@@ -49,6 +49,31 @@ Por lo general, la forma más rápida de llevar los archivos de su sitio web a N
 
    8. Haga clic en el enlace para ver el sitio implementado en el navegador web.
 
+💻 Mi instalación.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/567a65ee-0dfe-40f1-bfd1-56723c7462ff" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/7d0eba77-9755-4338-913d-e2460a5b2846" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ec4493d9-5b10-4baf-a4fd-cb52811adaac" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/df18f30a-be7c-4148-9c82-b937649fe2bf" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/13e52f0c-3966-4e10-84dd-e26052ee3e8a" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/225cb0fe-9a5d-4b56-b3c4-bcffa1a4e3cf" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/61be5e93-e3e4-4d33-8e1d-59630f2ffac3" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0a3a8f49-288f-42d4-85f1-8bbb4feda73e" />
+
+https://graceful-melba-e262b8.netlify.app/
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1a7e9a9e-e3f6-4a80-bd89-d63df4dad939" />
+
+
+
+
 
 ### B.1.3 Cargar sus archivos mediante un cuadro de diálogo
 
