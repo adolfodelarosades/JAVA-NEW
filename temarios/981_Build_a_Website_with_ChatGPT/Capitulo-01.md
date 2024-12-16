@@ -144,6 +144,43 @@ Escriba el código de la página web para mostrar “¡Hola mundo!” en una fue
 
 Como se muestra en la figura 1.5, el resultado en este caso consiste en una respuesta amigable a su solicitud seguida de un cuadro con el título `html` que incluye el código de la página web que se solicitó. Este código sin duda le parecerá un galimatías, pero créame cuando le digo que hace exactamente lo que la solicitud le pidió: muestra el mensaje `Hello World!` en una fuente grande (en este caso, de 48 puntos). Tenga en cuenta que, por diversas razones técnicas, ChatGPT puede no devolver el mismo código cada vez que ejecute la solicitud. Sin embargo, debido a que a menudo hay varias formas de lograr el mismo resultado con HTML y CSS, el código generado seguirá produciendo una página web que se ve igual (o al menos muy similar).
 
+💻 Mi ejemplo
+
+![image](https://github.com/user-attachments/assets/5e8f793a-a565-430b-9dc5-c2d1c7fd3d76)
+
+https://webdesignplayground.io/
+
+![image](https://github.com/user-attachments/assets/69ca7e60-3fed-41e4-b52a-d6336f2b8c0b)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 5rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>
+```
+
 ### 1.4.3 Obtener el código en un archivo
 
 El ejemplo que utilicé en la sección anterior es sencillo, sin duda, pero aún así es más que asombroso que, a los pocos segundos de enviar este mensaje, ChatGPT haya generado un código de página web funcional que satisfizo la solicitud. A medida que trabaje en sus proyectos de páginas web con ChatGPT a su lado, por así decirlo, esa sensación de asombro surgirá una y otra vez a medida que el modelo genere rápidamente y sin esfuerzo el código que solicitó.
