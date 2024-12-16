@@ -183,7 +183,7 @@ https://webdesignplayground.io/
 
 ### 1.4.3 Obtener el código en un archivo
 
-El ejemplo que utilicé en la sección anterior es sencillo, sin duda, pero aún así es más que asombroso que, a los pocos segundos de enviar este mensaje, ChatGPT haya generado un código de página web funcional que satisfizo la solicitud. A medida que trabaje en sus proyectos de páginas web con ChatGPT a su lado, por así decirlo, esa sensación de asombro surgirá una y otra vez a medida que el modelo genere rápidamente y sin esfuerzo el código que solicitó.
+El ejemplo que utilicé en la sección anterior es sencillo, sin duda, pero aún así es más que asombroso que, a los pocos segundos de enviar este prompt, ChatGPT haya generado un código de página web funcional que satisfizo la request. A medida que trabaje en sus proyectos de páginas web con ChatGPT a su lado, por así decirlo, esa sensación de asombro surgirá una y otra vez a medida que el modelo genere rápidamente y sin esfuerzo el código que solicitó.
 
 Sin embargo, el código de la página web producido por ChatGPT, sin importar lo preciso que sea o lo adecuado que sea para sus necesidades, no hace nada. Esto se debe a que, por sí solo, el código de la página web es inerte; es solo una colección de palabras y símbolos de apariencia extraña. Para que el código de la página web cobre vida, debe mostrarse en un navegador web; y antes de poder hacer eso, debe colocar el código en un archivo al que pueda acceder un navegador.
 
@@ -193,9 +193,14 @@ El Apéndice A analiza en profundidad los detalles de los archivos de páginas w
 
 **Figura 1.6 El código copiado de ChatGPT y guardado en un archivo HTML**
 
-### 1.4.4 Implementación del archivo HTML
+💻 Mi ejemplo.
 
-La única forma de que otras personas puedan ver sus páginas es que usted las coloque en la Web. Para los proyectos relativamente simples que crea en este libro, este proceso de implementación implica copiar el archivo o los archivos que ChatGPT le ayudó a crear a un servicio que aloja páginas web. En el apéndice B explico este proceso con más detalle, pero en su mayor parte, solo significa cargar la carpeta en la que ha almacenado los archivos de su página web al servidor. La Figura 1.7 muestra un ejemplo del proceso en el que arrastré la carpeta `hello-world` desde la ventana del Finder a la derecha y estoy a punto de soltarla en la ventana de la izquierda. Una vez cargados los archivos de su página web, puede verlos de inmediato en su navegador web favorito, como se muestra en la Figura 1.8.
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6ae2d379-0100-43c9-9be8-c69161d99e96" />
+
+
+### 1.4.4 Despliegue del archivo HTML
+
+La única forma de que otras personas puedan ver sus páginas es que usted las coloque en la Web. Para los proyectos relativamente simples que crea en este libro, este proceso de despliegue implica copiar el archivo o los archivos que ChatGPT le ayudó a crear a un servicio que aloja páginas web. En el apéndice B explico este proceso con más detalle, pero en su mayor parte, solo significa cargar la carpeta en la que ha almacenado los archivos de su página web al servidor. La Figura 1.7 muestra un ejemplo del proceso en el que arrastré la carpeta `hello-world` desde la ventana del Finder a la derecha y estoy a punto de soltarla en la ventana de la izquierda. Una vez cargados los archivos de su página web, puede verlos de inmediato en su navegador web favorito, como se muestra en la Figura 1.8.
 
 <img width="846" alt="image" src="https://github.com/user-attachments/assets/3a3fb3fe-d7fd-41e5-923b-5415df2156a2">
 
@@ -205,7 +210,29 @@ La única forma de que otras personas puedan ver sus páginas es que usted las c
 
 **Figura 1.8 La página web creada por ChatGPT está en la web.**
 
-Las secciones anteriores te han guiado a través de un proceso de solicitud-copia-guardado-implementación(prompt-copy-save-deploy) que, creo que estarás de acuerdo, tiene una sencillez satisfactoria (y más que sorprendente). Sin embargo, no todos tus proyectos serán tan sencillos, en particular si te aventurarás a crear páginas web que vayan mucho más allá de decir "¡Hola mundo!". Para estos proyectos más ambiciosos, la mayoría de las veces utilizarás dos técnicas adicionales: repetir el proceso de solicitud-copia-guardado-implementación para crear varias páginas y componentes de página; y refinar y revisar tus solicitudes de ChatGPT.
+Las secciones anteriores te han guiado a través de un proceso ***prompt-copy-save-deploy*** (solicitud-copia-guardado-implementación) que, creo que estarás de acuerdo, tiene una sencillez satisfactoria (y más que sorprendente). Sin embargo, no todos tus proyectos serán tan sencillos, en particular si te aventurarás a crear páginas web que vayan mucho más allá de decir "¡Hola mundo!". Para estos proyectos más ambiciosos, la mayoría de las veces utilizarás dos técnicas adicionales: repetir el proceso de ***prompt-copy-save-deploy*** para crear varias páginas y componentes de página; y refinar y revisar tus solicitudes de ChatGPT.
+
+💻 Mi instalación.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/567a65ee-0dfe-40f1-bfd1-56723c7462ff" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/7d0eba77-9755-4338-913d-e2460a5b2846" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ec4493d9-5b10-4baf-a4fd-cb52811adaac" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/df18f30a-be7c-4148-9c82-b937649fe2bf" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/13e52f0c-3966-4e10-84dd-e26052ee3e8a" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/225cb0fe-9a5d-4b56-b3c4-bcffa1a4e3cf" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/61be5e93-e3e4-4d33-8e1d-59630f2ffac3" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0a3a8f49-288f-42d4-85f1-8bbb4feda73e" />
+
+https://graceful-melba-e262b8.netlify.app/
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1a7e9a9e-e3f6-4a80-bd89-d63df4dad939" />
 
 ### 1.4.5 Repetir según sea necesario
 
