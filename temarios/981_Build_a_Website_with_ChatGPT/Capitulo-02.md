@@ -2,8 +2,8 @@
 
 Este capítulo cubre
 
-* Comprender el proceso de creación e implementación de una página web
-* Uso de un mensaje de ChatGPT para generar una página web completa
+* Comprender el proceso de creación y despliegue de una página web
+* Uso de un prompt de ChatGPT para generar una página web completa
 * Copiar el código de la página web generada
 * Guardar el código en un archivo HTML
 * Obtener su archivo de página web en la web
