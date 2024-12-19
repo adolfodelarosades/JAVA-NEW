@@ -415,3 +415,298 @@ Ahí lo tienes: una página web creada con la ayuda de ChatGPT y desplegada en l
 * En su editor de texto, pegue el código copiado en un nuevo archivo de texto y luego guarde ese archivo como `index.html` en una nueva subcarpeta creada para el proyecto.
 
 * Implemente el sitio web cargando los datos del proyecto en su proveedor de alojamiento web.
+
+## 💻 Proyectos
+
+### `01-puns.html`
+```text
+Create web page code that stores 50 puns and displays a random pun each time the user clicks a button.
+```
+
+<img width="1509" alt="image" src="https://github.com/user-attachments/assets/3c69e045-8730-4eae-8a1a-516a0a231efc" />
+
+Certainly! Here's a simple HTML, CSS, and JavaScript implementation for a web page that stores 50 puns and displays a random pun each time the user clicks a button.
+
+HTML, CSS, and JavaScript Code
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Pun Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #punDisplay {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        #generateBtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #generateBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Pun Generator</h1>
+        <p id="punDisplay">Click the button for a pun!</p>
+        <button id="generateBtn">Get a Pun!</button>
+    </div>
+
+    <script>
+        const puns = [
+            "I’m reading a book on anti-gravity. It’s impossible to put down.",
+            "I used to play piano by ear, but now I use my hands.",
+            "I’m friends with all electricians because they’re so current.",
+            "Why don’t skeletons fight each other? They don’t have the guts.",
+            "I got a job at a bakery because I kneaded dough.",
+            "I don’t trust stairs because they’re always up to something.",
+            "What do you call fake spaghetti? An impasta.",
+            "I couldn’t figure out how to put my seatbelt on. Then it clicked.",
+            "I’m a big fan of whiteboards. They’re re-markable.",
+            "I once told a joke about a pencil. It had no point.",
+            "I can’t believe I got fired from the calendar factory. All I did was take a day off.",
+            "Why do cows wear bells? Because their horns don’t work.",
+            "I’m on a whiskey diet. I’ve lost three days already.",
+            "The man who survived both mustard gas and pepper spray is a seasoned veteran now.",
+            "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+            "I would tell you a joke about an elevator, but it’s an uplifting experience.",
+            "I’m reading a book on the history of glue. I just can’t seem to put it down.",
+            "I would avoid the sushi if I were you. It’s a little fishy.",
+            "I used to be a baker, but I couldn't make enough dough.",
+            "I don’t trust people who do acupuncture. They’re back stabbers.",
+            "The scarecrow won an award because he was outstanding in his field.",
+            "I’m afraid for the calendar. Its days are numbered.",
+            "Parallel lines have so much in common. It’s a shame they’ll never meet.",
+            "I couldn’t quite remember how to throw a boomerang, but eventually, it came back to me.",
+            "I don’t really understand electricity, but I’m shocked by it every time.",
+            "I can’t believe I got fired from the fire department. I guess I just couldn’t put out the right impression.",
+            "What’s orange and sounds like a parrot? A carrot.",
+            "I wasn’t originally going to get a brain transplant, but then I changed my mind.",
+            "I’m terrified of elevators, so I’m going to start taking steps to avoid them.",
+            "I only know 25 letters of the alphabet. I don’t know y.",
+            "I’d tell you a chemistry joke, but I know I wouldn’t get a reaction.",
+            "I made a pun about the wind, but it blew.",
+            "The problem with candy jokes is they’re either too sweet or too corny.",
+            "I don’t have a pun about vegetables, but it’s corny.",
+            "A termite walks into the bar and asks, ‘Is the bartender here?’",
+            "What’s a skeleton’s least favorite room? The living room.",
+            "I told my computer I needed a break, and now it won’t stop sending me Kit-Kats.",
+            "I can’t trust these computers anymore. They keep going on and off at random.",
+            "I used to be a librarian, but I lost my place.",
+            "Why was the math book sad? Because it had too many problems.",
+            "I want to be a monk, but I don’t think I’m cut out for it.",
+            "I thought about going on an all-almond diet. But that’s just nuts.",
+            "I had a joke about a broken pencil, but it was pointless.",
+            "What do you call a belt made of watches? A waist of time.",
+            "I don’t play soccer because I enjoy the pun, but because I can’t resist a kick.",
+            "I don’t know why I bought a pencil sharpener. It was a pointless purchase.",
+            "I wanted to be a baker, but I couldn’t make enough dough.",
+            "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+            "I tried to catch some fog earlier. I mist.",
+            "I told my wife she was drawing her eyebrows too high. She seemed surprised.",
+            "I can’t believe I didn’t get a pun about a broken pencil.",
+            "If you don’t pay your exorcist, do you get repossessed?",
+            "I’d tell you a joke about a broken pencil, but it’s pointless."
+        ];
+
+        const punDisplay = document.getElementById('punDisplay');
+        const generateBtn = document.getElementById('generateBtn');
+
+        generateBtn.addEventListener('click', () => {
+            const randomPun = puns[Math.floor(Math.random() * puns.length)];
+            punDisplay.textContent = randomPun;
+        });
+    </script>
+</body>
+</html>
+```
+Certainly! Here's a simple HTML, CSS, and JavaScript implementation for a web page that stores 50 puns and displays a random pun each time the user clicks a button.
+
+### HTML, CSS, and JavaScript Code
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Pun Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #punDisplay {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        #generateBtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #generateBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Pun Generator</h1>
+        <p id="punDisplay">Click the button for a pun!</p>
+        <button id="generateBtn">Get a Pun!</button>
+    </div>
+
+    <script>
+        const puns = [
+            "I’m reading a book on anti-gravity. It’s impossible to put down.",
+            "I used to play piano by ear, but now I use my hands.",
+            "I’m friends with all electricians because they’re so current.",
+            "Why don’t skeletons fight each other? They don’t have the guts.",
+            "I got a job at a bakery because I kneaded dough.",
+            "I don’t trust stairs because they’re always up to something.",
+            "What do you call fake spaghetti? An impasta.",
+            "I couldn’t figure out how to put my seatbelt on. Then it clicked.",
+            "I’m a big fan of whiteboards. They’re re-markable.",
+            "I once told a joke about a pencil. It had no point.",
+            "I can’t believe I got fired from the calendar factory. All I did was take a day off.",
+            "Why do cows wear bells? Because their horns don’t work.",
+            "I’m on a whiskey diet. I’ve lost three days already.",
+            "The man who survived both mustard gas and pepper spray is a seasoned veteran now.",
+            "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+            "I would tell you a joke about an elevator, but it’s an uplifting experience.",
+            "I’m reading a book on the history of glue. I just can’t seem to put it down.",
+            "I would avoid the sushi if I were you. It’s a little fishy.",
+            "I used to be a baker, but I couldn't make enough dough.",
+            "I don’t trust people who do acupuncture. They’re back stabbers.",
+            "The scarecrow won an award because he was outstanding in his field.",
+            "I’m afraid for the calendar. Its days are numbered.",
+            "Parallel lines have so much in common. It’s a shame they’ll never meet.",
+            "I couldn’t quite remember how to throw a boomerang, but eventually, it came back to me.",
+            "I don’t really understand electricity, but I’m shocked by it every time.",
+            "I can’t believe I got fired from the fire department. I guess I just couldn’t put out the right impression.",
+            "What’s orange and sounds like a parrot? A carrot.",
+            "I wasn’t originally going to get a brain transplant, but then I changed my mind.",
+            "I’m terrified of elevators, so I’m going to start taking steps to avoid them.",
+            "I only know 25 letters of the alphabet. I don’t know y.",
+            "I’d tell you a chemistry joke, but I know I wouldn’t get a reaction.",
+            "I made a pun about the wind, but it blew.",
+            "The problem with candy jokes is they’re either too sweet or too corny.",
+            "I don’t have a pun about vegetables, but it’s corny.",
+            "A termite walks into the bar and asks, ‘Is the bartender here?’",
+            "What’s a skeleton’s least favorite room? The living room.",
+            "I told my computer I needed a break, and now it won’t stop sending me Kit-Kats.",
+            "I can’t trust these computers anymore. They keep going on and off at random.",
+            "I used to be a librarian, but I lost my place.",
+            "Why was the math book sad? Because it had too many problems.",
+            "I want to be a monk, but I don’t think I’m cut out for it.",
+            "I thought about going on an all-almond diet. But that’s just nuts.",
+            "I had a joke about a broken pencil, but it was pointless.",
+            "What do you call a belt made of watches? A waist of time.",
+            "I don’t play soccer because I enjoy the pun, but because I can’t resist a kick.",
+            "I don’t know why I bought a pencil sharpener. It was a pointless purchase.",
+            "I wanted to be a baker, but I couldn’t make enough dough.",
+            "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+            "I tried to catch some fog earlier. I mist.",
+            "I told my wife she was drawing her eyebrows too high. She seemed surprised.",
+            "I can’t believe I didn’t get a pun about a broken pencil.",
+            "If you don’t pay your exorcist, do you get repossessed?",
+            "I’d tell you a joke about a broken pencil, but it’s pointless."
+        ];
+
+        const punDisplay = document.getElementById('punDisplay');
+        const generateBtn = document.getElementById('generateBtn');
+
+        generateBtn.addEventListener('click', () => {
+            const randomPun = puns[Math.floor(Math.random() * puns.length)];
+            punDisplay.textContent = randomPun;
+        });
+    </script>
+</body>
+</html>
+```
+
+### Explanation:
+
+- **HTML Structure**: This contains a heading (`h1`) to display the title of the page, a paragraph (`#punDisplay`) where the random pun will be shown, and a button (`#generateBtn`) to trigger the pun change.
+  
+- **CSS Styling**: 
+  - The `body` is styled to center the content vertically and horizontally using Flexbox.
+  - The `.container` class wraps the content, adding some padding, background color, and shadow to create a clean, centered box.
+  - The `#generateBtn` changes its background color slightly on hover for a better user experience.
+
+- **JavaScript**:
+  - An array `puns` holds 50 different puns.
+  - The `generateBtn` listens for clicks, and every time it is clicked, a random pun is selected from the `puns` array using `Math.random()` and displayed in the `#punDisplay` paragraph.
+
+You can copy this code into a `.html` file and open it in your browser to see the pun generator in action!
+
+<img width="1511" alt="image" src="https://github.com/user-attachments/assets/712c8bc0-45b3-40d1-80b2-fae0b9ac6009" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/9933ea98-8b96-461f-9476-88990645ede5" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f8228ca6-5dc7-4ca0-b9c6-bc452503f5d1" />
+
+
+
+
+
