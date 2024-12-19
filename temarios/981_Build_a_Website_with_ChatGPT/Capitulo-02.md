@@ -419,6 +419,7 @@ Ahí lo tienes: una página web creada con la ayuda de ChatGPT y desplegada en l
 ## 💻 Proyectos
 
 ### `01-puns.html`
+
 ```text
 Create web page code that stores 50 puns and displays a random pun each time the user clicks a button.
 ```
@@ -577,7 +578,132 @@ You can copy this code into a `.html` file and open it in your browser to see th
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/f8228ca6-5dc7-4ca0-b9c6-bc452503f5d1" />
 
+### `02-chistes.html`
+
+```text
+Crea un código de página web que almacene 50 chistes y muestre un chiste aleatorio cada vez que el usuario haga clic en un botón.
+```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/7fca9295-5056-4022-a608-44894abc8618" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chistes Aleatorios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        #joke-container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="joke-container">
+        <h1>Chistes Aleatorios</h1>
+        <p id="joke">¡Haz clic en el botón para leer un chiste!</p>
+        <button onclick="showRandomJoke()">Mostrar Chiste</button>
+    </div>
+
+    <script>
+        const jokes = [
+            "¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter.",
+            "¿Qué hace una abeja en el gimnasio? Zum-ba.",
+            "¿Cómo se despiden los químicos? Ácido un placer.",
+            "¿Qué hace un pez en tierra? Nada.",
+            "¿Qué le dice una iguana a su hermana gemela? Iguanita.",
+            "¿Por qué la computadora fue al médico? Porque tenía un virus.",
+            "¿Qué le dijo el café al azúcar? Sin ti, mi vida es amarga.",
+            "¿Qué hace un perro con un taladro? ¡Taladrando!",
+            "¿Qué le dice una impresora a otra? Ese papel es tuyo o es mi impresión.",
+            "¿Qué hace un lápiz en el gimnasio? Sacar punta.",
+            "¿Cómo se llama un boomerang que no regresa? Palo.",
+            "¿Por qué los esqueletos no pelean? Porque no tienen agallas.",
+            "¿Por qué el libro de matemáticas estaba triste? Porque tenía muchos problemas.",
+            "¿Qué hace una vaca en el espacio? ¡Vacunar!",
+            "¿Cómo se despide un vaquero? ¡Hasta la vista, vaquero!",
+            "¿Qué hace un tomate en un baño? Ketchup.",
+            "¿Qué le dijo una pared a otra? Nos vemos en la esquina.",
+            "¿Por qué las bicicletas no pueden pararse solas? Porque están dos-tadas.",
+            "¿Qué hace un elefante con gafas? Ver mejor.",
+            "¿Por qué no puedes confiar en los átomos? Porque lo forman todo.",
+            "¿Qué le dice un jardinero a otro? Disfrutemos el momento porque este césped es el único que tenemos.",
+            "¿Por qué la escoba está feliz? Porque va a barrer la competencia.",
+            "¿Qué hace un pez mago? Nada por aquí, nada por allá.",
+            "¿Cómo se llama el café más peligroso? El ex-preso.",
+            "¿Qué dijo el cero al ocho? Bonito cinturón.",
+            "¿Qué hace una cereza en el baño? Espera a que cerezca el pelo.",
+            "¿Qué hace un pato en el tráfico? ¡Pato, pato, pato!",
+            "¿Qué hace una abeja en la peluquería? Se está peinando las alas.",
+            "¿Qué le dice el agua al hielo? ¡Qué frío estás!",
+            "¿Cómo se llama una fila de hombres levantando carne? Una barbacoa.",
+            "¿Qué hace un matemático perdido? Busca su punto de referencia.",
+            "¿Qué hace una tortilla hablando? Cuenta sus problemas de forma enrollada.",
+            "¿Qué dijo el timbre al teléfono? Eres un sonador.",
+            "¿Por qué el león siempre pierde en los juegos de mesa? Porque siempre se enfoca en rugir.",
+            "¿Cómo se despide un músico? A-do-ré verte.",
+            "¿Qué hace un cocodrilo trabajando en una oficina? Crocumentos.",
+            "¿Por qué el reloj estaba emocionado? Porque estaba a punto de dar las 12.",
+            "¿Qué hace un loro viendo la tele? Un lorograma.",
+            "¿Por qué los tenistas no usan reloj? Porque siempre están pendientes del tiempo.",
+            "¿Cómo se despide un espejo? Refleja sobre eso.",
+            "¿Por qué los fantasmas no mienten? Porque siempre son transparentes.",
+            "¿Qué hace un caballo en la computadora? Navega en caballo de troya.",
+            "¿Qué hace una pizza haciendo ejercicio? Se estira.",
+            "¿Qué hace un perro con una calculadora? Saca cuentas perronas.",
+            "¿Qué hace un plátano en un concierto? Da la nota.",
+            "¿Por qué el panadero está feliz? Porque está amasando su fortuna.",
+            "¿Cómo se llama un oso sin dientes? ¡Gominola!",
+            "¿Qué le dice un zapato a otro? ¡Zapateémonos de aquí!",
+            "¿Por qué el sol nunca está triste? Porque siempre brilla."
+        ];
+
+        function showRandomJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById("joke").innerText = jokes[randomIndex];
+        }
+    </script>
+</body>
+</html>
+```
 
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8b582c8b-51d8-4b47-9940-b9c3983865de" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ee1f5ee7-7f12-456c-93a1-23c6ff139e3c" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/fb3d5234-8e12-47f3-9830-e0368dd6c09f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2c080509-1e24-438e-b014-d9a6f379f87b" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4b60f511-80c9-401f-a3ef-d37499ecfdf0" />
