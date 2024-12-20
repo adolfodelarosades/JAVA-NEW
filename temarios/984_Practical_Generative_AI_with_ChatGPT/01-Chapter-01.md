@@ -16,7 +16,7 @@
 5. Summary
 6. References
 
-Únete a nuestra comunidad de libros en Discord
+## Únete a nuestra comunidad de libros en Discord
 
 https://packt.link/EarlyAccess
 
@@ -95,35 +95,44 @@ A continuación se muestra un ejemplo de caras de personas que no existen ya que
 
 **Figura 1.3 – Caras imaginarias generadas por GAN StyleGAN2 en https://this-person-does-not-exist.com/en**
 
-En 2021, OpenAI introdujo un nuevo modelo de IA generativa en este campo: DALL-E . A diferencia de las GAN, el modelo DALL-E está diseñado para generar imágenes a partir de descripciones en lenguaje natural (las GAN toman un vector de ruido aleatorio como entrada) y puede generar una amplia gama de imágenes, que pueden no parecer realistas, pero que aún así representan los conceptos deseados.
+En 2021, OpenAI introdujo un nuevo modelo de IA generativa en este campo: **DALL-E**. A diferencia de las GAN, el modelo DALL-E está diseñado para generar imágenes a partir de descripciones en lenguaje natural (las GAN toman un vector de ruido aleatorio como entrada) y puede generar una amplia gama de imágenes, que pueden no parecer realistas, pero que aún así representan los conceptos deseados.
 
 DALL-E tiene un gran potencial en industrias creativas como la publicidad, el diseño de productos y la moda, entre otras, para crear imágenes únicas y creativas.
 
 Desde su primer lanzamiento hasta la fecha (diciembre de 2024), DALL-E ha mejorado notablemente, como se puede ver en los siguientes ejemplos. Veamos a continuación una creación artística de DALL-E en los albores de su vida:
 
-Figura 1.4 – Imágenes generadas por DALL-E con un mensaje en lenguaje natural como entrada
-Figura 1.4 – Imágenes generadas por DALL-E con un mensaje en lenguaje natural como entrada
-Veamos ahora lo que DALL-E3, la versión más reciente del modelo en el momento de escribir este libro, puede producir (aquí estoy usando Microsoft Image Creator con tecnología DALL-E3. Puedes probarlo en https://copilot.microsoft.com/images/create ):
+![image](https://github.com/user-attachments/assets/24cea1eb-e8f8-41d8-b102-30829205b83d)
 
-Figura 1.5 – Imágenes generadas por DALL-E3 con un mensaje en lenguaje natural como entrada
-Figura 1.5 – Imágenes generadas por DALL-E3 con un mensaje en lenguaje natural como entrada
+**Figura 1.4 – Imágenes generadas por DALL-E con un mensaje en lenguaje natural como entrada**
+
+Veamos ahora lo que**DALL-E3**, la versión más reciente del modelo en el momento de escribir este libro, puede producir (aquí estoy usando **Microsoft Image Creator** con tecnología DALL-E3. Puedes probarlo en https://copilot.microsoft.com/images/create):
+
+![image](https://github.com/user-attachments/assets/779fa8c9-9cc8-4e29-93eb-c7d7a4982a83)
+
+**Figura 1.5 – Imágenes generadas por DALL-E3 con un mensaje en lenguaje natural como entrada**
+
 Es impresionante ver el nivel de mejora de este modelo en menos de 18 meses. Curiosamente, esto es solo la punta del iceberg de las enormes mejoras que se han producido en los últimos meses en el campo de la IA generativa.
 
-Generación musical
-Los primeros acercamientos a la IA generativa para la generación musical se remontan a los años 50, con investigaciones en el campo de la composición algorítmica, una técnica que utiliza algoritmos para generar composiciones musicales. De hecho, en 1957, Lejaren Hiller y Leonard Isaacson crearon la Suite Illiac para Cuarteto de Cuerdas ( https://www.youtube.com/watch?v=n0njBFLQSk8 ), la primera pieza musical compuesta íntegramente por IA. Desde entonces, el campo de la IA generativa para la música ha sido objeto de investigación continua durante varias décadas. Entre los desarrollos de los últimos años, nuevas arquitecturas y frameworks se han generalizado entre el público general, como la arquitectura WaveNet introducida por Google en 2016, que ha sido capaz de generar muestras de audio de alta calidad, o el proyecto Magenta, también desarrollado por Google, que utiliza Redes Neuronales Recurrentes ( RNN ) y otras técnicas de ML para generar música y otras formas de arte. Luego, en 2020, OpenAI también anunció Jukebox, una red neuronal que genera música, con la posibilidad de personalizar la salida en términos de estilo musical y vocal, género, artista de referencia, etc.
+### Generación musical
 
-Estos y otros marcos se convirtieron en los cimientos de muchos asistentes de composición de IA para la generación de música. Un ejemplo es Flow Machines, desarrollado por Sony CSL Research. Este sistema de IA generativa se entrenó en una gran base de datos de piezas musicales para crear nueva música en una variedad de estilos. Fue utilizado por el compositor francés Benoît Carré para componer un álbum llamado Hello World ( https://www.helloworldalbum.net/ ), que incluye colaboraciones con varios músicos humanos.
+Los primeros acercamientos a la IA generativa para la generación musical se remontan a los años 50, con investigaciones en el campo de la composición algorítmica, una técnica que utiliza algoritmos para generar composiciones musicales. De hecho, en 1957, Lejaren Hiller y Leonard Isaacson crearon la Suite Illiac para Cuarteto de Cuerdas ( https://www.youtube.com/watch?v=n0njBFLQSk8 ), la primera pieza musical compuesta íntegramente por IA. Desde entonces, el campo de la IA generativa para la música ha sido objeto de investigación continua durante varias décadas. Entre los desarrollos de los últimos años, nuevas arquitecturas y frameworks se han generalizado entre el público general, como la arquitectura **WaveNet** introducida por Google en 2016, que ha sido capaz de generar muestras de audio de alta calidad, o el proyecto **Magenta**, también desarrollado por Google, que utiliza **Recurrent Neural Networks (RNNs) - Redes Neuronales Recurrentes ( RNN )** y otras técnicas de ML para generar música y otras formas de arte. Luego, en 2020, OpenAI también anunció **Jukebox**, una red neuronal que genera música, con la posibilidad de personalizar la salida en términos de estilo musical y vocal, género, artista de referencia, etc.
 
-Aquí podéis ver un ejemplo de una pista generada íntegramente por Music Transformer, uno de los modelos dentro del proyecto Magenta:
+Estos y otros frameworks se convirtieron en los cimientos de muchos asistentes de composición de IA para la generación de música. Un ejemplo es **Flow Machines**, desarrollado por Sony CSL Research. Este sistema de IA generativa se entrenó en una gran base de datos de piezas musicales para crear nueva música en una variedad de estilos. Fue utilizado por el compositor francés Benoît Carré para componer un álbum llamado Hello World ( https://www.helloworldalbum.net/ ), que incluye colaboraciones con varios músicos humanos.
 
-Figura 1.6 – Music Transformer permite a los usuarios escuchar interpretaciones musicales generadas por IA
-Figura 1.6 – Music Transformer permite a los usuarios escuchar interpretaciones musicales generadas por IA
+Aquí podéis ver un ejemplo de una pista generada íntegramente por **Music Transformer**, uno de los modelos dentro del proyecto **Magenta**:
+
+![image](https://github.com/user-attachments/assets/f2bdef50-5abb-4775-9967-877e73b2aa7a)
+
+**Figura 1.6 – Music Transformer permite a los usuarios escuchar interpretaciones musicales generadas por IA**
+
 Otra aplicación increíble de la IA generativa en el ámbito de la música es la síntesis de voz. De hecho, es posible encontrar muchas herramientas de IA que pueden crear audio a partir de entradas de texto en las voces de cantantes famosos.
 
-Por ejemplo, si siempre te has preguntado cómo sonarían tus canciones si Kanye West las interpretara, bueno, ahora puedes cumplir tus sueños con herramientas como FakeYou.com ( https://fakeyou.com/ ), Deep Fake Text to Speech o UberDuck.ai ( https://uberduck.ai/ ).
+Por ejemplo, si siempre te has preguntado cómo sonarían tus canciones si Kanye West las interpretara, bueno, ahora puedes cumplir tus sueños con herramientas como **FakeYou.com** ( https://fakeyou.com/ ), **Deep Fake Text to Speech** o **UberDuck.ai** ( https://uberduck.ai/ ).
 
-Figura 1.7 – Síntesis de texto a voz con UberDuck.ai
-Figura 1.7 – Síntesis de texto a voz con UberDuck.ai
+![image](https://github.com/user-attachments/assets/c5d7b3a9-392e-4a84-8613-19615fe8f59b)
+
+**Figura 1.7 – Síntesis de texto a voz con UberDuck.ai**
+
 Debo decir que el resultado es realmente impresionante. Si quieres divertirte, también puedes probar voces de tus dibujos animados favoritos, como Winnie The Pooh...
 
 Vayamos un paso más allá. ¿Qué pasaría si pudiéramos generar una canción desde cero, simplemente pidiéndole a GenAI que lo haga por nosotros en lenguaje natural? Bueno, hoy podemos hacerlo sin problemas y sin ningún conocimiento sobre música. Entre los productos GenAI que están surgiendo en el mercado de la música actualmente, un gran ejemplo es Suno, cuya misión es “[...] construir un futuro en el que cualquiera pueda hacer buena música. Ya seas un cantante de ducha o un artista de las listas de éxitos, rompemos las barreras entre tú y la canción que sueñas hacer. No se necesita ningún instrumento, solo imaginación. De tu mente a la música”. (Fuente: https://suno.com/about ).
