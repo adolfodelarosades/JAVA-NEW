@@ -16,65 +16,85 @@
 5. Summary
 6. References
 
-¡Hola! ¡Bienvenidos a la Guía definitiva de ChatGPT y OpenAI! En este libro, exploraremos el fascinante mundo de la Inteligencia Artificial Generativa ( GAI ) y sus aplicaciones innovadoras. La IA generativa ha transformado la forma en que interactuamos con las máquinas, permitiendo que las computadoras creen, predigan y aprendan sin instrucciones humanas explícitas. Desde el lanzamiento de ChatGPT en noviembre de 2023, hemos sido testigos de avances sin precedentes en el procesamiento del lenguaje natural, la síntesis de imágenes y videos y muchos otros campos. Ya sea que sea un principiante curioso o un profesional experimentado, esta guía lo equipará con el conocimiento y las habilidades para navegar por el apasionante panorama de la IA generativa. Entonces, profundicemos y comencemos con algunas definiciones del contexto en el que nos movemos.
+Únete a nuestra comunidad de libros en Discord
 
-Este capítulo proporciona una descripción general del campo de la IA generativa, que consiste en crear datos o contenidos nuevos y únicos utilizando algoritmos de aprendizaje automático ( ML ).
+https://packt.link/EarlyAccess
 
-Se centra en las aplicaciones de la IA generativa en diversos campos, como la síntesis de imágenes, la generación de texto y la composición musical, destacando el potencial de la IA generativa para revolucionar diversas industrias. Esta introducción a la IA generativa proporcionará contexto sobre dónde se encuentra esta tecnología, así como el conocimiento para ubicarla dentro del amplio mundo de la IA, el ML y el Deep Learning ( DL ). Luego, nos detendremos en las principales áreas de aplicación de la IA generativa con ejemplos concretos y desarrollos recientes para que pueda familiarizarse con el impacto que puede tener en las empresas y la sociedad en general.
+¡Hola! ¡Bienvenidos a la *The Ultimate Guide to ChatGPT and OpenAI*! En este libro, exploraremos el fascinante mundo de la **Generative Artificial Intelligence (GAI) - Inteligencia Artificial Generativa (GAI)** y sus aplicaciones innovadoras. La IA generativa ha transformado la forma en que interactuamos con las máquinas, permitiendo que las computadoras creen, predigan y aprendan sin instrucciones humanas explícitas. Desde ***el lanzamiento de ChatGPT en noviembre de 2023***, hemos sido testigos de avances sin precedentes en el procesamiento del lenguaje natural, la síntesis de imágenes y videos y muchos otros campos. Ya sea que sea un principiante curioso o un profesional experimentado, esta guía lo equipará con el conocimiento y las habilidades para navegar por el apasionante panorama de la IA generativa. Entonces, profundicemos y comencemos con algunas definiciones del contexto en el que nos movemos.
+
+Este capítulo proporciona una descripción general del campo de la IA generativa, que consiste en crear datos o contenidos nuevos y únicos utilizando algoritmos de **machine learning (ML) - aprendizaje automático**.
+
+Se centra en las aplicaciones de la IA generativa en diversos campos, como la síntesis de imágenes, la generación de texto y la composición musical, destacando el potencial de la IA generativa para revolucionar diversas industrias. Esta introducción a la IA generativa proporcionará contexto sobre dónde se encuentra esta tecnología, así como el conocimiento para ubicarla dentro del amplio mundo de la IA, el ML y el **Deep Learning ( DL )**. Luego, nos detendremos en las principales áreas de aplicación de la IA generativa con ejemplos concretos y desarrollos recientes para que pueda familiarizarse con el impacto que puede tener en las empresas y la sociedad en general.
 
 Además, estar al tanto del recorrido de investigación hacia el estado actual del arte de la IA generativa le permitirá comprender mejor los fundamentos de los desarrollos recientes y los modelos de última generación.
 
 Todo esto lo cubriremos con los siguientes temas:
 
-Comprender la IA generativa
-Explorando los dominios de la IA generativa
-Historia y estado actual de la investigación sobre IA generativa
+* Comprender la IA generativa
+* Explorando los dominios de la IA generativa
+* Historia y estado actual de la investigación sobre IA generativa
+
 Al final de este capítulo, estará familiarizado con el apasionante mundo de la IA generativa, sus aplicaciones, la historia de investigación detrás de ella y los desarrollos actuales, que podrían tener (y están teniendo actualmente) un impacto disruptivo en las empresas.
 
-Presentamos la IA generativa
-La IA ha avanzado mucho en los últimos años y una de las áreas que ha experimentado un crecimiento considerable es la IA generativa. La IA generativa es un subcampo de la IA y el aprendizaje automático que se centra en generar contenido nuevo, como imágenes, texto, música y vídeo, mediante el uso de algoritmos y modelos que se han entrenado con datos existentes mediante técnicas de aprendizaje automático.
+## Presentamos la IA generativa
 
-Para comprender mejor la relación entre IA, ML, DL e IA generativa, considere la IA como la base, mientras que ML, DL e IA generativa representan áreas de estudio y aplicación cada vez más especializadas y enfocadas:
+La IA ha avanzado mucho en los últimos años y una de las áreas que ha experimentado un crecimiento considerable es la **IA generativa**. ***La IA generativa es un subcampo de la IA y el aprendizaje automático que se centra en generar contenido nuevo, como imágenes, texto, música y vídeo, mediante el uso de algoritmos y modelos que se han entrenado con datos existentes mediante técnicas de aprendizaje automático***.
 
-La IA representa el amplio campo de creación de sistemas que puedan realizar tareas, mostrando inteligencia y capacidad humana y siendo capaces de interactuar con el ecosistema.
-ML es una rama que se centra en la creación de algoritmos y modelos que permiten que esos sistemas aprendan y mejoren con el tiempo y el entrenamiento. Los modelos de ML aprenden de los datos existentes y actualizan automáticamente sus parámetros a medida que crecen .
-El aprendizaje automático ( DL) es una rama del aprendizaje automático (ML), en el sentido de que abarca modelos de aprendizaje automático profundo. Estos modelos profundos se denominan redes neuronales y son especialmente adecuados en dominios como la visión artificial o el procesamiento del lenguaje natural ( NLP ). Cuando hablamos de modelos de aprendizaje automático y aprendizaje automático, normalmente nos referimos a modelos discriminativos, cuyo objetivo es hacer predicciones o inferir patrones a partir de datos.
-Y finalmente, llegamos a la IA generativa, otra subrama del aprendizaje automático, que no utiliza redes neuronales artificiales profundas para agrupar, clasificar o hacer predicciones sobre datos existentes: utiliza esos poderosos modelos de redes neuronales artificiales para generar contenido completamente nuevo, desde imágenes hasta lenguaje natural, desde música hasta video.
+Para comprender mejor la relación entre **IA**, **ML**, **DL** e **IA generativa**, considere ***la IA como la base***, ***mientras que ML, DL e IA generativa representan áreas de estudio y aplicación cada vez más especializadas y enfocadas***:
+
+* La **IA** representa el amplio campo de creación de sistemas que puedan realizar tareas, mostrando inteligencia y capacidad humana y siendo capaces de interactuar con el ecosistema.
+
+* **ML** es una rama que se centra en la creación de algoritmos y modelos que permiten que esos sistemas aprendan y mejoren con el tiempo y el entrenamiento. Los modelos de ML aprenden de los datos existentes y actualizan automáticamente sus parámetros a medida que crecen .
+
+* El **DL** es una rama del **ML**, en el sentido de que abarca modelos de aprendizaje automático profundo. Estos modelos profundos se denominan **neural networks - redes neuronales** y son especialmente adecuados en dominios como la **computervision - visión artificial** o el **Natural Language Processing (NLP) - procesamiento del lenguaje natural ( NLP )**. Cuando hablamos de modelos de ML y DL, normalmente nos referimos a modelos discriminativos, cuyo objetivo es hacer predicciones o inferir patrones a partir de datos.
+
+* Y finalmente, llegamos a la **IA generativa**, otra subrama del **DL**, que no utiliza redes neuronales artificiales profundas para agrupar, clasificar o hacer predicciones sobre datos existentes: utiliza esos poderosos modelos de redes neuronales artificiales para generar contenido completamente nuevo, desde imágenes hasta lenguaje natural, desde música hasta video.
+  
 La siguiente figura muestra cómo se relacionan estas áreas de investigación entre sí:
 
-Figura 1.1 – Relación entre IA, ML, DL e IA generativa
-Figura 1.1 – Relación entre IA, ML, DL e IA generativa
+![image](https://github.com/user-attachments/assets/9f0ac018-2e7a-4ad7-95c1-f3e7e22f50c2)
+
+**Figura 1.1 – Relación entre IA, ML, DL e IA generativa**
+
 Los modelos de IA generativos se pueden entrenar con grandes cantidades de datos y luego pueden generar nuevos ejemplos desde cero utilizando patrones en esos datos. Este proceso generativo es diferente de los modelos discriminativos, que se entrenan para predecir la clase o etiqueta de un ejemplo determinado.
 
-El tipo de Redes Neuronales que incorporan IA Generativa se denominan Grandes Modelos de Fundación (LFMs). En el caso de modelos de lenguaje como ChatGPT, hablamos de Grandes Modelos de Lenguaje ( LLMs ).
+El tipo de Redes Neuronales que incorporan IA Generativa se denominan **Large Foundation Models LFMs - Grandes Modelos de Fundación**. En el caso de modelos de lenguaje como ChatGPT, hablamos de **Large Language Models (LLMs)**.
 
-Los modelos de lenguaje grandes son un tipo de red neuronal artificial que se caracteriza por una arquitectura de transformador. Se caracterizan por una enorme cantidad de parámetros (del orden de billones de parámetros) y han sido entrenados con miles de millones de palabras. Dado el conjunto de entrenamiento, los LLM son capaces de comprender y generar lenguaje natural a partir de la entrada del usuario.
+*Los Large Language Models son un tipo de red neuronal artificial que se caracteriza por una arquitectura de transformador. Se caracterizan por una enorme cantidad de parámetros (del orden de billones de parámetros) y han sido entrenados con miles de millones de palabras. Dado el conjunto de entrenamiento, los LLM son capaces de comprender y generar lenguaje natural a partir de la entrada del usuario.*
 
 Aunque la comprensión y generación de texto es probablemente una de las características más destacadas de la IA Generativa, este campo abarca muchos dominios.
 
-Dominios de la IA generativa
+### Dominios de la IA generativa
+
 En los últimos años, la IA generativa ha logrado avances significativos y ha ampliado sus aplicaciones a una amplia gama de dominios, como el arte, la música, la moda, la arquitectura y muchos más. En algunos de ellos, está transformando la forma en que creamos, diseñamos y entendemos el mundo que nos rodea. En otros, está mejorando y haciendo más eficientes los procesos y operaciones existentes.
 
 El hecho de que la IA generativa se utilice en muchos ámbitos también implica que sus modelos pueden manejar distintos tipos de datos, desde lenguaje natural hasta audio o imágenes. Veamos cómo los modelos de IA generativa abordan distintos tipos de datos y dominios.
 
-Generación de texto
+### Generación de texto
+
 Una de las mayores aplicaciones de la IA generativa (y la que abordaremos más a lo largo de este libro) es su capacidad para producir nuevos contenidos en lenguaje natural. De hecho, los algoritmos de IA generativa pueden utilizarse para generar nuevos textos, como artículos, poesía y descripciones de productos.
 
 Por ejemplo, un modelo de lenguaje como GPT-4o, desarrollado por OpenAI, puede entrenarse con grandes cantidades de datos de texto y luego usarse para generar texto nuevo, coherente y gramaticalmente correcto en diferentes idiomas (tanto en términos de entrada como de salida), así como para extraer características relevantes del texto, como palabras clave, temas o resúmenes completos.
 
 A continuación se muestra un ejemplo de cómo trabajar con GPT-3:
 
-Figura 1.2 – Ejemplo de ChatGPT respondiendo a un mensaje del usuario y agregando referencias
-Figura 1.2 – Ejemplo de ChatGPT respondiendo a un mensaje del usuario y agregando referencias
+![image](https://github.com/user-attachments/assets/e8115283-a800-4bea-b97f-6a3b776f142b)
+
+
+**Figura 1.2 – Ejemplo de ChatGPT respondiendo a un mensaje del usuario y agregando referencias**
+
 A continuación, pasaremos a la generación de imágenes.
 
-Generación de imágenes
-Uno de los primeros y más conocidos ejemplos de IA generativa en la síntesis de imágenes es la arquitectura Generative Adversarial Network ( GAN ) introducida en el artículo de 2014 de I. Goodfellow et al., Generative Adversarial Networks . El propósito de las GAN es generar imágenes realistas que sean indistinguibles de las imágenes reales. Esta capacidad tenía varias aplicaciones comerciales interesantes, como la generación de conjuntos de datos sintéticos para entrenar modelos de visión artificial, la generación de imágenes realistas de productos y la generación de imágenes realistas para aplicaciones de realidad virtual y realidad aumentada.
+### Generación de imágenes
+
+Uno de los primeros y más conocidos ejemplos de IA generativa en la síntesis de imágenes es la arquitectura **Generative Adversarial Network (GAN)** introducida en el artículo de 2014 de I. Goodfellow et al., *Generative Adversarial Networks*. El propósito de las GAN es generar imágenes realistas que sean indistinguibles de las imágenes reales. Esta capacidad tenía varias aplicaciones comerciales interesantes, como la generación de conjuntos de datos sintéticos para entrenar modelos de visión artificial, la generación de imágenes realistas de productos y la generación de imágenes realistas para aplicaciones de realidad virtual y realidad aumentada.
 
 A continuación se muestra un ejemplo de caras de personas que no existen ya que están generadas íntegramente por IA:
 
-Figura 1.3 – Caras imaginarias generadas por GAN StyleGAN2 en https://this-person-does-not-exist.com/en
-Figura 1.3 – Caras imaginarias generadas por GAN StyleGAN2 en https://this-person-does-not-exist.com/en
+![image](https://github.com/user-attachments/assets/e6424007-fd48-4467-bf4a-c99dc59fc234)
+
+**Figura 1.3 – Caras imaginarias generadas por GAN StyleGAN2 en https://this-person-does-not-exist.com/en**
+
 En 2021, OpenAI introdujo un nuevo modelo de IA generativa en este campo: DALL-E . A diferencia de las GAN, el modelo DALL-E está diseñado para generar imágenes a partir de descripciones en lenguaje natural (las GAN toman un vector de ruido aleatorio como entrada) y puede generar una amplia gama de imágenes, que pueden no parecer realistas, pero que aún así representan los conceptos deseados.
 
 DALL-E tiene un gran potencial en industrias creativas como la publicidad, el diseño de productos y la moda, entre otras, para crear imágenes únicas y creativas.
