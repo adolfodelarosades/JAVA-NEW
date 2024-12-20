@@ -46,7 +46,7 @@ Este libro está dirigido a quienes deseen mejorar su productividad con IA gener
 
 ### Table of Contents
 
-Practical Generative AI with ChatGPT, Second Edition: Start your generative AI journey by using ChatGPT to maximize your productivity and creativity
+[Practical Generative AI with ChatGPT](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/984_Practical_Generative_AI_with_ChatGPT/Practical-Generative-AI.md), Second Edition: Start your generative AI journey by using ChatGPT to maximize your productivity and creativity
 
 #### 1. Introduction to Generative AI
 1. Join our book community on Discord
