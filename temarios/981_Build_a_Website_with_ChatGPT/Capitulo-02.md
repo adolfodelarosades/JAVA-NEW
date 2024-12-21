@@ -1131,6 +1131,98 @@ La primera petición no sirvio y se realizo una segunda petición más especific
 Provide web page code that lists the steps required to replace a bathroom faucet.
 ```
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a8794205-9c77-4aa2-9ae2-ea54aa5116a8" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c64b3764-60ad-498e-9e9e-379085b7d5c6" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d26a483e-7955-4e37-b0b2-9ceebae37c85" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/cd8e3240-8aa9-4d6c-aaa5-7cacd35224e6" />
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Replace a Bathroom Faucet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ol {
+            margin-left: 20px;
+        }
+        .step {
+            margin-bottom: 10px;
+        }
+        .tools, .notes {
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Replace a Bathroom Faucet</h1>
+
+    <div class="tools">
+        <h2>Tools and Materials Needed:</h2>
+        <ul>
+            <li>New faucet</li>
+            <li>Adjustable wrench</li>
+            <li>Basin wrench</li>
+            <li>Plumber's tape</li>
+            <li>Bucket or towel</li>
+            <li>Silicone caulk (optional)</li>
+        </ul>
+    </div>
+
+    <h2>Steps to Replace the Faucet:</h2>
+    <ol>
+        <li class="step">
+            <strong>Turn off the water supply:</strong> Locate the shut-off valves under the sink and turn them clockwise to close.
+        </li>
+        <li class="step">
+            <strong>Drain the faucet:</strong> Open the faucet to release any remaining water in the lines.
+        </li>
+        <li class="step">
+            <strong>Disconnect water supply lines:</strong> Use an adjustable wrench to unscrew the supply lines from the faucet.
+        </li>
+        <li class="step">
+            <strong>Remove the old faucet:</strong> Use a basin wrench to loosen the mounting nuts underneath the sink, then lift the old faucet out.
+        </li>
+        <li class="step">
+            <strong>Prepare the new faucet:</strong> Assemble the faucet according to the manufacturer’s instructions and apply plumber's tape to threaded connections if needed.
+        </li>
+        <li class="step">
+            <strong>Install the new faucet:</strong> Place the new faucet into the mounting holes, and secure it from underneath using the provided hardware.
+        </li>
+        <li class="step">
+            <strong>Reconnect water supply lines:</strong> Attach the supply lines to the new faucet and tighten with an adjustable wrench.
+        </li>
+        <li class="step">
+            <strong>Test for leaks:</strong> Turn the water supply back on and check for leaks. Tighten connections as necessary.
+        </li>
+        <li class="step">
+            <strong>Seal the base:</strong> If required, apply a thin bead of silicone caulk around the base of the faucet to prevent water seepage.
+        </li>
+    </ol>
+
+    <div class="notes">
+        <h2>Additional Notes:</h2>
+        <p>Ensure you have the correct size and type of faucet for your sink. If you're unsure, consult the faucet's installation guide or contact a professional plumber.</p>
+    </div>
+</body>
+</html>
+```
+
 ### `08-Grifo.html`
 
 ```text
