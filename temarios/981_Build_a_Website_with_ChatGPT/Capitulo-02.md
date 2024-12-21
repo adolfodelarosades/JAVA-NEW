@@ -1560,17 +1560,6 @@ footer p {
 
 Aquí tienes un ejemplo de código HTML y CSS para una página web que explica cómo funciona un holograma. El contenido incluye una introducción, explicación, ejemplos visuales y un diseño básico. Puedes personalizarlo más según tus necesidades.
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/65a08e4d-36b5-4a3f-8ab4-acef269a20e0" />
-
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/dc9c369b-1151-47a1-ae54-37102009524c" />
-
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8aab0a47-312a-4a0b-a9e1-55463efe3ed1" />
-
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/da76987e-de07-4fa0-9d27-2f58f427d49f" />
-
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6114fab4-0a23-4720-9c25-3573bb7f06ad" />
-
-
 ### Código HTML:
 
 ```html
@@ -1720,9 +1709,19 @@ footer p {
 
 Este código es solo un punto de partida. Puedes expandirlo agregando más detalles interactivos o gráficos, o incluso simulaciones de hologramas usando JavaScript o imágenes en 3D.
 
+### Adaptando el ejemplo en VSC
+
 Vamos a meter todo esto en nuestro VSC, es posible que cambiemos el nombre del CSS para asociarlo a nuestro archivo HTML.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/65a08e4d-36b5-4a3f-8ab4-acef269a20e0" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/dc9c369b-1151-47a1-ae54-37102009524c" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8aab0a47-312a-4a0b-a9e1-55463efe3ed1" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/da76987e-de07-4fa0-9d27-2f58f427d49f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6114fab4-0a23-4720-9c25-3573bb7f06ad" />
 
 
 ```html
