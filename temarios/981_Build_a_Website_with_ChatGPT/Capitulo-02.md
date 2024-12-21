@@ -2324,3 +2324,98 @@ Vamos a adaptar esta página para apuntar a todos los capítulos del libro.
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/cb6af894-00a7-4f89-8106-e235a8102a1a" />
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/5c4adacf-a1a5-48b3-8142-01a9b6f9ce6d" />
+
+
+### 💻 Mi instalación de Cloudflare.
+
+1. Ir a https://pages.cloudflare.com .
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/f44ad540-920c-4020-84b4-da6d61ffb4cb" />
+
+2. Haga clic en **Sign Up**.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/50627d47-8d4e-4b4a-aa5a-659218b47409" />
+
+3. Escribe tu dirección de correo electrónico, escribe la contraseña que deseas utilizar y haz clic en Registrarse. Cloudflare envía un correo electrónico de verificación a tu dirección de correo electrónico.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/391dd284-dd61-4da3-84a1-28ba3d2b1685" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/6bfe7fb3-3424-471d-a562-184d0fdf506c" />
+
+4. Abra su aplicación de correo electrónico, haga clic en el mensaje de verificación de Cloudflare y haga clic en el enlace de verificación.
+
+   <img width="1509" alt="image" src="https://github.com/user-attachments/assets/5f653623-0573-4b40-ba27-78f3153edd81" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/591e4ca6-c551-423e-bf5d-9bb90ffb62b5" />
+
+5. En el menú de navegación de la izquierda, en **Workers & Pages**, haga clic en la pestaña **Pages**.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/87868390-3ccf-4f39-ac5c-0331ca72adc9" />
+
+6. Vamos a pulsar en **Upload assets**.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/9abf3de8-3413-4973-a113-b4f06012df19" />
+
+7. Nos pide que **Create a name for your project**, hay que meter el nombre del proyecto solo acepta números, letras minúsculas y guíones.
+   
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/edc312fe-d8e6-49d9-9404-c5676266f2f1" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/823225c4-57b0-4d51-b7d0-b11dc835c14f" />
+
+8. Ahora vamos a incluir la carpeta del proyecto, lo podemos hacer arrastrandola o seleccionandola desde el ordenador.
+   
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/077f7caf-c595-4c04-a4a8-13de53f9221b" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4e0e1994-7e18-4ad4-ab38-50e3aa53ec5f" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/b765d4c9-a6df-42ee-ac4e-bf2f39383d13" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/84463e37-680d-4474-87b8-2b367e891447" />
+
+9. Cuando termina de cargar los archivos indica que la carga a sido exitosa.
+    
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/c9e9d0e8-a8c0-4b3e-b020-086c3fd5da3a" />
+
+10. Hay que presionar el botón **Continue to project** para desplegar el proyecto.
+    
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4f281828-df73-465a-aa06-1ccb7a5efb65" />
+
+11. El proyecto se ha desplegado, mostrando el enlace.
+    
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/fd56300d-8199-48d2-908f-cacb4460d6e9" />
+
+   https://36106087.981-build-a-website-with-chatgpt.pages.dev/
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/805469bb-ba04-45ce-babe-d5af7b31db11" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/d17dade9-3317-4953-806b-217673d708aa" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/06ad130d-0106-4d3b-b414-7d8f2b25be46" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/fd998c8d-ecfb-4247-9d09-44d9c206050c" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/b3626050-b48d-48cd-aef6-63226e3455b2" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/1e5a6f4c-d6ad-44f3-a815-c7789e4db173" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/8bffe6e1-76b7-45f2-959e-584f6b8ae325" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/45f8c88a-ba19-4342-8277-69cb45d5745b" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/76660877-14ee-48a3-94df-108ca7211922" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/5c7bc097-7f94-44cc-b0f4-ecccaca9fba0" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/70c292de-6fe7-4ddd-b460-09f7b66ecb5a" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/96bfc36a-9fed-45d1-8c9c-bfff34e951ae" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/5f925a54-158d-486b-802f-036a93131096" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/93b3c1b9-b0aa-4723-a3d2-7da5d5348b17" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/1257d147-1aab-4cc7-bf94-d25ff8292829" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/f40f5201-599c-4017-923b-9d6076e522d5" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/90822ba5-e5d5-4293-ba4a-da498e237cd0" />
