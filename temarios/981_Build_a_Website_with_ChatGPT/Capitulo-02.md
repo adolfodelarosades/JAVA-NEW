@@ -2167,9 +2167,20 @@ Otro diseño que me gustaba con una petición prevía era:
 ```html
 ```
 
+### Desplegar el Capítulo 2 en Netify.
 
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/c5e01a9b-9798-4418-b71c-89862ae2daf5" />
 
+Arrastramos la carpeta
 
+<img width="1499" alt="image" src="https://github.com/user-attachments/assets/651f802d-afa1-4219-a155-47c6a75653db" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/753a0a38-8048-4800-97ff-3eb36adaead8" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a72e7ff7-1533-4fb9-9523-f9b53a99ea05" />
 
+https://graceful-melba-e262b8.netlify.app/chapter-02/
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1da8dfda-539f-4d08-9da6-3ffd1df01e07" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/93920548-97d8-4157-8159-b7dd0eaca580" />
