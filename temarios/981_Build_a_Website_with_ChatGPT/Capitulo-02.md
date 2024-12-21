@@ -2317,14 +2317,10 @@ Otro diseño que me gustaba con una petición prevía era:
 
 Vamos a adaptar esta página para apuntar a todos los capítulos del libro.
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/9079d8be-aaca-447c-bc93-88f6c3739623" />
-
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/31529814-587b-45f1-9475-c749897c93e2" />
-
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/68296a71-1a75-47c3-95b2-363a549e4f3e" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/20d55a0d-e201-4e10-9e6f-b698506a1369" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/cb6af894-00a7-4f89-8106-e235a8102a1a" />
 
-
-
-
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/5c4adacf-a1a5-48b3-8142-01a9b6f9ce6d" />
