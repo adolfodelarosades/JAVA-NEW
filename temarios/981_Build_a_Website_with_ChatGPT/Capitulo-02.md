@@ -1731,13 +1731,13 @@ footer p {
 Generate the code for a web page that stores a dozen each of the following: names, verbs, colors, adjectives, and nouns. When the user clicks a button, the code should assemble and display a random sentence that uses the template "Name verb the color, adjective noun."
 ```
 
-### `11-Oraciones.html`
+### `12-Oraciones.html`
 
 ```text
 Generar el código para una página web que almacene una docena de cada uno de los siguientes: nombres, verbos, colores, adjetivos y sustantivos. Cuando el usuario haga clic en un botón, el código debe ensamblar y mostrar una oración aleatoria que utilice la plantilla "Nombre verbo el color, adjetivo sustantivo".
 ```
 
-### `12-Adjectives.html`
+### `13-Adjectives.html`
 
 * “Proporcione un código de página web que muestre X en una lista y almacene una Y asociada con cada X. Cuando el usuario elige X de la lista, la página muestra la Y asociada ” (donde X podría ser una palabra, persona u objeto e Y podría ser un poema, una biografía o una descripción).
 
@@ -1745,7 +1745,7 @@ Generar el código para una página web que almacene una docena de cada uno de l
 Provide web page code that displays six rarely used adjectives in a dropdown list and stores a limerick associated with each adjective. When the user chooses an adjective from the list, the page displays the associated limerick.
 ```
 
-### `12-Adjetivos.html`
+### `14-Adjetivos.html`
 
 ```text
 Proporcionar un código de página web que muestre seis adjetivos poco utilizados en una lista desplegable y almacene un poema asociado con cada adjetivo. Cuando el usuario elige un adjetivo de la lista, la página muestra el poema asociado.
