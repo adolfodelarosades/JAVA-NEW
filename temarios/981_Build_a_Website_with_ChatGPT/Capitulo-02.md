@@ -1229,6 +1229,88 @@ Provide web page code that lists the steps required to replace a bathroom faucet
 Proporciona el código de la página web que enumera los pasos necesarios para reemplazar un grifo del baño.
 ```
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e0108aa8-e2fb-459e-bb88-2f6508a71378" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ad3954aa-4221-464a-b3e3-02e4d558c5ad" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/fdce26c7-187d-47c1-af32-2d06f5cdd98f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a7254e5b-f9ce-4b4e-be76-7574bca0fab2" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Reemplazar un Grifo del Baño</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        .step {
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cómo Reemplazar un Grifo del Baño</h1>
+    </header>
+
+    <main>
+        <p>Reemplazar un grifo del baño puede ser una tarea sencilla si sigues estos pasos. Asegúrate de tener todas las herramientas necesarias antes de comenzar.</p>
+        
+        <ol>
+            <li class="step">
+                <strong>Apaga el suministro de agua:</strong> Localiza las válvulas de cierre debajo del lavabo y ciérralas girándolas en el sentido de las agujas del reloj.
+            </li>
+            <li class="step">
+                <strong>Desconecta las líneas de suministro:</strong> Usa una llave inglesa para aflojar las tuercas que conectan las líneas de agua al grifo.
+            </li>
+            <li class="step">
+                <strong>Retira el grifo viejo:</strong> Afloja y quita las tuercas o tornillos que sujetan el grifo al lavabo. Luego, levanta el grifo con cuidado.
+            </li>
+            <li class="step">
+                <strong>Limpia el área:</strong> Limpia cualquier residuo de sellador o suciedad en la superficie del lavabo donde instalarás el nuevo grifo.
+            </li>
+            <li class="step">
+                <strong>Instala el nuevo grifo:</strong> Coloca el nuevo grifo en su lugar y asegúralo con las tuercas o tornillos proporcionados. Sigue las instrucciones del fabricante.
+            </li>
+            <li class="step">
+                <strong>Conecta las líneas de suministro:</strong> Vuelve a conectar las líneas de agua al grifo y ajusta las tuercas con una llave inglesa.
+            </li>
+            <li class="step">
+                <strong>Abre el suministro de agua:</strong> Abre las válvulas de cierre y verifica si hay fugas. Si todo está en orden, prueba el grifo para asegurarte de que funcione correctamente.
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cómo Hacerlo Fácil. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+```
+
 ### `09-Hologram.html`
 
 * “Crear código de página web que explique cómo funciona X ” (donde X es una máquina, un dispositivo, un principio científico o, en realidad, prácticamente cualquier cosa). Ejemplo:
