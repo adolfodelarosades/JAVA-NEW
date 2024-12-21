@@ -913,6 +913,19 @@ Crea un código de página web que muestre una lista de diez cosas entretenidas 
 Generate the code for a web page that provides a recipe for making panna cotta.
 ```
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/fa4fd854-0fd8-4cd7-a41f-a9997031debd" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/aa4a0846-bdb6-4c95-a466-68bd4ddebbf4" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/74559b6a-6715-4843-8b31-3b7da7e038f6" />
+
+
+
+
+
+
+
+
 ### `06-CochinitaPibil.html`
 
 ```text
