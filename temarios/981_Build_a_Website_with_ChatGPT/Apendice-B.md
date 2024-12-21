@@ -198,6 +198,60 @@ Cloudflare le otorga a su sitio web implementado un nombre de dominio personaliz
 
 * **Nombre de dominio que ya posee**: en la página Descripción general de Worker & Pages, haga clic en el sitio web con el que desea trabajar, haga clic en la pestaña Dominios personalizados, haga clic en Configurar un dominio personalizado, escriba el nombre de dominio que posee (si compró un dominio con Cloudflare, escriba ese nombre de dominio), haga clic en Continuar y luego siga las instrucciones.
 
+### 💻 Mi instalación de Cloudflare.
+
+1. Ir a https://pages.cloudflare.com .
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/f44ad540-920c-4020-84b4-da6d61ffb4cb" />
+
+2. Haga clic en **Sign Up**.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/50627d47-8d4e-4b4a-aa5a-659218b47409" />
+
+3. Escribe tu dirección de correo electrónico, escribe la contraseña que deseas utilizar y haz clic en Registrarse. Cloudflare envía un correo electrónico de verificación a tu dirección de correo electrónico.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/391dd284-dd61-4da3-84a1-28ba3d2b1685" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/6bfe7fb3-3424-471d-a562-184d0fdf506c" />
+
+4. Abra su aplicación de correo electrónico, haga clic en el mensaje de verificación de Cloudflare y haga clic en el enlace de verificación.
+
+   <img width="1509" alt="image" src="https://github.com/user-attachments/assets/5f653623-0573-4b40-ba27-78f3153edd81" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/591e4ca6-c551-423e-bf5d-9bb90ffb62b5" />
+
+5. En el menú de navegación de la izquierda, en **Workers & Pages**, haga clic en la pestaña **Pages**.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/87868390-3ccf-4f39-ac5c-0331ca72adc9" />
+
+6. Vamos a pulsar en **Pages**.
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/87d762f1-c46e-4929-99fe-3863c9e3997a" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/9abf3de8-3413-4973-a113-b4f06012df19" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/edc312fe-d8e6-49d9-9404-c5676266f2f1" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/823225c4-57b0-4d51-b7d0-b11dc835c14f" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/077f7caf-c595-4c04-a4a8-13de53f9221b" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4e0e1994-7e18-4ad4-ab38-50e3aa53ec5f" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/b765d4c9-a6df-42ee-ac4e-bf2f39383d13" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/84463e37-680d-4474-87b8-2b367e891447" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/c9e9d0e8-a8c0-4b3e-b020-086c3fd5da3a" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4f281828-df73-465a-aa06-1ccb7a5efb65" />
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/fd56300d-8199-48d2-908f-cacb4460d6e9" />
+
+   https://36106087.981-build-a-website-with-chatgpt.pages.dev/
+
+   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/805469bb-ba04-45ce-babe-d5af7b31db11" />
+
 ## B.3 Implementación en otros servidores web
 
 Otros servicios pueden alojar su sitio web; almacenan sus archivos en una computadora especial llamada servidor web, que acepta y responde a las solicitudes del navegador web para la página y sus archivos asociados. Para utilizar un servicio de este tipo, debe registrarse en uno que ofrezca espacio en su servidor. Debido a que el servicio en realidad aloja sus archivos, se lo denomina proveedor de alojamiento web o host web.
