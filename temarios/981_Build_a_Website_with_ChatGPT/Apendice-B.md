@@ -224,28 +224,36 @@ Cloudflare le otorga a su sitio web implementado un nombre de dominio personaliz
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/87868390-3ccf-4f39-ac5c-0331ca72adc9" />
 
-6. Vamos a pulsar en **Pages**.
-
-   <img width="1512" alt="image" src="https://github.com/user-attachments/assets/87d762f1-c46e-4929-99fe-3863c9e3997a" />
+6. Vamos a pulsar en **Upload assets**.
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/9abf3de8-3413-4973-a113-b4f06012df19" />
 
+7. Nos pide que **Create a name for your project**, hay que meter el nombre del proyecto solo acepta números, letras minúsculas y guíones.
+   
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/edc312fe-d8e6-49d9-9404-c5676266f2f1" />
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/823225c4-57b0-4d51-b7d0-b11dc835c14f" />
 
+8. Ahora vamos a incluir la carpeta del proyecto, lo podemos hacer arrastrandola o seleccionandola desde el ordenador.
+   
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/077f7caf-c595-4c04-a4a8-13de53f9221b" />
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4e0e1994-7e18-4ad4-ab38-50e3aa53ec5f" />
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/b765d4c9-a6df-42ee-ac4e-bf2f39383d13" />
 
+9. Cuando termina de cargar los archivos indica que la carga a sido exitosa.
+
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/84463e37-680d-4474-87b8-2b367e891447" />
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/c9e9d0e8-a8c0-4b3e-b020-086c3fd5da3a" />
 
+10. Hay que presionar el botón **Continue to project** para desplegar el proyecto.
+    
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4f281828-df73-465a-aa06-1ccb7a5efb65" />
 
+11. El proyecto se ha desplegado, mostrando el enlace.
+    
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/fd56300d-8199-48d2-908f-cacb4460d6e9" />
 
    https://36106087.981-build-a-website-with-chatgpt.pages.dev/
