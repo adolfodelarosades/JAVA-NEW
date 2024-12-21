@@ -697,7 +697,6 @@ Crea un código de página web que almacene 50 chistes y muestre un chiste aleat
 </html>
 ```
 
-
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/8b582c8b-51d8-4b47-9940-b9c3983865de" />
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/ee1f5ee7-7f12-456c-93a1-23c6ff139e3c" />
@@ -707,3 +706,273 @@ Crea un código de página web que almacene 50 chistes y muestre un chiste aleat
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/2c080509-1e24-438e-b014-d9a6f379f87b" />
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4b60f511-80c9-401f-a3ef-d37499ecfdf0" />
+
+## Prompts para single-page websites
+
+### `03-Miami.html`
+
+* “Crear un código de página web que muestre una lista de diez X cosas para hacer en Y ” (donde X es un adjetivo, como divertido o interesante , e Y es el nombre de una ciudad o un barrio). Ejemplo:
+
+```text
+Create web page code that displays a list of ten entertaining things to do in Miami’s South Beach area.
+```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/123d1961-8b4d-4e00-97cc-4a5e8b985a83" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/17c38196-ccc7-4be1-ab36-16ec8da1da4f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/5958c962-c910-452a-bfb2-7e103c2a6458" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3af1db11-efda-4ca3-b53c-81bbb7f562d3" />
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Things to Do in Miami's South Beach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        li h2 {
+            margin: 0 0 5px;
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top 10 Things to Do in Miami's South Beach</h1>
+    </header>
+    <main>
+        <ul>
+            <li>
+                <h2>1. Visit the Art Deco Historic District</h2>
+                <p>Explore the colorful and iconic Art Deco architecture lining Ocean Drive and Collins Avenue.</p>
+            </li>
+            <li>
+                <h2>2. Relax on South Beach</h2>
+                <p>Enjoy the sun, sand, and turquoise waters of Miami's most famous beach.</p>
+            </li>
+            <li>
+                <h2>3. Stroll Down Ocean Drive</h2>
+                <p>Experience vibrant nightlife, restaurants, and bars along this iconic street.</p>
+            </li>
+            <li>
+                <h2>4. Visit the Bass Museum of Art</h2>
+                <p>Discover contemporary art exhibitions and programs in this renowned museum.</p>
+            </li>
+            <li>
+                <h2>5. Experience Lincoln Road Mall</h2>
+                <p>Shop, dine, and people-watch at this pedestrian-friendly outdoor mall.</p>
+            </li>
+            <li>
+                <h2>6. Check Out South Pointe Park</h2>
+                <p>Walk along the scenic paths, enjoy the pier, and take in stunning views of the Miami skyline.</p>
+            </li>
+            <li>
+                <h2>7. Take a Guided Art Walk</h2>
+                <p>Explore the local art scene with a tour through the galleries and street art in the area.</p>
+            </li>
+            <li>
+                <h2>8. Indulge in Cuban Cuisine</h2>
+                <p>Taste authentic Cuban dishes at local spots like Puerto Sagua or David's Cafe.</p>
+            </li>
+            <li>
+                <h2>9. Dance the Night Away</h2>
+                <p>Experience Miami’s world-famous nightlife at clubs like LIV or Story.</p>
+            </li>
+            <li>
+                <h2>10. Rent a Bike and Explore</h2>
+                <p>Cycle along the Miami Beach boardwalk and discover hidden gems along the way.</p>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
+```
+
+### `04-Madrid.html`
+
+```text
+Crea un código de página web que muestre una lista de diez cosas entretenidas para hacer en Madrid España.
+```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2b1bbe78-7956-4afc-8e89-21fa87ba7090" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e1927b7a-17ad-420f-8e63-774b97a794b8" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bc646be2-bc39-48a0-95e5-7bd9a79df858" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e619507f-f3ab-4661-9a58-ea19a002be34" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosas Entretenidas en Madrid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff5733;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #ffebcc;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        li:hover {
+            background-color: #ffd9a1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>10 Cosas Entretenidas para Hacer en Madrid</h1>
+    </header>
+    <div class="container">
+        <ul>
+            <li>Explorar el Parque del Retiro y remar en el estanque.</li>
+            <li>Visitar el Museo del Prado y admirar las obras maestras.</li>
+            <li>Recorrer la Gran Vía para disfrutar de las tiendas y teatros.</li>
+            <li>Probar las tapas en el Mercado de San Miguel.</li>
+            <li>Contemplar el atardecer en el Templo de Debod.</li>
+            <li>Conocer el estadio Santiago Bernabéu o el Wanda Metropolitano.</li>
+            <li>Perderse en las calles del barrio de Malasaña y descubrir su vida nocturna.</li>
+            <li>Visitar el Palacio Real y sus jardines.</li>
+            <li>Participar en una clase de flamenco o disfrutar de un espectáculo.</li>
+            <li>Hacer un tour gastronómico por los bares tradicionales de La Latina.</li>
+        </ul>
+    </div>
+</body>
+</html>
+```
+
+### `05-PannaCotta.html`
+
+* “Generar el código para una página web que proporcione una receta para preparar X ” (donde X es una cena, postre u otro tipo de plato que se pueda cocinar desde cero). Ejemplo:
+
+```text
+Generate the code for a web page that provides a recipe for making panna cotta.
+```
+
+### `06-CochinitaPibil.html`
+
+```text
+Generar el código para una página web que proporcione una receta para hacer cochinita pibil.
+```
+
+### `07-Bathroom.html`
+
+* “Proporcionar un código de página web que enumere los pasos necesarios para X ” (donde X es un proyecto, un trabajo de reparación, una tarea de mantenimiento u otra tarea). Ejemplo:
+
+```text
+Provide web page code that lists the steps required to replace a bathroom faucet.
+```
+
+### `08-Grifo.html`
+
+```text
+Proporciona el código de la página web que enumera los pasos necesarios para reemplazar un grifo del baño.
+```
+
+### `09-Hologram.html`
+
+* “Crear código de página web que explique cómo funciona X ” (donde X es una máquina, un dispositivo, un principio científico o, en realidad, prácticamente cualquier cosa). Ejemplo:
+
+```text
+Create web page code that explains how a hologram works.
+```
+
+### `10-Holograma.html`
+
+```text
+Crear código de página web que explique cómo funciona un holograma.
+```
+
+### `11-Sentences.html`
+
+* “Generar el código para una página web que almacena X y muestra una Y aleatoria cuando el usuario hace clic en un botón” (donde X son algunos datos e Y son los datos combinados de alguna manera). Ejemplo:
+
+```text
+Generate the code for a web page that stores a dozen each of the following: names, verbs, colors, adjectives, and nouns. When the user clicks a button, the code should assemble and display a random sentence that uses the template "Name verb the color, adjective noun."
+```
+
+### `11-Oraciones.html`
+
+```text
+Generar el código para una página web que almacene una docena de cada uno de los siguientes: nombres, verbos, colores, adjetivos y sustantivos. Cuando el usuario haga clic en un botón, el código debe ensamblar y mostrar una oración aleatoria que utilice la plantilla "Nombre verbo el color, adjetivo sustantivo".
+```
+
+### `12-Adjectives.html`
+
+* “Proporcione un código de página web que muestre X en una lista y almacene una Y asociada con cada X. Cuando el usuario elige X de la lista, la página muestra la Y asociada ” (donde X podría ser una palabra, persona u objeto e Y podría ser un poema, una biografía o una descripción).
+
+```text
+Provide web page code that displays six rarely used adjectives in a dropdown list and stores a limerick associated with each adjective. When the user chooses an adjective from the list, the page displays the associated limerick.
+```
+
+### `12-Adjetivos.html`
+
+```text
+Proporcionar un código de página web que muestre seis adjetivos poco utilizados en una lista desplegable y almacene un poema asociado con cada adjetivo. Cuando el usuario elige un adjetivo de la lista, la página muestra el poema asociado.
+```
+
+
