@@ -1418,6 +1418,442 @@ Otra vez sale el título en español, podemos solicitar a ChatGPT que lo cambie 
 Crear código de página web que explique cómo funciona un holograma.
 ```
 
+A pesar de que he llegado a limite de mis peticiones a ChatGPT me ha permitido haxcer una nueva petición, pero el formato en que muestra la respuesta es algo diferente a las anteriores.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d29240f8-fc75-47cc-aaff-9e0a4db04695" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/09e66570-910f-4706-99ab-6d6962e53135" />
+
+Aquí tienes un ejemplo de código HTML y CSS para una página web que explica cómo funciona un holograma. El contenido incluye una introducción, explicación, ejemplos visuales y un diseño básico. Puedes personalizarlo más según tus necesidades.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo Funciona un Holograma?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>¿Cómo Funciona un Holograma?</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#tecnica">Técnica</a></li>
+                <li><a href="#ejemplo">Ejemplo Visual</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>Un holograma es una imagen tridimensional creada mediante el uso de la luz. A diferencia de una fotografía convencional, que captura una imagen plana, un holograma presenta una representación tridimensional completa del objeto, que puede ser vista desde diferentes ángulos. Los hologramas no solo muestran una imagen visual, sino que pueden proporcionar una sensación de profundidad y movimiento.</p>
+    </section>
+
+    <section id="tecnica">
+        <h2>Técnica</h2>
+        <p>El proceso de creación de un holograma involucra dos componentes clave: la luz láser y la interferencia. Un láser se divide en dos haces de luz, uno ilumina el objeto y el otro se utiliza como referencia. La luz reflejada del objeto interactúa con el haz de referencia, y esta interacción se captura en un material fotosensible (como una placa fotográfica o una película especial). El patrón resultante crea la imagen tridimensional.</p>
+    </section>
+
+    <section id="ejemplo">
+        <h2>Ejemplo Visual</h2>
+        <p>A continuación se muestra un ejemplo de cómo se puede visualizar un holograma en un dispositivo especial o en una pantalla con efectos de 3D.</p>
+        <div class="hologram-example">
+            <img src="hologram-example.jpg" alt="Ejemplo de holograma">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hologramas en la Ciencia</p>
+    </footer>
+</body>
+</html>
+```
+
+**Código CSS (styles.css)**:
+
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #0044cc;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.hologram-example {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hologram-example img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0044cc;
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}
+```
+
+Aquí tienes un ejemplo de código HTML y CSS para una página web que explica cómo funciona un holograma. El contenido incluye una introducción, explicación, ejemplos visuales y un diseño básico. Puedes personalizarlo más según tus necesidades.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/65a08e4d-36b5-4a3f-8ab4-acef269a20e0" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/dc9c369b-1151-47a1-ae54-37102009524c" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8aab0a47-312a-4a0b-a9e1-55463efe3ed1" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/da76987e-de07-4fa0-9d27-2f58f427d49f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6114fab4-0a23-4720-9c25-3573bb7f06ad" />
+
+
+### Código HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo Funciona un Holograma?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>¿Cómo Funciona un Holograma?</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#tecnica">Técnica</a></li>
+                <li><a href="#ejemplo">Ejemplo Visual</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>Un holograma es una imagen tridimensional creada mediante el uso de la luz. A diferencia de una fotografía convencional, que captura una imagen plana, un holograma presenta una representación tridimensional completa del objeto, que puede ser vista desde diferentes ángulos. Los hologramas no solo muestran una imagen visual, sino que pueden proporcionar una sensación de profundidad y movimiento.</p>
+    </section>
+
+    <section id="tecnica">
+        <h2>Técnica</h2>
+        <p>El proceso de creación de un holograma involucra dos componentes clave: la luz láser y la interferencia. Un láser se divide en dos haces de luz, uno ilumina el objeto y el otro se utiliza como referencia. La luz reflejada del objeto interactúa con el haz de referencia, y esta interacción se captura en un material fotosensible (como una placa fotográfica o una película especial). El patrón resultante crea la imagen tridimensional.</p>
+    </section>
+
+    <section id="ejemplo">
+        <h2>Ejemplo Visual</h2>
+        <p>A continuación se muestra un ejemplo de cómo se puede visualizar un holograma en un dispositivo especial o en una pantalla con efectos de 3D.</p>
+        <div class="hologram-example">
+            <img src="hologram-example.jpg" alt="Ejemplo de holograma">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hologramas en la Ciencia</p>
+    </footer>
+</body>
+</html>
+```
+
+### Código CSS (styles.css):
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #0044cc;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.hologram-example {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hologram-example img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0044cc;
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}
+```
+
+### Explicación de los elementos:
+
+1. **Estructura HTML**: 
+   - Utiliza una estructura básica de página con un encabezado (header), varias secciones (section) que explican qué es un holograma, cómo funciona y un ejemplo visual, además de un pie de página (footer).
+   - En el `<nav>`, hay enlaces que permiten navegar a las distintas secciones de la página.
+
+2. **CSS**:
+   - El diseño es sencillo y limpio, con un esquema de colores basado en azul y blanco.
+   - Hay sombras suaves en las secciones y un diseño centralizado para mejorar la legibilidad.
+   - El uso de la propiedad `max-width` en las imágenes asegura que se vean bien en diferentes tamaños de pantalla.
+
+3. **Imagen del ejemplo visual**: 
+   - Para ilustrar cómo se vería un holograma, debes tener una imagen llamada `hologram-example.jpg` en la misma carpeta que el archivo HTML o proporcionar una URL a una imagen de ejemplo de un holograma.
+
+Este código es solo un punto de partida. Puedes expandirlo agregando más detalles interactivos o gráficos, o incluso simulaciones de hologramas usando JavaScript o imágenes en 3D.
+
+Vamos a meter todo esto en nuestro VSC, es posible que cambiemos el nombre del CSS para asociarlo a nuestro archivo HTML.
+
+
+
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo Funciona un Holograma?</title>
+    <link rel="stylesheet" href="10-styles.css">
+</head>
+<body>
+    <header>
+        <h1>¿Cómo Funciona un Holograma?</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#tecnica">Técnica</a></li>
+                <li><a href="#ejemplo">Ejemplo Visual</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>Un holograma es una imagen tridimensional creada mediante el uso de la luz. A diferencia de una fotografía convencional, que captura una imagen plana, un holograma presenta una representación tridimensional completa del objeto, que puede ser vista desde diferentes ángulos. Los hologramas no solo muestran una imagen visual, sino que pueden proporcionar una sensación de profundidad y movimiento.</p>
+    </section>
+
+    <section id="tecnica">
+        <h2>Técnica</h2>
+        <p>El proceso de creación de un holograma involucra dos componentes clave: la luz láser y la interferencia. Un láser se divide en dos haces de luz, uno ilumina el objeto y el otro se utiliza como referencia. La luz reflejada del objeto interactúa con el haz de referencia, y esta interacción se captura en un material fotosensible (como una placa fotográfica o una película especial). El patrón resultante crea la imagen tridimensional.</p>
+    </section>
+
+    <section id="ejemplo">
+        <h2>Ejemplo Visual</h2>
+        <p>A continuación se muestra un ejemplo de cómo se puede visualizar un holograma en un dispositivo especial o en una pantalla con efectos de 3D.</p>
+        <div class="hologram-example">
+            <img src="10-hologram-example.jpg" alt="Ejemplo de holograma">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hologramas en la Ciencia</p>
+    </footer>
+</body>
+</html>
+```
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #0044cc;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.hologram-example {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hologram-example img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0044cc;
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}
+```
+
 ### `11-Sentences.html`
 
 * “Generar el código para una página web que almacena X y muestra una Y aleatoria cuando el usuario hace clic en un botón” (donde X son algunos datos e Y son los datos combinados de alguna manera). Ejemplo:
