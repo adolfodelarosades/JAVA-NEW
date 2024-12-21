@@ -1319,6 +1319,99 @@ Proporciona el código de la página web que enumera los pasos necesarios para r
 Create web page code that explains how a hologram works.
 ```
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ef91fed7-e006-4cc6-83b6-75de868249be" />
+
+Observe que he llegado al limite de mis peticiones en ChatGPT.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bdcfec39-bcb5-4bcf-927c-103815b55df0" />
+
+Otra vez sale el título en español, podemos solicitar a ChatGPT que lo cambie o lo podemos hacer manualmente.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/076fda6b-95e9-4c9c-b8de-314e6ec99dbb" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/37875c7f-9ee3-43a7-8951-040c535b11ef" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2fc87424-5942-4d25-9e6f-75942e6bbc62" />
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Holograms Work</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1{
+            color: white;
+        }
+        h1 {
+            color: #0073e6;
+        }
+        h2 {
+            color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Holograms</h1>
+    </header>
+    <div class="container">
+        <h2>What is a Hologram?</h2>
+        <p>A hologram is a three-dimensional image formed by the interference of light beams from a laser or other coherent light source. Unlike conventional photographs or displays, holograms appear to have depth and can be viewed from different angles, as if the object is really there.</p>
+
+        <h2>How Holograms Are Created</h2>
+        <p>Holograms are created using a technique called holography, which records and reconstructs the light waves scattered from an object. The process involves two main steps:</p>
+        <ol>
+            <li>
+                <strong>Recording:</strong> A laser beam is split into two parts: the reference beam and the object beam. The object beam illuminates the object, and the reflected light is captured on a recording medium. The reference beam interferes with the reflected light, creating an interference pattern.
+            </li>
+            <li>
+                <strong>Reconstruction:</strong> When the recorded interference pattern is illuminated with the reference beam (or a similar light source), it recreates the original light waves, producing a three-dimensional image of the object.
+            </li>
+        </ol>
+
+        <h2>Applications of Holograms</h2>
+        <p>Holograms are used in various fields, including:</p>
+        <ul>
+            <li>Security: Holograms on credit cards and IDs to prevent counterfeiting.</li>
+            <li>Entertainment: Holographic displays in concerts and movies.</li>
+            <li>Medical: 3D imaging for detailed visualization in surgeries.</li>
+            <li>Education: Interactive holographic teaching tools.</li>
+        </ul>
+
+        <h2>How Holography Works in Real-Time Displays</h2>
+        <p>Recent advancements have enabled real-time holographic displays using advanced optics and computational power. These displays use dynamic projection systems to create the illusion of 3D objects in space, often employing augmented reality (AR) or virtual reality (VR) technologies.</p>
+
+        <h2>Conclusion</h2>
+        <p>Holography represents a fascinating blend of art and science, offering innovative solutions in many areas of life. As technology advances, holograms are becoming increasingly sophisticated and accessible, opening up new possibilities for communication, entertainment, and education.</p>
+    </div>
+</body>
+</html>
+```
+
 ### `10-Holograma.html`
 
 ```text
