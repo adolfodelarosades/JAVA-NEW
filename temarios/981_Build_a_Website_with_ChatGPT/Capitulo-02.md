@@ -917,14 +917,100 @@ Generate the code for a web page that provides a recipe for making panna cotta.
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/aa4a0846-bdb6-4c95-a466-68bd4ddebbf4" />
 
+Como el título no se veía se pidio una segunda petición a ChatGPT.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/842a5cd0-4740-4af4-9633-4d35bf68ff48" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/23a7e6f8-b1a8-45a9-a2ff-a949a4ed01a5" />
+
+Aquí se puede observar el cambio que realizo:
+
+<img width="601" alt="image" src="https://github.com/user-attachments/assets/b582a4de-fdaf-4ad3-bc23-df1a3fc1ce81" />
+
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/74559b6a-6715-4843-8b31-3b7da7e038f6" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2e005a73-5519-4d68-ab7e-6bc1d9953e0d" />
 
-
-
-
-
-
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panna Cotta Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #6c5ce7;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #6c5ce7;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">Panna Cotta Recipe</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Ingredients</h2>
+            <ul>
+                <li>2 cups (500 ml) heavy cream</li>
+                <li>1/4 cup (50 g) granulated sugar</li>
+                <li>1 teaspoon vanilla extract</li>
+                <li>2 teaspoons powdered gelatin</li>
+                <li>3 tablespoons (45 ml) cold water</li>
+                <li>Fresh fruit or berry sauce for topping (optional)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Instructions</h2>
+            <ol>
+                <li>In a small bowl, sprinkle the powdered gelatin over the cold water and let it sit for 5 minutes to bloom.</li>
+                <li>In a medium saucepan, combine the heavy cream and sugar. Heat over medium heat, stirring, until the sugar is dissolved and the mixture is hot but not boiling.</li>
+                <li>Remove the saucepan from heat and stir in the vanilla extract.</li>
+                <li>Stir the bloomed gelatin into the hot cream mixture until fully dissolved.</li>
+                <li>Pour the mixture into serving glasses or molds, leaving space for toppings.</li>
+                <li>Refrigerate for at least 4 hours or until set.</li>
+                <li>Serve chilled, topped with fresh fruit or berry sauce if desired.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Delicious Desserts</p>
+    </footer>
+</body>
+</html>
+```
 
 ### `06-CochinitaPibil.html`
 
