@@ -242,13 +242,13 @@ Cloudflare le otorga a su sitio web implementado un nombre de dominio personaliz
 
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/b765d4c9-a6df-42ee-ac4e-bf2f39383d13" />
 
-9. Cuando termina de cargar los archivos indica que la carga a sido exitosa.
-
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/84463e37-680d-4474-87b8-2b367e891447" />
 
+9. Cuando termina de cargar los archivos indica que la carga a sido exitosa.
+    
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/c9e9d0e8-a8c0-4b3e-b020-086c3fd5da3a" />
 
-10. Hay que presionar el botón **Continue to project** para desplegar el proyecto.
+11. Hay que presionar el botón **Continue to project** para desplegar el proyecto.
     
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4f281828-df73-465a-aa06-1ccb7a5efb65" />
 
