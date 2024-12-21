@@ -1018,6 +1018,111 @@ Aquí se puede observar el cambio que realizo:
 Generar el código para una página web que proporcione una receta para hacer cochinita pibil.
 ```
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c436b34d-1524-45aa-b7ba-ef5110a941b8" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/abdc4471-9ca7-45b1-95b5-d9c821b16e29" />
+
+Vuelve a pasar lo mismo con el título del header que no se ve, vamos a pedir que lo ponga en color blanco.
+
+La primera petición no sirvio y se realizo una segunda petición más especifica, el resultado es más elegante a comparación de lo que se hizo en el ejercicio anterior, ya que se modifico el CSS para tener encuenta el cambio solicitado.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1c1bd964-0d50-4b82-89ef-9840d40b8ee7" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d3e63ffb-a1ef-4ed6-aedc-c73ae7c8d5df" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/30fc5491-172d-428d-b0c0-87cca33cbb6b" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Cochinita Pibil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #d35400;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #d35400;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 20px 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Receta Tradicional de Cochinita Pibil</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Ingredientes</h2>
+            <ul>
+                <li>1.5 kg de carne de cerdo (preferiblemente pierna o lomo)</li>
+                <li>100 g de achiote</li>
+                <li>1 taza de jugo de naranja agria (o una mezcla de naranja dulce y limón)</li>
+                <li>3 dientes de ajo</li>
+                <li>1 cucharadita de orégano</li>
+                <li>1 cucharadita de comino</li>
+                <li>Sal al gusto</li>
+                <li>Hojas de plátano</li>
+                <li>Cebolla morada en rodajas</li>
+                <li>Vinagre</li>
+                <li>Chiles habaneros (opcional)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Instrucciones</h2>
+            <ol>
+                <li>Disolver el achiote en el jugo de naranja agria, agregando los ajos triturados, el orégano, el comino y sal al gusto.</li>
+                <li>Marinar la carne de cerdo con la mezcla anterior, asegurándose de que quede bien impregnada. Dejar reposar en el refrigerador por al menos 4 horas, idealmente toda la noche.</li>
+                <li>Envolver la carne marinada en hojas de plátano y colocarla en una bandeja para horno.</li>
+                <li>Precalentar el horno a 180°C (350°F) y hornear la carne durante aproximadamente 3 horas, o hasta que esté muy tierna.</li>
+                <li>Mientras tanto, preparar la cebolla morada encurtida mezclándola con vinagre, sal y, si se desea, rodajas de chile habanero.</li>
+                <li>Desmenuzar la carne y servir con tortillas calientes, cebolla encurtida y salsas al gusto.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Recetas Tradicionales. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+```
+
 ### `07-Bathroom.html`
 
 * “Proporcionar un código de página web que enumere los pasos necesarios para X ” (donde X es un proyecto, un trabajo de reparación, una tarea de mantenimiento u otra tarea). Ejemplo:
