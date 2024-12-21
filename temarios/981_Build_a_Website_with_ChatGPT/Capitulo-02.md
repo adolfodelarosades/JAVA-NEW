@@ -2181,6 +2181,32 @@ Arrastramos la carpeta
 
 https://graceful-melba-e262b8.netlify.app/chapter-02/
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1da8dfda-539f-4d08-9da6-3ffd1df01e07" />
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/070a3091-faa0-468d-b569-a2c6fa3260f8" />
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/93920548-97d8-4157-8159-b7dd0eaca580" />
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/10f9bca4-d9a2-44b9-9b6c-4ff70a1decb9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4aa64860-d6f1-400a-ac94-6730afe9030e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f3a59851-1c9a-47ab-a93a-1e14b4ea498f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b9c46462-e1ff-45af-a14a-3d6d905978e9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f496202d-59f7-43b3-987f-ed54246b4494" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/27e25a3d-b2bf-4715-8673-52086ab3c749" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1b998651-2fc1-4e78-9fca-431e5034bbe9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c2beb46e-d709-41c7-88dc-a77361d3fe57" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/adde60b9-3065-4e9b-bc86-23b7f1c8a3f0" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c407e146-7a34-4111-bd72-7feaaa173448" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1f0b922d-b800-44c3-ab77-22df7f4a394e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/31ce3a74-7ab9-47b4-bbe8-b3ae9255fdd1" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/521cd9c1-97e9-4058-a7ae-d3eb7934bc9f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/07e285ff-e21b-4b3f-a977-1df93a1873e0" />
