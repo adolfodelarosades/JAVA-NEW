@@ -1418,7 +1418,7 @@ Otra vez sale el título en español, podemos solicitar a ChatGPT que lo cambie 
 Crear código de página web que explique cómo funciona un holograma.
 ```
 
-A pesar de que he llegado a limite de mis peticiones a ChatGPT me ha permitido haxcer una nueva petición, pero el formato en que muestra la respuesta es algo diferente a las anteriores.
+A pesar de que he llegado a limite de mis peticiones a ChatGPT me ha permitido hacer una nueva petición, pero el formato en que muestra la respuesta es algo diferente a las anteriores.
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/d29240f8-fc75-47cc-aaff-9e0a4db04695" />
 
@@ -1590,6 +1590,8 @@ Vamos a meter todo esto en nuestro VSC, es posible que cambiemos el nombre del C
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/6114fab4-0a23-4720-9c25-3573bb7f06ad" />
 
 
+#### `10-Holograma.html`
+
 ```html
 <!DOCTYPE html>
 <html lang="es">
@@ -1635,6 +1637,8 @@ Vamos a meter todo esto en nuestro VSC, es posible que cambiemos el nombre del C
 </body>
 </html>
 ```
+
+#### `10-styles.css`
 
 ```css
 * {
