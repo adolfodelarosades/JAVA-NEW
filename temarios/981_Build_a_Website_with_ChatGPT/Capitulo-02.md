@@ -1733,11 +1733,149 @@ Generate the code for a web page that stores a dozen each of the following: name
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/0204f08e-a30b-4e10-9eea-cde2f0c94b96" />
 
+A las 16:50
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a4e2bcdf-01b5-4804-8449-1711c7d7af6e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/5c269ba1-1ba0-428b-9436-47802ea8688a" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/32a20fae-2e61-4a26-b569-f7393d841821" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bc9df190-b7d0-48f7-a9db-ae719e8e7822" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2d6dc1b3-9a31-4cf0-bd1f-99362717bf4a" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/20eb2a9e-4d8e-485d-9741-40b05623ee3e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/07e2ba04-4b78-483a-95d6-931e72705353" />
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sentence Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Sentence Generator</h1>
+    <p>Click the button to generate a random sentence.</p>
+    <button onclick="generateSentence()">Generate Sentence</button>
+    <div id="output"></div>
+
+    <script>
+        const names = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah", "Ian", "Jane", "Kevin", "Luna"];
+        const verbs = ["sees", "admires", "hates", "loves", "finds", "follows", "leads", "meets", "knows", "ignores", "helps", "challenges"];
+        const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink", "black", "white", "brown", "gray", "gold"];
+        const adjectives = ["happy", "sad", "angry", "excited", "tall", "short", "bright", "dark", "strong", "weak", "fast", "slow"];
+        const nouns = ["dog", "cat", "house", "car", "tree", "river", "mountain", "book", "chair", "phone", "table", "computer"];
+
+        function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        function generateSentence() {
+            const name = getRandomElement(names);
+            const verb = getRandomElement(verbs);
+            const color = getRandomElement(colors);
+            const adjective = getRandomElement(adjectives);
+            const noun = getRandomElement(nouns);
+
+            const sentence = `${name} ${verb} the ${color}, ${adjective} ${noun}.`;
+            document.getElementById("output").textContent = sentence;
+        }
+    </script>
+</body>
+</html>
+```
 
 ### `12-Oraciones.html`
 
 ```text
 Generar el código para una página web que almacene una docena de cada uno de los siguientes: nombres, verbos, colores, adjetivos y sustantivos. Cuando el usuario haga clic en un botón, el código debe ensamblar y mostrar una oración aleatoria que utilice la plantilla "Nombre verbo el color, adjetivo sustantivo".
+```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2c3f8971-5aa7-4887-9bb3-768740c0539d" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c531d368-d29b-4f21-9794-9b567cd6ca99" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/380f8f5f-61d5-459d-ab4c-69759018e23b" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/422996e4-bdbe-4fe8-8fe0-2eae3cc0ec9e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/cccc25fa-515f-448c-b3dc-623bed49625d" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/27857314-de5d-48db-a8b8-c7da28b6b2c0" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Oraciones Aleatorias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .output {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generador de Oraciones Aleatorias</h1>
+    <p>Haz clic en el botón para generar una oración.</p>
+    <button onclick="generarOracion()">Generar Oración</button>
+    <div class="output" id="output"></div>
+
+    <script>
+        const nombres = ["Juan", "Ana", "Luis", "María", "Carlos", "Elena", "Pedro", "Lucía", "Miguel", "Carmen", "Jorge", "Laura"];
+        const verbos = ["pinta", "mira", "salta", "corre", "sueña", "come", "juega", "baila", "escribe", "dibuja", "abraza", "lanza"];
+        const colores = ["rojo", "azul", "verde", "amarillo", "morado", "naranja", "blanco", "negro", "rosado", "gris", "dorado", "plateado"];
+        const adjetivos = ["grande", "pequeño", "hermoso", "rápido", "lento", "fuerte", "suave", "luminoso", "oscuro", "moderno", "viejo", "inteligente"];
+        const sustantivos = ["perro", "gato", "árbol", "coche", "casa", "flor", "libro", "niño", "pájaro", "reloj", "puente", "ciudad"];
+
+        function generarOracion() {
+            const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+            const verbo = verbos[Math.floor(Math.random() * verbos.length)];
+            const color = colores[Math.floor(Math.random() * colores.length)];
+            const adjetivo = adjetivos[Math.floor(Math.random() * adjetivos.length)];
+            const sustantivo = sustantivos[Math.floor(Math.random() * sustantivos.length)];
+
+            const oracion = `${nombre} ${verbo} el ${color}, ${adjetivo} ${sustantivo}.`;
+
+            document.getElementById('output').innerText = oracion;
+        }
+    </script>
+</body>
+</html>
 ```
 
 ### `13-Adjectives.html`
@@ -1748,10 +1886,290 @@ Generar el código para una página web que almacene una docena de cada uno de l
 Provide web page code that displays six rarely used adjectives in a dropdown list and stores a limerick associated with each adjective. When the user chooses an adjective from the list, the page displays the associated limerick.
 ```
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/2ae3dcc5-7ed7-4839-88d2-918b7f81187a" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1a218c3b-5fca-46d2-9d2c-e41624816980" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/04d3e7f1-7eb6-4e42-9cbc-801eae294eb8" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d247081c-4ae9-4adc-8b08-26d505f29464" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bcf843c5-c6a9-478f-86a9-e0c573868d24" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8842d26c-e3c7-4dc3-b65b-3e24c20bfbf7" />
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjective Limericks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #limerick {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adjective Limericks</h1>
+    <label for="adjective-select">Choose an adjective:</label>
+    <select id="adjective-select">
+        <option value="">--Select an adjective--</option>
+        <option value="pulchritudinous">Pulchritudinous</option>
+        <option value="ineffable">Ineffable</option>
+        <option value="sesquipedalian">Sesquipedalian</option>
+        <option value="lugubrious">Lugubrious</option>
+        <option value="mellifluous">Mellifluous</option>
+        <option value="effervescent">Effervescent</option>
+    </select>
+
+    <div id="limerick">
+        <p>Select an adjective to see its limerick.</p>
+    </div>
+
+    <script>
+        const limericks = {
+            pulchritudinous: `There once was a dame so pulchritudinous,\nHer beauty was simply fortuitous.\nHer smile caused a scene,\nThe most lovely you’ve seen,\nA wonder so grand and gratuitous.`,
+            ineffable: `A feeling so grand, ineffable,\nAn emotion almost incredible.\nWords couldn’t describe,\nNo matter the scribe,\nIts depth was truly unfathomable.`,
+            sesquipedalian: `A writer so sesquipedalian,\nHis words were highly mammalian.\nWith syllables long,\nHe wrote a strange song,\nA tome both grand and reptilian.`,
+            lugubrious: `A fellow so very lugubrious,\nHis sadness was quite incongruous.\nWith tears in his eye,\nHe let out a sigh,\nAnd pondered a scene so ambiguous.`,
+            mellifluous: `Her voice was so sweet, mellifluous,\nIts tones so light and harmonious.\nEach word that she sang,\nIn the hall it rang,\nA melody pure and continuous.`,
+            effervescent: `A soda so bright, effervescent,\nIts bubbles were truly incandescent.\nIt sparkled and fizzed,\nIn the sunlight it glizzed,\nA drink that was purely magnificent.`
+        };
+
+        const select = document.getElementById('adjective-select');
+        const limerickDiv = document.getElementById('limerick');
+
+        select.addEventListener('change', () => {
+            const adjective = select.value;
+            if (adjective && limericks[adjective]) {
+                limerickDiv.innerHTML = `<pre>${limericks[adjective]}</pre>`;
+            } else {
+                limerickDiv.innerHTML = '<p>Select an adjective to see its limerick.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
+```
+
 ### `14-Adjetivos.html`
 
 ```text
 Proporcionar un código de página web que muestre seis adjetivos poco utilizados en una lista desplegable y almacene un poema asociado con cada adjetivo. Cuando el usuario elige un adjetivo de la lista, la página muestra el poema asociado.
 ```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/3e987ee9-44d2-4604-ac04-54b112ad4baa" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b59c4188-41de-4b24-854b-b8e2b323a725" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/04fef791-895d-4a36-b4e7-8dd68249a01e" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c1837710-fc4c-4313-aa90-625f67c58b33" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/855128df-6065-444f-a1d9-4e38d1ddd2f6" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8b0627b9-a30d-4df5-afd8-ddb4c3822d31" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjetivos y Poemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+            background-color: #f3f4f6;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .poema {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Adjetivos poco utilizados y sus poemas</h1>
+    <label for="adjetivos">Selecciona un adjetivo:</label>
+    <select id="adjetivos" onchange="mostrarPoema()">
+        <option value="">--Selecciona un adjetivo--</option>
+        <option value="ineluctable">Ineluctable</option>
+        <option value="efimero">Efímero</option>
+        <option value="tenaz">Tenaz</option>
+        <option value="peregrino">Peregrino</option>
+        <option value="ignoto">Ignoto</option>
+        <option value="sereno">Sereno</option>
+    </select>
+
+    <div class="poema" id="poema">
+        <p>El poema aparecerá aquí...</p>
+    </div>
+
+    <script>
+        const poemas = {
+            ineluctable: "Es ineluctable el paso del tiempo,\ncomo el río que nunca detiene su curso.\nEs un susurro constante, un eco eterno,\nque arrastra los sueños hacia lo difuso.",
+
+            efimero: "Efímero es el alba en la montaña,\nsu fulgor dura lo que un suspiro.\nMas su belleza, aunque tan breve,\nes un tesoro que guardo conmigo.",
+
+            tenaz: "Tenaz es la raíz que rompe la piedra,\nque no se rinde ante el suelo hostil.\nEs la chispa que prende en la tormenta,\nla fuerza que lucha por sobrevivir.",
+
+            peregrino: "Peregrino de tierras lejanas,\ntu andar deja huellas en cada lugar.\nCada paso lleva historias guardadas,\ncada camino, un mundo por contar.",
+
+            ignoto: "Ignoto es el cielo que no conocemos,\nel rincón oculto del vasto universo.\nEs el misterio que nos seduce,\nla promesa de un futuro diverso.",
+
+            sereno: "Sereno es el lago en la madrugada,\ncuando el mundo parece detenerse.\nEs la paz que encuentra el alma cansada,\nel refugio donde quiere envolverse."
+        };
+
+        function mostrarPoema() {
+            const adjetivo = document.getElementById("adjetivos").value;
+            const poemaDiv = document.getElementById("poema");
+
+            if (adjetivo && poemas[adjetivo]) {
+                poemaDiv.innerHTML = `<p>${poemas[adjetivo]}</p>`;
+            } else {
+                poemaDiv.innerHTML = "<p>El poema aparecerá aquí...</p>";
+            }
+        }
+    </script>
+</body>
+</html>
+```
+
+### `index.html`
+
+```text
+Cree una página web con un estilo moderno que tenga 14 enlaces con sus respectivas páginas.
+```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/fb90d659-cb5a-4a77-8d6d-3a7130b5a57d" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/cb591c8f-3c35-4347-8f02-2036844ae10b" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/62ed79f8-c58a-4087-adb2-82c395afd0b9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6c93ffe3-2d5c-45b2-8dbf-5c061381131d" />
+
+Voy a realizar algunos cambios manualmente para que se enlace a las diferentes páginas creadas.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b15d4495-a654-44aa-8af0-67cea10f39c0" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            background-color: #eee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #6200ea;
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px solid #6200ea;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #6200ea;
+            color: white;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Capítulo 2</h1>
+        <p>Explora los enlaces a continuación</p>
+    </header>
+    <nav>
+        <a href="01-puns.html">01-puns.html</a>
+        <a href="02-chistes.html">02-chistes.html</a>
+        <a href="03-Miami.html">03-Miami.html</a>
+        <a href="04-Madrid.html">04-Madrid.html</a>
+        <a href="05-PannaCotta.html">05-PannaCotta.html</a>
+        <a href="06-CochinitaPibil.html">06-CochinitaPibil.html</a>
+        <a href="07-Bathroom.html">07-Bathroom.html</a>
+        <a href="08-Grifo.html">08-Grifo.html</a>
+        <a href="09-Hologram.html">09-Hologram.html</a>
+        <a href="10-Holograma.html">10-Holograma.html</a>
+        <a href="11-Sentences.html">11-Sentences.html</a>
+        <a href="12-Oraciones.html">12-Oraciones.html</a>
+        <a href="13-Adjectives.html">13-Adjectives.html</a>
+        <a href="14-Adjetivos.html">14-Adjetivos.html</a>
+    </nav>
+    <main>
+        <h2>Contenido Principal</h2>
+        <p>Selecciona un enlace para ver más contenido.</p>
+    </main>
+</body>
+</html>
+```
+
+Otro diseño que me gustaba con una petición prevía era:
+
+```html
+```
+
+
+
+
+
 
 
