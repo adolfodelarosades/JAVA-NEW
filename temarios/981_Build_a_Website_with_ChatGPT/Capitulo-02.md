@@ -1731,6 +1731,9 @@ footer p {
 Generate the code for a web page that stores a dozen each of the following: names, verbs, colors, adjectives, and nouns. When the user clicks a button, the code should assemble and display a random sentence that uses the template "Name verb the color, adjective noun."
 ```
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0204f08e-a30b-4e10-9eea-cde2f0c94b96" />
+
+
 ### `12-Oraciones.html`
 
 ```text
