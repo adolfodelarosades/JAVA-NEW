@@ -49,7 +49,7 @@ Por lo general, la forma más rápida de llevar los archivos de su sitio web a N
 
    8. Haga clic en el enlace para ver el sitio implementado en el navegador web.
 
-💻 Mi instalación.
+💻 Mi instalación en Netlify.
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/567a65ee-0dfe-40f1-bfd1-56723c7462ff" />
 
@@ -70,10 +70,6 @@ Por lo general, la forma más rápida de llevar los archivos de su sitio web a N
 https://graceful-melba-e262b8.netlify.app/
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/1a7e9a9e-e3f6-4a80-bd89-d63df4dad939" />
-
-
-
-
 
 ### B.1.3 Cargar sus archivos mediante un cuadro de diálogo
 
@@ -248,7 +244,7 @@ Cloudflare le otorga a su sitio web implementado un nombre de dominio personaliz
     
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/c9e9d0e8-a8c0-4b3e-b020-086c3fd5da3a" />
 
-11. Hay que presionar el botón **Continue to project** para desplegar el proyecto.
+10. Hay que presionar el botón **Continue to project** para desplegar el proyecto.
     
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/4f281828-df73-465a-aa06-1ccb7a5efb65" />
 
