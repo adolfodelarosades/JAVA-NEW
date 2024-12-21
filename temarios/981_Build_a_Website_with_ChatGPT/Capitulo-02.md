@@ -2162,11 +2162,6 @@ Voy a realizar algunos cambios manualmente para que se enlace a las diferentes p
 </html>
 ```
 
-Otro diseño que me gustaba con una petición prevía era:
-
-```html
-```
-
 ### Desplegar el Capítulo 2 en Netify.
 
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/c5e01a9b-9798-4418-b71c-89862ae2daf5" />
@@ -2210,3 +2205,126 @@ https://graceful-melba-e262b8.netlify.app/chapter-02/
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/521cd9c1-97e9-4058-a7ae-d3eb7934bc9f" />
 
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/07e285ff-e21b-4b3f-a977-1df93a1873e0" />
+
+### Crear página inicial para los capítulos.
+
+Otro diseño que me gustaba con una petición prevía era:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Links Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: #fda085;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #fda085;
+            font-size: 18px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background: #fda085;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Useful Links</h1>
+        </header>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">Google</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+            <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+            <li><a href="https://www.reddit.com" target="_blank">Reddit</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.amazon.com" target="_blank">Amazon</a></li>
+        </ul>
+    </div>
+    <script>
+        // Optional: Add a click event to show an alert when a link is clicked
+        const links = document.querySelectorAll('a');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                alert(`You are about to visit: ${link.textContent}`);
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d2f09951-a759-4210-9f38-7b7bdae10db2" />
+
+Vamos a adaptar esta página para apuntar a todos los capítulos del libro.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/9079d8be-aaca-447c-bc93-88f6c3739623" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/31529814-587b-45f1-9475-c749897c93e2" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/68296a71-1a75-47c3-95b2-363a549e4f3e" />
+
+
+
+
+
+
