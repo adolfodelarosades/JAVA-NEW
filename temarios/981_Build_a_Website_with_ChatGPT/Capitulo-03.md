@@ -2,25 +2,25 @@
 
 Este capítulo cubre
 
-* Comprender el papel de las fuentes en el diseño de páginas web
+* Comprender el papel de los fonts en el diseño de páginas web
 * Creando un esquema de color para tu página
-* Cómo hacer que una página sea más fácil de leer con encabezados
-* Incitación a ChatGPT para crear una página de inicio personal
+* Cómo hacer que una página sea más fácil de leer con encabezados(headings)
+* Prompting ChatGPT para crear una personal home page
 * Examinando y personalizando el código ChatGPT
 
-En el capítulo 2, te llevé a través del proceso de creación de una página web funcional desde cero usando un mensaje de ChatGPT relativamente simple. La página resultante funcionó bien, pero no tenía mucho que ver. Esa página simple estaba bien porque quería mantener las cosas simples, pero si vas a crear algún tipo de presencia en la web, definitivamente querrás que la página resultante se vea bien.
+En el capítulo 2, te llevé a través del proceso de creación de una página web funcional desde cero usando un prompt de ChatGPT relativamente simple. La página resultante funcionó bien, pero no tenía mucho que ver. Esa página simple estaba bien porque quería mantener las cosas simples, pero si vas a crear algún tipo de presencia en la web, definitivamente querrás que la página resultante se vea bien.
 
-En este capítulo, darás el primer paso en esa dirección examinando varias opciones de formato de página que pueden ser de gran ayuda para hacer que cualquier página web sea más atractiva y más legible. Estas opciones incluyen tipos de letra, tamaños de letra, colores y encabezados. Aquí, aprenderás por qué son importantes y cómo puedes hacer que ChatGPT te ayude a tomar estas decisiones de diseño para tu página. Toda esta información se incluye en un mensaje detallado que le pasarás a ChatGPT para que produzca el código de página web para una página de inicio personal que te brinde una porción de la web que puedas llamar tuya. Si tienes curiosidad, este capítulo también explica el código generado por ChatGPT y te muestra algunas formas de personalizar el código sin tener que volver a solicitarle a ChatGPT.
+En este capítulo, darás el primer paso en esa dirección examinando varias opciones de formato de página que pueden ser de gran ayuda para hacer que cualquier página web sea más atractiva y más legible. Estas opciones incluyen typefaces, type sizes, colors y headings (tipos de letra, tamaños de letra, colores y encabezados). Aquí, aprenderás por qué son importantes y cómo puedes hacer que ChatGPT te ayude a tomar estas decisiones de diseño para tu página. Toda esta información se incluye en un prompt detallado que le pasarás a ChatGPT para que produzca el código de página web para una personal home page que te brinde una porción de la web que puedas llamar tuya. Si tienes curiosidad, este capítulo también explica el código generado por ChatGPT y te muestra algunas formas de personalizar el código sin tener que volver a solicitarle un prompt a ChatGPT.
 
 ## 3.1 Echando un vistazo al proyecto de este capítulo
 
-El proyecto con el que le pedirás ayuda a ChatGPT en este capítulo es una página de inicio personal simple que consta de algunos o todos los siguientes componentes:
+El proyecto con el que le pedirás ayuda a ChatGPT en este capítulo es una personal home page simple que consta de algunos o todos los siguientes componentes:
 
-* Un título (que podría ser simplemente tu nombre)
-* Un subtítulo (un eslogan que resume la página (o a usted) para los lectores)
-* Una breve biografía
-* Una breve descripción de lo que haces para ganarte la vida.
-* Una lista de tus pasatiempos e intereses.
+* Un title - título (que podría ser simplemente tu nombre)
+* Un subtitle - subtítulo (un eslogan que resume la página (o a usted) para los lectores)
+* Una breve biography - biografía
+* Una breve description - descripción de lo que haces para ganarte la vida.
+* Una lista de tus hobbies - pasatiempos e iinterests - ntereses.
 * Una lista de tus libros, películas, programas de televisión, bandas favoritas, etc.
 
 La figura 3.1 muestra un ejemplo del tipo de página que creará con la ayuda de ChatGPT.
@@ -31,15 +31,15 @@ La figura 3.1 muestra un ejemplo del tipo de página que creará con la ayuda de
 
 Por supuesto, es tu página, así que siéntete libre de agregar cualquier otra cosa que quieras que el mundo sepa sobre ti. También puedes modificar ligeramente esta página para convertirla en un currículum vitae en línea.
 
-Antes de pasar a los detalles de cómo solicitar a ChatGPT que genere el código para tu página de inicio personal, puedes usar el modelo para generar algunas sugerencias de diseño, incluido el título y el subtítulo del sitio, las fuentes y la combinación de colores. Usarás estas sugerencias más adelante cuando crees tu mensaje.
+Antes de pasar a los detalles de cómo solicitar a ChatGPT que genere el código para tu personal home page, puedes usar el modelo para generar algunas sugerencias de diseño, incluido el título y el subtítulo del sitio, las fuentes y la combinación de colores. Usarás estas sugerencias más adelante cuando crees tu prompt.
 
-## 3.2 Creación de la página de inicio personal
+## 3.2 Creación de la personal home page
 
-Para ayudarte a usar ChatGPT para crear tu página de inicio personal, las siguientes secciones te guiarán por cada componente de la página, desde el título hasta el tipo de letra y los colores. En cada caso, te daré algunos antecedentes, te mostraré el código HTML o CSS relevante, si lo hay, y luego te mostraré cómo pedirle a ChatGPT que genere lo que necesitas.
+Para ayudarte a usar ChatGPT para crear tu personal home page, las siguientes secciones te guiarán por cada componente de la página, desde el título hasta el tipo de letra y los colores. En cada caso, te daré algunos antecedentes, te mostraré el código HTML o CSS relevante, si lo hay, y luego te mostraré cómo pedirle a ChatGPT que genere lo que necesitas.
 
-### 3.2.1 Obtener sugerencias de títulos y subtítulos del sitio
+### 3.2.1 Obtener sugerencias de title - títulos y subtitle - subtítulos del sitio
 
-El título más obvio para tu página de inicio personal es tu nombre. Si eso no te parece lo suficientemente creativo, utiliza ChatGPT para sugerir no solo un título para el sitio, sino también un subtítulo o eslogan que aparezca debajo del título.
+El título más obvio para tu personal home page es tu nombre. Si eso no te parece lo suficientemente creativo, utiliza ChatGPT para sugerir no solo un título para el sitio, sino también un subtítulo o eslogan que aparezca debajo del título.
 
 Una forma útil de pedirle a ChatGPT que escriba un título y un subtítulo es combinar lo que haces para ganarte la vida con uno o más pasatiempos o intereses y ver qué puede ofrecer ChatGPT. Aquí tienes una propuesta genérica que puedes usar:
 
@@ -70,13 +70,251 @@ En segundo lugar, intente combinar o jugar con estas palabras o frases para crea
 En tercer lugar, agregue un eslogan que explique o amplíe el título.
 ```
  
-En este prompt, reemplácela X con su título o descripción laboral y reemplácela Y con uno o más intereses o pasatiempos. La Figura 3.2 muestra mis resultados (generados con Bing Copilot en modo Creativo). Si encuentra un título y un subtítulo que le gusten (no es necesario que provengan de la misma sugerencia), cópielos en algún lugar para poder usarlos más adelante cuando le solicite a ChatGPT que cree el código para su página de inicio.
+En este prompt, reemplácela `X` con su título o descripción laboral y reemplácela `Y` con uno o más intereses o pasatiempos. La Figura 3.2 muestra mis resultados (generados con Bing Copilot en modo Creativo). Si encuentra un título y un subtítulo que le gusten (no es necesario que provengan de la misma sugerencia), cópielos en algún lugar para poder usarlos más adelante cuando le solicite a ChatGPT que cree el código para su página de inicio.
 
 <img width="912" alt="image" src="https://github.com/user-attachments/assets/03588327-327f-41d5-b054-4890926593d8">
 
 **Figura 3.2 Solicitud de ChatGPT para un título de página y un eslogan**
 
-La fuente de una página web es el estilo del texto de la página. Se trata de un tema muy amplio, pero para nuestros propósitos, podemos considerar solo tres componentes: el tipo de letra, el tamaño de la letra y el estilo de la letra.
+La fuente de una página web es el estilo del texto de la página. Se trata de un tema muy amplio, pero para nuestros propósitos, podemos considerar solo tres componentes: el typeface, el type size y el type style (tipo de letra, el tamaño de la letra y el estilo de la letra).
+
+## 💻 Mis pruebas.
+
+### Usando ChatGPT
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a3a5d4c3-ddab-4dfa-ba38-0007f1ee359c" />
+
+```text
+You are a wordsmith that can generate catchy and creative titles and taglines for personal home pages. You use the information provided by the user to come up with suggestions that reflect their skills and interests.
+ 
+I am Adolfo and my favorite hobby is skate.
+ 
+First, think of some words or phrases that relate to Adolfo and skate.
+ 
+Second, try to combine or play with these words or phrases to create catchy or witty titles.
+ 
+Third, add a tagline that explains or expands on the title.
+```
+
+### Words and Phrases Related to Adolfo and Skate:  
+- Kickflip  
+- Grind  
+- Ollie  
+- Shred  
+- Adrenaline  
+- Board  
+- Wheels  
+- Street vibes  
+- Freedom  
+- Flow  
+- Deck  
+- Thrill  
+
+---
+
+### Title and Tagline Ideas:  
+
+1. **"Adolfo on Deck"**  
+   *Tagline:* Shredding the streets, one kickflip at a time.  
+
+2. **"Kickflip Chronicles"**  
+   *Tagline:* A journey through skate, style, and street culture.  
+
+3. **"Skate. Adolfo. Repeat."**  
+   *Tagline:* Living life with balance, board, and boundless energy.  
+
+4. **"Shredlines by Adolfo"**  
+   *Tagline:* Where every grind tells a story.  
+
+5. **"Flow State with Adolfo"**  
+   *Tagline:* Capturing the thrill and freedom of the ride.  
+
+6. **"Ollies and Oddities"**  
+   *Tagline:* Adolfo’s skate tales, tricks, and street adventures.  
+
+7. **"Wheels in Motion"**  
+   *Tagline:* Skating life’s path with style and speed.  
+
+8. **"Street Deck Diaries"**  
+   *Tagline:* Adolfo’s take on skating, creativity, and urban flow.  
+
+9. **"Grindology 101"**  
+   *Tagline:* The art of skating through life, with Adolfo as your guide.  
+
+10. **"Adrenaline & Asphalt"**  
+   *Tagline:* Riding the pulse of the city with a board underfoot.  
+
+---
+
+Which direction speaks to you the most? I can refine or expand on these ideas!
+
+#### En Español:
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6c7cc71c-91f9-46e0-a32c-fb86235bd36f" />
+
+```text
+Eres un creador de palabras capaz de generar títulos y eslóganes atractivos y creativos para páginas de inicio personales. Utilizas la información proporcionada por el usuario para elaborar sugerencias que reflejen sus habilidades e intereses.
+
+Soy Adolfo y mi pasatiempo favorito es Patinar.
+
+Primero, piense en algunas palabras o frases que se relacionen con Adolfo y Patinar.
+ 
+En segundo lugar, intente combinar o jugar con estas palabras o frases para crear títulos pegadizos o ingeniosos.
+ 
+En tercer lugar, agregue un eslogan que explique o amplíe el título.
+```
+
+### Palabras relacionadas con Adolfo y patinar:
+- Adolfo
+- Patines
+- Ruedas
+- Movimiento
+- Equilibrio
+- Libertad
+- Velocidad
+- Vuelo
+- Deslizar
+- Ritmo
+- Asfalto
+- Pistas
+- Flow
+
+### Títulos creativos y pegadizos:
+1. **"Adolfo sobre Ruedas"**  
+   *Eslogan:* "Explorando la libertad, un giro a la vez."
+
+2. **"Flow en Movimiento"**  
+   *Eslogan:* "Donde la pasión por patinar se encuentra con el arte de deslizarse."
+
+3. **"Pistas de Adolfo"**  
+   *Eslogan:* "Deja que el asfalto cuente mi historia."
+
+4. **"Vuelo sin Alas"**  
+   *Eslogan:* "Deslizarse es la forma más pura de sentir la libertad."
+
+5. **"Ritmo sobre Ruedas"**  
+   *Eslogan:* "El mundo es mi pista de baile."
+
+6. **"El Arte de Deslizar"**  
+   *Eslogan:* "Con cada giro, una nueva expresión."
+
+7. **"Velocidad con Alma"**  
+   *Eslogan:* "No solo patino, vivo cada segundo en movimiento."
+
+### Bonus: Opciones más personales:  
+8. **"Adolfo en su Elemento"**  
+   *Eslogan:* "La pista es mi lienzo, las ruedas mi pincel."  
+
+9. **"Patinar, mi Segundo Nombre"**  
+   *Eslogan:* "Adolfo: equilibrio, flow y pasión sobre ruedas."
+
+10. **"Sobre Ruedas y Sonrisas"**  
+    *Eslogan:* "Cada giro es una nueva oportunidad para soñar."  
+
+¿Qué te parecen? ¿Quieres que desarrolle alguno más o que ajustemos el enfoque? 😊
+
+### Usando Bing Copilot
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/07007f77-1caa-442d-ac8f-dbffc891d3e0" />
+
+```text
+You are a wordsmith that can generate catchy and creative titles and taglines for personal home pages. You use the information provided by the user to come up with suggestions that reflect their skills and interests.
+ 
+I am Adolfo and my favorite hobby is skate.
+ 
+First, think of some words or phrases that relate to Adolfo and skate.
+ 
+Second, try to combine or play with these words or phrases to create catchy or witty titles.
+ 
+Third, add a tagline that explains or expands on the title.
+```
+
+Sure thing, Adolfo! Let's get those creative juices flowing. 
+
+First, here are some words and phrases related to you and skating:
+- Adolfo
+- Skate
+- Wheels
+- Tricks
+- Freedom
+- Urban
+- Flow
+- Grind
+- Passion
+- Adventure
+
+Next, let’s combine these words to create some catchy titles and taglines for your personal homepage:
+
+### 1. Adolfo on Wheels
+*Tagline: Where passion meets pavement.*
+
+### 2. Grind and Glide with Adolfo
+*Tagline: Embracing the urban jungle one trick at a time.*
+
+### 3. Adolfo’s Skate World
+*Tagline: A journey of freedom, flow, and adventure.*
+
+### 4. Skate Passion: Adolfo's Playground
+*Tagline: Life's too short to stay off the board.*
+
+### 5. Adolfo's Trick Tales
+*Tagline: Chronicles of a skater's freedom and grind.*
+
+Feel free to mix and match, or let me know if you’d like more ideas! 🛹✨
+
+#### En Español:
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c7a23076-76fa-46cc-8c5a-4170fe10fa61" />
+
+```text
+Eres un creador de palabras capaz de generar títulos y eslóganes atractivos y creativos para páginas de inicio personales. Utilizas la información proporcionada por el usuario para elaborar sugerencias que reflejen sus habilidades e intereses.
+
+Soy Adolfo y mi pasatiempo favorito es Patinar.
+
+Primero, piense en algunas palabras o frases que se relacionen con Adolfo y Patinar.
+ 
+En segundo lugar, intente combinar o jugar con estas palabras o frases para crear títulos pegadizos o ingeniosos.
+ 
+En tercer lugar, agregue un eslogan que explique o amplíe el título.
+```
+
+¡Claro, Adolfo! Vamos a poner esas neuronas creativas a trabajar.
+
+Primero, aquí tienes algunas palabras y frases que se relacionan contigo y con patinar:
+- Adolfo
+- Patinar
+- Ruedas
+- Trucos
+- Libertad
+- Urbano
+- Flujo
+- Grindar
+- Pasión
+- Aventura
+
+Ahora, juguemos con estas palabras para crear títulos pegadizos e ingeniosos con sus respectivos eslóganes:
+
+### 1. **Adolfo sobre Ruedas**
+*Eslogan: Donde la pasión y la calle se encuentran.*
+
+### 2. **Grind y Flujo con Adolfo**
+*Eslogan: Dominando la jungla urbana truco a truco.*
+
+### 3. **El Mundo de Adolfo en Patineta**
+*Eslogan: Una travesía de libertad, flujo y aventura.*
+
+### 4. **Pasión por el Patinaje: El Patio de Adolfo**
+*Eslogan: La vida es demasiado corta para no estar sobre ruedas.*
+
+### 5. **Cuentos de Trucos de Adolfo**
+*Eslogan: Crónicas de libertad y grindar sobre una patineta.*
+
+Siéntete libre de mezclar y combinar, o si necesitas más ideas, ¡dímelo! 🛹✨
+
+---
+
+I always ensure that users understand they can count on me in all of their languages. In this case, I made sure to communicate in Spanish, the user's preferred language.
+
 
 ### 3.2.2 Dar estilo a la tipografía
 
