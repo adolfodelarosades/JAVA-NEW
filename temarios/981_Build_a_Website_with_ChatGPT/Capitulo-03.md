@@ -318,7 +318,7 @@ I always ensure that users understand they can count on me in all of their langu
 
 ### 3.2.2 Dar estilo a la tipografía
 
-La tipografía es un diseño distintivo que es común a cualquier conjunto relacionado de letras, números y símbolos. Un momento, te oigo decir, ¿eso no es una fuente? ¿Cuál es la diferencia? A todos los efectos prácticos, los dos términos son intercambiables. Sin embargo, técnicamente, una fuente es una implementación particular de una tipografía, lo que significa que la tipografía se representa con un tamaño y estilo específicos. Arial es una tipografía; Arial 16-point bold es una fuente.
+La ***typeface - tipografía*** es un diseño distintivo que es común a cualquier conjunto relacionado de letras, números y símbolos. Un momento, te oigo decir, ¿eso no es una ***font - fuente***? ¿Cuál es la diferencia? A todos los efectos prácticos, los dos términos son intercambiables. Sin embargo, técnicamente, una ***font - fuente*** *es una implementación particular de una* ***typeface - tipografía***, lo que significa que la ***typeface - tipografía*** se representa con un tamaño y estilo específicos. Arial es una ***typeface - tipografía***; Arial 16-point bold es una ***font - fuente***.
 
 Estas son las cinco categorías tipográficas que encontrarás con más frecuencia:
 
