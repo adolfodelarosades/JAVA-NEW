@@ -316,26 +316,26 @@ Siéntete libre de mezclar y combinar, o si necesitas más ideas, ¡dímelo! �
 I always ensure that users understand they can count on me in all of their languages. In this case, I made sure to communicate in Spanish, the user's preferred language.
 
 
-### 3.2.2 Dar estilo a la tipografía
+### 3.2.2 Dar estilo a la typeface - tipografía
 
 La ***typeface - tipografía*** es un diseño distintivo que es común a cualquier conjunto relacionado de letras, números y símbolos. Un momento, te oigo decir, ¿eso no es una ***font - fuente***? ¿Cuál es la diferencia? A todos los efectos prácticos, los dos términos son intercambiables. Sin embargo, técnicamente, una ***font - fuente*** *es una implementación particular de una* ***typeface - tipografía***, lo que significa que la ***typeface - tipografía*** se representa con un tamaño y estilo específicos. Arial es una ***typeface - tipografía***; Arial 16-point bold es una ***font - fuente***.
 
-Estas son las cinco categorías tipográficas que encontrarás con más frecuencia:
+Estas son las cinco categorías ***typeface - tipográficas***  que encontrarás con más frecuencia:
 
 <img width="909" alt="image" src="https://github.com/user-attachments/assets/66da79fd-6b03-4cc4-99ea-2614e89326ae">
 
 <img width="916" alt="image" src="https://github.com/user-attachments/assets/a5af089b-dc64-48d8-8f65-942404b782fa">
 
 
-**Serif**: una tipografía serif (que rima con sheriff ) contiene trazos cruzados finos (llamados pies ) en los extremos de cada carácter. Estos sutiles apéndices le dan a la tipografía un aspecto tradicional y elegante, pero pueden perderse cuando se muestran en una pantalla en tamaños pequeños.
+**Serif**: una tipografía *serif* (que rima con sheriff ) contiene trazos cruzados finos (llamados *feet - pies* ) en los extremos de cada carácter. Estos sutiles apéndices le dan a la tipografía un aspecto tradicional y elegante, pero pueden perderse cuando se muestran en una pantalla en tamaños pequeños.
 
-**Sans serif**: una tipografía sans serif no contiene trazos cruzados en los extremos de los caracteres. Estas tipografías suelen tener un aspecto limpio y moderno que se adapta bien al texto en pantalla, especialmente en tamaños pequeños.
+**Sans serif**: una tipografía *sans serif* no contiene trazos cruzados en los extremos de los caracteres. Estas tipografías suelen tener un aspecto limpio y moderno que se adapta bien al texto en pantalla, especialmente en tamaños pequeños.
 
-**Monoespaciado**: un tipo de letra monoespaciado (también llamado tipo de letra de ancho fijo) utiliza la misma cantidad de espacio para cada carácter, por lo que las letras delgadas como i y l ocupan tanto espacio como las letras más anchas como m y w .
+**Monospace**: un tipo de letra *monospace* (también llamado *fixed-width* typeface) utiliza la misma cantidad de espacio para cada carácter, por lo que las letras delgadas como *i* y *l* ocupan tanto espacio como las letras más anchas como *m* y *w*.
 
-**Cursiva**: los tipos de letra cursiva están diseñados para parecerse a la escritura manuscrita con bolígrafo o pincel.
+**Cursive**: los tipos de letra *cursive* están diseñados para parecerse a la escritura manuscrita con bolígrafo o pincel.
 
-**Fantasía**: Las tipografías de fantasía suelen ser diseños extravagantes que tienen algunos elementos extremos (como ser extra gruesas).
+**Fantasy**: Las tipografías *fantasy* suelen ser diseños extravagantes que tienen algunos elementos extremos (como ser extra gruesas).
 
 En el código CSS, el tipo de letra se especifica mediante la propiedad `font-family`:
 
@@ -363,7 +363,7 @@ Tenga en cuenta también que es posible especificar varios tipos de letra en una
 
 Esta declaración significa que el navegador web primero intentará cargar la tipografía `Roboto Serif`. Si no puede, por algún motivo, volverá a utilizar la tipografía genérica `serif`.
 
-El siguiente componente principal con el que trabajarás es el tamaño de la fuente.
+El siguiente componente principal con el que trabajarás es el type size - tamaño de la fuente.
 
 ### 3.2.3 Configuración del tamaño de la letra
 
