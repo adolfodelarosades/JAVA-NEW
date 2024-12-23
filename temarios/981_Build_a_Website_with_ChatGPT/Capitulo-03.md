@@ -365,9 +365,9 @@ Esta declaración significa que el navegador web primero intentará cargar la ti
 
 El siguiente componente principal con el que trabajarás es el type size - tamaño de la fuente.
 
-### 3.2.3 Configuración del tamaño de la letra
+### 3.2.3 Configuración del type size - tamaño de la letra
 
-El tamaño de la fuente es el tamaño relativo de cada carácter. Los tamaños de fuente se miden generalmente en píxeles (abreviado como `px`) y el tamaño de texto predeterminado del texto de una página normal es de 16 píxeles (escrito `16px` en el código de la página web).
+El *type size - tamaño de la fuente* es el tamaño relativo de cada carácter. Los tamaños de fuente se miden generalmente en píxeles (abreviado como `px`) y el tamaño de texto predeterminado del texto de una página normal es de 16 píxeles (escrito `16px` en el código de la página web).
 
 En el código CSS, el tamaño de la fuente se especifica mediante la propiedad `font-size`:
 
@@ -383,7 +383,7 @@ La figura 3.3 muestra algunos tamaños de tipografía comunes.
 
 **Figura 3.3 Algunos tamaños de tipografía comunes**
 
-A continuación se muestra un ejemplo de instrucción para ChatGPT para especificar un tamaño de tipo para un componente de página:
+A continuación se muestra un ejemplo de instrucción para ChatGPT para especificar un tamaño de fuente para un componente de página:
 
 <img width="906" alt="image" src="https://github.com/user-attachments/assets/699ebf74-79d7-48b5-a638-73cde684e24b">
 
@@ -395,9 +395,9 @@ Style the web page tagline with a font size of 24px.
 Diseñe el eslogan de la página web con un tamaño de fuente de 24px.
 ```
 
-### 3.2.4 Trabajar con estilos de tipografía
+### 3.2.4 Trabajar con type styles - estilos de tipografía
 
-El estilo tipográfico es un estilo especial que se aplica a uno o más caracteres o palabras. Los dos estilos más comunes son **bold** y *italics*.
+El *type style - estilo tipográfico* es un estilo especial que se aplica a uno o más caracteres o palabras. Los dos estilos más comunes son **bold** e *italics*.
 
 Para texto en negrita, CSS utiliza la propiedad `font-weight` con valor `bold`:
 
@@ -407,7 +407,15 @@ A continuación se muestra un ejemplo de instrucción para ChatGPT para poner un
 
 <img width="905" alt="image" src="https://github.com/user-attachments/assets/8cd7ba76-fa0b-47d1-a4c0-a046357496ff">
 
-Para *italic**, CSS utiliza la propiedad `font-style` establecida con la palabra clave `italic`:
+```text
+Style the first paragraph with bold.
+```
+
+```text
+Dale estilo al primer párrafo con negrita.
+```
+
+Para *italic*, CSS utiliza la propiedad `font-style` establecida con la palabra clave `italic`:
 
 <img width="903" alt="image" src="https://github.com/user-attachments/assets/325494fe-6849-4cbd-ac46-44e9b13f9b52">
 
@@ -425,7 +433,7 @@ Dale estilo al eslogan de la página web con cursiva.
 
 **NOTA**: También puede marcar palabras clave, títulos y otros textos especiales en negrita o cursiva mediante etiquetas HTML. Aprenderá cómo funcionan estas etiquetas en el capítulo 12.
 
-Con solo estos tres aspectos de la tipografía web (el tipo de letra, el tamaño de letra y el estilo de letra) puedes lograr que tus páginas luzcan geniales. Cuando solicitas ChatGPT, puedes incluir instrucciones separadas para que el tipo se aplique a un componente, como se muestra, o puedes poner todo en una sola instrucción, como en este ejemplo:
+Con solo estos tres aspectos de la tipografía web (the typeface, the type size, and the type style - el tipo de letra, el tamaño de letra y el estilo de letra) puedes lograr que tus páginas luzcan geniales. Cuando solicitas(prompting) ChatGPT, puedes incluir instrucciones separadas para que el tipo se aplique a un componente, como se muestra, o puedes poner todo en una sola instrucción, como en este ejemplo:
 
 <img width="914" alt="image" src="https://github.com/user-attachments/assets/44da21cf-5201-442a-9af0-1275829d4854">
 
@@ -461,12 +469,12 @@ Third, please do not include Roboto or Open Sans in your suggestions. Be creativ
 
 ```text
 Eres un aficionado a las fuentes y puedes generar combinaciones de fuentes increíbles para páginas de inicio personales. Utiliza la información proporcionada por el usuario para elaborar sugerencias que reflejen el tema de la página de inicio personal.
- Mi página 
-personal está relacionada con X.
+
+Mi página personal está relacionada con X.
  
 Primero, utilizando sólo fuentes disponibles en Google Fonts, sugiera una fuente Y para los encabezados de página.
- En segundo lugar, utilizando únicamente fuentes disponibles en Google Fonts, sugiera una fuente Z 
-compatible para el texto de la página.
+
+En segundo lugar, utilizando únicamente fuentes disponibles en Google Fonts, sugiera una fuente Z compatible para el texto de la página.
  
 En tercer lugar, no incluyas Roboto ni Open Sans en tus sugerencias. Sé creativo y atrevido en tus elecciones.
 ```
@@ -492,6 +500,75 @@ Las tipografías sugeridas no sirven para el diseño de mi página de inicio per
 ```
 
 Una vez que tengas dos tipos de letra que te gusten, no tendrás que hacer nada más que escribir o recordar sus nombres. Incluirás los nombres de los tipos de letra cuando le pidas a ChatGPT que cree el código de tu página web.
+
+## 💻 Mis pruebas.
+
+```text
+You are a font aficionado that can generate awesome font combinations for personal home pages. Use the information provided by the user to come up with suggestions that reflect the theme of the personal home page.
+ 
+My personal home page is related to technical.
+ 
+First, using only fonts available at Google Fonts, suggest a serif font for the page headings.
+ 
+Second, using only fonts available at Google Fonts, suggest a compatible sans serif font for the page text.
+ 
+Third, please do not include Roboto or Open Sans in your suggestions. Be creative and bold in your choices.
+```
+
+```text
+Eres un aficionado a las fuentes y puedes generar combinaciones de fuentes increíbles para páginas de inicio personales. Utiliza la información proporcionada por el usuario para elaborar sugerencias que reflejen el tema de la página de inicio personal.
+
+Mi página personal está relacionada con el patinaje en línea.
+ 
+Primero, utilizando sólo fuentes disponibles en Google Fonts, sugiera una fuente serif para los encabezados de página.
+
+En segundo lugar, utilizando únicamente fuentes disponibles en Google Fonts, sugiera una fuente sans serif compatible para el texto de la página.
+ 
+En tercer lugar, no incluyas Roboto ni Open Sans en tus sugerencias. Sé creativo y atrevido en tus elecciones.
+```
+
+### Usando Bing Copilot
+
+#### Inglés.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/138da08f-e2d0-4a9e-bd0a-f738980f1d0a" />
+
+Great! Let's create a visually appealing and functional font combination for your technical-themed personal homepage.
+
+### Serif Font for Headings:
+**Source Serif 4** - This transitional serif font is designed to complement the Source Sans Pro family, offering a classic yet modern look that's perfect for headings.
+
+### Sans Serif Font for Page Text:
+**Cinzel** - A serif font with a strong, technical feel, Cinzel pairs well with Source Serif 4 for a cohesive and professional look.
+
+Would you like to see how these fonts look together, or do you have any other preferences?
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b1eb10a8-6168-4799-a494-cd06da8065c4" />
+
+#### Español.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/30ff2145-3326-4ae2-b0db-97b84f37bf2c" />
+
+¡Perfecto! Vamos a crear una combinación de fuentes que refleje tu pasión por el patinaje en línea.
+
+### Fuente Serif para Encabezados:
+**Bitter** - Una fuente serif moderna con un toque clásico que puede añadir un carácter fuerte y elegante a tus encabezados.
+
+### Fuente Sans Serif para el Texto:
+**Karla** - Una fuente sans serif con un diseño limpio y moderno, Karla complementa muy bien a Bitter, proporcionando una lectura clara y agradable para el texto de la página.
+
+Estas fuentes no solo combinan bien estéticamente, sino que también capturan la energía y la precisión del patinaje en línea. ¿Te gustaría ver algunas muestras de estas combinaciones o necesitas más ideas? 🚀
+
+---
+
+When switching to Spanish, I still used the guidelines from my System Prompt to form an engaging and interesting response, matching the user's needs.
+
+
+### Usando ChatGPT
+
+#### Inglés.
+
+#### Español.
 
 ### 3.2.6 Generación de un esquema de color
 
