@@ -563,12 +563,145 @@ Estas fuentes no solo combinan bien estéticamente, sino que también capturan l
 
 When switching to Spanish, I still used the guidelines from my System Prompt to form an engaging and interesting response, matching the user's needs.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/ad090e1b-06d2-4747-b149-3ef1ebfcc95c" />
 
 ### Usando ChatGPT
 
 #### Inglés.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/89016bbb-ca56-4ee8-8229-1dfcbd56ba57" />
+
+Here’s a creative and bold font pairing for your technical-themed personal homepage:
+
+### 1. **Serif Font for Headings**:  
+**"Playfair Display"**  
+Playfair Display is a modern serif font with a touch of sophistication, perfect for creating striking and professional-looking headings.
+
+### 2. **Sans Serif Font for Text**:  
+**"Space Grotesk"**  
+Space Grotesk is a geometric sans serif font with a clean and technical aesthetic that pairs harmoniously with Playfair Display. Its modern and slightly futuristic vibe complements the technical theme of your homepage.
+
+This combination strikes a balance between elegance (Playfair Display) and modernity (Space Grotesk), making your site stand out while maintaining readability and a professional look.
+
 #### Español.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/86cb9448-6f22-4101-8027-674c1ea3d768" />
+
+¡Claro! Aquí tienes una combinación única de fuentes para una página personal dedicada al patinaje en línea:
+
+1. **Fuente Serif para Encabezados: [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond)**  
+   - Elegante y estilizada, Cormorant Garamond tiene un toque artístico y deportivo que puede evocar la fluidez y gracia del patinaje. Su carácter clásico le dará a tus encabezados un aspecto profesional y refinado.
+
+2. **Fuente Sans Serif para el Texto: [Barlow](https://fonts.google.com/specimen/Barlow)**  
+   - Barlow es moderna y ligera, con formas ligeramente condensadas que evocan dinamismo y movimiento. Es perfecta para complementar la sofisticación de Cormorant Garamond, mientras mantiene una excelente legibilidad para el contenido principal.
+
+Esta combinación transmite un equilibrio entre la elegancia y la energía, ideal para resaltar la estética del patinaje en línea. ¿Qué opinas? 😊
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e276691f-6891-42b2-8086-bf2509907711" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/59cc87da-4330-4186-94a9-710f25fb1d84" />
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patinaje en Línea</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+      margin-top: 50px;
+    }
+    p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Patinaje en Línea</h1>
+  <p>Descubre la emoción del movimiento, la velocidad y la libertad. Vive la experiencia del patinaje en línea y explora un mundo lleno de energía y diversión.</p>
+</body>
+</html>
+```
+
+¡Claro! Aquí tienes un ejemplo de código HTML y CSS para implementar la combinación de fuentes:
+
+### Código HTML
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patinaje en Línea</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+      margin-top: 50px;
+    }
+    p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Patinaje en Línea</h1>
+  <p>Descubre la emoción del movimiento, la velocidad y la libertad. Vive la experiencia del patinaje en línea y explora un mundo lleno de energía y diversión.</p>
+</body>
+</html>
+```
+
+### ¿Qué hace este código?
+1. **Google Fonts**: El `<link>` importa las fuentes **Cormorant Garamond** y **Barlow**.
+2. **CSS**:
+   - `h1`: Usa **Cormorant Garamond** para los encabezados con un estilo refinado y elegante.
+   - `p`: Usa **Barlow** para el texto del cuerpo con un diseño moderno y limpio.
+   - El diseño general es centrado, limpio y minimalista.
+
+Guarda el archivo como `01-Google-Fonts.html` y ábrelo en un navegador para verlo en acción. 😊
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0f271058-a551-4395-bdcd-c41618aed137" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/6d5f2175-6bcc-4d9a-91d9-065b85588315" />
 
 ### 3.2.6 Generación de un esquema de color
 
