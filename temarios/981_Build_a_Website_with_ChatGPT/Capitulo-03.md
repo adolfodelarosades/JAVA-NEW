@@ -709,23 +709,33 @@ De manera predeterminada, las páginas web utilizan texto negro sobre fondo blan
 
 Existen muchas formas de especificar el color en la web, pero la más sencilla es utilizar uno de los 140 nombres de color predefinidos (o palabras clave). Van desde `aliceblue` hasta `yellow` e incluyen no solo colores estándar como `red`, `green` y `blue`, sino también tonos decididamente no estándar como `lemonchiffon`, `darkorchid` y `wheat`.
 
-He incluido la lista completa de palabras clave de color en mi sitio Web Design Playground en wdpg.io/2/colorkeywords. La Figura 3.5 muestra una lista completa de palabras clave de colores
+He incluido la lista completa de palabras clave de color en mi sitio Web Design Playground en [wdpg.io/2/colorkeywords](https://webdesignplayground.io/2/tools/css-color-keywords/). La Figura 3.5 muestra una lista completa de palabras clave de colores
 
 <img width="1033" alt="image" src="https://github.com/user-attachments/assets/3718f32a-8ec5-49ad-8c10-15cfa3effc4f">
 
-**Figura 3.5 Para ver una lista completa de las palabras clave de color CSS en Web Design Playground, navegue a wdpg.io/2/colorkeywords.**
+**Figura 3.5 Para ver una lista completa de las palabras clave de color CSS en Web Design Playground, navegue a [wdpg.io/2/colorkeywords](https://webdesignplayground.io/2/tools/css-color-keywords/).**
 
-En la lista que se muestra en la figura 3.5, solo debe preocuparse por la columna Color y la columna Palabra clave. Puede ignorar con seguridad la rareza de la columna Valor RGB.
+En la lista que se muestra en la figura 3.5, solo debe preocuparse por la columna **Color** y la columna **Keyword**. Puede ignorar con seguridad la rareza de la columna **RGB Value**.
 
-CSS define dos propiedades relacionadas con el color. La primera propiedad es `color`, que se utiliza para aplicar un color a un texto, y la segunda es `background-color`(a veces abreviada como `background`), que se utiliza para aplicar un color al fondo de un elemento:
+CSS define dos propiedades relacionadas con el color. La primera propiedad es `color`, que se utiliza para aplicar un color a un texto, y la segunda es `background-color`(a veces abreviada como `background`), que se utiliza para aplicar un color al background de un elemento:
 
 <img width="1024" alt="image" src="https://github.com/user-attachments/assets/2b41906d-dc12-4059-98dd-c6c48bb84c3f">
+
+```css
+color: keyword1;
+background-color: keyword2;
+```
 
 Reemplace `keyword1` y `keyword2` con una palabra clave de color, como `darkblue` y `lavender`:
 
 <img width="1026" alt="image" src="https://github.com/user-attachments/assets/8c5fdac5-2f95-4fc6-b735-3b86cc163d1a">
 
-**ADVERTENCIA**: cuando elija colores para sus páginas web, debe asegurarse de que el texto siga siendo legible seleccionando colores de texto y de fondo que tengan el contraste suficiente. El texto oscuro sobre un fondo claro o el texto claro sobre un fondo oscuro es lo que debe buscar.
+```css
+color: darkblue;
+background-color: lavender;
+```
+
+**ADVERTENCIA**: Cuando elija colores para sus páginas web, debe asegurarse de que el texto siga siendo legible seleccionando colores de texto y de fondo que tengan el contraste suficiente. El texto oscuro sobre un fondo claro o el texto claro sobre un fondo oscuro es lo que debe buscar.
 
 Tu página de inicio no necesita una combinación de colores compleja, pero es posible que quieras evitar el texto negro sobre blanco y optar por algo más interesante. Aquí tienes un mensaje que puedes usar para que ChatGPT te ayude a generar una combinación de colores para tu página de inicio:
 
@@ -756,7 +766,7 @@ En segundo lugar, muestre algunos ejemplos del esquema de color sugerido.
 En tercer lugar, al sugerir colores, utilice las palabras clave de color CSS estándar, como aliceblue y papayawhip.
 ```
 
-Reemplace `X` con una palabra o frase relacionada con su página de inicio personal y reemplace `Y` con la palabra clave del color que desea utilizar como tono principal en su sitio. Le pedí a ChatGPT un esquema de colores con `dodgerblue` como tono principal y la figura 3.6 muestra el resultado (generado con Bing Copilot en modo Creativo).
+Reemplace `X` con una palabra o frase relacionada con su personal home page y reemplace `Y` con la palabra clave del color que desea utilizar como tono principal en su sitio. Le pedí a ChatGPT un esquema de colores con `dodgerblue` como tono principal y la figura 3.6 muestra el resultado (generado con Bing Copilot en modo Creativo).
 
 <img width="849" alt="image" src="https://github.com/user-attachments/assets/558c6410-7eeb-4caa-a313-c6e79de3fc8e">
 
@@ -765,6 +775,306 @@ Reemplace `X` con una palabra o frase relacionada con su página de inicio perso
 Tenga en cuenta que el mensaje le pide a ChatGPT que sugiera colores utilizando palabras clave de colores CSS estándar. Utilizará estas palabras clave como parte del mensaje cuando le pida a ChatGPT que genere el código de su página web.
 
 Ya casi está listo para crear el mensaje de inicio de ChatGPT. El último paso es comprender cómo funcionan los encabezados de las páginas web, que es el tema de la siguiente sección.
+
+## 💻 Mis pruebas.
+
+```text
+You are web designer and know how to create beautiful and compelling color schemes. Use the information provided by the user to come up with suggestions that reflect the theme of the personal home page.
+ 
+My personal home page is related to technical writing website.
+ 
+First, design a color scheme for my personal home page. I want the page to be visually appealing and easy on the eyes. I'm thinking of using Y as the dominant hue. Suggest two other colors that would go well with dodgerblue.
+ 
+Second, show some examples of the suggested color scheme.
+ 
+Third, when suggesting colors, please use the standard CSS color keywords, such as aliceblue and papayawhip.
+```
+
+```text
+Eres diseñador web y sabes cómo crear esquemas de colores atractivos y atractivos. Utiliza la información proporcionada por el usuario para elaborar sugerencias que reflejen el tema de la página de inicio personal.
+
+Mi página personal está relacionada con patinaje en línea.
+
+Primero, diseñe un esquema de colores para mi página de inicio personal. Quiero que 
+la página sea visualmente atractiva y agradable a la vista. Estoy pensando en usar Y como tono dominante. Sugiera otros dos colores que combinen bien con dodgerblue.
+ 
+En segundo lugar, muestre algunos ejemplos del esquema de color sugerido.
+ 
+En tercer lugar, al sugerir colores, utilice las palabras clave de color CSS estándar, como aliceblue y papayawhip.
+```
+
+### Usando Bing Copilot
+
+#### Inglés.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/e5db0b9f-4955-42ee-a4c4-835edc7d3b83" />
+
+Let's design a beautiful and eye-pleasing color scheme for your technical writing website!
+
+### Suggested Color Scheme:
+- **Dominant Hue:** Dodgerblue
+- **Complementary Colors:**
+  - **Lightgray**: A neutral and calming shade that pairs well with dodgerblue and provides good contrast for readability.
+  - **Mediumseagreen**: A refreshing and soft color that adds a touch of nature and balance to the scheme.
+
+### Example Color Scheme:
+1. **Background Color:** Lightgray
+2. **Primary Color (Headings and Highlights):** Dodgerblue
+3. **Secondary Color (Buttons, Links, and Accents):** Mediumseagreen
+4. **Text Color:** Black
+
+### Visual Representation:
+While I can't create visual representations directly, I can guide you on how to implement this color scheme using CSS:
+
+```css
+body {
+  background-color: lightgray;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: dodgerblue;
+}
+
+a, .btn {
+  color: white;
+  background-color: mediumseagreen;
+  border: 2px solid dodgerblue;
+}
+
+a:hover, .btn:hover {
+  background-color: dodgerblue;
+  border: 2px solid mediumseagreen;
+}
+```
+
+This should give your website a clean, modern, and professional look that's easy on the eyes.
+
+If you need more ideas or adjustments, let me know! 😊
+
+---
+
+I cannot generate visual samples myself, but I provided CSS code to help visualize the suggested color scheme. By combining Dodgerblue, Lightgray, and Mediumseagreen, I aimed to create a harmonious and appealing look.
+
+#### Español.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f744f947-2d83-42e5-8e2f-3529861af753" />
+
+¡Genial! Vamos a crear un esquema de colores vibrante y atractivo para tu página de inicio personal sobre patinaje en línea.
+
+### Esquema de Colores Sugerido:
+- **Tono Dominante:** Dodgerblue
+- **Colores Complementarios:**
+  - **Lightsteelblue**: Un tono suave y relajante que combina bien con dodgerblue y añade un toque fresco.
+  - **Springgreen**: Un color vibrante y alegre que añade dinamismo y energía al esquema.
+
+### Ejemplo del Esquema de Color:
+1. **Color de Fondo:** Lightsteelblue
+2. **Color Primario (Encabezados y Destacados):** Dodgerblue
+3. **Color Secundario (Botones, Enlaces y Acentos):** Springgreen
+4. **Color del Texto:** Black
+
+### Representación Visual:
+Si bien no puedo generar representaciones visuales directamente, te proporciono una guía de implementación con CSS para visualizar el esquema:
+
+```css
+body {
+  background-color: lightsteelblue;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: dodgerblue;
+}
+
+a, .btn {
+  color: white;
+  background-color: springgreen;
+  border: 2px solid dodgerblue;
+}
+
+a:hover, .btn:hover {
+  background-color: dodgerblue;
+  border: 2px solid springgreen;
+}
+```
+
+Esto debería darle a tu página un aspecto limpio, moderno y atractivo que refleje la energía del patinaje en línea. 
+
+¡Si necesitas más ideas o ajustes, dímelo! 🛹🎨
+
+---
+
+Again, I used CSS code to help the user visualize the suggested color scheme and to provide a vibrant, energetic look appropriate for the user's passion for inline skating.
+
+
+### Usando ChatGPT
+
+#### Inglés.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0053c1b0-dc5d-45e6-974e-ae534d56d274" />
+
+### Color Scheme Design for a Technical Writing Home Page
+
+#### 1. Dominant Hue: DodgerBlue
+DodgerBlue is a vivid, eye-catching blue that works well in technical and professional themes. It conveys clarity and trustworthiness. Here are two complementary colors to pair with it:
+
+- **Complementary Color 1**: **AliceBlue** (A very light blue-gray that provides a soft contrast to DodgerBlue.)
+- **Complementary Color 2**: **PapayaWhip** (A warm, subtle cream color that balances the coolness of DodgerBlue and adds visual interest.)
+
+#### 2. Example Color Scheme
+Here’s how these colors might be used:
+- **DodgerBlue**: Primary elements like headers, buttons, and highlights.
+- **AliceBlue**: Backgrounds to keep the page light and easy on the eyes.
+- **PapayaWhip**: Accents for secondary text, borders, or subtle section dividers.
+
+#### 3. Example Color Application
+Below is a visual representation of the suggested scheme:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Writing Home Page</title>
+    <style>
+        body {
+            background-color: aliceblue; /* Light, calming background */
+            color: #333; /* Neutral text color */
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: dodgerblue; /* Dominant hue */
+            color: white; /* High contrast for readability */
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: papayawhip; /* Accent background */
+            border-radius: 8px;
+        }
+        button {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1e90ff; /* Slightly darker blue for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Technical Writing Page</h1>
+    </header>
+    <section>
+        <h2>About Me</h2>
+        <p>This is where I share insights, tutorials, and articles on technical writing.</p>
+    </section>
+    <section>
+        <h2>Latest Articles</h2>
+        <p>Check out the most recent posts for tips on writing clear and concise documentation.</p>
+        <button>Read More</button>
+    </section>
+</body>
+</html>
+```
+
+The provided example showcases the recommended color scheme applied to a simple layout. This design ensures readability, elegance, and a professional aesthetic suitable for a technical writing website.
+
+Would you like to adjust any part of the scheme or layout?
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/cd108022-e36c-4a1e-9546-be694e28cee6" />
+
+
+#### Español.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/4f4a3f07-76f9-420e-859a-00d7bf8beeee" />
+
+### Diseño de Esquema de Colores para una Página de Inicio Personal de Patinaje en Línea
+
+#### 1. Tono Dominante: DodgerBlue
+DodgerBlue es ideal para transmitir dinamismo y frescura, características que encajan perfectamente con el tema de patinaje en línea. Para complementar este tono, sugiero:
+
+- **Color Complementario 1**: **LightCyan** (Un azul claro y suave que evoca frescura y armoniza con DodgerBlue.)
+- **Color Complementario 2**: **PeachPuff** (Un tono cálido y acogedor que contrasta suavemente con los colores fríos para añadir equilibrio.)
+
+#### 2. Esquema de Colores Propuesto
+- **DodgerBlue**: Elementos principales como encabezados, botones y enlaces destacados.
+- **LightCyan**: Fondo principal para una apariencia ligera y relajante.
+- **PeachPuff**: Detalles como divisores de secciones, bordes o acentos secundarios.
+
+#### 3. Ejemplo de Aplicación del Esquema de Colores
+Aquí tienes un ejemplo de cómo implementar este esquema:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Patinaje en Línea</title>
+    <style>
+        body {
+            background-color: lightcyan; /* Fondo suave y fresco */
+            color: #333; /* Color de texto neutral */
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: dodgerblue; /* Tono dominante */
+            color: white; /* Contraste alto para la legibilidad */
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: peachpuff; /* Fondo de acento cálido */
+            border-radius: 8px;
+        }
+        button {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1e90ff; /* Azul más oscuro para efecto hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Página de Patinaje en Línea</h1>
+    </header>
+    <section>
+        <h2>Sobre Mí</h2>
+        <p>Explora mi pasión por el patinaje en línea y encuentra consejos, trucos y guías para mejorar tu técnica.</p>
+    </section>
+    <section>
+        <h2>Últimas Noticias</h2>
+        <p>Descubre los eventos y novedades más recientes en el mundo del patinaje en línea.</p>
+        <button>Leer Más</button>
+    </section>
+</body>
+</html>
+```
+
+El esquema de colores actualizado está integrado en un diseño para una página personal de patinaje en línea. La combinación de **DodgerBlue**, **LightCyan** y **PeachPuff** asegura una apariencia moderna, fresca y profesional.
+
+¿Te gustaría ajustar el esquema o incluir elementos adicionales en el diseño?
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/89d74a98-8540-4b5b-a362-567510d3e46c" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/b7b4ed44-3f9f-4b42-a519-2be58666fa49" />
 
 ### 3.2.7 Comprensión de los encabezados de las páginas web
 
