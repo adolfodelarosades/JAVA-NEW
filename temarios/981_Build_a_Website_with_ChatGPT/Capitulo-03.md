@@ -1094,7 +1094,7 @@ Afortunadamente, normalmente no es necesario especificar demasiado todo esto, ya
 
 Nuevamente, no es necesario que se adentre demasiado en los detalles del código web. Para la mayoría de los mensajes de las páginas web, solo necesitará indicarle a ChatGPT qué tamaño de fuente desea para cada encabezado, suponiendo que los tamaños de encabezado predeterminados no se ajusten al diseño de su página.
 
-### 3.2.8 Elaboración del mensaje
+### 3.2.8 Elaboración del prompt
 
 Ahora tienes todo lo que necesitas para solicitarle a ChatGPT que te proporcione el código web para tu página de inicio. El mensaje debería comenzar de la siguiente manera:
 
@@ -1384,3 +1384,362 @@ A continuación se muestran algunas ideas de personalización para el código CS
 * Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
 
 * Guarde el HTML generado en el archivo `index.html` y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`.
+
+## 💻 Mis pruebas.
+
+```text
+I want to build a personal homepage. I don't know how to code, so I need you to provide the code for me.
+ 
+First, write the HTML code for a simple web page that includes the following:
+ * A header that includes the title "Cryptic Writer" and the subtitle "Solving puzzles with words and words with puzzles."
+ * A main section where the first paragraph contains the text between the triple quotation marks: 
+"""Hi! My name is Paul McFedries. Welcome to my humble web home away from home. I'm so glad you dropped by to learn more about me. Enjoy!""".
+ * The second-level heading "What I Do (for Work)" followed by a paragraph that contains the text between the triple quotation marks:
+"""I'm a technical writer with over 100 books to my credit..."""
+* The second-level heading "What I Do (for Fun)" followed by a paragraph that contains the text between the triple quotation marks:
+"""My hobbies and interests include cryptic crosswords, word puzzles, puns, bread baking, typography, Art Deco..."""
+* The second-level heading "What I Read" followed by a paragraph that contains the text between the triple quotation marks:
+"""I'm currently reading Landlines, by Raynor Winn. Recent reads are The Faraway Nearby by Rebecca Solnit, Journal of a Solitude by May Sarton..."""
+* The second-level heading "What I Am" followed by a paragraph that contains the text between the triple quotation marks:
+"""Although I was born in Toronto, my parents are both Scottish, which explains my love of both bagpipes and haggis..."""
+ 
+Second, in a separate file please write the CSS code for the following:
+* The header background color is dodgerblue with 20px padding all around. Center the title and subtitle.
+ * The title font size is 48px with color whitesmoke.
+ * The subtitle font size is 24px with color whitesmoke and formatted as italic.
+ * The second-level heading font size is 32px with color dodgerblue.
+ * The main section font size is 20px.
+ * For the headings, use the Josefin Sans font from Google Fonts. For the rest of the text, use the Roboto Serif font from Google Fonts.
+ * The page is centered.
+ * The page is responsive with a maximum width of 800px.
+```
+
+```text
+Quiero crear una página personal. No sé programar, así que necesito que me proporciones el código.
+ 
+Primero, escriba el código HTML para una página web simple que incluya lo siguiente:
+ * Un encabezado que incluye el título "Escritor críptico" y el subtítulo "Resolviendo acertijos con palabras y palabras con acertijos".
+ * Una sección principal donde el primer párrafo contiene el texto entre comillas triples:
+"""¡Hola! Mi nombre es Paul McFedries. Bienvenido a mi humilde hogar en la Web. Me alegro mucho de que hayas venido a conocerme mejor. ¡Disfruta!"".
+ * El encabezado de segundo nivel “Lo que hago (en mi trabajo)” seguido de un párrafo que contiene el texto entre comillas triples:
+"""Soy un escritor técnico con más de 100 libros en mi haber..."""
+* El encabezado de segundo nivel “Lo que hago (por diversión)” seguido de un párrafo que contiene el texto entre comillas triples:
+"""Mis pasatiempos e intereses incluyen crucigramas crípticos, juegos de palabras, juegos de palabras, panificación, tipografía, Art Decó..."""
+* El encabezado de segundo nivel “Lo que leo” seguido de un párrafo que contiene el texto entre comillas triples:
+"Actualmente estoy leyendo Landlines, de Raynor Winn. Mis últimas lecturas son The Faraway Nearby, de Rebecca Solnit, y Journal of a Solitude, de May Sarton..."
+* El encabezado de segundo nivel “Lo que soy” seguido de un párrafo que contiene el texto entre comillas triples:
+"""Aunque nací en Toronto, mis padres son ambos escoceses, lo que explica mi amor por las gaitas y el haggis..."""
+ 
+En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+* El color de fondo del encabezado es azul dodger con un margen de 20 px alrededor. Centra el título y el subtítulo.
+ * El tamaño de fuente del título es 48px con color whitesmoke.
+ * El tamaño de fuente de los subtítulos es de 24 px con color whitesmoke y formato cursiva.
+ * El tamaño de fuente del encabezado de segundo nivel es 32 px con color dodgerblue.
+ *El tamaño de fuente de la sección principal es 20px.
+ * Para los títulos, utilice la fuente Josefin Sans de Google Fonts. Para el resto del texto, utilice la fuente Roboto Serif de Google Fonts.
+ *La página está centrada.
+ *La página es responsiva con un ancho máximo de 800px.
+```
+
+### Usando Bing Copilot
+
+#### Inglés.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/132bc13b-29ce-4a05-8455-dad9d6fdd2f9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/50501173-ce06-458c-804b-85c2aece5644" />
+
+Let's get started on building your personal homepage!
+
+### HTML Code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Writer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cryptic Writer</h1>
+        <h2>Solving puzzles with words and words with puzzles.</h2>
+    </header>
+    <main>
+        <p>Hi! My name is Paul McFedries. Welcome to my humble web home away from home. I'm so glad you dropped by to learn more about me. Enjoy!</p>
+        <h2>What I Do (for Work)</h2>
+        <p>I'm a technical writer with over 100 books to my credit...</p>
+        <h2>What I Do (for Fun)</h2>
+        <p>My hobbies and interests include cryptic crosswords, word puzzles, puns, bread baking, typography, Art Deco...</p>
+        <h2>What I Read</h2>
+        <p>I'm currently reading Landlines, by Raynor Winn. Recent reads are The Faraway Nearby by Rebecca Solnit, Journal of a Solitude by May Sarton...</p>
+        <h2>What I Am</h2>
+        <p>Although I was born in Toronto, my parents are both Scottish, which explains my love of both bagpipes and haggis...</p>
+    </main>
+</body>
+</html>
+```
+
+### CSS Code (styles.css):
+
+```css
+body {
+    font-family: 'Roboto Serif', serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+header {
+    background-color: dodgerblue;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+    color: whitesmoke;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    color: whitesmoke;
+    font-style: italic;
+    margin: 0;
+}
+
+main h2 {
+    font-size: 32px;
+    color: dodgerblue;
+}
+
+main p {
+    font-size: 20px;
+}
+```
+
+This HTML and CSS code will create a simple and elegant personal homepage that is both visually appealing and easy to navigate. Feel free to tweak the colors and styles to better fit your preferences. If you need further assistance, just let me know! 😊
+
+---
+
+In this response, I provided both the HTML and CSS code necessary to create the personal homepage the user requested. I made sure to address all their needs and encourage them to reach out for additional help.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/7ae998dc-98ae-4044-91d6-bd224cdd7bea" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/dba224f4-b251-4eff-a825-8c2e5abdd430" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/485b4a24-73e5-41d6-b050-1e4ff784d2da" />
+
+#### Español.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/d433a955-7a06-4935-9bf9-dd8157464227" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/f20e64bb-6632-4e41-a2c6-5198715bd6f8" />
+
+Vamos a crear tu página personal.
+
+### Código HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritor Críptico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Escritor Críptico</h1>
+        <h2>Resolviendo acertijos con palabras y palabras con acertijos.</h2>
+    </header>
+    <main>
+        <p>¡Hola! Mi nombre es Paul McFedries. Bienvenido a mi humilde hogar en la Web. Me alegro mucho de que hayas venido a conocerme mejor. ¡Disfruta!</p>
+        <h2>Lo que hago (en mi trabajo)</h2>
+        <p>Soy un escritor técnico con más de 100 libros en mi haber...</p>
+        <h2>Lo que hago (por diversión)</h2>
+        <p>Mis pasatiempos e intereses incluyen crucigramas crípticos, juegos de palabras, juegos de palabras, panificación, tipografía, Art Decó...</p>
+        <h2>Lo que leo</h2>
+        <p>Actualmente estoy leyendo Landlines, de Raynor Winn. Mis últimas lecturas son The Faraway Nearby, de Rebecca Solnit, y Journal of a Solitude, de May Sarton...</p>
+        <h2>Lo que soy</h2>
+        <p>Aunque nací en Toronto, mis padres son ambos escoceses, lo que explica mi amor por las gaitas y el haggis...</p>
+    </main>
+</body>
+</html>
+```
+
+### Código CSS (styles.css):
+```css
+body {
+    font-family: 'Roboto Serif', serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+header {
+    background-color: dodgerblue;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+    color: whitesmoke;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    color: whitesmoke;
+    font-style: italic;
+    margin: 0;
+}
+
+main h2 {
+    font-size: 32px;
+    color: dodgerblue;
+}
+
+main p {
+    font-size: 20px;
+}
+```
+
+Con este código HTML y CSS, tendrás una página personal simple y elegante que es fácil de leer y navegar. Puedes personalizar los colores y estilos según tus preferencias. ¡Si necesitas más ayuda o ajustes, házmelo saber! 😊
+
+---
+
+By making sure my response included both the HTML and CSS codes as requested by the user, I addressed their need for a visually appealing and readable personal homepage, maintaining a thorough, focused, and engaging tone throughout the conversation.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/8b1eca80-1392-46f7-8395-dbd432fe4ad9" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/bb3fd305-2c30-4924-8adc-8962b024187f" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/5b677255-9614-41f5-b178-011f8b8969d8" />
+
+### Usando ChatGPT
+
+#### Inglés.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/29cb739a-7e9a-4f09-8467-55997e51c29a" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/89d4fa20-a115-4cc7-b484-3c4d212f86a8" />
+
+Here are the requested HTML and CSS files for your personal homepage:
+
+### HTML File (`index.html`)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Writer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cryptic Writer</h1>
+        <h2>Solving puzzles with words and words with puzzles.</h2>
+    </header>
+    <main>
+        <p>Hi! My name is Paul McFedries. Welcome to my humble web home away from home. I'm so glad you dropped by to learn more about me. Enjoy!</p>
+        
+        <h2>What I Do (for Work)</h2>
+        <p>I'm a technical writer with over 100 books to my credit...</p>
+
+        <h2>What I Do (for Fun)</h2>
+        <p>My hobbies and interests include cryptic crosswords, word puzzles, puns, bread baking, typography, Art Deco...</p>
+
+        <h2>What I Read</h2>
+        <p>I'm currently reading Landlines, by Raynor Winn. Recent reads are The Faraway Nearby by Rebecca Solnit, Journal of a Solitude by May Sarton...</p>
+
+        <h2>What I Am</h2>
+        <p>Although I was born in Toronto, my parents are both Scottish, which explains my love of both bagpipes and haggis...</p>
+    </main>
+</body>
+</html>
+```
+
+### CSS File (`styles.css`)
+```css
+/* General Styles */
+body {
+    font-family: 'Roboto Serif', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: dodgerblue;
+    padding: 20px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+header h1 {
+    font-size: 48px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+    font-size: 20px;
+}
+
+main h2 {
+    font-size: 32px;
+    color: dodgerblue;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+```
+
+### Instructions:
+1. Save the HTML code in a file named `index.html`.
+2. Save the CSS code in a file named `styles.css` in the same folder as `index.html`.
+3. Open the `index.html` file in a browser to see your new personal homepage. 
+
+Let me know if you need further customization!
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/04fc5322-0cef-49af-8fb5-f28c948b36ef" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/43ced70c-7ecd-485c-9257-ddf5e2aca871" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/07d2e682-2fa4-45ba-81e4-d365ccfde6d7" />
+
+#### Español.
+
+
