@@ -97,7 +97,6 @@ Durante este curso, también te convertirás en un experto en el uso y aprender�
 
 ![image](https://github.com/user-attachments/assets/fd2dbaba-be00-4367-be8b-6b09b71fa5cb)
 
-
 Finalmente, si ya es un diseñador web experimentado, algunas partes de este curso pueden resultarle interesantes, pero tal vez este curso también podría ayudarlo a ver qué partes de su proceso se pueden hacer más eficientes y dónde puede hacerlo más poderoso también. 
 
 ![image](https://github.com/user-attachments/assets/5a1c75a9-7e1c-446a-9d27-4b868dabb86d)
@@ -111,6 +110,30 @@ Por lo tanto, si algo de esto te pareció interesante, te animo a que te inscrib
 ![image](https://github.com/user-attachments/assets/bf961750-e2b0-45e0-82f5-05fe90f06dce)
 
 ## Introducción a ChatGPT
+
+En esta lección, aprenderá sobre ChatGPT, un servicio gratuito disponible en el sitio web de OpenAI. La lección describe lo que ChatGPT puede hacer en general y la amplia gama de posibilidades disponibles en ChatGPT.
+
+Probablemente, si has leído este curso, ya tienes una idea de qué es el ChatGPT y qué puede hacer. Es un servicio completamente gratuito disponible en el sitio web de OpenAI, donde básicamente puedes chatear con un modelo de IA o inteligencia artificial y puedes pedirle que haga muchas cosas por ti. Por ejemplo, puedes pedirle que te dé una receta de pizza italiana tradicional.
+
+Pero con ingredientes de cada continente o podrías pedirle que te escriba un cuento de hadas al revés o que te escriba un discurso de ventas para un determinado curso sobre el uso de IA para crear sitios web en los que podrías estar trabajando o y esto es en lo que nos centraremos en este curso, podrías pedirle que te dé el código para un sitio web completo, por ejemplo, un sitio web para una panadería. Obviamente, ChatGPT es muy potente, pero ¿qué es ChatGPT? Por eso, en este curso, quiero recalcar que no es importante entender realmente cómo funciona ChatGPT. Podremos usarlo igual de bien de todas formas.
+
+Pero déjame darte rápidamente una descripción general de cómo funciona, en caso de que estés interesado. ChatGPT es la última entrega de los grandes modelos de lenguaje de OpenIA. Estos modelos se entrenan utilizando grandes conjuntos de textos de Internet. Entonces, ¿qué es un modelo de lenguaje? ¿A menudo? El objetivo de estos modelos de lenguaje es predecir la siguiente palabra en una oración utilizando datos vistos previamente.
+
+En la mayoría de los modelos de lenguaje se utilizan dos tipos de técnicas: predicción del siguiente token y modelado de lenguaje enmascarado. Como sugiere el nombre, el primero predice la siguiente palabra en una secuencia y el otro enmascara una palabra e intenta predecir la masa de palabras. Ambos modelos se utilizan para dar al modelo una idea de cómo se procesa el texto.
+
+Estas técnicas estructuradas en el entrenamiento hacen que el modelo aprenda a escribir textos naturales fluidos, chatear. GPT y los modelos GPT anteriores usan variedades de estas técnicas de manera no supervisada. Y esto significa que se trata de un aprendizaje sin etiquetas de entrenamiento. Por lo tanto, sin que ningún humano le dé significado a los datos y, en su lugar, intenta averiguar los patrones generales de los datos por sí mismo.
+
+El resultado de estas operaciones son incrustaciones que no son más que representaciones numéricas de las oraciones interpretables por computadora que permiten la predicción de oraciones. En el siguiente paso, estas incrustaciones se introducen en un transformador. Los transformadores son la columna vertebral de los modelos GPT y mejoran la comprensión contextual del modelo.
+
+Al introducir un mecanismo de atención con la atención, se pretende que el modelo pueda centrarse en partes específicas de las entradas y, con ello, establecer relaciones contextuales. Sin embargo, esto deja de lado un paso importante de cómo nos comunicamos los humanos. Nosotros, como humanos, también integramos antecedentes y conocimiento situacional junto con el llamado sentido común para construir la mejor respuesta en el momento dado.
+
+Por lo tanto, el modelo tiene que aprender una forma de dar significado a cada oración para dar una respuesta adecuada que aumente la comprensión del modelo sobre el significado de una oración determinada. Se requiere un enfoque en el que participe un ser humano. Se introduce a un ser humano en el sistema mediante una técnica llamada aprendizaje de refuerzo a partir de la retroalimentación humana o RF. La introducción de este paso es el secreto del éxito de ChatGPT al conversar con humanos. En la práctica, esto funciona de la siguiente manera: los evaluadores humanos analizarán los resultados del chatbot y darán una clasificación sobre cuán útil, cuán veraz y, finalmente, cuán inofensivo es el resultado. Esta clasificación tiene el propósito de entrenar a un modelo de recompensa que a su vez ayuda a entrenar todo el modelo sobre qué resultados se desean y cuáles no, especialmente la evaluación del daño. El resultado realmente redujo la capacidad de ChatGPT, ya que muchas solicitudes pueden marcarse como inapropiadas o dañinas y, por lo tanto, no se responderán. ChatGPT también está sesgado, ya que cualquier sistema de este tipo siempre será el primero.
+
+Los datos con los que se entrena siempre contendrán algún sesgo y los evaluadores humanos, aunque intentan ser objetivos y contrarrestar el sesgo de los datos de entrenamiento, también siempre introducirán algún sesgo en el sistema. Por eso es muy importante tenerlo en cuenta al utilizar ChatGPT. Por lo tanto, el modelo es un modelo de lenguaje que esto implica que se destaca en la creación de contenido escrito. Actualmente no es capaz de crear contenido visual o de audio. Pero hay sistemas más antiguos que sí pueden hacerlo, como DALI para imágenes. Y puedes imaginar lo poderoso que será algo como ChatGPT en el futuro cuando incorpore todos esos tipos de medios en su salida también. Así que más notas prácticas sobre ChatGPT. Por lo tanto, ChatGPT no está conectado a Internet y solo se entrena con datos anteriores a 2021 y no responde a ninguna pregunta relacionada con lo que sucedió después de eso. Además, ChatGPT tiene la capacidad de recordar las mejores preguntas y temas de conversación para que la conversación sea más natural.
+
+
+Esta memoria no es infinita, pero tampoco es tan potente como la memoria humana. Almacena unos 4000 caracteres en la conversación. Y antes de que me olvide, puedes ir a ChatGPT en OpenAI.com. Y aquí mismo, en la parte superior de abrir un sitio web, puedes hacer clic en intentar y es posible que te pida que inicies sesión o crees una cuenta si aún no lo has hecho y luego ChatGPT se abrirá para ti y podrás comenzar a usarlo de inmediato. Muy bien. Eso es todo por esta introducción a ChatGPT en la próxima lección. Daremos una introducción a los códigos HTML y CSS y al diseño web en general. Pero por ahora, te dejaré con una cita del propio ChatGPT. El futuro de los modelos de lenguaje es ilimitado lo único que nos frena es nuestra imaginación. Nos vemos en la próxima lección.
+
 
 ## Introducción al diseño web: HTML y CSS
 
