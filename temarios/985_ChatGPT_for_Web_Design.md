@@ -36,7 +36,7 @@ Larno Visser: Larno Visser, diseñador industrial de los Países Bajos, se gradu
 
 ## Descripción del curso
 
-### Capítulo 1: Introducción
+### [Capítulo 1: Introducción](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/985_ChatGPT_for_Web_Design/Chapter-01.md)
 
 * Algunas notas antes de empezar
 * Introducción a ChatGPT
@@ -44,7 +44,7 @@ Larno Visser: Larno Visser, diseñador industrial de los Países Bajos, se gradu
 * ¿Dónde colocar el código?
 * Introducción a ChatGPT-4
 
-### Capítulo 2: ¡Creando un sitio web! 
+### [Capítulo 2: ¡Creando un sitio web!](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/985_ChatGPT_for_Web_Design/Chapter-02.md) 
 
 * Inicio del sitio web + Generación de imágenes
 * Terminando la Estructura del Sitio Web
@@ -53,7 +53,7 @@ Larno Visser: Larno Visser, diseñador industrial de los Países Bajos, se gradu
 * Aplicación de JavaScript: desplazamiento suave y control deslizante de imágenes
 * Cómo conectar un formulario de contacto a una base de datos
 
-### Capítulo 3: ¡Cómo crear y publicar un sitio web increíble!
+### [Capítulo 3: ¡Cómo crear y publicar un sitio web increíble!](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/985_ChatGPT_for_Web_Design/Chapter-03.md)
 
 * Configurar un dominio y alojamiento
 * Diseño y capacidad de respuesta de sitios web
