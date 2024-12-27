@@ -1078,12 +1078,10 @@ El esquema de colores actualizado está integrado en un diseño para una página
 
 ### 3.2.7 Comprensión de los encabezados de las páginas web
 
-Un encabezado de página web es una palabra o frase en negrita que se destaca verticalmente del resto del texto y sirve como título de la página o de una sección de la misma. En la mayoría de las páginas web, solo se utilizan tres tipos de encabezados:
+Un *encabezado - heading* de página web es una palabra o frase en negrita que se destaca verticalmente del resto del texto y sirve como título de la página o de una sección de la misma. En la mayoría de las páginas web, solo se utilizan tres tipos de encabezados:
 
 * Un único encabezado principal, que es el título de la página.
-
 * Uno o más encabezados de segundo nivel, que actúan como títulos de cada artículo o sección principal de la página.
-
 * Dentro de cada encabezado de segundo nivel, uno o más encabezados de tercer nivel, que actúan como títulos de subsecciones
 
 Afortunadamente, normalmente no es necesario especificar demasiado todo esto, ya que ChatGPT casi siempre determinará automáticamente la jerarquía de encabezados. Sin embargo, es posible que desee controlar el tamaño de fuente de sus encabezados para obtener el aspecto que desea. Para darle una idea de lo que está tratando, aquí hay algunas notas sobre los tamaños de fuente para los primeros tres niveles de encabezado:
@@ -1096,45 +1094,81 @@ Afortunadamente, normalmente no es necesario especificar demasiado todo esto, ya
 
 Nuevamente, no es necesario que se adentre demasiado en los detalles del código web. Para la mayoría de los mensajes de las páginas web, solo necesitará indicarle a ChatGPT qué tamaño de fuente desea para cada encabezado, suponiendo que los tamaños de encabezado predeterminados no se ajusten al diseño de su página.
 
-AQUIIIII
 ### 3.2.8 Elaboración del mensaje
 
 Ahora tienes todo lo que necesitas para solicitarle a ChatGPT que te proporcione el código web para tu página de inicio. El mensaje debería comenzar de la siguiente manera:
 
+```text
+I want to build a personal homepage. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a simple web page that includes the following:
+```
+
+```text
 Quiero crear una página personal. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web simple que incluya lo siguiente:
+```
+
 A continuación, especifique el contenido de su página, incluido lo siguiente (consulte la figura 3.7):
 
-Un encabezado (consulte el capítulo 4) que incluye el título y el subtítulo de la página.
+* Un header - encabezado (consulte el capítulo 4) que incluye el título y el subtítulo de la página.
+* Una sección principal que comienza con un párrafo introductorio (que puede ser algo así como un mensaje de bienvenida al lector).
+* Uno o más títulos de segundo nivel seguidos de algún texto. Por ejemplo, el título “Películas que me gustan” podría ir seguido de una lista de tus películas favoritas. Para cada elemento, no es necesario que proporciones el texto completo; basta con unas pocas palabras o la primera oración. Puedes completar el texto más tarde, después de que ChatGPT haya generado el código.
 
-Una sección principal que comienza con un párrafo introductorio (que puede ser algo así como un mensaje de bienvenida al lector).
+![image](https://github.com/user-attachments/assets/f01033f5-b9ba-4494-ae11-6675eb9ee295)
 
-Uno o más títulos de segundo nivel seguidos de algún texto. Por ejemplo, el título “Películas que me gustan” podría ir seguido de una lista de tus películas favoritas. Para cada elemento, no es necesario que proporciones el texto completo; basta con unas pocas palabras o la primera oración. Puedes completar el texto más tarde, después de que ChatGPT haya generado el código.
-
-
-
-Figura 3.7 Las secciones de la página de inicio personal
+**Figura 3.7 Las secciones de la personal home page**
 
 A continuación, le pides a ChatGPT que genere el CSS según el formato que deseas para tu página:
 
+```text
+Second, in a separate file please write the CSS code for the following:
+```
+
+```text
 En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+```
+
 A continuación, especifique el formato, incluido lo siguiente:
 
-El color de fondo del encabezado (debe ser el color principal de su esquema de colores).
-
-El tamaño de fuente y el color que desea utilizar para el título y el subtítulo de la página (el color debe ser el color secundario de su esquema de colores).
-
-El tamaño de fuente y el color de los títulos de segundo nivel (el color debe ser el color principal de su esquema de colores).
-
-El tamaño de fuente del texto de la página normal.
-
-Las fuentes a utilizar para los encabezados y el texto de la página normal.
-
-Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800 px es adecuada para la mayoría de las páginas.
+* El color de fondo del encabezado (debe ser el color principal de su esquema de colores).
+* El tamaño de fuente y el color que desea utilizar para el título y el subtítulo de la página (el color debe ser el color secundario de su esquema de colores).
+* El tamaño de fuente y el color de los títulos de segundo nivel (el color debe ser el color principal de su esquema de colores).
+* El tamaño de fuente del texto de la página normal.
+* Las fuentes a utilizar para los encabezados y el texto de la página normal.
+* Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800px es adecuada para la mayoría de las páginas.
 
 A continuación se muestra un ejemplo de mensaje para mi página de inicio:
 
+```text
+I want to build a personal homepage. I don't know how to code, so I need you to provide the code for me.
+ 
+First, write the HTML code for a simple web page that includes the following:
+ * A header that includes the title "Cryptic Writer" and the subtitle "Solving puzzles with words and words with puzzles."
+ * A main section where the first paragraph contains the text between the triple quotation marks: 
+"""Hi! My name is Paul McFedries. Welcome to my humble web home away from home. I'm so glad you dropped by to learn more about me. Enjoy!""".
+ * The second-level heading "What I Do (for Work)" followed by a paragraph that contains the text between the triple quotation marks:
+"""I'm a technical writer with over 100 books to my credit..."""
+* The second-level heading "What I Do (for Fun)" followed by a paragraph that contains the text between the triple quotation marks:
+"""My hobbies and interests include cryptic crosswords, word puzzles, puns, bread baking, typography, Art Deco..."""
+* The second-level heading "What I Read" followed by a paragraph that contains the text between the triple quotation marks:
+"""I'm currently reading Landlines, by Raynor Winn. Recent reads are The Faraway Nearby by Rebecca Solnit, Journal of a Solitude by May Sarton..."""
+* The second-level heading "What I Am" followed by a paragraph that contains the text between the triple quotation marks:
+"""Although I was born in Toronto, my parents are both Scottish, which explains my love of both bagpipes and haggis..."""
+ 
+Second, in a separate file please write the CSS code for the following:
+* The header background color is dodgerblue with 20px padding all around. Center the title and subtitle.
+ * The title font size is 48px with color whitesmoke.
+ * The subtitle font size is 24px with color whitesmoke and formatted as italic.
+ * The second-level heading font size is 32px with color dodgerblue.
+ * The main section font size is 20px.
+ * For the headings, use the Josefin Sans font from Google Fonts. For the rest of the text, use the Roboto Serif font from Google Fonts.
+ * The page is centered.
+ * The page is responsive with a maximum width of 800px.
+```
+
+```text
 Quiero crear una página personal. No sé programar, así que necesito que me proporciones el código.
  
 Primero, escriba el código HTML para una página web simple que incluya lo siguiente:
@@ -1159,64 +1193,75 @@ En segundo lugar, en un archivo separado, escriba el código CSS para lo siguien
  * Para los títulos, utilice la fuente Josefin Sans de Google Fonts. Para el resto del texto, utilice la fuente Roboto Serif de Google Fonts.
  *La página está centrada.
  *La página es responsiva con un ancho máximo de 800px.
-NOTA: incluí la instrucción para centrar la página porque una página que no ocupa toda la ventana del navegador (como esta página no ocupará ninguna ventana que tenga más de 800 px de ancho) generalmente se ve mejor cuando está centrada dentro de la ventana.
+```
 
-ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado index.html. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+**NOTA**: incluí la instrucción para centrar la página porque una página que no ocupa toda la ventana del navegador (como esta página no ocupará ninguna ventana que tenga más de 800px de ancho) generalmente se ve mejor cuando está centrada dentro de la ventana.
 
-<link rel="hoja de estilo" tipo="texto/css" href="estilos.css">
-Este código le indica al navegador web que busque el código CSS en un archivo llamado styles.css, por lo que su próxima tarea es copiar el código CSS generado y luego pegarlo y guardarlo en un archivo llamado styles.css (o cualquier nombre que vea en la <link>etiqueta). Asegúrese de guardar styles.css en la misma carpeta que su archivo index.html. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos HTML y CSS. Envié este mensaje a Bing Copilot en modo Precise y el código que generó dio como resultado la página que se muestra en la figura 3.8.
+ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado `index.html`. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+
+```
+<link rel="stylesheet" type="text/css" href="styles.css">
+```
+
+Este código le indica al navegador web que busque el código CSS en un archivo llamado `styles.css`, por lo que su próxima tarea es copiar el código CSS generado y luego pegarlo y guardarlo en un archivo llamado `styles.css` (o cualquier nombre que vea en la etiqueta `<link>`). Asegúrese de guardar `styles.css` en la misma carpeta que su archivo `index.html`. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos HTML y CSS. Envié este mensaje a Bing Copilot en modo Precise y el código que generó dio como resultado la página que se muestra en la figura 3.8.
+
+![image](https://github.com/user-attachments/assets/b08fc447-4ca0-4865-9ae7-31f832f87c0a)
 
 
+**Figura 3.8 Mi página personal home page generada por ChatGPT**
 
-Figura 3.8 Mi página de inicio personal generada por ChatGPT
+En este punto, si está satisfecho con la personal home page que ChatGPT creó para usted, puede omitir el resto de este capítulo e implementar el código como describo en el apéndice B. Sin embargo, si tiene curiosidad por saber un poco más sobre el código que ChatGPT generó, continúe con la siguiente sección.
 
-En este punto, si está satisfecho con la página de inicio personal que ChatGPT creó para usted, puede omitir el resto de este capítulo e implementar el código como describo en el apéndice B. Sin embargo, si tiene curiosidad por saber un poco más sobre el código que ChatGPT generó, continúe con la siguiente sección.
+## 3.3 Examinar el código de la personal home page
 
-3.3 Examinar el código de la página de inicio personal
 En esta sección, le daré una descripción general breve y no técnica del código de la página de inicio personal que ChatGPT generó para mí (y que produjo la página que se muestra en la figura 3.8). Es probable que el código que ChatGPT genere para usted no sea el mismo, por dos razones:
 
 ChatGPT tiene un grado de aleatoriedad incorporado, por lo que incluso indicaciones idénticas a menudo pueden generar respuestas ligeramente diferentes.
 
-El código de la página web generado por ChatGPT varía según la versión del modelo (GPT-3.5 versus GPT-4), la aplicación utilizada (OpenAI versus Copilot) y, para Copilot, el modo utilizado (creativo, equilibrado o preciso).
+El código de la página web generado por ChatGPT varía según la versión del modelo (GPT-3.5 versus GPT-4), la aplicación utilizada (OpenAI versus Copilot) y, para Copilot, el modo utilizado (creativo, equilibrado o preciso - creative, balanced, or precise).
 
-Dicho esto, el código de tu página de inicio personal probablemente será muy similar al mío, por lo que las anotaciones de código en las próximas dos secciones deberían ser útiles si tienes curiosidad acerca de cómo funciona el código.
+Dicho esto, el código de tu personal home page probablemente será muy similar al mío, por lo que las anotaciones de código en las próximas dos secciones deberían ser útiles si tienes curiosidad acerca de cómo funciona el código.
 
-3.3.1 Examinar el HTML
-Comenzaré con el código HTML generado por ChatGPT para mi página de inicio personal, que se muestra aquí:
+### 3.3.1 Examinar el HTML
 
+Comenzaré con el código HTML generado por ChatGPT para mi personal home page, que se muestra aquí:
+
+```html
 <!DOCTYPE html>
 <html>
-  <cabeza>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Serif"
-rel="hoja de estilo">                                                       ① 
-    <link rel="hoja de estilo" tipo="texto/css" href="estilos.css">           ②
-    <title>Escritor críptico</title>
-  </cabeza>
-  <cuerpo>
-    <header>                                                            ③ 
-      <h1>Escritor críptico</h1>                                           ④ 
-      <h2>Resolver acertijos con palabras y palabras con acertijos.</h2>       ⑤
-    </encabezado>
-    <main>                                                              ⑥ 
-      <p>¡Hola! Mi nombre es Paul McFedries. Bienvenido a mi humilde            ⑦ 
-         hogar lejos de casa en la web. Me alegro mucho de que hayas pasado por aquí            ⑦ 
-         para conocer más sobre mí. ¡Disfruta!</p>                             ⑦ 
-      <h2>Lo que hago (por trabajo)</h2>                                     ⑧
-      <p>Soy un escritor técnico con más de 100 libros en mi haber...</p>
-      <h2>Lo que hago (por diversión)</h2>                                      ⑧
-      <p>Mis pasatiempos e intereses incluyen crucigramas crípticos,
-         juegos de palabras, juegos de palabras, panificación, tipografía, Art Decó...</p>
-      <h2>Lo que leo</h2>                                              ⑧
-      <p>Actualmente estoy leyendo Landlines, de Raynor Winn.
-         Las lecturas son The Faraway Nearby de Rebecca Solnit, Journal
-         De una soledad de May Sarton...</p>
-      <h2>Lo que soy</h2>                                                ⑧
-      <p>Aunque nací en Toronto, mis padres son ambos
-         Escocés, lo que explica mi amor por las gaitas y
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Serif" 
+rel="stylesheet">                                                      ①
+    <link rel="stylesheet" type="text/css" href="styles.css">          ②
+    <title>Cryptic Writer</title>
+  </head>
+  <body> 
+    <header>                                                           ③
+      <h1>Cryptic Writer</h1>                                          ④
+      <h2>Solving puzzles with words and words with puzzles.</h2>      ⑤
+    </header>
+    <main>                                                             ⑥
+      <p>Hi! My name is Paul McFedries. Welcome to my humble           ⑦
+         web home away from home. I'm so glad you dropped by           ⑦
+         to learn more about me. Enjoy!</p>                            ⑦
+      <h2>What I Do (for Work)</h2>                                    ⑧
+      <p>I'm a technical writer with over 100 books to my credit...</p>
+      <h2>What I Do (for Fun)</h2>                                     ⑧
+      <p>My hobbies and interests include cryptic crosswords, 
+         word puzzles, puns, bread baking, typography, Art Deco...</p>
+      <h2>What I Read</h2>                                             ⑧
+      <p>I'm currently reading Landlines, by Raynor Winn. Recent 
+         reads are The Faraway Nearby by Rebecca Solnit, Journal 
+         of a Solitude by May Sarton...</p>
+      <h2>What I Am</h2>                                               ⑧
+      <p>Although I was born in Toronto, my parents are both 
+         Scottish, which explains my love of both bagpipes and 
          haggis...</p>
-    </principal>
-  </cuerpo>
+    </main>
+  </body>
 </html>
+```
+
 ① Carga las fuentes Josefin Sans y Roboto Serif de Google Fonts
 
 ② Le dice al navegador web dónde encontrar el código CSS
@@ -1235,43 +1280,47 @@ rel="hoja de estilo">                                                       ①
 
 Tenga en cuenta, en particular, el código que le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
 
-3.3.2 Examinando el CSS
-El código CSS que ChatGPT generó para mi página de inicio se muestra aquí:
+### 3.3.2 Examinando el CSS
 
-cuerpo {
-  familia de fuentes: 'Roboto Serif', serif;       ① 
-  ancho máximo: 800px;                         ② 
-  margen: automático;                             ③
+El código CSS que ChatGPT generó para mi personal home page se muestra aquí:
+
+```css
+body {
+  font-family: 'Roboto Serif', serif;      ①
+  max-width: 800px;                        ②
+  margin: auto;                            ③
 }
  
-encabezado {
-  color de fondo: dodgerblue;             ④ 
-  relleno: 20px;                            ⑤ 
-  alineación del texto: centro;                       ⑥
+header {
+  background-color: dodgerblue;            ④
+  padding: 20px;                           ⑤
+  text-align: center;                      ⑥
 }
  
-encabezado h1 {
-  familia de fuentes: 'Josefin Sans', sans-serif; ⑦ 
-  tamaño de fuente: 48px;                          ⑧ 
-  color: whitesmoke;                        ⑧
+header h1 {
+  font-family: 'Josefin Sans', sans-serif; ⑦
+  font-size: 48px;                         ⑧
+  color: whitesmoke;                       ⑧
 }
  
-encabezado h2 {
-  familia de fuentes: 'Josefin Sans', sans-serif; ⑦ 
-  tamaño de fuente: 24px;                          ⑨ 
-  color: whitesmoke;                        ⑨
-  estilo de fuente: cursiva;    
+header h2 {
+  font-family: 'Josefin Sans', sans-serif; ⑦
+  font-size: 24px;                         ⑨
+  color: whitesmoke;                       ⑨
+  font-style: italic;    
 }
  
-principal {
-  tamaño de fuente: 20px;                          ⑩
+main {
+  font-size: 20px;                         ⑩
 }
  
-principal h2 {
-  familia de fuentes: 'Josefin Sans', sans-serif; ⑦ 
-  tamaño de fuente: 32px;                          ⑪ 
-  color: dodgerblue;                        ⑪ 
+main h2 {
+  font-family: 'Josefin Sans', sans-serif; ⑦
+  font-size: 32px;                         ⑪
+  color: dodgerblue;                       ⑪
 }
+```
+
 ① Aplica Roboto Serif al texto de la página.
 
 ② Establece el ancho máximo de página en 800 px
@@ -1296,44 +1345,42 @@ principal h2 {
 
 Si lo desea, puede utilizar estas anotaciones para modificar el código de su página web, como describo en la siguiente sección.
 
-3.4 Personalización de la página de inicio personal
-Si el código de página de inicio personal que ChatGPT generó para usted no es el que deseaba, tiene dos opciones:
+## 3.4 Personalización de la personal home page
 
-Si la página resultante no se acerca a lo que desea, probablemente sea mejor reescribir el mensaje, iniciar una nueva sesión de chat e intentarlo nuevamente.
+Si el código de personal home page que ChatGPT generó para usted no es el que deseaba, tiene dos opciones:
 
-Si la página resultante es bastante buena pero solo necesita algunos ajustes, solicite a ChatGPT que realice esos ajustes por usted. Asegúrese de enviar esta solicitud en la misma sesión que la solicitud original.
+* Si la página resultante no se acerca a lo que desea, probablemente sea mejor reescribir el mensaje, iniciar una nueva sesión de chat e intentarlo nuevamente.
+* Si la página resultante es bastante buena pero solo necesita algunos ajustes, solicite a ChatGPT que realice esos ajustes por usted. Asegúrese de enviar este request  en la misma sesión que el prompt original.
 
 En el segundo caso, si el código producido por ChatGPT realmente solo necesita algunos pequeños retoques, considere modificar el código manualmente según las anotaciones que proporcioné en la sección anterior. Como no conoce el código de las páginas web, es mejor no intentar realizar cambios importantes. Sin embargo, aún quedan algunas formas de alterar el código para obtener la página que desea.
 
 Primero, aquí hay algunas sugerencias de personalización para el código HTML:
 
-En el encabezado, puedes editar el título o el subtítulo. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: <h1>y </h1>para el título; <h2>y </h2>para el subtítulo.
+* En el encabezado, puedes editar el título o el subtítulo. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: `<h1>` y `</h1>` para el título; `<h2>` y `</h2>` para el subtítulo.
 
-En la sección principal del código HTML, puede agregar, eliminar o editar el texto dentro de cada encabezado de segundo nivel (es decir, el texto entre las etiquetas <h2>y </h2>; asegúrese de no editar ni eliminar estas etiquetas).
+* En la sección principal del código HTML, puede agregar, eliminar o editar el texto dentro de cada encabezado de segundo nivel (es decir, el texto entre las etiquetas `<h2>` y `</h2>`; asegúrese de no editar ni eliminar estas etiquetas).
 
-En la sección principal del código HTML, puede agregar, eliminar o editar el texto dentro de cada párrafo (es decir, el texto entre las etiquetas <p>y </p>; asegúrese de no editar ni eliminar estas etiquetas).
+* En la sección principal del código HTML, puede agregar, eliminar o editar el texto dentro de cada párrafo (es decir, el texto entre las etiquetas `<p>` y `</p>`; asegúrese de no editar ni eliminar estas etiquetas).
 
-En la sección principal del código HTML, puede agregar un nuevo párrafo escribiendo una <p>etiqueta, seguido del texto del párrafo, seguido de la </p>etiqueta.
+* En la sección principal del código HTML, puede agregar un nuevo párrafo escribiendo una etiqueta `<p>`, seguido del texto del párrafo, seguido de la etiqueta `</p>`.
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-Si desea que su página de inicio tenga un ancho máximo diferente, cambie el max-widthvalor a algo distinto de 800px.
+* Si desea que su página de inicio tenga un ancho máximo diferente, cambie el valor `max-width` a algo distinto de `800px`.
+* Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
+* Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la unidad `px` en su lugar.
+* Para que el código de su página sea más accesible, considere convertir todas las medidas en **px** a medidas en **rem**. `1 rem` es, de manera predeterminada, equivalente a `16px`, por lo que `20 px` son `1,25 rem`, `24 px` son `1,5 rem`, `32 px` son `2 rem`, `48px` son `3rem`, y así sucesivamente. La unidad **rem** es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
-Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
+## Resumen
 
-Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
+* Al contarle a ChatGPT un poco sobre el contenido de su página, puede incitarlo a generar títulos y subtítulos creativos.
 
-Para que el código de su página sea más accesible, considere convertir todas las medidas en px a medidas en rem. 1 rem es, de manera predeterminada, equivalente a 16 px, por lo que 20 px es 1,25 rem, 24 px es 1,5 rem, 32 px es 2 rem, 48 px es 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+* ChatGPT puede ayudarle con tres aspectos clave de la tipografía web: el tipo de letra, el tamaño de letra y el estilo(typography: the typeface, the type size, and style.).
 
-Resumen
-Al contarle a ChatGPT un poco sobre el contenido de su página, puede incitarlo a generar títulos y subtítulos creativos.
+* Puedes pedirle a ChatGPT que cree un esquema de color utilizando cualquiera de las 140 palabras clave de color que ofrece CSS.
 
-ChatGPT puede ayudarle con tres aspectos clave de la tipografía web: el tipo de letra, el tamaño de letra y el estilo.
+* Casi todas las páginas web utilizan encabezados: un encabezado de primer nivel que actúa como título de la página, así como uno o más encabezados de segundo y tercer nivel.
 
-Puedes pedirle a ChatGPT que cree un esquema de color utilizando cualquiera de las 140 palabras clave de color que ofrece CSS.
+* Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
 
-Casi todas las páginas web utilizan encabezados: un encabezado de primer nivel que actúa como título de la página, así como uno o más encabezados de segundo y tercer nivel.
-
-Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
-
-Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
+* Guarde el HTML generado en el archivo `index.html` y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`.
