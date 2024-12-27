@@ -1742,4 +1742,149 @@ Let me know if you need further customization!
 
 #### Español.
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/18c56caf-2773-44ae-b1f9-c83e77c71820" />
 
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/759bed64-9378-48e2-b446-ec40e0a087da" />
+
+He generado los archivos de código necesarios para tu página personal, con los elementos y estilos solicitados. Aquí están los detalles:
+
+### Archivo HTML (`index.html`):
+Este archivo define la estructura de tu página.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritor Críptico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Escritor Críptico</h1>
+        <h2>Resolviendo acertijos con palabras y palabras con acertijos</h2>
+    </header>
+    <main>
+        <p>¡Hola! Mi nombre es Paul McFedries. Bienvenido a mi humilde hogar en la Web. Me alegro mucho de que hayas venido a conocerme mejor. ¡Disfruta!</p>
+        <h2>Lo que hago (en mi trabajo)</h2>
+        <p>Soy un escritor técnico con más de 100 libros en mi haber...</p>
+        <h2>Lo que hago (por diversión)</h2>
+        <p>Mis pasatiempos e intereses incluyen crucigramas crípticos, juegos de palabras, juegos de palabras, panificación, tipografía, Art Decó...</p>
+        <h2>Lo que leo</h2>
+        <p>Actualmente estoy leyendo Landlines, de Raynor Winn. Mis últimas lecturas son The Faraway Nearby, de Rebecca Solnit, y Journal of a Solitude, de May Sarton...</p>
+        <h2>Lo que soy</h2>
+        <p>Aunque nací en Toronto, mis padres son ambos escoceses, lo que explica mi amor por las gaitas y el haggis...</p>
+    </main>
+</body>
+</html>
+```
+
+### Archivo CSS (`styles.css`):
+Este archivo define el estilo visual de tu página.
+
+```css
+/* Estilo para Escritor Críptico */
+
+body {
+    font-family: 'Roboto Serif', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+main {
+    max-width: 800px;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: dodgerblue;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+header h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    font-style: italic;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+    color: dodgerblue;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Roboto Serif', serif;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 10px;
+    }
+
+    header {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+```
+
+### Cómo usar los archivos
+
+1. Crea un archivo llamado `index.html` y pega el código HTML en él.
+2. Crea un archivo llamado `styles.css` y pega el código CSS en él.
+3. Asegúrate de que ambos archivos estén en el mismo directorio.
+4. Abre el archivo `index.html` en tu navegador para ver tu página personal.
+
+Si necesitas más ayuda o ajustes, ¡estaré encantado de ayudarte! 😊
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/0a79642b-6a01-4ad8-b4d2-94d370763415" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/91d5e7bf-bf8d-4208-bf43-b24744adeeb0" />
+
+El diseño cambio un poco ya que llame dos veces al mismo Prompt.
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/588c5f65-4d0f-4877-9f1b-590bdaaa01fb" />
+
+
+### Comparación Copilot vs ChapGPT
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/485b4a24-73e5-41d6-b050-1e4ff784d2da" />
+
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/07d2e682-2fa4-45ba-81e4-d365ccfde6d7" />
