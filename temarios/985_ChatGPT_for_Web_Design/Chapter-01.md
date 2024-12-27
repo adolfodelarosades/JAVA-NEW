@@ -108,8 +108,7 @@ También proporcionamos muchos recursos en las lecciones y tenemos todos los arc
 
 Por lo tanto, si algo de esto te pareció interesante, te animo a que te inscribas en este curso. Espero poder enseñarte y nos vemos en la próxima lección.
 
-![Uploading image.png…]()
-
+![image](https://github.com/user-attachments/assets/bf961750-e2b0-45e0-82f5-05fe90f06dce)
 
 ## Introducción a ChatGPT
 
