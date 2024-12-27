@@ -8,13 +8,15 @@
 
 ## Algunas notas antes de empezar
 
+En esta breve descripción general, el instructor brinda explicaciones vitales sobre cómo funciona ChatGPT, para qué podemos usar ChatGPT, qué podemos hacer usando ChatGPT y brevemente lo que este curso nos ofrece con respecto al aprendizaje y los conceptos cubiertos.
+
 ![image](https://github.com/user-attachments/assets/af02ec6b-d9af-4e16-b1b3-d15c17081626)
 
-En esta breve descripción general, el instructor brinda explicaciones vitales sobre cómo funciona ChatGPT, para qué podemos usar ChatGPT, qué podemos hacer usando ChatGPT y brevemente lo que este curso nos ofrece con respecto al aprendizaje y los conceptos cubiertos.
+Hola, mi nombre es Lorna 
 
 ![image](https://github.com/user-attachments/assets/3ab3ca87-cbcd-4ecf-9ec3-6c48bdb78982)
 
-Hola, mi nombre es Lorna y seré tu instructor. Si llegaste a este curso, probablemente hayas oído hablar de ChatGPT, 
+y seré tu instructor. Si llegaste a este curso, probablemente hayas oído hablar de ChatGPT, 
 
 ![image](https://github.com/user-attachments/assets/845769bf-0830-43ae-bcc1-7804e2f53c16)
 
@@ -30,11 +32,11 @@ Esto significa que el poder de la codificación ya no está reservado para aquel
 
 ![image](https://github.com/user-attachments/assets/5990594d-5484-4aff-bc0f-07191b8f41e5)
 
-
+Sin embargo, la mayoría de las personas que nunca han escrito una sola línea de código en su vida ni siquiera saben qué hacer con el código. No saben qué tipos de códigos existen ni qué se puede hacer con ellos ni dónde colocar el código para que funcione.
 
 ![image](https://github.com/user-attachments/assets/08e2041a-f7d9-4b34-bd5d-6adf06b62538)
 
-Sin embargo, la mayoría de las personas que nunca han escrito una sola línea de código en su vida ni siquiera saben qué hacer con el código. No saben qué tipos de códigos existen ni qué se puede hacer con ellos ni dónde colocar el código para que funcione. Este curso tiene como objetivo abordar este problema enseñando a cualquier persona a utilizar ChatGPT para crear un sitio web increíble, totalmente personalizado según sus deseos y que sea interactivo e incluso tiene un formulario de registro funcional. Así que puedes crear una lista de correo electrónico o ponerte en contacto con los visitantes de tu sitio web. Si, por ejemplo, estás creando un portafolio personal o un sitio web para tu negocio, también te mostramos en profundidad cómo puedes registrar tu dominio y publicar tu sitio web en línea. ChatGPT te proporcionará todo el código que necesitas para el sitio web.
+Este curso tiene como objetivo abordar este problema enseñando a cualquier persona a utilizar ChatGPT para crear un sitio web increíble, totalmente personalizado según sus deseos y que sea interactivo e incluso tiene un formulario de registro funcional. Así que puedes crear una lista de correo electrónico o ponerte en contacto con los visitantes de tu sitio web. Si, por ejemplo, estás creando un portafolio personal o un sitio web para tu negocio, también te mostramos en profundidad cómo puedes registrar tu dominio y publicar tu sitio web en línea. ChatGPT te proporcionará todo el código que necesitas para el sitio web.
 
 De esta forma, cualquiera puede hacerlo, incluso si nunca ha escrito una sola línea de código en su vida. Al finalizar este curso, estará familiarizado con cuatro lenguajes de codificación diferentes. Y lo que es más importante, comprenderá cómo funciona el código en general y cómo usar ChatGPT para brindarle el código en un nuevo lenguaje de tal manera que le resulte inmediatamente claro cómo usarlo y cómo implementarlo.
 
