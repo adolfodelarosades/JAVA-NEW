@@ -89,13 +89,26 @@ nunca hice nada yo mismo, pero ahora puedo crear un buen sitio web de aspecto pr
 
 ![image](https://github.com/user-attachments/assets/9017f315-c888-4650-976e-5786cce06220)
 
+lo que es aún más importante, ahora entiendo lo que puedo hacer con y cómo usarlo para hacerme más poderoso. Y eso es exactamente lo que queremos enseñarte también.
+
 ![image](https://github.com/user-attachments/assets/c4b946e2-7786-4552-9cdd-b6f9b3ce9c15)
 
+Durante este curso, también te convertirás en un experto en el uso y aprenderá sus limitaciones, así como lo que puede hacer para tenerlo. Le brindaremos exactamente lo que necesita. 
+
+![image](https://github.com/user-attachments/assets/fd2dbaba-be00-4367-be8b-6b09b71fa5cb)
 
 
+Finalmente, si ya es un diseñador web experimentado, algunas partes de este curso pueden resultarle interesantes, pero tal vez este curso también podría ayudarlo a ver qué partes de su proceso se pueden hacer más eficientes y dónde puede hacerlo más poderoso también. 
 
-lo que es aún más importante, ahora entiendo lo que puedo hacer con y cómo usarlo para hacerme más poderoso. Y eso es exactamente lo que queremos enseñarte también. Durante este curso, también te convertirás en un experto en el uso y aprenderá sus limitaciones, así como lo que puede hacer para tenerlo. Le brindaremos exactamente lo que necesita. Finalmente, si ya es un diseñador web experimentado, algunas partes de este curso pueden resultarle interesantes, pero tal vez este curso también podría ayudarlo a ver qué partes de su proceso se pueden hacer más eficientes y dónde puede hacerlo más poderoso también. También proporcionamos muchos recursos en las lecciones y tenemos todos los archivos de el sitio web en el que estamos trabajando está disponible para que lo descargues en cada lección. De esta manera, podrás seguirlo lo más fácilmente posible y sacar el máximo provecho de este curso. Por lo tanto, si algo de esto te pareció interesante, te animo a que te inscribas en este curso. Espero poder enseñarte y nos vemos en la próxima lección.
+![image](https://github.com/user-attachments/assets/5a1c75a9-7e1c-446a-9d27-4b868dabb86d)
 
+También proporcionamos muchos recursos en las lecciones y tenemos todos los archivos de el sitio web en el que estamos trabajando está disponible para que lo descargues en cada lección. De esta manera, podrás seguirlo lo más fácilmente posible y sacar el máximo provecho de este curso. 
+
+![image](https://github.com/user-attachments/assets/543c948f-70fd-4a6d-82e7-166f0f8149bd)
+
+Por lo tanto, si algo de esto te pareció interesante, te animo a que te inscribas en este curso. Espero poder enseñarte y nos vemos en la próxima lección.
+
+![Uploading image.png…]()
 
 
 ## Introducción a ChatGPT
