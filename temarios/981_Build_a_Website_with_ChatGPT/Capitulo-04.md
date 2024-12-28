@@ -233,7 +233,7 @@ El aspecto final del modelo de caja - box model que discutiré aquí es el margi
 
 #### TRABAJAR CON MARGINS
 
-En el elemento box, el margen es el espacio en blanco que se agrega arriba, abajo, a la izquierda y a la derecha del borde. El margen le permite controlar el espacio entre los elementos. Los valores de margen positivos, por ejemplo, evitan que los elementos de la página choquen entre sí o se superpongan y también evitan que los elementos rocen los bordes de la ventana gráfica del navegador. Por otro lado, si su diseño requiere que los elementos se superpongan, puede lograr este efecto utilizando valores de margen negativos.
+En el elemento box, el margen es el espacio en blanco que se agrega arriba, abajo, a la izquierda y a la derecha del borde. El margen le permite controlar el espacio entre los elementos. ***Los valores de margen positivos, por ejemplo, evitan que los elementos de la página choquen entre sí o se superpongan y también evitan que los elementos rocen los bordes de la ventana gráfica del navegador***. Por otro lado, ***si su diseño requiere que los elementos se superpongan, puede lograr este efecto utilizando valores de margen negativos***.
 
 El margen se aplica estableciendo un valor en uno o más de los cuatro lados de un elemento:
 
@@ -249,24 +249,43 @@ element {
 Cada valor de margen es una medida en píxeles. A continuación, se muestra un ejemplo:
 
 ```css
+footer {
+    margin-top: 24px;
+    margin-right: 40px;
+    margin-bottom: 32px;
+    margin-left: 48px;
+}
 ```
 
-Al igual que con el relleno, una propiedad abreviada de margen le permite aplicar los márgenes mediante una única declaración. Puede reescribir la regla del ejemplo anterior utilizando la sintaxis abreviada de la siguiente manera:
+Al igual que con el padding, una propiedad abreviada de margen le permite aplicar los márgenes mediante una única declaración. Puede reescribir la regla del ejemplo anterior utilizando la sintaxis abreviada de la siguiente manera:
 
 ```css
+footer {
+    margin: 24px 40px 32px 48px;
+}
 ```
 
 Si proporciona un solo valor, el navegador web aplicará ese valor de margen a los cuatro lados del elemento.
 
 Para solicitarle a ChatGPT que establezca el margen de un elemento, incluya una instrucción similar a la siguiente en la parte CSS de su solicitud:
 
-Dale estilo al cuerpo con un relleno de 16 px alrededor.
+```text
+Style the body with 16px padding all around.
+```
+
+```text
+Dale estilo al cuerpo con un relleno de 16px alrededor.
+```
+
 Basándose en esta instrucción, ChatGPT generará un código como este:
 
 ```css
+body {
+    padding: 16px;
+}
 ```
 
-Anteriormente, viste un ejemplo de un encabezado que incluía una imagen. En la siguiente sección, se explica cómo trabajar con imágenes de páginas web.
+Anteriormente, viste un ejemplo de un header que incluía una imagen. En la siguiente sección, se explica cómo trabajar con imágenes de páginas web.
 
 ### 4.2.4 Trabajar con imágenes
 
@@ -276,13 +295,39 @@ Una imagen es un archivo independiente que puedes indicarle a ChatGPT que haga r
 
 En este capítulo, supongo que ya tienes las imágenes que quieres incluir en tu página. Para el proyecto del club de lectura, necesitas dos imágenes:
 
-Un logotipo para el club de lectura; esta imagen irá en el encabezado de la página.
+* Un logotipo para el club de lectura; esta imagen irá en el encabezado de la página.
+* La portada del libro que el club está leyendo actualmente; esta imagen irá en la sección principal de la página.
 
-La portada del libro que el club está leyendo actualmente; esta imagen irá en la sección principal de la página.
+Debes saber los nombres de todos los archivos de imagen que deseas incluir en tu página porque incluirás esos nombres en tu prompt.
 
-Debes saber los nombres de todos los archivos de imagen que deseas incluir en tu página porque incluirás esos nombres en tu mensaje.
+**Tabla 4.1 Formatos de archivos de imagen**
 
-Tabla 4.1 Formatos de archivos de imagen
+<img width="1028" alt="image" src="https://github.com/user-attachments/assets/32e37176-2e3a-4513-989a-c556f777ee72" />
+
+<img width="663" alt="image" src="https://github.com/user-attachments/assets/14f3cc6a-5630-4875-845c-0d7928fc9641" />
+
+<img width="664" alt="image" src="https://github.com/user-attachments/assets/9090c5c1-12d1-4ead-b2c0-7b7d3e954544" />
+
+<img width="656" alt="image" src="https://github.com/user-attachments/assets/1aa2cc81-c322-4427-b7a7-49c338807b0b" />
+
+<img width="663" alt="image" src="https://github.com/user-attachments/assets/96f32754-c3c4-4f88-9670-50dad15aa709" />
+
+<img width="666" alt="image" src="https://github.com/user-attachments/assets/179881ca-3181-49f5-8d36-a23087dc4ae7" />
+
+<img width="649" alt="image" src="https://github.com/user-attachments/assets/fd6fd5f8-6aac-4562-bde3-db1ed96a8e36" />
+
+<img width="660" alt="image" src="https://github.com/user-attachments/assets/b024cabc-b068-4495-9edc-d08020afc06b" />
+
+<img width="651" alt="image" src="https://github.com/user-attachments/assets/3a2a9378-5fe7-41be-8132-8d4ad7544533" />
+
+<img width="663" alt="image" src="https://github.com/user-attachments/assets/a1c68045-d116-4ade-ae9c-f1858d1ac985" />
+
+
+
+
+
+
+
 
 Nombre
 
