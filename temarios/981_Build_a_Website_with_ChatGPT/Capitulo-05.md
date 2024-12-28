@@ -1,123 +1,138 @@
 # 5 Publicación de publicaciones en la página
+
 Este capítulo cubre
 
-Colaborando con ChatGPT para publicar publicaciones como acordeones
-Generación de nuevas imágenes mediante DALL-E
-Incitación a ChatGPT para crear una página de diario en línea
-Examinar y personalizar el código de la página web ChatGPT
+* Colaborando con ChatGPT para publicar posts como acordeones
+* Generación de nuevas imágenes mediante DALL-E
+* Prompting ChatGPT para crear una página de diario en línea
+* Examinar y personalizar el código de la página web ChatGPT
+
 Aunque a muchas personas no les gusta escribir, a muchos de nosotros realmente nos gusta el acto de poner la pluma sobre el papel o los dedos sobre el teclado. A muchos de nosotros nos encanta escribir tanto que, además de escribir de forma más “seria”, mantenemos un hábito de escritura regular en forma de un diario o bitácora que actualizamos con frecuencia. Y una cantidad sorprendente de esas personas tienen el deseo de publicar sus reflexiones en línea. De hecho, siempre que hablo con gente sobre cómo crear páginas web, la pregunta más común es, con diferencia, “¿Cómo empiezo un diario/blog en línea?”.
 
 Afortunadamente, si ya tienes algo escrito, es muy fácil conseguir que ChatGPT te ayude a crear una página web en la que puedas publicar tu prosa para que todo el mundo la lea. También puedes usar IA para generar nuevas imágenes para cosas como logotipos de sitios, íconos e ilustraciones de páginas. Este capítulo también te muestra cómo usar la combinación de ChatGPT y el modelo de creación de imágenes DALL-E de OpenAI para generar las imágenes que necesites para tu página.
 
 Toda esta información se incluye en un mensaje detallado que deberás enviar a ChatGPT para que produzca el código de una página de diario en línea donde puedas publicar cualquier texto que quieras compartir. Este capítulo también ofrece una explicación detallada del código generado por ChatGPT e incluso ofrece algunos consejos para personalizar el código manualmente para que todo quede exactamente como lo deseas.
 
-5.1 Comprender el proyecto de este capítulo
+## 5.1 Comprender el proyecto de este capítulo
+
 En este capítulo, vas a contar con ChatGPT para que te ayude a crear una página web sencilla para un diario en línea. La página final incluirá los siguientes componentes:
 
-Un elemento de encabezado que incluye lo siguiente:
-
-El logotipo de la revista (generado por Dall-E)
-
-El título de la revista
-
-El lema de la revista
-
-Elemento principal donde aparecen las entradas del diario. Cada entrada muestra solo su título al principio, pero al hacer clic en ella, se muestra el contenido de la entrada.
-
-Un elemento de pie de página que incluye un aviso de derechos de autor.
+* Un elemento header que incluye lo siguiente:
+   * El logotipo de la revista (generado por Dall-E)
+   * El título de la revista
+   * El lema de la revista
+* Elemento main donde aparecen las entradas del diario. Cada entrada muestra solo su título al principio, pero al hacer clic en ella, se muestra el contenido de la entrada.
+* Un elemento footer que incluye un aviso de derechos de autor.
 
 La Figura 5.1 muestra un ejemplo del tipo de página que creará con la ayuda de ChatGPT en este capítulo. La simplicidad de esta página significa que puede modificarla fácilmente para almacenar entradas para un blog o diario de viaje, ensayos, reseñas de libros o películas, historias de fan fiction o cualquier tipo de escritura periódica.
 
+<img width="685" alt="image" src="https://github.com/user-attachments/assets/1db8a9d6-878d-4bc6-9da6-f6e0616b2daa" />
 
+**Figura 5.1 Una página de diario en línea generada por ChatGPT**
 
-Figura 5.1 Una página de diario en línea generada por ChatGPT
+## 5.2 Creación de la página del diario en línea
 
-5.2 Creación de la página del diario en línea
-Antes de crear el mensaje que generará el código para la página de tu diario en línea, necesitas algunos antecedentes sobre un elemento de la página web llamado acordeón, así como también sobre cómo lograr que la IA cree nuevas imágenes a partir de mensajes de texto. Las siguientes secciones brindan los detalles.
+Antes de crear el prompt que generará el código para la página de tu diario en línea, necesitas algunos antecedentes sobre un elemento de la página web llamado accordion - acordeón, así como también sobre cómo lograr que la IA cree nuevas imágenes a partir de prompts de texto. Las siguientes secciones brindan los detalles.
 
-5.2.1 Trabajar con acordeones
+### 5.2.1 Trabajar con accordions-acordeones
+
 La única tecnología nueva de páginas web que aprenderá en este capítulo es el acordeón , que es un elemento HTML interactivo que permite a los usuarios alternar entre mostrar solo el título de un elemento y el título y el contenido del elemento. Un acordeón consta de dos elementos:
 
-Resumen : Un elemento que actúa como título o descripción del acordeón.
+* ***Summary-Resumen***: Un elemento que actúa como título o descripción del acordeón.
 
-Detalles : un elemento que contiene la totalidad del contenido del acordeón, incluido el elemento de resumen y cualquier otro contenido que proporcione (como uno o más artículos, encabezados, párrafos, imágenes, etc.)
+* ***Details-Detalles***: Un elemento que contiene la totalidad del contenido del acordeón, incluido el elemento de resumen y cualquier otro contenido que proporcione (como uno o más artículos, encabezados, párrafos, imágenes, etc.)
 
-La idea detrás de un acordeón es que, de manera predeterminada, todo lo que se ve al principio es el elemento de resumen. Por ejemplo, la figura 5.2 muestra parte de una página web con cuatro acordeones. Cada uno muestra actualmente solo su elemento de resumen, como “¡Hola mundo!” en la parte superior, que es el texto de resumen del primer acordeón.
+La idea detrás de un acordeón es que, de manera predeterminada, todo lo que se ve al principio es el elemento de resumen-summary. Por ejemplo, la figura 5.2 muestra parte de una página web con cuatro acordeones. Cada uno muestra actualmente solo su elemento de resumen, como “¡Hola mundo!” en la parte superior, que es el texto de resumen del primer acordeón.
 
+<img width="863" alt="image" src="https://github.com/user-attachments/assets/ec4a12fa-f017-4516-bef0-779fdb4566a0" />
 
-
-Figura 5.2 Una página web con cuatro acordeones, cada uno de los cuales muestra solo su texto de resumen
+**Figura 5.2 Una página web con cuatro acordeones, cada uno de los cuales muestra solo su texto de resumen**
 
 Observe también la flecha que apunta hacia la derecha a la izquierda del texto de cada elemento de resumen. Esta flecha indica que hay más contenido disponible. Cuando hace clic en un resumen (o en su flecha), el acordeón se expande para mostrar todo el contenido en el elemento de detalles del acordeón. Por ejemplo, al hacer clic en el resumen “¡Hola mundo!” se expande el primer acordeón, como se muestra en la figura 5.3. Observe que la flecha del acordeón ahora apunta hacia abajo para indicar que se muestra el contenido completo del acordeón. Al hacer clic nuevamente en el texto del resumen (o en la flecha), se oculta el contenido detallado.
 
+<img width="877" alt="image" src="https://github.com/user-attachments/assets/86c177ca-fc9e-4230-8ce1-fdd6adf2413f" />
 
-
-Figura 5.3 Al hacer clic en el primer elemento de resumen, se abre el acordeón para mostrar su contenido completo.
+**Figura 5.3 Al hacer clic en el primer elemento de resumen, se abre el acordeón para mostrar su contenido completo.**
 
 Para solicitarle a ChatGPT que use acordeones en tu página, puedes incluir una instrucción similar a la siguiente:
 
+```text
+Include a main section where each entry is an accordion using the HTML summary and details elements. For each entry, the summary text is the entry title and the details include the entry date, followed by the entry text. Please provide four sample entries going back four days from today.
+```
+
+```text
 Incluya una sección principal en la que cada entrada sea un acordeón que utilice los elementos HTML de resumen y detalles. Para cada entrada, el texto de resumen es el título de la entrada y los detalles incluyen la fecha de la entrada, seguida del texto de la entrada. Proporcione cuatro entradas de muestra que se remonten a cuatro días de la fecha actual.
+```
+
 El objetivo de usar acordeones es que puedas incluir una gran cantidad de publicaciones en tu página sin abrumar a los visitantes con una gran cantidad de contenido. ¿La mejor noticia? Solo tienes que decirle a ChatGPT que quieres usar acordeones en tu página y se encargará de todos los detalles de HTML y CSS por ti.
 
-5.2.2 Generación de imágenes con GPT-4 y DALL-E
+### 5.2.2 Generación de imágenes con GPT-4 y DALL-E
+
 Es sorprendente que GPT-4 pueda generar ensayos, poemas, correos electrónicos y, por supuesto, código de páginas web a partir de indicaciones relativamente simples. Sin embargo, si hay una característica que hace que GPT-4 sea “indistinguible de la magia” (en palabras de Arthur C. Clarke), es la capacidad del modelo para convertir el lenguaje natural en imágenes. Es decir, dada una indicación de texto que describe algo (una escena, un objeto, una persona, etc.), GPT-4 puede usar esa descripción para generar una imagen que coincida.
 
 La herramienta detrás de esta hazaña aparentemente mágica es DALL-E (una mezcla del título de la película WALL-E y el apellido del artista Salvador Dalí), un modelo OpenAI optimizado para convertir descripciones de texto en lenguaje natural en imágenes.
 
-Advertencia Como aprenderá en las secciones siguientes, DALL-E es bastante bueno para convertir texto en imágenes, pero sólo es bastante bueno. Sólo en raras ocasiones generará imágenes que pueda utilizar directamente. Tendrá que modificar las imágenes usted mismo en un programa de gráficos o solicitar la ayuda de un profesional de gráficos para modificar una imagen DALL-E o utilizar una imagen generada como prototipo para el diseño final.
+**WARNING** Como aprenderá en las secciones siguientes, DALL-E es bastante bueno para convertir texto en imágenes, pero sólo es bastante bueno. Sólo en raras ocasiones generará imágenes que pueda utilizar directamente. Tendrá que modificar las imágenes usted mismo en un programa de gráficos o solicitar la ayuda de un profesional de gráficos para modificar una imagen DALL-E o utilizar una imagen generada como prototipo para el diseño final.
 
-Accediendo a DALL-E
+#### ACCEDIENDO A DALL-E
 
 Tienes dos formas de acceder a DALL-E:
 
-Aplicación OpenAI DALL-E : esta aplicación le brinda acceso directo a DALL-E a través de su cuenta OpenAI. Hay un par de formas de acceder a la aplicación (que se muestran en la figura 5.4):
+* **Aplicación OpenAI DALL-E**: esta aplicación le brinda acceso directo a DALL-E a través de su cuenta OpenAI. Hay un par de formas de acceder a la aplicación (que se muestran en la figura 5.4):
 
-Vaya a https://openai.com , haga clic en Menú, haga clic en Iniciar sesión y, a continuación, inicie sesión en su cuenta de OpenAI. En la selección de herramientas de OpenAI que aparecen, haga clic en DALL-E.
+   * Vaya a https://openai.com, haga clic en Menu, haga clic en Log In y, a continuación, inicie sesión en su cuenta de OpenAI. En la selección de herramientas de OpenAI que aparecen, haga clic en DALL-E.
 
-Vaya a https://openai.com/dall-e-2 , haga clic en Probar DALL-E y luego inicie sesión en su cuenta OpenAI.
+   * Vaya a https://openai.com/dall-e-2, haga clic en Try DALL-E y luego inicie sesión en su cuenta OpenAI.
 
+<img width="832" alt="image" src="https://github.com/user-attachments/assets/bbe229ea-2d8b-4acb-a3fa-f917318752e8" />
 
+**Figura 5.4 La aplicación OpenAI DALL-E**
 
-Figura 5.4 La aplicación OpenAI DALL-E
+* ***Copilot Image Creator***: con Microsoft Edge, vaya a https://www.bing.com/images/create (consulte la figura 5.5) o https://copilot.microsoft.com/images/create; o, en Copilot, dirija su mensaje a Image Creator (por ejemplo, `Ask Image Creator for an image of a dog running on the moon`).
 
-Copilot Image Creator : con Microsoft Edge, vaya a https://www.bing.com/images/create (consulte la figura 5.5) o https://copilot.microsoft.com/images/create ; o, en Copilot, dirija su mensaje a Image Creator (por ejemplo, Ask Image Creator for an image of a dog running on the moon).
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/50486ab4-80f6-4778-a521-6a7b20f1e4a2" />
 
+**Figura 5.5 Creador de imágenes de Copilot**
 
+**Nota**: El uso de DALL-E a través de la aplicación Open AI no es gratuito. Para usarlo, debe comprar créditos, donde un crédito es válido para una sola solicitud de DALL-E. Mientras escribo esto, puede comprar **115 créditos por USD 15** a través de su cuenta OpenAI. Tenga en cuenta que ***el uso de DALL-E a través de Microsoft Copilot es gratuito***.
 
-Figura 5.5 Creador de imágenes de Copilot
-
-Nota: el uso de DALL-E a través de la aplicación Open AI no es gratuito. Para usarlo, debe comprar créditos, donde un crédito es válido para una sola solicitud de DALL-E. Mientras escribo esto, puede comprar 115 créditos por USD 15 a través de su cuenta OpenAI. Tenga en cuenta que el uso de DALL-E a través de Microsoft Copilot es gratuito.
-
-Impulsando DALL-E
+#### PROMPTING DALL-E
 
 Conseguir que DALL-E produzca imágenes satisfactorias es un arte en sí mismo. El mayor error que cometen los novatos de DALL-E es tratar la aplicación como un chatbot y darle instrucciones sobre lo que quieres que haga. En lugar de eso, suponen que tu imagen ya existe y que lo que estás escribiendo es una descripción detallada para una persona ciega o con alguna otra discapacidad visual que le impide ver la imagen.
 
 En la descripción, incluya no solo los elementos que desea ver en la imagen, sino también una o más palabras clave (cuanto más, mejor) que especifiquen el estilo exacto de la imagen. A continuación, se ofrecen algunas ideas:
 
-El estado de ánimo : utilice palabras clave que evoquen un estado de ánimo positivo ( brillante , ligero , vibrante , pacífico ) o un estado de ánimo negativo ( sombrío , oscuro , apagado , melancólico , tormentoso ).
+* ***The mood - El estado de ánimo***: utilice palabras clave que evoquen un estado de ánimo positivo ( *brillante, ligero, vibrante, pacífico - bright, light, vibrant, peaceful* ) o un estado de ánimo negativo ( *sombrío, oscuro, apagado, melancólico, tormentoso - gloomy, dark, muted, melancholic, stormy*).
 
-La estética general : por ejemplo, gótico , steampunk , ciberpunk , postapocalíptico , afrofuturismo .
+* ***The overall aesthetic - La estética general***: por ejemplo, *gótico, steampunk, ciberpunk, postapocalíptico, afrofuturismo - Gothic, steampunk, cyberpunk, post-apocalyptic, Afro-futurism*.
 
-El medio —Por ejemplo, fotografía , ilustración , pintura , caricatura .
+* ***The medium - El medio***: Por ejemplo, *fotografía, ilustración, pintura, caricatura - photograph, illustration, painting, cartoon*.
 
-Las particularidades del medio —Algunos ejemplos:
+* ***Las particularidades del medio - The specifics of the medium***: Algunos ejemplos:
 
-Fotografía : tipo de película ( color, blanco y negro ), contexto ( interior, exterior ), iluminación, ángulo ( largo , medio , primer plano ), profundidad de campo ( superficial, profunda ).
+   * ***Photograph - Fotografía***: Tipo de película ( *color, blanco y negro - color, black and white* ), contexto( *interior, exterior - indoors, outdoors* ), iluminación, ángulo ( *largo , medio , primer plano - long, medium, close-up* ), profundidad de campo ( *superficial, profunda - shallow, deep* ).
 
-Ilustración : Medio ( lápiz , tinta , carboncillo , plantilla , crayón , etc.) y estilo ( arte digital , collage , anime , Art Deco , Bauhaus , etc.).
+   * ***Illustration - Ilustración***: Medio ( *lápiz, tinta, carboncillo, plantilla, crayón, etc. - pencil, ink, charcoal, stencil, crayon, and so on*) y estilo ( *arte digital, collage, anime, Art Deco, Bauhaus, etc. - digital art, collage, anime, Art Deco, Bauhaus, and so on*).
 
-Pintura : medio ( acuarela , óleo , etc.) y estilo ( impresionista , manierista , simbolista , Art Nouveau , etc.).
+   * ***Painting - Pintura***: Medio ( *acuarela, óleo, etc. - watercolor, oil, and so on*) y estilo ( *impresionista, manierista, simbolista, Art Nouveau, etc. - Impressionist, Mannerist, Symbolist, Art Nouveau, and so on*).
 
-Nota: La última versión de DALL-E (DALL-E 3) debería estar disponible para el público en general cuando lea esto. Es una buena noticia porque, a diferencia de las versiones anteriores de DALL-E, esta última versión es mucho mejor en la representación de texto. Si su imagen requiere texto, inclúyalo en su descripción. Sin embargo, verifique cuidadosamente el texto de la imagen resultante porque DALL-E 3 a menudo omite una letra o agrega una letra adicional.
+**Nota**: La última versión de DALL-E (DALL-E 3) debería estar disponible para el público en general cuando lea esto. Es una buena noticia porque, a diferencia de las versiones anteriores de DALL-E, esta última versión es mucho mejor en la representación de texto. Si su imagen requiere texto, inclúyalo en su descripción. Sin embargo, verifique cuidadosamente el texto de la imagen resultante porque DALL-E 3 a menudo omite una letra o agrega una letra adicional.
 
 Para que te hagas una idea de cómo funciona la estimulación DALL-E, te resultará útil ver algunos ejemplos. Para mi página de diario en línea, inscribí a Copilot de la siguiente manera:
 
+```text
+Please ask image creator to create a cartoon of a cow standing on two legs with a text bubble over the cow's head that says "Moo".
+```
+
+```text
 Pídale al creador de la imagen que cree una caricatura de una vaca parada sobre dos patas con una burbuja de texto sobre la cabeza de la vaca que diga "Muu".
+```
+
 La figura 5.6 muestra las imágenes que recibí. ¡La que está en la parte superior izquierda es bastante buena!
 
+<img width="707" alt="image" src="https://github.com/user-attachments/assets/f7f87a5a-bcf1-4641-bf70-08f0517e32d5" />
 
-
-Figura 5.6 Dibujos animados generados por Image Creator basados ​​en mi mensaje
+**Figura 5.6 Dibujos animados generados por Image Creator basados ​​en mi mensaje**
 
 A continuación se muestra un ejemplo de solicitud para una fotografía que incluye las palabras clave medium shoty fluorescent lighting:
 
