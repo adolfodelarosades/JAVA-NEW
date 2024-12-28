@@ -1,86 +1,90 @@
-# 4.1 Understanding this chapter’s project
+# 4 Cómo añadir estructura a una página
 
-Este capítulo cubre
+Este capítulo cubre:
 
-El papel del encabezado y pie de página
-Insertar una imagen en una página web
-Agregar enlaces a sitios de redes sociales
-Incitación a ChatGPT para crear una página de club de lectura
-Examinar y personalizar el código de la página web ChatGPT
-En el capítulo 3, aprendiste a usar ChatGPT para crear una página de inicio personal. Una de las principales conclusiones de ese proceso es que cuanto más específico sea el mensaje, más reflejará el código resultante tus requisitos y más se acercará la página resultante a tu visión original.
+* El papel del header y footer - encabezado y pie de página
+* Insertar una imagen en una página web
+* Agregar links - enlaces a sitios de redes sociales
+* Prompting ChatGPT para crear una página de club de lectura
+* Examinar y personalizar el código de la página web ChatGPT
 
-Dos aspectos que pueden haberle sorprendido sobre el proceso del capítulo 3 fueron la longitud del mensaje final y la cantidad de detalles que contenía. Sin embargo, los mensajes largos y detallados son la única forma de garantizar que ChatGPT genere código que cumpla con sus objetivos de diseño. En este capítulo, proporcionará a ChatGPT un poco más de detalle agregando un par de elementos estructurales (el encabezado y el pie de página) que son comunes a casi todas las páginas web. También aprenderá a incluir un par de elementos de contenido útiles: una o más imágenes y uno o más enlaces a redes sociales. Toda esta información luego se incluye en un mensaje detallado que le pasará a ChatGPT para producir el código para una página de club de lectura que le brinde a usted y a otros miembros del club un hogar en la web.
+En el capítulo 3, aprendiste a usar ChatGPT para crear una personal home page. Una de las principales conclusiones de ese proceso es que cuanto más específico sea el prompt, más reflejará el código resultante tus requisitos y más se acercará la página resultante a tu visión original.
+
+Dos aspectos que pueden haberle sorprendido sobre el proceso del capítulo 3 fueron la longitud del prompt final y la cantidad de detalles que contenía. Sin embargo, los prompt largos y detallados son la única forma de garantizar que ChatGPT genere código que cumpla con sus objetivos de diseño. En este capítulo, proporcionará a ChatGPT un poco más de detalle agregando un par de elementos estructurales (el encabezado y el pie de página - page header and the page footer) que son comunes a casi todas las páginas web. También aprenderá a incluir un par de elementos de contenido útiles: una o más imágenes y uno o más links-enlaces a redes sociales. Toda esta información luego se incluye en un prompt detallado que le pasará a ChatGPT para producir el código para una página de club de lectura que le brinde a usted y a otros miembros del club un hogar en la web.
 
 Este capítulo también ofrece una explicación detallada del código generado por ChatGPT. Incluso ofrece algunos consejos para personalizar el código manualmente y lograr que todo funcione exactamente como lo desea.
 
-4.1 Comprender el proyecto de este capítulo
+## 4.1 Comprender el proyecto de este capítulo
+
 En este capítulo, utilizará ChatGPT para crear una página web sencilla para un club de lectura. La página resultante incluirá los siguientes componentes:
 
-Un elemento de encabezado que incluye lo siguiente:
+* Un elemento header que incluye lo siguiente:
+   * El logotipo del club de lectura
+   * El nombre del club de lectura
+   * Un eslogan que describa o resuma de alguna manera el club.
+* Un elemento principal que incluye lo siguiente:
+   * Una sección introductoria que describe el club de lectura.
+   * Una sección "What We’re Reading - Lo que estamos leyendo" que muestra información sobre la selección actual del club de lectura, incluida la portada, el título y el resumen.
+   * Una sección de “Next Meetup - Próxima reunión” que muestra información sobre la próxima reunión del club, incluida la fecha, la hora, la ubicación y algunas preguntas relacionadas con los libros para considerar.
 
-El logotipo del club de lectura
-
-El nombre del club de lectura
-
-Un eslogan que describa o resuma de alguna manera el club.
-
-Un elemento principal que incluye lo siguiente:
-
-Una sección introductoria que describe el club de lectura.
-
-Una sección "Lo que estamos leyendo" que muestra información sobre la selección actual del club de lectura, incluida la portada, el título y el resumen.
-
-Una sección de “Próxima reunión” que muestra información sobre la próxima reunión del club, incluida la fecha, la hora, la ubicación y algunas preguntas relacionadas con los libros para considerar.
-
-Un elemento de pie de página que incluye lo siguiente:
-
-Un aviso de derechos de autor
-
-Enlaces a las cuentas de redes sociales del club
+* Un elemento footer que incluye lo siguiente:
+   * Un aviso de derechos de autor
+   * Enlaces a las cuentas de redes sociales del club
 
 La figura 4.1 muestra un ejemplo del tipo de página que creará con la ayuda de ChatGPT.
 
 Para tu propia página, es posible que quieras hablar sobre el diseño de la página con los miembros de tu grupo para ver si falta algún contenido. También puedes modificar esta página ligeramente para convertirla en la página de inicio de un grupo de lectura, un grupo de debate, una sociedad literaria o cualquier tipo de reunión.
 
+<img width="577" alt="image" src="https://github.com/user-attachments/assets/ac6ab4fd-3cc1-49f1-870e-f2869513ea76" />
 
+**Figura 4.1 Una página de club de lectura creada con código generado por ChatGPT**
 
-Figura 4.1 Una página de club de lectura creada con código generado por ChatGPT
+## 4.2 Creación de la página del club de lectura
 
-4.2 Creación de la página del club de lectura
-El objetivo de este capítulo es utilizar la ayuda de ChatGPT para construir una página de club de lectura sencilla que muestre los siguientes elementos fundamentales de una página web: el encabezado, el pie de página y las imágenes. También aprenderá a agregar enlaces a una o más cuentas de redes sociales. Al final de esta sección, reunirá todo esto en un mensaje completo para construir la página del club de lectura.
+El objetivo de este capítulo es utilizar la ayuda de ChatGPT para construir una página de club de lectura sencilla que muestre los siguientes elementos fundamentales de una página web: header, footer e images - el encabezado, el pie de página y las imágenes. También aprenderá a agregar links a una o más cuentas de redes sociales. Al final de esta sección, reunirá todo esto en un prompt completo para construir la página del club de lectura.
 
-4.2.1 Presentación del encabezado de página
+### 4.2.1 Presentación del header - encabezado de página
+
 El encabezado de página es una sección que aparece en la parte superior de la página. En casi todos los casos, el encabezado se extiende por todo el ancho de la página. Sin embargo, vale la pena señalar aquí que esto no significa que el encabezado se extenderá necesariamente por todo el ancho de la ventana del navegador. ¿Por qué? Porque, como verá en el proyecto de este capítulo y en la mayoría de las páginas de ejemplo de este libro, generalmente es mejor restringir el ancho de la página web para que las líneas de texto no se vuelvan demasiado anchas y, por lo tanto, demasiado difíciles de leer.
 
 El encabezado actúa como una especie de introducción a la página, lo que significa que generalmente incluye uno o más de los siguientes elementos:
 
-El icono o logotipo de la página
+* El icono o logotipo de la página
+* El título de la página y un eslogan o subtítulo opcional
+* Enlaces a cuentas de redes sociales
 
-El título de la página y un eslogan o subtítulo opcional
+Es común (aunque de ningún modo necesario) diferenciar el header del resto de la página al diseñarlo con un background color diferente.
 
-Enlaces a cuentas de redes sociales
+Al solicitar ChatGPT(prompting ChatGPT), puede especificar un header y su contenido incluyendo una instrucción con el siguiente formato:
 
-Es común (aunque de ningún modo necesario) diferenciar el encabezado del resto de la página al diseñarlo con un color de fondo diferente.
+```text
+Add a header element that includes an image named logo.png, the title "Code & Prose", and the tagline "Diving deep into the narrative side of code".
+```
 
-Al solicitar ChatGPT, puede especificar un encabezado y su contenido incluyendo una instrucción con el siguiente formato:
-
+```text
 Agregue un elemento de encabezado que incluya una imagen llamada logo.png, el título "Código y prosa" y el lema "Sumergiéndonos profundamente en el lado narrativo del código".
-Nota: Todas las indicaciones de este capítulo están disponibles en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro ( https://github.com/paulmcfe/websites-with-chatgpt ).
+```
+
+**Nota**: Todas las indicaciones de este capítulo están disponibles en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro ( https://github.com/paulmcfe/websites-with-chatgpt ).
 
 A continuación se muestra un ejemplo de código HTML que ChatGPT podría generar según esta instrucción:
 
-<encabezado>
-    <img src="logo.png" alt="Logotipo de Código y Prosa">
-    <h1>Código y prosa</h1>
-    <p>Profundizando en el lado narrativo del código</p>
-</encabezado>
-Tenga en cuenta que el encabezado está marcado con el elemento header, lo que significa que el contenido del encabezado aparece entre las etiquetas <header>y </header>, como se muestra en este ejemplo. (Hablaré de la <img>etiqueta un poco más adelante en este capítulo; para la <h1>etiqueta, consulte el capítulo 3; para la <p>etiqueta, consulte el capítulo 5). La Figura 4.2 muestra cómo puede aparecer este código después de que se le haya aplicado algo de CSS. La contraparte inferior de la página del encabezado es el pie de página, que analizo a continuación.
+```html
+<header>
+    <img src="logo.png" alt="Code & Prose logo">
+    <h1>Code & Prose</h1>
+    <p>Diving deep into the narrative side of code</p>
+</header>
+```
 
+Tenga en cuenta que el encabezado está marcado con el elemento header, lo que significa que el contenido del encabezado aparece entre las etiquetas `<header>` y `</header>`, como se muestra en este ejemplo. (Hablaré de la etiqueta `<img>` un poco más adelante en este capítulo; para la etiqueta `<h1>`, consulte el capítulo 3; para la etiqueta `<p>`, consulte el capítulo 5). La Figura 4.2 muestra cómo puede aparecer este código después de que se le haya aplicado algo de CSS. La contraparte inferior de la página del encabezado es el pie de página, que analizo a continuación.
 
+<img width="828" alt="image" src="https://github.com/user-attachments/assets/843f4148-959a-4632-9c69-b5e3f332be89" />
 
-Figura 4.2 Un encabezado de página
+**Figura 4.2 Un encabezado de página**
 
-4.2.2 Presentación del pie de página
+### 4.2.2 Presentación del footer - pie de página
+
 El pie de página es una sección que aparece en la parte inferior de la página. Al igual que el encabezado, el pie de página casi siempre se extiende por todo el ancho de la página y la altura del pie de página depende de su contenido. Los pies de página suelen ser elementos bastante simples que incluyen uno o ambos de los siguientes elementos:
 
 Un aviso de derechos de autor
