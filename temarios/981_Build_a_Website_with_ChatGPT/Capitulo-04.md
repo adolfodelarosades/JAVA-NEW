@@ -145,7 +145,7 @@ La figura 4.4 ofrece una visión abstracta de las partes básicas del cuadro, y 
 
 La combinación del área content, el padding, el border y el margin se conoce en los círculos CSS como el **box model - modelo de caja**. Teniendo todo esto en cuenta lo mejor que pueda, es hora de centrar su atención en las propiedades CSS útiles y potentes que le permiten manipular cualquier elemento box. En primer lugar, cambie el box padding.
 
-#### Añadiendo padding
+#### AÑADIENDO PADDING
 
 En el elemento box, el padding es el espacio en blanco que se agrega arriba, abajo, a la izquierda y a la derecha del contenido. Si agrega un borde a su elemento, como se describe en la siguiente sección, el padding es el espacio entre el contenido y el borde. El padding le da al elemento un poco de espacio para respirar en su cuadro, lo que garantiza que el contenido no esté abarrotado por su propio borde o por elementos cercanos.
 
@@ -201,51 +201,61 @@ header {
 
 La siguiente parte del box model - modelo de caja es el border - borde.
 
-#### Rodear un elemento con un border
+#### RODEAR UN ELEMENTO CON UN BORDER
 
-En el cuadro de elementos, el borde es la línea que define el borde exterior del relleno en los cuatro lados: superior, derecho, inferior e izquierdo. De esta manera, el borde se sitúa entre el relleno del elemento y su margen. El borde es opcional, pero suele ser útil para proporcionar al lector un indicador visual de que el contenido incluido está separado de cualquier contenido cercano. Para crear un borde básico alrededor de un elemento, utilice la borderpropiedad , como se muestra en la figura 4.6.
+En el elemento box, el border es la línea que define el borde exterior del padding en los cuatro lados: superior, derecho, inferior e izquierdo(top, right, bottom, and left). De esta manera, el border se sitúa entre el padding del elemento y su margin. El borde es opcional, pero suele ser útil para proporcionar al lector un indicador visual de que el contenido incluido está separado de cualquier contenido cercano. Para crear un borde básico alrededor de un elemento, utilice la propiedad `border`, como se muestra en la figura 4.6.
 
+<img width="624" alt="image" src="https://github.com/user-attachments/assets/e1440f1c-7dc8-4774-8d04-8b0012da2075" />
 
+**Figura 4.6 La sintaxis de la propiedad `border`**
 
-Figura 4.6 La sintaxis de la borderpropiedad
+El valor `width` es una medida en `px`. También puedes establecer el valor en cualquiera de las siguientes palabras clave: `thin`, `medium` o `thick`. Para el valor `style`, puedes usar cualquiera de las siguientes palabras clave: `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, `outset`, `hidden` o `none`. Para el parámetro `color` puedes usar cualquiera de los nombres de colores que aprendiste en el capítulo 3.
 
-El widthvalor es una medida en px. También puedes establecer el valor en cualquiera de las siguientes palabras clave: thin, mediumo thick. Para el stylevalor, puedes usar cualquiera de las siguientes palabras clave: , , , , , , dotted, dashedo solid. doublePara grooveel ridgeparámetro inset, puedes usar cualquiera de los nombres de colores que aprendiste en el capítulo 3.outsethiddennonecolor
+Para solicitarle a ChatGPT que agregue un borde alrededor de un elemento, incluya una instrucción similar a la siguiente en la parte CSS de su prompt:
 
-Para solicitarle a ChatGPT que agregue un borde alrededor de un elemento, incluya una instrucción similar a la siguiente en la parte CSS de su solicitud:
+```text
+Style the nav element with a 1px, solid, black border.
+```
 
+```text
 Dale estilo al elemento de navegación con un borde negro sólido de 1 px.
+```
+
 Basándose en esta instrucción, ChatGPT generará un código como este:
 
-navegación {
-    borde: 1px negro sólido;
+```css
+nav {
+    border: 1px solid black;
 }
-El aspecto final del modelo de caja que discutiré aquí es el margen.
+```
 
-Trabajar con márgenes
+El aspecto final del modelo de caja - box model que discutiré aquí es el margin - margen.
 
-En el cuadro de elementos, el margen es el espacio en blanco que se agrega arriba, abajo, a la izquierda y a la derecha del borde. El margen le permite controlar el espacio entre los elementos. Los valores de margen positivos, por ejemplo, evitan que los elementos de la página choquen entre sí o se superpongan y también evitan que los elementos rocen los bordes de la ventana gráfica del navegador. Por otro lado, si su diseño requiere que los elementos se superpongan, puede lograr este efecto utilizando valores de margen negativos.
+#### TRABAJAR CON MARGINS
+
+En el elemento box, el margen es el espacio en blanco que se agrega arriba, abajo, a la izquierda y a la derecha del borde. El margen le permite controlar el espacio entre los elementos. Los valores de margen positivos, por ejemplo, evitan que los elementos de la página choquen entre sí o se superpongan y también evitan que los elementos rocen los bordes de la ventana gráfica del navegador. Por otro lado, si su diseño requiere que los elementos se superpongan, puede lograr este efecto utilizando valores de margen negativos.
 
 El margen se aplica estableciendo un valor en uno o más de los cuatro lados de un elemento:
 
-elemento {
-    margin-top: valor superior;
-    margen-derecho: valor-derecho;
-    margin-bottom: valor inferior;
-    margen-izquierdo: valor-izquierdo;
+```css
+element {
+    margin-top: top-value;
+    margin-right: right-value;
+    margin-bottom: bottom-value;
+    margin-left: left-value;
 }
+```
+
 Cada valor de margen es una medida en píxeles. A continuación, se muestra un ejemplo:
 
-pie de página {
-    margen superior: 24px;
-    margen derecho: 40px;
-    margen inferior: 32px;
-    margen izquierdo: 48px;
-}
+```css
+```
+
 Al igual que con el relleno, una propiedad abreviada de margen le permite aplicar los márgenes mediante una única declaración. Puede reescribir la regla del ejemplo anterior utilizando la sintaxis abreviada de la siguiente manera:
 
-pie de página {
-    margen: 24px 40px 32px 48px;
-}
+```css
+```
+
 Si proporciona un solo valor, el navegador web aplicará ese valor de margen a los cuatro lados del elemento.
 
 Para solicitarle a ChatGPT que establezca el margen de un elemento, incluya una instrucción similar a la siguiente en la parte CSS de su solicitud:
@@ -253,12 +263,13 @@ Para solicitarle a ChatGPT que establezca el margen de un elemento, incluya una 
 Dale estilo al cuerpo con un relleno de 16 px alrededor.
 Basándose en esta instrucción, ChatGPT generará un código como este:
 
-cuerpo {
-    relleno: 16px;
-}
+```css
+```
+
 Anteriormente, viste un ejemplo de un encabezado que incluía una imagen. En la siguiente sección, se explica cómo trabajar con imágenes de páginas web.
 
-4.2.4 Trabajar con imágenes
+### 4.2.4 Trabajar con imágenes
+
 Aunque la mayoría de las páginas web transmiten información (por más vaga que sea la definición de ese término) mediante palabras, las páginas que no son más que texto resultan un poco intimidantes y, a menudo, ¡muy aburridas! Por supuesto, puedes (y debes) utilizar tipos de letra, colores y estilos de texto para embellecer la página (como describí en el capítulo 3). Sin embargo, una forma relativamente fácil de animar una pared de texto que de otro modo sería aburrida es ofrecer a tus lectores un atractivo visual insertando una o dos imágenes. Esto no quiere decir que las imágenes de tu página web deban ser meramente decorativas. Las imágenes son una excelente forma de complementar el texto de tu página, mostrar la información de forma concisa y ayudar a tus lectores a retener lo que leen en tus páginas.
 
 Una imagen es un archivo independiente que puedes indicarle a ChatGPT que haga referencia en el código HTML de tu página. (Consulta el capítulo 10 para obtener un tratamiento más detallado de las imágenes y cómo se insertan en una página web). La web se ha estandarizado en cuatro formatos que representan casi todas las imágenes web, como se resume en la tabla 4.1.
@@ -326,7 +337,8 @@ Un icono para el sitio de redes sociales.
 
 Para esto último, no es necesario descargar un archivo de imagen independiente de la web (a menos que prefieras hacerlo). En su lugar, deberás solicitarle a ChatGPT que te vincule con un conjunto de herramientas de íconos llamado Font Awesome, que incluye íconos para todos los sitios de redes sociales más importantes. (La única excepción, mientras escribo esto, es el sitio de redes sociales Threads, cuyo ícono aún no se había agregado a Font Awesome).
 
-4.2.6 Elaboración del mensaje
+### 4.2.6 Elaboración del mensaje
+
 Si has seguido las indicaciones de ChatGPT en la sección anterior, ahora tienes lo que necesitas para que ChatGPT genere el código para la página de tu club de lectura. La indicación debería comenzar así:
 
 Quiero crear una página web para un club de lectura. No sé programar, así que necesito que me proporciones el código.
@@ -429,72 +441,13 @@ Nota: El código HTML y CSS generado para mi club de lectura están disponibles 
 
 Sin embargo, cada versión de ChatGPT debería generar código HTML y CSS que sea al menos similar a lo que se muestra en las siguientes dos secciones, por lo que mis anotaciones de código deberían ayudarlo a comprender lo que sucede bajo el capó.
 
-4.3.1 Examinar el HTML
+### 4.3.1 Examinar el HTML
+
 El código HTML que ChatGPT generó para mi club de lectura se muestra aquí:
 
-<!DOCTYPE html>
-<html>
-<cabeza>
-    <title>Código y prosa</title>
-    <link rel="hoja de estilo" href="styles.css">                    ① 
-    <link rel="preconnect" href="https://fonts.gstatic.com">     ②
-    <link href="https://fonts.googleapis.com/css2
-          ?familia= Fira+Sans+Extra+Condensada:peso@700
-          &family=Código+fuente+Pro&display=swap"
-          rel="hoja de estilo">                                      ②
-    <link rel="hoja de estilo"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2
-          /css/all.min.css">
-</cabeza>
-<cuerpo>
-    <header>                                                     ③ 
-        <img src="logo.png" alt="Logotipo de Code & Prose" id="logo">   ④ 
-        <h1>Code & Prose</h1>                                    ⑤ 
-        <p>Profundizando en el lado narrativo del código</p>       ⑥ 
-    </header>                                                    ③
-    <principal>
-        <sección>                                                ⑦
-            <h2>¡Bienvenido!</h2>
-            <p>Bienvenido a Code & Prose, el único libro
-               club en el mundo que (creemos)
-               Lee ficción relacionada con la web.
-               desarrollo.</p>
-        </sección>                                               ⑧ 
-        <sección>                                                ⑨
-            <h2>Lo que estamos leyendo</h2>
-            <img src="book-cover.png"                            ⑩ 
-                 alt="Portada del libro"                                ⑩ 
-                 id="book-cover">                                ⑩ 
-            <p><b>Título:</b> El diseñador web<br>                ⑪ 
-            <b>Autor:</b> Paul McFedries<br>                    ⑪ 
-            <b>Páginas:</b> 1.576<br>                              ⑪ 
-            <b>Resumen:</b> En High Falutin High, [etc.]</p>     ⑪   
-        </section>                                               ⑨ 
-        <section>                                                ⑫
-            <h2>Próxima reunión</h2>
-            <p><b>Fecha:</b> 23 de agosto<br>                        ⑬ 
-            <b>Hora:</b> 6:00 p. m.<br>                              ⑬ 
-            <b>Ubicación:</b> The Coder Cafe<br>                  ⑬
-            <b>Preguntas para reflexionar:</b> ¿Puede Daisy
-               ¿Código o qué? ¿El libro contiene
-               ¿Demasiado HTML o no lo suficiente? ¿Por qué?
-               ¿Es tan difícil para los nerds tener citas?</p>                 ⑬ 
-        </section>                                               ⑫
-    </principal>
-    <footer>                                                     ⑭ 
-        <p>Copyright 2023 Código y prosa</p>                       ⑮ 
-        <p>                                                      ⑯
-        <a href=https://www.facebook.com/CodeAndProse
-        objetivo="_blank">
-        <i class="fab fa-facebook-square"></i></a>               ⑯
-        <a href=https://www.instagram.com/codeandprose
-        objetivo="_blank">
-        <i class="fab fa-instagram"></i></a>
-        <i class="fab fa-x-twitter"></i></a>                     ⑯ 
-        </p>                                                     ⑯ 
-    </footer>                                                    ⑭
-</cuerpo>
-</html>
+```html
+```
+
 ① Le dice al navegador web dónde encontrar el código CSS
 
 ② Carga las fuentes de la página desde Google Fonts
@@ -544,63 +497,13 @@ Por último, tenga en cuenta que el código HTML incluye la siguiente línea:
 <link rel="hoja de estilo" href="estilos.css">
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
 
-4.3.2 Examinando el CSS
+### 4.3.2 Examinando el CSS
+
 El código CSS generado por ChatGPT para mi página del club de lectura se muestra aquí:
 
-cuerpo {
-    familia de fuentes: 'Source Code Pro', monoespaciado;             ①
-    Color: negro;
-    ancho máximo: 800px;                                      ② 
-    margen: automático;                                          ③
-}
-encabezado {
-    color de fondo: orquídea oscura;                          ④ 
-    relleno: 10px;                                         ⑤
-}
-encabezado img {
-    flotador: izquierda;                                           ⑥
-}
-encabezado h1 {
-    familia de fuentes: 'Fira Sans Extra Condensed', sans-serif; ⑦ 
-    tamaño de fuente: 48px;                                       ⑧ 
-    color: lightsteelblue;                                 ⑧
-    alinear texto: derecha;    
-}
-encabezado p {
-    tamaño de fuente: 24px;                                       ⑨ 
-    color: azul acero claro;                                 ⑨ 
-    estilo de fuente: cursiva;                                    ⑨ 
-    alineación del texto: derecha;                                     ⑨
-    claro: correcto;
-}
-principal {
-    tamaño de fuente: 20px;                                       ⑩
-}
-h2 {
-    familia de fuentes: 'Fira Sans Extra Condensed', sans-serif; ⑪ 
-    tamaño de fuente: 30px;                                       ⑪ 
-    color: darkorchid;                                     ⑪ 
-    margen superior: 15px;                                      ⑪
-}
-sección:nth-child(2) img {
-    flotar: derecha;                                          ⑫
-}
-sección:nth-child(2) pb,
-sección:nth-child(3) pb {
-    color: verde mar medio;                                 ⑬
-}
-pie de página {
-    color de fondo: orquídea oscura;                          ⑭ 
-    color: azul acero claro;                                 ⑭ 
-    relleno: 5px;                                          ⑭ 
-    margen superior: 10px;                                      ⑭ 
-    alineación del texto: centro;                                    ⑭
-}
-pie de página a {
-    margen: 0 10px;                                        ⑮ 
-    color: azul acero claro;                                 ⑮ 
-    decoración de texto: ninguna;                                 ⑮ 
-}
+```css
+```
+
 ① Aplica Source Code Pro al texto de la página
 
 ② Establece el ancho máximo de página en 800 px
@@ -633,7 +536,8 @@ pie de página a {
 
 Si lo desea, puede utilizar estas anotaciones para modificar el código de su página web, como describo en la siguiente sección.
 
-4.4 Personalización de la página
+## 4.4 Personalización de la página
+
 Si el código de la página del club de lectura de ChatGPT no es correcto por algún motivo, tienes dos formas de solucionarlo:
 
 Si la página está lejos de lo que quieres, reescribe tu mensaje, inicia una nueva sesión de chat y vuelve a intentarlo.
@@ -664,7 +568,8 @@ Para cualquier valor de margen o relleno, puedes cambiar el número para aumenta
 
 Para que el código de su página sea más accesible, considere convertir todas las medidas en px a medidas en rem. 1 rem es, de manera predeterminada, equivalente a 16 px, por lo que 20 px es 1,25 rem; 24 px es 1,5 rem; 32 px es 2 rem; 48 px es 3 rem; y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
-Resumen
+## Resumen
+
 Casi todas las páginas web comienzan con un encabezado que incluye al menos un logotipo, el título de la página y el lema o subtítulo de la página.
 
 La mayoría de las páginas web terminan con un pie de página que incluye al menos un aviso de derechos de autor y algunos enlaces a redes sociales.
@@ -679,24 +584,3 @@ Para obtener mejores resultados, el mensaje de su página debe ser lo más espec
 
 Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
 
-## 4.2 Building the book club page
-
-### Introducing the page header
-
-### Introducing the page footer
-
-### Introducing padding, borders, and margins
-
-### Working with images
-
-### Adding social media links
-
-### Crafting the prompt
-
-## 4.3 Examining the code
-
-### Examining the HTML
-
-### Examining the CSS
-
-## 4.4 Customizing the page
