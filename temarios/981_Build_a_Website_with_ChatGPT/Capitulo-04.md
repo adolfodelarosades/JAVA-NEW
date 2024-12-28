@@ -674,31 +674,31 @@ footer a {
 
 ① Aplica Source Code Pro al texto de la página
 
-② Establece el ancho máximo de página en 800 px
+② Establece el ancho máximo de página en 800px
 
 ③ Centra la página
 
-④ Establece el fondo del encabezado en darkorchid
+④ Establece el header background a darkorchid
 
-⑤ Agrega 10 px de espacio alrededor del texto del encabezado
+⑤ Agrega 10px de espacio alrededor del texto del encabezado
 
 ⑥ Flota el logotipo hacia la izquierda.
 
 ⑦ Aplica Fira Sans Extra Condensed al título
 
-⑧ Estilos del título: tamaño de fuente 48 px, color azul acero claro, alineado a la derecha
+⑧ Estilos del título: tamaño de fuente 48px, color azul acero claro, alineado a la derecha
 
 ⑨ Estilos del eslogan: tamaño de fuente 24 px, color azul acero claro, cursiva, alineado a la derecha
 
-⑩ Establece el tamaño de fuente de la página normal en 20 px
+⑩ Establece el tamaño de fuente de la página normal en 20px
 
-⑪ Aplica estilo a los encabezados de segundo nivel: fuente Fira Sans Extra Condensed, tamaño de fuente 30 px, color darkorchid, margen superior 15 px
+⑪ Aplica estilo a los encabezados de segundo nivel: fuente Fira Sans Extra Condensed, tamaño de fuente 30px, color darkorchid, margen superior 15px
 
 ⑫ Flota la portada del libro hacia la derecha.
 
 ⑬ Aplica el color verde mar medio al texto en negrita.
 
-⑭ Estilos del pie de página: color de fondo darkorchid, color de texto lightsteelblue, relleno 5 px, margen superior 10 px y texto centrado
+⑭ Estilos del pie de página: color de fondo darkorchid, color de texto lightsteelblue, relleno 5px, margen superior 10px y texto centrado
 
 ⑮ Aplica estilo a los enlaces del pie de página: márgenes izquierdo y derecho de 10 px, color del texto azul acero claro, sin subrayado
 
@@ -708,47 +708,47 @@ Si lo desea, puede utilizar estas anotaciones para modificar el código de su p�
 
 Si el código de la página del club de lectura de ChatGPT no es correcto por algún motivo, tienes dos formas de solucionarlo:
 
-Si la página está lejos de lo que quieres, reescribe tu mensaje, inicia una nueva sesión de chat y vuelve a intentarlo.
+* Si la página está lejos de lo que quieres, reescribe tu mensaje, inicia una nueva sesión de chat y vuelve a intentarlo.
 
-Si la página se parece a lo que desea, solicite a ChatGPT que realice los ajustes necesarios. Asegúrese de enviar esta solicitud en la misma sesión que la solicitud original.
+* Si la página se parece a lo que desea, solicite a ChatGPT que realice los ajustes necesarios. Asegúrese de enviar esta solicitud en la misma sesión que la solicitud original.
 
 En el segundo caso, si el código producido por ChatGPT realmente solo necesita algunos pequeños retoques, considere modificar el código manualmente según las anotaciones que proporcioné en la sección anterior. Como no conoce el código de las páginas web, es mejor no intentar realizar cambios importantes. Sin embargo, aún quedan algunas formas de alterar el código para obtener la página que desea.
 
 Primero, aquí hay algunas sugerencias de personalización para el código HTML:
 
-En el encabezado, puedes editar el título o el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: <h1>y </h1>para el título; <p>y </p>para el eslogan.
+* En el encabezado, puedes editar el título o el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: `<h1>` y `</h1>` para el título; `<p>` y `</p>` para el eslogan.
 
-En la sección principal del código HTML, puede agregar, eliminar o editar el texto de cada encabezado de segundo nivel (es decir, el texto entre las etiquetas <h2>y </h2>; asegúrese de no editar ni eliminar estas etiquetas).
+* En la sección principal del código HTML, puede agregar, eliminar o editar el texto de cada encabezado de segundo nivel (es decir, el texto entre las etiquetas `<h2>` y `</h2>`; asegúrese de no editar ni eliminar estas etiquetas).
 
-En la sección principal del código HTML, puede agregar, eliminar o editar el texto de cada párrafo (es decir, el texto entre las etiquetas <p>y </p>; asegúrese de no editar ni eliminar estas etiquetas).
+* En la sección principal del código HTML, puede agregar, eliminar o editar el texto de cada párrafo (es decir, el texto entre las etiquetas `<p>` y `</p>`; asegúrese de no editar ni eliminar estas etiquetas).
 
-En la sección principal del código HTML, puedes agregar una nueva sección escribiendo una <section>etiqueta seguida de la </section>etiqueta . Entre estas etiquetas, puedes agregar un encabezado (un texto entre las etiquetas <h2>y </h2>) y un párrafo (un texto entre las etiquetas <p>y </p>).
+En la sección principal del código HTML, puedes agregar una nueva sección escribiendo una etiqueta `<section>` seguida de la etiqueta `</section>`. Entre estas etiquetas, puedes agregar un encabezado (un texto entre las etiquetas `<h2>` y `</h2>`) y un párrafo (un texto entre las etiquetas `<p>` y `</p>`).
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-Si desea que su página tenga un ancho máximo diferente, cambie el valor max- widthpor algo distinto de 800px. Por ejemplo, si aumenta el tamaño de la fuente (como describiré en un momento), es posible que desee aumentar el ancho de la página; disminuir el tamaño de la fuente significa que puede disminuir el ancho de la página. Pruebe diferentes anchos (generalmente dentro del rango de 600 px en el lado bajo y 1000 px en el lado alto) hasta que encuentre uno que se adapte a su página.
+* Si desea que su página tenga un ancho máximo diferente, cambie el valor `max- width` por algo distinto de `800px`. Por ejemplo, si aumenta el tamaño de la fuente (como describiré en un momento), es posible que desee aumentar el ancho de la página; disminuir el tamaño de la fuente significa que puede disminuir el ancho de la página. Pruebe diferentes anchos (generalmente dentro del rango de `600px` en el lado bajo y `1000px` en el lado alto) hasta que encuentre uno que se adapte a su página.
 
-Para cualquier valor de color, puedes cambiar el color existente por una palabra clave de color diferente. Sin embargo, ten en cuenta que cambiar un solo color puede alterar el esquema de colores de tu página. Si no te gustan los colores de tu página, elige un nuevo color primario y luego vuelve a solicitar a ChatGPT que cree un esquema de colores a partir de ese tono.
+* Para cualquier valor de color, puedes cambiar el color existente por una palabra clave de color diferente. Sin embargo, ten en cuenta que cambiar un solo color puede alterar el esquema de colores de tu página. Si no te gustan los colores de tu página, elige un nuevo color primario y luego vuelve a solicitar a ChatGPT que cree un esquema de colores a partir de ese tono.
 
-Para cualquier valor de tamaño de fuente, puedes cambiar el número para aumentar o disminuir el tamaño de la fuente. Por ejemplo, si el texto parece apretado y difícil de leer, intenta aumentar el valor del tamaño de fuente en uno o dos píxeles. Solo asegúrate de dejar la unidad px en su lugar.
+* Para cualquier valor de tamaño de fuente, puedes cambiar el número para aumentar o disminuir el tamaño de la fuente. Por ejemplo, si el texto parece apretado y difícil de leer, intenta aumentar el valor del tamaño de fuente en uno o dos píxeles. Solo asegúrate de dejar la unidad `px` en su lugar.
 
-Para cualquier valor de margen o relleno, puedes cambiar el número para aumentar o disminuir el relleno o los márgenes. Por ejemplo, si el contenido de tu página parece estar abarrotado, puedes abrirlo aumentando el relleno o los márgenes. De manera similar, si los elementos de tu página parecen desconectados entre sí, intenta disminuir los márgenes. En cada caso, asegúrate de dejar la unidad px en su lugar.
+* Para cualquier valor de margen o padding, puedes cambiar el número para aumentar o disminuir el padding o los márgenes. Por ejemplo, si el contenido de tu página parece estar abarrotado, puedes abrirlo aumentando el padding o los márgenes. De manera similar, si los elementos de tu página parecen desconectados entre sí, intenta disminuir los márgenes. En cada caso, asegúrate de dejar la unidad `px` en su lugar.
 
-Para que el código de su página sea más accesible, considere convertir todas las medidas en px a medidas en rem. 1 rem es, de manera predeterminada, equivalente a 16 px, por lo que 20 px es 1,25 rem; 24 px es 1,5 rem; 32 px es 2 rem; 48 px es 3 rem; y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+* Para que el código de su página sea más accesible, considere convertir todas las medidas en `px` a medidas en `rem`. 1 rem es, de manera predeterminada, equivalente a 16px, por lo que 20px es 1,25 rem; 24px es 1,5rem; 32px es 2rem; 48px es 3rem; y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
 ## Resumen
 
-Casi todas las páginas web comienzan con un encabezado que incluye al menos un logotipo, el título de la página y el lema o subtítulo de la página.
+* Casi todas las páginas web comienzan con un encabezado que incluye al menos un logotipo, el título de la página y el lema o subtítulo de la página.
 
-La mayoría de las páginas web terminan con un pie de página que incluye al menos un aviso de derechos de autor y algunos enlaces a redes sociales.
+* La mayoría de las páginas web terminan con un pie de página que incluye al menos un aviso de derechos de autor y algunos enlaces a redes sociales.
 
-Cada elemento de la página está rodeado por un cuadro invisible que consta de cuatro partes: el contenido, que es el texto o la imagen contenida en el cuadro; el relleno, que es el espacio en blanco entre el contenido y el borde; el borde, que corre a lo largo de los bordes externos del área de relleno y rodea el contenido y el relleno con líneas; y el margen, que es el espacio en blanco adicional agregado fuera de los bordes superior, derecho, inferior e izquierdo.
+* Cada elemento de la página está rodeado por un cuadro invisible que consta de cuatro partes: el contenido, que es el texto o la imagen contenida en el cuadro; el padding, que es el espacio en blanco entre el contenido y el borde; el borde, que corre a lo largo de los bordes externos del área de padding y rodea el contenido y el padding con líneas; y el margen, que es el espacio en blanco adicional agregado fuera de los bordes superior, derecho, inferior e izquierdo.
 
-Para incluir una imagen en su página, necesita saber el nombre del archivo de imagen y debe almacenar el archivo de imagen en la misma carpeta que los archivos de código de su página web.
+* Para incluir una imagen en su página, necesita saber el nombre del archivo de imagen y debe almacenar el archivo de imagen en la misma carpeta que los archivos de código de su página web.
 
-Para incluir enlaces de redes sociales en su página, necesita conocer el nombre de usuario de cada cuenta de redes sociales.
+* Para incluir enlaces de redes sociales en su página, necesita conocer el nombre de usuario de cada cuenta de redes sociales.
 
-Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+* Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
 
-Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
+* Guarde el HTML generado en el archivo `index.html` y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`.
 
