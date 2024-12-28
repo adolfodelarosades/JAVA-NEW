@@ -85,93 +85,123 @@ Tenga en cuenta que el encabezado está marcado con el elemento header, lo que s
 
 ### 4.2.2 Presentación del footer - pie de página
 
-El pie de página es una sección que aparece en la parte inferior de la página. Al igual que el encabezado, el pie de página casi siempre se extiende por todo el ancho de la página y la altura del pie de página depende de su contenido. Los pies de página suelen ser elementos bastante simples que incluyen uno o ambos de los siguientes elementos:
+El footer es una sección que aparece en la parte inferior de la página. Al igual que el header, el pie de página casi siempre se extiende por todo el ancho de la página y la altura del footer depende de su contenido. Los footer suelen ser elementos bastante simples que incluyen uno o ambos de los siguientes elementos:
 
-Un aviso de derechos de autor
+* Un aviso de derechos de autor
+* Links a cuentas de redes sociales
 
-Enlaces a cuentas de redes sociales
+Tenga en cuenta que, si bien es posible que los links a las redes sociales aparezcan tanto en el header como en el footer, no deberían aparecer en ambos. En el proyecto de este capítulo, los enlaces a las redes sociales aparecerán en el footer.
 
-Tenga en cuenta que, si bien es posible que los enlaces a las redes sociales aparezcan tanto en el encabezado como en el pie de página, no deberían aparecer en ambos. En el proyecto de este capítulo, los enlaces a las redes sociales aparecerán en el pie de página.
+Nuevamente, es común distinguir el pie de página del resto de la página al diseñarlo con un color de fondo diferente. También es común llenar el footer con links a otras páginas principales del sitio, un tema que abordo en el capítulo 7.
 
-Nuevamente, es común distinguir el pie de página del resto de la página al diseñarlo con un color de fondo diferente. También es común llenar el pie de página con enlaces a otras páginas principales del sitio, un tema que abordo en el capítulo 7.
+Como parte del prompt de ChatGPT, puede especificar un footer y su contenido incluyendo una instrucción similar a la siguiente:
 
-Como parte del mensaje de ChatGPT, puede especificar un pie de página y su contenido incluyendo una instrucción similar a la siguiente:
+```text
+Add a footer element that includes the text "Copyright" (spelled out, do not include the Copyright symbol), followed by the current year, followed by "Code & Prose".
+```
 
+```text
 Agregue un elemento de pie de página que incluya el texto "Copyright" (escrito con todas las letras, no incluya el símbolo de Copyright), seguido del año actual, seguido de "Código y prosa".
+```
+
 ChatGPT podría generar el siguiente código basándose en esta instrucción:
 
-<pie de página>
+```html
+<footer>
     <p>
-        Derechos de autor 2023 Código y prosa
+        Copyright 2023 Code & Prose
     </p>
-</pie de página>
-Tenga en cuenta que el pie de página está marcado con el footerelemento , lo que significa que el contenido del pie de página aparece entre las etiquetas <footer>y </footer>, como se muestra en este ejemplo. La Figura 4.3 demuestra cómo el navegador muestra este código después de aplicar algunos CSS. A continuación, aprenderá un aspecto vital de los elementos que ve en una página web: el modelo de caja.
+</footer>
+```
+
+Tenga en cuenta que el pie de página está marcado con el elemento `footer`, lo que significa que el contenido del pie de página aparece entre las etiquetas `<footer>` y `</footer>`, como se muestra en este ejemplo. La Figura 4.3 demuestra cómo el navegador muestra este código después de aplicar algunos CSS. A continuación, aprenderá un aspecto vital de los elementos que ve en una página web: el box model.
 
 
+<img width="1153" alt="image" src="https://github.com/user-attachments/assets/63fb42bb-a81c-4f2c-a59a-b3f7413add6e" />
 
-Figura 4.3 Pie de página
+**Figura 4.3 Pie de página**
 
-4.2.3 Introducción de relleno, bordes y márgenes
-Un concepto HTML importante que hay que tener en cuenta es que cada elemento de la página está rodeado por un recuadro invisible. ¿Por qué es tan importante? Porque puedes hacer que ChatGPT genere código para controlar muchos aspectos de ese recuadro, incluido el espaciado interior, los bordes y el espaciado exterior. Para lograrlo, debes familiarizarte con las distintas partes del recuadro.
+### 4.2.3 Introducción padding, borders y margins
 
-La figura 4.4 ofrece una visión abstracta de las partes básicas del cuadro, y la figura 4.5 muestra cómo estas mismas partes afectan el contenido real de una página. Hay cuatro partes para cada cuadro.cuadro de elementos:
+Un concepto HTML importante que hay que tener en cuenta es que cada elemento de la página está rodeado por un recuadro(box) invisible. ¿Por qué es tan importante? Porque puedes hacer que ChatGPT genere código para controlar muchos aspectos de ese recuadro(box), incluido el espaciado interior, los bordes y el espaciado exterior. Para lograrlo, debes familiarizarte con las distintas partes del box.
 
-Contenido : esta área es el rectángulo interior del cuadro y consiste en el contenido (como texto o imagen) incluido en el cuadro.
+La figura 4.4 ofrece una visión abstracta de las partes básicas del cuadro, y la figura 4.5 muestra cómo estas mismas partes afectan el contenido real de una página. Hay cuatro partes para cada box:
 
-Relleno : esta área entre el contenido y el borde representa un espacio en blanco adicional agregado fuera de los bordes superior, derecho, inferior e izquierdo del área de contenido.
+* ***Content***: Esta área es el rectángulo interior del box y consiste en el contenido (como texto o imagen) incluido en el box.
 
-Borde : esta parte corre a lo largo de los bordes exteriores del área de relleno y rodea el contenido y el relleno con líneas.
+* ***Padding***: Esta área entre el contenido y el borde representa un espacio en blanco adicional agregado fuera de los bordes superior, derecho, inferior e izquierdo(top, right, bottom, and left) del área de contenido.
 
-Margen : esta área es el rectángulo exterior del cuadro, que representa el espacio en blanco adicional agregado fuera de los bordes superior, derecho, inferior e izquierdo.
+* ***Border***: Esta parte corre a lo largo de los bordes exteriores del área padding y rodea el contenido y el padding con líneas.
 
+* ***Margin***: Esta área es el rectángulo exterior del box, que representa el espacio en blanco adicional agregado fuera de los bordes superior, derecho, inferior e izquierdo(top, right, bottom, and left).
 
+<img width="809" alt="image" src="https://github.com/user-attachments/assets/a101c40b-7a71-4baf-a350-18723b4f278f" />
 
-Figura 4.4 Las partes principales de una caja de elementos
+**Figura 4.4 Las partes principales de un elemento box**
 
+<img width="1050" alt="image" src="https://github.com/user-attachments/assets/7334d69d-1fe8-4f3e-97e7-ddc64a1839da" />
 
+**Figura 4.5 Las partes del elemento box tal como aparecen con el contenido real de la página**
 
-Figura 4.5 Las partes del cuadro de elementos tal como aparecen con el contenido real de la página
+La combinación del área content, el padding, el border y el margin se conoce en los círculos CSS como el **box model - modelo de caja**. Teniendo todo esto en cuenta lo mejor que pueda, es hora de centrar su atención en las propiedades CSS útiles y potentes que le permiten manipular cualquier elemento box. En primer lugar, cambie el box padding.
 
-La combinación del área de contenido, el relleno, el borde y el margen se conoce en los círculos CSS como el modelo de caja . Teniendo todo esto en cuenta lo mejor que pueda, es hora de centrar su atención en las propiedades CSS útiles y potentes que le permiten manipular cualquier cuadro de elemento. En primer lugar, cambie el relleno del cuadro.
+#### Añadiendo padding
 
-Añadiendo relleno
+En el elemento box, el padding es el espacio en blanco que se agrega arriba, abajo, a la izquierda y a la derecha del contenido. Si agrega un borde a su elemento, como se describe en la siguiente sección, el padding es el espacio entre el contenido y el borde. El padding le da al elemento un poco de espacio para respirar en su cuadro, lo que garantiza que el contenido no esté abarrotado por su propio borde o por elementos cercanos.
 
-En el cuadro del elemento, el relleno es el espacio en blanco que se agrega arriba, abajo, a la izquierda y a la derecha del contenido. Si agrega un borde a su elemento, como se describe en la siguiente sección, el relleno es el espacio entre el contenido y el borde. El relleno le da al elemento un poco de espacio para respirar en su cuadro, lo que garantiza que el contenido no esté abarrotado por su propio borde o por elementos cercanos.
+Para configurar el padding, aplique un valor a uno o más de los cuatro lados:
 
-Para configurar el relleno, aplique un valor a uno o más de los cuatro lados:
-
-elemento {
-    padding-top: valor superior;
-    padding-right: valor derecho;
-    padding-bottom: valor inferior;
-    padding-left: valor izquierdo;
+```css
+element {
+    padding-top: top-value;
+    padding-right: right-value;
+    padding-bottom: bottom-value;
+    padding-left: left-value;
 }
+```
+
 Cada valor es una medida en píxeles (px). A continuación, se muestra un ejemplo:
 
-encabezado {
-    relleno superior: 16px;
-    relleno-derecho: 24px;
-    relleno inferior: 12px;
-    relleno-izquierdo: 20px;
+```css
+header {
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 20px;
 }
-También puede utilizar una paddingpropiedad abreviada para establecer todos los valores de relleno con una única declaración. Puede duplicar la regla del ejemplo anterior utilizando la sintaxis abreviada de la siguiente manera:
+```
 
-encabezado {
-    relleno: 16px 24px 12px 20px;
+También puede utilizar una propiedad `padding` abreviada para establecer todos los valores de padding con una única declaración. Puede duplicar la regla del ejemplo anterior utilizando la sintaxis abreviada de la siguiente manera:
+
+```css
+header {
+    padding: 16px 24px 12px 20px;
 }
-Si proporciona un solo valor, el navegador web aplicará esa cantidad de relleno a los cuatro lados.
+```
 
-Para solicitarle a ChatGPT que establezca el relleno en un elemento, incluya una instrucción similar a la siguiente en la parte CSS de su solicitud:
+Si proporciona un solo valor, el navegador web aplicará esa cantidad de padding a los cuatro lados.
 
-Dale estilo al pie de página con un relleno de 10 px alrededor.
+Para solicitarle a ChatGPT que establezca el padding en un elemento, incluya una instrucción similar a la siguiente en la parte CSS de su prompt:
+
+```text
+Style the footer with 10px padding all around.
+```
+
+```text
+Dale estilo al pie de página con un relleno de 10px alrededor.
+```
+
 Basándose en esta instrucción, ChatGPT generará un código como este:
 
-encabezado {
-    relleno: 10px;
+```css
+header {
+    padding: 10px;
 }
-La siguiente parte del modelo de caja es el borde.
+```
 
-Rodear un elemento con un borde
+La siguiente parte del box model - modelo de caja es el border - borde.
+
+#### Rodear un elemento con un border
 
 En el cuadro de elementos, el borde es la línea que define el borde exterior del relleno en los cuatro lados: superior, derecho, inferior e izquierdo. De esta manera, el borde se sitúa entre el relleno del elemento y su margen. El borde es opcional, pero suele ser útil para proporcionar al lector un indicador visual de que el contenido incluido está separado de cualquier contenido cercano. Para crear un borde básico alrededor de un elemento, utilice la borderpropiedad , como se muestra en la figura 4.6.
 
