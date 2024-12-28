@@ -302,8 +302,6 @@ Debes saber los nombres de todos los archivos de imagen que deseas incluir en tu
 
 **Tabla 4.1 Formatos de archivos de imagen**
 
-<img width="1028" alt="image" src="https://github.com/user-attachments/assets/32e37176-2e3a-4513-989a-c556f777ee72" />
-
 <img width="663" alt="image" src="https://github.com/user-attachments/assets/14f3cc6a-5630-4875-845c-0d7928fc9641" />
 
 <img width="664" alt="image" src="https://github.com/user-attachments/assets/9090c5c1-12d1-4ead-b2c0-7b7d3e954544" />
@@ -313,8 +311,6 @@ Debes saber los nombres de todos los archivos de imagen que deseas incluir en tu
 <img width="663" alt="image" src="https://github.com/user-attachments/assets/96f32754-c3c4-4f88-9670-50dad15aa709" />
 
 <img width="666" alt="image" src="https://github.com/user-attachments/assets/179881ca-3181-49f5-8d36-a23087dc4ae7" />
-
-<img width="649" alt="image" src="https://github.com/user-attachments/assets/fd6fd5f8-6aac-4562-bde3-db1ed96a8e36" />
 
 <img width="660" alt="image" src="https://github.com/user-attachments/assets/b024cabc-b068-4495-9edc-d08020afc06b" />
 
