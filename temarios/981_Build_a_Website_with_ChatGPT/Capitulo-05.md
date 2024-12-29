@@ -134,94 +134,160 @@ La figura 5.6 muestra las imágenes que recibí. ¡La que está en la parte supe
 
 **Figura 5.6 Dibujos animados generados por Image Creator basados ​​en mi mensaje**
 
-A continuación se muestra un ejemplo de solicitud para una fotografía que incluye las palabras clave medium shoty fluorescent lighting:
+A continuación se muestra un ejemplo de prompt para una fotografía que incluye las palabras clave `medium shot` y `fluorescent lighting`:
 
+```text
+A photograph of a golden retriever browsing in a library, medium shot, fluorescent lighting.
+```
+
+```text
 Una fotografía de un golden retriever curioseando en una biblioteca, plano medio, iluminación fluorescente.
+```
+
 La figura 5.7 muestra una imagen que DALL-E generó a partir de este mensaje.
 
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/82793d94-e5d0-41ca-8f70-7ef190757518" />
 
+**Figura 5.7 Una imagen fotográfica generada por DALL-E**
 
-Figura 5.7 Una imagen fotográfica generada por DALL-E
+A continuación se muestra una sugerencia para una ilustración de arte digital que utiliza las palabras clave `post-apocalyptic` y `desolate`:
 
-A continuación se muestra una sugerencia para una ilustración de arte digital que utiliza las palabras clave post-apocalypticy desolate:
+```text
+A digital art illustration of an old-fashioned diner in a post-apocalyptic, desolate street scene.
+```
 
+```text
 Una ilustración de arte digital de un restaurante antiguo en una escena callejera desolada y postapocalíptica.
+```
+
 La figura 5.8 muestra un ejemplo de imagen DALL-E generada a partir de este mensaje.
 
+<img width="924" alt="image" src="https://github.com/user-attachments/assets/e87a280c-d993-4714-9675-98e0914cb5c8" />
 
+**Figura 5.8 Una ilustración generada por DALL-E**
 
-Figura 5.8 Una ilustración generada por DALL-E
+A continuación se muestra un mensaje para una página de manuscrito iluminado que utiliza las palabras clave `bright` y `lavish`:
 
-A continuación se muestra un mensaje para una página de manuscrito iluminado que utiliza las palabras clave brighty lavish:
+```text
+A bright, lavish, illuminated manuscript page that includes "Lorem ipsum" text and drawings of cats in the margins.
+```
 
+```text
 Una página manuscrita brillante, lujosa e iluminada que incluye texto "Lorem ipsum" y dibujos de gatos en los márgenes.
+```
+
 La figura 5.9 muestra una imagen que DALL-E creó a partir de este mensaje.
 
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/a18fe1f3-4666-43cb-975f-654c26c14318" />
 
-
-Figura 5.9 Una página de manuscrito iluminado generado por DALL-E con gatos
+**Figura 5.9 Una página de manuscrito iluminado generado por DALL-E con gatos**
 
 Si DALL-E genera una imagen que desea utilizar (ya sea para editarla o para que sirva como prototipo), el siguiente paso es guardar esa imagen en su computadora.
 
-Guardar una imagen generada
+#### GUARDAR UNA IMAGEN GENERADA
 
 Una vez que tenga una imagen que desee utilizar en su página web, deberá guardar la imagen en su computadora:
 
-Aplicación OpenAI DALL-E: haga clic en la imagen, haga clic en el botón de tres puntos (...) que aparece en la esquina superior derecha de la imagen y luego haga clic en Descargar.
+* ***OpenAI DALL-E app***: Haga clic en la imagen, haga clic en el botón de tres puntos (...) que aparece en la esquina superior derecha de la imagen y luego haga clic en Download.
 
-Copilot Image Creator : haga clic en la imagen y luego en Descargar.
+* ***Copilot Image Creator***: Haga clic en la imagen y luego en Download.
 
-De cualquier manera, la imagen se almacena en la carpeta Descargas de tu computadora. Mueve el archivo de imagen a la misma carpeta que contiene tus archivos HTML y CSS (que crearás en la siguiente sección) y luego cambia el nombre de la imagen por el nombre de archivo que prefieras.
+De cualquier manera, la imagen se almacena en la carpeta Downloads de tu computadora. 
+Mueve el archivo de imagen a la misma carpeta que contiene tus archivos HTML y CSS (que crearás en la siguiente sección) y luego cambia el nombre de la imagen por el nombre de archivo que prefieras.
 
-Ahora que sabe cómo hacer que ChatGPT lo ayude a escribir y editar texto y generar imágenes, está listo para crear el mensaje que genera el código de la página web para un diario en línea.
+Ahora que sabe cómo hacer que ChatGPT lo ayude a escribir y editar texto y generar imágenes, está listo para crear el prompt que genera el código de la página web para un diario en línea.
 
-5.2.3 Elaboración del mensaje
+### 5.2.3 Elaboración del prompt
+
 El proyecto de este capítulo es una página de diario en línea. Antes de continuar, debe tener a mano lo siguiente:
 
-Un logotipo, un título y un eslogan para la página.
+* Un logotipo, un título y un eslogan para la página.
 
-Los nombres de los tipos de letra que desea utilizar para los encabezados de página y el texto de la página.
+* Los nombres de los tipos de letra que desea utilizar para los encabezados de página y el texto de la página.
 
-Los nombres de los colores que desea aplicar a los fondos y al texto de la página.
+* Los nombres de los colores que desea aplicar a los fondos y al texto de la página.
 
 Consulta el capítulo 3 para obtener más información sobre estos elementos de diseño y cómo solicitar a ChatGPT sugerencias de título, tipo de letra y color.
 
 Incluso si no tienes nada escrito para publicar, puedes seguir el proceso de solicitar a ChatGPT el código HTML y CSS de tu diario en línea, ya que el código incluirá marcadores de posición para tu texto. Debes hacerle saber a ChatGPT de inmediato que quieres que te ayude a crear una página web y que no sabes cómo codificar, por lo que tendrá que generar el código por ti. Todo esto se hace iniciando tu solicitud de la siguiente manera:
 
+```text
+I want to build a web page for an online journal. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+```
+
+```text
 Quiero crear una página web para una revista en línea. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
+```
+
 A continuación, especifique el contenido de su página, incluido lo siguiente (consulte la figura 5.10):
 
-Un encabezado que incluye su logotipo, título de página y eslogan.
+* Un header que incluye su logotipo, título de página y eslogan.
 
-Un elemento principal donde cada entrada es un acordeón que utiliza HTML summaryy detailselementos.
+* Un elemento main donde cada entrada es un accordion que utiliza HTML elementos `summary` y `details`.
 
-Para cada entrada, el summarytexto es el título de la entrada y el detailselemento incluye la fecha de entrada seguida del texto de la entrada.
+* Para cada entrada, el texto `summary` ves el título de la entrada y el elemento `details` incluye la fecha de entrada seguida del texto de la entrada.
 
-Un pie de página que incluyeIncluye un aviso de derechos de autor.
+* Un footer que incluye un aviso de derechos de autor.
 
+<img width="863" alt="image" src="https://github.com/user-attachments/assets/bbef970a-551c-41bc-87e3-c2ee998bd2cf" />
 
-
-Figura 5.10 Las secciones de la página de la revista en línea
+**Figura 5.10 Las secciones de la página del diario en línea**
 
 A continuación, le pides a ChatGPT que genere el CSS según el formato que deseas para tu página:
 
+```text
+Second, in a separate file please write the CSS code for the following:
+```
+
+```text
 En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+```
+
 A continuación, especifique el formato, incluido lo siguiente:
 
-El color de fondo de la página y el color del texto.
+* El color de fondo(background) de la página y el color del texto.
 
-Los tamaños de fuente que desea utilizar para el título y el eslogan de la página.
+* Los tamaños de fuente que desea utilizar para el título y el eslogan de la página.
 
-El tamaño de letra de los summaryelementos.
+* El tamaño de letra de los elementos `summary`.
 
-Las fuentes a utilizar para los encabezados, resúmenes y texto de página normal.
+* Las fuentes a utilizar para los headings, resúmenes y texto de página normal.
 
-Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 850 px es adecuada para la mayoría de las páginas.
+* Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 850px es adecuada para la mayoría de las páginas.
 
 A continuación se muestra un ejemplo de solicitud para mi propia página de diario en línea:
 
+```text
+I want to build a web page for an online journal. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+ * A header element that includes an image named logo.png, the title "The Moo Point", and the tagline "It's like a cow's opinion, you know, it just doesn't matter. It's moo."
+ * A main section where each entry is an accordion using the HTML summary and details elements.
+ * For each entry, the summary text is the entry title and the details include the entry date, followed by the entry text.
+ * Please provide four sample entries going back four days from today.
+ * A footer element that includes the Copyright symbol, followed by the current year, followed by "Paul McFedries".
+ * In the page head section, include the tag <meta charset="utf-8">.
+  
+Second, in a separate file write the CSS code for the following:
+ * The page background color is mintcream.
+ * The page text color is slategray.
+ * Make the image a maximum width of 150px and floated to the left.
+ * The title font size is 48px.
+ * The tagline font size is 22px and formatted as italic.
+ * The summary font size is 30px.
+ * The main section font size is 20px with a top margin of 48px.
+ * Make the date of each entry dark blue with font size 18px.
+ * For the headings and summary text, use the Lato font from Google Fonts. For the rest of the text, use the Merriweather font from Google Fonts.
+ * The footer has 5px padding all around and a 10px top margin.
+ * Make the page responsive with a maximum width of 850px.
+ * Style the accordions to make them look nicer, including a powderblue background color.
+```
+
+```text
 Quiero crear una página web para una revista en línea. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
@@ -245,95 +311,105 @@ En segundo lugar, en un archivo separado escriba el código CSS para lo siguient
  * El pie de página tiene un relleno de 5 px alrededor y un margen superior de 10 px.
  * Hacer que la página sea responsiva con un ancho máximo de 850px.
  * Dale estilo a los acordeones para que se vean mejor, incluyendo un color de fondo azul pálido.
-ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado index.html. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+```
 
-<link rel="hoja de estilo" tipo="texto/css" href="estilos.css">
-Este código le indica al navegador web que busque el código CSS en un archivo llamado styles.css, por lo que tu próxima tarea es copiar el código CSS generado, pegarlo en un archivo y guardarlo como styles.css (o cualquier nombre que veas en la <link>etiqueta). Asegúrate de guardar styles.css en la misma carpeta que tu archivo index.html. También debes copiar tu archivo de imagen en la misma carpeta. Consulta el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
+ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado `index.html`. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+
+```html
+<link rel="stylesheet" type="text/css" href="styles.css">
+```
+
+Este código le indica al navegador web que busque el código CSS en un archivo llamado `styles.css`, por lo que tu próxima tarea es copiar el código CSS generado, pegarlo en un archivo y guardarlo como `styles.css` (o cualquier nombre que veas en el tag `<link>`). Asegúrate de guardar `styles.css` en la misma carpeta que tu archivo `index.html`. También debes copiar tu archivo de imagen en la misma carpeta. Consulta el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
 
 Envié este mensaje a GPT-4 mediante la aplicación ChatGPT de OpenAI. El código generado generó la página que se muestra en la figura 5.11.
 
+<img width="683" alt="image" src="https://github.com/user-attachments/assets/729ad066-81e2-444b-96b1-8fd1fffad709" />
 
+**Figura 5.11 Mi página de diario en línea generada por ChatGPT**
 
-Figura 5.11 Mi página de diario en línea generada por ChatGPT
-
-Nota Para obtener la página que se muestra en la figura 5.11, tuve que corregir un error que cometió ChatGPT en el código CSS. Hablo de este error en la siguiente sección.
+**Nota**: Para obtener la página que se muestra en la figura 5.11, tuve que corregir un error que cometió ChatGPT en el código CSS. Hablo de este error en la siguiente sección.
 
 Si le gusta el diario en línea que ChatGPT creó para usted, puede omitir el resto de este capítulo e implementar el código como describo en el apéndice B. Sin embargo, si desea saber más sobre el código que ChatGPT generó, la siguiente sección le brinda una mirada más cercana.
 
-5.3 Examinando el código
-Si tiene curiosidad sobre el código que genera ChatGPT, en esta sección le brindaré una descripción general breve y no demasiado técnica del código de diario en línea que resultó de mi solicitud de la sección anterior (esa página de diario se muestra en la figura 5.11). Su código generado por ChatGPT será diferente al mío no solo porque su texto e imágenes serán diferentes, sino también porque
+## 5.3 Examinando el código
 
-Los algoritmos de ChatGPT incluyen cierta aleatoriedad incorporada, por lo que el mismo mensaje a menudo generará un código ligeramente diferente cada vez que lo ejecutes.
+Si tiene curiosidad sobre el código que genera ChatGPT, en esta sección le brindaré una descripción general breve y no demasiado técnica del código de diario en línea que resultó de mi prompt de la sección anterior (esa página de diario se muestra en la figura 5.11). Su código generado por ChatGPT será diferente al mío no solo porque su texto e imágenes serán diferentes, sino también porque:
 
-El resultado de ChatGPT varía según el modelo (GPT-3.5 frente a GPT-4) y la aplicación (OpenAI frente a Copilot). En el caso de Copilot, el resultado también depende del estilo de conversación (creativo, equilibrado o preciso).
+* Los algoritmos de ChatGPT incluyen cierta aleatoriedad incorporada, por lo que el mismo mensaje a menudo generará un código ligeramente diferente cada vez que lo ejecutes.
 
-Nota: El código HTML y CSS generado para mi página de diario en línea están disponibles en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro: https://github.com/paulmcfe/websites-with-chatgpt .
+* El resultado de ChatGPT varía según el modelo (GPT-3.5 frente a GPT-4) y la aplicación (OpenAI frente a Copilot). En el caso de Copilot, el resultado también depende del estilo de conversación (creative, balanced, o precise).
+
+**Nota**: El código HTML y CSS generado para mi página de diario en línea están disponibles en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro: https://github.com/paulmcfe/websites-with-chatgpt .
 
 Sin embargo, cada versión de ChatGPT debería generar código HTML y CSS que sea al menos similar a lo que se muestra en las siguientes dos secciones, por lo que mis anotaciones de código deberían ayudarlo a comprender lo que sucede bajo el capó.
 
-5.3.1 Examinar el HTML
+### 5.3.1 Examinar el HTML
+
 El código HTML que ChatGPT generó para mi página de diario en línea se muestra aquí:
 
+```html
 <!DOCTYPE html>
 <html>
-    <cabeza>
-        <meta charset="utf-8">                                    ①
-        <title>El punto de Moo</title>
-        <link rel="hoja de estilo"
-              href="estilos.css">                                  ②
-        <link rel="preconexión"
-              href="https://fonts.googleapis.com">                ③ 
-        <link rel="preconectar"                                    ③ 
-              href=https://fonts.gstatic.com                      ③ 
-              origen cruzado>                                        ③ 
-        <link href="https://fonts.googleapis.com/css2?            ③ 
-        familia=Lato:wght@400;700&familia=Merriweather:             ③ 
-        ital,wght@0,400;0,700;1,400&                              ③ 
-        visualización=swap" rel="hoja de estilo">                           ③
-    </cabeza>
-    <cuerpo>
-        <header>                                                  ⑦ 
-            <img src="logo.png" alt="Logo">                       ④⑤ 
-            <h1 class="title">El punto de muuuuu</h1>                  ⑤⑦ 
-            <p class="tagline">                                   ⑥⑦ 
-                Es como la opinión de una vaca, ya sabes,           ⑦ 
-                simplemente no importa. Es muuuuu.                    ⑦ 
-            </p>                                                  ⑥⑦ 
-        </header>                                                 ⑦
+    <head>
+        <meta charset="utf-8">                                   ①
+        <title>The Moo Point</title>
+        <link rel="stylesheet" 
+              href="styles.css">                                 ②
+        <link rel="preconnect" 
+              href="https://fonts.googleapis.com">               ③
+        <link rel="preconnect"                                   ③
+              href=https://fonts.gstatic.com                     ③
+              crossorigin>                                       ③
+        <link href="https://fonts.googleapis.com/css2?           ③
+        family=Lato:wght@400;700&family=Merriweather:            ③
+        ital,wght@0,400;0,700;1,400&                             ③
+        display=swap" rel="stylesheet">                          ③
+    </head>
+    <body>
+        <header>                                                 ⑦
+            <img src="logo.png" alt="Logo">                      ④⑤
+            <h1 class="title">The Moo Point</h1>                 ⑤⑦
+            <p class="tagline">                                  ⑥⑦
+                It's like a cow's opinion, you know, it          ⑦
+                just doesn't matter. It's moo.                   ⑦
+            </p>                                                 ⑥⑦
+        </header>                                                ⑦
         
-        <principal>
-            <details>                                             ⑪ 
-                <summary class="entry-title">                     ⑧⑪ 
-                    Título de la entrada 1                              ⑪ 
-                </summary>                                        ⑧⑪ 
-                <p class="entry-date">24 de julio de 2023</p>            ⑨⑪ 
-                <p class="entry-text">El texto de la entrada va aquí.</p>   ⑩⑪ 
-            </details>                                            ⑪
+        <main>
+            <details>                                            ⑪
+                <summary class="entry-title">                    ⑧⑪
+                    Title of Entry 1                             ⑪
+                </summary>                                       ⑧⑪
+                <p class="entry-date">24 July 2023</p>           ⑨⑪
+                <p class="entry-text">Entry text goes here.</p>  ⑩⑪
+            </details>                                           ⑪
   
-            <detalles>
-                <summary class="entry-title">Título de la entrada 2</summary>
-                <p class="entry-date">25 de julio de 2023</p>
-                <p class="entry-text">El texto de entrada va aquí.</p>
-            </detalles>
+            <details>
+                <summary class="entry-title">Title of Entry 2</summary>
+                <p class="entry-date">25 July 2023</p>
+                <p class="entry-text">Entry text goes here.</p>
+            </details>
   
-            <detalles>
-                <summary class="entry-title">Título de la entrada 3</summary>
-                <p class="entry-date">26 de julio de 2023</p>
-                <p class="entry-text">El texto de entrada va aquí.</p>
-            </detalles>
+            <details>
+                <summary class="entry-title">Title of Entry 3</summary>
+                <p class="entry-date">26 July 2023</p>
+                <p class="entry-text">Entry text goes here.</p>
+            </details>
   
-            <detalles>
-                <summary class="entry-title">Título de la entrada 4</summary>
-                <p class="entry-date">27 de julio de 2023</p>
-                <p class="entry-text">El texto de entrada va aquí.</p>
-            </detalles>
-        </principal>
+            <details>
+                <summary class="entry-title">Title of Entry 4</summary>
+                <p class="entry-date">27 July 2023</p>
+                <p class="entry-text">Entry text goes here.</p>
+            </details>
+        </main>
   
-        <pie de página>                                                  ⑫ 
-            <p>© 2023 Paul McFedries</p>                     ⑫ 
-        </pie de página>                                                 ⑫
-    </cuerpo>
+        <footer>                                                 ⑫
+            <p>&copy; 2023 Paul McFedries</p>                    ⑫
+        </footer>                                                ⑫
+    </body>
 </html>
+```
+
 ① Especifica el conjunto de caracteres de la página
 
 ② Le dice al navegador web dónde encontrar el código CSS
@@ -360,75 +436,82 @@ El código HTML que ChatGPT generó para mi página de diario en línea se muest
 
 A continuación se muestran algunas notas a tener en cuenta al leer el código HTML:
 
-El código <meta charset="utf-8">que aparece inmediatamente después de la <head>etiqueta en el archivo HTML le indica al navegador el conjunto de caracteres que se utiliza en la página. No es necesario que sepas qué significa esto, solo que esta etiqueta es necesaria para que el símbolo de copyright se muestre correctamente. También ayudará a que caracteres como los guiones largos (—) y las comillas tipográficas (“ y ”) se muestren correctamente si utilizas esos y otros caracteres similares en las entradas de tu diario.
+* El código `<meta charset="utf-8">` que aparece inmediatamente después de la etiqueta `<head>` en el archivo HTML le indica al navegador el conjunto de caracteres que se utiliza en la página. No es necesario que sepas qué significa esto, solo que esta etiqueta es necesaria para que el símbolo de copyright se muestre correctamente. También ayudará a que caracteres como los guiones largos (`—`) y las comillas tipográficas (`“` y `”`) se muestren correctamente si utilizas esos y otros caracteres similares en las entradas de tu diario.
 
-Este código utiliza texto de marcador de posición para las entradas, por lo que deberá agregar su propio título, fecha y texto para cada entrada.
+* Este código utiliza texto de marcador de posición(placeholder) para las entradas, por lo que deberá agregar su propio título, fecha y texto para cada entrada.
 
-Si el lema de la página te suena familiar, es una línea tomada del personaje Joey del antiguo programa de televisión Friends .
+* Si el lema de la página te suena familiar, es una línea tomada del personaje Joey del antiguo programa de televisión *Friends*.
 
 Por último, tenga en cuenta que el código HTML incluye la siguiente línea:
 
-<link rel="hoja de estilo" href="estilos.css">
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
 
-5.3.2 Examinando el CSS
+### 5.3.2 Examinando el CSS
+
 El código CSS generado por ChatGPT para mi página de diario en línea se muestra aquí:
 
-cuerpo {
-    color de fondo: crema menta;                ① 
-    color: gris pizarra;                           ① 
-    familia de fuentes: 'Merriweather', serif;         ① 
-    ancho máximo: 850px;                           ② 
-    margen: 0 automático;                             ③
+```css
+body {
+    background-color: mintcream;               ①
+    color: slategray;                          ①
+    font-family: 'Merriweather', serif;        ①
+    max-width: 850px;                          ②
+    margin: 0 auto;                            ③
 }
-imagen {
-    ancho máximo: 150px;                           ④ 
-    flotante: izquierda;                                ④
+img {
+    max-width: 150px;                          ④
+    float: left;                               ④
 }
 h1 {
-    tamaño de fuente: 48px;                            ⑤ 
-    familia de fuentes: 'Lato', sans-serif;            ⑤
+    font-size: 48px;                           ⑤
+    font-family: 'Lato', sans-serif;           ⑤
 }
-p.eslogan {
-    tamaño de fuente: 22px;                            ⑥ 
-    estilo de fuente: cursiva;                         ⑥
+p.tagline {
+    font-size: 22px;                           ⑥
+    font-style: italic;                        ⑥
 }
-principal {
-    margen superior: 48px;
+main {
+    margin-top: 48px;
 }
-.resumen, .título de la entrada {
-    tamaño de fuente: 30px;                            ⑦ 
-    familia de fuentes: 'Lato', sans-serif;            ⑦
+.summary, .entry-title {
+    font-size: 30px;                           ⑦
+    font-family: 'Lato', sans-serif;           ⑦
 }
-.fecha {
-    color: azul oscuro;                            ⑧ 
-    tamaño de fuente: 18px;                            ⑧
+.date {
+    color: darkblue;                           ⑧
+    font-size: 18px;                           ⑧
 }
-pie de página {
-    relleno: 5px;
-    margen superior: 10px;
+footer {
+    padding: 5px;
+    margin-top: 10px;
 }
-detalles {                                       ⑨
-    Fondo: azul pálido;
-    margen: 5px 0;
-    borde: 1px sólido #aaa;
-    radio del borde: 4px;
-    relleno: .625em .625em .625em .625em;
-    ancho: 100%;
+details {                                      ⑨
+    background: powderblue;
+    margin: 5px 0;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .625em .625em .625em .625em;
+    width: 100%;
 }
-resumen {
-    peso de fuente: negrita;
-    margen: -.625em -.625em 0;
-    relleno: .625em;
+summary {
+    font-weight: bold;
+    margin: -.625em -.625em 0;
+    padding: .625em;
 }
-detalles[abierto] {
-    relleno: .625em;
-    borde: 1px sólido #aaa;
+details[open] {
+    padding: .625em;
+    border: 1px solid #aaa;
 }
-detalles[abrir] resumen {
-    borde inferior: 1px sólido #aaa;
-    margen inferior: .625em;
-} #I
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .625em;
+}    #I
+```
+
 ① Establece el color de fondo de la página, el color del texto y la fuente.
 
 ② Establece el ancho máximo de página en 850 px
@@ -449,80 +532,91 @@ detalles[abrir] resumen {
 
 Afortunadamente, ChatGPT rara vez comete errores al generar código HTML y CSS, pero en este caso sí lo hizo. Para ver el error, primero vuelva a mirar la siguiente línea del código HTML (hay líneas similares para cada entrada):
 
-<p class="entry-date">24 de julio de 2023</p>
-En esta <p>etiqueta, el classatributo hace referencia a un conjunto de estilos CSS aplicados al párrafo. En este ejemplo, el nombre de la clase es entry-date. En el código CSS, los estilos de clase se designan añadiendo un punto ( .) antes del nombre de la clase. Sin embargo, puedes buscar en el código CSS todo el día y no encontrarás ninguna regla CSS que comience con .entry-date. La más cercana es .date, lo que significa que ChatGPT cometió un error. (¿Cómo lo sabrías? En este caso, lo sabrías mirando la página y notando que las fechas de entrada no están formateadas con el darkbluecolor especificado en el mensaje). En el CSS, solucionas el problema cambiando .datea .entry-date.
+```html
+<p class="entry-date">24 July 2023</p>
+```
+
+En esta etiqueta `<p>`, el atributo `class` hace referencia a un conjunto de estilos CSS aplicados al párrafo. En este ejemplo, el nombre de la clase es `entry-date`. En el código CSS, los estilos de clase se designan añadiendo un punto (`.`) antes del nombre de la clase. Sin embargo, puedes buscar en el código CSS todo el día y no encontrarás ninguna regla CSS que comience con `.entry-date`. La más cercana es `.date`, lo que significa que ChatGPT cometió un error. (¿Cómo lo sabrías? En este caso, lo sabrías mirando la página y notando que las fechas de entrada no están formateadas con el color `darkblue` especificado en el prompt). En el CSS, solucionas el problema cambiando `.date` a `.entry-date`.
 
 Si lo desea, puede utilizar las anotaciones anteriores en esta sección para modificar el código de su página web, como describo a continuación.
 
-5.4 Personalización de la página
-Si no está satisfecho con la página que ChatGPT generó para usted, una posible solución es modificar el mensaje y volver a enviarlo. Sin embargo, para personalizaciones relativamente pequeñas, suele ser más fácil editar el código manualmente.
+## 5.4 Personalización de la página
+
+Si no está satisfecho con la página que ChatGPT generó para usted, una posible solución es modificar el prompt y volver a enviarlo. Sin embargo, para personalizaciones relativamente pequeñas, suele ser más fácil editar el código manualmente.
 
 Primero, aquí hay algunas sugerencias de personalización para el código HTML:
 
-En el encabezado, puedes editar el título o el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: <h1>y </h1>para el título, y <p>y </p>para el eslogan.
+* En el header, puedes editar el título o el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: `<h1>` y `</h1>` para el título, y `<p>` y `</p>` para el eslogan.
 
-Para agregar una nueva entrada (es decir, un nuevo acordeón), siga estos pasos:
+* Para agregar una nueva entrada (es decir, un nuevo acordeón), siga estos pasos:
 
    a) Abra el archivo HTML en un editor de texto.
 
-   b) Seleccione una entrada existente. Es decir, seleccione todo lo que esté entre un único par de etiquetas <details>y </details>, tal como se muestra en la figura 5.12.
+   b) Seleccione una entrada existente. Es decir, seleccione todo lo que esté entre un único par de tags: `<details>` y `</details>`, tal como se muestra en la figura 5.12.
 
+<img width="930" alt="image" src="https://github.com/user-attachments/assets/ca60c57e-9f3b-4016-800b-34a73215388c" />
 
-
-Figura 5.12 Seleccionar una entrada de acordeón existente.
+**Figura 5.12 Seleccionar una entrada de acordeón existente.**
 
    c) Copie la entrada (por ejemplo, presionando Ctrl-C o Cmd-C).
 
-   d) Cree una nueva línea en el punto donde desea que aparezca la nueva entrada. Por ejemplo, si desea que la nueva entrada aparezca encima de las entradas existentes, coloque el cursor inmediatamente antes de la primera <details>etiqueta y luego presione Enter o Return.
+   d) Cree una nueva línea en el punto donde desea que aparezca la nueva entrada. Por ejemplo, si desea que la nueva entrada aparezca encima de las entradas existentes, coloque el cursor inmediatamente antes de la primera etiqueta `<details>` y luego presione Enter o Return.
 
    e) Coloque el cursor en la nueva línea que acaba de crear, como se muestra en la figura 5.13.
 
+<img width="786" alt="image" src="https://github.com/user-attachments/assets/8fced6e6-a1b7-493c-ba2c-bd6b1795fdd8" />
 
-
-Figura 5.13 Coloque el cursor donde desea pegar el código que ha copiado.
+**Figura 5.13 Coloque el cursor donde desea pegar el código que ha copiado.**
 
    f) Pegue el código copiado (por ejemplo, presionando Ctrl-C o Cmd-C).
 
    g) Editar el título, la fecha y el texto de la entrada.
 
-Si el texto de su entrada incluye varios párrafos, puede asegurarse de que cada párrafo se muestre correctamente rodeándolo con una <p class="entry-text">etiqueta al principio y </p>otra al final:
+Si el texto de su entrada incluye varios párrafos, puede asegurarse de que cada párrafo se muestre correctamente rodeándolo con una etiqueta `<p class="entry-text">` al principio y otra al final `</p>`:
 
-<principal>
-    <detalles>
-        <summary class="entry-title">Título de la entrada 1</summary>
-        <p class="entry-date">24 de julio de 2023</p>
-        <p class="entry-text">El texto de entrada va aquí.</p>
-        <p class="entry-text">Aquí va otro párrafo.</p>
-        <p class="entry-text">Puedes continuar si lo deseas.</p>
-    </detalles>
-En la sección de pie de página del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
+```html
+<main>
+    <details>
+        <summary class="entry-title">Title of Entry 1</summary>
+        <p class="entry-date">24 July 2023</p>
+        <p class="entry-text">Entry text goes here.</p>
+        <p class="entry-text">Another paragraph goes here.</p>
+        <p class="entry-text">You can keep going if you want.</p>
+    </details> 
+```
+
+* En la sección de footer del código HTML, puedes agregar links a tus cuentas de redes sociales, como describo en el capítulo 4.
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-Para dar formato al texto de cada entrada, agréguelo .entry-text { }al final del código CSS y complételo con el formato que desee. Por ejemplo, el siguiente código ajusta el tamaño de fuente de la entrada:
+* Para dar formato al texto de cada entrada, agréguelo `.entry-text { }` al final del código CSS y complételo con el formato que desee. Por ejemplo, el siguiente código ajusta el tamaño de fuente de la entrada:
 
-.texto de entrada {
-    tamaño de fuente: 20px;
+```css
+.entry-text {
+    font-size: 20px;
 }
-Si desea que su página tenga un ancho máximo diferente, cambie el max-widthvalor a algo distinto de 850px.
+```
 
-Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
+* Si desea que su página tenga un ancho máximo diferente, cambie el valor `max-width` a algo distinto de 850px.
 
-Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
 
-Para cualquier valor de margen o relleno, puede cambiar el número para aumentar o disminuir el relleno o los márgenes. En cada cEn este caso, asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la unidad `px` en su lugar.
 
-Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+* Para cualquier valor de margen o padding, puede cambiar el número para aumentar o disminuir el padding o los márgenes. En este caso, asegúrese de dejar la unidad `px` en su lugar.
 
-Resumen
-Un acordeón es una característica HTML especial que consta de un resumen (el título o la descripción del acordeón) y detalles (la totalidad del contenido del acordeón).
+* Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
-Al hacer clic en el resumen del acordeón, el contenido completo del acordeón alterna entre oculto y visible.
+## Resumen
 
-Para que la IA genere una imagen a partir de un mensaje de texto, utilice la aplicación DALL-E de OpenAI o el Creador de imágenes de Copilot.
+* Un accordion es una característica HTML especial que consta de un summary - resumen (el título o la descripción del acordeón) y details - detalles (la totalidad del contenido del acordeón).
 
-Al solicitar una imagen, utilice palabras clave para evocar el estado de ánimo y la estética general, el medio y las características específicas del medio.
+* Al hacer clic en el resumen del acordeón, el contenido completo del acordeón alterna entre oculto y visible.
 
-Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+* Para que la IA genere una imagen a partir de un mensaje de texto, utilice la aplicación DALL-E de OpenAI o el Creador de imágenes de Copilot.
 
-Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
+* Al solicitar una imagen, utilice palabras clave para evocar el estado de ánimo y la estética general, el medio y las características específicas del medio.
+
+* Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+
+* Guarde el HTML generado en el archivo `index.html` y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`.
