@@ -321,90 +321,95 @@ ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar 
 <link rel="stylesheet" type="text/css" href="styles.css">
 ```
 
-Este código le indica al navegador web que busque el código CSS en un archivo llamado styles.css, por lo que la siguiente tarea es copiar el código CSS generado, pegarlo en un archivo y guardarlo como styles.css (o cualquier nombre que vea en la <link>etiqueta). Asegúrese de guardar styles.css en la misma carpeta que su archivo index.html. También debe copiar su archivo de imagen en la misma carpeta. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
+Este código le indica al navegador web que busque el código CSS en un archivo llamado `styles.css`, por lo que la siguiente tarea es copiar el código CSS generado, pegarlo en un archivo y guardarlo como `styles.css` (o cualquier nombre que vea en la etiqueta `<link>`). Asegúrese de guardar `styles.css` en la misma carpeta que su archivo `index.html`. También debe copiar su archivo de imagen en la misma carpeta. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
 
 Envié este mensaje a GPT-4 mediante la aplicación ChatGPT de OpenAI. El código generado generó la página que se muestra en la figura 6.8.
 
+![image](https://github.com/user-attachments/assets/7541bdf8-4ca6-44c1-b1a6-327c90fecbb1)
 
-
-Figura 6.8 Página de inicio del sitio web Mi información generada por ChatGPT
+**Figura 6.8 Página de inicio del sitio web Mi información generada por ChatGPT**
 
 Si le gusta el sitio web de información que ChatGPT creó para usted, puede omitir el resto de este capítulo e implementar el código como describo en el apéndice B. Sin embargo, si desea saber más sobre el código que generó ChatGPT, la siguiente sección le brinda una mirada más cercana.
 
-6.3 Examinar el código de la página de inicio
+## 6.3 Examinar el código de la página de inicio
+
 Si tiene curiosidad acerca del código que genera ChatGPT, en esta sección le brindaré una descripción general breve y no demasiado técnica del código del sitio web de información que resultó de mi solicitud de la sección anterior (la página de inicio del sitio web de información se muestra en la figura 6.8).
 
-NOTA El código HTML y CSS generado para la página de inicio de mi sitio web de informaciónLas edades están disponibles en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro: https://github.com/paulmcfe/websites-with-chatgpt .
+**NOTA**: El código HTML y CSS generado para la página de inicio de mi sitio web de información están disponibles en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro: https://github.com/paulmcfe/websites-with-chatgpt.
 
 Cada versión de ChatGPT debe generar código HTML y CSS que sea al menos similar a lo que se muestra en las siguientes dos secciones, por lo que mis anotaciones de código deberían ayudarlo a comprender lo que sucede bajo el capó.
 
-6.3.1 Examinar el HTML
+### 6.3.1 Examinar el HTML
+
 El código HTML que ChatGPT generó para la página de inicio de mi sitio de información se muestra aquí:
 
+```html
 <!DOCTYPE html>
 <html>
-<cabeza>
-  <title>Sociedad para la preservación de las palabras antediluvianas</title>
-  <meta charset="utf-8">                                                     ①
+<head>
+  <title>Antediluvian Word Preservation Society</title>
+  <meta charset="utf-8">                                                    ①
   <link href="https://fonts.googleapis.com/css2?
-  familia= Playfair+Pantalla:wght@400;700&display=swap"
-  rel="hoja de estilo">                                                          ②
+  family= Playfair+Display:wght@400;700&display=swap"
+  rel="stylesheet">                                                         ②
   <link href="https://fonts.googleapis.com/css2?
-  familia=Lora:ital,peso@0,400;0,700;1,400&display=swap"
-  rel="hoja de estilo">                                                          ② 
-  <link rel="hoja de estilo" href="estilos.css">                                  ③
-</cabeza>
-<cuerpo>
-  <header>                                                                   ⑥ 
-    <h1>Sociedad para la Preservación de Palabras Antediluvianas</h1>                          ④⑥ 
-    <p>Preservando palabras del pasado, para el futuro</p>                    ⑤⑥ 
-  </header>                                                                  ⑥ 
-  <nav>                                                                      ⑦ 
-    <a href="index.html">Inicio</a>                                            ⑦ 
-    <a href="blog.html">Blog</a>                                             ⑦ 
-    <a href="faq.html">Preguntas frecuentes</a>                                               ⑦ 
-    <a href="about.html">Acerca de</a>                                           ⑦ 
-    <a href="contact.html">Contacto</a>                                       ⑦ 
-  </nav>                                                                     ⑦ 
-  <main>                                                                     ⑧ 
-    <p>Bienvenido a la Sociedad para la Preservación de Palabras Antediluvianas,                ⑧ 
-       donde nuestro objetivo es proteger, preservar y promover palabras antiguas               ⑧ 
-       que están en peligro de pasar desapercibidas, quedar obsoletas            ⑧ 
-       y pasar de moda. Quédate un rato, echa un vistazo alrededor y disfruta              ⑧ 
-       del brillo bruñido de estas antiguas y hermosas palabras.</p>          ⑧ 
-    <section>                                                                ⑧ 
-      <h2>Palabra más reciente</h2>                                              ⑧ 
-      <h3><em>alboroto</em> (hul·uh·buh·LOO, sustantivo)</h3>                   ⑧ 
-      <p>Un gran ruido o conmoción; un alboroto. (Ejemplo: "Después de escuchar     ⑧ 
-         el <strong>alboroto</strong> que ocho niños drogados con       ⑧ 
-         azúcar podían hacer, Rupert decidió no ofrecerse nunca más como voluntario para ayudar   ⑧ 
-         en una fiesta de Halloween"). Esta es una palabra divertida para usar en            ⑧ 
-         una conversación, y es perfecta si necesitas un sinónimo inusual para   ⑧ 
-         <em>ruido</em> o <em>conmoción</em>. Es lo suficientemente oscura      ⑧ 
-         como para que no se use demasiado,    pero no es tan oscuro como para que la mayoría de las 
-         personas no lo reconozcan y se rían para sí mismas.               
-         <em>Hullabaloo</em> comenzó como la palabra <em>halloo</em>,     ⑧ 
-         que significa "instar o incitar con gritos". Luego, a través del proceso de   ⑧ 
-         reduplicación de la rima, se agregó la parte <em>balloo</em> para formar   ⑧ 
-         <em>halloo-balloo</em>, que finalmente se transformó en                 ⑧ 
-         <em>hullabaloo</em>. Algunos sinónimos que se registran de manera similar en ⑧ 
-         el medidor de diversión son <em>brouhaha</em>, <em>hubbub</em> y           ⑧ 
-         <em>hurly-burly</em>.</p>                                           ⑧ 
-    </section>                                                               ⑧ 
-    <section>                                                                ⑧ 
-      <h2>El desafío de esta semana</h2>                                         ⑧ 
-         <p>Tu desafío esta semana es usar la palabra <em>tomfoolery</em> ⑧ 
-         -- comportamiento tonto o estúpido -- al menos una vez en cada uno de los        ⑧ 
-         siguientes: en una conversación, en un mensaje de correo electrónico, en un          ⑧ 
-         mensaje de texto y en una reunión de negocios (virtual o del mundo real).         ⑧ 
-         ¡Buena suerte y cuéntanos cómo te va!</p>                     ⑧ 
-    </section>                                                               ⑧ 
-  </main>                                                                    ⑧ 
-  <footer>                                                                   ⑨ 
-    © 2023 Antediluvian Word Preservation Society                       ⑨ 
-  </footer>                                                                  ⑨
-</cuerpo>
+  family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+  rel="stylesheet">                                                         ②
+  <link rel="stylesheet" href="styles.css">                                 ③
+</head>
+<body>
+  <header>                                                                  ⑥
+    <h1>Antediluvian Word Preservation Society</h1>                         ④⑥
+    <p>Preserving words from the past, for the future</p>                   ⑤⑥
+  </header>                                                                 ⑥
+  <nav>                                                                     ⑦
+    <a href="index.html">Home</a>                                           ⑦
+    <a href="blog.html">Blog</a>                                            ⑦
+    <a href="faq.html">FAQ</a>                                              ⑦
+    <a href="about.html">About</a>                                          ⑦
+    <a href="contact.html">Contact</a>                                      ⑦
+  </nav>                                                                    ⑦
+  <main>                                                                    ⑧
+    <p>Welcome to the Antediluvian Word Preservation Society,               ⑧
+       where our goal is to protect, preserve, and promote old              ⑧
+       words that are in danger of becoming overlooked, outmoded,           ⑧
+       and obsolete. Stay a while, take a look around, and bask             ⑧
+       in the burnished sheen of these old and beautiful words.</p>         ⑧
+    <section>                                                               ⑧
+      <h2>Most recent word</h2>                                             ⑧
+      <h3><em>hullaballoo</em> (hul·uh·buh·LOO, noun)</h3>                  ⑧
+      <p>A great noise or commotion; an uproar. (Example: "After hearing    ⑧
+         the <strong>hullaballoo</strong> that eight kids hopped up on      ⑧
+         sugar could make, Rupert decided to never again volunteer to help  ⑧
+         out at a Halloween party.") This is a fun word to use in           ⑧
+         conversation, and it's perfect if you need an unusual synonym for  ⑧
+         <em>noise</em> or <em>commotion</em>. It's just obscure enough     ⑧
+         that it doesn't get overused, but it's not so obscure that most    ⑧
+         people won't recognize it and chuckle to themselves.               ⑧
+         <em>Hullabaloo</em> began its life as the word <em>halloo</em>,    ⑧
+         meaning "to urge or incite with shouts." Then, via the process of  ⑧
+         rhyming reduplication, the <em>balloo</em> part was added to form  ⑧
+         <em>halloo-balloo</em>, which eventually morphed in                ⑧
+         <em>hullabaloo</em>. Some synonyms that register about the same on ⑧
+         the fun-meter are <em>brouhaha</em>, <em>hubbub</em>, and          ⑧
+         <em>hurly-burly</em>.</p>                                          ⑧
+    </section>                                                              ⑧
+    <section>                                                               ⑧
+      <h2>This week's challenge</h2>                                        ⑧
+         <p>Your challenge this week is to use the word <em>tomfoolery</em> ⑧
+         -- foolish or silly behavior -- at least once in each of the       ⑧
+         following: in conversation, in an email message, in a text         ⑧
+         message, and in a business meeting (virtual or real-world).        ⑧
+         Good luck and let us know how you make out!</p>                    ⑧
+    </section>                                                              ⑧
+  </main>                                                                   ⑧
+  <footer>                                                                  ⑨
+    &copy; 2023 Antediluvian Word Preservation Society                      ⑨
+  </footer>                                                                 ⑨
+</body>
 </html>
+```
+
 ① Especifica el conjunto de caracteres de la página
 
 ② Carga las fuentes de la página desde Google Fonts
@@ -425,71 +430,78 @@ El código HTML que ChatGPT generó para la página de inicio de mi sitio de inf
 
 A continuación se muestran algunas notas a tener en cuenta al leer el código HTML:
 
-El código <meta charset="utf-8">de la <head>etiqueta del archivo HTML le indica al navegador el conjunto de caracteres que se utiliza en la página. No es necesario que sepas qué significa esto, solo que esta etiqueta es necesaria para que el símbolo de copyright se muestre correctamente. También ayudará a que caracteres como los guiones largos (—) y las comillas tipográficas (“ y ”) se muestren correctamente si utilizas esos y otros caracteres similares en el texto de tu página.
+* El código `<meta charset="utf-8">` de la etiqueta `<head>` del archivo HTML le indica al navegador el conjunto de caracteres que se utiliza en la página. No es necesario que sepas qué significa esto, solo que esta etiqueta es necesaria para que el símbolo de copyright se muestre correctamente. También ayudará a que caracteres como los guiones largos (`—`) y las comillas tipográficas (`“` y `”`) se muestren correctamente si utilizas esos y otros caracteres similares en el texto de tu página.
 
-Por alguna razón, ChatGPT hizo referencia a las dos fuentes de Google Fonts mediante dos <link>etiquetas independientes. No tengo idea de por qué, pero funciona, así que lo usé.
+* Por alguna razón, ChatGPT hizo referencia a las dos fuentes de Google Fonts mediante dos etiquetas `<link>` independientes. No tengo idea de por qué, pero funciona, así que lo usé.
 
-En el mensaje, le pedí a ChatGPT que buscara palabras rodeadas de asteriscos dobles (por ejemplo, **hullaballoo**) y que las pusiera en negrita. En el HTML, ChatGPT reemplazó los asteriscos dobles con las etiquetas <strong>y </strong>, que hacen que el texto entre ellos aparezca en negrita.
+* En el mensaje, le pedí a ChatGPT que buscara palabras rodeadas de asteriscos dobles (por ejemplo, `**hullaballoo**`) y que las pusiera en negrita. En el HTML, ChatGPT reemplazó los asteriscos dobles con las etiquetas `<strong>` y `</strong>`, que hacen que el texto entre ellos aparezca en negrita.
 
-De manera similar, le pedí a ChatGPT que buscara palabras rodeadas de asteriscos simples (por ejemplo, *noise*) y las pusiera en cursiva. En el HTML, ChatGPT reemplazó los asteriscos con las etiquetas <em>y </em>, que hacen que el texto entre ellos esté en cursiva.
+* De manera similar, le pedí a ChatGPT que buscara palabras rodeadas de asteriscos simples (por ejemplo, `*noise*`) y las pusiera en cursiva. En el HTML, ChatGPT reemplazó los asteriscos con las etiquetas `<em>` y `</em>`, que hacen que el texto entre ellos esté en cursiva.
 
 Tenga en cuenta que el código HTML incluye la siguiente línea:
 
-<link rel="hoja de estilo" href="estilos.css">
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
 
-6.3.2 Examinando el CSS
+### 6.3.2 Examinando el CSS
+
 El código CSS generado por ChatGPT para la página de inicio de mi sitio web de información se muestra aquí:
 
-cuerpo {
-  color de fondo: oldlace;               ① 
-  ancho máximo: 800px;                        ② 
-  margen: 0 automático;                          ③
-  relleno: 25px;
+```css
+body {
+  background-color: oldlace;              ①
+  max-width: 800px;                       ②
+  margin: 0 auto;                         ③
+  padding: 25px;
 }
-encabezado h1 {                                ④ 
-  tamaño de fuente: 64px;                         ④ 
-  altura de línea: 1;                          ④ 
-  color: azul medianoche;                     ④ 
-  familia de fuentes: 'Playfair Display', serif; ④ 
-  margen inferior: 20px;                     ④ 
-}                                          ④
-encabezado p {
-  tamaño de fuente: 30px;                         ⑤
+header h1 {                               ④
+  font-size: 64px;                        ④
+  line-height: 1;                         ④
+  color: midnightblue;                    ④
+  font-family: 'Playfair Display', serif; ④
+  margin-bottom: 20px;                    ④
+}                                         ④
+header p {
+  font-size: 30px;                        ⑤
 }
-nav {                                      ⑥ 
-  borde superior: 1px azul medianoche sólido;      ⑥ 
-  borde inferior: 1px azul medianoche sólido;   ⑥ 
-  margen: 20px 0;                          ⑥ 
-  relleno: 10px 0;                         ⑥ 
-  visualización: flexible;                           ⑥ 
-  justificar contenido: espacio entre;          ⑥ 
-}                                          ⑥
-navegar a {
-    tamaño de fuente: 24px;                       ⑦
+nav {                                     ⑥
+  border-top: 1px solid midnightblue;     ⑥
+  border-bottom: 1px solid midnightblue;  ⑥
+  margin: 20px 0;                         ⑥
+  padding: 10px 0;                        ⑥
+  display: flex;                          ⑥
+  justify-content: space-between;         ⑥
+}                                         ⑥
+nav a {
+    font-size: 24px;                      ⑦
 }
 a {
-  color: azul acero;                        ⑧ 
-  decoración de texto: ninguna;                   ⑧
+  color: steelblue;                       ⑧
+  text-decoration: none;                  ⑧
 }
 h2 {
-  tamaño de fuente: 48px;                         ⑨ 
-  color: azul medianoche;                     ⑨ 
-  familia de fuentes: 'Playfair Display', serif; ⑨ 
-  margen: 30px 0 0;                        ⑨
+  font-size: 48px;                        ⑨
+  color: midnightblue;                    ⑨
+  font-family: 'Playfair Display', serif; ⑨
+  margin: 30px 0 0;                       ⑨
 }
-h3, p, principal p {
-  tamaño de fuente: 24px;                         ⑩ 
-  color: gris pizarra oscuro;                    ⑩ 
-  familia de fuentes: 'Lora', serif;              ⑩
-  margen superior: 8px;
+h3, p, main p {
+  font-size: 24px;                        ⑩
+  color: darkslategray;                   ⑩
+  font-family: 'Lora', serif;             ⑩
+  margin-top: 8px;
 }
-pie de página {                                   ⑪ 
-  borde superior: 1px azul medianoche sólido;      ⑪ 
-  borde inferior: 1px azul medianoche sólido;   ⑪ 
-  relleno: 10px 0;                         ⑪ 
-  margen superior: 50px;                        ⑪ 
-}                                          ⑪
+footer {                                  ⑪
+  border-top: 1px solid midnightblue;     ⑪
+  border-bottom: 1px solid midnightblue;  ⑪
+  padding: 10px 0;                        ⑪
+  margin-top: 50px;                       ⑪
+}   
+```
+                                       ⑪
 ① Establece el color de fondo de la página
 
 ② Establece el ancho máximo de página en 800 px
@@ -514,89 +526,113 @@ pie de página {                                   ⑪
 
 Si lo desea, puede utilizar estas anotaciones para modificar el código de su página web, como describo en la siguiente sección.
 
-6.4 Personalización de la página de inicio
-Si el código del sitio web de información de ChatGPT está deshabilitado por algún motivo, tienes dos formas de solucionarlo:
+## 6.4 Personalización de la página de inicio
 
-Si la página está lejos de lo que quieres, reescribe tu mensaje, inicia una nueva sesión de chat y vuelve a intentarlo.
+Si el código del sitio web de información de ChatGPT está off por algún motivo, tienes dos formas de solucionarlo:
 
-Si la página se parece a lo que desea, solicite a ChatGPT que realice los ajustes necesarios. Asegúrese de enviar esta solicitud en la misma sesión que la solicitud original.
+* Si la página está lejos de lo que quieres, reescribe tu mensaje, inicia una nueva sesión de chat y vuelve a intentarlo.
+
+* Si la página se parece a lo que desea, solicite a ChatGPT que realice los ajustes necesarios. Asegúrese de enviar esta solicitud en la misma sesión que la solicitud original.
 
 En el segundo caso, si el código producido por ChatGPT realmente solo necesita algunos pequeños retoques, considere modificar el código manualmente según las anotaciones que proporcioné en la sección anterior. Como no conoce el código de las páginas web, es mejor no intentar realizar cambios importantes. Sin embargo, eso deja bastantes formas de alterar el código para obtener la página que desea.
 
 Primero, aquí hay algunas sugerencias de personalización para el código HTML:
 
-En el encabezado, puedes editar el título o el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: <h1>y </h1>para el título, y <p>y </p>para el eslogan.
+* En el header, puedes editar el título o el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas: `<h1>` y `</h1>` para el título, y `<p>` y `</p>` para el eslogan.
 
-Edita los sectionelementos según necesites, ajustando el encabezado y el texto.
+* Edita los elementos `section` según necesites, ajustando el heading y el texto.
 
-Para agregar una nueva sección, siga estos pasos:
+* Para agregar una nueva sección, siga estos pasos:
 
    a) Abra el archivo HTML en un editor de texto.
 
-   b) Seleccione una sección existente. Es decir, seleccione todo lo que esté entre un único par de etiquetas <section>y </section>, tal como se muestra en la figura 6.9.
+   b) Seleccione una sección existente. Es decir, seleccione todo lo que esté entre un único par de etiquetas `<section>` y `</section>`, tal como se muestra en la figura 6.9.
 
+![image](https://github.com/user-attachments/assets/9eef18ad-36a4-4b86-9497-ad6905db5e54)
 
-
-Figura 6.9 Seleccionar un elemento de sección existente.
+**Figura 6.9 Seleccionar un elemento de sección existente.**
 
    c) Copie la entrada (por ejemplo, presionando Ctrl-C o Cmd-C).
 
-   d) Cree una nueva línea en el punto donde desea que aparezca la nueva sección. Por ejemplo, si desea que la nueva sección aparezca sobre la primera sección de la página, coloque el cursor inmediatamente antes de la primera <section>etiqueta y luego presione Enter o Return.
+   d) Cree una nueva línea en el punto donde desea que aparezca la nueva sección. Por ejemplo, si desea que la nueva sección aparezca sobre la primera sección de la página, coloque el cursor inmediatamente antes de la primera etiqueta `<section>` y luego presione Enter o Return.
 
    e) Coloque el cursor en la nueva línea que acaba de crear, como se muestra en la figura 6.10.
 
+![image](https://github.com/user-attachments/assets/edd4c289-0f3f-42af-b149-78903424dd00)
 
-
-Figura 6.10 Coloque el cursor donde desea pegar el código que ha copiado.
+**Figura 6.10 Coloque el cursor donde desea pegar el código que ha copiado.**
 
    f) Pegue el código copiado (por ejemplo, presionando Ctrl-C o Cmd-C).
 
    g) Editar el título y el texto de la sección.
 
-Si el texto de su entrada incluye varios párrafos, puede asegurarse de que cada párrafo se muestre correctamente rodeándolo con una <p>etiqueta al principio y </p>otra al final:
+Si el texto de su entrada incluye varios párrafos, puede asegurarse de que cada párrafo se muestre correctamente rodeándolo con una etiqueta `<p>` al principio y otra al final `</p>`:
 
-<sección>
-    <h2>Título de sección</h2>
+```html
+<section>
+    <h2>Section heading</h2>
     <p>
-        Primer párrafo
+        First paragraph
     </p>
     <p>
-        Segundo párrafo
+        Second paragraph
     </p>
     <p>
-        Tercer párrafo
+        Third paragraph
     </p>
-</sección>
-En la sección de pie de página del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
+</section>
+```
+
+En la sección de footer del código HTML, puedes agregar links a tus cuentas de redes sociales, como describo en el capítulo 4.
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-Si desea que su página tenga un ancho máximo diferente, cambie el max-widthvalor a algo distinto de 800px.
+* Si desea que su página tenga un ancho máximo diferente, cambie el valor `max-width` a algo distinto de `800px`.
+* Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
+* Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la unidad `px` en su lugar.
+* Para cualquier valor de margen o padding, puede cambiar el número para aumentar o disminuir el padding o los márgenes. En cada caso, asegúrese de dejar la unidad `px` en su lugar.
+* Para darle más espacio a tu texto, crea un espacio extra entre cada línea agregando la declaración `line-height: 1.5;` en algún lugar de la regla del código CSS `body`:
 
-Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
-
-Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
-
-Para cualquier valor de margen o relleno, puede cambiar el número para aumentar o disminuir el relleno o los márgenes. En cada caso, asegúrese de dejar la pxunidad en su lugar.
-
-Para darle más espacio a tu texto, crea un espacio extra entre cada línea agregando la declaración line-height: 1.5;en algún lugar de la regla del código CSS body:
-
-cuerpo {
-    color de fondo: oldlace;
-    ancho máximo: 800px;
-    margen: 0 automático;
-    rellenotamaño: 25px;
-    altura de línea: 1,5;
+```css
+body {
+    background-color: oldlace;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    line-height: 1.5;
 }
-Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+```
 
-6.5 Creación de indicaciones para las demás páginas del sitio
+* Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+
+## 6.5 Creación de prompts para las demás páginas del sitio
+
 Aunque algunos sitios web de información constan de una sola página, la mayoría tienen varias páginas y muchos tienen bastantes. Si ese es el caso de su sitio, su próxima tarea es solicitarle a ChatGPT el código para crear las demás páginas.
 
-Afortunadamente, estas otras páginas tendrán una estructura muy similar a la de tu página de inicio, con la única diferencia de que el mainelemento almacenará los encabezados y el texto de cada página. Todo esto significa que el mensaje para cada página de subtema será muy similar al mensaje para tu página de inicio. Ten en cuenta también que no necesitas ningún CSS nuevo para estas páginas de subtemas, por lo que puedes omitir la parte CSS del mensaje.
+Afortunadamente, estas otras páginas tendrán una estructura muy similar a la de tu página de inicio, con la única diferencia de que el elemento `main` almacenará los encabezados y el texto de cada página. Todo esto significa que el prompt para cada página de subtema será muy similar al prompt para tu página de inicio. Ten en cuenta también que no necesitas ningún CSS nuevo para estas páginas de subtemas, por lo que puedes omitir la parte CSS del prompt.
 
 A continuación se muestra un mensaje genérico que puedes utilizar:
 
+```text
+I want to build a page for an information website. I don't know how to code, so I need you to provide the code for me.
+  
+Write the HTML code for a web page that includes the following:
+ * The page title is "[page title]".
+ * A header element that includes the title "[site title]" and the tagline "[site tagline]".
+* After the header, a navigation element that includes the following links:
+[Copy your navigation links here]
+* A main element that includes the text between triple quotation marks.
+ """
+[page content goes here]
+ """
+ * A footer element that includes the Copyright symbol followed by the current year, followed by "[site title]".
+ * In the page head section, include the tag <meta charset="utf-8">.
+ * In the page head section, include a reference to a stylesheet file named "styles.css".
+ * In the page head section, include a reference to the Google fonts X and Y.
+ * Do not add any inline styles.
+```
+
+```text
 Quiero crear una página para un sitio web de información. No sé programar, así que necesito que me proporciones el código.
   
 Escriba el código HTML para una página web que incluya lo siguiente:
@@ -613,19 +649,19 @@ Escriba el código HTML para una página web que incluya lo siguiente:
  * En la sección del encabezado de la página, incluya una referencia a un archivo de hoja de estilo llamado "styles.css".
  * En la sección del encabezado de la página, incluya una referencia a las fuentes de Google X e Y.
  * No agregue ningún estilo en línea.
-Tenga en cuenta la instrucción final a ChatGPT de no agregar estilos en línea, que se refiere al código CSS agregado directamente a una etiqueta HTML. En ausencia de instrucciones relacionadas con CSS, ChatGPT tiene una tendencia a insertar algunas sugerencias de formato en forma de estilos en línea. Debido a que todo el estilo que necesita ya está en su archivo styles.css, debe indicarle a ChatGPT que no agregue ningún estilo nuevo que pueda estropear sus páginas. La Figura 6.11 muestra una página de ejemplo generada por ChatGPT para mi sitio de información.
+```
 
+Tenga en cuenta la instrucción final a ChatGPT de no agregar estilos en línea, que se refiere al código CSS agregado directamente a una etiqueta HTML. En ausencia de instrucciones relacionadas con CSS, ChatGPT tiene una tendencia a insertar algunas sugerencias de formato en forma de estilos en línea. Debido a que todo el estilo que necesita ya está en su archivo `styles.css`, debe indicarle a ChatGPT que no agregue ningún estilo nuevo que pueda estropear sus páginas. La Figura 6.11 muestra una página de ejemplo generada por ChatGPT para mi sitio de información.
 
+![image](https://github.com/user-attachments/assets/23b942a5-d0f5-49eb-8882-8c61d8f51051)
 
-Figura 6.11 Otra página de información del sitio generada por ChatGPT
+**Figura 6.11 Otra página de información del sitio generada por ChatGPT**
 
 Sea cual sea el tipo de entidad que desee destacar (una organización, una comunidad, un evento, una organización benéfica, un equipo o un proyecto), un sitio web informativo es una excelente manera de informar al mundo sobre ella y ayudar a las personas a obtener más información. Ahora, con ChatGPT como su socio de codificación, puede poner en funcionamiento un sitio web completo con solo unas pocas indicaciones.
 
-Resumen
-Un enlace es una etiqueta HTML especial que, al hacer clic, lleva al usuario a una página web específica.
+## Resumen
 
-Una barra de navegación es una colección de enlaces a otras páginas del sitio web (o, si el sitio es grande, a las páginas más importantes del sitio).
-
-Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
-
-Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
+* Un link es una etiqueta HTML especial que, al hacer clic, lleva al usuario a una página web específica.
+* Una barra de navegación es una colección de links a otras páginas del sitio web (o, si el sitio es grande, a las páginas más importantes del sitio).
+* Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+* Guarde el HTML generado en el archivo `index.html` y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`.
