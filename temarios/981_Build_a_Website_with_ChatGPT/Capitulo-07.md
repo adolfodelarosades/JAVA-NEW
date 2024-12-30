@@ -19,34 +19,38 @@ También aprenderá a crear un mensaje detallado que le enviará a ChatGPT para 
 
 En este capítulo, creará un sitio web sencillo dedicado a un interés o pasatiempo. Contratará a ChatGPT como asistente de redacción para que lo ayude a generar ideas, investigar y crear los primeros borradores del contenido del sitio. La página de inicio incluirá los siguientes componentes:
 
-Un elemento de encabezado que incluye lo siguiente:
-
-* Una imagen que ocupa todo el ancho y la altura de la ventana del navegador.
-* El título del sitio web
-* El lema del sitio web
-* Un elemento de navegación con enlaces a otras páginas del sitio.
-* Un elemento principal con algún texto introductorio y enlaces a otras páginas del sitio.
-* Un elemento de pie de página que incluye un aviso de derechos de autor
+* Un elemento de header que incluye lo siguiente:
+   * Una imagen que ocupa todo el ancho y la altura de la ventana del navegador.
+   * El título del sitio web
+   * El lema del sitio web
+   * Un elemento de navegación con links a otras páginas del sitio.
+* Un elemento main con algún texto introductorio y enlaces a otras páginas del sitio.
+* Un elemento footer que incluye un aviso de derechos de autor
 
 La figura 7.1 muestra un ejemplo de la página de inicio de un sitio web de interés creada con código generado por ChatGPT.
 
+![image](https://github.com/user-attachments/assets/df72d84e-f1e7-42c6-9833-18a4c6ed718c)
+
+![image](https://github.com/user-attachments/assets/7d3e0f14-58d8-43ca-8878-882670e53cb2)
+
+![image](https://github.com/user-attachments/assets/cb3a0770-ca3d-4d1e-b707-559b4ceb7fef)
 
 
 **Figura 7.1 Página de inicio de un sitio web de interés generada por ChatGPT**
 
 Las demás páginas del sitio utilizarán una estructura similar:
 
-* Un elemento de encabezado que incluye lo siguiente:
-* Una imagen de héroe
-* El título de la página
-* El subtítulo de la página
-* Un elemento de navegación con enlaces a otras páginas del sitio.
-* Un elemento principal con el texto de la página.
-* Un elemento de pie de página con un aviso de derechos de autor
+* Un elemento de header que incluye lo siguiente:
+   * Una imagen de héroe
+   * El título de la página
+   * El subtítulo de la página
+   * Un elemento de navegación con enlaces a otras páginas del sitio.
+* Un elemento main con el texto de la página.
+* Un elemento de footer con un aviso de derechos de autor
 
 La figura 7.2 muestra un ejemplo de una página de este tipo. La simplicidad de estas páginas significa que puedes personalizarlas fácilmente para usarlas con cualquier interés, pasatiempo u obsesión que quieras compartir con el mundo.
 
-
+![image](https://github.com/user-attachments/assets/bf6bf58f-f735-4f97-a8d7-c024071fac5a)
 
 **Figura 7.2 Una página de subtemas**
 
@@ -64,25 +68,53 @@ ChatGPT se destaca en muchas tareas, pero una de sus mayores virtudes es sugerir
 
 Debes comenzar tu mensaje asignando un rol a ChatGPT:
 
-Eres un experto en [ tema ] y puedes generar ideas interesantes y creativas sobre [ tema ] basándose en la siguiente pregunta.
-Reemplazar con una palabra o frase que describa el tema o asunto sobre el que desea escribir.[topic]
+```text
+You are an expert in [topic] and can generate interesting and creative ideas about [topic] based on the following question.
+```
+
+```text
+Eres un experto en [topic] y puedes generar ideas interesantes y creativas sobre [topic] basándose en la siguiente pregunta.
+```
+
+Reemplazar `[topic]` con una palabra o frase que describa el tema o asunto sobre el que desea escribir.
 
 Ahora, agrega una pregunta que hará que ChatGPT genere algunas ideas para una publicación. Aquí tienes algunos ejemplos para empezar:
 
+```text
+What are the pros and cons of [topic]?
+What are the top ten features of [topic]?
+What are five things everyone needs to know about [topic]?
+What are some common myths about [topic]?
+How does a beginner get started with [topic]?
+What are half a dozen tips and tricks to get the most out of [topic]?
+```
+
+```text
 ¿Cuáles son los pros y contras de [ tema ]?
 ¿Cuáles son las diez características principales de [ tema ]?
 ¿Cuáles son las cinco cosas que todo el mundo necesita saber sobre [ tema ]?
 ¿Cuáles son algunos mitos comunes sobre [ tema ]?
 ¿Cómo puede un principiante empezar con [ tema ]?
 ¿Cuáles son media docena de consejos y trucos para aprovechar al máximo [ tema ]?
-Nuevamente, en cada caso, reemplaza con una palabra o frase que describa el tema o asunto sobre el que quieres escribir. Por ejemplo, la figura 7.3 muestra las ideas que Copilot (en modo Creativo) generó para mí en base a la siguiente indicación:[topic]
+```
 
-Eres un experto en la elaboración de pan y puedes generar ideas interesantes y creativas sobre la elaboración de pan basándose en la siguiente pregunta.
+Nuevamente, en cada caso, reemplaza `[topic]` con una palabra o frase que describa el tema o asunto sobre el que quieres escribir. Por ejemplo, la figura 7.3 muestra las ideas que Copilot (en modo Creativo) generó para mí en base a la siguiente indicación:
+
+```text
+You are an expert in bread baking and can generate interesting and creative ideas about bread baking based on the following question.
   
+How does a beginner get started with bread baking?
+```
+
+```text
+Eres un experto en la elaboración de pan y puedes generar ideas interesantes y creativas sobre la elaboración de pan basándose en la siguiente pregunta.
+
 ¿Cómo puede un principiante iniciarse en la elaboración de pan?
+```
+  
+![image](https://github.com/user-attachments/assets/0cabbf6a-2175-4452-a8f3-4ff076c553be)
 
-
-Figura 7.3 Ideas de ChatGPT para comenzar a hornear pan
+**Figura 7.3 Ideas de ChatGPT para comenzar a hornear pan**
 
 Estas son sugerencias excelentes y servirían como punto de partida para una publicación que interese a los principiantes en la elaboración de pan. Tenga en cuenta que es importante considerar las ideas de contenido de ChatGPT como solo el comienzo. Depende de usted desarrollar los detalles para crear una publicación increíble.
 
@@ -92,24 +124,51 @@ En la sección anterior, aprendiste a usar ChatGPT para generar ideas para escri
 
 Como de costumbre, comience su mensaje asignando un rol a ChatGPT:
 
+```text
+You are a writing coach and an expert on [topic] and can generate practical and creative advice on how to write about [topic] based on the following question.
+```
+
+```text
 Eres un coach de escritura y un experto en [ tema ] y puedes generar consejos prácticos y creativos sobre cómo escribir sobre [ tema ] basándose en la siguiente pregunta.
-Reemplazar con una palabra o frase que describa el tema o asunto que desea explorar a través de la escritura.[topic]
+```
+
+Reemplazar `[topic]` con una palabra o frase que describa el tema o asunto que desea explorar a través de la escritura.
 
 A continuación, agrega una pregunta que le pedirá a ChatGPT que sugiera ideas sobre cómo escribir sobre tu tema. A continuación, se muestran algunos ejemplos:
 
+```text
+What are the best ways to introduce a beginner to [topic]?
+Once someone has learned the basics of [topic], what should I teach them next?
+How do I get someone who knows nothing about [topic] excited about the subject?
+What are some ways to write engagingly about [topic]?
+What types of posts are most suited to writing about [topic]?
+```
+
+```text
 ¿Cuáles son las mejores formas de introducir a un principiante en [ tema ]?
 Una vez que alguien ha aprendido los conceptos básicos de [ tema ], ¿qué debo enseñarle a continuación?
 ¿Cómo puedo lograr que alguien que no sabe nada sobre [ tema ] se entusiasme con el tema?
 ¿Cuáles son algunas formas de escribir de manera atractiva sobre [ tema ]?
 ¿Qué tipos de publicaciones son más adecuadas para escribir sobre [ tema ]?
-Nuevamente, reemplaza cada ejemplo con texto que describa el tema o asunto de tu escrito. Por ejemplo, la figura 7.4 muestra las ideas de escritura que Copilot (en modo Creativo) generó a partir de la siguiente indicación:[topic]
+```
 
+Nuevamente, reemplaza `[topic]` en cada ejemplo con texto que describa el tema o asunto de tu escrito. Por ejemplo, la figura 7.4 muestra las ideas de escritura que Copilot (en modo Creativo) generó a partir de la siguiente indicación:
+
+```text
+You are a writing coach and an expert on bread baking and can generate practical and creative advice on how to write about bread baking based on the following question.
+  
+What are some ways to write engagingly about bread baking?
+```
+
+```text
 Eres un coach de escritura y un experto en panadería y puedes generar consejos prácticos y creativos sobre cómo escribir sobre panadería basándose en la siguiente pregunta.
   
 ¿Cuáles son algunas formas de escribir de manera atractiva?¿Qué opinas sobre la elaboración del pan?
+```
+
 ¡Éstas son excelentes sugerencias no sólo para escribir sobre cómo hornear pan, sino también para escribir sobre casi cualquier otra cosa!
 
-
+![image](https://github.com/user-attachments/assets/10970d60-7e89-4063-97c3-2474340b4ccf)
 
 **Figura 7.4 Consejos de ChatGPT para escribir de forma atractiva sobre la elaboración de pan**
 
@@ -119,20 +178,35 @@ Los modelos GPT que sustentan ChatGPT se entrenaron con una cantidad de datos im
 
 A continuación se muestra un mensaje que puede utilizar para solicitar asistencia a ChatGPT para su investigación:
 
+```text
+Help me research [topic] for a general audience. I'm interested in A, B, and C. Please provide X, Y, and Z. Also, include any interesting trivia or anecdotes that might be engaging for readers. The goal is to provide a depth of information that is accurate and detailed but also easily understood by a broad audience. Please provide links to your sources.
+```
+
+```text
 Ayúdame a investigar [ tema ] para un público general. Estoy interesado en A , B y C. Proporciona X , Y y Z. Además, incluye datos curiosos o anécdotas interesantes que puedan resultar interesantes para los lectores. El objetivo es proporcionar una gran cantidad de información que sea precisa y detallada, pero que también sea fácil de entender para un público amplio. Proporciona enlaces a tus fuentes.
-Como es habitual, se trata de una breve descripción del tema que desea investigar. Esto es lo que representan los demás marcadores de posición:[topic]
+```
 
-A, B, y C—Temas generales relacionados con el tema general.
+Como es habitual, `[topic]` se trata de una breve descripción del tema que desea investigar. Esto es lo que representan los demás marcadores de posición:
 
-X, Y, y Z—Aspectos específicos del tema general.
+* `A`, `B`, y `C`: Temas generales relacionados con el tema general.
 
-Consejo La última oración del mensaje asume que estás usando una versión de ChatGPT que está conectada a la web. Recomiendo encarecidamente una versión conectada a la web para esto porque los enlaces generados te permiten verificar los resultados de ChatGPT y también te brindan más material para tu investigación.
+* `X`, `Y`, y `C¡Z`: Aspectos específicos del tema general.
+
+**TIP ** La última oración del mensaje asume que estás usando una versión de ChatGPT que está conectada a la web. Recomiendo encarecidamente una versión conectada a la web para esto porque los enlaces generados te permiten verificar los resultados de ChatGPT y también te brindan más material para tu investigación.
 
 He aquí un ejemplo:
 
+```text
+Help me research the history of coffee for a general audience. I'm interested in the discovery of coffee, its spread across the globe, and its cultural impact in different societies. Please provide key historical figures and events, notable varieties of coffee, and the evolution of coffee-drinking habits over time. Also, include any interesting trivia or anecdotes that might be engaging for readers. The goal is to provide a depth of information that is accurate and detailed but also easily understood by a broad audience. Please provide links to your sources.
+```
+
+```text
 Ayúdame a investigar la historia del café para un público general. Me interesa el descubrimiento del café, su difusión por todo el mundo y su impacto cultural en diferentes sociedades. Proporciona figuras y eventos históricos clave, variedades notables de café y la evolución de los hábitos de consumo de café a lo largo del tiempo. Además, incluye cualquier dato curioso o anécdota interesante que pueda resultar interesante para los lectores. El objetivo es proporcionar una gran cantidad de información que sea precisa y detallada, pero también fácil de entender para un público amplio. Proporciona enlaces a tus fuentes.
+```
+
 La figura 7.5 muestra la última parte de una respuesta excepcionalmente larga a la pregunta anterior de Copilot (en modo creativo). La pregunta asume que estás escribiendo para un público general, pero, por supuesto, debes modificarla según el lector al que te dirijas.
 
+![image](https://github.com/user-attachments/assets/e5cceeb8-d8c0-4f2b-86e3-7905a288d0b5)
 
 
 **Figura 7.5 La última parte de la respuesta de ChatGPT a una solicitud de ayuda para investigar la historia del café.**
@@ -145,6 +219,37 @@ Sin embargo, esto no es un problema, ya que puedes "entrenar" a ChatGPT para que
 
 Aquí está el mensaje:
 
+```text
+You are an experienced ghostwriter. Given several examples of an author's writing, you are skilled at detecting the tone and style of the writing and emulating that writer's voice to generate new writing. 
+  
+Below are several writing samples, with each sample between sets of triple quotation marks.
+  
+Examine the samples to determine the writer's unique voice.
+  
+Emulate the writer's voice to generate X.
+  
+"""
+Writing sample #1
+"""
+  
+"""
+Writing sample #2
+"""
+  
+"""
+Writing sample #3
+"""
+  
+"""
+Writing sample #4
+"""
+  
+"""
+Writing sample #5
+"""
+```
+
+```text
 Eres un escritor fantasma experimentado. Con varios ejemplos de la escritura de un autor, eres hábil para detectar el tono y el estilo de la escritura y emular la voz de ese escritor para generar nuevos textos.
   
 A continuación se presentan varios ejemplos de escritura, cada uno de ellos entre comillas triples.
@@ -172,13 +277,15 @@ Ejemplo de escritura n.° 4
 """
 Ejemplo de escritura n.° 5 
 """
-Reemplace cada instancia de Writing sample #ncon una muestra de su escritura.
+```
+
+Reemplace cada instancia de `Writing sample #n` con una muestra de su escritura.
 
 **Nota**: Lo ideal es que sus muestras de escritura utilicen el mismo estilo y tono que desea utilizar para el texto que desea crear.
 
 No es necesario que incluyas las cinco muestras. Puedes usar solo dos o tres o incluso una sola muestra larga, pero recuerda que cuanto más texto proporciones, más preciso será el análisis que proporcione ChatGPT y más acertado será el mensaje.
 
-Consejo: si tienes un autor favorito cuyo estilo de escritura admiras y te gustaría emular hasta cierto punto, inclúyelo en tu mensaje. Por ejemplo, para pedirle a ChatGPT que incluya un poco del estilo y el tono de Eudora Welty, agrega lo siguiente a tu mensaje: Please also include about 10 percent of the tone and style of Eudora Welty.
+**TIP**: Si tienes un autor favorito cuyo estilo de escritura admiras y te gustaría emular hasta cierto punto, inclúyelo en tu mensaje. Por ejemplo, para pedirle a ChatGPT que incluya un poco del estilo y el tono de Eudora Welty, agrega lo siguiente a tu mensaje: Please also include about 10 percent of the tone and style of Eudora Welty.
 
 En el mensaje, reemplaza X por una breve descripción del texto que quieres que ChatGPT genere. A continuación, se muestra un ejemplo:
 
