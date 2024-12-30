@@ -1,46 +1,48 @@
 # 10 Configuración de una galería de fotos
+
 Este capítulo cubre
 
-Uso de imágenes en una página web
-Trabajar con versiones en miniatura de imágenes
-Visualización de imágenes en una caja de luz
-Diseño de una página con Flexbox
-Elaboración de un mensaje de ChatGPT para crear una página de galería de fotos
-Examinar y personalizar el código generado por ChatGPT
+* Uso de imágenes en una página web
+* Trabajar con versiones en miniatura de imágenes
+* Visualización de imágenes en una caja de luz
+* Diseño de una página con Flexbox
+* Elaboración de un mensaje de ChatGPT para crear una página de galería de fotos
+* Examinar y personalizar el código generado por ChatGPT
+
 Después de aprender algunos conceptos básicos sobre imágenes en el capítulo 4, los proyectos de este libro han incluido principalmente una sola imagen: el logotipo de un sitio en el encabezado de la página. Es un buen comienzo, pero sin duda sabrá por sus propios viajes por Internet que las imágenes están por todas partes en la web. Una foto o ilustración bien ubicada y bien elegida puede animar una página y ofrecer un atractivo visual para los visitantes cansados ​​del texto.
 
 En este capítulo, aprenderá un poco más sobre las imágenes y cómo funcionan en la web, lo que le permitirá incorporar imágenes adicionales en sus páginas. Como dice el dicho, “a lo grande o váyase a casa”, por eso, en este capítulo, las imágenes son importantes y no solo le mostrarán cómo crear una galería de fotos funcional que pueda usar para mostrar sus habilidades fotográficas, sino también cómo usar una técnica de diseño moderna para que su página se vea increíble. Luego, pondrá en práctica todo este conocimiento sobre imágenes y listas de diseño para crear un mensaje detallado para que ChatGPT genere el código para la galería de fotos.
 
 Este capítulo también proporciona versiones comentadas del código HTML y CSS generados por ChatGPT para ayudarte a entender cómo funciona la galería de fotos. También recibirás algunos consejos útiles para personalizar el código.
 
-10.1 Revisando el proyecto de este capítulo
+## 10.1 Revisando el proyecto de este capítulo
+
 Como mencioné en la introducción, el proyecto de este capítulo es una galería de fotos de una sola página. La página final incluirá los siguientes componentes:
 
-Un elemento de encabezado que incluye el logotipo y el título del sitio web.
-
-Un elemento principal que comienza con el título de la galería y las instrucciones para usar la galería.
-
-Nueve versiones de tamaño reducido de las fotografías, donde al hacer clic en una de estas imágenes se muestra una versión de tamaño más grande de la imagen.
-
-Un elemento de pie de página que incluye un aviso de derechos de autor
+* Un elemento de encabezado que incluye el logotipo y el título del sitio web.
+* Un elemento principal que comienza con el título de la galería y las instrucciones para usar la galería.
+* Nueve versiones de tamaño reducido de las fotografías, donde al hacer clic en una de estas imágenes se muestra una versión de tamaño más grande de la imagen.
+* Un elemento de pie de página que incluye un aviso de derechos de autor
 
 La figura 10.1 muestra un ejemplo de galería de fotos creada con el código proporcionado por ChatGPTPuedes utilizar este tipo de diseño para otros tipos de contenido, como un catálogo de productos, un portafolios de artistas, un muestrario de diseños o una galería de proyectos actuales o finalizados, miembros del equipo, próximos eventos, testimonios o clientes. El denominador común de todos estos proyectos es que consisten en una colección de imágenes (quizás también con algo de texto), por lo que necesitas saber un poco más sobre cómo funcionan las imágenes en la web.
 
 
 
-Figura 10.1 Una galería de fotos generada por ChatGPT
+**Figura 10.1 Una galería de fotos generada por ChatGPT**
 
-10.2 Una mirada más cercana a las imágenes
+## 10.2 Una mirada más cercana a las imágenes
+
 Si ha utilizado un procesador de textos o un programa de presentaciones, probablemente haya creado muchos documentos que incluyen imágenes. En cada caso, la aplicación ofrece algo así como un comando Insertar imagen que le permite elegir la imagen que desea, que se agrega directamente al documento en el lugar que elija.
 
 Sorprendentemente, el código de una página web no funciona de la misma manera. No existe un equivalente en HTML del comando Insertar imagen que inserta una imagen directamente en la página. En su lugar, se carga la imagen en el sitio web como un archivo independiente y luego se inserta en el texto de la página una etiqueta HTML especial que le indica al navegador dónde ubicar la imagen. Cuando el navegador encuentra esta etiqueta, recupera el archivo de imagen del servidor y muestra la imagen en la página en la ubicación que se especificó.
 
-10.2.1 Comprobación de la etiqueta <img>
+### 10.2.1 Comprobación de la etiqueta <img>
+
 La etiqueta especial que hace que el navegador agregue una imagen a una página web es la <img>etiqueta , que utiliza la sintaxis parcial que se muestra en la figura 10.2.
 
 
 
-Figura 10.2 Inserta una imagen en una página web utilizando la <img>etiqueta.
+**Figura 10.2 Inserta una imagen en una página web utilizando la etiqueta `<img>`.**
 
 Esta versión del imgelemento tiene dos atributos:
 
@@ -48,26 +50,33 @@ src="file"—Para el atributo src(abreviatura de source ), se reemplaza filecon 
 
 Si el archivo de imagen se encuentra en el mismo directorio que el archivo HTML, reemplácelo filecon el nombre del archivo de imagen. Por ejemplo, si el archivo de imagen es logo.png, la <img>etiqueta se verá así:
 
-<img src="logotipo.png" alt="">
+```html
+```
+
 Si la imagen está en un subdirectorio, reemplácela filecon el nombre del directorio y el nombre del archivo de la imagen, separados por una barra invertida ( /). Por ejemplo, si ha creado un subdirectorio llamado images y su archivo de imagen es logo.png, su <img>etiqueta se verá así:
 
-<img src="imágenes/logotipo.png" alt="">
+```html
+```
+
 alt="description"—Para el atributo alt(abreviatura de alternative ), se reemplaza descriptioncon una palabra o frase corta que describa la imagen; esto se puede usar en lugar de la imagen si no se puede mostrar el archivo de imagen. El texto alternativo (como se lo suele llamar) también lo usan los lectores de pantalla y las aplicaciones Braille para darles a sus usuarios una idea de qué es la imagen. Aquí hay un ejemplo:
 
-<img src="images/logo.png" alt="Logotipo de Ampersand Photography">
+```html
+```
+
 Técnicamente, su página web no es válida a menos que cada <img>etiqueta tenga un altatributo presente. Tener una página no válida significa que su página puede no visualizarse correctamente en el navegador web, pero principalmente significa que su página será menos accesible para personas que usan tecnologías de asistencia como lectores de pantalla. Afortunadamente, <img>las etiquetas generadas por ChatGPT generalmente incluyen el altatributo, pero la descripción casi siempre es trivial y poco útil. Por lo tanto, siempre debe incluir el alttexto que desea en su mensaje. Aquí hay un ejemplo de instrucción para ChatGPT:
 
 Agregue una imagen llamada "old-road-marker.jpg", que se almacena en el subdirectorio "images". Para el atributo alt, utilice lo siguiente: "Una foto con un marcador de carretera muy antiguo en primer plano que dice 'Appleby 12 Miles'".
 A continuación se muestra un ejemplo <img>de etiqueta generada por ChatGPT a partir de dicho mensaje:
 
-<img src="imagenes/marcador-de-carretera-antiguo.jpg"
-     alt="Una foto con un marcador de carretera muy antiguo en el
-     primer plano que dice 'Appleby 12 Miles'">
+```html
+```
+
 CONSEJO: si tu página utiliza imágenes decorativas o no esenciales, establece el altatributo como la cadena vacía ( ""). De esa manera, tu página seguirá siendo válida, pero no molestarás a las personas que usan tecnología de asistencia (como lectores de pantalla) y que no quieren escuchar descripciones de imágenes puramente decorativas.
 
 Si aún no tiene la imagen que desea utilizar pero conoce las dimensiones finales de la imagen, puede insertar una imagen de marcador de posición para que ocupe el mismo espacio en la página hasta que la imagen esté lista para usarse. La sección de red proporciona los detalles.
 
-10.2.2 Agregar imágenes de marcador de posición
+### 10.2.2 Agregar imágenes de marcador de posición
+
 Probablemente sepas que, en el mundo del texto, un marcador de posición es un texto que marca temporalmente un lugar donde aparecerá una palabra o frase permanente. En la sección anterior, por ejemplo, la sintaxis para la <img>etiqueta utilizó los marcadores de posición filey descriptionpara los valores de los atributos srcy alt, respectivamente.
 
 También puedes usar marcadores de posición con imágenes. En este caso, la imagen del marcador de posición ocupa la misma cantidad de espacio que la imagen permanente que se agregará eventualmente a la página, lo que resulta muy útil si quieres crear tu página pero no tienes la imagen (o imágenes) que necesitas.
@@ -77,19 +86,22 @@ Hay varias formas de agregar imágenes de marcador de posición, pero la más se
 Insertar una imagen de marcador de posición desde placehold.co. Las dimensiones de la imagen son 300 px de ancho y 200 px de alto.
 A continuación se muestra un ejemplo <img>de etiqueta generada por ChatGPT a partir de este mensaje:
 
-<img src="https://placehold.co/300x200" alt="Imagen de marcador de posición" width="300" height="200">
+```html
+```
+
 La figura 10.3 muestra cómo aparece este marcador de posición en una página web.
 
 
 
-Figura 10.3 Un ejemplo de imagen de marcador de posición de placehold.co
+**Figura 10.3 Un ejemplo de imagen de marcador de posición de placehold.co**
 
-10.2.3 Trabajar con miniaturas de imágenes
+### 10.2.3 Trabajar con miniaturas de imágenes
+
 Para mostrar realmente sus fotografías, debe mostrarlas en un tamaño relativamente grande. Sin embargo, según el formato del archivo (consulte el capítulo 4) y otros factores, como la cámara que utilizó, el archivo de tamaño completo puede ser bastante grande, al menos varios megabytes. Eso es bastante malo para una sola imagen, pero su galería de fotos tendrá varias imágenes (nueve en este proyecto); es pedir demasiado que los visitantes de la galería descarguen una cantidad tan enorme de datos. (Esto es especialmente cierto para las personas que acceden a su página a través de una conexión a Internet lenta o un plan de datos móviles limitado).
 
 En el caso de un proyecto como una galería de fotos, una mejor estrategia para todos los usuarios es mostrar inicialmente una versión reducida (conocida en el sector como miniatura ) de cada foto. La idea es configurar la página de modo que al hacer clic en una miniatura se muestre temporalmente una versión de tamaño grande de la foto (el tamaño que ve el usuario depende de las dimensiones de la ventana del navegador).
 
-NOTA: No existen reglas estrictas sobre el tamaño de las miniaturas. Una página diseñada para albergar docenas de imágenes puede utilizar miniaturas de solo 50 o 75 píxeles de ancho, mientras que para una galería de fotos como la que ChatGPT te ayudará a crear en este capítulo, las miniaturas de alrededor de 300 píxeles de ancho funcionan bien.
+**NOTA**: No existen reglas estrictas sobre el tamaño de las miniaturas. Una página diseñada para albergar docenas de imágenes puede utilizar miniaturas de solo 50 o 75 píxeles de ancho, mientras que para una galería de fotos como la que ChatGPT te ayudará a crear en este capítulo, las miniaturas de alrededor de 300 píxeles de ancho funcionan bien.
 
 Antes de continuar, debes crear versiones en miniatura de tus fotos. En primer lugar, las instrucciones de Windows.
 
@@ -154,30 +166,27 @@ Es posible que prefieras que tu galería de fotos muestre solo las versiones en 
 
 Puedes agregar subtítulos de varias maneras, pero la más sencilla es pedirle a ChatGPT que convierta tu imagen en una figura y luego proporcione un subtítulo para la figura . Este es el HTML genérico que genera ChatGPT:
 
-<figura>
-    <img src=" archivo " alt=" descripción ">
-    <figcaption> Texto del título </figcaption>
-</figura>
+```html
+```
+
 Aquí Caption textestá el título, que aparece justo debajo de la imagen. Aquí hay un ejemplo de instrucciones para ChatGPT:
 
 Agregue una imagen llamada "old-road-marker.jpg", que se almacena en el subdirectorio "images". Conviértala en una figura con un título. Para el atributo alt, utilice lo siguiente: "Una foto con un marcador de carretera muy antiguo en primer plano que dice 'Appleby 12 Miles'". Para el título, utilice lo siguiente: "Un marcador de carretera antiguo".
 A continuación se muestra un ejemplo de figura y título generados por ChatGPT a partir de dicho mensaje:
 
-<figura>
-    <img src="imagenes/marcador-de-carretera-antiguo.jpg"
-         alt="Una foto con un marcador de carretera muy antiguo en el
-              primer plano que dice 'Appleby 12 Miles'">
-    <figcaption>Un antiguo marcador de carretera</figcaption>
-</figura>
+```html
+```
+
 La figura 10.6 muestra cómo se ve en el navegador.
 
 
 
-Figura 10.6 Una figura con un título
+**Figura 10.6 Una figura con un título**
 
 Con sus versiones en miniatura creadas y sus títulos compuestos, está listo para ver cómo sus visitantes pueden ver la versión de tamaño grande de cada foto.
 
-10.3 Implementación de una superposición de caja de luz
+## 10.3 Implementación de una superposición de caja de luz
+
 Como aprenderá en breve (consulte la sección 10.5), cuando alguien visita la galería de fotos, la página muestra al principio una cuadrícula de nueve imágenes en miniatura. ¿Cómo ve el usuario una versión de tamaño grande de una foto?
 
 Hay muchas formas de resolver ese problema. Por ejemplo, puedes configurar cada imagen en miniatura como un enlace que, al hacer clic, carga la versión de tamaño grande de la foto. Ese enfoque funciona, pero al hacer clic en un enlace, el usuario sale de tu galería de fotos, por lo que debe volver a navegar para ver más fotos. Créeme, ¡nadie quiere tanto ver tus fotos!
@@ -204,13 +213,13 @@ La caja de luz se muestra superponiéndola en la página.
 
 
 
-Figura 10.7 Una galería de fotos sencilla con tres miniaturas
+**Figura 10.7 Una galería de fotos sencilla con tres miniaturas**
 
 El resultado es que el usuario ahora ve la versión de tamaño grande de la foto, que llena toda o casi toda la ventana del navegador. Por ejemplo, si hago clic en la miniatura que está más a la derecha en la figura 10.7, el navegador muestra una versión más grande de la foto, como se muestra en la figura 10.8. Observe que la galería aparece tenuemente en los espacios a la izquierda y a la derecha del cuadro de luz. Esto permite que el usuario sepa que no ha abandonado la galería. Para volver a la galería, el usuario solo tiene que hacer clic en cualquier parte de la página, lo que elimina el cuadro de luz y vuelve a mostrar la galería de fotos.
 
 
 
-Figura 10.8 Al hacer clic en una miniatura se muestra el cuadro de luz, que contiene la versión más grande de la foto.
+**Figura 10.8 Al hacer clic en una miniatura se muestra el cuadro de luz, que contiene la versión más grande de la foto.**
 
 Si todo esto parece terriblemente complejo de codificar, recuerda que no tienes que mover un dedo más allá de preparar las imágenes en miniatura. Puedes pedirle a ChatGPT que implemente toda la funcionalidad de la caja de luz con una instrucción similar a la siguiente:
 
@@ -238,7 +247,8 @@ En el controlador de eventos, JavaScript crea y luego muestra el lightbox.
 
 Afortunadamente para ti, eso es todo lo que necesitas saber. ChatGPT se encargará del resto.
 
-10.5 Diseño de la galería con Flexbox
+## 10.5 Diseño de la galería con Flexbox
+
 Cuando se añaden elementos a una página web, el comportamiento de diseño predeterminado para la mayoría de los elementos es que fluyan verticalmente hacia abajo en la página, un elemento tras otro. Esto ha funcionado bien para los proyectos que has visto hasta ahora en este libro, pero no funcionará para la galería de fotos. ¿Por qué no? Porque con las imágenes renderizadas como figuras, también fluirán verticalmente hacia abajo en la página, una tras otra.
 
 No es el fin del mundo, sin duda, pero no es un buen aspecto y no resulta cómodo para quienes visitan tu página. La figura 10.9 muestra una versión de la galería de fotos en la que las fotos se muestran de esta manera.
@@ -252,9 +262,10 @@ En este punto, ya sabes todo lo que se necesita para que ChatGPT cree una galer�
 
 
 
-Figura 10.9 De forma predeterminada, las figuras de sus fotografías se colocarán verticalmente en la página, una tras otra.
+**Figura 10.9 De forma predeterminada, las figuras de sus fotografías se colocarán verticalmente en la página, una tras otra.**
 
-10.6 Elaboración del mensaje para la galería de fotos
+## 10.6 Elaboración del mensaje para la galería de fotos
+
 El proyecto de este capítulo es una página de galería de fotos que muestra nueve miniaturas de fotos, cada una de las cuales, al hacer clic en ella, muestra una versión de tamaño grande de la foto. Supongo que ya tienes un logotipo y un título para el sitio, sabes qué fuentes quieres usar para los encabezados y el texto de la página y tienes un esquema de colores listo para aplicar. Vuelve al capítulo 3 para aprender cómo solicitarle a ChatGPT sugerencias de título, tipografía y color.
 
 Para iniciar su solicitud, dígale a ChatGPT que desea construir una página web y que desea que genere el código por usted:
@@ -274,7 +285,7 @@ Un pie de página que incluye un aviso de derechos de autor
 
 
 
-Figura 10.10 Los elementos de la página de la galería de fotos
+**Figura 10.10 Los elementos de la página de la galería de fotos**
 
 A continuación, solicite a ChatGPT que genere el CSS:
 
@@ -293,6 +304,7 @@ Por último, le indica a ChatGPT que proporcione el código HTML, CSS y JavaScri
 
 A continuación se muestra un ejemplo de solicitud para mi propia galería de fotos:
 
+```text
 Quiero crear una página web para una galería de fotos. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
@@ -323,6 +335,7 @@ En segundo lugar, en un archivo separado escriba el código CSS para lo siguient
  * El encabezado de la sección principal tiene un tamaño de fuente de 30 px y utiliza la fuente Montserrat de Google Fonts.
  * Convierte la galería en un contenedor Flexbox. Centra el contenido y permite que se ajuste.
  * El pie de página tiene color de fondo granate, relleno de 24 px y texto centrado.
+```
   
 En tercer lugar, proporcione el código HTML, CSS y JavaScript para implementar una superposición de estilo lightbox para las imágenes de la galería. Cada imagen de tamaño completo utiliza el mismo nombre que su miniatura, pero sin "-thumbnail". Por ejemplo, para el archivo de miniatura image01-thumbnail.jpg, el nombre del archivo de imagen de tamaño completo es image01.jpg.
 En cada una de mis pruebas con este mensaje, ChatGPT generó este código en cuatro etapas:
@@ -337,10 +350,14 @@ Una vez hecho esto, guardé el código HTML completo como index.html. En ese arc
 
 La primera referencia está en la headsección y es para el archivo CSS; la referencia es una <link>etiqueta que debería verse así:
 
-<link rel="hoja de estilo" tipo="texto/css" href="estilos.css">
+```html
+```
+
 La segunda referencia está cerca de la parte inferior del código HTML y es para el archivo JavaScript; la referencia es una <script>etiqueta que debería verse así:
 
-<script src="script.js"></script>
+```html
+```
+
 ChatGPT generó el código para el CSS, que debes guardar con el mismo nombre de archivo que aparece en la <link>etiqueta (generalmente styles.css).
 
 ChatGPT generó el código para JavaScript, que debes guardar con el mismo nombre de archivo que aparece en la <script>etiqueta (normalmente script.js)
@@ -351,120 +368,29 @@ Utilicé la aplicación ChatGPT de OpenAI para enviar mi mensaje a GPT-4. El có
 
 
 
-Figura 10.11 Mi galería de fotos
+**Figura 10.11 Mi galería de fotos**
 
 
 
-Figura 10.12 Al hacer clic en una miniatura se muestra una versión de mayor tamaño de la foto.
+**Figura 10.12 Al hacer clic en una miniatura se muestra una versión de mayor tamaño de la foto.**
 
 Si está satisfecho con su página, puede omitir el resto de este capítulo e implementar el código en la web (consulte el apéndice B para saber cómo implementar su página). Sin embargo, si desea comprender el código de la página web generada, siga leyendo para obtener más información.
 
-10.7 Examinar el código de la galería de fotos
+## 10.7 Examinar el código de la galería de fotos
+
 Si desea tener al menos alguna idea de lo que ChatGPT generó en su nombre, las siguientes tres secciones le brindan una breve mirada al código HTML y CSS que sustenta la página de la galería de fotos mostrada anteriormente en la figura 10.11, así como el código JavaScript que habilita la superposición de caja de luz que se muestra en la figura 10.12.
 
-NOTA: El código HTML y CSS generado para mi galería de fotos está disponible en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro: https://github.com/paulmcfe/websites-with-chatgpt .
+**NOTA**: El código HTML y CSS generado para mi galería de fotos está disponible en el sitio web de este libro ( www.manning.com/books/build-a-website-with-chatgpt ) y en el repositorio de GitHub del libro: https://github.com/paulmcfe/websites-with-chatgpt .
 
 Las anotaciones de código que siguen deberían ayudarle a comprender cómo funciona la galería de fotos y pueden facilitar la modificación o personalización de su propio código.
 
-10.7.1 Examinar el HTML
+### 10.7.1 Examinar el HTML
+
 Aquí hay una versión anotada del código HTML que ChatGPT produjo para mi galería de fotos:
 
-<!DOCTYPE html>
-<html lang="es">
-<cabeza>
-    <meta conjunto de caracteres="utf-8">
-    <meta name="ventana gráfica"
-        content="width=ancho-del-dispositivo, escala-inicial=1">                      ① 
-    <link href="https://fonts.googleapis.com/css?                           ② 
-        family=Montserrat|                                                  ② 
-        Libre+Baskerville&display=swap"                                     ② 
-        rel="hoja-de-estilo">                                                   ② 
-    <link rel="hoja-de-estilo" href="styles.css">                               ③
-    <title>Fotografía con signo &</title>
-</cabeza>
-<cuerpo>
-    <header>                                                                ⑥ 
-        <img src="images/logo.png"                                          ⑥ 
-             alt="Logotipo de Ampersand Photography">                              ④⑥ 
-        <h1>Ampersand Photography</h1>                                      ⑤⑥ 
-    </header>                                                               ⑥
-    <principal>
-        <h2>Galería de fotos</h2>                                              ⑦ 
-        <p>                                                                 ⑧ 
-            Haga clic en cada miniatura para ver la versión completa de la imagen.      ⑧ 
-            Para volver a la galería, haga clic en cualquier parte de la página.           ⑧ 
-        </p>                                                                ⑧ 
-        <div class="gallery">                                               ⑫ 
-            <figure>                                                        ⑪⑫
-                <img src="images/image01-thumbnail.jpg"                     ⑨⑪⑫ 
-                     alt="Fotografía macro de un cactus"                     ⑨⑪⑫ 
-                     class="thumbnail">                                     ⑨⑪⑫ 
-                <figcaption>Primer plano de un cactus</figcaption>                    ⑩⑪⑫ 
-            </figure>                                                       ⑪⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image02-thumbnail.jpg"                     ⑫ 
-                     alt="Un reflejo borroso de un tranvía que pasa        ⑫ 
-                         y una persona caminando"                              ⑫ 
-                     class="thumbnail">                                     ⑫ 
-                <figcaption>Escena de la calle (automóvil)</figcaption>                  ⑫ 
-            </figure>                                                       ⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image03-thumbnail.jpg"                     ⑫ 
-                     alt="Una foto con una carretera muy antigua marcador en        primer plano ⑫ 
-                         que dice 'Appleby 12 Miles'"          ⑫ 
-                     class="thumbnail">                                     ⑫ 
-                <figcaption>Un antiguo marcador de carretera</figcaption>                 ⑫ 
-            </figure>                                                       ⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image04-thumbnail.                    jpg" ⑫ 
-                     alt="Una foto tomada desde lo alto de una colina en el Distrito de los Lagos,     mirando 
-                         hacia abajo a una ciudad y un lago"            ⑫ 
-                     class="thumbnail">                                     ⑫ 
-                <figcaption>Escena del Distrito de los Lagos</figcaption>                ⑫ 
-            </figure>                                                       ⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image05-thumbnail.jpg"                     ⑫ 
-                     alt="Una torre de Montreal tomada desde abajo a través de un agujero" ⑫
-                     class="thumbnail">                                     ⑫ 
-                <figcaption>Arquitectura de Montreal</figcaption>              ⑫ 
-            </figure>                                                       ⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image06-thumbnail.jpg"                     ⑫ 
-                     alt="El techo ornamentado de una iglesia en Florencia,       ⑫ 
-                         Italia"                                             ⑫ 
-                     class="thumbnail">                                     ⑫ 
-                <figcaption>Techo de una iglesia en Florencia</figcaption>         ⑫ 
-            </figure>                                                       ⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image07-thumbnail.jpg"                     ⑫ 
-                     alt="Una alegre y brillante sombrilla azul cielo colocada     ⑫ 
-                         improbablemente en un balcón sucio y lúgubre."             ⑫ 
-                     class="thumbnail">                                     ⑫ 
-                <figcaption>Un toque de color</figcaption>                    ⑫ 
-            </figure>                                                       ⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image08-thumbnail.jpg"                     ⑫ 
-                     alt="Una cabeza grande y ornamentada, similar a la de Zeus, sobre las palabras    ⑫ 
-                         'Cabeza de Bronce'"                                     ⑫ 
-                     class="thumbnail">                                     ⑫ 
-                <figcaption>Letrero de cafetería</figcaption>                   ⑫ 
-            </figure>                                                       ⑫ 
-            <figure>                                                        ⑫ 
-                <img src="images/image09-thumbnail.                    jpg" ⑫ 
-                     alt="Una escultura de pájaro de metal con su cabeza asomando      ⑫ 
-                         de un banco de nieve"                                ⑫ 
-                     class="thumbnail">                                     ⑫
-                <figcaption>Pájaro que hace de cucú</figcaption>                    ⑫ 
-            </figure>                                                       ⑫ 
-        </div>                                                              ⑫
-    </principal>
-    <footer>                                                                ⑬ 
-        © Fotografía comercial                                        ⑬ 
-    </footer>                                                               ⑬
-  
-    <script src="script.js"></script>                                       ⑭
-</cuerpo>
-</html>
+```html
+```
+
 ① Ayuda a que la página se muestre correctamente en dispositivos móviles
 
 ② Carga las fuentes Montserrat y Libre Baskerville desde Google Fonts
@@ -495,72 +421,18 @@ Aquí hay una versión anotada del código HTML que ChatGPT produjo para mi gale
 
 Tenga en cuenta que el código HTML incluye la siguiente línea:
 
-<link rel="hoja de estilo" href="estilos.css">
+```html
+```
+
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
 
-10.7.2 Examinar el CSS
+### 10.7.2 Examinar el CSS
+
 Aquí hay una versión anotada del código CSS que ChatGPT produjo para mi galería de fotos:
 
-cuerpo {                                         ① 
-    color de fondo: negro;                   ① 
-    margen: 0;                                 ① 
-    tamaño de fuente: 20px;                           ① 
-    color: dorado;                               ① 
-    familia de fuentes: 'Libre Baskerville', serif;   ① 
-}                                              ①
-  
-encabezado {
-    color de fondo: granate;                  ② 
-    relleno: 24px;                             ② 
-    pantalla: flex;                             ③ 
-    justificar contenido: centrar;                   ③ 
-    alinear elementos: centrar;                       ③
-}
-  
-h1 {
-    tamaño de fuente: 64px;                           ④ 
-    familia de fuentes: cursiva;                      ④ 
-    relleno izquierdo: 16px;                        ④
-}
- 
-h2 {
-    tamaño de fuente: 30px;                           ⑤ 
-    familia de fuentes: 'Montserrat', sans-serif;     ⑤
-}
-  
-principal {
-    margen: 24px;                              ⑥ 
-    alineación del texto: centro;                        ⑥
-}
-  
-.galería {
-    pantalla: flex;                             ⑦ 
-    flex-wrap: ajustar;                           ⑦ 
-    justificar-contenido: centrar;                   ⑦ 
-    alinear-elementos: centrar;                       ⑦
-}
-  
-pie de página {
-    color de fondo: granate;                  ⑧ 
-    relleno: 24px;                             ⑧ 
-    alineación del texto: centro;                        ⑧
-}
-.overlay {                                     ⑬ 
-    posición: fija;                           ⑨⑬ 
-    superior: 0;                                    ⑨⑬ 
-    izquierda: 0;                                   ⑨⑬ 
-    ancho: 100%;                               ⑩⑬ 
-    alto: 100%;                              ⑩⑬ 
-    color de fondo: rgba(0, 0, 0, 0.8);      ⑪⑬ 
-    visualización: flexible;                             ⑫⑬ 
-    contenido justificado: centrado;                   ⑫⑬ 
-    elementos alineados: centrado;                       ⑫⑬ 
-}                                              ⑬
-  
-.superposición img {
-    ancho máximo: 90%;                            ⑭ 
-    alto máximo: 90%;                           ⑭ 
-}
+```css
+```
+
 ① Diseña el color de fondo de la página, el margen, el tamaño del texto, el color del texto y la fuente.
 
 ② Diseña el color de fondo y el relleno del encabezado
@@ -591,46 +463,20 @@ pie de página {
 
 En la lista de códigos HTML de antes en este capítulo, observe la siguiente línea cerca de la parte inferior:
 
-<script src="script.js"></script>
+```html
+```
+
 Esta etiqueta le dice al navegador web dónde encontrar el código JavaScript, que anoto en la siguiente sección.
 
-10.7.3 Examinando el JavaScript
+### 10.7.3 Examinando el JavaScript
+
 Si tienes cuidado, está bien hacer pequeños ajustes al código HTML y CSS. Sin embargo, te recomiendo encarecidamente que no toques el código JavaScript de ChatGPT. El código es complejo y una edición imprudente podría hacer que el lightbox quede inutilizable.
 
 Sin embargo, si conoces un poco de JavaScript, quizás te interese saber cómo ChatGPT resolvió el problema del lightbox. Aquí tienes una versión comentada del código JavaScript que ChatGPT generó para mi galería de fotos:
 
-documento.addEventListener('DOMContentLoaded',
-    función() {                                               ①
-  
-    const miniaturas = document.querySelectorAll(
-        ②                                         ​
-  
-    miniaturas.paraCada((miniatura) => {                         ③
-  
-        miniatura.addEventListener('clic',
-            función (e) {                                      ④
-  
-            constante nombreImagen = e.target.src.split('/')
-                .pop().replace('-miniatura', '');               ⑤
-  
-            const superposición = document.createElement('div');      ⑥
-  
-            superposición.classList.add('superposición');                   ⑦
-  
-            constante img = document.createElement('img');          ⑧
-  
-            img.src = `imágenes/${imageName}`;                    ⑨
-  
-            superposición.appendChild(img);                           ⑩
-  
-            documento.cuerpo.appendChild(superposición);                 ⑪
-  
-            superposición.addEventListener('click', función () {     ⑫ 
-                document.body.removeChild(superposición);             ⑫ 
-            });                                                 ⑫
-        });
-    });
-});
+```js
+```
+
 ① Ejecuta el código de función que sigue una vez que se ha cargado la página
 
 ② Almacena todas las miniaturas
@@ -657,7 +503,8 @@ documento.addEventListener('DOMContentLoaded',
 
 Si lo desea, puede utilizar las anotaciones HTML y CSS de las dos secciones anteriores para ayudar a personalizar el código de su página web, como describo en la siguiente sección.
 
-10.8 Personalización de la galería de fotos
+## 10.8 Personalización de la galería de fotos
+
 Utilizando las anotaciones de las secciones anteriores como guía, te mostraré algunas personalizaciones de código relativamente simples que puedes hacer abriendo los archivos HTML y CSS en tu editor de texto. Sin embargo, si tu página no se parece en nada a lo que quieres, es mejor que reescribas el mensaje y lo envíes a ChatGPT en una nueva sesión.
 
 Para el código HTML, aquí hay algunas personalizaciones sugeridas:
@@ -688,19 +535,20 @@ Para cualquier valor de margen o relleno, puede cambiar el número para aumentar
 
 Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
-Resumen
-En HTML, se utiliza el imgelemento para indicarle al navegador web que inserte un archivo de imagen externo en la página.
+## Resumen
 
-En la <img>etiqueta, use el srcatributo para indicarle al navegador dónde encontrar el archivo de imagen; use el altatributo para agregar una frase corta que describa la imagen, particularmente para personas que usan lectores de pantalla y aplicaciones Braille.
+* En HTML, se utiliza el imgelemento para indicarle al navegador web que inserte un archivo de imagen externo en la página.
 
-Al trabajar con miniaturas de imágenes, es mejor crear un archivo de miniatura separado que tenga las dimensiones más pequeñas que desea utilizar.
+* En la <img>etiqueta, use el srcatributo para indicarle al navegador dónde encontrar el archivo de imagen; use el altatributo para agregar una frase corta que describa la imagen, particularmente para personas que usan lectores de pantalla y aplicaciones Braille.
 
-Para incluir un título, rodee el imgelemento con un figureelemento y agregue el título al figcaptionelemento.
+* Al trabajar con miniaturas de imágenes, es mejor crear un archivo de miniatura separado que tenga las dimensiones más pequeñas que desea utilizar.
 
-Una superposición de caja de luz es un elemento de página web creado sobre la marcha para mostrar una versión de gran tamaño de una miniatura en la que se hizo clic.
+* Para incluir un título, rodee el imgelemento con un figureelemento y agregue el título al figcaptionelemento.
 
-Cuando no desea que los elementos de la página estén dispuestos verticalmente en la página, convierta el elemento en un contenedor Flexbox.
+* Una superposición de caja de luz es un elemento de página web creado sobre la marcha para mostrar una versión de gran tamaño de una miniatura en la que se hizo clic.
 
-Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+* Cuando no desea que los elementos de la página estén dispuestos verticalmente en la página, convierta el elemento en un contenedor Flexbox.
 
-Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
+* Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+
+* Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
