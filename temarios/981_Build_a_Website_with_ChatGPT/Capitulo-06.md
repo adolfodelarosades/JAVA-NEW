@@ -1,35 +1,36 @@
-# 6 Agregar enlaces y navegación
-Este capítulo cubre
+# 6 Agregar links y navegación
 
-Creación de enlaces a otros sitios y páginas
-Creando una barra de navegación para tu sitio
-Pídele a ChatGPT que te ayude a diseñar tus páginas
-Impulsando a ChatGPT a crear un sitio web de información para una organización
-Examinar y personalizar el código de la página web de ChatGPT
+Este capítulo cubre:
+
+* Creación de links a otros sitios y páginas
+* Creando una barra de navegación para tu sitio
+* Pídele a ChatGPT que te ayude a diseñar tus páginas
+* Prompting ChatGPT a crear un sitio web de información para una organización
+* Examinar y personalizar el código de la página web de ChatGPT
+
 En cada uno de los proyectos web que ha visto hasta ahora en este libro, ha convencido a ChatGPT para que le proporcione el código para una sola página web. Los sitios web de una sola página son legión en la web, pero es más común que un sitio tenga dos o más páginas. Sin embargo, una vez que agrega esa segunda página, surgen preguntas rápidamente: ¿Cómo lleva a un visitante del sitio desde su página de inicio a la otra página? Y una vez que alguien llega a esa otra página, ¿cómo lo lleva de regreso a la página de inicio? ¿Cómo resuelve todo esto con un sitio que tiene tres, cuatro o incluso más páginas?
 
 Responder a estas y otras preguntas similares es el tema de este capítulo. En las páginas siguientes, aprenderá a permitir que un visitante de su sitio salte de una página a otra pidiéndole a ChatGPT que cree un código de página web que cree un vínculo a otra página en el que se pueda hacer clic. También aprenderá a pedirle a ChatGPT que cree un elemento especial de página web llamado barra de navegación que reúne vínculos a todas las páginas de su sitio en una única ubicación práctica para facilitar el acceso.
 
-Toda esta información se incluye en un mensaje detallado que deberá enviar a ChatGPT para generar el código de un patrón de proyecto muy común: un sitio web que proporciona información sobre una organización. Este capítulo también proporciona una explicación detallada del código generado por ChatGPT y sugerencias para personalizar el código manualmente para que todo quede exactamente como lo desea.
+Toda esta información se incluye en un prompt detallado que deberá enviar a ChatGPT para generar el código de un patrón de proyecto muy común: un sitio web que proporciona información sobre una organización. Este capítulo también proporciona una explicación detallada del código generado por ChatGPT y sugerencias para personalizar el código manualmente para que todo quede exactamente como lo desea.
 
-6.1 Comprender el proyecto de este capítulo
+## 6.1 Comprender el proyecto de este capítulo
+
 En este capítulo, utilizará ChatGPT para crear un sitio web de información simple para una organización. La página final incluirá los siguientes componentes:
 
-Un elemento de encabezado que incluye el título y el eslogan del sitio.
-
-Un elemento de navegación con enlaces a otras páginas del sitio.
-
-Un elemento principal que incluye una introducción al sitio, así como contenido atractivo para el lector.
-
-Un elemento de pie de página que incluye un aviso de derechos de autor
+* Un elemento de header que incluye el título y el eslogan del sitio.
+* Un elemento de navegación con enlaces a otras páginas del sitio.
+* Un elemento main que incluye una introducción al sitio, así como contenido atractivo para el lector.
+* Un elemento footer que incluye un aviso de derechos de autor
 
 La figura 6.1 muestra un ejemplo de la página de inicio de un sitio web de información creada a partir del código generado por ChatGPT. Este tipo de sitio web se puede modificar fácilmente para que funcione como sitio de información para una comunidad, una organización benéfica, un evento, un equipo o una banda, o incluso para una película o un programa de televisión favoritos.
 
+![image](https://github.com/user-attachments/assets/51745a48-a15f-4532-a1bd-5b5c16c9b899)
 
+**Figura 6.1 Página de inicio de un sitio web de información generada por ChatGPT**
 
-Figura 6.1 Página de inicio de un sitio web de información generada por ChatGPT
+## 6.2 Creación de la página de inicio del sitio de información
 
-6.2 Creación de la página de inicio del sitio de información
 Un sitio web de información contiene varias páginas web, por lo que es una buena idea crear el sitio en etapas. El proceso que recomiendo se resume aquí:
 
 Solicite a ChatGPT que genere el código HTML para la página de inicio del sitio web.
