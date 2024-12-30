@@ -33,99 +33,150 @@ La figura 6.1 muestra un ejemplo de la página de inicio de un sitio web de info
 
 Un sitio web de información contiene varias páginas web, por lo que es una buena idea crear el sitio en etapas. El proceso que recomiendo se resume aquí:
 
-Solicite a ChatGPT que genere el código HTML para la página de inicio del sitio web.
+1. Solicite a ChatGPT que genere el código HTML para la página de inicio del sitio web.
 
-Indique a ChatGPT que genere el código CSS para el estilo del sitio web. Tenga en cuenta que es mejor combinar estos dos primeros pasos en un solo mensaje.
+2. Indique a ChatGPT que genere el código CSS para el estilo del sitio web. Tenga en cuenta que es mejor combinar estos dos primeros pasos en un solo mensaje.
 
-Para cada una de las demás páginas de su sitio, solicite a ChatGPT que genere el código HTML para esa página. En particular, la solicitud para cada una de las demás páginas del sitio debe incluir lo siguiente:
+3. Para cada una de las demás páginas de su sitio, solicite a ChatGPT que genere el código HTML para esa página. En particular, el prompt para cada una de las demás páginas del sitio debe incluir lo siguiente:
 
-Una instrucción para utilizar el mismo archivo CSS en el que guardó el CSS generado en el paso 2.
+   1. Una instrucción para utilizar el mismo archivo CSS en el que guardó el CSS generado en el paso 2.
 
-Una instrucción para no generar estilos adicionales, en particular estilos en línea (es decir, código CSS insertado directamente en las etiquetas HTML). ChatGPT siempre desea incluir estilos CSS con su salida HTML, por lo que sin esta instrucción, ChatGPT casi con certeza agregará estilos adicionales, que podrían entrar en conflicto con los estilos en el archivo CSS o anularlos.
+   2. Una instrucción para no generar estilos adicionales, en particular estilos en línea (es decir, código CSS insertado directamente en las etiquetas HTML). ChatGPT siempre desea incluir estilos CSS con su salida HTML, por lo que sin esta instrucción, ChatGPT casi con certeza agregará estilos adicionales, que podrían entrar en conflicto con los estilos en el archivo CSS o anularlos.
 
 Antes de llegar a todo eso, tómese un minuto para familiarizarse con la nueva tecnología de página web presentada en este capítulo.
 
-6.2.1 Creación de enlaces
-Una de las características distintivas de HTML (de hecho, es la H en HTML ) es el hipertexto , que es simplemente una palabra elegante para los enlaces que lo llevan a otras páginas, ya sea que esas páginas existan en otra parte de su sitio web o en cualquier lugar de la web. Un enlace suele ser una palabra o frase configurada de modo que cuando alguien hace clic en ese texto, el navegador web navega a cualquier página web especificada por la configuración del enlace.
+### 6.2.1 Creación de links
 
-Si está creando un vínculo a una página de su sitio que se encuentra en el mismo directorio que el archivo HTML actual, puede solicitarle a ChatGPT un vínculo a ese nombre de archivo. A continuación, se muestra un código que solicita un vínculo a una página llamada about.html:
+Una de las características distintivas de HTML (de hecho, es la H en HTML ) es el hipertexto, que es simplemente una palabra elegante para los enlaces que lo llevan a otras páginas, ya sea que esas páginas existan en otra parte de su sitio web o en cualquier lugar de la web. Un link suele ser una palabra o frase configurada de modo que cuando alguien hace clic en ese texto, el navegador web navega a cualquier página web especificada por la configuración del link.
 
+Si está creando un link a una página de su sitio que se encuentra en el mismo directorio que el archivo HTML actual, puede solicitarle a ChatGPT un link a ese nombre de archivo. A continuación, se muestra un código que solicita un link a una página llamada `about.html`:
+
+```text
+Provide the HTML code for a link to a web page named about.html.
+```
+
+```text
 Proporcione el código HTML para un enlace a una página web llamada about.html.
+```
+
 La figura 6.2 muestra el resultado de la aplicación ChatGPT. Este es el código HTML que devuelve ChatGPT:
 
-<a href="about.html">Acerca de</a>
+```html
+<a href="about.html">About</a>
+```
 
+![image](https://github.com/user-attachments/assets/ddc21e36-9efe-4e93-8b48-4d26312680a0)
 
-Figura 6.2 Código de ChatGPT para un enlace a la página about.html
+**Figura 6.2 Código de ChatGPT para un link a la página about.html**
 
-Como muestra el código, las etiquetas HTML que se utilizan para crear un enlace son <a>y su </a>etiqueta de cierre correspondiente. En el aelemento, se utiliza el hrefatributo para insertar la dirección (a menudo denominada URL , abreviatura de localizador uniforme de recursos ) del enlace. La figura 6.3 muestra cómo funciona este elemento.
+Como muestra el código, las etiquetas HTML que se utilizan para crear un link son `<a>` y su etiqueta de cierre correspondiente `</a>`. En el elemento `a`, se utiliza el atributo `href` para insertar la dirección (a menudo denominada *URL*, abreviatura de *uniform resource locator - localizador uniforme de recursos* ) del link. La figura 6.3 muestra cómo funciona este link.
 
+![image](https://github.com/user-attachments/assets/3fd705e0-ef33-4d3f-b18f-1a77f0ac6979)
 
-
-Figura 6.3 La sintaxis a utilizar para la <a>etiqueta
+**Figura 6.3 La sintaxis a utilizar para la etiqueta `<a>`**
 
 Si el archivo de su sitio al que desea vincular reside en un directorio diferente, debe incluir el nombre de ese directorio en su solicitud:
 
+```text
+Provide the HTML code for a link to a web page named index.html in the /faq directory.
+```
+
+```text
 Proporcione el código HTML para un enlace a una página web llamada index.html en el directorio /faq.
+```
+
 La figura 6.4 muestra el resultado de la aplicación ChatGPT. Este es el código HTML que devuelve ChatGPT:
 
-<a href="/faq/index.html">Preguntas frecuentes</a>
+```html
+<a href="/faq/index.html">FAQ</a>
+```
 
+![image](https://github.com/user-attachments/assets/4f51df6a-3ed8-408c-b57d-e54dd343f581)
 
-Figura 6.4 Código de ChatGPT para un enlace a la página index.html en el directorio /faq
+**Figura 6.4 Código de ChatGPT para un link a la página `index.html` en el directorio `/faq`**
 
-Tenga en cuenta que antepuse una barra diagonal ( /) al nombre del directorio, lo que indica a la IA que el directorio especificado se ejecuta desde el directorio raíz de mi sitio. Si, en cambio, la ubicación es un subdirectorio del directorio donde se encuentra su archivo HTML, omita la barra diagonal en el mensaje.
+Tenga en cuenta que antepuse una barra diagonal ( `/` ) al nombre del directorio, lo que indica a la IA que el directorio especificado se ejecuta desde el directorio raíz de mi sitio. Si, en cambio, la ubicación es un subdirectorio del directorio donde se encuentra su archivo HTML, omita la barra diagonal en el mensaje.
 
-En el caso de una página web externa, suele ser más fácil crear un enlace vacío (es decir, <a href="">link text</a>navegar a la página, copiar la dirección y luego pegar esa dirección entre las comillas del hrefvalor del atributo). Sin embargo, si la página se puede describir (por ejemplo, conoce el nombre del sitio y puede describir el contenido de la página de forma única en pocas palabras), ¿por qué no dejar que su asistente de inteligencia artificial haga el trabajo sucio por usted? Aquí hay un ejemplo:
+En el caso de una página web externa, suele ser más fácil crear un enlace vacío (es decir, `<a href="">link text</a>`, copiar la dirección y luego pegar esa dirección entre las comillas del valor del atributo `href`). Sin embargo, si la página se puede describir (por ejemplo, conoce el nombre del sitio y puede describir el contenido de la página de forma única en pocas palabras), ¿por qué no dejar que su asistente de inteligencia artificial haga el trabajo sucio por usted? Aquí hay un ejemplo:
 
+```text
+Provide the HTML code for a link to the Wikipedia page on rutabagas.
+```
+
+```text
 Proporcione el código HTML para un enlace a la página de Wikipedia sobre colinabos.
+```
+
 La figura 6.5 muestra el resultado de la aplicación ChatGPT. Este es el código HTML que devuelve ChatGPT:
 
+```html
 <a href="https://en.wikipedia.org/wiki/Rutabaga">Rutabaga</a>
+```
 
+![image](https://github.com/user-attachments/assets/ed03bcc0-69bb-478d-b27c-8ee9900c4d1f)
 
-Figura 6.5 Código de ChatGPT para un enlace a la página de rutabagas en Wikipedia
+**Figura 6.5 Código de ChatGPT para un link a la página de rutabagas en Wikipedia**
 
-6.2.2 Creación de la barra de navegación
-Un patrón muy común en los sitios web es la barra de navegación , que es una colección de enlaces a otras páginas del sitio web (o, si el sitio es grande, a las páginas más importantes del sitio). La barra de navegación puede ser horizontal o vertical, pero la configuración más común es una franja horizontal que recorre la página, justo debajo del encabezado. La Figura 6.6 muestra un ejemplo.
+### 6.2.2 Creación de la barra de navegación
 
+Un patrón muy común en los sitios web es la barra de navegación, que es una colección de enlaces a otras páginas del sitio web (o, si el sitio es grande, a las páginas más importantes del sitio). La barra de navegación puede ser horizontal o vertical, pero la configuración más común es una franja horizontal que recorre la página, justo debajo del encabezado. La Figura 6.6 muestra un ejemplo.
 
+![image](https://github.com/user-attachments/assets/7e4ffe3f-b9f4-4dd1-86c8-50423112f0fa)
 
-Figura 6.6 Un ejemplo de una barra de navegación
+**Figura 6.6 Un ejemplo de una barra de navegación**
 
-En HTML, se crea una barra de navegación utilizando las etiquetas <nav>y </nav>. Entre estas etiquetas, se agregan los enlaces a cada página del sitio. Puede solicitar a ChatGPT que genere una barra de navegación similar incluyendo la siguiente instrucción en su mensaje:
+En HTML, se crea una barra de navegación utilizando las etiquetas `<nav>` y `</nav>`. Entre estas etiquetas, se agregan los enlaces a cada página del sitio. Puede solicitar a ChatGPT que genere una barra de navegación similar incluyendo la siguiente instrucción en su mensaje:
 
 Crea un elemento de navegación que incluya cinco enlaces:
+
+```text
+Create a navigation element that includes five links:
+* The text "Home" that links to the file "index.html".
+* The text "Blog" that links to the file "blog.html".
+* The text "FAQ" that links to the file "faq.html".
+* The text "About" that links to the file "about.html".
+* The text "Contact" that links to the file "contact.html".
+```
+
+```text
 * El texto “Inicio” que enlaza al archivo “index.html”.
 * El texto "Blog" que enlaza al archivo "blog.html".
 * El texto "FAQ" que enlaza al archivo "faq.html".
 * El texto "Acerca de" que enlaza al archivo "about.html".
 * El texto “Contacto” que enlaza al archivo “contact.html”.
+```
+
 Basándose en esta instrucción, ChatGPT generará un código HTML similar al siguiente (que es el código que creó la barra de navegación que se muestra en la figura 6.6):
 
-<navegación>
-    <a href="index.html">Inicio</a>
+```html
+<nav>
+    <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
-    <a href="faq.html">Preguntas frecuentes</a>
-    <a href="about.html">Acerca de</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
 </nav>
+```
+
 Es posible que notes dos cosas extrañas sobre cómo el navegador representa la lista en la figura 6.6:
 
 La lista se ejecuta horizontalmente en lugar de verticalmente.
 
 Los elementos de la lista están espaciados uniformemente a lo largo de la página.
 
-El navegador muestra la barra de navegación de esa manera debido al siguiente código CSS, que aplica algunas propiedades al navelemento:
+El navegador muestra la barra de navegación de esa manera debido al siguiente código CSS, que aplica algunas propiedades al elemento `nav`:
 
-navegación {
-    borde superior: 1px azul medianoche sólido;         ① 
-    borde inferior: 1px azul medianoche sólido;      ① 
-    pantalla: flexible;                              ② 
-    justificar contenido: espacio entre;             ③ 
-    margen: 20px 0;                             ④ 
-    relleno: 10px 0;                            ④ 
+```html
+nav {
+    border-top: 1px solid midnightblue;        ①
+    border-bottom: 1px solid midnightblue;     ①
+    display: flex;                             ②
+    justify-content: space-between;            ③
+    margin: 20px 0;                            ④
+    padding: 10px 0;                           ④
 }
+```
+
 ① Agrega un borde arriba y debajo del elemento de navegación
 
 ② Convierte el elemento de navegación en un contenedor Flexbox
@@ -134,62 +185,104 @@ navegación {
 
 ④ Aplica estilo a los márgenes y al relleno del elemento de navegación.
 
-Lo más importante que hay que tener en cuenta aquí es la display: flexdeclaración, que convierte el navelemento en un contenedor Flexbox. De forma predeterminada, muestra sus elementos de forma horizontal en lugar de vertical. (Aprenderá más sobre Flexbox en el capítulo 10).
+Lo más importante que hay que tener en cuenta aquí es la declaración `display: flex`, que convierte el elemento `nav` en un contenedor Flexbox. De forma predeterminada, muestra sus elementos de forma horizontal en lugar de vertical. (Aprenderá más sobre Flexbox en el capítulo 10).
 
-NOTA: Según la cantidad de elementos de la barra de navegación, es posible que ese elemento sea demasiado ancho para visualizarse bien en pantallas pequeñas, en particular en pantallas de teléfonos inteligentes en modo vertical. La solución habitual es convertir el elemento de navegación en un ícono que muestra un menú cuando se hace clic o se toca. Para saber cómo solicitarle a ChatGPT que genere el código para un menú como este, consulte el capítulo 12.
+**NOTA**: Según la cantidad de elementos de la barra de navegación, es posible que ese elemento sea demasiado ancho para visualizarse bien en pantallas pequeñas, en particular en pantallas de teléfonos inteligentes en modo vertical. La solución habitual es convertir el elemento de navegación en un ícono que muestra un menú cuando se hace clic o se toca. Para saber cómo solicitarle a ChatGPT que genere el código para un menú como este, consulte el capítulo 12.
 
 Ahora tienes todo lo que necesitas saber para crear el mensaje de tu página de inicio para ChatGPT.
 
-6.2.3 Elaboración del mensaje de la página de inicio
+### 6.2.3 Elaboración del prompt para la home page 
+
 El proyecto de este capítulo es un sitio web informativo. Antes de pasar a la parte de presentación del programa, asegúrese de tener estos elementos:
 
-Algunos o todos los siguientes: un logotipo de página, un título y un eslogan.
-
-Los nombres de los tipos de letra que desea utilizar para los encabezados de página y el texto de la página.
-
-Las palabras clave de los colores que desea aplicar a los fondos y textos de las páginas.
+* Algunos o todos los siguientes: un logotipo de página, un título y un eslogan.
+* Los nombres de los tipos de letra que desea utilizar para los encabezados de página y el texto de la página.
+* Las palabras clave de los colores que desea aplicar a los fondos y textos de las páginas.
 
 Consulta el capítulo 3 para obtener más información sobre estos elementos de diseño y cómo solicitar a ChatGPT sugerencias de título, tipo de letra y color.
 
-Ahora está listo para solicitar a ChatGPT que lo ayude a generar el código para la página de inicio de su sitio web de información. El mensaje debería comenzar así:
+Ahora está listo para solicitar a ChatGPT que lo ayude a generar el código para la página de inicio de su sitio web de información. El prompt debería comenzar así:
 
+```text
+I want to build a web page for an information website. I don't know how to code, so I need you to provide the code for me.
+First, write the HTML code for a web page that includes the following:
+```
+
+```text
 Quiero crear una página web para un sitio web de información. No sé programar, así que necesito que me proporciones el código.
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
+```
+
 A continuación, especifique el contenido de su página, incluido lo siguiente (consulte la figura 6.7):
 
-Un encabezado que incluye el título y el eslogan de su sitio
+* Un header que incluye el título y el eslogan de su sitio
+* Un elemento de navegación que incluye enlaces a otras páginas del sitio (o a las páginas principales del sitio)
+* Un elemento main con un párrafo introductorio que da la bienvenida a los visitantes al sitio.
+* Uno o más elementos de sección que muestran contenido atractivo para el lector.
+* Un footer que incluye un aviso de derechos de autor
 
-Un elemento de navegación que incluye enlaces a otras páginas del sitio (o a las páginas principales del sitio)
+![image](https://github.com/user-attachments/assets/8fe00443-c2a5-46d7-937e-ca7077562d5f)
 
-Un elemento principal con un párrafo introductorio que da la bienvenida a los visitantes al sitio.
-
-Uno o más elementos de sección que muestran contenido atractivo para el lector.
-
-Un pie de página que incluye un aviso de derechos de autor
-
-
-
-Figura 6.7 Los elementos de la página de inicio del sitio web de información
+**Figura 6.7 Los elementos de la página de inicio del sitio web de información**
 
 A continuación, le pides a ChatGPT que genere el CSS según el formato que deseas para tu página:
 
+```text
+Second, in a separate file please write the CSS code for the following:
+```
+
+```text
 En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+```
+
 A continuación, especifique el formato, incluido lo siguiente:
 
-El color de fondo de la página y el color del texto.
-
-Los tamaños de fuente que desea utilizar para el título y el eslogan de la página.
-
-El tamaño de letra de los encabezados y del texto de la página.
-
-Las fuentes que se deben utilizar para los encabezados y el texto normal de la página.
-
-Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800 px es adecuada para este tipo de sitio.
+* El color de fondo de la página y el color del texto.
+* Los tamaños de fuente que desea utilizar para el título y el eslogan de la página.
+* El tamaño de letra de los encabezados y del texto de la página.
+* Las fuentes que se deben utilizar para los encabezados y el texto normal de la página.
+* Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800px es adecuada para este tipo de sitio.
 
 A continuación se muestra un ejemplo de solicitud para mi propia página de información:
 
 Quiero crear una página de inicio para un sitio web informativo. No sé programar, así que necesito que me proporciones el código.
+
+```text
+I want to build a home page for an information website. I don't know how to code, so I need you to provide the code for me.
   
+First, write the HTML code for a web page that includes the following:
+ * The page title is "Antediluvian Word Preservation Society".
+ * A header that includes the title "Antediluvian Word Preservation Society" and the tagline "Preserving words from the past, for the future".
+ * After the header, a navigation element that includes five links:
+   * The text "Home" that links to the file "index.html".
+   * The text "Blog" that links to the file "blog.html".
+   * The text "FAQ" that links to the file "faq.html".
+   * The text "About" that links to the file "about.html".
+   * The text "Contact" that links to the file "contact.html".
+ * A main element that includes the following:
+   * An introductory paragraph that includes the text "Welcome to the Antediluvian Word Preservation Society, where our goal is to protect, preserve, and promote old words that are in danger of becoming overlooked, outmoded, and obsolete. Stay a while, take a look around, and bask in the burnished sheen of these old and beautiful words."
+  * A section element with the second-level heading "Most recent word", followed by a third-level heading with the text "*hullaballoo* (hul·uh·buh·LOO, noun)", followed by a paragraph that includes the text "A great noise or commotion; an uproar. (Example: "After hearing the **hullaballoo** that eight kids hopped up on sugar could make, Rupert decided to never again volunteer to help out at a Halloween party.") [etc.]."
+  * Another section element with the second-level heading "This week's challenge" followed by a paragraph that includes the text "Your challenge this week is to use the word *tomfoolery* — foolish or silly behavior — at least once in each of the following: in conversation, in an email message, in a text message, and in a business meeting (virtual or real-world). Good luck and let us know how you make out!"
+  * In the above text, make each word that's surrounded by double asterisks bold, and make each word that's surrounded by single asterisks italic. 
+ * A footer element that includes the Copyright symbol, followed by the current year, followed by "Antediluvian Word Preservation Society".
+ * In the page head section, include the tag <meta charset="utf-8">.
+ 
+Second, in a separate file write the CSS code for the following:
+ * The body element has 25px padding and a background color of oldlace.
+ * Make the title 64px, line height 1, color midnightblue, 20px bottom margin, and the Playfair Display typeface from Google Fonts.
+ * Make the tagline font size 30px.
+ * The navigation element has a top and bottom border colored midnightblue.
+ * The navigation element has 20px top and bottom border and 10px top and bottom padding.
+ * Style the navigation links with font size 24px;
+ * Space the navigation links so that they span the entire width of the body.
+ * Style the second-level headings with size 48px, 30px top margin, 10px bottom margin, the color midnightblue, and the Playfair Display typeface from Google Fonts.
+ * Style the rest of the page text with size 24px, the color darkslategray, and the Lora typeface from Google Fonts.
+ * Style the links with the color steelblue and no underline.
+ * The footer has 10px top and bottom padding, a 50px top margin, and a top and bottom border colored midnightblue.
+ * The page has a maximum width of 800px and is centered within the browser window.
+```
+
+```text
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
  * El título de la página es "Sociedad para la Preservación de Palabras Antediluvianas".
  * Un encabezado que incluye el título "Sociedad de Preservación de Palabras Antediluvianas" y el lema "Preservando palabras del pasado, para el futuro".
@@ -220,9 +313,14 @@ En segundo lugar, en un archivo separado escriba el código CSS para lo siguient
  * Dale estilo a los enlaces con el color azul acero y sin subrayado.
  * El pie de página tiene un relleno superior e inferior de 10 px, un margen superior de 50 px y un borde superior e inferior de color azul medianoche.
  * La página tiene un ancho máximo de 800px y está centrada dentro de la ventana del navegador.
-ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado index.html. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+```
 
-<link rel="hoja de estilo" tipo="texto/css" href="estilos.css">
+ChatGPT debe crear primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado `index.html`. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+
+```html
+<link rel="stylesheet" type="text/css" href="styles.css">
+```
+
 Este código le indica al navegador web que busque el código CSS en un archivo llamado styles.css, por lo que la siguiente tarea es copiar el código CSS generado, pegarlo en un archivo y guardarlo como styles.css (o cualquier nombre que vea en la <link>etiqueta). Asegúrese de guardar styles.css en la misma carpeta que su archivo index.html. También debe copiar su archivo de imagen en la misma carpeta. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
 
 Envié este mensaje a GPT-4 mediante la aplicación ChatGPT de OpenAI. El código generado generó la página que se muestra en la figura 6.8.
