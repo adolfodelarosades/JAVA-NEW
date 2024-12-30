@@ -6,10 +6,10 @@ Este capítulo cubre
 * Cómo hacer que ChatGPT escriba con tu propio estilo
 * Cómo obtener ayuda de IA para editar tus textos
 * Agregar una imagen de héroe
-* Incitación a ChatGPT para crear una página sobre un interés o pasatiempo
+* Prompting ChatGPT para crear una página sobre un interés o pasatiempo
 * Examinar y personalizar el código de la página web ChatGPT
 
-Como expliqué en el capítulo 1, la G de GPT significa generativo , y significa que puedes usar ChatGPT no solo para tener conversaciones, sino también para crear cosas nuevas. Como has visto hasta ahora en este libro, ese contenido generado puede ser ideas para el título y el eslogan de la página, sugerencias de tipografías que coincidan con el tema de tu página, recomendaciones de esquemas de colores, enlaces, barras de navegación y, por supuesto, el código HTML y CSS para crear la página web final.
+Como expliqué en el capítulo 1, la G de GPT significa generativo, y significa que puedes usar ChatGPT no solo para tener conversaciones, sino también para crear cosas nuevas. Como has visto hasta ahora en este libro, ese contenido generado puede ser ideas para el título y el eslogan de la página, sugerencias de tipografías que coincidan con el tema de tu página, recomendaciones de esquemas de colores, enlaces, barras de navegación y, por supuesto, el código HTML y CSS para crear la página web final.
 
 Sin embargo, tus ambiciones de generar contenido no tienen por qué limitarse a pequeños fragmentos de texto y código. Si tienes ganas de mostrar tu verdadero yo en la web para que todo el mundo lo vea, una de las mejores formas de hacerlo es escribir sobre un interés o pasatiempo que te fascine o te atraiga. Si no estás seguro de qué escribir o tienes problemas para empezar, este capítulo te muestra cómo incorporar a ChatGPT como colaborador para ayudarte a empezar. Aprenderás a obtener ideas de contenido y sugerencias de redacción generadas por IA, a utilizar la IA para la investigación e incluso a utilizar ChatGPT para escribir con tu voz.
 
