@@ -501,7 +501,7 @@ footer {                                  ⑪
   margin-top: 50px;                       ⑪
 }   
 ```
-                                       ⑪
+
 ① Establece el color de fondo de la página
 
 ② Establece el ancho máximo de página en 800 px
