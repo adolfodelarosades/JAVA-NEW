@@ -89,101 +89,217 @@ Getform crea el nuevo endpoint (punto de conexión) y luego muestra la home page
 
 Un formulario es una colección especial de elementos HTML que le permite recopilar información de un usuario y luego enviarla a algún lugar. Cada uno de estos elementos HTML especiales se denomina control y, en las siguientes secciones, aprenderá sobre la media docena de controles de formulario más comunes y útiles. Saber qué hace cada control y qué tipo de información está diseñado para recopilar le permitirá configurar un mensaje para que ChatGPT pueda crear el formulario que necesita.
 
-A lo largo del camino, le proporcionaré ejemplos de indicaciones de ChatGPT para cada tipo de control. En cada ejemplo, suponga que se incluyó anteriormente en la indicación una instrucción similar a la siguiente:
+A lo largo del camino, le proporcionaré ejemplos de prompts de ChatGPT para cada tipo de control. En cada ejemplo, suponga que se incluyó anteriormente en el prompt una instrucción similar a la siguiente:
 
+```text
+Include the code for an HTML form that has the following specifications:
+```
+
+```text
 Incluya el código para un formulario HTML que tenga las siguientes especificaciones:
+```
 
-### 8.3.1 Especificación del punto final del formulario
+### 8.3.1 Especificación del endpoint del formulario
 
 En el ejemplo de este capítulo, aprenderá a recibir los datos de un formulario mediante un servicio llamado Getform. Este servicio le proporciona una dirección única llamada endpoint , que es un script remoto que procesa los datos del formulario. Cuando le indica a ChatGPT que cree un formulario HTML, la primera especificación es esta dirección de endpoint. (Consulte la sección 8.2 para aprender a generar una dirección de endpoint única para usar con su formulario). A continuación, se incluye una instrucción de ejemplo:
 
+```text
+In the form element, set the action attribute to "endpoint" and the method attribute to "POST".
+```
+
+```text
 En el elemento de formulario, establezca el atributo de acción en " endpoint " y el atributo de método en "POST".
-En este mensaje, reemplace endpointcon la dirección que le proporcionó el servicio Getform. El methodatributo al que se hace referencia en la instrucción le indica al navegador cómo enviar los datos del formulario.
+```
 
-Ahora que ya nos hemos aclarado este punto, es hora de analizar en detalle los controles de formulario más comunes. El primer tipo de control es el cuadro de texto, que analizaremos a continuación.
+En este mensaje, reemplace `endpoint` con la dirección que le proporcionó el servicio Getform. El atributo `method` al que se hace referencia en la instrucción le indica al navegador cómo enviar los datos del formulario.
 
-### 8.3.2 Recopilación de texto con cuadros de texto
+Ahora que ya nos hemos aclarado este punto, es hora de analizar en detalle los controles de formulario más comunes. El primer tipo de control es el **text box - cuadro de texto**, que analizaremos a continuación.
 
-El tipo más común de control de formulario es el cuadro de texto , que es un área rectangular diseñada para contener el texto escrito por el usuario. HTML ofrece una gran colección de tipos de entrada de cuadros de texto, cada uno diseñado para contener un tipo particular de información. Estos son los cuatro tipos de entrada más comunes:
+### 8.3.2 Recopilación de texto con text box - cuadros de texto
 
-Texto : contiene cualquier tipo de texto, que puede ser cualquier combinación de letras, números y símbolos. A continuación, se incluye un ejemplo de instrucción para incluir en el mensaje del formulario:
+El tipo más común de control de formulario es el text box - cuadro de texto, que es un área rectangular diseñada para contener el texto escrito por el usuario. HTML ofrece una gran colección de tipos de entrada de cuadros de texto, cada uno diseñado para contener un tipo particular de información. Estos son los cuatro tipos de entrada más comunes:
 
-Un cuadro de texto.
-Número: contiene solo datos numéricos. Ejemplo de instrucción:
+* ***Text***: Contiene cualquier tipo de texto, que puede ser cualquier combinación de letras, números y símbolos. A continuación, se incluye un ejemplo de instrucción para incluir en el prompt del formulario:
 
-Un cuadro de texto para datos numéricos.
-Correo electrónico : contiene únicamente una dirección de correo electrónico. El control también verifica si el usuario ingresó una dirección de correo electrónico válida. A continuación, se muestra un ejemplo de instrucción para ChatGPT:
+   ```text
+   A text box.
+   ```
 
-Un cuadro de texto para una dirección de correo electrónico.
-URL: contiene una dirección web. Ejemplo de instrucción:
+   ```text
+   Un cuadro de texto.
+   ```
 
-Un cuadro de texto para una dirección web.
+* ***Number***: Contiene solo datos numéricos. Ejemplo de instrucción:
+
+   ```text
+   A text box for numeric data.
+   ```
+
+   ```text
+   Un cuadro de texto para datos numéricos.
+   ```
+
+* ***Email***: Contiene únicamente una dirección de correo electrónico. El control también verifica si el usuario ingresó una dirección de correo electrónico válida. A continuación, se muestra un ejemplo de instrucción para ChatGPT:
+
+   ```text
+   A text box for an email address.
+   ```
+
+   ```text
+   Un cuadro de texto para una dirección de correo electrónico.
+   ```
+
+
+* ***URL***: Contiene una dirección web. Ejemplo de instrucción:
+
+   ```text
+   A text box for a web address.
+   ```
+
+   ```text
+   Un cuadro de texto para una dirección web.
+   ```
 
 La figura 8.4 muestra un ejemplo de cada tipo de entrada. Observe que el campo Número incluye flechas hacia arriba y hacia abajo en las que el usuario puede hacer clic para incrementar y decrementar (respectivamente) el valor del campo actual.
 
-
+![image](https://github.com/user-attachments/assets/86789302-0b48-473c-b513-309c226fd0a0)
 
 **Figura 8.4 Los cuatro tipos principales de entrada del cuadro de texto**
 
-CONSEJO Para lograr que ChatGPT genere código que configure su formulario con el texto a la izquierda y los cuadros de texto a la derecha, incluya lo siguiente en su mensaje: “Convierta el formulario en un contenedor de cuadrícula de dos columnas con las etiquetas en la primera columna y los controles en la segunda columna”.
+**TIP** Para lograr que ChatGPT genere código que configure su formulario con el texto a la izquierda y los cuadros de texto a la derecha, incluya lo siguiente en su mensaje: “Make the form a two-column grid container with the labels in the first column and the controls in the second column.” - “Convierta el formulario en un contenedor de cuadrícula de dos columnas con las etiquetas en la primera columna y los controles en la segunda columna”.
 
 Al solicitarle a ChatGPT que incluya cuadros de texto en un formulario, usted tiene control sobre lo siguiente para cada cuadro de texto:
 
-Puede establecer el ancho del cuadro especificando un tamaño en caracteres. En la figura 8.4, por ejemplo, cada cuadro de texto tiene 30 caracteres de ancho. Ejemplo de mensaje:
+* Puede establecer el ancho del cuadro especificando un tamaño en caracteres. En la figura 8.4, por ejemplo, cada cuadro de texto tiene 30 caracteres de ancho. Ejemplo de mensaje:
 
-Un cuadro de texto de 25 caracteres de ancho.
-Puede especificar un valor inicial. Este valor aparece de forma predeterminada en el cuadro de texto, aunque el usuario puede editarlo o reemplazarlo. Ejemplo de mensaje:
+   ```text
+   A text box that is 25 characters wide.
+   ```
 
-Un cuadro de texto numérico con el valor inicial 42.
-Puede especificar un marcador de posición , que es un texto que aparece temporalmente en el cuadro de texto y que le indica brevemente al usuario qué escribir en el cuadro de texto. Tan pronto como el usuario comienza a escribir, el texto del marcador de posición desaparece. Ejemplo de mensaje:
+   ```text
+   Un cuadro de texto de 25 caracteres de ancho.
+   ```
+* Puede especificar un valor inicial. Este valor aparece de forma predeterminada en el cuadro de texto, aunque el usuario puede editarlo o reemplazarlo. Ejemplo de mensaje:
 
-Un cuadro de texto de correo electrónico con el texto de marcador de posición "Escriba su dirección de correo electrónico".
-Puede especificar una longitud máxima y/o mínima en caracteres:
+   ```text
+   A numeric text box with the initial value 42.
+   ```
 
-Un cuadro de texto con una longitud mínima de 3 y una longitud máxima de 10.
-Puede especificar que un cuadro de texto sea “obligatorio” si el usuario debe completar un valor antes de enviar el formulario:
+   ```text
+   Un cuadro de texto numérico con el valor inicial 42.
+   ```
 
-Un cuadro de texto de correo electrónico que es obligatorio.
+* Puede especificar un *placeholder*, que es un texto que aparece temporalmente en el cuadro de texto y que le indica brevemente al usuario qué escribir en el cuadro de texto. Tan pronto como el usuario comienza a escribir, el texto del placeholder desaparece. Ejemplo de mensaje:
+
+   ```text
+   An email text box with the placeholder text "Type your email address".
+   ```
+
+   ```text
+   Un cuadro de texto de correo electrónico con el texto de placeholder "Escriba su dirección de correo electrónico".
+   ```
+
+* Puede especificar una longitud máxima y/o mínima en caracteres:
+
+   ```text
+   A text box with a minimum length of 3 and a maximum length of 10.
+   ```
+
+   ```text
+   Un cuadro de texto con una longitud mínima de 3 y una longitud máxima de 10.
+   ```
+
+* Puede especificar que un cuadro de texto sea “obligatorio” si el usuario debe completar un valor antes de enviar el formulario:
+
+   ```text
+   An email text box that is required.
+   ```
+
+   ```text
+   Un cuadro de texto de correo electrónico que es obligatorio.
+   ```
+
 Quizás se esté preguntando cómo hacer que ChatGPT nombre cada control (como los nombres que se muestran a la izquierda de cada control en la figura 8.4). Si no especifica un nombre, ChatGPT creará uno por usted. La siguiente sección se ocupa de especificar sus propios nombres de control.
 
-### 8.3.3 Agregar etiquetas a cada control
+### 8.3.3 Agregar labels - etiquetas a cada control
 
-Si examina la figura 8.4 de la sección anterior, podrá ver que los elementos están divididos en dos columnas: los controles están en la columna de la derecha y la columna de la izquierda contiene fragmentos de texto breves que describen cada control. Estos fragmentos de texto breves se denominan etiquetas y, con la excepción del control de botón (que se analiza a continuación), debe incluir una etiqueta para cada campo. Las etiquetas deben ser lo suficientemente breves como para que no ocupen demasiado espacio en la página, pero lo suficientemente descriptivas como para que el usuario sepa lo que debe escribir en cada campo.
+Si examina la figura 8.4 de la sección anterior, podrá ver que los elementos están divididos en dos columnas: los controles están en la columna de la derecha y la columna de la izquierda contiene fragmentos de texto breves que describen cada control. Estos fragmentos de texto breves se denominan *labels - etiquetas* y, con la excepción del control de botón (que se analiza a continuación), debe incluir una etiqueta para cada campo. Las etiquetas deben ser lo suficientemente breves como para que no ocupen demasiado espacio en la página, pero lo suficientemente descriptivas como para que el usuario sepa lo que debe escribir en cada campo.
 
-Cuando crea el mensaje de ChatGPT para su formulario, es mejor indicar la etiqueta que desea al mismo tiempo que indica el resto de las especificaciones de control:
+Cuando crea el prompt de ChatGPT para su formulario, es mejor indicar la etiqueta que desea al mismo tiempo que indica el resto de las especificaciones de control:
 
+```text
+An email address text box. Make the text box 30 characters wide and give it the label "Email address".
+```
+
+```text
 Un cuadro de texto para la dirección de correo electrónico. Haz que el cuadro de texto tenga 30 caracteres de ancho y etiquétalo como "Dirección de correo electrónico".
+```
 
-### 8.3.4 Cómo manejar más texto con áreas de texto
+### 8.3.4 Cómo manejar más texto con text areas - áreas de texto
 
-Un cuadro de texto es útil para recopilar información relativamente breve del usuario, como su nombre, dirección de correo electrónico o número favorito. Sin embargo, en ocasiones, es posible que su formulario deba solicitar entradas de texto más largas, como comentarios, sugerencias, preguntas o incluso la biografía del usuario. Para estas entradas más largas, puede agregar un área de texto , que es un campo de formulario que admite entradas de varias líneas. La Figura 8.5 muestra un ejemplo de un área de texto.
+Un text areas - cuadro de texto es útil para recopilar información relativamente breve del usuario, como su nombre, dirección de correo electrónico o número favorito. Sin embargo, en ocasiones, es posible que su formulario deba solicitar entradas de texto más largas, como comentarios, sugerencias, preguntas o incluso la biografía del usuario. Para estas entradas más largas, puede agregar un área de texto, que es un campo de formulario que admite entradas de varias líneas. La Figura 8.5 muestra un ejemplo de un área de texto.
 
+![image](https://github.com/user-attachments/assets/04919366-ef27-4061-ada9-5a340667bac3)
 
+**Figura 8.5 Un ejemplo de un  text area - área de texto**
 
-**Figura 8.5 Un ejemplo de un área de texto**
+Al solicitarle a ChatGPT que incluya un text area en un formulario, puede personalizar el área de texto de las siguientes maneras:
 
-Al solicitarle a ChatGPT que incluya un área de texto en un formulario, puede personalizar el área de texto de las siguientes maneras:
+* Puede establecer la altura del cuadro del área de texto especificando el número de filas. En la figura 8.5, por ejemplo, la altura del área de texto es de seis filas. Ejemplo de instrucción para ChatGPT:
 
-Puede establecer la altura del cuadro del área de texto especificando el número de filas. En la figura 8.5, por ejemplo, la altura del área de texto es de seis filas. Ejemplo de instrucción para ChatGPT:
+   ```text
+   A text area with the label "Suggestions" and a height of six rows.
+   ``` 
 
-Un área de texto con la etiqueta "Sugerencias" y una altura de seis filas.
-NOTA: Independientemente de la altura del área de texto, el usuario puede introducir texto que supere la cantidad de líneas especificada. Si la cantidad de texto es mayor que la altura del área de texto, el usuario puede desplazarse por el área de texto verticalmente o cambiar su tamaño arrastrando la esquina inferior derecha del cuadro.
+   ```text
+   Un área de texto con la etiqueta "Sugerencias" y una altura de seis filas.
+   ``` 
 
-Puede establecer el ancho del cuadro del área de texto especificando el número de columnas:
+**NOTA**: Independientemente de la altura del text area, el usuario puede introducir texto que supere la cantidad de líneas especificada. Si la cantidad de texto es mayor que la altura del área de texto, el usuario puede desplazarse por el área de texto verticalmente o cambiar su tamaño arrastrando la esquina inferior derecha del cuadro.
 
-Un área de texto con un ancho de 30 columnas.
-Un área de texto permite al usuario escribir la longitud de entrada que desee. Sin embargo, si le preocupa que le inunden con demasiado texto, puede especificar un tamaño máximo de entrada en caracteres:
+* Puede establecer el ancho del cuadro del text area especificando el número de columnas:
 
-Un área de texto con una longitud máxima de 240 caracteres.
-Si es necesario, también puede especificar un tamaño de entrada mínimo en caracteres:
+   ```text
+   A text area with a width of 30 columns.
+   ```
 
-Un área de texto con una longitud mínima de 20 caracteres.
-Puede establecer un área de texto como “obligatoria” si el usuario debe completar un valor antes de enviar el formulario:
+   ```text
+   Un área de texto con un ancho de 30 columnas.
+   ```   
 
-Un área de texto que es obligatoria.
-En cierto sentido, lo opuesto de un área de texto con mucho texto es cuando se necesita que el usuario elija entre sólo dos posibilidades simples: sí o no, activado o desactivado, etc. No utilice un área de texto ni siquiera un cuadro de texto para esto: HTML ofrece un control especial para manejar estas opciones de una u otra, que es el tema de la siguiente sección.
+* Un text area permite al usuario escribir la longitud de entrada que desee. Sin embargo, si le preocupa que le inunden con demasiado texto, puede especificar un tamaño máximo de entrada en caracteres:
 
-### 8.3.5 Obtener información de sí o no con casillas de verificación
+   ```text
+   A text area with a maximum length of 240 characters.
+   ```
+
+   ```text
+   Un área de texto con una longitud máxima de 240 caracteres.
+   ```  
+
+* Si es necesario, también puede especificar un tamaño de entrada mínimo en caracteres:
+
+   ```text
+   A text area with a minimum length of 20 characters.
+   ```
+
+   ```text
+   Un área de texto con una longitud mínima de 20 caracteres.
+   ``` 
+
+* Puede establecer un text area como “obligatoria” si el usuario debe completar un valor antes de enviar el formulario:
+
+   ```text
+   A text area that is required.
+   ```
+
+   ```text
+   Un área de texto que es obligatoria.
+   ```
+   
+En cierto sentido, lo opuesto de un text area con mucho texto es cuando se necesita que el usuario elija entre sólo dos posibilidades simples: sí o no, activado o desactivado, etc. No utilice un text area ni siquiera un text box - cuadro de texto para esto: HTML ofrece un control especial para manejar estas opciones de una u otra, que es el tema de la siguiente sección.
+
+### 8.3.5 Obtener información de sí o no con check boxes - casillas de verificación
 
 Una situación habitual de recopilación de información es cuando se le da al usuario una opción y este la acepta o la rechaza. De manera similar, según la redacción y la intención de la opción, el usuario puede decir sí o no, o puede activarla o desactivarla. Para todos estos escenarios (aceptar/rechazar, sí/no, activar/desactivar), puede incluir en su formulario un control llamado casilla de verificación . Este es un control que muestra un pequeño cuadrado. Si el usuario desea enviar una respuesta positiva para la casilla de verificación (aceptar o sí o activar), hace clic en la casilla de verificación para agregar una marca de verificación dentro de ella; si, en cambio, el usuario desea enviar una respuesta negativa para la casilla de verificación (rechazar o no o desactivar), hace clic en la casilla de verificación para quitar su marca de verificación.
 
