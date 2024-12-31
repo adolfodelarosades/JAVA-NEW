@@ -301,85 +301,149 @@ En cierto sentido, lo opuesto de un text area con mucho texto es cuando se neces
 
 ### 8.3.5 Obtener información de sí o no con check boxes - casillas de verificación
 
-Una situación habitual de recopilación de información es cuando se le da al usuario una opción y este la acepta o la rechaza. De manera similar, según la redacción y la intención de la opción, el usuario puede decir sí o no, o puede activarla o desactivarla. Para todos estos escenarios (aceptar/rechazar, sí/no, activar/desactivar), puede incluir en su formulario un control llamado casilla de verificación . Este es un control que muestra un pequeño cuadrado. Si el usuario desea enviar una respuesta positiva para la casilla de verificación (aceptar o sí o activar), hace clic en la casilla de verificación para agregar una marca de verificación dentro de ella; si, en cambio, el usuario desea enviar una respuesta negativa para la casilla de verificación (rechazar o no o desactivar), hace clic en la casilla de verificación para quitar su marca de verificación.
+Una situación habitual de recopilación de información es cuando se le da al usuario una opción y este la acepta o la rechaza. De manera similar, según la redacción y la intención de la opción, el usuario puede decir sí o no, o puede activarla o desactivarla. Para todos estos escenarios (aceptar/rechazar, sí/no, activar/desactivar), puede incluir en su formulario un control llamado *check boxes - casilla de verificación*. Este es un control que muestra un pequeño cuadrado. Si el usuario desea enviar una respuesta positiva para la check boxes (aceptar o sí o activar), hace clic en la casilla de verificación para agregar una marca de verificación dentro de ella; si, en cambio, el usuario desea enviar una respuesta negativa para la casilla de verificación (rechazar o no o desactivar), hace clic en la check boxes para quitar su marca de verificación.
 
-La figura 8.6 muestra un par de ejemplos de casillas de verificación. La casilla de verificación superior no está marcada, lo que significa (en este caso) que el usuario no desea recibir notificaciones sobre eventos futuros. La casilla de verificación inferior está marcada, lo que significa (nuevamente, en este caso) que el usuario desea suscribirse al boletín informativo del sitio. A continuación, se muestra un ejemplo de instrucción para incluir en el mensaje del formulario:
+La figura 8.6 muestra un par de ejemplos de check boxes. La check box superior no está marcada, lo que significa (en este caso) que el usuario no desea recibir notificaciones sobre eventos futuros. La check box inferior está marcada, lo que significa (nuevamente, en este caso) que el usuario desea suscribirse al boletín informativo del sitio. A continuación, se muestra un ejemplo de instrucción para incluir en el prompt del formulario:
 
+```text
+A checkbox with the label "Get notified about future events".
+```
+
+```text
 Una casilla de verificación con la etiqueta "Recibir notificaciones sobre eventos futuros".
+```
 
+![image](https://github.com/user-attachments/assets/a6316b09-8561-4160-9910-2ecd36fb4dfb)
 
 **Figura 8.6 Algunos ejemplos de casillas de verificación**
 
-Al solicitarle a ChatGPT que incluya una casilla de verificación en un formulario, puede personalizar la casilla de verificación especificando si está marcada inicialmente, como en este ejemplo:
+Al solicitarle a ChatGPT que incluya una check box en un formulario, puede personalizar la check box especificando si está marcada inicialmente, como en este ejemplo:
 
+
+```text
+A checkbox with the label "Subscribe to our newsletter" that is initially checked.
+```
+
+```text
 Una casilla de verificación con la etiqueta "Suscríbete a nuestra newsletter" que está inicialmente marcada.
-Si desea que sus usuarios elijan entre más de dos opciones, HTML ofrece un par de soluciones, empezando por los botones de opción, que analizamos a continuación.
+```
 
-### 8.3.6 Elección de una de varias opciones con botones de opción
+Si desea que sus usuarios elijan entre más de dos opciones, HTML ofrece un par de soluciones, empezando por los radio buttons - botones de opción, que analizamos a continuación.
+
+### 8.3.6 Elección de una de varias opciones con radio buttons - botones de opción
 
 En la sección anterior, aprendiste a permitir que tus usuarios elijan entre dos estados ofreciendo una casilla de verificación. Sin embargo, a menudo sucede que deseas que un usuario elija una de tres o cuatro posibilidades. Por ejemplo, si un evento ocurre el viernes, sábado y domingo, es posible que desees que el usuario elija solo uno de esos días. De manera similar, para regalar una camiseta gratis, puedes pedirle al usuario que elija la talla de camiseta que desea: pequeña, mediana, grande o extra grande.
 
-Cuando necesitas que tus visitantes elijan sólo una de tres o cuatro opciones, puedes añadir a tu formulario un grupo de botones de opción , que es un conjunto de elementos HTML con las siguientes características:
+Cuando necesitas que tus visitantes elijan sólo una de tres o cuatro opciones, puedes añadir a tu formulario un grupo de *radio buttons - botones de opción*, que es un conjunto de elementos HTML con las siguientes características:
 
-Cada botón es un pequeño círculo.
+* Cada botón es un pequeño círculo.
 
-Sólo se puede seleccionar un botón a la vez.
+* Sólo se puede seleccionar un botón a la vez.
 
-El círculo del botón actualmente seleccionado se rellena.
+* El círculo del botón actualmente seleccionado se rellena.
 
-Todos los botones no seleccionados tienen círculos vacíos.
+* Todos los botones no seleccionados tienen círculos vacíos.
 
-Cuando el usuario hace clic en un botón no seleccionado, el círculo de ese botón se rellena y el círculo del botón previamente seleccionado queda vacío.
+* Cuando el usuario hace clic en un botón no seleccionado, el círculo de ese botón se rellena y el círculo del botón previamente seleccionado queda vacío.
 
-La figura 8.7 muestra un ejemplo de un grupo de botones de opción. El botón de opción Medio está seleccionado actualmente.
-
+La figura 8.7 muestra un ejemplo de un grupo de radio buttons. El botón de opción Medio está seleccionado actualmente.
 
 
 **Figura 8.7 Un grupo de botones de opción**
 
-Cuando llegue el momento de crear el mensaje ChatGPT para un formulario, puede utilizar una instrucción como la siguiente:
+Cuando llegue el momento de crear el prompt ChatGPT para un formulario, puede utilizar una instrucción como la siguiente:
 
+```text
+A group of radio buttons with the following options: "Small", "Medium", "Large", and "Extra Large".
+```
+
+```text
 Un grupo de botones de opción con las siguientes opciones: "Pequeño", "Mediano", "Grande" y "Extra grande".
+```
+
 Puede personalizar sus botones de opción de la siguiente manera:
 
-Puede especificar qué botón de opción se selecciona inicialmente:
+* Puede especificar qué botón de opción se selecciona inicialmente:
 
-Un grupo de botones de opción con las siguientes opciones: "Pequeño", "Mediano", "Grande" y "Extragrande". El botón de opción "Mediano" es el seleccionado inicialmente.
-Puede rodear su grupo de botones de opción con un elemento de “leyenda” y especificar un “título” para esa leyenda. El grupo de botones de opción de la figura 8.7 tiene una leyenda de este tipo con el título Choose a t-shirt size. ChatGPT tiende a incluir un elemento de leyenda automáticamente, pero puede usar una instrucción como la siguiente para especificar el título que desea:
+   ```text
+   A group of radio buttons with the following options: "Small", "Medium", "Large", and "Extra Large". The "Medium" radio button is initially selected.
+   ```
 
-Un grupo de botones de opción con las siguientes opciones: "Pequeño", "Mediano", "Grande" y "Extragrande". Incluye un elemento de leyenda con el texto "Selecciona una talla de camiseta".
+   ```text
+   Un grupo de botones de opción con las siguientes opciones: "Pequeño", "Mediano", "Grande" y "Extragrande". El botón de opción "Mediano" es el seleccionado inicialmente.
+   ```
+
+* Puede rodear su grupo de botones de opción con un elemento de “leyenda” y especificar un “título” para esa leyenda. El grupo de botones de opción de la figura 8.7 tiene una leyenda de este tipo con el título `Choose a t-shirt size`. ChatGPT tiende a incluir un elemento de leyenda automáticamente, pero puede usar una instrucción como la siguiente para especificar el título que desea:
+
+   ```text
+   A group of radio buttons with the following options: "Small", "Medium", "Large", and "Extra Large". Include a legend element with the caption "Choose a t-shirt size".
+   ```
+
+   ```text
+   Un grupo de botones de opción con las siguientes opciones: "Pequeño", "Mediano", "Grande" y "Extragrande". Incluye un elemento de leyenda con el texto "Selecciona una talla de camiseta".
+   ```
+
 Si necesita que sus usuarios elijan entre más de cuatro opciones, debe colocar esas opciones en una lista de selección, como describo en la siguiente sección.
 
 ### 8.3.7 Ofrecer más selecciones con listas
 
-En teoría, no existe un límite razonable en la cantidad de botones de opción que puede ofrecer a sus usuarios. Sin embargo, en la práctica, tener una gran cantidad de botones de opción puede resultar confuso para el usuario y ocupar demasiado espacio en la página. La regla general es tener como máximo cuatro opciones en cualquier grupo de botones de opción.
+En teoría, no existe un límite razonable en la cantidad de botones de opción que puede ofrecer a sus usuarios. Sin embargo, en la práctica, tener una gran cantidad de radio buttons puede resultar confuso para el usuario y ocupar demasiado espacio en la página. La regla general es tener como máximo cuatro opciones en cualquier grupo de radio buttons.
 
 Sin embargo, no es nada inusual tener cinco o más opciones para presentarles a los usuarios. Tal vez desee que el usuario elija un día de los siete días de la semana (de lunes a domingo). O puede pedirle a un visitante que elija un estado o país (como parte de, por ejemplo, recopilar la dirección de correo del usuario).
 
-Para estas colecciones más grandes de opciones, puede colocar todas las opciones que desea presentar al usuario en una lista de selección , que de manera predeterminada se muestra como una lista desplegable, como se muestra en la figura 8.8. Al hacer clic en la lista, se muestra un menú de las opciones que ha puesto a disposición del usuario, como se muestra en la figura 8.9.
+Para estas colecciones más grandes de opciones, puede colocar todas las opciones que desea presentar al usuario en una *selection list - lista de selección*, que de manera predeterminada se muestra como una lista desplegable, como se muestra en la figura 8.8. Al hacer clic en la lista, se muestra un menú de las opciones que ha puesto a disposición del usuario, como se muestra en la figura 8.9.
 
-
+![image](https://github.com/user-attachments/assets/652983e9-fba4-403e-8f4f-3f835ba21d5e)
 
 **Figura 8.8 Una lista de selección aparece inicialmente como una lista desplegable.**
 
-
+![image](https://github.com/user-attachments/assets/707e46b1-23f0-4451-9dc5-451d0cadadac)
 
 **Figura 8.9 Al hacer clic en la lista de selección se muestran las opciones disponibles.**
 
-A continuación se muestra un ejemplo de instrucción que puede incluir en el mensaje del formulario:
+A continuación se muestra un ejemplo de instrucción que puede incluir en el prompt del formulario:
 
+```text
+A selection list that includes the following items: "None", "Cat", "Dog", "Ferret", "Fish", "Hamster", "Parrot", "Peeve", and "Snake".
+```
+
+```text
 Una lista de selección que incluye los siguientes elementos: "Ninguno", "Gato", "Perro", "Hurón", "Pez", "Hámster", "Loro", "Molesto" y "Serpiente".
-Al crear su solicitud de formulario ChatGPT, puede personalizar sus listas de selección de la siguiente manera:
+```
 
-Puede especificar qué elemento de la lista se selecciona inicialmente:
+Al crear su prompt de formulario ChatGPT, puede personalizar sus selection lists - listas de selección de la siguiente manera:
 
-Una lista de selección con las siguientes opciones: “Feliz”, “Contento”, “Neutral”, “Melancólico” y “Triste”. Seleccione “Neutral” como la opción seleccionada inicialmente.
-Puede especificar que el usuario pueda seleccionar varios elementos de la lista (manteniendo presionada la tecla Ctrl (Windows) o Cmd (macOS) y haciendo clic en cada elemento):
+* Puede especificar qué elemento de la lista se selecciona inicialmente:
 
-Una lista de selección con la etiqueta "Filósofos que ha leído" y las siguientes opciones: "Platón", "Aristóteles", "Blaise Pascal", "Friedrich Nietzsche" y "Jean-Paul Sartre". Permite al usuario realizar múltiples selecciones.
-Puede especificar un tamaño en filas. Esto convierte la lista desplegable en un cuadro de lista normal que muestra la cantidad de filas que especificó. Si la cantidad de filas mostradas es menor que la cantidad de elementos en la lista, el usuario puede desplazarse por el cuadro de lista verticalmente. A continuación, se muestra una instrucción de ejemplo:
+   ```text
+   A selection list with the following options: "Happy", "Content", "Neutral", "Melancholy", and "Sad." Make "Neutral" the initially selected option. 
+   ```
 
-Una lista de selección con la etiqueta "Vacaciones de ensueño" y las opciones "Escapada a la playa", "Caminata de larga distancia", "Resort de montaña", "Exploración urbana" y "Estadía en casa". Dale a la lista una altura de cinco filas.
+   ```text
+   Una lista de selección con las siguientes opciones: “Feliz”, “Contento”, “Neutral”, “Melancólico” y “Triste”. Seleccione “Neutral” como la opción seleccionada inicialmente. 
+   ```
+
+* Puede especificar que el usuario pueda seleccionar varios elementos de la lista (manteniendo presionada la tecla Ctrl (Windows) o Cmd (macOS) y haciendo clic en cada elemento):
+
+   ```text
+   A selection list with the label "Philosophers You've Read" and the following options: "Plato", "Aristotle", "Blaise Pascal", "Friedrich Nietzsche", and "Jean-Paul Sartre." Allow the user to make multiple selections. 
+   ```
+
+   ```text
+   Una lista de selección con la etiqueta "Filósofos que ha leído" y las siguientes opciones: "Platón", "Aristóteles", "Blaise Pascal", "Friedrich Nietzsche" y "Jean-Paul Sartre". Permite al usuario realizar múltiples selecciones.
+   ```
+   
+
+* Puede especificar un tamaño en filas. Esto convierte la lista desplegable en un cuadro de lista normal que muestra la cantidad de filas que especificó. Si la cantidad de filas mostradas es menor que la cantidad de elementos en la lista, el usuario puede desplazarse por el cuadro de lista verticalmente. A continuación, se muestra una instrucción de ejemplo:
+
+   ```text
+   A selection list with the label "Dream Vacation" and the options "Beach getaway", "Long-distance hike", "Mountain resort", "Urban exploration", and "Staycation". Give the list a height of five rows.
+   ```
+
+   ```text
+   Una lista de selección con la etiqueta "Vacaciones de ensueño" y las opciones "Escapada a la playa", "Caminata de larga distancia", "Resort de montaña", "Exploración urbana" y "Estadía en casa". Dale a la lista una altura de cinco filas.
+   ```
+
 Ahora que está familiarizado con todos los controles básicos del formulario, está listo para descubrir cómo sus usuarios pueden enviar el formulario.
 
 ### 8.3.8 Enviar el formulario con un botón
