@@ -2,18 +2,18 @@
 
 Este capítulo cubre
 
-* Cómo manejar cuadros de texto y áreas de texto
-* Trabajar con casillas de verificación y botones de opción
-* Cómo agregar listas de selección y botones a un formulario
+* Cómo manejar text boxes y text areas
+* Trabajar con check boxes y radio buttons
+* Cómo agregar selection lists y buttons a un form
 * Cómo utilizar el servicio gratuito Getform para que le envíen datos de formulario
-* Elaboración de un mensaje de ChatGPT para crear una página de registro de eventos
+* Elaboración de un prompt de ChatGPT para crear una página de sign-up
 * Examinar y personalizar el código generado por ChatGPT
 
 La mayoría de las páginas web (y todos los proyectos web incluidos en este libro hasta ahora) son medios de solo lectura, lo que significa que su propósito es presentar a cada visitante información relacionada con el tema principal de la página. Estas páginas no requieren nada del visitante excepto su tiempo y atención (¡lo cual es una gran exigencia en estos tiempos de tanta actividad!).
 
 Sin embargo, hay muchos escenarios en los que querrás que tu página sea más interactiva, es decir, que pidas a los usuarios que te proporcionen alguna información. Tal vez quieras obtener comentarios sobre tu sitio web. Tal vez quieras presentarles a tus visitantes una encuesta o un cuestionario. O tal vez quieras ofrecerles a las personas una forma de suscribirse a un boletín informativo o registrarse para un próximo evento. Cualquiera sea el motivo, solicitas dicha información ofreciendo un formulario , que es un objeto especial de la página web que tiene campos que el visitante completa y luego envía.
 
-En este capítulo, aprenderá cómo funcionan los formularios, qué tipos de campos puede utilizar y cómo recibir los datos del formulario por correo electrónico. Luego, utilizará esta información para crear un mensaje detallado para que ChatGPT genere el código necesario para una página de registro de eventos. Este capítulo también proporciona una explicación detallada del código generado por ChatGPT y sugerencias para personalizar el código.
+En este capítulo, aprenderá cómo funcionan los formularios, qué tipos de campos puede utilizar y cómo recibir los datos del formulario por correo electrónico. Luego, utilizará esta información para crear un prompt detallado para que ChatGPT genere el código necesario para una página de registro de eventos. Este capítulo también proporciona una explicación detallada del código generado por ChatGPT y sugerencias para personalizar el código.
 
 ## 8.1 Revisando el proyecto de este capítulo
 
@@ -25,7 +25,7 @@ El proyecto de este capítulo es una página web sencilla que incluye un formula
 
 La figura 8.1 muestra un ejemplo del tipo de página que creará con la ayuda de ChatGPT en este capítulo..
 
-
+![image](https://github.com/user-attachments/assets/82a9769d-0aef-408b-a3d2-1bf59d73026b)
 
 **Figura 8.1 Una página de registro de eventos generada por ChatGPT**
 
@@ -33,11 +33,11 @@ El formulario de ejemplo incluye todos los tipos principales de controles de for
 
 ## 8.2 Cómo recibir los datos del formulario que le enviamos
 
-Lamentablemente, no hay ningún método integrado en HTML para que te envíen los datos de un formulario. Para obtener los datos del formulario que envía un usuario, debes crear una cuenta en una empresa que proporcione este servicio. Hay bastantes empresas de este tipo, pero para este proyecto, voy a utilizar Getform ( https://getform.io ). Esta empresa te permite crear un punto final gratuito , que es una dirección a la que tu formulario envía sus datos.
+Lamentablemente, no hay ningún método integrado en HTML para que te envíen los datos de un formulario. Para obtener los datos del formulario que envía un usuario, debes crear una cuenta en una empresa que proporcione este servicio. Hay bastantes empresas de este tipo, pero para este proyecto, voy a utilizar Getform ( https://getform.io ). Esta empresa te permite crear un *endpoint* gratuito , que es una dirección a la que tu formulario envía sus datos.
 
 Aunque Getform tiene planes de suscripción, es posible que no necesites uno porque el servicio también ofrece un nivel gratuito que tiene las siguientes restricciones:
 
-* Un solo punto final.
+* Un solo endpoint.
 * Un máximo de 50 envíos de formularios por mes.
 * La marca Getform se agrega a cada mensaje de correo electrónico de envío de formulario que recibe.
 
@@ -47,43 +47,45 @@ Si alguna de estas restricciones es un factor decisivo para usted, consulte los 
 
 Primero, siga estos pasos para configurar una cuenta Getform:
 
-* Vaya a la página de inicio de Getform ( https://getform.io ).
-* Haga clic en el botón Generar punto final de forma gratuita. (Si no ve ese botón, haga clic en Cuenta, Registrarse o navegue directamente a https://app.getform.io/register ).
-* Ingrese su nombre, correo electrónico y contraseña y luego haga clic en Registrarse.
-* Vaya a su bandeja de entrada de correo electrónico, abra el mensaje de correo electrónico de Getform y luego haga clic en el enlace para verificar su cuenta.
+1. Vaya a la página de inicio de Getform ( https://getform.io ).
+2. Haga clic en el Generate Endpoint for Free button. (Si no ve ese botón, haga clic en Account, Sign Up, o navegue directamente a https://app.getform.io/register ).
+3. Ingrese su nombre, correo electrónico y contraseña y luego haga clic en Sign Up.
+4. Vaya a su bandeja de entrada de correo electrónico, abra el mensaje de correo electrónico de Getform y luego haga clic en el enlace para verificar su cuenta.
 
-### 8.2.2 Creación de un punto final Getform
+### 8.2.2 Creación de un endpoint Getform
 
-Con su cuenta verificada, inicie sesión en su cuenta de Getform y luego siga estos pasos para configurar su punto final de envío de formulario:
+Con su cuenta verificada, inicie sesión en su cuenta de Getform y luego siga estos pasos para configurar su endpoint de envío de formulario:
 
-* Haga clic en Crear en la barra lateral izquierda. Getform muestra el cuadro de diálogo Crear, que se muestra (completamente) en la figura 8.2.
-* Asegúrese de que la pestaña Formulario esté seleccionada.
-* Utilice el cuadro de texto Nombre del punto final del formulario para escribir un nombre breve pero descriptivo para su formulario.
-* Utilice la lista Zona horaria para seleccionar su zona horaria.
-* Haga clic en Crear.
+1. Haga clic en Create en la barra lateral izquierda. Getform muestra el cuadro de diálogo Create, que se muestra (completamente) en la figura 8.2.
+2. Asegúrese de que la pestaña Form esté seleccionada.
+3. Utilice el cuadro de texto Form Endpoint Name para escribir un nombre breve pero descriptivo para su formulario.
+4. Utilice la lista Time Zone para seleccionar su zona horaria.
+5. Haga clic en Create.
 
-
+![image](https://github.com/user-attachments/assets/5b532639-233f-4a9e-94b5-5253ccc69e40)
 
 **Figura 8.2 Complete este formulario para crear su punto final Getform.**
 
-Getform crea el nuevo punto de conexión y luego muestra la página de inicio del punto de conexión, un ejemplo de la cual se muestra en la figura 8.3. Hay varias cosas que se deben tener en cuenta en esta página:
+Getform crea el nuevo endpoint (punto de conexión) y luego muestra la home page del endpoint, un ejemplo de la cual se muestra en la figura 8.3. Hay varias cosas que se deben tener en cuenta en esta página:
 
-Necesitará la dirección del punto final cuando solicite a ChatGPT que cree su formulario. Para evitar errores, haga clic en el botón Copiar a la derecha de la dirección y luego péguela en el mensaje.
+* Necesitará la dirección del endpoint cuando solicite a ChatGPT que cree su formulario. Para evitar errores, haga clic en el botón Copy a la derecha de la dirección y luego péguela en el prompt.
 
-Para evitar el spam, el formulario de ejemplo incluye el siguiente código:
+* Para evitar el spam, el formulario de ejemplo incluye el siguiente código:
 
-```html
-```
+   ```html
+   <input type="hidden" name="_gotcha" style="display:none !important">
+   ```
 
-Este es un ejemplo de un honeypot , que es un campo oculto que los usuarios no verán (y por lo tanto no completarán), pero que un robot de spam completará y enviará. (Se llama honeypot porque el robot de spam no puede resistirlo). Un campo honeypot completo le indica al servidor Getform que el envío debe ser spam. Cuando cree su mensaje de ChatGPT más adelante, le pedirá a ChatGPT que incluya este código en su formulario.
+   Este es un ejemplo de un *honeypot*, que es un campo oculto que los usuarios no verán (y por lo tanto no completarán), pero que un robot de spam completará y enviará. (Se llama *honeypot* porque el robot de spam no puede resistirlo). Un campo honeypot completo le indica al servidor Getform que el envío debe ser spam. Cuando cree su mensaje de ChatGPT más adelante, le pedirá a ChatGPT que incluya este código en su formulario.
 
-Puede hacer clic en Bandeja de entrada en la parte superior de esta página para controlar los envíos de formularios. Pero recuerde que Getform también envía cada envío de formulario a su dirección de correo electrónico.
+* Puede hacer clic en Inbox en la parte superior de esta página para controlar los envíos de formularios. Pero recuerde que Getform también envía cada envío de formulario a su dirección de correo electrónico.
+
+   ![image](https://github.com/user-attachments/assets/2ccf1fb4-256a-42eb-bd9a-6005a9cc8bae)
 
 
+   **Figura 8.3 Cuando se crea el endpoint en Getform, verá su home page.**
 
-**Figura 8.3 Cuando se crea el punto final Getform, verá su página de inicio.**
-
-## 8.3 Construyendo un formulario
+## 8.3 Construyendo un form - formulario
 
 Un formulario es una colección especial de elementos HTML que le permite recopilar información de un usuario y luego enviarla a algún lugar. Cada uno de estos elementos HTML especiales se denomina control y, en las siguientes secciones, aprenderá sobre la media docena de controles de formulario más comunes y útiles. Saber qué hace cada control y qué tipo de información está diseñado para recopilar le permitirá configurar un mensaje para que ChatGPT pueda crear el formulario que necesita.
 
