@@ -5,7 +5,7 @@ Este capítulo cubre
 * Colaborar con ChatGPT para crear y editar contenido
 * Cómo hacer que ChatGPT escriba con tu propio estilo
 * Cómo obtener ayuda de IA para editar tus textos
-* Agregar una imagen de héroe
+* Agregar una imagen de hero
 * Prompting ChatGPT para crear una página sobre un interés o pasatiempo
 * Examinar y personalizar el código de la página web ChatGPT
 
@@ -41,7 +41,7 @@ La figura 7.1 muestra un ejemplo de la página de inicio de un sitio web de inte
 Las demás páginas del sitio utilizarán una estructura similar:
 
 * Un elemento de header que incluye lo siguiente:
-   * Una imagen de héroe
+   * Una imagen de hero
    * El título de la página
    * El subtítulo de la página
    * Un elemento de navegación con enlaces a otras páginas del sitio.
@@ -434,13 +434,13 @@ Como este proyecto es un sitio web de varias páginas, es mejor crear los compon
 
 Antes de llegar a todo eso, tómese un minuto para familiarizarse con la nueva tecnología de página web presentada en este capítulo.
 
-### 7.3.1 Trabajar con imágenes de héroe
+### 7.3.1 Trabajar con imágenes de hero
 
 La única tecnología nueva para páginas web que aprenderá en este capítulo es la imagen principal: una foto o ilustración llamativa que ocupa todo el ancho (y normalmente todo el alto) de la ventana del navegador cuando accede por primera vez a una página. La figura 7.9 muestra un ejemplo de página web que incluye una imagen principal.
 
 ![image](https://github.com/user-attachments/assets/9e85daae-be8c-48d2-97c6-e7d416f22eff)
 
-**Figura 7.9 Una página web con una imagen de héroe**
+**Figura 7.9 Una página web con una imagen de hero**
 
 A continuación se muestran algunos consejos a tener en cuenta al utilizar una imagen destacada:
 
@@ -452,7 +452,7 @@ A continuación se muestran algunos consejos a tener en cuenta al utilizar una i
 * Como verás un poco más adelante, puedes indicarle a ChatGPT que oscurezca un poco la imagen, así que no te preocupes si tu imagen aparece demasiado clara para tu texto.
 * Si no tiene una imagen adecuada, puede pedirle a DALL-E o al Creador de imágenes de Copilot que genere una para usted (como describí en el capítulo 5).
 
-Para que ChatGPT agregue una imagen de héroe a una página, el mensaje debe incluir una instrucción similar a la siguiente:
+Para que ChatGPT agregue una imagen de hero a una página, el mensaje debe incluir una instrucción similar a la siguiente:
 
 ```text
 Include a header that uses the file hero.jpg as a hero image.
@@ -479,7 +479,7 @@ Curiosamente, cuando examinas el código HTML, no verás ninguna referencia al a
 </header> 
 ```
 
-La imagen del héroe está incrustada en el elemento `header` en el CSS, como lo muestra esta lista parcial de la regla `header` utilizada para el elemento `header` en la figura 7.9:
+La imagen del hero está incrustada en el elemento `header` en el CSS, como lo muestra esta lista parcial de la regla `header` utilizada para el elemento `header` en la figura 7.9:
 
 ```html
 header {
@@ -488,7 +488,7 @@ header {
 }
 ```
 
-Este código le indica al navegador web que muestre el archivo de imagen `hero.jpg` como fondo del elemento `header` y que la imagen debe cubrir todo el elemento. El uso de una imagen de héroe es una excelente manera de captar la atención de un visitante desde el principio, por lo que ha sido una de las tendencias de diseño web más populares en los últimos años.
+Este código le indica al navegador web que muestre el archivo de imagen `hero.jpg` como fondo del elemento `header` y que la imagen debe cubrir todo el elemento. El uso de una imagen de hero es una excelente manera de captar la atención de un visitante desde el principio, por lo que ha sido una de las tendencias de diseño web más populares en los últimos años.
 
 ### 7.3.2 Elaboración del prompt para home page
 
@@ -584,7 +584,7 @@ Second, in a separate file write the CSS code for the following:
 Quiero crear una página de inicio para un sitio web. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
- * Un encabezado que utiliza el archivo hero.jpg como imagen de héroe.
+ * Un encabezado que utiliza el archivo hero.jpg como imagen de hero.
  * El encabezado también incluye el título “Pan en el hueso” y el lema “Una mirada a medias a la historia y la cultura del pan”.
  * El encabezado también debe incluir cuatro enlaces en la esquina superior derecha:
    * El texto “Inicio” que enlaza al archivo “index.html”.
@@ -602,7 +602,7 @@ Primero, escriba el código HTML para una página web que incluya lo siguiente:
   
 En segundo lugar, en un archivo separado escriba el código CSS para lo siguiente:
  *El color de fondo de la página es trigo.
- *La imagen del héroe cubre toda la ventana del navegador.
+ *La imagen del hero cubre toda la ventana del navegador.
  * Agregue un degradado lineal al fondo del encabezado para oscurecer ligeramente la imagen principal.
  * Hacer que todo el texto del encabezado sea blanco.
  * Centrar el título y el eslogan tanto horizontal como verticalmente.
@@ -842,11 +842,11 @@ footer {
 
 ② Diseña el color de fondo de la página, la fuente, el tamaño de fuente y el color del texto.
 
-③ Configura la imagen del héroe para que llene la ventana del navegador
+③ Configura la imagen del hero para que llene la ventana del navegador
 
 ④ Centra el texto del encabezado
 
-⑤ Oscurece la imagen del héroe para que el texto sea más fácil de leer.
+⑤ Oscurece la imagen del hero para que el texto sea más fácil de leer.
 
 ⑥ Da estilo al elemento de navegación
 
@@ -890,7 +890,7 @@ Primero, aquí hay algunas sugerencias de personalización para el código HTML:
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-* Para establecer la oscuridad de la imagen del héroe, ChatGPT usa el siguiente código:
+* Para establecer la oscuridad de la imagen del hero, ChatGPT usa el siguiente código:
 
 ```css
 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 
