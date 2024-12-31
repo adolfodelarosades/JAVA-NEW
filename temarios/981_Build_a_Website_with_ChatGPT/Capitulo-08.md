@@ -450,56 +450,116 @@ Ahora que está familiarizado con todos los controles básicos del formulario, e
 
 Cuando trabajas con un cuadro de diálogo en tu computadora, completas los campos (si los hay) y luego haces clic en un botón (generalmente etiquetado como Aceptar) para indicarle a tu aplicación o sistema operativo que ya terminaste con el cuadro de diálogo y que debe procesar los datos del mismo. En cierto sentido, un formulario HTML es el equivalente en una página web de un cuadro de diálogo, lo que significa que tu formulario necesita alguna forma para que el usuario le diga al navegador web que ya terminó con el formulario y que el navegador debe procesarlo. El usuario hace esto haciendo clic en un botón, que es un elemento HTML que se ve y actúa como un botón Aceptar en un cuadro de diálogo de computadora. La Figura 8.10 muestra un ejemplo de un formulario con un botón.
 
-
+![image](https://github.com/user-attachments/assets/2d366372-28b0-4299-a4fe-fc9a30a51a77)
 
 **Figura 8.10 Un formulario con un botón Enviar**
 
-ChatGPT siempre incluirá un botón llamado Enviar cuando le solicites que genere el código del formulario. Para especificar el nombre del botón que prefieras, aquí tienes un ejemplo de instrucción para ChatGPT que puedes incluir en el mensaje general del formulario:
+ChatGPT siempre incluirá un botón llamado Submit - Enviar cuando le solicites que genere el código del formulario. Para especificar el nombre del botón que prefieras, aquí tienes un ejemplo de instrucción para ChatGPT que puedes incluir en el mensaje general del formulario:
 
+```text
+A submit button element with the name "Send It".
+```
+
+```text
 Un elemento de botón de envío con el nombre "Enviarlo".
-Hacer clic en un botón en un elemento de formulario se denomina enviar el formulario y en la siguiente sección aprenderá cómo recibir los datos del formulario.
+```
+
+Hacer clic en un botón en un elemento de formulario se denomina *submitting - enviar* el formulario y en la siguiente sección aprenderá cómo recibir los datos del formulario.
 
 Bien, ahora ya sabes todo lo que necesitas saber para solicitarle a ChatGPT que cree un formulario funcional, como describo en la siguiente sección.
 
-## 8.4 Elaboración del mensaje para la página de inscripción al evento
+## 8.4 Elaboración del prompt para la página de inscripción al evento(event sign-up page)
 
-El proyecto de este capítulo es una página única que contiene un formulario que permite a los usuarios registrarse para participar en un evento local de construcción de graneros. El formulario en sí utilizará los seis tipos de controles que he mencionado anteriormente en este capítulo: un cuadro de texto, un campo de correo electrónico, un área de texto, una casilla de verificación, un grupo de botones de opción, una lista de selección y un botón para enviar el formulario.
+El proyecto de este capítulo es una página única que contiene un formulario que permite a los usuarios registrarse para participar en un evento local de construcción de graneros. El formulario en sí utilizará los seis tipos de controles que he mencionado anteriormente en este capítulo: un cuadro de texto, un campo de correo electrónico, un área de texto, una casilla de verificación, un grupo de botones de opción, una lista de selección y un botón para enviar el formulario (a text box, an email field, a text area, a check box, a radio button group, a selection list, and a button to submit the form).
 
 Antes de continuar, ya deberías tener un título para el sitio, un eslogan y un título para la página. También deberías saber qué tipografías de Google Fonts quieres para el texto de la página y el esquema de colores que quieres aplicar. Consulta el capítulo 3 para saber cómo obtener ayuda de ChatGPT con títulos, fuentes y colores.
 
-Tu mensaje comienza diciéndole a ChatGPT que quieres que te ayude a crear una página web y que no sabes cómo codificar, por lo que tendrá que generar el código por ti:
+Tu prompt comienza diciéndole a ChatGPT que quieres que te ayude a crear una página web y que no sabes cómo codificar, por lo que tendrá que generar el código por ti:
 
+```text
+I want to build a web page that enables page visitors to use a form to sign up for an event. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+```
+
+```text
 Quiero crear una página web que permita a los visitantes de la página utilizar un formulario para registrarse en un evento. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
+```
+
 A continuación, especifique el contenido de su página, incluidos los siguientes elementos (consulte la figura 8.11):
 
-Un encabezado que incluye su logotipo, título del sitio y eslogan.
+* Un header que incluye su logotipo, título del sitio y eslogan.
 
-Un elemento principal que comienza con el título de la página y es seguido por un texto introductorio.
+* Un elemento main que comienza con el título de la página y es seguido por un texto introductorio.
 
-El formulario que los usuarios pueden enviar para registrarse en su evento.
+* El formulario que los usuarios pueden enviar para registrarse en su evento.
 
-Un pie de página que incluye un aviso de derechos de autor
+* Un footer que incluye un aviso de derechos de autor
 
 A continuación, le indica a ChatGPT que genere el CSS para el formato de la página:
 
+```text
+Second, in a separate file please write the CSS code for the following:
+```
+
+```text
 En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+```
+
 A continuación, especifique el formato, incluido lo siguiente:
 
-El color de fondo de la página y el color del texto.
+* El color de fondo de la página y el color del texto.
+* Los tamaños de fuente que desea utilizar para el título del sitio, el eslogan, el título de la página, el texto de la página y los controles del formulario.
+* Las fuentes a utilizar para los encabezados y el texto de la página normal.
+* Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800 px funciona para esta página.
 
-Los tamaños de fuente que desea utilizar para el título del sitio, el eslogan, el título de la página, el texto de la página y los controles del formulario.
-
-Las fuentes a utilizar para los encabezados y el texto de la página normal.
-
-Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800 px funciona para esta página.
-
-
+![image](https://github.com/user-attachments/assets/76aee8ca-6a5a-4698-92d9-ef5513aab784)
 
 **Figura 8.11 Los elementos de la página de registro del evento**
 
 A continuación se muestra un ejemplo de solicitud para mi propia página de registro de eventos:
+
+```text
+I want to build a web page for an event sign-up page. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+ * A header element that includes an image named barn.png, the title "Barnstormers!", and the tagline "Building old-fashioned barns the new-fangled way".
+ * A main section with the heading "Our Next Barn-Raising".
+ * A paragraph with the text "We're looking for volunteers to help with our next barn-raising, which takes place Saturday August 23 and Sunday August 24. If you want to help, please fill out and submit the form below.".
+  * Include the code for an HTML form that has the following specifications:
+    * In the form element, set the action attribute to "https://getform.io/f/dbb986ea-ee50-42ba-abe7-5c304a087444" and the method attribute to "POST".
+    * A text box with the label "Name", a width of 30 characters, and the placeholder "Your name".
+    * An email field with the label "Email", a width of 30 characters, and the placeholder "Your email address".
+    * A text area with the label "Skills", 3 rows, and 30 columns.
+    * A checkbox with the label "Get notified about future barn-raisings".
+    * A radio button group with the options "Saturday", "Sunday", and "Both". Select the "Saturday" option. Add a legend element with the caption "Day(s) you can attend".
+    * A selection list with the label "Select your free gift" and the options "None", "Baseball cap", "Coffee mug",  "Poster", "T-shirt", and "Tote bag".
+    * The following code: <input type="hidden" name="_gotcha" sty1e="display:none !important">
+    * A button element with the name "Sign Me Up!".
+    * Use paragraphs to separate each form control, except for the radio buttons, which should be separated by line breaks.
+  * A footer element that includes the Copyright symbol, followed by the current year, followed by "Barnstormers!".
+ * In the page head section, include the tag <meta charset="utf-8">.
+ * In the page head section, include the tag <meta name="viewport" content="width=device-width, initial-scale=1">.
+  
+Second, in a separate file write the CSS code for the following:
+ * The page has a 24px margin.
+ * The page background color is cornsilk. 
+ * The page text color is saddlebrown.
+ * Make the header image a maximum width of 150px and floated to the left.
+ * The title is 48px, aligned to the right, and with no bottom margin.
+ * The tagline is 26px, formatted as italic and small caps, aligned to the right, and with no top margin.
+ * The main section has a top margin of 75px.
+ * The main section heading font size is 30px.
+ * The main section font size is 20px.
+ * The form width is 400px and the left margin is 32px.
+ * The form, input, textarea, select, and button font size is 20px.
+ * The button text color is saddlebrown.
+ * For all the page text, use the Bitter font from Google Fonts.
+ * The footer has 5px padding all around, 50px top margin, and a saddlebrown top border.
+ * Give the page a maximum width of 800px.
+```
 
 ```text
 Quiero crear una página web para una página de inscripción a un evento. No sé programar, así que necesito que me proporciones el código.
@@ -540,22 +600,25 @@ En segundo lugar, en un archivo separado escriba el código CSS para lo siguient
  * El pie de página tiene un relleno de 5 px alrededor, un margen superior de 50 px y un borde superior de color marrón silla de montar.
  * Dale a la página un ancho máximo de 800px.
 ```
-ChatGPT generará primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado index.html. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+
+ChatGPT generará primero el código HTML, que puedes copiar y pegar y guardar en un archivo llamado `index.html`. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
 
 ```html
+<link rel="stylesheet" type="text/css" href="styles.css">
 ```
 
-Este código le indica al navegador web que busque el código CSS en un archivo llamado styles.css, por lo que la siguiente tarea es copiar el código CSS generado y luego pegarlo y guardarlo en un archivo llamado styles.css (o cualquier nombre que vea en la <link>etiqueta). Asegúrese de guardar el archivo styles.css en la misma carpeta que su archivo index.html. También debe copiar su archivo de imagen de encabezado en la misma carpeta. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
+Este código le indica al navegador web que busque el código CSS en un archivo llamado `styles.css`, por lo que la siguiente tarea es copiar el código CSS generado y luego pegarlo y guardarlo en un archivo llamado `styles.css` (o cualquier nombre que vea en la etiqueta `<link>`). Asegúrese de guardar el archivo `styles.css` en la misma carpeta que su archivo `index.html`. También debe copiar su archivo de imagen de encabezado en la misma carpeta. Consulte el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
 
-Utilicé la aplicación ChatGPT de OpenAI para enviar mi mensaje a GPT-4. El código generado produjo el resultado.la página que se muestra en la figura 8.12.
+Utilicé la aplicación ChatGPT de OpenAI para enviar mi prompt a GPT-4. El código generado produjo el resultado, la página que se muestra en la figura 8.12.
+
+![image](https://github.com/user-attachments/assets/84fafe7a-797e-4a3d-a7bf-b036a312b970)
 
 
-
-**Figura 8.12 Mi página de registro de eventos**
+**Figura 8.12 Mi página de registro de eventos - event sign-up page**
 
 Si está satisfecho con la página y el formulario generados por ChatGPT, puede omitir el resto de este capítulo e implementar el código en la web (consulte el apéndice B para obtener más detalles). Sin embargo, si tiene curiosidad por saber más sobre el código de la página web generada, continúe con la siguiente sección para analizarlo en profundidad.
 
-## 8.5 Examinar el código de la página de registro del evento
+## 8.5 Examinar el código de la página de registro del evento - event sign-up page
 
 No es necesario que sepas cómo funciona el código de la página web generado por ChatGPT. Sin embargo, si quieres profundizar un poco más, las siguientes secciones ofrecen una descripción breve y no demasiado técnica del código de la página de registro de eventos que surgió a partir de mi mensaje de la sección anterior (esa página se muestra en la figura 8.12).
 
@@ -568,6 +631,109 @@ Espero que mis anotaciones de código te ayuden a comprender lo que sucede bajo 
 Aquí está el código HTML que ChatGPT generó para mi página de registro de eventos:
 
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">         ①
+    <title>Barnstormers!</title>
+    <link rel="stylesheet" 
+          type="text/css" href="styles.css">                     ②
+</head>
+<body>
+    <header>                                                     ⑥
+        <img src="barn.png" alt="Barnstormers logo">             ③⑥
+        <h1>Barnstormers!</h1>                                   ④⑥
+        <p>Building old-fashioned barns the new-fangled way</p>  ⑤⑥
+    </header>                                                    ⑥
+    <main>
+        <h2>Our Next Barn-Raising</h2>
+        <p>We're looking for volunteers to help with our next 
+           barn-raising, which takes place Saturday August 23 
+           and Sunday August 24. If you want to help, please 
+           fill out and submit the form below.</p>
+        <form action="https://getform.io/f/                      ⑦
+              dbb986ea-ee50-42ba-abe7-5c304a087444"              ⑦
+              method="POST">                                     ⑦
+            <p>
+                <label>Name:                                     ⑧
+                <input type="text"                               ⑧
+                       name="name"                               ⑧
+                       size="30"                                 ⑧
+                       placeholder="Your name">                  ⑧
+                </label>                                         ⑧
+            </p>
+            <p>
+                <label>Email:                                    ⑨
+                <input type="email"                              ⑨
+                       name="email"                              ⑨
+                       size="30"                                 ⑨
+                       placeholder="Your email address">         ⑨
+                </label>                                         ⑨
+            </p>
+            <p>
+                <label>Skills:                                   ⑩
+                <textarea name="skills"                          ⑩
+                          rows="3"                               ⑩
+                          cols="30">                             ⑩
+                </textarea>                                      ⑩
+                </label>                                         ⑩
+            </p>
+            <p>
+                <label>                                          ⑪
+                <input type="checkbox"                           ⑪
+                       name="notify">                            ⑪
+                Get notified about future barn-raisings          ⑪
+                </label>                                         ⑪
+            </p>
+            <fieldset>                                           ⑫
+                <legend>Day(s) you can attend</legend>           ⑫
+                <label>                                          ⑫
+                <input type="radio"                              ⑫
+                       name="day"                                ⑫
+                       value="Saturday"                          ⑫
+                       checked>                                  ⑫
+                Saturday                                         ⑫
+                </label>                                         ⑫
+                <br>                                             ⑫
+                <label>                                          ⑫
+                <input type="radio"                              ⑫
+                       name="day"                                ⑫
+                       value="Sunday">                           ⑫
+                Sunday                                           ⑫
+                </label>                                         ⑫
+                <br>                                             ⑫
+                <label>                                          ⑫
+                <input type="radio"                              ⑫
+                       name="day"                                ⑫
+                       value="Both">                             ⑫
+                Both                                             ⑫
+                </label>                                         ⑫
+            </fieldset>                                          ⑫
+            <p>
+                <label>Select your free gift:                    ⑬
+                <select name="gift">                             ⑬
+                    <option value="">None</option>               ⑬
+                    <option value="cap">Baseball cap</option>    ⑬
+                    <option value="mug">Coffee mug</option>      ⑬
+                    <option value="poster">Poster</option>       ⑬
+                    <option value="shirt">T-shirt</option>       ⑬
+                    <option value="bag">Tote bag</option>        ⑬
+                </select>                                        ⑬
+                </label>                                         ⑬
+            </p>
+            <input type="hidden"                                 ⑭
+                   name="_gotcha"                                ⑭
+                   style="display:none !important">              ⑭
+            <p>
+                <button type="submit">Sign Me Up!</button>       ⑮
+            </p>
+        </form>
+    </main>
+    <footer>© 2023 Barnstormers!</footer>                        ⑯
+</body>
+</html>
 ```
 
 ① Ayuda a que la página se muestre correctamente en dispositivos móviles
@@ -604,21 +770,22 @@ Aquí está el código HTML que ChatGPT generó para mi página de registro de e
 
 A continuación se muestran algunas notas a tener en cuenta al leer el código HTML:
 
-En el formelemento, observe que el actionatributo está configurado como la dirección del punto final de Getform. (Tenga en cuenta que he modificado la dirección real, por lo que no intente usar esta dirección en sus propios formularios porque no funcionará).
+* En el elemento `form `, observe que el atributo `action` está configurado como la dirección del endpoint de Getform. (Tenga en cuenta que he modificado la dirección real, por lo que no intente usar esta dirección en sus propios formularios porque no funcionará).
 
-Observe que ChatGPT también incluye un atributo para cada control de formulario (excepto el botón) name. El navegador web utiliza estos namevalores de atributo para identificar cada campo cuando envía el formulario. La Figura 8.13 muestra un ejemplo de envío. Observe que los nombres de cada campo name( , email, skills, day, gifty notify) coinciden con los namevalores de atributo del formulario.
+* Observe que ChatGPT también incluye un atributo `name` para cada control de formulario (excepto el botón). El navegador web utiliza estos valores del atributo `name` para identificar cada campo cuando envía el formulario. La Figura 8.13 muestra un ejemplo de envío. Observe que los nombres de cada campo — `name`, `email`, `skills`, `day`, `gift` y `notify` — coinciden con los valores del atributo `name` del formulario.
 
-
+![image](https://github.com/user-attachments/assets/0bfaa730-92df-402d-88c6-160fad666f98)
 
 **Figura 8.13 Los envíos de formulario aparecen en su página Getform.**
 
-Tenga en cuenta también que cada opción de botón de opción y lista de selección tiene su propio valueatributo. Cuando el navegador envía el formulario, envía el valor del botón de opción y el elemento de lista seleccionados actualmente. En la figura 8.13, por ejemplo, el valor enviado para el daycampo (el grupo de botones de opción) es Saturday, y el valor enviado para el giftcampo (la lista de selección) es shirt(es decir, el elemento de camiseta en la lista).
+* Tenga en cuenta también que cada radio button y selection list tiene su propio atributo `value`. Cuando el navegador envía el formulario, envía el valor del radio button y list item seleccionados actualmente. En la figura 8.13, por ejemplo, el valor enviado para el campo `day` (el grupo de radio button) es `Saturday`, y el valor enviado para el campo `gift` (la lista de selección) es `shirt` (es decir, el elemento de camiseta en la lista).
 
-Justo antes del buttonelemento hay un inputelemento con su typeatributo establecido en hiddeny su nameatributo establecido en _gotcha. Este campo se utiliza para detectar robots de spam, que, cuando envían este formulario, están programados para completar cada campo, incluido este campo oculto. Si el servicio Getform recibe un envío de formulario en el que se completa este campo oculto, sabe que se trata de spam y descarta el envío.
+* Justo antes del elemento `button` hay un elemento `input` con su atributo `type` establecido en `hidden` y su atributo `name` establecido en `_gotcha`. Este campo se utiliza para detectar robots de spam, que, cuando envían este formulario, están programados para completar cada campo, incluido este campo oculto. Si el servicio Getform recibe un envío de formulario en el que se completa este campo oculto, sabe que se trata de spam y descarta el envío.
 
 Por último, tenga en cuenta que el código HTML incluye la siguiente línea:
 
 ```html
+<link rel="stylesheet" href="styles.css">
 ```
 
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
@@ -628,6 +795,69 @@ Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que desc
 Aquí está el código CSS que ChatGPT generó para mi página de registro de eventos:
 
 ```css
+@import url('https://fonts.googleapis.com/css2?
+    family=Bitter:ital, wght@0,400;0,700;1,400
+    display=swap');                                  ①
+  
+body {
+    margin: 24px;
+    background-color: cornsilk;                      ②
+    color: saddlebrown;                              ②
+    font-family: 'Bitter', serif;                    ②
+    max-width: 800px;                                ③
+    margin-left: auto;                               ④
+    margin-right: auto;                              ④
+}
+  
+header img {
+    max-width: 150px;                                ⑤
+    float: left;                                     ⑤
+}
+  
+header h1 {
+    font-size: 48px;                                 ⑥
+    text-align: right;                               ⑥
+    margin-bottom: 0;
+}
+  
+header p {
+    font-size: 26px;                                 ⑦
+    font-style: italic;                              ⑦
+    font-variant-caps: small-caps;                   ⑦
+    text-align: right;    
+    margin-top: 0;
+}
+ 
+main {
+    margin-top: 75px;                                ⑧
+}
+  
+main h2 {
+    font-size: 30px;                                 ⑨
+}
+  
+main p, form {
+    font-size: 20px;                                 ⑩
+}
+  
+form {
+    width: 400px;                                    ⑪
+    margin-left: 32px;
+}
+  
+form input, form textarea, form select, form button {
+    font-size: 20px;                                 ⑫
+}
+  
+form button {
+    color: saddlebrown;                              ⑬
+}
+  
+footer {
+    padding: 5px;
+    margin-top: 50px;
+    border-top: solid saddlebrown;
+}
 ```
 
 ① Carga la fuente Bitter desde Google Fonts
@@ -658,53 +888,53 @@ Aquí está el código CSS que ChatGPT generó para mi página de registro de ev
 
 Si lo desea, puede utilizar estas anotaciones para ayudar a personalizar el código de su página web, como describo en la siguiente sección.
 
-## 8.6 Personalización de la página de registro del evento
+## 8.6 Personalización de la página de registro del evento - event sign-up page
 
 Si el código de formulario generado por ChatGPT no se parece en nada a lo que desea, es mejor iniciar una nueva sesión de chat y enviar un mensaje revisado. Sin embargo, si el código de formulario se parece a lo que buscaba, puede resultar más fácil modificarlo usted mismo.
 
 Primero, aquí hay algunas sugerencias de personalización para el código HTML:
 
-Siéntete libre de editar cualquier texto de la página, como el título, el eslogan, el texto introductorio o cualquiera de las etiquetas del formulario. Ten cuidado de no editar ni eliminar las etiquetas HTML que rodean cada fragmento de texto (como las etiquetas <label>y </label>que enmarcan una etiqueta de formulario).
+* Siéntete libre de editar cualquier texto de la página, como el título, el eslogan, el texto introductorio o cualquiera de las etiquetas del formulario. Ten cuidado de no editar ni eliminar las etiquetas HTML que rodean cada fragmento de texto (como las etiquetas `<label>` y `</label>` que enmarcan una etiqueta de formulario).
 
-Si desea incluir un segundo párrafo introductorio, coloque el cursor de edición después de la </p>etiqueta que finaliza el párrafo introductorio existente. Presione Enter o Return para comenzar una nueva línea, escriba una <p>etiqueta, escriba el texto del párrafo y finalice con una </p>etiqueta.
+* Si desea incluir un segundo párrafo introductorio, coloque el cursor de edición después de la etiqueta `</p>` que finaliza el párrafo introductorio existente. Presione Enter o Return para comenzar una nueva línea, escriba una etiqueta `<p>`, escriba el texto del párrafo y finalice con una etiqueta `</p>`.
 
-En el código del formulario, puede editar algunos de los valores de los atributos de las etiquetas. Por ejemplo, con un cuadro de texto, puede modificar los valores de los atributos sizey placeholder; con un área de texto, puede modificar los valores de los atributos rowsy cols; y puede modificar cualquier valuecadena de atributos. En todos estos casos, asegúrese de modificar únicamente el texto entre las comillas dobles. Además, no cambie los valores de ningún atributo typeo nameen el formulario.
+* En el código del formulario, puede editar algunos de los valores de los atributos de las etiquetas. Por ejemplo, con un cuadro de texto, puede modificar los valores de los atributos `size` y `placeholder`; con un área de texto, puede modificar los valores de los atributos `rows` y `cols`; y puede modificar cualquier cadena del atributos `value`. En todos estos casos, asegúrese de modificar únicamente el texto entre las comillas dobles. Además, no cambie los valores de ningún atributo `type` o `name` en el formulario.
 
-En la sección de pie de página del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
+* En la sección de footer del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-Para darle a su página un color de fondo diferente, utilice una palabra clave de color diferente para la propiedad bodydel elemento background-color.
+* Para darle a su página un color de fondo diferente, utilice una palabra clave de color diferente del elemento `body` para la propiedad `background-color`.
 
-Para utilizar un color diferente para el texto de la página, especifique una palabra clave de color diferente para la propiedad bodydel elemento color.
+* Para utilizar un color diferente para el texto de la página, especifique una palabra clave de color diferente del elemento `body` para la propiedad `color`.
 
-El código CSS utiliza el color del texto de la página en otros dos lugares: la propiedad form buttondel elemento y la propiedad del elemento . Para mantener la armonía de los colores, debes reemplazar estos valores de color con la palabra clave de color que hayas utilizado en el elemento anterior.colorfooterborder-top
+* El código CSS utiliza el color del texto de la página en otros dos lugares: del elemento `form button` y la propiedad `color` y del elemento `footer` la propiedad `border-top`. Para mantener la armonía de los colores, debes reemplazar estos valores de color con la palabra clave de color que hayas utilizado en el elemento anterior.
 
-Si desea que su página tenga un ancho máximo diferente, cambie el max-widthvalor a algo distinto de 800px.
+* Si desea que su página tenga un ancho máximo diferente, cambie el valor `max-width` a algo distinto de `800px`.
 
-Si prefieres tener el logotipo del encabezado a la derecha y el texto y el eslogan alineados a la izquierda, debes realizar tres cambios:
+* Si prefieres tener el logotipo del encabezado a la derecha y el texto y el eslogan alineados a la izquierda, debes realizar tres cambios:
 
-En el header imgelemento, cambie el floatvalor a right.
+   * En el elemento `header img`, cambie el valor `float` a `right`.
 
-En el header h1elemento, cambie el text-alignvalor a left.
+   * En el elemento `header h1`, cambie el valor `text-align` a `left`.
 
-En el header pelemento, cambie el text-alignvalor a left.
+   * En el elemento `header p`, cambie el valor `text-align` a `left`.
 
-Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la unidad `px` en su lugar.
 
-Para cualquier valor de margen o relleno, puede cambiar el número para aumentar o disminuir el relleno o los márgenes. En cada caso, asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de margen o padding, puede cambiar el número para aumentar o disminuir el padding o los márgenes. En cada caso, asegúrese de dejar la unidad `px` en su lugar.
 
-Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+* Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
 ## Resumen
 
 * Un formulario es una colección especial de elementos HTML que le permiten recopilar información y luego enviarla a algún lugar (como su dirección de correo electrónico).
-* El punto final de un formulario es la dirección a la que el navegador web envía los datos del formulario cuando el usuario lo envía.
-* Un cuadro de texto es un área rectangular diseñada para contener texto escrito por el usuario. Puede configurar cuadros de texto para que contengan tipos de datos especiales, como direcciones de correo electrónico, números y URL.
-* Una etiqueta es un texto que describe un control particular.
-* Un área de texto es un campo de formulario que admite entradas de texto más largas y de varias líneas.
-* Para los tipos de datos sí/no o activado/desactivado, utilice una casilla de verificación.
-* Para permitir que el usuario elija una de tres o cuatro opciones, utilice un grupo de botones de opción.
-* Para permitir al usuario elegir entre cinco o más opciones, utilice una lista de selección.
+* El endpoint de un formulario es la dirección a la que el navegador web envía los datos del formulario cuando el usuario lo envía.
+* Un text box - cuadro de texto es un área rectangular diseñada para contener texto escrito por el usuario. Puede configurar cuadros de texto para que contengan tipos de datos especiales, como direcciones de correo electrónico, números y URL.
+* Una label  - etiqueta es un texto que describe un control particular.
+* Un text area - área de texto es un campo de formulario que admite entradas de texto más largas y de varias líneas.
+* Para los tipos de datos sí/no o activado/desactivado, utilice una check box - casilla de verificación.
+* Para permitir que el usuario elija una de tres o cuatro opciones, utilice un grupo de radio button - botones de opción.
+* Para permitir al usuario elegir entre cinco o más opciones, utilice una selection list - lista de selección.
 * Incluya un botón en el formulario para que el usuario pueda enviar los datos del formulario.
-* Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
+* Para obtener mejores resultados, el prompt de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
