@@ -482,18 +482,83 @@ Ahora describa el contenido de la página, incluyendo lo siguiente (consulte la 
 
 A continuación, solicite a ChatGPT que genere el CSS:
 
+```text
+Second, in a separate file please write the CSS code for the following:
+```
+
+```text
 En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+```
+
 A continuación, especifique el formato de la página, incluido lo siguiente:
 
-El color de fondo de la página y el color del texto.
-
-Los tamaños de fuente que desea utilizar para el título del sitio, el eslogan, el título de la página y el texto de la página.
-
-Las fuentes a utilizar para los encabezados y el texto de la página normal.
-
-Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800 px funciona para esta página.
+* El color de fondo de la página y el color del texto.
+* Los tamaños de fuente que desea utilizar para el título del sitio, el eslogan, el título de la página y el texto de la página.
+* Las fuentes a utilizar para los encabezados y el texto de la página normal.
+* Un ancho máximo para la página. Esto evita que las líneas de texto sean demasiado largas. Una longitud máxima de 800 px funciona para esta página.
 
 A continuación se muestra un ejemplo de solicitud para mi propia página de recetas:
+
+```text
+I want to build a web page for a recipe. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+ * A header element that includes an image named super-baker.png, the title "The Super Baker", and the tagline "The ultimate guide to super-powered baking. Learn how to make delicious treats that will boost your energy, strength, and speed.".
+ * A main section with the heading "Super-Energy Nut Bars".
+ * A paragraph with the text "Looking for an energy boost, either first thing in the morning or during that mid-afternoon lull? Look no further than these tasty and nutritious nut bars, which turn the energy dial up to 11. Packed full of delicious and take-you-all-the-way-to-dinner nuts and dried fruit, all combined with a give-me-energy-now hit of honey and maple syrup, these bars just might be the perfect superhero snack."
+  * Add the third-level heading "Dry Ingredients" followed by a bulleted list with the following items:
+    -200g rolled oats
+    -100g peanuts
+    -100g almonds
+    -50g pumpkin seeds
+    -50g sesame seeds
+    -100g dates or other dried fruit
+  * Add the third-level heading "Wet Ingredients" followed by a bulleted list with the following items:
+    -120g honey
+    -80g maple syrup
+    -1 tsp vanilla extract
+    -¼ tsp sea salt
+  * Add the third-level heading "Preparation" followed by a numbered list with the following items:
+    -Preheat the oven to 350°F. Place one rack on the bottom shelf and another rack in the middle.
+    -Cover two baking sheets with parchment paper.
+    -Spread out the nuts and seeds evenly on one baking sheet.
+    -Spread out the rolled oats evenly on the other baking sheet.
+    -Place the nuts and seeds on the bottom rack and the oats on the middle rack.
+    -Bake for 8 minutes, then remove the nuts and seeds; continue baking the oats for another 7 minutes. 
+    -Allow the oats, nuts, and seeds to cool. (Don't throw out the parchment paper sheets.)
+    -Chop the cooled nuts.
+    -Chop the dates.
+    -Combine all the dry ingredients in a large bowl.
+    -Prepare an 8x10 or 7x11 pan:
+     -Line the pan with one of the sheets of parchment paper from the bake.
+     -Coat the parchment paper with oil (such as sunflower oil).
+     -Oil one side of the other sheet of parchment paper.
+    -Add the wet ingredients to a small saucepan.
+    -Cook the wet ingredients on the stovetop, stirring constantly, until a quick-read thermometer inserted into the liquid reads 260°F.
+    -Add to cooked liquid to the dry ingredients and mix thoroughly.
+    -Add the mixture to the prepared pan.
+    -Place the oiled side of the second sheet of parchment paper down on the mixture and use a spoon and/or potato masher to press the mixture into place.
+    -Cool the mixture in the refrigerator for 30-60 minutes.
+    -Remove from the fridge and let sit for 30-60 minutes. (You want the mixture to be warm enough that it doesn't shatter when you try to cut it.)
+    -Cut into 24 pieces.
+  * A footer element that includes the Copyright symbol, followed by the current year, followed by "The Super Baker".
+ * In the page head section, include the tag <meta charset="utf-8">.
+ * In the page head section, include the tag <meta name="viewport" content="width=device-width, initial-scale=1">.
+  
+Second, in a separate file write the CSS code for the following:
+ * The page has background color azure, a 24px margin, and a line height of 1.5.
+ * The header has text color darkred and 12px padding.
+ * Make the header image a maximum width of 250px and floated to the left.
+ * The title is 48px, centered, and with no bottom margin.
+ * The tagline is 26px, italic, centered, and with no top margin.
+ * The main section has a top margin of 75px.
+ * The main section heading font size is 30px.
+ * The main section font size is 20px.
+ * For the page headings, use the Merriweather Sans font from Google Fonts. For the page text, use the Merriweather font from Google Fonts.
+ * For the nested numbered list, use lower roman numerals.
+ * The footer has 5px padding all around, 50px top margin, and a darkred top border.
+ * Give the page a maximum width of 800px and center the body element within the browser window.
+```
 
 ```text
 Quiero crear una página web para una receta. No sé programar, así que necesito que me proporciones el código.
@@ -556,16 +621,17 @@ En segundo lugar, en un archivo separado escriba el código CSS para lo siguient
  * Dale a la página un ancho máximo de 800px y centra el elemento del cuerpo dentro de la ventana del navegador.
 ```
 
-ChatGPT primero genera el código HTML, que puedes copiar y pegar y guardar en un archivo llamado index.html. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
+ChatGPT primero genera el código HTML, que puedes copiar y pegar y guardar en un archivo llamado `index.html`. En ese código, deberías ver una línea cerca de la parte superior similar a la siguiente:
 
 ```html
+<link rel="stylesheet" type="text/css" href="styles.css">
 ```
 
-Este código le indica al navegador web que busque el código CSS en un archivo llamado styles.css, por lo que tu próxima tarea es copiar el código CSS generado, pegarlo y guardarlo en un archivo llamado styles.css (o cualquier nombre que veas en la <link>etiqueta). Asegúrate de guardar styles.css en la misma carpeta que tu archivo index.html. También debes copiar el archivo de imagen de encabezado en la misma carpeta. Consulta el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
+Este código le indica al navegador web que busque el código CSS en un archivo llamado `styles.css`, por lo que tu próxima tarea es copiar el código CSS generado, pegarlo y guardarlo en un archivo llamado `styles.css` (o cualquier nombre que veas en la etiqueta `<link>`). Asegúrate de guardar `styles.css` en la misma carpeta que tu archivo `index.html`. También debes copiar el archivo de imagen de encabezado en la misma carpeta. Consulta el apéndice A para obtener más información sobre cómo trabajar con archivos de páginas web.
 
 Utilicé la aplicación ChatGPT de OpenAI para enviar mi mensaje a GPT-4. El código generado generó la página que se muestra en la Figura 9.13.
 
-
+![image](https://github.com/user-attachments/assets/900f6fad-f399-4d75-a381-9dd9a32c4526)
 
 **Figura 9.13 Mi página de recetas**
 
@@ -584,6 +650,104 @@ Las anotaciones de código que siguen deberían ayudarle a comprender lo que suc
 Aquí está el código HTML generado por ChatGPT para mi página de recetas:
 
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Super Baker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1">                         ①
+    <link href="https://fonts.googleapis.com/css2?
+        family=Merriweather&family=Merriweather+Sans&
+        display=swap" rel="stylesheet">                                        ②
+    <link rel="stylesheet" type="text/css" href="styles.css">                  ③
+</head>
+<body>
+    <header>                                                                   ⑦
+        <img src="super-baker.png" alt="The Super Baker Logo">                 ④⑦
+        <h1>The Super Baker</h1>                                               ⑤⑦
+        <p>The ultimate guide to super-powered baking. Learn how to            ⑥⑦
+           make delicious treats that will boost your energy,                  ⑥⑦
+           strength, and speed.</p>                                            ⑥⑦
+    </header>                                                                  ⑦
+  
+    <main>
+        <h2>Super-Energy Nut Bars</h2>                                         ⑧
+        <p>                                                                    ⑨
+            Looking for an energy boost, either first thing in the             ⑨
+            morning or during that mid-afternoon lull? Look no further         ⑨
+            than these tasty and nutritious nut bars, which turn the           ⑨
+            energy dial up to 11. Packed full of delicious and                 ⑨
+            take-you-all-the-way-to-dinner nuts and dried fruit, all           ⑨
+            combined with a give-me-energy-now hit of honey and maple          ⑨
+            syrup, these bars just might be the perfect superhero snack.       ⑨
+        </p>                                                                   ⑨
+        <h3>Dry Ingredients</h3>
+        <ul>                                                                   ⑩
+            <li>200g rolled oats</li>                                          ⑩
+            <li>100g peanuts</li>                                              ⑩
+            <li>100g almonds</li>                                              ⑩
+            <li>50g pumpkin seeds</li>                                         ⑩
+            <li>50g sesame seeds</li>                                          ⑩
+            <li>100g dates or other dried fruit</li>                           ⑩
+        </ul>                                                                  ⑩
+  
+        <h3>Wet Ingredients</h3>
+        <ul>                                                                   ⑪
+            <li>120g honey</li>                                                ⑪
+            <li>80g maple syrup</li>                                           ⑪
+            <li>1 tsp vanilla extract</li>                                     ⑪
+            <li>¼ tsp sea salt</li>                                            ⑪
+        </ul>                                                                  ⑪
+  
+        <h3>Preparation</h3>                                                   ⑫
+        <ol>                                                                   ⑫
+            <li>Preheat the oven to 350°F. Place one rack on the bottom        ⑫
+                 shelf and another rack in the middle.</li>                    ⑫
+            <li>Cover two baking sheets with parchment paper.</li>             ⑫
+            <li>Spread out the nuts and seeds evenly on one baking sheet.</li> ⑫
+            <li>Spread out the rolled oats evenly on the other baking          ⑫
+                sheet.</li>                                                    ⑫
+            <li>Place the nuts and seeds on the bottom rack and the oats on    ⑫
+                the middle rack.</li>                                          ⑫
+            <li>Bake for 8 minutes, then remove the nuts and seeds; continue   ⑫
+                baking the oats for another 7 minutes.</li>                    ⑫
+            <li>Allow the oats, nuts, and seeds to cool. (Don't throw out the  ⑫
+                parchment paper sheets.)</li>                                  ⑫
+            <li>Chop the cooled nuts.</li>                                     ⑫
+            <li>Chop the dates.</li>                                           ⑫
+            <li>Combine all the dry ingredients in a large bowl.</li>          ⑫
+            <li>Prepare an 8x10 or 7x11 pan:</li>                              ⑫
+            <ol>                                                               ⑫⑬
+                <li>Line the pan with one of the sheets of parchment paper     ⑫⑬
+                    from the bake.</li>                                        ⑫⑬
+                <li>Coat the parchment paper with oil (such as sunflower       ⑫⑬
+                    oil).</li>                                                 ⑫⑬
+                <li>Oil one side of the other sheet of parchment paper.</li>   ⑫⑬
+            </ol>                                                              ⑫⑬
+            <li>Add the wet ingredients to a small saucepan.</li>              ⑫
+            <li>Cook the wet ingredients on the stovetop, stirring constantly, ⑫
+                until a quick-read thermometer inserted into the liquid reads  ⑫
+                260°F.</li>                                                    ⑫
+            <li>Add to cooked liquid to the dry ingredients and mix            ⑫
+                thoroughly.</li>                                               ⑫
+            <li>Add the mixture to the prepared pan.</li>                      ⑫
+            <li>Place the oiled side of the second sheet of parchment paper    ⑫
+                down on the mixture and use a spoon and/or potato masher to    ⑫
+                press the mixture into place.</li>                             ⑫
+            <li>Cool the mixture in the refrigerator for 30-60 minutes.</li>   ⑫
+            <li>Remove from the fridge and let sit for 30-60 minutes. (You     ⑫
+                want the mixture to be warm enough that it doesn't shatter     ⑫
+                when you try to cut it.)</li>                                  ⑫
+            <li>Cut into 24 pieces.</li>                                       ⑫
+        </ol>                                                                  ⑫
+    </main>
+  
+    <footer>                                                                   ⑭
+        &copy; 2023 The Super Baker                                            ⑭
+    </footer>                                                                  ⑭
+</body>
+</html>
 ```
 
 ① Ayuda a que la página se muestre correctamente en dispositivos móviles
@@ -617,6 +781,7 @@ Aquí está el código HTML generado por ChatGPT para mi página de recetas:
 Tenga en cuenta que el código HTML incluye la siguiente línea:
 
 ```html
+<link rel="stylesheet" href="styles.css">
 ```
 
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
@@ -626,6 +791,58 @@ Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que desc
 Aquí está el código CSS generado por ChatGPT para mi página de recetas:
 
 ```css
+body {
+    background-color: azure;                       ①
+    margin: 24px;                                  ①
+    line-height: 1.5;                              ①
+    font-family: 'Merriweather', serif;            ①
+    max-width: 800px;                              ②
+    margin-left: auto;                             ③
+    margin-right: auto;                            ③
+}
+  
+header {
+    color: darkred;                                ④
+    padding: 10px;                                 ④
+    text-align: center;                            ④
+}
+  
+header img {
+    max-width: 250px;                              ⑤
+    float: left;                                   ⑤
+}
+  
+header h1 {
+    font-size: 48px;                               ⑥
+    margin-bottom: 0;                              ⑥
+    font-family: 'Merriweather Sans', sans-serif;  ⑥
+}
+ 
+header p {
+    font-size: 26px;                               ⑦
+    margin-top: 0;                                 ⑦
+    font-style: italic;                            ⑦
+}
+  
+main {
+    margin-top: 75px;                              ⑧
+    font-size: 20px;                               ⑧
+}
+ 
+main h2 {
+    font-size: 30px;                               ⑨
+    font-family: 'Merriweather Sans', sans-serif;  ⑨
+}
+  
+ol ol {
+    list-style-type: lower-roman;                  ⑩
+}
+  
+footer {
+    padding: 5px;                                  ⑪
+    margin-top: 50px;                              ⑪
+    border-top: 1px solid darkred;                 ⑪
+}
 ```
 
 ① Establece el color de fondo de la página, el margen, la altura de la línea y la fuente.
@@ -658,41 +875,41 @@ Si realmente no te gusta la página que ChatGPT creó para ti, intenta revisar t
 
 Comenzaré con algunas sugerencias para modificar el HTML:
 
-Es seguro editar cualquier texto de la página, incluido el título, el eslogan, los encabezados o el texto introductorio o cualquiera de los elementos de la lista numerada o con viñetas. Solo asegúrese de no editar o eliminar accidentalmente las etiquetas HTML a cada lado del texto (como las etiquetas <li>y </li>que rodean un elemento de la lista numerada o con viñetas).
+* Es seguro editar cualquier texto de la página, incluido el título, el eslogan, los encabezados o el texto introductorio o cualquiera de los elementos de la lista numerada o con viñetas. Solo asegúrese de no editar o eliminar accidentalmente las etiquetas HTML a cada lado del texto (como las etiquetas `<li>` y `</li>` que rodean un elemento de la lista numerada o con viñetas).
 
-Siéntete libre de agregar uno o más párrafos introductorios. Para cada nuevo párrafo, sigue este procedimiento:
+* Siéntete libre de agregar uno o más párrafos introductorios. Para cada nuevo párrafo, sigue este procedimiento:
 
-   a) En su editor de texto, coloque el cursor inmediatamente después de la </p>etiqueta que finaliza el párrafo introductorio existente.
+   a) En su editor de texto, coloque el cursor inmediatamente después de la etiqueta `</p>` que finaliza el párrafo introductorio existente.
 
    b) Presione Enter o Retorno para iniciar una nueva línea.
 
-   c) Escriba una <p>etiqueta y luego presione Enter o Return. La mayoría de los editores de texto insertan una </p>etiqueta automáticamente.
+   c) Escriba una etiqueta `<p>` y luego presione Enter o Return. La mayoría de los editores de texto insertan una etiqueta `</p>` automáticamente.
 
    d) Escribe el texto de tu párrafo.
 
-   e) Si su editor de texto aún no lo hizo, escriba una </p>etiqueta para finalizar su elemento de párrafo.
+   e) Si su editor de texto aún no lo hizo, escriba una etiqueta `</p>` para finalizar su elemento de párrafo.
 
-Si estás creando un sitio sobre recetas (o algo similar), necesitarás un elemento de navegación para que los visitantes puedan encontrar fácilmente tus otras páginas. Consulta el capítulo 6 para aprender a solicitarle a ChatGPT enlaces y una barra de navegación.
+* Si estás creando un sitio sobre recetas (o algo similar), necesitarás un elemento de navegación para que los visitantes puedan encontrar fácilmente tus otras páginas. Consulta el capítulo 6 para aprender a solicitarle a ChatGPT enlaces y una barra de navegación.
 
-En la sección de pie de página del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
+* En la sección de footer del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
 
 Aquí hay algunas ideas de personalización para el código CSS:
 
-Si prefiere otro esquema de numeración para la lista numerada anidada, cambie el valor de la propiedad oldel elemento list-style-typea una palabra clave diferente, como lower-alpha.
+* Si prefiere otro esquema de numeración para la lista numerada anidada, cambie el valor de la propiedad `list-style-type` del elemento `ol` a una palabra clave diferente, como `lower-alpha`.
 
-Para un color de fondo diferente, reemplace el valor de la propiedad bodydel elemento background-colorcon otra palabra clave de color.
+* Para un color de fondo diferente, reemplace el valor de la propiedad `background-color` del elemento `body` con otra palabra clave de color.
 
-Para obtener un color de texto de encabezado diferente, reemplace el valor de la propiedad headerdel elemento colorcon otra palabra clave de color.
+* Para obtener un color de texto de encabezado diferente, reemplace el valor de la propiedad `color` del elemento `header` con otra palabra clave de color.
 
-Si desea que su página tenga un ancho máximo diferente, cambie el max-widthvalor a algo distinto de 800px.
+* Si desea que su página tenga un ancho máximo diferente, cambie el valor `max-width` a algo distinto de `800px`.
 
-Si prefiere tener el logotipo del encabezado a la derecha, en el header imgelemento, cambie el floatvalor a right.
+* Si prefiere tener el logotipo del encabezado a la derecha, en el elemento `header img`, cambie el valor `float` a `right`.
 
-Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la unidad `px` en su lugar.
 
-Para cualquier valor de margen o relleno, puede cambiar el número para aumentar o disminuir el relleno o los márgenes. En cada caso, asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de margen o padding, puede cambiar el número para aumentar o disminuir el padding o los márgenes. En cada caso, asegúrese de dejar la unidad `px` en su lugar.
 
-Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+* Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
 ## Resumen
 
@@ -708,4 +925,4 @@ Para que el código de tu página sea más accesible, considera convertir todas 
 
 * Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
 
-* Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
+* Guarde el HTML generado en el archivo `index.html` y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`.
