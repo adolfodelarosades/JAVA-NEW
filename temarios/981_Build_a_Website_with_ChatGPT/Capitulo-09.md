@@ -296,26 +296,48 @@ Otro ejemplo común es cuando se inicia una lista numerada, se tiene una secció
 
 **Figura 9.8 Una lista, interrumpida**
 
-El problema aquí es que la segunda lista comienza de nuevo en el paso 1 cuando debería continuar con el paso 5. Afortunadamente, puedes indicarle a ChatGPT el valor inicial de una lista numerada incluyendo starting at X en tu mensaje, donde X es el valor inicial que deseas. Aquí tienes un ejemplo:
+El problema aquí es que la segunda lista comienza de nuevo en el paso 1 cuando debería continuar con el paso 5. Afortunadamente, puedes indicarle a ChatGPT el valor inicial de una lista numerada incluyendo `starting at` X en tu mensaje, donde *X* es el valor inicial que deseas. Aquí tienes un ejemplo:
 
+```text
+Generate the HTML code for a numbered list starting at 5 with the following items:
+-Wait for the water to boil: You'll know the water is boiling when you see bubbles rising to the surface rapidly. This could take anywhere from a few minutes to over ten minutes, depending on how much water you're boiling and how powerful your stove is.
+-Turn off the stove: Once your water has reached a rolling boil (or once it's heated to your desired temperature), carefully turn off the stove.
+```
+
+```text
 Generar el código HTML para una lista numerada que comienza en 5 con los siguientes elementos:
+
 -Espera a que hierva el agua: sabrás que el agua está hirviendo cuando veas burbujas subiendo rápidamente a la superficie. Esto puede tardar desde unos minutos hasta más de diez minutos, según la cantidad de agua que estés hirviendo y la potencia de tu estufa.
 - Apaga el fuego: una vez que el agua haya hervido (o se haya calentado a la temperatura deseada), apaga el fuego con cuidado.
+```
 
 La Figura 9.9 muestra que el código generado por ChatGPT a partir de esta instrucción ahora representa la segunda lista correctamente como una continuación de la primera.
 
-
+![image](https://github.com/user-attachments/assets/0c09dba5-163f-4564-ba8c-744d0abb4ccd)
 
 **Figura 9.9 La segunda lista es ahora una continuación adecuada de la primera lista.**
 
 ¿Necesita que uno de los elementos de una lista anidada tenga su propia lista numerada? La siguiente sección le indica todo lo que necesita saber.
 
-### 9.3.3 Anidación de listas numeradas
+### 9.3.3 Anidación de numbered lists - listas numeradas
 
-En ocasiones, es necesario incluir "subpasos" en una lista numerada. En un tutorial, por ejemplo, es posible que desee dividir un elemento en particular en varios subelementos para lograr mayor claridad o precisión. De manera similar, es común que los textos legales tengan cláusulas y subcláusulas numeradas. Una colección de subpasos dentro de una lista numerada más grande se denomina lista numerada anidada .
+En ocasiones, es necesario incluir "subpasos" en una lista numerada. En un tutorial, por ejemplo, es posible que desee dividir un elemento en particular en varios subelementos para lograr mayor claridad o precisión. De manera similar, es común que los textos legales tengan cláusulas y subcláusulas numeradas. Una colección de subpasos dentro de una lista numerada más grande se denomina lista numerada *anidada - nested*.
 
 A continuación se muestra un ejemplo de mensaje que le pide a ChatGPT que genere una lista numerada donde cada uno de los dos pasos principales tiene múltiples subpasos:
 
+```text
+Generate the HTML code for a numbered list with the following items:
+-Get into the starting position:
+ -Place two balls in your dominant hand, one in front of the other.
+ -Hold the third ball in your other hand.
+ -Let your arms dangle naturally and bring your forearms parallel to the ground (as though you were holding a tray).
+-Make the first toss:
+ -Of the two balls in your dominant hand, toss the front one toward your left hand in a smooth arc.
+ -Make sure the ball doesn't spin too much.
+ -Make sure the ball goes no higher than about eye level.
+```
+
+```text
 Generar el código HTML para una lista numerada con los siguientes elementos:
 -Ponte en la posición inicial:
  -Coloca dos bolas en tu mano dominante, una delante de la otra.
@@ -325,15 +347,39 @@ Generar el código HTML para una lista numerada con los siguientes elementos:
  -De las dos bolas que tienes en tu mano dominante, lanza la delantera hacia tu mano izquierda formando un arco suave.
  -Asegúrate de que la pelota no gire demasiado.
  -Asegúrese de que la pelota no suba más allá del nivel de los ojos.
+```
+
 Observe que, en cada caso, los tres subelementos tienen una sangría de un espacio. Esta sangría le indica a ChatGPT que desea que esos elementos se muestren como una lista numerada anidada. La Figura 9.10 muestra el código generado por ChatGPT en el navegador web.
 
-
+![image](https://github.com/user-attachments/assets/6389549b-9027-4bbf-8bb2-fe0ab47bd7c0)
 
 **Figura 9.10 Una lista numerada con dos listas numeradas anidadas**
 
 Aquí está el código detrás de esta lista:
 
 ```html
+<ol>
+    <li>Get into the starting position:
+        <ol style="list-style-type: lower-roman;">
+            <li>Place two balls in your dominant hand, 
+                one in front of the other.</li>
+            <li>Hold the third ball in your other hand.</li>
+            <li>Let your arms dangle naturally and bring 
+                your forearms parallel to the ground (as 
+                though you were holding a tray).</li>
+        </ol>
+    </li>
+    <li>Make the first toss:
+        <ol style="list-style-type: lower-roman;">
+            <li>Of the two balls in your dominant hand, 
+                toss the front one toward your left hand 
+                in a smooth arc.</li>
+            <li>Make sure the ball doesn't spin too much.</li>
+            <li>Make sure the ball goes no higher than 
+                about eye level.</li>
+        </ol>
+    </li>
+</ol>
 ```
 
 Para ayudar al lector a diferenciar la lista anidada de la lista principal, el navegador web sangra un poco más los elementos anidados que los elementos de la lista principal. Sin embargo, esta forma predeterminada de manejar las listas numeradas anidadas es un poco confusa porque los elementos anidados utilizan el mismo esquema de numeración (1, 2, 3, etc.) que la lista numerada principal. Afortunadamente, como aprenderá en la siguiente sección, puede especificar un estilo de numeración diferente.
@@ -342,20 +388,43 @@ Para ayudar al lector a diferenciar la lista anidada de la lista principal, el n
 
 De forma predeterminada, los navegadores web muestran una lista numerada con números decimales (1, 2, 3, etc.). Sin embargo, existen varios estilos de numeración diferentes que puedes usar, como los números romanos. A continuación, se incluye una instrucción genérica que le pide a ChatGPT que use un estilo de numeración diferente:
 
+```text
+Generate the HTML code for a numbered list with the items below. Use style as the numbering style.
+- Item 1
+- Item 2
+- etc.
+```
+
+```text
 Genere el código HTML para una lista numerada con los elementos que se muestran a continuación. Utilice estilo como estilo de numeración.
 - Artículo 1
 - Artículo 2
 - etc.
-En su instrucción, reemplace stylecon uno de los siguientes:
+```
 
-* La frase decimal leading zeropara utilizar números decimales rellenados con ceros iniciales, según sea necesario (01, 02, 03, etc.)
-* La frase upper romanpara utilizar números romanos en mayúsculas (I, II, III, etc.)
-* La frase lower romanpara utilizar números romanos en minúscula (i, ii, iii, etc.)
-* La frase upper alphapara utilizar letras mayúsculas (A, B, C, etc.)
-* La frase lower alphapara utilizar letras minúsculas (a, b, c, etc.)
+En su instrucción, reemplace `style` con uno de los siguientes:
+
+* La frase `decimal leading zero` para utilizar números decimales rellenados con ceros iniciales, según sea necesario (01, 02, 03, etc.)
+* La frase `upper roman` para utilizar números romanos en mayúsculas (I, II, III, etc.)
+* La frase `lower roman` para utilizar números romanos en minúscula (i, ii, iii, etc.)
+* La frase `upper alpha` para utilizar letras mayúsculas (A, B, C, etc.)
+* La frase `lower alpha` para utilizar letras minúsculas (a, b, c, etc.)
 
 A continuación se muestra una versión revisada de la instrucción ChatGPT de la sección anterior, que solicita números romanos en minúscula en las listas numeradas anidadas:
 
+```text
+Generate the HTML code for a numbered list with items below. Use lower roman as the numbering style for the nested numbered lists.
+-Get into the starting position:
+ -Place two balls in your dominant hand, one in front of the other.
+ -Hold the third ball in your other hand.
+ -Let your arms dangle naturally and bring your forearms parallel to the ground (as though you were holding a tray).
+-Make the first toss:
+ -Of the two balls in your dominant hand, toss the front one toward your left hand in a smooth arc.
+ -Make sure the ball doesn't spin too much.
+ -Make sure the ball goes no higher than about eye level.
+```
+
+```text
 Genere el código HTML para una lista numerada con los elementos que se muestran a continuación. Utilice minúsculas romanas como estilo de numeración para las listas numeradas anidadas.
 -Ponte en la posición inicial:
  -Coloca dos bolas en tu mano dominante, una delante de la otra.
@@ -365,10 +434,11 @@ Genere el código HTML para una lista numerada con los elementos que se muestran
  -De las dos bolas que tienes en tu mano dominante, lanza la delantera hacia tu mano izquierda formando un arco suave.
  -Asegúrate de que la pelota no gire demasiado.
  -Asegúrese de que la pelota no suba más allá del nivel de los ojos.
+```
 
 La Figura 9.11 muestra la lista numerada actualizada con las listas numeradas anidadas utilizando números romanos en minúscula.
 
-
+![image](https://github.com/user-attachments/assets/8975a58f-6bdd-4261-a0eb-1ac26420338f)
 
 **Figura 9.11 Las listas numeradas anidadas ahora utilizan números romanos en minúscula.**
 
@@ -385,19 +455,28 @@ En este punto, ya deberías tener un título para el sitio, un eslogan y un tít
 
 Para iniciar su solicitud, dígale a ChatGPT que desea construir una página web y que desea que genere el código por usted:
 
+```text
+I want to build a web page for a recipe. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+```
+
+```text
 Quiero crear una página web para una receta. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
+```
 
 Ahora describa el contenido de la página, incluyendo lo siguiente (consulte la figura 9.12):
 
-* Un encabezado que incluye su logotipo, título del sitio y eslogan.
-* Un elemento principal que comienza con el título de la página y es seguido por un texto introductorio.
-* Una o más listas con viñetas que detallan los ingredientes de la receta.
-* Una o más listas numeradas que guían al lector a través de los pasos de la receta.
-* Un pie de página que incluye un aviso de derechos de autor.
+* Un header que incluye su logotipo, título del sitio y eslogan.
+* Un elemento main que comienza con el título de la página y es seguido por un texto introductorio.
+* Una o más listas con viñetas - bulleted lists que detallan los ingredientes de la receta.
+* Una o más listas numeradas - numbered lists que guían al lector a través de los pasos de la receta.
+* Un footer que incluye un aviso de derechos de autor.
 
-
+![image](https://github.com/user-attachments/assets/48055ae2-1697-4a00-adcc-e9dbd783edd2)
+![image](https://github.com/user-attachments/assets/ecbdbaf9-22f0-4bca-841c-86da3df1a433)
 
 **Figura 9.12 Los elementos de la página de recetas**
 
