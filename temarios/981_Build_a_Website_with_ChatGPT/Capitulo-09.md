@@ -8,57 +8,83 @@ Este capítulo cubre
 * Elaboración de un mensaje de ChatGPT para crear una página de recetas
 * Examinar y personalizar el código generado por ChatGPT
 
-“El contenido es el rey” es un viejo (y, por desgracia, sexista) dicho de los primeros tiempos de la web. Significaba que lo más importante de cada página web era el contenido que contenía. En otras palabras, si publicabas un contenido excelente, todo el mundo iría a tu sitio web.
+“El contenido es el rey - Content is king” es un viejo (y, por desgracia, sexista) dicho de los primeros tiempos de la web. Significaba que lo más importante de cada página web era el contenido que contenía. En otras palabras, si publicabas un contenido excelente, todo el mundo iría a tu sitio web.
 
-Puede que esto fuera cierto en los años 90, cuando la gente no esperaba demasiado de cada página web que visitaba. Sin embargo, hoy en día, tener un contenido excelente no sirve de nada si lo presentas mal. Si has pasado por alguno de los proyectos web de los capítulos anteriores, es posible que te hayas sorprendido (pero espero que no te hayas desanimado) por lo específicos que han sido todos mis mensajes de ChatGPT. Ese nivel de detalle es necesario porque, de lo contrario, ChatGPT generará código para páginas que son decididamente poco atractivas: aburridas, estrechas y mal diseñadas. Sí, tienes un contenido increíble que quieres compartir, pero para evitar que los visitantes se vayan segundos después de llegar, necesitas presentar ese contenido de forma atractiva.
+Puede que esto fuera cierto en los años 90, cuando la gente no esperaba demasiado de cada página web que visitaba. Sin embargo, hoy en día, tener un contenido excelente no sirve de nada si lo presentas mal. Si has pasado por alguno de los proyectos web de los capítulos anteriores, es posible que te hayas sorprendido (pero espero que no te hayas desanimado) por lo específicos que han sido todos mis prompts de ChatGPT. Ese nivel de detalle es necesario porque, de lo contrario, ChatGPT generará código para páginas que son decididamente poco atractivas: aburridas, estrechas y mal diseñadas. Sí, tienes un contenido increíble que quieres compartir, pero para evitar que los visitantes se vayan segundos después de llegar, necesitas presentar ese contenido de forma atractiva.
 
-En este capítulo, aprenderá dos técnicas para hacer que su contenido sea más fácil de leer, más fácil de entender y más atractivo para el lector. Las dos técnicas son listas con viñetas y listas numeradas, que se encuentran entre los patrones más comunes utilizados en las páginas web modernas y forman la base de algunos de los sitios más populares de la actualidad. Luego, pondrá en práctica su nuevo conocimiento sobre listas para crear un mensaje detallado para que ChatGPT genere el código para una página de recetas. Este capítulo también proporciona una explicación de alto nivel del código generado por ChatGPT y sugerencias para personalizarlo.
+En este capítulo, aprenderá dos técnicas para hacer que su contenido sea más fácil de leer, más fácil de entender y más atractivo para el lector. Las dos técnicas son listas con viñetas y listas numeradas(bulleted lists and numbered lists), que se encuentran entre los patrones más comunes utilizados en las páginas web modernas y forman la base de algunos de los sitios más populares de la actualidad. Luego, pondrá en práctica su nuevo conocimiento sobre listas para crear un mensaje detallado para que ChatGPT genere el código para una página de recetas. Este capítulo también proporciona una explicación de alto nivel del código generado por ChatGPT y sugerencias para personalizarlo.
 
 ## 9.1 Revisando el proyecto de este capítulo
 
 El proyecto que ChatGPT creará para usted en este capítulo es una página web básica que guía al lector a través de una receta para hacer barras de nueces. La página final incluirá los siguientes componentes:
 
-* Un elemento de encabezado que incluye el logotipo, el título y el eslogan del sitio web.
-* Un elemento principal que comienza con el título de la receta y la introducción.
-* Un par de listas con viñetas que contienen los ingredientes de la receta.
-* Una lista numerada de los pasos de la receta.
-* Un elemento de pie de página que incluye un aviso de derechos de autor
+* Un elemento de header que incluye el logotipo, el título y el eslogan del sitio web.
+* Un elemento main que comienza con el título de la receta y la introducción.
+* Un par de listas con viñetas(bulleted lists) que contienen los ingredientes de la receta.
+* Una lista numerada(numbered list) de los pasos de la receta.
+* Un elemento de footer que incluye un aviso de derechos de autor
 
 La Figura 9.1 muestra un ejemplo del tipo de página que convencerás a ChatGPT que genere para ti en este capítulo.
 
-
+![image](https://github.com/user-attachments/assets/a39f824d-f24a-4d7e-8694-fb6c90a84e45)
 
 **Figura 9.1 Una página de recetas generada por ChatGPT**
 
 La página de ejemplo incluye dos listas con viñetas y una única lista numerada (con una sublista numerada), pero puedes modificar fácilmente este proyecto para incluir solo una lista con viñetas, solo una lista numerada o varias listas de ambos tipos. Esto significa que puedes crear páginas que incluyan contenido como listas de los 10 mejores, tutoriales, documentación, guías de viaje, reseñas de productos y listas de tus libros, películas, programas de televisión, juegos, sabores de helado, autores de libros de informática y más favoritos. Antes de llegar a todo eso, necesitas saber un poco sobre cada tipo de lista.
 
-## 9.2 Crear una lista con viñetas
+## 9.2 Crear una bulleted list - lista con viñetas
 
-Una lista con viñetas es una colección de elementos HTML que presentan varios elementos como una lista vertical, donde cada elemento tiene una sangría leve desde el margen izquierdo y está precedido por un pequeño círculo negro llamado viñeta . Se utiliza una lista con viñetas cuando se quieren presentar varios elementos, pero el orden de esos elementos no es un componente esencial de la lista. La Figura 9.2 muestra un ejemplo de una lista con viñetas.
+Una lista con viñetas es una colección de elementos HTML que presentan varios elementos como una lista vertical, donde cada elemento tiene una sangría leve desde el margen izquierdo y está precedido por un pequeño círculo negro llamado *viñeta - bullet*. Se utiliza una lista con viñetas cuando se quieren presentar varios elementos, pero el orden de esos elementos no es un componente esencial de la lista. La Figura 9.2 muestra un ejemplo de una lista con viñetas.
 
-
+![image](https://github.com/user-attachments/assets/4d113758-a641-44ea-ba20-ecf021c5bd44)
 
 **Figura 9.2 Un ejemplo de una lista con viñetas**
 
 A continuación se explica cómo indicarle a ChatGPT que genere el código para dicha lista:
 
+```text
+Generate the HTML code for a bulleted list that includes the following items: "Francis", "Haden", "Honey", "Keitt", "Kent", and "Tommy Atkins".
+```
+
+```text
 Genere el código HTML para una lista con viñetas que incluya los siguientes elementos: "Francis", "Haden", "Honey", "Keitt", "Kent" y "Tommy Atkins".
+```
+
 Aquí está el código resultante:
 
 ```html
+<ul>
+    <li>Francis</li>
+    <li>Haden</li>
+    <li>Honey</li>
+    <li>Keitt</li>
+    <li>Kent</li>
+    <li>Tommy Atkins</li>
+</ul>
 ```
 
 Este código tiene dos componentes principales:
 
-* Todo está rodeado por las etiquetas <ul>y </ul>(donde ules la abreviatura de lista sin numerar ).
-* Cada elemento de la lista está rodeado por las etiquetas <li>y </li>(donde lies la abreviatura de elemento de lista ).
+* Todo está rodeado por las etiquetas `<ul>` y `</ul>` (donde `ul` es la abreviatura de *unnumbered list -lista sin numerar* ).
+* Cada elemento de la lista está rodeado por las etiquetas `<li>` y `</li>`(donde `li` es la abreviatura de *list item - elemento de lista*).
 
 En el caso de elementos breves (una palabra o una frase corta), está bien encerrar cada elemento entre comillas. Si su lista contiene elementos con un texto mucho más largo, deberá utilizar el método que analizo en la siguiente sección.
 
-### 9.2.1 Manejo de elementos de listas más largas
+### 9.2.1 Manejo de list items - elementos de listas más largas
 
 Los elementos de una lista con viñetas no tienen por qué ser palabras individuales o frases cortas. Tienes la libertad de incluir tanto texto como necesites en cada elemento. (Dicho esto, si haces que el contenido de tus elementos sea demasiado largo (por ejemplo, más de unas pocas oraciones), tu lista será más difícil de leer y escanear). Para elementos más largos, tu mensaje debe separar los elementos claramente para que ChatGPT no se confunda. Aquí tienes un ejemplo de instrucción:
 
+```text
+Generate the HTML code for a bulleted list that includes the following items:
+- "Sailing Alone Around the Room," by Billy Collins. The former U.S. poet laureate at the top of his game.
+- "Blue Horses," by Mary Oliver. Each poem in this collection is a gem.
+- "Human Wishes," by Robert Hass. If prose poetry is more your thing, you owe yourself these stunning examples of the form.
+- "The Carrying," by Ada Limón. The current U.S. poet laureate at the top of *her* game.
+- "All of Us," by Raymond Carver. The complete poetical works of the master of quiet desperation.
+- "What the Living Do," by Marie Howe. A searingly honest search for hope amidst overwhelming grief. Highly recommended.
+```
+
+```text
 Genere el código HTML para una lista con viñetas que incluya los siguientes elementos:
 - "Navegando solo por la habitación", de Billy Collins. El ex poeta laureado estadounidense en la cima de su carrera.
 - "Blue Horses", de Mary Oliver. Cada poema de esta colección es una joya.
@@ -66,20 +92,34 @@ Genere el código HTML para una lista con viñetas que incluya los siguientes el
 - "The Carrying", de Ada Limón. La actual poeta laureada estadounidense en la cima de *su* carrera.
 - "All of Us", de Raymond Carver. Obra poética completa del maestro de la desesperación silenciosa.
 - "Lo que hacen los vivos", de Marie Howe. Una búsqueda de esperanza desgarradora y sincera en medio de un dolor abrumador. Muy recomendable.
-Observe que la instrucción precede cada elemento de la lista con un guión ( -). ChatGPT entiende que un guión representa un nuevo elemento de la lista (el signo más [ +] también funciona). La Figura 9.3 muestra cómo aparece el código generado por ChatGPT a partir de esta instrucción en un navegador web.
+```
 
+Observe que la instrucción precede cada elemento de la lista con un guión (`-`). ChatGPT entiende que un guión representa un nuevo elemento de la lista (el signo más (`+`) también funciona). La Figura 9.3 muestra cómo aparece el código generado por ChatGPT a partir de esta instrucción en un navegador web.
 
+![image](https://github.com/user-attachments/assets/f9a02044-ac60-4ec8-a5df-e82469cc6fed)
 
 **Figura 9.3 Una lista con viñetas con elementos de lista más largos**
 
 ¿Es necesario que uno de los puntos de tu lista tenga una lista con viñetas? Eso se explica en la siguiente sección.
 
-### 9.2.2 Anidación de listas con viñetas
+### 9.2.2 Anidación de bulleted lists - listas con viñetas
 
 Un patrón común de lista con viñetas es que uno de los elementos contenga su propia lista con viñetas. Esto se conoce como lista con viñetas anidada y permite dividir la información de la página en varios niveles, lo que puede hacer que los datos complejos sean mucho más claros y fáciles de seguir para los lectores.
 
 A continuación se muestra un ejemplo de instrucción que convence a ChatGPT de generar una lista con viñetas donde uno de los elementos es una lista con viñetas anidada:
 
+```text
+Generate the HTML code for a bulleted list with the following items:
+- Bread
+- Milk
+- Fruit
+ - Bananas
+ - Oranges
+ - Papayas
+- Chocolate
+```
+
+```text
 Genere el código HTML para una lista con viñetas con los siguientes elementos:
 
 - Pan
@@ -89,16 +129,29 @@ Genere el código HTML para una lista con viñetas con los siguientes elementos:
  - Naranjas
  - Papayas
 - Chocolate
+```
 
-Observe que, debajo del Fruitelemento, los tres elementos tienen una sangría de un espacio. Esta sangría es suficiente para que ChatGPT sepa que desea que esos elementos se muestren como una lista con viñetas anidadas. La Figura 9.4 muestra el código generado por ChatGPT en el navegador web.
+Observe que, debajo del elemento `Fruit`, los tres elementos tienen una sangría de un espacio. Esta sangría es suficiente para que ChatGPT sepa que desea que esos elementos se muestren como una lista con viñetas anidadas. La Figura 9.4 muestra el código generado por ChatGPT en el navegador web.
 
-
+![image](https://github.com/user-attachments/assets/49aca1f3-b644-4a76-93ce-9fbddab25ad1)
 
 **Figura 9.4 Una lista con viñetas con una lista con viñetas anidada**
 
 Aquí está el código detrás de esta lista:
 
 ```html
+<ul>
+    <li>Bread</li>
+    <li>Milk</li>
+    <li>Fruit
+        <ul>
+            <li>Bananas</li>
+            <li>Oranges</li>
+            <li>Papayas</li>
+        </ul>
+    </li>
+    <li>Chocolate</li>
+</ul>
 ```
 
 Para ayudar al lector a diferenciar la lista anidada de la lista principal, el navegador web hace dos cosas:
@@ -108,32 +161,41 @@ Para ayudar al lector a diferenciar la lista anidada de la lista principal, el n
 
 Ese círculo hueco te permite saber que hay distintos tipos de viñetas disponibles. La siguiente sección te muestra cómo especificar un tipo de viñeta diferente para tus listas.
 
-### 9.2.3 Cambiar el tipo de viñeta
+### 9.2.3 Cambiar el tipo de viñeta - bullet 
 
-De manera predeterminada, los navegadores web muestran una lista con viñetas con un círculo relleno (también llamado disco ) como viñeta. Sin embargo, ese tipo de viñeta predeterminado no está definido de manera definitiva. A continuación, se muestra un mensaje genérico que le indica a ChatGPT que use un tipo de viñeta diferente:
+De manera predeterminada, los navegadores web muestran una lista con viñetas con un círculo relleno (también llamado *disc-disco*) como viñeta. Sin embargo, ese tipo de viñeta predeterminado no está definido de manera definitiva. A continuación, se muestra un mensaje genérico que le indica a ChatGPT que use un tipo de viñeta diferente:
 
+```text
+Generate the HTML code for a bulleted list with the items below. Use a type as the bullet.
+- Item 1
+- Item 2
+- etc.
+```
+
+```text
 Genere el código HTML para una lista con viñetas con los elementos que se muestran a continuación. Utilice un tipo como viñeta.
 - Artículo 1
 - Artículo 2
 - etc.
+```
 
-En su instrucción, reemplace typecon uno de los siguientes:
+En su instrucción, reemplace `type` con uno de los siguientes:
 
-* La palabra circlepara utilizar un círculo sin relleno como viñeta.
-* La palabra squarepara utilizar un cuadrado relleno como viñeta.
-* El nombre de cualquier carácter emoji, como signo de verificación, estrella, corazón, flecha o cara sonriente.
+* La palabra `circle` para utilizar un círculo sin relleno como viñeta.
+* La palabra `square` para utilizar un cuadrado relleno como viñeta.
+* El nombre de cualquier carácter emoji, como Check Mark, Star, Heart, Arrow, o Smiley Face.
 
-El nombre de cualquier otro carácter Unicode, como triángulo negro que apunta hacia la derecha, flecha hacia la derecha o diamante blanco. (Visite www.unicode.org/charts para ver los caracteres disponibles: ¡los 144 000 que hay!)
+El nombre de cualquier otro carácter Unicode, como such as Black Right-Pointing Triangle, Rightwards Arrow, o White Diamond. (Visite www.unicode.org/charts para ver los caracteres disponibles: ¡los 144 000 que hay!)
 
 La Figura 9.5 muestra una lista con viñetas que utiliza caracteres emoji de marca de verificación en lugar de las viñetas normales.
 
-
+![image](https://github.com/user-attachments/assets/9ea2fd7e-23d0-48cf-b9c2-3887cd220207)
 
 **Figura 9.5 Una lista con viñetas que utiliza emojis de marca de verificación como viñetas**
 
 Las listas con viñetas son algo común en Internet, pero no son las únicas. Las listas numeradas son el tema de la siguiente sección.
 
-## 9.3 Construir una lista numerada
+## 9.3 Construir una lista numerada - numbered list
 
 Mencioné anteriormente que se usa una lista con viñetas cuando el orden de los elementos de la lista no es un componente esencial de la misma. Sin embargo, para muchas colecciones de elementos, el orden es importante y sus páginas web pueden mostrar esos elementos mediante una lista numerada.
 
@@ -141,25 +203,44 @@ Por ejemplo, si proporciona un conjunto de instrucciones paso a paso, es fundame
 
 La figura 9.6 muestra un ejemplo de una lista numerada. A continuación, se muestra cómo indicarle a ChatGPT que genere el código correspondiente:
 
+```text
+Generate the HTML code for a numbered list with the following items:
+-Inflatable Dartboard
+-Water-Resistant Sponge
+-Helium-Filled Paperweight
+-Teflon Bath Mat
+-Flame-Retardant Firewood
+```
+
+```text
 Generar el código HTML para una lista numerada con los siguientes elementos:
 -Diana inflable
 -Esponja resistente al agua
 -Pisapapeles lleno de helio
 -Alfombrilla de baño de teflón
 -Leña retardante al fuego
+```
 
+![image](https://github.com/user-attachments/assets/6cc3f574-f359-4842-b3ef-53567f21ad84)
 
 **Figura 9.6 Un ejemplo de una lista numerada**
 
-Ten en cuenta que debes anteponer un guion ( -) a cada elemento de tu lista. También puedes utilizar un signo más ( +), un asterisco ( *) o incluso el número 1 seguido de un punto ( 1.). Este es el código resultante:
+Ten en cuenta que debes anteponer un guion (`-`) a cada elemento de tu lista. También puedes utilizar un signo más (`+`), un asterisco (`*`) o incluso el número 1 seguido de un punto (`1.`). Este es el código resultante:
 
 ```html
+<ol>
+    <li>Inflatable Dartboard</li>
+    <li>Water-Resistant Sponge</li>
+    <li>Helium-Filled Paperweight</li>
+    <li>Teflon Bath Mat</li>
+    <li>Flame-Retardant Firewood</li>
+</ol>
 ```
 
 Este código tiene dos componentes principales:
 
-* Todo está rodeado por las etiquetas <ol>y </ol>(donde oles la abreviatura de lista ordenada ).
-* Cada elemento de la lista está rodeado por las etiquetas <li>y </li>(donde lies la abreviatura de elemento de lista ).
+* Todo está rodeado por las etiquetas `<ol>` y `</ol>`(donde `ol` es la abreviatura de *ordered list-lista ordenada* ).
+* Cada elemento de la lista está rodeado por las etiquetas `<li>` y `</li>`(donde `li` es la abreviatura de *list item - elemento de lista*).
 
 El navegador web siempre muestra listas numeradas que comienzan con el primer elemento como número 1, pero hay un par de formas de personalizar el orden de la lista. En primer lugar, en la siguiente sección aprenderá a invertir el orden de la lista.
 
@@ -167,8 +248,23 @@ El navegador web siempre muestra listas numeradas que comienzan con el primer el
 
 Cuando se utiliza una lista numerada como parte de un tutorial, la documentación de un producto o una receta, se desea que el lector comience con el paso 1, continúe con el paso 2 y continúe en secuencia hasta el paso final. Sin embargo, no todas las listas numeradas se ajustan a este patrón. Por ejemplo, es tradicional que una lista de los 10 primeros comience en el número 10, presente el número 9 y así sucesivamente hasta el número 1.
 
-Para convencer a ChatGPT de que cree dicha lista, indíquele que genere una lista numerada invertida , como en este ejemplo:
+Para convencer a ChatGPT de que cree dicha lista, indíquele que genere una *reversed numbered list - lista numerada invertida*, como en este ejemplo:
 
+```text
+Generate the HTML code for a reversed numbered list with the following items:
+-U.C. Santa Cruz Banana Slugs
+-Delta State Fighting Okra
+-Kent State Golden Flashes
+-Evergreen State College Geoducks
+-New Mexico Tech Pygmies
+-South Carolina Fighting Gamecocks
+-Southern Illinois Salukis
+-Whittier Poets
+-Western Illinois Leathernecks
+-Delaware Fightin' Blue Hens
+```
+
+```text
 Genere el código HTML para una lista numerada invertida con los siguientes elementos:
 -Babosas banana de la Universidad de California en Santa Cruz
 -Okra de lucha contra el estado del Delta
@@ -180,10 +276,11 @@ Genere el código HTML para una lista numerada invertida con los siguientes elem
 -Poetas de Whittier
 -Cuellos de cuero del oeste de Illinois
 -Gallinas azules luchadoras de Delaware
+```
 
 La Figura 9.7 muestra cómo se representa en el navegador web el código generado por ChatGPT a partir de esta instrucción.
 
-
+![image](https://github.com/user-attachments/assets/f0a5e705-8676-40dc-a741-2e4e3002c070)
 
 **Figura 9.7 Una lista numerada invertida**
 
@@ -195,7 +292,7 @@ De manera predeterminada, una lista numerada normal comienza con el número 1, y
 
 Otro ejemplo común es cuando se inicia una lista numerada, se tiene una sección de texto y luego se tiene una nueva lista numerada que pretende ser una continuación de la primera. La Figura 9.8 muestra lo que sucede en el navegador.
 
-
+![image](https://github.com/user-attachments/assets/286ed1f1-8055-44fb-bc2c-fe1521f399b3)
 
 **Figura 9.8 Una lista, interrumpida**
 
