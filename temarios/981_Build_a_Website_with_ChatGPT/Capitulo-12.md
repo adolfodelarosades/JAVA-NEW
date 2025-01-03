@@ -338,39 +338,39 @@ Estos son los pasos a seguir para agregar un nuevo elemento `section` al artícu
 
 **Figura 12.5 Escriba un título o encabezado para la nueva sección.**
 
-   8. Para agregar más secciones, coloque el cursor inmediatamente después de la </section>etiqueta del sectionelemento que acaba de agregar y luego siga los pasos 3 a 7.
+   8. Para agregar más secciones, coloque el cursor inmediatamente después de la etiqueta `</section>` del elemento `section` que acaba de agregar y luego siga los pasos 3 a 7.
 
-Los nuevos sectionelementos tienen encabezados pero no texto. A continuación, solucionará esa situación.
+Los nuevos elementos `section` tienen encabezados pero no texto. A continuación, solucionará esa situación.
 
 ### 12.2.5 Agregar nuevos párrafos al artículo, sección o aparte
 
-Ya sea que esté trabajando en articleel elemento de su página, en cualquier sectionelemento o en el asideelemento, a menudo necesitará agregar otro párrafo. Estos son los pasos para hacerlo:
+Ya sea que esté trabajando en el elemento `article` de su página, en cualquier elemento `section` o en el elemento `aside`, a menudo necesitará agregar otro párrafo. Estos son los pasos para hacerlo:
 
    1. Abra el archivo HTML en un editor de texto.
 
-   2. Coloque el cursor inmediatamente después de la etiqueta de cierre del elemento después del cual desea agregar el párrafo. Por ejemplo, si está trabajando en un sectionelemento que actualmente solo tiene un h3encabezado de elemento, colocará el cursor inmediatamente después de la </h3>etiqueta, como se muestra en la figura 12.6.
+   2. Coloque el cursor inmediatamente después de la etiqueta de cierre del elemento después del cual desea agregar el párrafo. Por ejemplo, si está trabajando en un elemento `section` que actualmente solo tiene un encabezado `h3` de elemento, colocará el cursor inmediatamente después de la etiqueta `</h3>`, como se muestra en la figura 12.6.
 
+![image](https://github.com/user-attachments/assets/c5d2cfa2-e90a-45bf-b6b1-d4f7e4d50235)
 
-
-Figura 12.6 Coloque el cursor después de la etiqueta final del elemento después del cual desea agregar el párrafo.
+**Figura 12.6 Coloque el cursor después de la etiqueta final del elemento después del cual desea agregar el párrafo.**
 
    3. Presione Enter o Retorno para comenzar una nueva línea.
 
-   4. Escriba <p>. Si está utilizando un editor de código, debería agregar automáticamente la </p>etiqueta (aunque es posible que deba presionar la tecla Tab para que esto suceda). De lo contrario, escriba </p>y luego coloque el cursor entre las etiquetas <p>y .</p>
+   4. Escriba `<p>`. Si está utilizando un editor de código, debería agregar automáticamente la etiqueta `</p>` (aunque es posible que deba presionar la tecla Tab para que esto suceda). De lo contrario, escriba `</p>` y luego coloque el cursor entre las etiquetas `<p>` y `</p>`.
 
-   5. Pulse Enter o Return. Ahora tendrá un nuevo pelemento listo para texto, como se muestra en la figura 12.7.
+   5. Pulse Enter o Return. Ahora tendrá un nuevo elemento `p` listo para texto, como se muestra en la figura 12.7.
 
+![image](https://github.com/user-attachments/assets/6e8118f3-4d8c-4615-b63d-72b2bb51fe52)
 
-
-Figura 12.7 El nuevo pelemento, listo para el texto
+**Figura 12.7 El nuevo elemento `p`, listo para el texto**
 
    6. Escriba el texto del párrafo, como se muestra en la figura 12.8.
 
+![image](https://github.com/user-attachments/assets/78ed5e12-88c7-41f8-8192-884650294b13)
 
+**Figura 12.8 Escriba un título o encabezado para la nueva sección.**
 
-Figura 12.8 Escriba un título o encabezado para la nueva sección.
-
-   7. Para cada nuevo párrafo que desee agregar, coloque el cursor inmediatamente después de la </p>etiqueta del párrafo actual y luego siga los pasos 3 a 6.
+   7. Para cada nuevo párrafo que desee agregar, coloque el cursor inmediatamente después de la etiqueta `</p>` del párrafo actual y luego siga los pasos 3 a 6.
 
 Mientras escribe el texto de un párrafo, puede encontrar palabras o frases especiales que desea que el navegador web muestre en negrita o cursiva. Aprenderá a hacerlo en la siguiente sección.
 
@@ -380,73 +380,93 @@ Algunas palabras o frases de tu texto son “especiales” en el sentido de que 
 
 Si bien es posible indicarle a ChatGPT que agregue cursiva y negrita donde sea necesario, eso puede ser problemático en muchas circunstancias:
 
-Es posible que su texto utilice una palabra o frase varias veces.
+* Es posible que su texto utilice una palabra o frase varias veces.
 
-Es posible que desees marcar solo la primera instancia de una palabra o frase.
+* Es posible que desees marcar solo la primera instancia de una palabra o frase.
 
-Su texto puede incluir muchas palabras o frases diferentes que desea marcar.
+* Su texto puede incluir muchas palabras o frases diferentes que desea marcar.
 
 En cada caso, tendrías que encontrar una forma de asegurarte de que ChatGPT marcara lo que querías, una tarea que no es fácil de hacer en la práctica. En realidad, es muy sencillo hacer el marcado tú mismo manualmente a medida que ingresas el texto. Las siguientes secciones brindan los detalles.
 
-Marcar texto importante
+#### MARCA TEXTO IMPORTANTE
 
-En su página web, es posible que desee asegurarse de que el lector vea una palabra, frase u oración en particular porque es importante. Este texto puede ser una instrucción vital, una condición crucial o un pasaje igualmente significativo que debe destacarse del texto normal porque no desea que el lector lo pase por alto. En HTML, se marca el texto como importante mediante el strongelemento:
-
-```html
-```
-
-Todos los navegadores muestran el texto entre las etiquetas <strong>y </strong>en negrita. El siguiente ejemplo muestra el código de una página web con un pasaje importante marcado con el strongelemento y la figura 12.9 muestra el texto que se muestra en negrita en el navegador web:
+En su página web, es posible que desee asegurarse de que el lector vea una palabra, frase u oración en particular porque es importante. Este texto puede ser una instrucción vital, una condición crucial o un pasaje igualmente significativo que debe destacarse del texto normal porque no desea que el lector lo pase por alto. En HTML, se marca el texto como importante mediante el elemento `strong`:
 
 ```html
+<strong>important text goes here</strong>
 ```
 
+Todos los navegadores muestran el texto entre las etiquetas `<strong>` y `</strong>` en negrita. El siguiente ejemplo muestra el código de una página web con un pasaje importante marcado con el elemento `strong` y la figura 12.9 muestra el texto que se muestra en negrita en el navegador web:
 
-**Figura 12.9 El texto marcado con el strongelemento aparece en negrita en el navegador.**
+```html
+<p>
+    As you enter the room, notice the big, red button to your right.
+    <strong>Never press that button!</strong>
+</p>
+```
+
+![image](https://github.com/user-attachments/assets/4de7bc01-cc81-4789-bee2-1c3bab4552de)
+
+**Figura 12.9 El texto marcado con el elemento `strong` aparece en negrita en el navegador.**
 
 Un escenario de marcado similar es el de la palabra clave, que se analiza a continuación.
 
-Marcar palabras clave
+#### MARCAR KEYWORDS - PLALABRAS CLAVE
 
 En algunos casos, desea llamar la atención sobre una palabra o frase no porque sea importante en sí, sino porque el texto en cuestión desempeña un papel que lo hace diferente del texto normal. Ese texto puede ser el nombre de un producto, el nombre de una empresa o un elemento de la interfaz, como el texto asociado con una casilla de verificación o un botón de comando. Nuevamente, el texto con el que está trabajando no es crucial, pero es diferente de alguna manera, por lo que desea que se vea diferente del texto de la página normal.
 
-CONSEJO: Otros candidatos para palabras clave de una página web incluyen el nombre de una persona (como los infames “nombres en negrita” que aparecen en las columnas de chismes de celebridades) y las primeras palabras o la oración inicial de un artículo.
+**TIP**: Otros candidatos para palabras clave de una página web incluyen el nombre de una persona (como los infames “nombres en negrita” que aparecen en las columnas de chismes de celebridades) y las primeras palabras o la oración inicial de un artículo.
 
-Cada uno de estos elementos indica una palabra clave (o frase clave ) que tiene un significado que va más allá del texto normal de la página. En HTML, este tipo de elemento se marca con el belemento:
-
-```html
-```
-
-Los navegadores web representan el texto entre las etiquetas <b>y </b>en negrita, como se muestra en el siguiente ejemplo y en la figura 12.10:
+Cada uno de estos elementos indica una palabra clave (o frase clave ) que tiene un significado que va más allá del texto normal de la página. En HTML, este tipo de elemento se marca con el elemento `b`:
 
 ```html
+<b>keyword</b>
 ```
+
+Los navegadores web representan el texto entre las etiquetas `<b>` y `</b>` en negrita, como se muestra en el siguiente ejemplo y en la figura 12.10:
+
+```html
+<p>
+    To save your work, pull down the <b>File</b> menu 
+    and then click <b>Save</b>.
+</p>
+```
+
+![image](https://github.com/user-attachments/assets/355fba54-4661-45b7-9061-a09dbfc35251)
 
 **Figura 12.10 Las palabras clave marcadas con el belemento aparecen en negrita en el navegador.**
 
-En este punto, imagino que te estarás rascando la cabeza y preguntándote cuál es la diferencia entre el strongelemento y el belemento, porque ambos se representan como texto en negrita. Es un buen punto, y admito que la diferencia es sutil. Debería decir que es semántica porque HTML usa estos dos elementos separados para diferenciar entre texto importante y palabras clave. ¿Por qué molestarse? Porque se espera que en el futuro, los lectores de pantalla y otros dispositivos de asistencia usen esta distinción semántica para ayudar a las personas con discapacidad visual a entender las páginas web.
+En este punto, imagino que te estarás rascando la cabeza y preguntándote cuál es la diferencia entre el elemento `strong` y el elemento `b`, porque ambos se representan como texto en negrita. Es un buen punto, y admito que la diferencia es sutil. Debería decir que es semántica porque HTML usa estos dos elementos separados para diferenciar entre texto importante y palabras clave. ¿Por qué molestarse? Porque se espera que en el futuro, los lectores de pantalla y otros dispositivos de asistencia usen esta distinción semántica para ayudar a las personas con discapacidad visual a entender las páginas web.
 
-Marcar texto resaltado
+#### MARCAR TEXTO RESALTADO
 
-A menudo es importante enfatizar ciertas palabras o frases en una página. Este énfasis le indica al lector que lea o diga el texto con más énfasis. En HTML, se agrega énfasis a una palabra o frase marcándola con el emelemento (for ethics):
+A menudo es importante enfatizar ciertas palabras o frases en una página. Este énfasis le indica al lector que lea o diga el texto con más énfasis. En HTML, se agrega énfasis a una palabra o frase marcándola con el elemento `em` (para enfasis):
 
 ```html
+<em>text</em>
 ```
 
-Los navegadores web representan el texto entre las etiquetas <em>y </em>en cursiva, como se muestra en el siguiente ejemplo y en la figura 12.11:
+Los navegadores web representan el texto entre las etiquetas `<em>` y `</em>` en cursiva, como se muestra en el siguiente ejemplo y en la figura 12.11:
 
 ```html
+<p>
+    When mixing pie pastry, it's <em>vital</em> that 
+    your butter is as cold as possible.
+</p>
 ```
 
+![image](https://github.com/user-attachments/assets/6e9f05c7-0041-48c0-8562-e28b55869a55)
 
-**Figura 12.11 El texto marcado con el emelemento se muestra en cursiva en el navegador.**
+**Figura 12.11 El texto marcado con el elemento `em` se muestra en cursiva en el navegador.**
 
-**NOTA**: ¿Cuál es la diferencia entre el strongelemento y el emelemento? Se utiliza strongcuando el texto en cuestión es inherentemente crucial para el lector; se utiliza emcuando el texto en cuestión requiere un énfasis mayor para transmitir un mensaje.
+**NOTA**: ¿Cuál es la diferencia entre el elemento `strong` y el elemento `em`? Se utiliza `strong` cuando el texto en cuestión es inherentemente crucial para el lector; se utiliza `em` cuando el texto en cuestión requiere un énfasis mayor para transmitir un mensaje.
 
-Marcar texto alternativo
+#### MARCAR TEXTO ALTERNATIVO 
 
-En prosa, es habitual que sea necesario marcar una palabra o frase para indicar que tiene una voz, un estado de ánimo o una función diferente a la del texto normal. Ejemplos habituales de texto alternativo son los títulos de libros y películas. En HTML, este tipo de texto semántico se marca con el ielemento (para cursiva):
+En prosa, es habitual que sea necesario marcar una palabra o frase para indicar que tiene una voz, un estado de ánimo o una función diferente a la del texto normal. Ejemplos habituales de texto alternativo son los títulos de libros y películas. En HTML, este tipo de texto semántico se marca con el elemento `i` (para cursiva):
 
 ```html
+<i>text</i>
 ```
 
 **NOTA**: Otros ejemplos de texto alternativo incluyen nombres de publicaciones, términos técnicos, palabras y frases extranjeras y los pensamientos de una persona.
@@ -454,26 +474,51 @@ En prosa, es habitual que sea necesario marcar una palabra o frase para indicar 
 Los navegadores web muestran dicho texto en cursiva, como se muestra en el siguiente ejemplo y en la figura 12.12:
 
 ```html
+<p>
+    Let's visit the land of Narnia, first introduced to us by 
+    C.S. Lewis in <i>The Lion, the Witch, and the Wardrobe</i> (1950).
+</p>
 ```
 
-**Figura 12.12 El texto alternativo marcado con el ielemento se muestra en cursiva en el navegador.**
+![image](https://github.com/user-attachments/assets/7ca06d9f-f429-43ae-8310-3a3a0819284f)
 
-Puede anidar estos elementos de nivel de texto dentro de otros elementos de nivel de texto para lograr un efecto adicional. Por ejemplo, puede marcar una oración como importante mediante el uso del strongelemento y, dentro de esa oración, puede marcar una palabra con énfasis mediante el uso del emelemento. El navegador mostrará esa palabra en negrita y cursiva.
+**Figura 12.12 El texto alternativo marcado con el elemento `i` se muestra en cursiva en el navegador.**
 
-### 12.2.7 Comenzar el artículo con letra capital
+Puede anidar estos elementos de nivel de texto dentro de otros elementos de nivel de texto para lograr un efecto adicional. Por ejemplo, puede marcar una oración como importante mediante el uso del elemento `strong` y, dentro de esa oración, puede marcar una palabra con énfasis mediante el uso del elemento `em`. El navegador mostrará esa palabra en negrita y cursiva.
 
-Puede hacer que sus artículos se destaquen entre la multitud al comenzarlos con una letra capital : la primera letra del primer párrafo, formateada para que parezca mucho más grande que el resto del texto del párrafo y ubicada de manera que se ubique debajo de la línea base del texto y “deje caer” algunas líneas en el párrafo. Para que ChatGPT cree una letra capital, incluya una instrucción similar a la siguiente en su mensaje:
+### 12.2.7 Comenzar el artículo con letra capital(drop cap)
 
+Puede hacer que sus artículos se destaquen entre la multitud al comenzarlos con una *letra capital - drop cap*: la primera letra del primer párrafo, formateada para que parezca mucho más grande que el resto del texto del párrafo y ubicada de manera que se ubique debajo de la línea base del texto y “deje caer - drops” algunas líneas en el párrafo. Para que ChatGPT cree una letra capital, incluya una instrucción similar a la siguiente en su mensaje:
+
+```text
+Create the HTML and CSS code that renders the following text as a paragraph with a dark red drop cap: "Starting an article doesn't have to be boring! Get your text off to a great beginning by rocking the opening paragraph with a giant first letter. You can use either a <i>raised cap</i> (also called a <i>stick-up cap</i> or simply an <i>initial</i>) that sits on the baseline, or you can use a <i>drop cap</i> that sits below the baseline and nestles into the text."
+```
+
+```text
 Crea el código HTML y CSS que represente el siguiente texto como un párrafo con una letra capitular de color rojo oscuro: "¡Comenzar un artículo no tiene por qué ser aburrido! Haz que tu texto tenga un buen comienzo haciendo que el párrafo inicial luzca con una letra inicial gigante. Puedes usar una <i>letra capitular</i> (también llamada <i>letra capitular</i> o simplemente una <i>inicial</i>) que se ubique sobre la línea base, o puedes usar una <i>letra capitular</i> que se ubique debajo de la línea base y se integre en el texto".
+```
 
 Aquí está el HTML generado por ChatGPT:
 
 ```html
+<p>
+    <span class="drop-cap">S</span>tarting an article doesn't have to be 
+    boring! Get your text off to a great beginning by rocking the opening 
+    paragraph with a giant first letter. In particular, you can use a 
+    <i>drop cap</i> that sits below the baseline and nestles into the text.
+</p>
 ```
 
-Las claves son las <span>etiquetas </span>y que rodean la primera letra del párrafo. El spanelemento utiliza la drop-capclase, que se ve así en el código CSS:
+Las claves son las `<span>` etiquetas `</span>` y que rodean la primera letra del párrafo. El elemento `span` utiliza la clase `drop-cap`, que se ve así en el código CSS:
 
 ```css
+.drop-cap {
+    float: left;                 ①
+    font-size: 4em;              ②
+    line-height: 0.8em;          ③
+    padding: 0.1em 0.1em 0 0;    ④
+    color: darkred;              ⑤
+}
 ```
 
 ① Saca la letra del flujo de página normal.
@@ -488,45 +533,72 @@ Las claves son las <span>etiquetas </span>y que rodean la primera letra del pár
 
 La figura 12.13 muestra cómo se ve la letra capital en el navegador.
 
+![image](https://github.com/user-attachments/assets/b4a802d4-bf11-48f5-83f7-747d53054695)
 
+**Figura 12.13 Párrafo inicial de un artículo con letra capital - drop cap**
 
-**Figura 12.13 Párrafo inicial de un artículo con letra capital**
-
-Las letras capitulares son una excelente manera de agregar un toque profesional a sus páginas web. Recuerde que solo debe usarlas para la primera letra del primer párrafo de un artículo.
+Las letras capitulares(Drop caps) son una excelente manera de agregar un toque profesional a sus páginas web. Recuerde que solo debe usarlas para la primera letra del primer párrafo de un artículo.
 
 ### 12.2.8 Diseño del artículo con CSS Grid
 
-Cuando presenté Flexbox en el capítulo 10, mencioné que la forma predeterminada en que el navegador web presenta los elementos HTML a nivel de bloque (incluidos los elementos header, nav, main, section, aside, footery p) es apilándolos uno sobre el otro. El primer bloque está arriba, el segundo debajo, el tercero debajo, y así sucesivamente. ¡No es un diseño muy inspirador!
+Cuando presenté Flexbox en el capítulo 10, mencioné que la forma predeterminada en que el navegador web presenta los elementos HTML a nivel de bloque (incluidos los elementos `header`, `nav`, `main`, `section`, `aside`, `footer` y `p`) es apilándolos uno sobre el otro. El primer bloque está arriba, el segundo debajo, el tercero debajo, y así sucesivamente. ¡No es un diseño muy inspirador!
 
-Flexbox le permite romper con ese diseño predeterminado en una dimensión (horizontal o verticalmente), pero si desea diseñar su página en dos dimensiones (horizontal y verticalmente), debe recurrir a una técnica de diseño diferente llamada CSS Grid.
+Flexbox le permite romper con ese diseño predeterminado en una dimensión (horizontal o verticalmente), pero si desea diseñar su página en dos dimensiones (horizontal y verticalmente), debe recurrir a una técnica de diseño diferente llamada **CSS Grid**.
 
 La buena noticia acerca de CSS Grid es que puedes pedirle a ChatGPT que genere todo el código requerido para ti incluyendo una instrucción simple en la parte CSS de tu mensaje:
 
+```text
+The header is a two-column CSS Grid container with the logo in the left column and the site title and tagline in the right column.
+```
+
+```text
 El encabezado es un contenedor CSS Grid de dos columnas con el logotipo en la columna izquierda y el título del sitio y el lema en la columna derecha.
+```
+
 ¡Eso es todo! Sin embargo, para los fines del proyecto de este capítulo, mencionaré un aspecto importante del código CSS Grid que genera ChatGPT. Si consulta la figura 12.2, observe estas dos cosas:
 
-Dentro del mainelemento, el asideelemento se dispone a la derecha del articleelemento.
+Dentro del elemento `main`, el elemento `aside` se dispone a la derecha del elemento `article`.
 
-El articleelemento ocupa más espacio horizontal que el asideelemento.
+El elemento `article` ocupa más espacio horizontal que el elemento `aside`.
 
 Todo esto se hace con CSS Grid. Para entender cómo funciona, primero examine el HTML:
 
 ```html
+<main>
+    <article>
+        Article content goes here
+    </article>
+   
+    <aside>
+        Aside content goes here
+    </aside>
+</main>
 ```
 
-Normalmente, el navegador web apilaría el articleelemento sobre el asideelemento anterior y ambos ocuparían todo el ancho del mainelemento. Puede salir de ese diseño predeterminado con una instrucción a ChatGPT similar a la siguiente:
+Normalmente, el navegador web apilaría el elemento `article` sobre el elemento `aside` anterior y ambos ocuparían todo el ancho del elemento `main`. Puede salir de ese diseño predeterminado con una instrucción a ChatGPT similar a la siguiente:
 
+```text
+The main element is a two-column CSS Grid container where the article element column is twice the width of the aside element column.
+```
+
+```text
 El elemento principal es un contenedor de cuadrícula CSS de dos columnas donde la columna del elemento del artículo tiene el doble del ancho de la columna del elemento side.
-En este caso, el código CSS Grid resultante coloca el asideelemento a la derecha del articleelemento y ajusta el ancho de los elementos definiendo una cuadrícula de dos columnas para el mainelemento:
+```
+
+En este caso, el código CSS Grid resultante coloca el elemento `aside` a la derecha del elemento `article` y ajusta el ancho de los elementos definiendo una cuadrícula de dos columnas para el elemento `main`:
 
 ```css
+main {
+    display: grid;                     ①
+    grid-template-columns: 2fr 1fr;    ②
+}
 ```
 
 ① Configura el elemento principal como un contenedor de cuadrícula
 
 ② Divide el contenedor de la cuadrícula en dos columnas
 
-El articleelemento aparece primero en el código HTML, por lo que se asigna a la columna izquierda y articlea la derecha. La clave aquí es el 2fr 1frvalor de la grid-template-columnspropiedad. Este valor de aspecto extraño define los anchos relativos de las dos columnas de la siguiente manera:
+El elemento `article` aparece primero en el código HTML, por lo que se asigna a la columna izquierda y articlea la derecha. La clave aquí es el valor `2fr 1fr` de la propiedad `grid-template-columns`. Este valor de aspecto extraño define los anchos relativos de las dos columnas de la siguiente manera:
 
 Aprovecha todo el espacio horizontal disponible para el mainelemento.
 
