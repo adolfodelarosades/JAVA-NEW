@@ -5,44 +5,44 @@ Este capítulo cubre
 * La estructura de una página de artículo
 * Diseño de la página usando CSS Grid
 * Cómo hacer que el artículo se vea bien en las pantallas de los teléfonos inteligentes
-* Elaboración de un mensaje de ChatGPT para crear una página de artículo
+* Elaboración de un prompt de ChatGPT para crear una página de artículo
 * Examinar y personalizar el código generado por ChatGPT
 
 Hay tantas razones para crear una página web como personas que desean establecer algún tipo de presencia en la red. Sin embargo, la mayoría de estas razones se pueden agrupar bajo dos grandes paraguas: la autoexpresión y el intercambio de información. Hasta ahora en este libro, has trabajado en varios proyectos relacionados con la autoexpresión: la página de inicio personal (capítulo 3), el diario en línea (capítulo 5), la galería de fotos (capítulo 10) y la página de portafolios (capítulo 11). También has trabajado en proyectos relacionados con el intercambio de información: la página del club de lectura (capítulo 4), el sitio web de información (capítulo 6), el sitio web de intereses o pasatiempos (capítulo 7), la página de inscripción a eventos (capítulo 8) y la página de recetas (capítulo 9).
 
-Este capítulo le presenta otra estructura de página para compartir información: la página del artículo. Esta página utiliza estructuras HTML comunes, como un encabezado, una barra de navegación, una barra lateral y un pie de página, todas organizadas alrededor de la estrella de la página: un artículo largo que contiene varias secciones. Este capítulo será un poco más "práctico" que los proyectos anteriores porque es más fácil agregar secciones, encabezados y párrafos y marcar ese texto (es decir, agregar las etiquetas HTML adecuadas) para el lector a mano que confiar en ChatGPT para hacer todo. Sin embargo, no se preocupe: seguirá aprovechando los conocimientos de codificación de ChatGPT para crear la estructura básica de su página de artículo y agregar algunos detalles adicionales que harán que su artículo se destaque entre la multitud.
+Este capítulo le presenta otra estructura de página para compartir información: la página del artículo(the article page). Esta página utiliza estructuras HTML comunes, como un header, un navigation bar, una sidebar - barra lateral y un footer, todas organizadas alrededor de la estrella de la página: un artículo largo que contiene varias secciones. Este capítulo será un poco más "práctico" que los proyectos anteriores porque es más fácil agregar secciones, encabezados y párrafos y marcar ese texto (es decir, agregar las etiquetas HTML adecuadas) para el lector a mano que confiar en ChatGPT para hacer todo. Sin embargo, no se preocupe: seguirá aprovechando los conocimientos de codificación de ChatGPT para crear la estructura básica de su página de artículo y agregar algunos detalles adicionales que harán que su artículo se destaque entre la multitud.
 
 ## 12.1 Conociendo el proyecto de este capítulo
 
 El proyecto de este capítulo es una página de artículo. La página final incluirá los siguientes componentes:
 
-Un elemento de encabezado que incluye un logotipo, un título y un eslogan.
+* Un elemento de header que incluye un logotipo, un título y un eslogan.
 
-Una barra de navegación con enlaces a otras secciones del sitio.
+* Una barra de navegación con enlaces a otras secciones del sitio.
 
-Un elemento principal que contiene un elemento de artículo con un título
+* Un elemento main que contiene un elemento de artículo con un título
 
-Múltiples elementos de sección dentro del artículo, cada uno con su propio encabezado y párrafos.
+* Múltiples elementos de sección dentro del artículo, cada uno con su propio heading y párrafos.
 
-Un elemento de barra lateral con información relacionada
+* Un elemento de sidebar  - barra lateral con información relacionada
 
-Un elemento de pie de página que incluye un aviso de derechos de autor
+* Un elemento de footer que incluye un aviso de derechos de autor
 
 La Figura 12.1 muestra una página de artículo de ejemplo (parcial) creada con código y texto proporcionados por ChatGPT.
 
-
+![image](https://github.com/user-attachments/assets/c21ef3bd-369a-447d-9a5e-09c21d097f2c)
 
 **Figura 12.1 Una página de artículo generada por ChatGPT**
 
-La página de ejemplo es un artículo de viajes ficticio sobre un lugar imaginario de una obra literaria (Narnia, el escenario principal de la serie de fantasía Las crónicas de Narnia de CS Lewis ), pero puedes usar el diseño del artículo para muchos otros tipos de contenido: noticias, ensayos, publicaciones de blogs, reseñas, biografías, relatos históricos, etc. En la siguiente sección, aprenderás a diseñar el diseño del artículo.
+La página de ejemplo es un artículo de viajes ficticio sobre un lugar imaginario de una obra literaria (Narnia, el escenario principal de la serie de fantasía *Las crónicas de Narnia de CS Lewis*), pero puedes usar el diseño del artículo para muchos otros tipos de contenido: noticias, ensayos, publicaciones de blogs, reseñas, biografías, relatos históricos, etc. En la siguiente sección, aprenderás a diseñar el diseño del artículo.
 
 ## 12.2 Creación de la página del artículo
 
 ¿Cómo saber si un artículo tiene el diseño de página que necesitas? Examina el contenido principal que quieres mostrar en la página y hazte las siguientes preguntas:
 
-¿El escrito se centra en un único tema?
+* ¿El escrito se centra en un único tema(single topic)?
 
-¿El escrito está dividido en múltiples subtemas?
+* ¿El escrito está dividido en múltiples subtemas(multiple subtopics)?
 
 Si la respuesta es “Sí” a ambas preguntas, el diseño del artículo que aprenderá en este capítulo será un excelente escaparate para su escritura.
 
@@ -52,125 +52,291 @@ Antes de aprender a diseñar una página como artículo, debería dar un paso at
 
 En la mayoría de los proyectos de este libro, el HTML que ChatGPT ha generado ha diseñado la página utilizando algunos o todos los siguientes elementos:
 
-header—Define un área de la página que contiene contenido introductorio. Este contenido suele ser el título del sitio (que debe estar marcado con un elemento de encabezado, como h1), pero también puede incluir elementos como el logotipo del sitio y un eslogan. A continuación, se incluye un ejemplo (del capítulo 9):
+* `header` —Define un área de la página que contiene contenido introductorio. Este contenido suele ser el título del sitio (que debe estar marcado con un elemento de encabezado(heading), como `h1`), pero también puede incluir elementos como el logotipo del sitio y un eslogan. A continuación, se incluye un ejemplo (del capítulo 9):
 
 ```html
+<header>
+    <img src="super-baker.png" alt="The Super Baker Logo">
+    <h1>The Super Baker</h1>
+    <p>The ultimate guide to super-powered baking. Learn how to 
+        make delicious treats that will boost your energy, 
+        strength, and speed.</p>
+</header>
 ```
 
-nav—Define un área de la página que contiene contenido de navegación, como enlaces a otras secciones del sitio. Este elemento puede estar en cualquier parte de la página, pero normalmente aparece justo después del headerelemento de la página. A continuación, se incluye un ejemplo (del capítulo 6):
+* `nav` —Define un área de la página que contiene contenido de navegación, como enlaces a otras secciones del sitio. Este elemento puede estar en cualquier parte de la página, pero normalmente aparece justo después del elemento `header` de la página. A continuación, se incluye un ejemplo (del capítulo 6):
 
 ```html
+<nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
 ```
 
-main—Crea un contenedor para el contenido exclusivo de la página actual. Mientras que los headerelementos nav, y footersuelen ser comunes a todas o la mayoría de las páginas del sitio, el mainelemento está pensado para marcar el contenido exclusivo. Solo puede haber un mainelemento por página. Normalmente aparece después de los elementos headery nav, como se muestra aquí (del capítulo 6):
+* `main` —Crea un contenedor para el contenido exclusivo de la página actual. Mientras que los elementos `header`, `nav`, y `footer` suelen ser comunes a todas o la mayoría de las páginas del sitio, el elemento `main` está pensado para marcar el contenido exclusivo. Solo puede haber un elemento `main` por página. Normalmente aparece después de los elementos `header` y `nav`, como se muestra aquí (del capítulo 6):
 
 ```html
+<header>
+    <h1>Antediluvian Word Preservation Society</h1>
+    <p>Preserving words from the past for the future</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<main>
+    Unique page content goes here
+</main>
 ```
 
-section—Contiene cualquier parte de una página que desee ver en un esquema de la página. Es decir, si parte de la página consta de un elemento de encabezado (como h2o h3) seguido de algún texto, rodeará el encabezado y su texto con las etiquetas <section>y </section>, de la siguiente manera (del capítulo 6):
-
-    ```html
-    ```
-
-p—Marca un fragmento de texto como un párrafo. Un sectionelemento normalmente consta de uno o más párrafos, aunque también puedes agregar párrafos a cualquier otro elemento, en particular a los elementos header, mainy footer.
-
-footer—Define un área de página que contiene contenido de cierre, como un aviso de derechos de autor, una dirección y la información de contacto. A continuación, se incluye un ejemplo (del capítulo 4):
+* `section` —Contiene cualquier parte de una página que desee ver en un esquema de la página. Es decir, si parte de la página consta de un elemento de encabezado-heading  (como `h2` o `h3`) seguido de algún texto, rodeará el encabezado y su texto con las etiquetas `<section>` y `</section>`, de la siguiente manera (del capítulo 6):
 
 ```html
+   <section>
+      <h2>This week's challenge</h2>
+      <p>
+          Your challenge this week is to use the word tomfoolery 
+          — foolish or silly behavior — at least once in each 
+          of the following: in conversation, in an email message, 
+          in a text message, and in a business meeting (virtual or 
+          real-world). Good luck and let us know how you make out!
+      </p>
+    </section>
 ```
 
-La figura 12.2 muestra un diseño de página abstracto que demuestra cómo aparecen estos elementos en una página. Observe que incluye dos elementos de diseño de página HTML que no cubrí en esta sección: articley aside. No es de sorprender que el articleelemento desempeñe un papel vital en el diseño de la página del artículo de este capítulo, por lo que lo cubriré en detalle a continuación.
+* `p` —Marca un fragmento de texto como un párrafo. Un elemento `section` normalmente consta de uno o más párrafos, aunque también puedes agregar párrafos a cualquier otro elemento, en particular a los elementos `header`, `main` y `footer`.
 
+* `footer` —Define un área de página que contiene contenido de cierre, como un aviso de derechos de autor, una dirección y la información de contacto. A continuación, se incluye un ejemplo (del capítulo 4):
 
+```html
+<footer>
+    <p>Copyright 2023 Code & Prose</p>
+    <p>
+        <a href="https://www.facebook.com/CodeAndProse">
+        <i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/codeandprose">
+        <i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/codenprose">
+        <i class="fab fa-twitter-square"></i></a>
+    </p>
+</footer>
+```
+
+La figura 12.2 muestra un diseño de página abstracto que demuestra cómo aparecen estos elementos en una página. Observe que incluye dos elementos de diseño de página HTML que no cubrí en esta sección: `article` y `aside`. No es de sorprender que el elemento `article` desempeñe un papel vital en el diseño de la página del artículo de este capítulo, por lo que lo cubriré en detalle a continuación.
+
+![image](https://github.com/user-attachments/assets/3874d035-5260-49cd-9e3c-72b1cd25bf5a)
 
 **Figura 12.2 Un diseño conceptual que incluye los elementos básicos del diseño HTML**
 
-### 12.2.2 Trabajar con el elemento de artículo
+### 12.2.2 Trabajar con el elemento article - artículo
 
-El elemento se utiliza articlepara marcar una composición completa e independiente. El modelo aquí es un artículo de periódico o revista, pero este elemento también se puede aplicar a una reseña, una entrada de blog, una publicación en un foro o un ensayo. La mayoría de las páginas tienen un solo articleelemento anidado dentro del mainelemento. Ese articleelemento generalmente contiene lo siguiente:
+El elemento `article` se utiliza para marcar una composición completa e independiente. El modelo aquí es un artículo de periódico o revista, pero este elemento también se puede aplicar a una reseña, una entrada de blog, una publicación en un foro o un ensayo. La mayoría de las páginas tienen un solo elemento `article` anidado dentro del elemento `main`. Ese elemento `article` generalmente contiene lo siguiente:
 
-Un título, generalmente marcado como un encabezado de segundo nivel (es decir, un h2elemento)
+* Un título, generalmente marcado como un encabezado-heading de segundo nivel (es decir, un elemento `h2`)
 
-Uno o más elementos introductorios p(párrafos)
+* Uno o más elementos introductorios `p`(párrafos)
 
-Uno o más sectionelementos
+* Uno o más elementos `section`
 
-Dentro de cada uno de esos sectionelementos, un encabezado de tercer nivel (es decir, un h3elemento) seguido de uno o más pelementos
+* Dentro de cada uno de esos elementos `section`, un encabezado de tercer nivel (es decir, un elemento `h3`) seguido de uno o más elementos `p`
 
-Nada de esto está escrito en piedra. Por ejemplo, está perfectamente bien que un articleelemento contenga solo un título y uno o más párrafos. Sin embargo, para los fines de este capítulo, el diseño de la página del artículo utiliza estos elementos. Esta es la estructura genérica que utilizará:
+Nada de esto está escrito en piedra. Por ejemplo, está perfectamente bien que un elemento `article` contenga solo un título y uno o más párrafos. Sin embargo, para los fines de este capítulo, el diseño de la página del artículo utiliza estos elementos. Esta es la estructura genérica que utilizará:
 
 ```html
+<main>
+    <article>
+        <h2>Article Title</h2>
+        <p>Introductory paragraph</p>
+        <section>
+            <h3>Section 1 heading</h3>
+            <p>
+                Section 1 paragraph 1
+            </p>
+            <p>
+                Section 1 paragraph 2
+            </p>
+            <p>
+                etc.
+            </p>
+        </section>
+        <section>
+            <h3>Section 2 heading</h3>
+            <p>
+                Section 2 paragraph 1
+            </p>
+            <p>
+                Section 2 paragraph 2
+            </p>
+            <p>
+                etc.
+            </p>
+        </section>
+        <section>
+            <h3>Section 3 heading</h3>
+            <p>
+                Section 3 paragraph 1
+            </p>
+            <p>
+                Section 3 paragraph 2
+            </p>
+            <p>
+                etc.
+            </p>
+        </section>
+    </article>
+</main>
 ```
 
-En general, puedes lograr que ChatGPT genere el código para un articleelemento incluyendo una instrucción similar a la siguiente en tu mensaje:
+En general, puedes lograr que ChatGPT genere el código para un elemento `article` incluyendo una instrucción similar a la siguiente en tu mensaje:
 
+```text
+In the main section, add an article element where the article title is "[title]" as a second-level heading.
+```
+
+```text
 En la sección principal, agregue un elemento de artículo donde el título del artículo sea "[ título ]" como encabezado de segundo nivel.
-El segundo elemento nuevo de diseño de página HTML que se muestra anteriormente en la figura 12.2 es aside, sobre el que aprenderá a continuación.
-
-### 12.2.3 Incluir una barra lateral en su página
-
-Utilice el asideelemento para marcar un área de la barra lateral de una página que contenga contenido indirectamente relacionado con el contenido exclusivo de la página (en el diseño de este capítulo, ese contenido exclusivo se refiere a lo que aparece en el articleelemento). A continuación, se muestran algunos casos de uso para una barra lateral de este tipo:
-
-Una lista de enlaces a páginas del sitio relacionadas con el contenido principal de la página.
-
-Las últimas noticias del sitio
-
-Un canal de redes sociales
-
-Uno o más anuncios
-
-Un asideelemento puede aparecer en cualquier parte dentro del mainelemento (y puede aparecer varias veces en la página). En el diseño de la página del artículo de este capítulo, el asideelemento aparece justo después del articleelemento de la página, como se muestra en el siguiente ejemplo:
-
-```html
 ```
 
-En general, para que ChatGPT genere el código de un asideelemento, incluya una instrucción similar a la siguiente en su solicitud:
+El segundo elemento nuevo de diseño de página HTML que se muestra anteriormente en la figura 12.2 es `aside`, sobre el que aprenderá a continuación.
 
+### 12.2.3 Incluir una sidebar - barra lateral en su página
+
+Utilice el elemento `aside` para marcar un área de la barra lateral de una página que contenga contenido indirectamente relacionado con el contenido exclusivo de la página (en el diseño de este capítulo, ese contenido exclusivo se refiere a lo que aparece en el elemento `article`). A continuación, se muestran algunos casos de uso para una barra lateral de este tipo:
+
+* Una lista de enlaces a páginas del sitio relacionadas con el contenido principal de la página.
+
+* Las últimas noticias del sitio
+
+* Un canal de redes sociales
+
+* Uno o más anuncios
+
+Un elemento `aside` puede aparecer en cualquier parte dentro del elemento `main` (y puede aparecer varias veces en la página). En el diseño de la página del artículo de este capítulo, el elemento `aside` aparece justo después del elemento `article` de la página, como se muestra en el siguiente ejemplo:
+
+```html
+<main>
+    <article>
+        <h2>Article Title</h2>
+        <p>Introductory paragraph</p>
+        <section>
+            <h3>Section 1 heading</h3>
+            <p>
+                Section 1 paragraph 1
+            </p>
+            <p>
+                Section 1 paragraph 2
+            </p>
+            <p>
+                etc.
+            </p>
+        </section>
+        <section>
+            <h3>Section 2 heading</h3>
+            <p>
+                Section 2 paragraph 1
+            </p>
+            <p>
+                Section 2 paragraph 2
+            </p>
+            <p>
+                etc.
+            </p>
+        </section>
+        <section>
+            <h3>Section 3 heading</h3>
+            <p>
+                Section 3 paragraph 1
+            </p>
+            <p>
+                Section 3 paragraph 2
+            </p>
+            <p>
+                etc.
+            </p>
+        </section>
+    </article>
+    <aside>
+        <h3>Aside heading</h3>
+        <p>
+            Aside paragraph 1
+        </p>
+        <p>
+            Aside paragraph 2
+        </p>
+        <p>
+            etc.
+        </p>
+    </aside>
+</main>
+```
+
+En general, para que ChatGPT genere el código de un elemento `aside`, incluya una instrucción similar a la siguiente en su solicitud:
+
+```text
+At the bottom of the main section, add an aside element where the aside title is "[title]" as a third-level heading.
+```
+
+```text
 En la parte inferior de la sección principal, agregue un elemento aparte donde el título sea "[ título ]" como encabezado de tercer nivel.
+```
+
 Como parte del enfoque más práctico de este capítulo, en las siguientes secciones aprenderá cómo agregar nuevos elementos a su página en lugar de pedirle a ChatGPT que genere esos elementos.
 
 ### 12.2.4 Añadir nuevas secciones al artículo
 
 Los artículos pueden ser breves o extensos. En el caso de un artículo breve, no es un problema incluir el texto y los encabezados en el mensaje de ChatGPT y dejar que el modelo haga el trabajo pesado por usted. Sin embargo, ese enfoque no funciona tan bien en el caso de artículos extensos, ya que los mensajes terminan siendo extremadamente extensos. Esa extensión puede causar dos problemas:
 
-Es posible que exceda el número máximo de caracteres permitidos en un mensaje.
+* Es posible que exceda el número máximo de caracteres permitidos en un mensaje.
 
-Cuanto más largo sea el mensaje, más probable será que ChatGPT pierda el rumbo al generar una respuesta.
+* Cuanto más largo sea el mensaje, más probable será que ChatGPT pierda el rumbo al generar una respuesta.
 
 Por estos motivos, en el proyecto de este capítulo, solo le pedirás a ChatGPT que cree un esqueleto del diseño de la página. Luego, le darás más cuerpo a ese esqueleto agregando el resto del contenido del artículo a mano.
 
 El código HTML devuelto por ChatGPT se verá, en parte, así:
 
 ```html
+<main>
+    <article>
+        <h2>Travel Guide to Narnia</h2>
+        <!-- Article content goes here -->
+    </article>
+</main>
 ```
 
-Estos son los pasos a seguir para agregar un nuevo sectionelemento al artículo:
+Estos son los pasos a seguir para agregar un nuevo elemento `section` al artículo:
 
    1. Abra el archivo HTML en un editor de texto.
 
-   2. Coloque el cursor inmediatamente después del <!-- Article content goes here -->marcador de texto, como se muestra en la figura 12.3.
+   2. Coloque el cursor inmediatamente después del `<!-- Article content goes here -->` text placeholder, como se muestra en la figura 12.3.
+
+![image](https://github.com/user-attachments/assets/19e684f1-d5a3-47bb-933a-737fbe8bbaff)
 
 
-
-Figura 12.3 Coloque el cursor como se muestra aquí.
+**Figura 12.3 Coloque el cursor como se muestra aquí.**
 
    3. Presione Enter o Retorno para comenzar una nueva línea.
 
-   4. Escriba <section>. Si está utilizando un editor de código, debería agregar automáticamente la </section>etiqueta (aunque es posible que deba presionar la tecla Tab para que esto suceda). De lo contrario, escriba </section>y luego coloque el cursor entre las etiquetas <section>y .</section>
+   4. Escriba `<section>`. Si está utilizando un editor de código, debería agregar automáticamente la etiqueta `</section>` (aunque es posible que deba presionar la tecla Tab para que esto suceda). De lo contrario, escriba `</section>` y luego coloque el cursor entre las etiquetas `<section>` y `</section>`.
 
-   5. Pulse Enter o Return. Ahora tendrá un nuevo sectionelemento listo para usar, como se muestra en la figura 12.4.
+   5. Pulse Enter o Return. Ahora tendrá un nuevo elemento `section` listo para usar, como se muestra en la figura 12.4.
 
+![image](https://github.com/user-attachments/assets/0d0a2deb-8909-4c87-86b6-81e87a5e400d)
 
+**Figura 12.4 El nuevo elemento `section`, listo para ser rellenado**
 
-Figura 12.4 El nuevo sectionelemento, listo para ser rellenado
-
-   6. Escribe <h3>. Si estás usando un editor de código, debería agregar la </h3>etiqueta automáticamente (aunque es posible que debas presionar la tecla Tab para que esto suceda). De lo contrario, escribe </h3>y luego coloca el cursor entre las etiquetas <h3>y .</h3>
+   6. Escribe `<h3>`. Si estás usando un editor de código, debería agregar la etiqueta `</h3>` automáticamente (aunque es posible que debas presionar la tecla Tab para que esto suceda). De lo contrario, escribe `</h3>` y luego coloca el cursor entre las etiquetas `<h3>` y `</h3>`.
 
    7. Escriba el encabezado o título de la sección, como se muestra en la figura 12.5. (Todavía no está agregando los párrafos. Lo abordaré en la siguiente sección).
 
+![image](https://github.com/user-attachments/assets/7906d4d0-802e-4d58-a26d-c08dede64712)
 
-
-Figura 12.5 Escriba un título o encabezado para la nueva sección.
+**Figura 12.5 Escriba un título o encabezado para la nueva sección.**
 
    8. Para agregar más secciones, coloque el cursor inmediatamente después de la </section>etiqueta del sectionelemento que acaba de agregar y luego siga los pasos 3 a 7.
 
