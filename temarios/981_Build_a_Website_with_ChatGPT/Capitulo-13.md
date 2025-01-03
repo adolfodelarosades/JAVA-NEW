@@ -19,17 +19,17 @@ En este capítulo se ofrecen versiones comentadas del código HTML, CSS y JavaSc
 
 Como mencioné en la introducción, el proyecto de este capítulo es un catálogo de cursos de una sola página para una universidad ficticia. La página final incluirá los siguientes componentes:
 
-Un elemento de encabezado que incluye el logotipo y el título del sitio web.
+* Un elemento de header que incluye el logotipo y el título del sitio web.
 
-Un elemento principal que comienza con los controles para filtrar, ordenar y buscar en el catálogo.
+* Un elemento main que comienza con los controles para filtrar, ordenar y buscar en el catálogo.
 
-Para cada curso, un elemento vertical, a veces llamado mosaico , que muestra la imagen del curso, el título, la identificación, el instructor, el departamento, el semestre y la descripción.
+* Para cada curso, un elemento vertical, a veces llamado *tile-mosaico*, que muestra la imagen del curso, el título, la identificación, el instructor, el departamento, el semestre y la descripción.
 
-Un elemento de pie de página que incluye un aviso de derechos de autor
+* Un elemento de footer que incluye un aviso de derechos de autor
 
-La figura 13.1 muestra un ejemplo de catálogo de cursos creado con el código proporcionado por ChatGPT. La página de ejemplo es una colección de mosaicos, cada uno de los cuales contiene la información de un curso universitario. Este tipo de diseño se puede utilizar para otros tipos de contenido, como un catálogo de productos, una lista de servicios disponibles, pedidos de clientes o prácticamente cualquier tipo de datos estructurados. El denominador común en todos estos proyectos es que los datos de la página web subyacente residen originalmente en un archivo de hoja de cálculo de Excel, por lo que necesita saber cómo obtener datos de Excel en un formato que el navegador web pueda comprender.
+La figura 13.1 muestra un ejemplo de catálogo de cursos creado con el código proporcionado por ChatGPT. La página de ejemplo es una colección de tiles-mosaicos, cada uno de los cuales contiene la información de un curso universitario. Este tipo de diseño se puede utilizar para otros tipos de contenido, como un catálogo de productos, una lista de servicios disponibles, pedidos de clientes o prácticamente cualquier tipo de datos estructurados. El denominador común en todos estos proyectos es que los datos de la página web subyacente residen originalmente en un archivo de hoja de cálculo de Excel, por lo que necesita saber cómo obtener datos de Excel en un formato que el navegador web pueda comprender.
 
-
+![image](https://github.com/user-attachments/assets/1a9604eb-3b47-4b55-bf87-5527a5e131cf)
 
 **Figura 13.1 Un catálogo de cursos generado por ChatGPT**
 
@@ -41,105 +41,121 @@ Cuando se desea mostrar datos en una página web, uno de los problemas más comu
 
 Excel es una aplicación muy común para las necesidades de bases de datos livianas porque resulta familiar para la mayoría de las personas, la entrada de datos es relativamente sencilla y el formato de filas y columnas de una hoja de cálculo refleja el formato de filas y columnas que requieren la mayoría de los datos. Para utilizar datos de Excel en la Web, debe convertirlos a un formato adecuado. Pronto abordaré esa conversión, pero por ahora, debe asegurarse de que sus datos de Excel estén listos. Aquí, "listos" significa que los datos de Excel deben tener las siguientes características:
 
-Los datos son un rango o un rango que se ha convertido en una tabla.
+* Los datos son un rango o un rango que se ha convertido en una tabla.
 
-Si los datos son un rango (es decir, no una tabla), se debe cumplir una de las siguientes condiciones:
+* Si los datos son un rango (es decir, no una tabla), se debe cumplir una de las siguientes condiciones:
 
-No hay otros datos en la hoja de trabajo.
+   * No hay otros datos en la hoja de trabajo.
 
-Los datos residen en un rango con nombre.
+   * Los datos residen en un rango con nombre.
 
-Cada columna de datos tiene un encabezado único.
+* Cada columna de datos tiene un encabezado único.
 
 La figura 13.2 muestra los datos de Excel que utilizaré como ejemplo para este proyecto. Los datos son una colección de cursos universitarios y almacenan lo siguiente para cada curso:
 
-El ID del curso
+* El ID del curso
 
-El título del curso
+* El título del curso
 
-Una descripción del curso
+* Una descripción del curso
 
-El nombre del instructor del curso
+* El nombre del instructor del curso
 
-El nombre del departamento que ofrece el curso.
+* El nombre del departamento que ofrece el curso.
 
-El semestre en el que se ofrece el curso.
+* El semestre en el que se ofrece el curso.
 
 Los datos residen en un rango regular de Excel; no hay otros datos en la hoja de cálculo y cada columna tiene un encabezado único.
 
 Antes de aprender cómo convertir dichos datos de Excel a un formato utilizable, debe comprender ese formato, que es el tema de la siguiente sección.
 
-
+![image](https://github.com/user-attachments/assets/9aa47bad-9f73-4ae7-912d-b29ce80c7b4d)
 
 **Figura 13.2 Los datos de Excel que utilizaré en este proyecto**
 
 ### 13.2.2 Conozca el formato de datos JSON
 
-Más adelante en este capítulo verás que el motor detrás de una página web basada en datos es JavaScript, que puede capturar el contenido de un archivo, procesar los datos que contiene el archivo, mostrar esos datos en la página web y permitirte configurar controles para realizar búsquedas, filtros y otras manipulaciones de datos. El punto de partida de todo esto es el archivo que lee JavaScript. JavaScript puede trabajar con múltiples tipos de archivos, pero el más fácil y conveniente para nuestros propósitos es el formato JSON (JavaScript Object Notation). JSON (se pronuncia como el nombre Jason ) es una de las formas más comunes en que se manejan los datos en las páginas web.
+Más adelante en este capítulo verás que el motor detrás de una página web basada en datos es JavaScript, que puede capturar el contenido de un archivo, procesar los datos que contiene el archivo, mostrar esos datos en la página web y permitirte configurar controles para realizar búsquedas, filtros y otras manipulaciones de datos. El punto de partida de todo esto es el archivo que lee JavaScript. JavaScript puede trabajar con múltiples tipos de archivos, pero el más fácil y conveniente para nuestros propósitos es el formato JSON (JavaScript Object Notation). JSON (se pronuncia como el nombre *Jason* ) es una de las formas más comunes en que se manejan los datos en las páginas web.
 
 Una de las principales razones por las que JSON es tan popular es que los datos son texto sin formato, por lo que se pueden crear y editar con un editor de texto o código común y corriente. En las dos secciones siguientes, aprenderá a convencer a ChatGPT para que cree automáticamente datos JSON a partir de un archivo de Excel, de modo que no tenga que ensuciarse las manos con código JSON para este proyecto. Sin embargo, si desea saber cómo trabajar con datos JSON directamente, el resto de esta sección le brinda los detalles.
 
 Como mencioné, los datos JSON son texto sin formato. Sin embargo, ese texto debe configurarse utilizando la sintaxis JSON correcta. A continuación, se muestra una descripción general de la sintaxis de los datos JSON:
 
-```css
+```json
+{
+    "property1": value1,
+    "property2": value2,
+    ...
+    "propertyX": valueX
+}
 ```
 
 Lo que tienes aquí es un conjunto de uno o más pares de propiedades y valores. Para este proyecto, los pares de propiedades y valores provienen de los datos originales de Excel, como se muestra a continuación:
 
-El nombre de cada propiedad proviene del encabezado de una columna en el rango de datos de Excel.
+* El nombre de cada propiedad proviene del encabezado de una columna en el rango de datos de Excel.
 
-Los valores asignados a las propiedades provienen de una sola fila en el rango de Excel.
+* Los valores asignados a las propiedades provienen de una sola fila en el rango de Excel.
 
-Cada nombre de propiedad está rodeado por comillas dobles ( ").
+* Cada nombre de propiedad está rodeado por comillas dobles (`"`).
 
-Cada valor suele ser una cadena rodeada de comillas dobles, pero también puede ser un número o cualquier otro tipo de datos de JavaScript.
+* Cada valor suele ser una cadena rodeada de comillas dobles, pero también puede ser un número o cualquier otro tipo de datos de JavaScript.
 
-Los pares propiedad-valor están separados por comas.
+* Los pares propiedad-valor están separados por comas.
 
-El bloque de pares propiedad-valor está rodeado por llaves ( {y }).
+* El bloque de pares propiedad-valor está rodeado por llaves ( `{` y `}` ).
 
 A continuación se muestran algunos datos JSON de ejemplo, que corresponden a la primera fila de los datos de Excel mostrados anteriormente en la figura 13.2:
 
 ```json
+{
+    "Course ID": "AI101",
+    "Title": "The Art of Chatting: Building Conversational AIs",
+    "Description": "Dive into the quirky world of chatbots and virtual companions. Learn how to design AIs that can outwit humans in a battle of banter, negotiate pizza toppings, and philosophically ponder the existence of the internet.",
+    "Instructor": "Prof. Kaitlyn Wong",
+    "Department": "Artificial Intelligence",
+    "Semester": 1
+}
 ```
 
-Esta es solo una fila del rango original de Excel. Para los rangos que tienen varias filas, ChatGPT generará una matriz de objetos JSON: una coma separa cada objeto JSON y todo el conjunto de datos está rodeado por corchetes ( [y ]). A continuación, se muestra un ejemplo parcial:
+Esta es solo una fila del rango original de Excel. Para los rangos que tienen varias filas, ChatGPT generará un array de objetos JSON: una coma separa cada objeto JSON y todo el conjunto de datos está rodeado por corchetes ( `[` y `]` ). A continuación, se muestra un ejemplo parcial:
 
+```json
 [
     {
-        "ID del curso": "AI101",
-        "Título": "El arte de chatear: cómo crear IA conversacionales",
-        "Descripción": "Sumérgete en el peculiar mundo de los chatbots y los compañeros virtuales. Aprende a diseñar IA que puedan superar a los humanos en una batalla de bromas, negociar los ingredientes de la pizza y reflexionar filosóficamente sobre la existencia de Internet".
-        "Instructora": "Profesora Kaitlyn Wong",
-        "Departamento": "Inteligencia Artificial",
-        "Semestre": 1
+        "Course ID": "AI101",
+        "Title": "The Art of Chatting: Building Conversational AIs",
+        "Description": "Dive into the quirky world of chatbots and virtual companions. Learn how to design AIs that can outwit humans in a battle of banter, negotiate pizza toppings, and philosophically ponder the existence of the internet.",
+        "Instructor": "Prof. Kaitlyn Wong",
+        "Department": "Artificial Intelligence",
+        "Semester": 1
     },
     {
-        "ID del curso": "AI102",
-        "Título": "Robot Overlords 101: Una introducción a la ética de la IA",
-        "Descripción": "Explora los dilemas morales de nuestros futuros señores robots. Desde decidir quién se queda con el último trozo de tarta hasta gobernar una pequeña isla, este curso aborda las difíciles cuestiones éticas".
+        "Course ID": "AI102",
+        "Title": "Robot Overlords 101: An Introduction to AI Ethics",
+        "Description": "Explore the moral dilemmas of our future robot overlords. From deciding who gets the last piece of cake to governing a small island, this course tackles the hard ethical questions.",
         "Instructor": "Prof. Thiago Silva",
-        "Departamento": "Inteligencia Artificial",
-        "Semestre": 2
+        "Department": "Artificial Intelligence",
+        "Semester": 2
     },
     {
-        "ID del curso": "AI103",
-        "Título": "Soñar en código: IA para mentes creativas",
-        "Descripción": "Desata el poder de la IA para crear arte, música y literatura. Descubre cómo los algoritmos pueden inspirarse en los sueños y cómo interpretar las obras de arte surrealistas producidas por cerebros de silicio".
-        "Instructora": "Profesora Anika Singh",
-        "Departamento": "Inteligencia Artificial",
-        "Semestre": 3
+        "Course ID": "AI103",
+        "Title": "Dreaming in Code: AI for Creative Minds",
+        "Description": "Unleash the power of AI to create art, music, and literature. Learn how algorithms can be inspired by dreams and how to interpret the surreal artworks produced by silicon brains.",
+        "Instructor": "Prof. Anika Singh",
+        "Department": "Artificial Intelligence",
+        "Semester": 3
     },
 ...
     {
-        "ID del curso": "AI402",
-        "Título": "Fantasma en la máquina: inteligencia artificial e investigación paranormal",
-        "Descripción": "Investiga el valle inquietante con IA. Descubre cómo se utiliza la inteligencia artificial para explorar actividades paranormales, comunicarte con espíritus y desacreditar o probar mitos antiguos".
+        "Course ID": "AI402",
+        "Title": "Ghost in the Machine: AI and Paranormal Research",
+        "Description": "Investigate the uncanny valley with AI. Learn how artificial intelligence is used to explore paranormal activities, communicate with spirits, and debunk or prove age-old myths.",
         "Instructor": "Prof. Sven Eriksson",
-        "Departamento": "Inteligencia Artificial",
-        "Semestre": 1
+        "Department": "Artificial Intelligence",
+        "Semester": 1
     }
 ]
+```
 
 ChatGPT necesita algunos datos para trabajar, por supuesto, por lo que cargar los datos de Excel es el tema de la siguiente sección.
 
@@ -155,19 +171,19 @@ Estos son los pasos a seguir:
 
    2. Inicie una nueva sesión de chat de ChatGPT 4.
 
-   3. En el lado izquierdo del cuadro de texto del mensaje, haga clic en el ícono Adjuntar archivos (el clip; consulte la figura 13.3) para mostrar el cuadro de diálogo Abrir.
+   3. En el lado izquierdo del cuadro de texto del mensaje, haga clic en el ícono Adjuntar archivos (el clip; consulte la figura 13.3) para mostrar el cuadro de diálogo Abrir - Open dialog.
 
+![image](https://github.com/user-attachments/assets/2fd33fdb-006b-48d7-a26d-0e8565d32a78)
 
-
-Figura 13.3 Haga clic en Adjuntar archivos (el clip) para cargar su archivo de Excel.
+**Figura 13.3 Haga clic en Adjuntar archivos (el clip) para cargar su archivo de Excel.**
 
    4. Busque y seleccione el archivo de Excel que contiene los datos que desea convertir.
 
    5. Haga clic en Abrir. ChatGPT cargará el archivo y aparecerá un ícono del archivo en el chat, como se muestra en la figura 13.4.
 
+![image](https://github.com/user-attachments/assets/11f5201b-5a8d-4c05-ab24-a98cd7d81e06)
 
-
-Figura 13.4 El archivo Excel cargado aparece como un ícono en la transcripción del chat.
+**Figura 13.4 El archivo Excel cargado aparece como un ícono en la transcripción del chat.**
 
 Con el archivo Excel adjunto al chat, está listo para solicitarle a ChatGPT que convierta sus datos al formato JSON.
 
@@ -175,37 +191,66 @@ Con el archivo Excel adjunto al chat, está listo para solicitarle a ChatGPT que
 
 ChatGPT (o al menos, la versión del chatbot que obtienes con una suscripción a ChatGPT Plus) tiene capacidades de procesamiento de datos excelentes y sólidas. Estas incluyen:
 
-Extraer datos de un archivo de hoja de cálculo de Excel
+* Extraer datos de un archivo de hoja de cálculo de Excel
 
-Convirtiendo esos datos al formato JSON
+* Convirtiendo esos datos al formato JSON
 
-Escribir los datos convertidos en un archivo JSON (que utiliza la extensión de archivo .json)
+* Escribir los datos convertidos en un archivo JSON (que utiliza la extensión de archivo `.json`)
 
-Al igual que con todo lo relacionado con ChatGPT, estas funciones se habilitan mediante un mensaje. Cuando esté listo para escribir el mensaje, tenga en cuenta que existen varios escenarios comunes que se deben tener en cuenta:
+Al igual que con todo lo relacionado con ChatGPT, estas funciones se habilitan mediante un prompt. Cuando esté listo para escribir el prompt, tenga en cuenta que existen varios escenarios comunes que se deben tener en cuenta:
 
-Los datos de Excel que desea convertir a JSON se encuentran en un rango o una tabla con nombre. En este caso, puede utilizar el nombre del rango o de la tabla.En tu mensaje:
+* *The Excel data you want to convert to JSON resides either in a named range or in a named table - Los datos de Excel que desea convertir a JSON se encuentran en un rango o una tabla con nombre*. En este caso, puede utilizar el nombre del rango o de la tabla en tu prompt:
 
+```text
+In the uploaded Excel file, please convert the range named "Crypto" to JSON format and output the result as a JSON file.
+```
+
+```text
 En el archivo Excel cargado, convierta el rango llamado "Crypto" al formato JSON y genere el resultado como un archivo JSON.
-El archivo de Excel contiene una sola hoja de cálculo, y esa hoja de cálculo no contiene nada más que el rango de datos que desea convertir a JSON. En este caso, un mensaje como el siguiente debería ser suficiente:
+```
 
+* *The Excel file contains a single worksheet, and that worksheet contains nothing but the range of data you want to convert to JSON - El archivo de Excel contiene una sola hoja de cálculo, y esa hoja de cálculo no contiene nada más que el rango de datos que desea convertir a JSON*. En este caso, un mensaje como el siguiente debería ser suficiente:
+
+```text
+In the uploaded Excel file, please convert the range to JSON format and output the result as a JSON file.
+```
+
+```text
 En el archivo Excel cargado, convierta el rango al formato JSON y genere el resultado como un archivo JSON.
+```
+
 Este es el mensaje que puede utilizar para el archivo Excel de ejemplo incluido con los archivos de muestra de este capítulo.
 
-El archivo de Excel contiene varias hojas de cálculo, pero el rango que desea convertir se encuentra en la primera. Si no especifica una hoja de cálculo, ChatGPT convierte automáticamente un rango en la primera, por lo que puede usar un mensaje como el siguiente:
+* *The Excel file contains multiple worksheets, but the range you want to convert is in the first worksheet.  - El archivo de Excel contiene varias hojas de cálculo, pero el rango que desea convertir se encuentra en la primera*. Si no especifica una hoja de cálculo, ChatGPT convierte automáticamente un rango en la primera, por lo que puede usar un mensaje como el siguiente:
 
+```text
+In the uploaded Excel file, please convert the range to JSON format and output the result as a JSON file.
+```
+
+```text
 En el archivo Excel cargado, convierta el rango al formato JSON y genere el resultado como un archivo JSON.
-El archivo de Excel contiene varias hojas de cálculo y el rango no se encuentra en la primera. En este caso, la solicitud debe especificar el nombre de la hoja de cálculo que contiene los datos:
+```
 
+
+* *The Excel file contains multiple worksheets, and your range is not in the first worksheet - El archivo de Excel contiene varias hojas de cálculo y el rango no se encuentra en la primera*. En este caso, la solicitud debe especificar el nombre de la hoja de cálculo que contiene los datos:
+
+```text
+In the uploaded Excel file, please convert the range in the worksheet named "My Data" to JSON format and output the result as a JSON file.
+```
+
+```text
 En el archivo Excel cargado, convierta el rango en la hoja de trabajo denominada "Mis datos" al formato JSON y genere el resultado como un archivo JSON.
-Cuando envías tu solicitud, ChatGPT comienza a analizar el archivo de Excel, extraer los datos y convertirlos al formato JSON. Cuando este trabajo está completo, ChatGPT te informa y te ofrece un enlace de descarga para el archivo JSON resultante, como se muestra en la figura 13.5. Haz clic en el enlace para descargar el archivo JSON a tu computadora.
+```
 
+Cuando envías tu prompt, ChatGPT comienza a analizar el archivo de Excel, extraer los datos y convertirlos al formato JSON. Cuando este trabajo está completo, ChatGPT te informa y te ofrece un enlace de descarga para el archivo JSON resultante, como se muestra en la figura 13.5. Haz clic en el enlace para descargar el archivo JSON a tu computadora.
 
+![image](https://github.com/user-attachments/assets/c8766fe1-2a4a-4acf-b0fd-d6fb43316bb6)
 
 **Figura 13.5 Cuando ChatGPT haya convertido sus datos de Excel a JSON, ofrecerá un enlace para descargar el archivo JSON.**
 
 En este punto, es una buena idea echar un vistazo rápido al archivo JSON descargado para asegurarse de que ChatGPT haya hecho todo correctamente. Haga doble clic en el archivo para cargarlo en la aplicación predeterminada de su computadora para este tipo de archivo. Debería ver sus datos en formato JSON; la figura 13.6 muestra un ejemplo.
 
-
+![image](https://github.com/user-attachments/assets/19a97466-53a8-4773-b5f9-99fba32a7fbf)
 
 **Figura 13.6 Es una buena idea ver los datos JSON para asegurarse de que ChatGPT lo hizo correctamente.**
 
@@ -215,26 +260,58 @@ Si el archivo JSON contiene datos incorrectos, lo más probable es que el proble
 
 En este momento tienes un archivo JSON y más adelante tendrás una página web creada por ChatGPT. ¿Cómo se obtienen esos datos JSON en esa página web? Esa es una tarea de JavaScript, por lo que cuando llega el momento de solicitarle a ChatGPT el código JavaScript de tu página, comienzas con la siguiente solicitud:
 
-Obtener el contenido del archivo nombre_archivo .
-Esto le indica a ChatGPT que genere código que extraiga el contenido de lo que esté en el archivo llamado filename. Por ejemplo, para college_courses.jsonel archivo de este proyecto, el mensaje se vería así:
+```text
+Fetch the contents of the file filename.
+```
 
+```text
+Obtener el contenido del archivo nombre_archivo.
+```
+
+Esto le indica a ChatGPT que genere código que extraiga el contenido de lo que esté en el archivo llamado `filename`. Por ejemplo, para el archivo `college_courses.json` de este proyecto, el mensaje se vería así:
+
+```text
+Fetch the contents of the file college_courses.json.
+```
+
+```text
 Obtenga el contenido del archivo college_courses.json.
+```
 
-**NOTA**: El método JavaScript que extrae el contenido de un archivo se llama fetch, por lo que el uso del verbo fetch en la solicitud es deliberado.
+**NOTA**: El método JavaScript que extrae el contenido de un archivo se llama `fetch`, por lo que el uso del verbo ***fetch*** en la solicitud es deliberado.
 
-El código JavaScript resultante carga todos los datos JSON en la memoria, por lo que el siguiente paso es pedirle a ChatGPT que genere código JavaScript para escribir esos datos en la página web. Por ejemplo, supongamos que el código de su página web incluye un articleelemento vacío y desea que todos los datos aparezcan en ese elemento. Un escenario común es mostrar cada registro de los datos como un elemento separado section. Por lo tanto, su solicitud comenzaría así:
+El código JavaScript resultante carga todos los datos JSON en la memoria, por lo que el siguiente paso es pedirle a ChatGPT que genere código JavaScript para escribir esos datos en la página web. Por ejemplo, supongamos que el código de su página web incluye un elemento `article` vacío y desea que todos los datos aparezcan en ese elemento. Un escenario común es mostrar cada registro de los datos separados como un elemento `section`. Por lo tanto, su prompt comenzaría así:
 
+```text
+For each record fetched from the JSON file, add a section element to the article element and populate the section element with the following:
+```
+
+```text
 Para cada registro obtenido del archivo JSON, agregue un elemento de sección al elemento de artículo y complete el elemento de sección con lo siguiente:
+```
+
 A continuación, deberá especificar los elementos que desea utilizar para mostrar los datos. Por ejemplo, puede utilizar un encabezado de tercer nivel para el título de un registro, si lo tuviera. De manera similar, puede utilizar un elemento de párrafo si el registro tuviera un elemento de texto largo.
 
 Aquí está el mensaje para el proyecto de este capítulo:
 
+```text
+For each record fetched from the JSON file, add a section 
+element to the article element and populate the section 
+element with the following three elements:
+ * A third-level heading that includes the record's "Title" text.
+ * A div element with the text "Course ID: ", the record's "Course ID" value, a line break, the text "Instructor: ", the record's "Instructor" value, a line break, the text "Department: ", the record's "Department" value, a line break, the text "Semester: ", the record's "Semester" value, and a line break.
+ * A paragraph element that includes the record's "Description" value.
+```
+
+```text
 Para cada registro obtenido del archivo JSON, agregue una sección
 elemento al elemento del artículo y rellenar la sección
 elemento con los tres elementos siguientes:
  * Un encabezado de tercer nivel que incluye el texto "Título" del registro.
  * Un elemento div con el texto "ID del curso: ", el valor "ID del curso" del registro, un salto de línea, el texto "Instructor: ", el valor "Instructor" del registro, un salto de línea, el texto "Departamento: ", el valor "Departamento" del registro, un salto de línea, el texto "Semestre: ", el valor "Semestre" del registro y un salto de línea.
  * Un elemento de párrafo que incluye el valor "Descripción" del registro.
+```
+
 El código JavaScript resultante recorrerá todos los registros JSON recuperados y escribirá cada uno de ellos en la página.
 
 Una vez que haya obtenido y mostrado sus datos JSON, es momento de aprender a manipular todos esos datos en la página web que va a crear.
@@ -251,35 +328,67 @@ Al realizar una búsqueda, el usuario escribe una palabra o frase que representa
 
 Un componente de búsqueda de una página web es casi siempre un cuadro de texto. Por lo tanto, en el mensaje de ChatGPT para el código HTML, debe incluir dicho cuadro de texto. A continuación, se muestra un ejemplo:
 
+
+```text
+A text box with the ID "Search" and the placeholder "Search".
+```
+
+```text
 Un cuadro de texto con el ID "Buscar" y el marcador de posición "Buscar".
-Aquí, un marcador de posición es una palabra o frase que aparece en el cuadro de texto para que el usuario sepa lo que debe ingresar. Tan pronto como el usuario comienza a escribir texto en el cuadro, el marcador de posición desaparece. Tenga en cuenta también que incluir un valor de ID para el componente hace que el código JavaScript sea más fácil de leer.
+```
+
+Aquí, un *placeholder* es una palabra o frase que aparece en el text box - cuadro de texto para que el usuario sepa lo que debe ingresar. Tan pronto como el usuario comienza a escribir texto en el cuadro, el placeholder desaparece. Tenga en cuenta también que incluir un valor de ID para el componente hace que el código JavaScript sea más fácil de leer.
 
 Cuando le pides a ChatGPT el código JavaScript, debes incluir cómo quieres que el código maneje el texto de búsqueda. Generalmente, le pides a JavaScript que monitoree el campo de búsqueda y, cuando el usuario comienza a escribir, reemplace los registros JSON que se muestran solo con aquellos que coinciden con el texto escrito. Aquí hay un ejemplo de solicitud:
 
+```text
+When the user types text in the "Search" text box, 
+repopulate the article element with just the records 
+that include the search text in any field.
+```
+
+```text
 Cuando el usuario escribe texto en el cuadro de texto "Buscar",
 Vuelva a llenar el elemento del artículo solo con los registros
 que incluyan el texto de búsqueda en cualquier campo.
+```
+
 En este ejemplo se supone que desea aplicar el texto de búsqueda a todos los campos de sus datos JSON. Es posible que desee considerar un par de excepciones:
 
-Si hay uno o más campos que no desea incluir en la búsqueda (como un campo que contiene datos numéricos), agréguelos al final del mensaje (donde y son los nombres de los campos que desea excluir).except the X and Y fieldsXY
+* Si hay uno o más campos que no desea incluir en la búsqueda (como un campo que contiene datos numéricos), agrégue `except the X` y `Y fields` al final del prompt (donde `X` y `Y` son los nombres de los campos que desea excluir).
 
-Si solo desea aplicar la búsqueda a uno o más campos, reemplace any fielden el mensaje con , donde y son los nombres de los campos que desea buscar.the A and B fieldsAB
+* Si solo desea aplicar la búsqueda a uno o más campos, reemplace `any field` en el prompt `the` `A` `and` `B` `fields`, donde `A` y `B` son los nombres de los campos que desea buscar.
 
 La búsqueda es probablemente la función de manipulación de datos más común (y posiblemente la más útil), pero es necesario conocer otras dos, la primera de las cuales es el filtrado.
 
 ### 13.4.2 Filtrado de datos
 
-Con el filtrado, el usuario muestra un subconjunto de los datos JSON, generalmente eligiendo uno de los valores únicos que aparecen en un campo en particular. Por ejemplo, en el proyecto de este capítulo, los usuarios pueden filtrar los datos del curso en función de los valores únicos en los campos Departmenty Instructor.
+Con el filtrado, el usuario muestra un subconjunto de los datos JSON, generalmente eligiendo uno de los valores únicos que aparecen en un campo en particular. Por ejemplo, en el proyecto de este capítulo, los usuarios pueden filtrar los datos del curso en función de los valores únicos en los campos `Department` y `Instructor`.
 
-Un componente de filtro de página web suele ser una lista desplegable que contiene los elementos únicos de un campo en particular, por lo que en la solicitud del código HTML debe solicitar dicho componente. A continuación, se muestran las dos solicitudes utilizadas en el proyecto de este capítulo:
+Un componente de filtro de página web suele ser una *drop-down list - lista desplegable* que contiene los elementos únicos de un campo en particular, por lo que en la solicitud del código HTML debe solicitar dicho componente. A continuación, se muestran los dos prompts utilizadas en el proyecto de este capítulo:
 
+```text
+A drop-down list with the ID "Department" and the initial value "Department (All)".
+A drop-down list with the ID "Instructor" and the initial value "Instructor (All)".
+```
+
+```text
 Una lista desplegable con el ID "Departamento" y el valor inicial "Departamento (Todos)".
 Una lista desplegable con el ID "Instructor" y el valor inicial "Instructor (Todos)".
+```
+
 Tenga en cuenta que el mensaje aplica valores de identificación a cada lista y también rellena cada lista con un valor inicial. En ambos casos, al seleccionar este valor inicial de la lista, se vuelve a rellenar la página web con la base de datos completa.
 
-Cuando le pides a ChatGPT que genere tu código JavaScript, primero debes incluir que quieres que tus listas desplegables se completen con los valores únicos en los campos de datos correspondientes. Por ejemplo, aquí hay un mensaje que completa la lista desplegable Departamento con los valores únicos del Departmentcampo:
+Cuando le pides a ChatGPT que genere tu código JavaScript, primero debes incluir que quieres que tus listas desplegables se completen con los valores únicos en los campos de datos correspondientes. Por ejemplo, aquí hay un mensaje que completa la lista desplegable Departamento con los valores únicos del campo `Department`:
 
+```text
+Extract all the unique "Department" values and use them to populate the "Department" drop-down list.
+```
+
+```text
 Extraiga todos los valores únicos de "Departamento" y utilícelos para completar la lista desplegable "Departamento".
+```
+
 A continuación, especifica cómo quieres que el código gestione la selección de un elemento de una lista por parte del usuario. La idea general es que JavaScript monitoree la lista y, cuando el usuario seleccione un elemento, el código reemplace los registros JSON mostrados únicamente por aquellos que coincidan con el elemento de la lista seleccionado. A continuación, se muestra un ejemplo de solicitud para el Departmentcampo:
 
 Cuando el usuario selecciona un elemento de la lista "Departamento", vuelva a llenar el elemento del artículo solo con los registros que coincidan con el departamento seleccionado. Si el usuario selecciona el primer elemento de la lista, vuelva a llenar el elemento del artículo con todos los registros importados desde el archivo JSON.
