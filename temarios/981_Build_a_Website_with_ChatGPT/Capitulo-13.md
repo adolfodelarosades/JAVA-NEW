@@ -878,40 +878,40 @@ Usando las anotaciones de la sección anterior como guía, aquí te mostraré al
 
 El código HTML de este proyecto es mínimo porque la mayor parte de la página se genera mediante JavaScript. Por eso, tengo un par de sugerencias:
 
-Siéntete libre de agregar más campos de ordenación agregando nuevos elementos a la lista desplegable Ordenar. Solo recuerda solicitarle a ChatGPT que genere el código JavaScript para manejar la ordenación en los nuevos campos.
+* Siéntete libre de agregar más campos de ordenación agregando nuevos elementos a la lista desplegable Ordenar. Solo recuerda solicitarle a ChatGPT que genere el código JavaScript para manejar la ordenación en los nuevos campos.
 
-En la sección de pie de página del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
+* En la sección de pie de página del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-Para utilizar otro color de fondo de página, especifique una palabra clave de color diferente para la propiedad bodydel elemento background-color.
+* Para utilizar otro color de fondo de página, especifique una palabra clave de color diferente para la propiedad `background-color` del elemento `body`.
 
-Para utilizar otro color de fondo para el encabezado y el pie de página, especifique una nueva palabra clave de color para la propiedad de los elementos headery .footerbackground-color
+* Para utilizar otro color de fondo para el encabezado y el pie de página, especifique una nueva palabra clave de color para la propiedad `background-color` de los elementos `header` y `footer`.
 
-Para utilizar un color diferente para el texto de la página, especifique una palabra clave de color diferente para la propiedad bodydel elemento color.
+* Para utilizar un color diferente para el texto de la página, especifique una palabra clave de color diferente para la propiedad `color` del elemento `body`.
 
-Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la unidad `px` en su lugar.
 
-Para cualquier valor de margen o relleno, puede cambiar el número para aumentar o disminuir el relleno o los márgenes. En cada caso, asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de margen o padding, puede cambiar el número para aumentar o disminuir el padding o los márgenes. En cada caso, asegúrese de dejar la unidad `px` en su lugar.
 
-Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+* Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
 ## 13.8 ¿A dónde ir desde aquí?
 
-Mi objetivo en este libro ha sido mostrarte que, aunque parezca mágico que ChatGPT pueda generar código sofisticado para páginas web a pedido, el verdadero secreto es convertir la visión de tu página web en un mensaje específico y detallado que le diga a ChatGPT exactamente lo que quieres. Has visto muchos ejemplos de mensajes de este tipo en este libro y, a lo largo del camino, has aprendido todo lo que necesitas saber sobre la construcción y el diseño de páginas web. Esa es una gran noticia porque significa que ahora tienes el conocimiento y la experiencia para crear casi cualquier cosa que quieras en la web. Cuando estés listo para crear algo audaz y hermoso, ChatGPT estará allí para que conviertas ese sueño en realidad. Todo está a solo un mensaje de distancia.
+Mi objetivo en este libro ha sido mostrarte que, aunque parezca mágico que ChatGPT pueda generar código sofisticado para páginas web a pedido, el verdadero secreto es convertir la visión de tu página web en un mensaje específico y detallado que le diga a ChatGPT exactamente lo que quieres. Has visto muchos ejemplos de mensajes de este tipo en este libro y, a lo largo del camino, has aprendido todo lo que necesitas saber sobre la construcción y el diseño de páginas web. Esa es una gran noticia porque significa que ahora tienes el conocimiento y la experiencia para crear casi cualquier cosa que quieras en la web. Cuando estés listo para crear algo audaz y hermoso, ChatGPT estará allí para que conviertas ese sueño en realidad. Todo está a solo un prompt de distancia.
 
 ## Resumen
 
 * Para convertir datos de Excel a JSON, asegúrese de que los datos residan en un rango o tabla y que cada columna tenga un encabezado único.
 
-* JSON es un conjunto de uno o más pares de propiedades y valores separados por comas y rodeados por llaves ( {y }), donde los nombres de las propiedades están entre comillas dobles. Los valores de texto también están entre comillas dobles.
+* JSON es un conjunto de uno o más pares de propiedades y valores separados por comas y rodeados por llaves ( `{` y `}` ), donde los nombres de las propiedades están entre comillas dobles. Los valores de texto también están entre comillas dobles.
 
 * Si tiene una cuenta ChatGPT Plus, puede cargar su archivo Excel en un chat y luego solicitarle a ChatGPT que convierta sus datos a JSON y genere el resultado como un archivo que puede descargar.
 
-* Le pide a ChatGPT que genere el código de su página web con un elemento vacío (como un articleelemento); luego usa JavaScript para completarlo con los datos JSON.
+* Le pide a ChatGPT que genere el código de su página web con un elemento vacío (como un elemento `article`); luego usa JavaScript para completarlo con los datos JSON.
 
 * Las técnicas de manipulación de datos más comunes en las páginas web son la búsqueda, el filtrado y la clasificación. Puedes solicitarle a ChatGPT que genere el código JavaScript para implementar cada técnica.
 
 * Para obtener los mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
 
-* Guarde el HTML generado en el archivo index.html, el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css, y el código JavaScript generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente script.js.
+* Guarde el HTML generado en el archivo `index.html`, el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`, y el código JavaScript generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `script.js`.
