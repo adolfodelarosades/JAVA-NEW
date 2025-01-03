@@ -389,81 +389,125 @@ Extract all the unique "Department" values and use them to populate the "Departm
 Extraiga todos los valores únicos de "Departamento" y utilícelos para completar la lista desplegable "Departamento".
 ```
 
-A continuación, especifica cómo quieres que el código gestione la selección de un elemento de una lista por parte del usuario. La idea general es que JavaScript monitoree la lista y, cuando el usuario seleccione un elemento, el código reemplace los registros JSON mostrados únicamente por aquellos que coincidan con el elemento de la lista seleccionado. A continuación, se muestra un ejemplo de solicitud para el Departmentcampo:
+A continuación, especifica cómo quieres que el código gestione la selección de un elemento de una lista por parte del usuario. La idea general es que JavaScript monitoree la lista y, cuando el usuario seleccione un elemento, el código reemplace los registros JSON mostrados únicamente por aquellos que coincidan con el elemento de la lista seleccionado. A continuación, se muestra un ejemplo de prompt para el campo `Department`:
 
+```text
+When the user selects an item from the "Department" list, repopulate the article element with just the records that match the selected department. If the user selects the first item in the list, repopulate the article element with every record imported from the JSON file.
+```
+
+```text
 Cuando el usuario selecciona un elemento de la lista "Departamento", vuelva a llenar el elemento del artículo solo con los registros que coincidan con el departamento seleccionado. Si el usuario selecciona el primer elemento de la lista, vuelva a llenar el elemento del artículo con todos los registros importados desde el archivo JSON.
-La última técnica de manipulación de datos es la clasificación, que se trata en la siguiente sección.
+```
+
+La última técnica de manipulación de datos es la ordenación, que se trata en la siguiente sección.
 
 ### 13.4.3 Ordenar los datos
 
-Con la ordenación, el usuario controla el orden de los registros que se muestran, generalmente especificando un campo de alguna manera. Luego, la página reordena los registros alfabéticamente (si el campo contiene texto) o numéricamente (si el campo contiene números). En este proyecto, los usuarios pueden ordenar el catálogo de cursos en los campos Departmenty Title.
+Con la ordenación, el usuario controla el orden de los registros que se muestran, generalmente especificando un campo de alguna manera. Luego, la página reordena los registros alfabéticamente (si el campo contiene texto) o numéricamente (si el campo contiene números). En este proyecto, los usuarios pueden ordenar el catálogo de cursos en los campos `Department` y `Title`.
 
 Un componente de ordenación de páginas web suele ser una lista desplegable que contiene los nombres de los campos ordenables. Cuando le pides a ChatGPT que genere el código HTML de tu página, debes solicitar dicho componente. A continuación, se incluye un ejemplo del proyecto de este capítulo:
 
-Una lista desplegable con el ID "Ordenar" y los valores: "Ordenar por departamento" y "Ordenar por título".
-Cuando le solicitas a ChatGPT el código JavaScript, debes incluir cómo quieres que el código gestione la selección de un elemento de esta lista por parte del usuario. La idea general es que JavaScript determine qué elemento se seleccionó, ordene los registros en función de ese campo y luego vuelva a mostrar los registros ordenados en la página. A continuación, se muestra un ejemplo de solicitud de nuestro proyecto:
+```text
+A drop-down list with the ID "Sort" and the values: "Sort by Department" and "Sort by Title".
+```
 
+```text
+Una lista desplegable con el ID "Ordenar" y los valores: "Ordenar por departamento" y "Ordenar por título".
+```
+
+Cuando le solicitas a ChatGPT el código JavaScript, debes incluir cómo quieres que el código gestione la selección de un elemento de esta lista por parte del usuario. La idea general es que JavaScript determine qué elemento se seleccionó, ordene los registros en función de ese campo y luego vuelva a mostrar los registros ordenados en la página. A continuación, se muestra un ejemplo de prompt de nuestro proyecto:
+
+```text
+When the user selects "Sort by Title" from the "Sort" list, sort the displayed records on the "Title" field and then repopulate the article element with the sorted records. When the user selects "Sort by Department" from the "Sort" list, sort the displayed records on the "Department" field and then repopulate the article element with the sorted records.
+```
+
+```text
 Cuando el usuario selecciona "Ordenar por título" en la lista "Ordenar", ordena los registros mostrados en el campo "Título" y luego vuelve a llenar el elemento del artículo con los registros ordenados. Cuando el usuario selecciona "Ordenar por departamento" en la lista "Ordenar", ordena los registros mostrados en el campo "Departamento" y luego vuelve a llenar el elemento del artículo con los registros ordenados.
+```
+
 En este punto, ya sabes todo lo que se necesita para que ChatGPT cree un catálogo de cursos. La siguiente sección te guiará a través del proceso.
 
-## 13.5 Elaboración del mensaje para el catálogo de cursos
+## 13.5 Elaboración del prompt para el catálogo de cursos
 
 El proyecto de este capítulo es una página de catálogo de cursos que obtiene y luego muestra todos los datos en un archivo JSON independiente. La página incluye controles para filtrar, ordenar y buscar los datos. Este proyecto supone que ya tienes un título, un subtítulo y un logotipo; sabes qué fuentes quieres usar para los encabezados y el texto de la página; y tienes un esquema de colores listo para aplicar. Vuelve al capítulo 3 para aprender a solicitarle a ChatGPT sugerencias de título, tipografía y color.
 
-Para iniciar su solicitud, dígale a ChatGPT que desea construir una página web y que desea que genere el código por usted:
+Para iniciar su prompt, dígale a ChatGPT que desea construir una página web y que desea que genere el código por usted:
 
+```text
+I want to build a web page for a course catalog. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+```
+
+```text
 Quiero crear una página web para un catálogo de cursos. No sé programar, así que necesito que me proporciones el código.
   
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
+```
+
 Ahora describa el contenido de la página, elemento por elemento, incluyendo lo siguiente (consulte la figura 13.7):
 
-Un encabezado que incluye una imagen a la izquierda, un logotipo a la derecha y un título y subtítulo en el medio.
+* Un header que incluye una imagen a la izquierda, un logotipo a la derecha y un título y subtítulo en el medio.
 
-Un elemento de navegación que contiene dos listas desplegables para filtrar, otra lista desplegable para ordenar y un cuadro de texto para buscar.
+* Un elemento de navegación que contiene dos listas desplegables para filtrar, otra lista desplegable para ordenar y un cuadro de texto para buscar.
 
-Un elemento principal que contiene un elemento de artículo vacío
+* Un elemento main que contiene un elemento de artículo vacío
 
-Un pie de página que incluye un aviso de derechos de autor
+* Un footer que incluye un aviso de derechos de autor
 
-
+![image](https://github.com/user-attachments/assets/a7415f0b-6706-4403-9c04-3c202fc1b680)
 
 **Figura 13.7 Los elementos de la página del catálogo de cursos antes de que se representen los datos**
 
-La Figura 13.7 no muestra datos porque, como explicaré brevemente, el articleelemento vacío solo se completa a través del código JavaScript que le pide a ChatGPT que genere.
+La Figura 13.7 no muestra datos porque, como explicaré brevemente, el elemento article vacío solo se completa a través del código JavaScript que le pide a ChatGPT que genere.
 
 A continuación, solicite a ChatGPT que genere el CSS:
 
+```text
+Second, in a separate file please write the CSS code for the following:
+```
+
+```text
 En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+```
+
 A continuación, especifique el formato de la página, incluido lo siguiente:
 
-El color de fondo de la página y el color del texto.
+* El color de fondo de la página y el color del texto.
 
-Los tamaños de fuente que desea utilizar para los encabezados y el texto de la página.
+* Los tamaños de fuente que desea utilizar para los encabezados y el texto de la página.
 
-Las fuentes a utilizar para los encabezados y el texto de la página normal.
+* Las fuentes a utilizar para los encabezados y el texto de la página normal.
 
-¿Qué elementos deben ser contenedores de Flexbox? En este proyecto, estos serán el encabezado, el elemento de navegación, el elemento de artículo y cada elemento de sección.
+* ¿Qué elementos deben ser contenedores de Flexbox? En este proyecto, estos serán el encabezado, el elemento de navegación, el elemento de artículo y cada elemento de sección.
 
 Finalmente, le indica a ChatGPT que proporcione el código JavaScript:
 
+```text
+Third, in a separate file, write the JavaScript code for the following:
+```
+
+```text
 En tercer lugar, en un archivo separado, escriba el código JavaScript para lo siguiente:
+```
+
 A continuación, explica lo que quieres que haga JavaScript, incluido lo siguiente:
 
-Obtener el contenido del archivo JSON.
+* Obtener el contenido del archivo JSON.
 
-Complete las listas desplegables que requieren valores únicos de un campo en particular.
+* Complete las listas desplegables que requieren valores únicos de un campo en particular.
 
-Escriba todos los datos JSON en la página web utilizando los componentes de texto y HTML que especifique.
+* Escriba todos los datos JSON en la página web utilizando los componentes de texto y HTML que especifique.
 
-Manejar una selección de una lista desplegable de filtrado.
+* Manejar una selección de una lista desplegable de filtrado.
 
-Manejar una selección de la lista desplegable de clasificación.
+* Manejar una selección de la lista desplegable de clasificación.
 
-Manejar cuándo se escribe texto en el cuadro de búsqueda.
+* Manejar cuándo se escribe texto en el cuadro de búsqueda.
 
 Utilicé la aplicación ChatGPT de OpenAI para enviar mi mensaje a GPT-4. El código generado generó la página que se muestra en la figura 13.8.
 
-
+![image](https://github.com/user-attachments/assets/eab6d9d8-363f-44ae-81ab-bde27e94f725)
 
 **Figura 13.8 Mi catálogo de cursos**
 
@@ -482,6 +526,49 @@ Las anotaciones de código que siguen deberían ayudarle a comprender cómo func
 Aquí hay una versión anotada del código HTML que ChatGPT produjo para mi catálogo de cursos:
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1">                 ①
+    <title>University of the Future</title>
+    <link href="https://fonts.googleapis.com/css?family=               ②
+        Roboto:400,700&display=swap" rel="stylesheet">                 ②
+    <link rel="stylesheet" href="styles.css">                          ③
+    <title>Ampersand Photography</title>
+</head>
+<body>
+    <header>                                                           ④
+        <img src="images/header.png" alt="Header Image">               ④⑤
+        <div>                                                          ④
+            <h1>University of the Future</h1>                          ④⑥
+            <h2>Where tomorrow starts today</h2>                       ④⑦
+        </div>                                                         ④
+        <img src="images/logo.png" alt="University Logo">              ④⑧
+    </header>                                                          ④
+    <nav>                                                              ⑨
+        <select id="Department">                                       ⑨⑩
+            <option value="all">Department (All)</option>              ⑨⑩
+        </select>                                                      ⑨⑩
+        <select id="Instructor">                                       ⑨⑪
+            <option value="all">Instructor (All)</option>              ⑨⑪
+        </select>                                                      ⑨⑪
+        <select id="Sort">                                             ⑨⑫
+            <option value="department">Sort by Department</option>     ⑨⑫
+            <option value="title">Sort by Title</option>               ⑨⑫
+        </select>                                                      ⑨⑫
+        <input type="text" id="Search" placeholder="Search">           ⑨⑬
+    </nav>                                                             ⑨
+    <main>
+        <article></article>                                            ⑭
+    </main>
+    <footer>                                                           ⑮
+        &copy; University of the Future                                ⑮
+    </footer>                                                          ⑮
+    <script src="script.js"></script>                                  ⑯
+</body>
+</html>
 ```
 
 ① Ayuda a que la página se muestre correctamente en dispositivos móviles
@@ -519,6 +606,7 @@ Aquí hay una versión anotada del código HTML que ChatGPT produjo para mi cat�
 Tenga en cuenta que el código HTML incluye la siguiente línea:
 
 ```html
+<link rel="stylesheet" href="styles.css">
 ```
 
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
@@ -528,8 +616,67 @@ Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que desc
 Aquí hay una versión anotada del código CSS que ChatGPT produjo para mi catálogo de cursos:
 
 ```css
+body {                                 ①
+    margin: 0;                         ①
+    background-color: white;           ①
+    font-family: 'Roboto', sans-serif; ①
+    font-size: 20px;                   ①
+    color: black;                      ①
+}                                      ①
+header {
+    display: flex;                     ②
+    justify-content: space-between;    ②
+    align-items: center;
+    max-height: 200px;
+}
+header img:first-of-type {
+    height: 100%;                      ③
+}
+header img:last-of-type {
+    max-height: 150px;                 ④
+}
+header h1 {                            ⑤
+    font-size: 48px;
+    text-align: center;
+}    
+header h2 {                            ⑥
+    font-size: 28px;                   ⑥
+    font-style: italic;                ⑥
+    text-align: center;                ⑥
+}                                      ⑥
+nav {
+    display: flex;                     ⑦
+    flex-wrap: wrap;                   ⑦
+    justify-content: space-between;    ⑦
+    background-color: lightgray;
+    padding: 10px;
+}
+article {
+    display: flex;                     ⑧
+    flex-wrap: wrap;                   ⑧
+    gap: 20px;                         ⑧
+    justify-content: flex-start;       ⑧
+    margin: 20px;
+}
+section {
+    display: flex;                     ⑨
+    flex-direction: column;            ⑨
+    justify-content: space-between;    ⑨
+    flex-grow: 1;                      ⑨
+    flex-basis: 200px;                 ⑨
+    max-width: 300px;
+}
+h3 {
+    font-size: 24px;                   ⑩
+}
+footer {                               ⑪
+    background-color: navy;            ⑪
+    padding: 24px;                     ⑪
+    text-align: center;                ⑪
+    color: white;                      ⑪
+}                                      ⑪
 ```
-                                      ⑪
+                                      
 ① Diseña el color de fondo de la página, el margen y el tamaño, color y fuente del texto.
 
 ② Aplica estilo al encabezado como un contenedor Flexbox
@@ -555,6 +702,7 @@ Aquí hay una versión anotada del código CSS que ChatGPT produjo para mi catá
 En la lista de códigos HTML de antes en este capítulo, observe la siguiente línea cerca de la parte inferior:
 
 ```html
+<script src="script.js"></script>
 ```
 
 Esta etiqueta le dice al navegador web dónde encontrar el código JavaScript, que anoto en la siguiente sección.
@@ -566,8 +714,132 @@ Si tienes cuidado, está bien hacer pequeños ajustes al código HTML y CSS. Sin
 Sin embargo, si conoces un poco de JavaScript, quizás te interese saber cómo ChatGPT codificó la obtención, visualización y manipulación de los datos JSON. Aquí tienes una versión anotada del código JavaScript que ChatGPT generó para mi catálogo de cursos:
 
 ```js
+document.addEventListener('DOMContentLoaded', () => {                                   ①
+    fetch('college_courses.json')                                                       ②
+        .then(response => response.json())
+        .then(data => {
+            populateDropdowns(data);                                                    ③
+            populateArticles(data);                                                     ④
+        });
+  
+    document.getElementById('Department')                                               ⑤
+        .addEventListener('change', function() {                                        ⑤
+        filterData();                                                                   ⑤
+    });                                                                                 ⑤
+  
+    document.getElementById('Instructor')                                               ⑥
+        .addEventListener('change', function() {                                        ⑥
+        filterData();                                                                   ⑥
+    });                                                                                 ⑥
+  
+    document.getElementById('Sort')                                                     ⑦
+       .addEventListener('change', function() {                                         ⑦
+        sortData();                                                                     ⑦
+    });                                                                                 ⑦
+  
+    document.getElementById('Search')                                                   ⑧
+        .addEventListener('input', function() {                                         ⑧
+        searchData(this.value.trim());                                                  ⑧
+    });                                                                                 ⑧
+});                                                                                     ⑨
+  
+function populateDropdowns(data) {                                                      ⑩
+    const departments = new Set(data.map(course => course.Department));                 ⑩
+    const instructors = new Set(data.map(course => course.Instructor));                 ⑩
+                                                                                        ⑩
+    departments.forEach(department => {                                                 ⑩
+        document.getElementById('Department')                                           ⑩
+            .add(new Option(department, department));                                   ⑩
+    });                                                                                 ⑩
+                                                                                        ⑩
+    instructors.forEach(instructor => {                                                 ⑩
+        document.getElementById('Instructor')                                           ⑩
+            .add(new Option(instructor, instructor));                                   ⑩
+    });                                                                                 ⑩
+}                                                                                       ⑩
+  
+function populateArticles(data) {                                                       ⑪
+    const article = document.querySelector('article');                                  ⑪
+    article.innerHTML = '';                                                             ⑪
+    data.forEach(course => {                                                            ⑪
+        const section = document.createElement('section');                              ⑪
+        section.innerHTML = `                                                           ⑪
+            <h3>${course.Title}</h3>                                                    ⑪
+            <div>                                                                       ⑪
+                Course ID: ${course['Course ID']}<br>                                   ⑪
+                Instructor: ${course.Instructor}<br>                                    ⑪
+                Department: ${course.Department}<br>                                    ⑪
+                Semester: ${course.Semester}<br>                                        ⑪
+            </div>                                                                      ⑪
+            <p>${course.Description}</p>                                                ⑪
+        `;                                                                              ⑪
+        article.appendChild(section);                                                   ⑪
+    });                                                                                 ⑪
+}                                                                                       ⑪
+  
+function filterData() {                                                                 ⑫
+    fetch('college_courses.json')
+        .then(response => response.json())
+        .then(data => {
+            const departmentValue = document
+.getElementById('Department').value;
+            const instructorValue = document.
+getElementById('Instructor').value;
+            
+            let filteredData = data;
+            if (departmentValue !== 'all') {
+                filteredData = filteredData
+.filter(course => course.Department===departmentValue);
+            }
+            if (instructorValue !== 'all') {
+                filteredData = filteredData.
+filter(course => course.Instructor===instructorValue);
+            }
+            populateArticles(filteredData);
+        });
+}                                                                                       ⑬
+ 
+function sortData() {                                                                   ⑭
+    fetch('college_courses.json')                                                       ⑭
+        .then(response => response.json())                                              ⑭
+        .then(data => {                                                                 ⑭
+            const sortValue = document.getElementById('Sort').value;                    ⑭
+            data.sort((a, b) => {                                                       ⑭
+                if (sortValue === 'title') {                                            ⑭
+                    return a.Title.localeCompare(b.Title);                              ⑭
+                } else {                                                                ⑭
+                    return a.Department.localeCompare(b.Department);                    ⑭
+                }                                                                       ⑭
+            });                                                                         ⑭
+            populateArticles(data);                                                     ⑭
+        });                                                                             ⑭
+}                                                                                       ⑭
+ 
+function searchData(searchText) {                                                       ⑮
+    if (!searchText) {                                                                  ⑮
+        fetch('college_courses.json')                                                   ⑮
+            .then(response => response.json())                                          ⑮
+            .then(data => {                                                             ⑮
+                populateArticles(data);                                                 ⑮
+            });                                                                         ⑮
+        return;                                                                         ⑮
+    }                                                                                   ⑮
+                                                                                        ⑮
+    fetch('college_courses.json')                                                       ⑮
+        .then(response => response.json())                                              ⑮
+        .then(data => {                                                                 ⑮
+            const filteredData = data.filter(course =>                                  ⑮
+                course.Title.toLowerCase().includes(searchText.toLowerCase()) ||        ⑮
+                course['Course ID'].toLowerCase().includes(searchText.toLowerCase()) || ⑮
+                course.Instructor.toLowerCase().includes(searchText.toLowerCase()) ||   ⑮
+                course.Department.toLowerCase().includes(searchText.toLowerCase()) ||   ⑮
+                course.Description.toLowerCase().includes(searchText.toLowerCase())     ⑮
+            );                                                                          ⑮
+            populateArticles(filteredData);                                             ⑮
+        });                                                                             ⑮
+} 
 ```
-                                                                                       ⑮
+                                                                                       
 ① Ejecuta el código de función que sigue una vez que se ha cargado la página
 
 ② Obtiene los datos del archivo JSON
