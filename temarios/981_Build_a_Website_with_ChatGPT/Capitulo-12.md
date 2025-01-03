@@ -600,90 +600,131 @@ main {
 
 El elemento `article` aparece primero en el código HTML, por lo que se asigna a la columna izquierda y articlea la derecha. La clave aquí es el valor `2fr 1fr` de la propiedad `grid-template-columns`. Este valor de aspecto extraño define los anchos relativos de las dos columnas de la siguiente manera:
 
-Aprovecha todo el espacio horizontal disponible para el mainelemento.
+* Aprovecha todo el espacio horizontal disponible para el elemento `main`.
 
-Divide ese espacio horizontal uniformemente en tres porciones.
+* Divide ese espacio horizontal uniformemente en tres porciones.
 
-Dale dos de esas porciones a la primera columna.
+* Dale dos de esas porciones a la primera columna.
 
-Entregue la porción restante a la segunda columna.
+* Entregue la porción restante a la segunda columna.
 
-Esto le da un poco de libertad para ajustar estos anchos relativos para que se adapten a su propia página. Por ejemplo, si prefiere que el articleelemento tenga tres unidades del espacio disponible y el asideelemento solo una unidad, puede modificar la regla de la siguiente manera:
+Esto le da un poco de libertad para ajustar estos anchos relativos para que se adapten a su propia página. Por ejemplo, si prefiere que el elemento `article` tenga tres unidades del espacio disponible y el elemento `aside` solo una unidad, puede modificar la regla de la siguiente manera:
 
 ```css
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
 ```
 
 Como aprenderá en la siguiente sección, aunque CSS Grid hace que su página responda a los cambios de tamaño de la ventana del navegador, no es suficiente para que la página del artículo se muestre bien en todas las pantallas.
 
 ### 12.2.9 Ajuste del diseño de la página del artículo para pantallas pequeñas
 
-Las frunidades que presenté en la sección anterior se conocen como medidas relativas1fr porque el valor de, por ejemplo, depende del ancho disponible (suponiendo que estás trabajando con columnas de cuadrícula) en el contenedor de cuadrícula. Esto hace que tu página responda porque cuando el ancho del contenedor de cuadrícula cambia (quizás porque cambia el ancho de la ventana del navegador), el ancho de las columnas cambia automáticamente en relación con el nuevo ancho.
+Las unidades `fr` que presenté en la sección anterior se conocen como medidas *relativas* porque el valor de, `1fr`, por ejemplo, depende del ancho disponible (suponiendo que estás trabajando con columnas de cuadrícula) en el contenedor de cuadrícula. Esto hace que tu página responda porque cuando el ancho del contenedor de cuadrícula cambia (quizás porque cambia el ancho de la ventana del navegador), el ancho de las columnas cambia automáticamente en relación con el nuevo ancho.
 
 Esto funciona bien en pantallas relativamente grandes (por ejemplo, tabletas, portátiles y ordenadores de sobremesa), pero puede ser un problema en pantallas pequeñas, como la de un smartphone en modo vertical. Para entender lo que quiero decir, examine la figura 12.14, que es la página del artículo de este capítulo mostrada en un smartphone. Observe en particular que las dos columnas son estrechas, lo que dificulta la lectura del texto.
 
-
+![image](https://github.com/user-attachments/assets/ee07c64f-7bb0-4073-806b-025698b9b17a)
 
 **Figura 12.14 En la pantalla de un teléfono inteligente, las columnas de texto pueden volverse demasiado estrechas para una lectura cómoda.**
 
-Puede parecer un problema sin solución, pero con CSS se puede crear lo que se conoce como un diseño adaptable , que es un diseño que cambia sus propiedades en función de alguna característica de la pantalla del dispositivo, como su ancho. Con un diseño adaptable, se puede resolver el problema que se muestra en la figura 12.14 haciendo preguntas sobre el ancho de la ventana gráfica del navegador (la parte de la ventana del navegador que muestra la página web).
+Puede parecer un problema sin solución, pero con CSS se puede crear lo que se conoce como un *diseño adaptable - adaptive layout*, que es un diseño que cambia sus propiedades en función de alguna característica de la pantalla del dispositivo, como su ancho. Con un diseño adaptable, se puede resolver el problema que se muestra en la figura 12.14 haciendo preguntas sobre el ancho de la ventana gráfica del navegador (la parte de la ventana del navegador que muestra la página web).
 
-Por ejemplo, puede preguntar: "¿El ancho de la ventana gráfica es menor a 500 píxeles?" Si la respuesta es no, deja el diseño como está; si la respuesta es sí, puede indicarle al navegador que muestre el artículo como una sola columna, donde el asideelemento viene después del articleelemento pero ambos ocupan todo el ancho de la pantalla.
+Por ejemplo, puede preguntar: "¿El ancho de la ventana gráfica es menor a 500 píxeles?" Si la respuesta es no, deja el diseño como está; si la respuesta es sí, puede indicarle al navegador que muestre el artículo como una sola columna, donde el elemento `aside` viene después del elemento `article` pero ambos ocupan todo el ancho de la pantalla.
 
 Puede hacer estas y muchas otras preguntas definiendo consultas de medios en su CSS. Una consulta de medios es una expresión acompañada de un bloque de código que consta de una o más reglas de estilo. La expresión interroga alguna característica de la pantalla, como su ancho. Si esa expresión es verdadera para el dispositivo actual, el navegador aplica las reglas de estilo de la consulta de medios; si la expresión es falsa, el navegador ignora las reglas de la consulta de medios.
 
-Aquí está la sintaxis general para una consulta de medios:
+Aquí está la sintaxis general para una media query-consulta de medios:
 
 ```css
+@media (expression) { 
+    Rules to apply if expression is true go here
+}
 ```
 
-El expressionsuele min-widthir max-widthseguido de dos puntos y un valor. Por ejemplo, si desea aplicar estilos en una pantalla cuyo ancho no supere el valor especificado, utilice max-width. El código siguiente le indica al navegador que muestre el mainelemento como una cuadrícula de una columna siempre que el ancho de la pantalla sea menor o igual a 500 px:
+El `expression` suele ser `min-width` o `max-width` seguido de dos puntos y un valor. Por ejemplo, si desea aplicar estilos en una pantalla cuyo ancho no supere el valor especificado, utilice `max-width`. El código siguiente le indica al navegador que muestre el elemento `main` como una cuadrícula de una columna siempre que el ancho de la pantalla sea menor o igual a 500 px:
 
 ```css
+@media (max-width: 500px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
 ```
 
-Para solicitarle a ChatGPT que incluya una consulta de medios en su código CSS, incluya una instrucción como la siguiente en su solicitud:
+Para solicitarle a ChatGPT que incluya una media query en su código CSS, incluya una instrucción como la siguiente en su prompt:
 
+```text
+For screens with width less than or equal to 500px, make the main element a one-column grid.
+```
+
+```text
 Para pantallas con un ancho menor o igual a 500 px, haga que el elemento principal sea una cuadrícula de una columna.
-De manera similar, si desea aplicar estilos en una pantalla que tenga al menos el mismo ancho que un valor especificado, utilice min-width. El siguiente código establece el tamaño de fuente en el h1elemento siempre que el ancho de la pantalla sea mayor o igual a 1024 px:
-
-```css
 ```
 
-Para solicitarle a ChatGPT que incluya esta consulta de medios en su código CSS, incluya una instrucción como la siguiente en su solicitud:
+De manera similar, si desea aplicar estilos en una pantalla que tenga al menos el mismo ancho que un valor especificado, utilice `min-width`. El siguiente código establece el tamaño de fuente en el elemento `h1` siempre que el ancho de la pantalla sea mayor o igual a 1024 px:
 
+```css
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 72px;
+    }
+}
+```
+
+Para solicitarle a ChatGPT que incluya esta media query en su código CSS, incluya una instrucción como la siguiente en su prompt:
+
+```text
+For screens with width greater than or equal to 1024px, make the h1 element font size 72px.
+```
+
+```text
 Para pantallas con un ancho mayor o igual a 1024 px, haga que el tamaño de fuente del elemento h1 sea 72 px.
+```
+
 Más adelante, después de mostrarle el diseño final de la página del artículo (consulte la figura 12.16), también le mostraré cómo se muestra la página en un teléfono inteligente (figura 12.17) para verificar que la página, de hecho, se ha adaptado a la pantalla más pequeña al cambiar a un diseño de una sola columna.
 
 Ahora ya sabes todo lo que necesitas para pedirle a ChatGPT que cree una página de artículo, como se describe en la siguiente sección.
 
-### 12.2.10 Elaboración del mensaje inicial para la página del artículo
+### 12.2.10 Elaboración del prompt inicial para la página del artículo
 
 El proyecto de este capítulo es una página de artículo que muestra una guía de viajes sobre un lugar de una obra literaria. Antes de continuar, supongo que tienes lo siguiente a mano:
 
-El contenido del encabezado, como el logotipo, el título y el eslogan del sitio web.
+* El contenido del encabezado, como el logotipo, el título y el eslogan del sitio web.
 
-Las fuentes de Google Fonts que desea utilizar para los títulos y el texto.
+* Las fuentes de Google Fonts que desea utilizar para los títulos y el texto.
 
-Las palabras clave de los colores que desea utilizar para los fondos y el texto de la página.
+* Las palabras clave de los colores que desea utilizar para los fondos y el texto de la página.
 
 Consulte el capítulo 3 para obtener más información sobre cada uno de estos elementos de diseño y cómo solicitar a ChatGPT sugerencias de título, tipo de letra y color.
 
-Para iniciar su solicitud, dígale a ChatGPT que desea construir una página web y que desea que genere el código por usted:
+Para iniciar su prompt, dígale a ChatGPT que desea construir una página web y que desea que genere el código por usted:
 
-Quiero crear una página web para un artículo. No sé programar, así que necesito que me proporciones el código.
+```text
+I want to build a web page for an article. I don't know how to code, so I need you to provide the code for me.
  
+First, write the HTML code for a web page that includes the following:
+```
+
+```text
+Quiero crear una página web para un artículo. No sé programar, así que necesito que me proporciones el código.
+
 Primero, escriba el código HTML para una página web que incluya lo siguiente:
+```
+
 Ahora revise el contenido de la página, elemento por elemento, incluido lo siguiente (consulte la figura 12.15):
 
-Un encabezado que incluye el logotipo, el título y el eslogan de su sitio web.
+* Un header que incluye el logotipo, el título y el eslogan de su sitio web.
 
-Un elemento de navegación con enlaces a otras áreas del sitio.
+* Un elemento de navigation - navegación con enlaces a otras áreas del sitio.
 
-Un elemento principal que incluye un articleelemento y una asideorganización de elementos.ed en dos columnas
+* Un elemento main que incluye un elemento `article` y un elemento `aside` con una organización en dos columnas
 
-Un pie de página que incluye un aviso de derechos de autor
+* Un footer que incluye un aviso de derechos de autor
 
-
+![image](https://github.com/user-attachments/assets/4cd27210-0b28-4827-a102-cb64742b5138)
 
 **Figura 12.15 Las secciones de la página del artículo**
 
@@ -691,20 +732,69 @@ Ten en cuenta que en este proyecto no vas a incluir el contenido de la página (
 
 A continuación, solicite a ChatGPT que genere el CSS:
 
+```text
+Second, in a separate file please write the CSS code for the following:
+```
+
+```text
 En segundo lugar, en un archivo separado, escriba el código CSS para lo siguiente:
+```
+
 A continuación, especifique el formato de la página, incluido lo siguiente:
 
-El color de fondo de la página y el color del texto.
+* El color de fondo de la página y el color del texto.
 
-Los tamaños de fuente que desea utilizar para los encabezados y el texto de la página.
+* Los tamaños de fuente que desea utilizar para los encabezados y el texto de la página.
 
-Las fuentes que se deben utilizar para los encabezados y el texto normal de la página.
+* Las fuentes que se deben utilizar para los encabezados y el texto normal de la página.
 
-Que el diseño debe utilizar CSS Grid
+* Que el diseño debe utilizar CSS Grid
 
-Que el diseño se adapte a pantallas más pequeñas.
+* Que el diseño se adapte a pantallas más pequeñas.
 
 A continuación se muestra un ejemplo de solicitud para mi propia página de artículo:
+
+```text
+I want to build a web page for an article. I don't know how to code, so I need you to provide the code for me.
+  
+First, write the HTML code for a web page that includes the following:
+ * A header element that includes an image named logo.png, which is stored in the "images" subdirectory, the site title "Dream Vacations" and the site tagline "Travel guides to imaginary places".
+ * A navigation element that includes the following links:
+  * Home (links to index.html)
+  * Sci-Fi (links to sci-fi.html)
+  * Fantasy (links to fantasy.html)
+  * Children's (links to childrens.html)
+  * Literary (links to literary.html)
+ * A main section that contains an article element and an aside element.
+ * The article element title is the second-level heading "Travel Guide to Narnia".
+ * The aside element title is the third-level heading "Related Guides".
+ * A footer element that includes the Copyright symbol, followed by "Dream Vacations, LLC".
+ * In the page head section, include the tag <meta charset="utf-8">.
+ * In the page head section, include the tag <meta name="viewport" content="width=device-width, initial-scale=1">.
+  
+Second, in a separate file write the CSS code for the following:
+ * The page text uses font size 20px and the Baskerville font from Google Fonts.
+ * The header has background color lightblue and 24px padding.
+ * The site title is 64px and uses the Raleway font from Google Fonts.
+ * The site tagline is 32px and uses the Raleway font from Google Fonts.
+ * The second-level heading is 36px and uses the Raleway font from Google Fonts.
+ * The third-level headings are 24px and use the Raleway font from Google Fonts.
+ * The article title and the aside title have a 10px top margin.
+ * The aside has a 1px, solid, lightblue border.
+ * The nav, article, aside, and footer elements have 10px padding.
+ * The footer has a 1px, lightblue top border and a 10px top margin.
+ * The page has a maximum width of 800px and is centered within the browser window.
+ * Style all links with color midnightblue and no underline.
+ * Lay out the page as follows:
+  * The header is a two-column CSS Grid container with the logo in the left column and the site title and tagline in the right column.
+  * The navigation bar is a row Flexbox container.
+  * The main element is a two-column CSS Grid container; the article element column is twice the width of the aside element column; there is a gap of 10px between the columns.
+ * For screens with width less than or equal to 500px, do the following:
+  * Convert each two-column grid into a one-column grid.
+  * Make the site title 40px and the site tagline 24px.
+  * Give the site logo a maximum width of 150px.
+  * Center the header content.
+```
 
 ```text
 Quiero crear una página web para un artículo. No sé programar, así que necesito que me proporciones el código.
@@ -750,49 +840,58 @@ En segundo lugar, en un archivo separado escriba el código CSS para lo siguient
 
 Utilicé Copilot en modo Precise para enviar mi mensaje. El código generado generó la página que se muestra en la figura 12.16.
 
-
+![image](https://github.com/user-attachments/assets/a47712df-7fe7-47fb-9740-f95a8b8c9b00)
 
 **Figura 12.16 Mi página de artículo antes de agregar el contenido**
 
 La figura 12.16 muestra cómo se ve la página en un monitor de escritorio. Para comprobar que la consulta de medios en el mensaje funciona correctamente, es necesario cargar la página mediante el navegador de un teléfono inteligente, como se muestra en la figura 12.17. En este caso, la consulta de medios ha adaptado la página de la siguiente manera:
 
-El encabezado ahora es un contenedor de cuadrícula de una sola columna.
+* El header ahora es un one-column grid container - contenedor de cuadrícula de una sola columna.
 
-Se ha reducido el tamaño máximo del logotipo del sitio.
+* Se ha reducido el tamaño máximo del logotipo del sitio.
 
-Se ha reducido el tamaño de fuente del título y del eslogan del sitio.
+* Se ha reducido el tamaño de fuente del título y del eslogan del sitio.
 
-El elemento principal ahora es un contenedor de cuadrícula de una sola columna.
+* El elemento principal ahora es un contenedor de cuadrícula de una sola columna.
+
+![image](https://github.com/user-attachments/assets/3466c79c-c711-42d6-b927-7885bd40423f)
 
 
-
-**Figura 12.17 El esqueleto del artículo adaptado a la pantalla de un teléfono inteligente a través de una consulta de medios**
+**Figura 12.17 El esqueleto del artículo adaptado a la pantalla de un teléfono inteligente a través de una media query**
 
 Con el código de la página esqueleto del artículo copiado en su editor de texto, su próxima tarea es completar el contenido faltante.
 
 ## 12.3 Añadir contenido a la página
 
-El código HTML generado por ChatGPT incluye las etiquetas y el texto básicos de la página, pero le faltan las partes más importantes: el contenido de los articleelementos asidey . Para completar la página, debe cargar index.html en su editor de texto y luego agregar el contenido manualmente.
+El código HTML generado por ChatGPT incluye las etiquetas y el texto básicos de la página, pero le faltan las partes más importantes: el contenido de los elementos `article` y `aside`. Para completar la página, debe cargar `index.html` en su editor de texto y luego agregar el contenido manualmente.
 
 Primero, para agregar el contenido de su artículo, examine el código HTML para buscar las siguientes etiquetas:
 
 ```html
+<article>
+    <h2>Travel Guide to Narnia</h2>
+    <!-- Article content goes here -->
+</article>
 ```
 
-La línea clave aquí es <!-- Article content goes here -->, que es un marcador de posición para el contenido del artículo. (Las etiquetas <!--y -->crean un comentario , que es un texto que describe el código HTML pero que no aparece cuando se muestra la página en el navegador). Escribe tu contenido debajo de esa línea. En la mayoría de los casos, agregarás lo siguiente:
+La línea clave aquí es `<!-- Article content goes here -->`, que es un placeholder para el contenido del artículo. (Las etiquetas `<!--` y `-->` crean un *comentario*, que es un texto que describe el código HTML pero que no aparece cuando se muestra la página en el navegador). Escribe tu contenido debajo de esa línea. En la mayoría de los casos, agregarás lo siguiente:
 
-Un conjunto de etiquetas <p>y debajo del título del artículo (el elemento) y el texto de la introducción del artículo entre esas etiquetas. Siéntase libre de agregar dos o más párrafos de este tipo según sea necesario.</p>h2
+* Un conjunto de etiquetas `<p>` y `</p>` debajo del título del artículo (el elemento `h2`) y el texto de la introducción del artículo entre esas etiquetas. Siéntase libre de agregar dos o más párrafos de este tipo según sea necesario.
 
-Después del párrafo (o párrafos) introductorio, agregue uno o más sectionelementos, cada uno de los cuales tiene un encabezado de tercer nivel ( h3), seguido de uno o más párrafos (cada uno entre un conjunto de etiquetas <p>y ).</p>
+* Después del párrafo (o párrafos) introductorio, agregue uno o más elementos `section`, cada uno de los cuales tiene un encabezado de tercer nivel (`h3`), seguido de uno o más párrafos (cada uno entre un conjunto de etiquetas `<p>` y `</p>`).
 
 Una vez que el artículo esté completo, agregue el contenido de la barra lateral. Para comenzar, examine el código HTML para buscar las siguientes etiquetas:
 
 ```html
+<aside>
+    <h3>Related Guides</h3>
+    <!-- Related guides go here -->
+</aside>
 ```
 
-Nuevamente, la línea importante aquí es <!—Related guides go here -->(su texto será diferente según el encabezado que haya usado en su mensaje). Esta línea es un marcador de posición para el asidecontenido. Escriba su contenido debajo de esa línea, y su contenido puede ser un conjunto de párrafos, una lista de enlaces o algo más relacionado con el artículo. Siéntase libre de agregar nuevos h3elementos según lo necesite su contenido. La Figura 12.18 muestra la parte superior de la página de mi artículo con contenido.
+Nuevamente, la línea importante aquí es `<!—Related guides go here -->` (su texto será diferente según el encabezado que haya usado en su prompt). Esta línea es un placeholder para el contenido `aside`. Escriba su contenido debajo de esa línea, y su contenido puede ser un conjunto de párrafos, una lista de enlaces o algo más relacionado con el artículo. Siéntase libre de agregar nuevos elementos `h3` según lo necesite su contenido. La Figura 12.18 muestra la parte superior de la página de mi artículo con contenido.
 
-
+![image](https://github.com/user-attachments/assets/9747e50f-265d-443a-943b-bfbcde539529)
 
 **Figura 12.18 Mi página de artículos, ahora con contenido agregado**
 
@@ -809,6 +908,45 @@ Las dos secciones siguientes ofrecen guías comentadas sobre el código HTML y C
 Aquí hay una versión anotada del código HTML que ChatGPT generó para la página de mi artículo:
 
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"                                     ①
+          content="width=device-width, initial-scale=1">      ①
+    <title>Dream Vacations</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> ②
+</head>
+<body>
+    <header>                                                  ③
+        <img src="images/logo.png" alt="Logo">                ③④
+        <div>                                                 ③
+            <h1>Dream Vacations</h1>                          ③⑤
+            <p>Travel guides to imaginary places</p>          ③⑥
+        </div>                                                ③
+    </header>                                                 ③
+    <nav>                                                     ⑦
+        <a href="index.html">Home</a>                         ⑦
+        <a href="sci-fi.html">Sci-Fi</a>                      ⑦
+        <a href="fantasy.html">Fantasy</a>                    ⑦
+        <a href="childrens.html">Children's</a>               ⑦
+        <a href="literary.html">Literary</a>                  ⑦
+    </nav>                                                    ⑦
+    <main>                                                    ⑧
+        <article>                                             ⑧⑨
+            <h2>Travel Guide to Narnia</h2>                   ⑧⑨⑩
+            <!-- Article content goes here -->                ⑧⑨⑪
+        </article>                                            ⑧⑨
+        <aside>                                               ⑧⑫
+            <h3>Related Guides</h3>                           ⑧⑫⑬
+            <!-- Related guides go here -->                   ⑧⑫⑭
+        </aside>                                              ⑧⑫
+    </main>                                                   ⑧
+    <footer>                                                  ⑮
+        © Dream Vacations, LLC                                ⑮
+    </footer>                                                 ⑮
+</body>
+</html>
 ```
 
 ① Ayuda a que la página se muestre correctamente en dispositivos móviles
@@ -844,6 +982,7 @@ Aquí hay una versión anotada del código HTML que ChatGPT generó para la pág
 Tenga en cuenta que el código HTML incluye la siguiente línea:
 
 ```html
+<link rel="stylesheet" href="styles.css">
 ```
 
 Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que describo en la siguiente sección.
@@ -853,8 +992,102 @@ Esta etiqueta le dice al navegador web dónde encontrar el código CSS, que desc
 Aquí hay una versión anotada del código CSS que ChatGPT generó para la página de mi artículo:
 
 ```css
+@import url('https://fonts.googleapis.com/css2?family=         ①
+➥Baskerville:wght@400&family=Raleway:wght@400&display=swap'); ①
+  
+body {
+    font-size: 20px;                                           ②
+    font-family: 'Baskerville', serif;                         ②
+    max-width: 960px;                                          ②
+    margin: 0 auto;                                            ②
+}
+  
+header {
+    display: grid;                                             ③
+    grid-template-columns: auto 1fr;                           ③
+    background-color: lightblue;                               ④
+    padding: 24px;                                             ④
+}
+ 
+header h1 {
+    font-size: 64px;                                           ⑤
+    font-family: 'Raleway', sans-serif;                        ⑤
+}
+  
+header p {
+    font-size: 32px;                                           ⑥
+    font-family: 'Raleway', sans-serif;                        ⑥
+}
+  
+nav {
+    display: flex;                                             ⑦
+    justify-content: space-between;                            ⑦
+}
+  
+a {
+    color: midnightblue;                                       ⑧
+    text-decoration: none;                                     ⑧
+}
+  
+main {
+    display: grid;                                             ⑨
+    grid-template-columns: 2fr 1fr;                            ⑨
+    gap: 10px;                                                 ⑨
+}
+  
+article h2, aside h3 {
+    margin-top: 10px;                                          ⑩
+}
+  
+aside {
+    border: 1px solid lightblue;                               ⑪
+}
+  
+nav, article, aside, footer {
+    padding: 10px;                                             ⑫
+}
+  
+h2 {
+    font-size: 36px;                                           ⑬
+    font-family: 'Raleway', sans-serif;                        ⑬
+}
+  
+h3 {
+    font-size: 24px;                                           ⑭
+    font-family: 'Raleway', sans-serif;                        ⑭
+}
+ 
+footer {
+    border-top: 1px solid lightblue;                           ⑮
+    margin-top: 10px;                                          ⑮
+}
+  
+@media (max-width: 500px) {                                    ⑯
+    header {                                                   ⑯
+        grid-template-columns: 1fr;                            ⑯
+        text-align: center;                                    ⑯
+    }                                                          ⑯
+                                                               ⑯
+    header img {                                               ⑯
+        max-width: 150px;                                      ⑯
+        margin-left: auto;                                     ⑯
+        margin-right: auto;                                    ⑯
+        display: block;                                        ⑯
+    }                                                          ⑯
+                                                               ⑯
+    header h1 {                                                ⑯
+        font-size: 32px;                                       ⑯
+    }                                                          ⑯
+                                                               ⑯
+    header p {                                                 ⑯
+        font-size: 24px;                                       ⑯
+    }                                                          ⑯
+                                                               ⑯
+    main {                                                     ⑯
+        grid-template-columns: 1fr;                            ⑯
+}                                                              ⑯
 ```
-                                                              ⑯
+                                                              
 ① Importa las tipografías Baskerville y Raleway de Google Fonts
 
 ② Diseña el tamaño y la fuente del texto, establece el ancho máximo y centra la página.
@@ -893,46 +1126,61 @@ Puede consultar las anotaciones HTML y CSS de las dos secciones anteriores para 
 
 A continuación se ofrecen algunas sugerencias de personalización para el código HTML:
 
-Si prefieres tener la barra lateral a la izquierda, debes cambiar tanto el código HTML como el CSS. Primero, en el código HTML, mueve el asideelemento para que aparezca justo antes del articleelemento:
+Si prefieres tener la barra lateral a la izquierda, debes cambiar tanto el código HTML como el CSS. Primero, en el código HTML, mueve el elemento `aside` para que aparezca justo antes del elemento `article`:
 
 ```html
+<main>
+    <aside>
+        <h3>Related Guides</h3>
+        <!-- Related guides go here -->
+    </aside>
+    <article>
+        <h2>Travel Guide to Narnia</h2>
+        <!-- Article content goes here -->
+    </article>
+</main>
 ```
 
-En segundo lugar, en el CSS, cambie el valor maindel elemento de a , como se muestra aquí:grid-template-columns2fr 1fr1fr 2fr
+En segundo lugar, en el CSS, cambie el valor `grid-template-columns` del elemento `main` de `2fr 1fr` a `1fr 2fr`, como se muestra aquí:
 
 ```css
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
 ```
 
-En el encabezado, puedes editar el título y el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas, <h1>y </h1>y <p>y </p>.
+* En el header, puedes editar el título y el eslogan. Solo asegúrate de no editar ni eliminar las etiquetas HTML asociadas, `<h1>` y `</h1>` y `<p>` y `</p>`.
 
-En la sección principal, puedes editar el título del artículo, pero no te metas con las etiquetas HTML asociadas <h2>y </h2>.
+* En la sección main, puedes editar el título del artículo, pero no te metas con las etiquetas HTML asociadas `<h2>` y `</h2>`.
 
-En la sección de pie de página del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
+* En la sección de footer del código HTML, puedes agregar enlaces a tus cuentas de redes sociales, como describo en el capítulo 4.
 
 A continuación se muestran algunas ideas de personalización para el código CSS:
 
-Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
+* Para cualquier valor de color, puede cambiar el color existente a una palabra clave de color diferente.
 
-Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de tamaño de fuente, puede cambiar el número para aumentar o disminuir el tamaño de la fuente. Solo asegúrese de dejar la unidad `px` en su lugar.
 
-Para cualquier valor de margen o relleno, puede cambiar el número para aumentar o disminuir el relleno o los márgenes. En cada caso, asegúrese de dejar la pxunidad en su lugar.
+* Para cualquier valor de margen o padding, puede cambiar el número para aumentar o disminuir el padding o los márgenes. En cada caso, asegúrese de dejar la unidad `px` en su lugar.
 
-Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
+* Para que el código de tu página sea más accesible, considera convertir todas las medidas en px a medidas en rem. 1 rem equivale de manera predeterminada a 16 px, por lo que 20 px son 1,25 rem, 24 px son 1,5 rem, 32 px son 2 rem, 48 px son 3 rem, y así sucesivamente. La unidad rem es más accesible porque mide los tamaños de fuente en relación con el tamaño de fuente predeterminado que el usuario del navegador ha definido en la configuración de su navegador.
 
 ## Resumen
 
 * Utilice un diseño de artículo si el escrito se centra en un solo tema y puede dividirse en varios subtemas.
 
-* Los principales elementos de diseño de página HTML son header, nav, main, article, aside, footery p.
+* Los principales elementos de diseño de página HTML son `header`, `nav`, `main`, `article`, `aside`, `footer` y `p`.
 
-* Utilice este articleelemento para marcar una composición completa e independiente, similar a un artículo de periódico o revista. Este elemento también se puede aplicar a una reseña, una entrada de blog, una publicación en un foro o un ensayo.
+* Utilice este elemento `article` para marcar una composición completa e independiente, similar a un artículo de periódico o revista. Este elemento también se puede aplicar a una reseña, una entrada de blog, una publicación en un foro o un ensayo.
 
-* Utilice el asideelemento para marcar un área de la barra lateral de la página que contenga contenido relacionado indirectamente con el contenido único de la página, como una lista de enlaces a páginas del sitio relacionadas, las últimas noticias del sitio, un canal de redes sociales o anuncios.
+* Utilice el elemento `aside` para marcar un área de la barra lateral de la página que contenga contenido relacionado indirectamente con el contenido único de la página, como una lista de enlaces a páginas del sitio relacionadas, las últimas noticias del sitio, un canal de redes sociales o anuncios.
 
-* Utilice el strongelemento para marcar texto importante, utilice el belemento para marcar palabras clave, utilice el emelemento para agregar énfasis al texto y utilice el ielemento para marcar texto alternativo.
+* Utilice el elemento `strong` para marcar texto importante, utilice el elemento `b` para marcar palabras clave, utilice el elemento `em` para agregar énfasis al texto y utilice el elemento `i` para marcar texto alternativo.
 
 * Utilice CSS Grid para diseñar una página en dos dimensiones.
 
 * Para obtener mejores resultados, el mensaje de su página debe ser lo más específico posible, incluidos colores, tamaños de fuente y niveles de encabezado.
 
-* Guarde el HTML generado en el archivo index.html y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente styles.css.
+* Guarde el HTML generado en el archivo `index.html` y el CSS generado en el nombre de archivo sugerido por ChatGPT en el código HTML, generalmente `styles.css`.
