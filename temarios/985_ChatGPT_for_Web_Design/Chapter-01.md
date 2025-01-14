@@ -198,3 +198,13 @@ And now we just want to open it in the default browser. And as you can see this 
 So if you go to the top left and click save or just press control S or command S on Macbook, then this is actually saved and visual studio actually knows what this code is and can actually process the code. So then if we write mouse, click on home dot HTML, and we go all the way down to open in default browser, as you can see, now, it's actually ran the code and processed it and we can see what our beautiful website actually looks like. But now let's go back to jet GP T and actually create something a little bit more interesting.
 
 ## Introducción a ChatGPT-4
+
+Introduction to ChatGPT-4
+
+This brief introductory update outlines the new version of ChatGPT-4, just released a couple of days ago. It discusses the features of the new version, how it is better than ChatGPT-3.5, and its access is only for the ChatGPT Plus users, which provides privileged access during peak hours as well.
+
+Hi Ron. So it's only been a month since we published this course and already OpenAI came out with a new model, namely GPT four, that is a lot more powerful than the GPT 3.5 model that jet GPT ran on before. So of course, we tested everything we do in this course to see if everything still works the way we show it on the old GPT 3.5 model. And as far as we've been able to see everything still works exactly the same and perhaps the outputs are a bit higher quality. And in this course, as you will see, there are a few times when the requests we make of chatgpt on the 3.5 model are a bit too much for it to handle and it stops halfway. This will not be a problem anymore at all when using the GPT four model as it can give up to eight times longer outputs.
+
+So Chatgpt has only become even better at helping us create amazing websites. So how do you access GPT four as of record? This video GPT four is only accessible to people who purchased a chatgpt plus account this costs $20 per month and not only gives you access to GPT four, but also ensures you will have access to Chatgpt even when demand is high. So you have privileged access. So if you have the extra money to purchase a subscription to Chatgpt, that will enhance your experience while taking this course. But it is by no means considering the course is recorded using the freely accessible GPT 3.5 model. And most likely the GPT four model will also become freely available for everyone after a few weeks or months.
+
+So that is it for this little update on openai's GPT four model. Whenever old updates come out that may affect the content of this course, I will be sure to update the course accordingly. Thanks for watching, enjoy the course and I will see you in the next lesson.
