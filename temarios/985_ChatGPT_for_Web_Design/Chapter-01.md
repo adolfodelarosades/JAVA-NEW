@@ -139,10 +139,6 @@ Esta memoria no es infinita, pero tampoco es tan potente como la memoria humana.
 
 Introduction to Web Design: HTML and CSS
 
-
-
-Hide Description
-
 This lesson will explore the fundamentals of hypertext markup language (HTML) and cascading style sheets (CSS) needed to create a website. You will learn about the IDE to be used for storing the code.
 
 All right guys. Welcome to the next lesson in this one. We will go over the basics of HTML and CSS codes, both of which you need to go to websites. So before we go into HTML and CSS, as mentioned in the start of this course, one of the problems this course wants to address is that now anybody has the power to generate codes. But where do you put these codes to have it actually work.
@@ -176,5 +172,29 @@ For instance, the text of a paragraph element and the board around the paragraph
 So that is it for the theoretical explanations for. Now in the next lesson, we are going to download and set up visual studio code and actually start using Jet GPT to write our website for us. See you in that lesson.
 
 ## ¿Dónde colocar el código?
+
+Where to Put the Code?
+
+In this video, you will learn where to store the code, for which we will download and install Visual Studio Code, the IDE we will be using to store and edit the code to our requirements. You will learn to install the extensions required for the project.
+
+All right. So to download Visual Studio, first, we simply go to Google and type in visual studio. Then we click the first link that brings us to a Microsoft website. And then at the top center of that website, it says free visual studio. Once you click that you see three options and we need to get the right one that says visual studio code.
+
+And if you click the drop down, you can simply select the operating system you want to use. So for me, it's going to be windows and that's going to download Visual Studios and once it's done, simply click it to start the installing process and then once you're done installing it, Visual Studio will automatically launch. All right. So there we are in visual studio. Now, visual studio always works with folders.
+
+So first we need to make the folder on the top left. If we add file and click open folder, now we're going to select a location that's easy for us to reach on our desktop. And we're going to create a folder that all our visual studio files are going to be located in.
+
+So I'm going to name my file, visual studio code. And then we are going to double click that one and we're going to create another folder for this specific project that we are going to start now. And I'm simply going to call that my first website. So now let's click that folder that we just created last and let's click select folder. And this is going to ask us if we trust this file, which we do because we just created it ourselves. So let's hit, trust it and continue. And now on the top left, you can see this folder that we just created, but there's nothing in there yet. But there are four options on the right. And the first is to create a new file. So we are now going to create our first file within visual studio.
+
+And if you create a file in visual studio, it's very important to tell us what kind of file we are going to make. So now for the first file, the first simple file we're going to make, we're just going to make a plain HTML file. So whatever name you choose here, make sure you end it with dot HTML. So I'm just going to call mine home dot HTML because this is going to be the home page.
+
+All right. So now that we've created a home for our code, we can now start creating the actual code. So let's go to jet GP T and let's ask him to write us a website. So I'm going to type in, write me the HTML code for a basic web website and let's see what it gives us. All right. So it immediately starts writing goat, which is nice. All right. So from this coach should already be able to recognize some features of what it is generating. So you can see there is a header with a title called my website and then it looks like it created below that a little menu of three items. And then it also created a little text for the website. And what's really nice is below that it creates a full description of what it actually did. So it tells you what code you need to start the documents, it tells you to write in between the HTML text, it tells you about the head and the body. So honestly, we could have just kept our introduction to HTML section and just had chat G BT explain it to you. But for now, let's just copy this code and put it right into the document we just created in visual studio. All right. So let's paste the code. And now what we really want to do is just see what this looks like immediately.
+
+So if we go to the top left here and we click, we right, click the home dot HTML file, we just created, it should say open in browser. But as you can see that option is not there and that's because we need to download an extension or install an extension so that we can immediately see the effects of the code we are producing here.
+
+So it's actually really easy to install this extension. If you go to this left bar here, you can see one of these icons says extension. So we can just click that and then in the search bar type open in browser. And then typically this will be the top suggestion but make sure that it has over 7 million downloads. So you know, it's the right one and you can just click install. And as you can see this will install very quickly. And now we can simply go back to the bar on the left and now hit the top icon to go back to our folder. And now if we right click this home dot HTML document all the way at the bottom, it says open in default browser or open in other browser.
+
+And now we just want to open it in the default browser. And as you can see this opens chrome for us, but there's no code here, there's no text, there's nothing and that is because we forgot one step. So we pasted the code in visual studio. But as you can see at the top right of the tab, there is this white dot And that means that we haven't saved it yet.
+
+So if you go to the top left and click save or just press control S or command S on Macbook, then this is actually saved and visual studio actually knows what this code is and can actually process the code. So then if we write mouse, click on home dot HTML, and we go all the way down to open in default browser, as you can see, now, it's actually ran the code and processed it and we can see what our beautiful website actually looks like. But now let's go back to jet GP T and actually create something a little bit more interesting.
 
 ## Introducción a ChatGPT-4
