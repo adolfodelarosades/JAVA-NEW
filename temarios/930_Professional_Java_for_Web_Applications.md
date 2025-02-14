@@ -3,12 +3,12 @@ By Nicholas S. Williams
 
 ![image](https://github.com/user-attachments/assets/3e10f8c5-5279-4384-95a6-61a7b5049a57)
 
-TIME TO COMPLETE: **29h 2m**
-LEVEL: **Intermediate to advanced**
-SKILLS: **Java**
-PUBLISHED BY: **Wrox**
-PUBLICATION DATE: **March 2014**
-PRINT LENGTH: **936 pages**
+* TIME TO COMPLETE: **29h 2m**
+* LEVEL: **Intermediate to advanced**
+* SKILLS: **Java**
+* PUBLISHED BY: **Wrox**
+* PUBLICATION DATE: **March 2014**
+* PRINT LENGTH: **936 pages**
 
 ### La guía completa de Wrox para crear aplicaciones web Java para la empresa
 
