@@ -4,10 +4,6 @@
 2. Comprender la estructura básica de una aplicación web
 3. Resumen
 
-## 1. Cronología de las plataformas Java
-## 2. Comprender la estructura básica de una aplicación web
-## 3. Resumen
-
 #### EN ESTE CAPÍTULO
 
 * Cronología de las versiones de Java SE y Java EE
@@ -75,64 +71,81 @@ Al igual que **J2SE**, **J2EE** era una mera especificación. Sun proporcionaba 
 * J2EE Connector Architecture 1.0
 * Java Authentication and Authorization Service (JAAS) 1.0
 
-
 En ese momento la tecnología estaba madurando considerablemente, pero todavía tenía mucho margen de mejora.
 
-J2EE 1.4 representó un gran salto en la evolución de la Plataforma Java, Enterprise Edition. Lanzada en noviembre de 2003 (aproximadamente un año antes que Java/J2SE 5.0 y dos años después de Java/J2SE 1.4), incluía Servlet 2.4 y JSP 2.0. Fue en esta versión en la que se eliminaron las especificaciones de la API de extensión JDBC, JNDI y JAAS porque se habían considerado esenciales para Java y se trasladaron a Java/J2SE 1.4. Esta versión también representó el punto en el que los componentes J2EE se dividieron en varias categorías de nivel superior:
+**J2EE 1.4** representó un gran salto en la evolución de la Java Platform, Enterprise Edition. Lanzada en noviembre de 2003 (aproximadamente un año antes que Java/J2SE 5.0 y dos años después de Java/J2SE 1.4), incluía **Servlet 2.4** y **JSP 2.0**. Fue en esta versión en la que se eliminaron las especificaciones de la API de extensión JDBC, JNDI y JAAS porque se habían considerado esenciales para Java y se trasladaron a Java/J2SE 1.4. Esta versión también representó el punto en el que los componentes J2EE se dividieron en varias categorías de nivel superior:
 
-Tecnologías de servicios web: incluye JAXP 1.2 y los nuevos servicios web para J2EE 1.1, Java API para RPC basado en XML (JAX-RPC) 1.1 y Java API para registros XML (JAXR) 1.0
-Tecnologías de aplicaciones web: Se incluyen los componentes Servlet, JSP y JSTL 1.1, así como el nuevo Java Server Faces (JSF) 1.1
-Tecnologías de aplicaciones empresariales: incluidas EJB 2.1, Connector Architecture 1.5, JMS 1.1, JTA, JavaMail 1.3 y JAF
-Tecnologías de administración y seguridad: Contrato de proveedor de servicios de autorización de Java para contenedores (JACC) 1.0, extensiones de administración de Java (JMX) 1.2, API de administración de Enterprise Edition 1.0 y API de implementación de Enterprise Edition 1.1 incluidos
-La era de los cambios de nombre
-Entramos en la era de los cambios de nombre, que suelen ser una fuente de confusión para los desarrolladores de Java. Se destacan aquí para que comprendas completamente las convenciones de nombres utilizadas en este libro y cómo se relacionan con las convenciones de nombres anteriores con las que quizás ya estés familiarizado. Java y J2SE 5.0 se lanzaron en septiembre de 2004 e incluyeron genéricos, anotaciones y enumeraciones, tres de los cambios de sintaxis de lenguaje más radicales en la historia de Java. Este número de versión se apartó de los patrones anteriores, y se volvió más confuso por el hecho de que las API de J2SE y la javaherramienta de línea de comandos informaban que el número de versión era 1.5. Sun había tomado la decisión de eliminar el 1 del número de versión publicado y utilizar en su lugar la versión menor. Reconoció rápidamente que el "punto-oh" al final del número de versión era una fuente de confusión y rápidamente comenzó a referirse a él simplemente como la versión 5.
+* **Web Services Technologies**: incluye JAXP 1.2 y los nuevos servicios web para J2EE 1.1, Java API para RPC basado en XML (JAX-RPC) 1.1 y Java API para registros XML (JAXR) 1.0
+* **Web Application Technologies**: Se incluyen los componentes Servlet, JSP y JSTL 1.1, así como el nuevo Java Server Faces (JSF) 1.1
+* **Enterprise Application Technologies**: incluidas EJB 2.1, Connector Architecture 1.5, JMS 1.1, JTA, JavaMail 1.3 y JAF
+* **Management and Security Technologies**: Contrato de proveedor de servicios de autorización de Java para contenedores (JACC) 1.0, extensiones de administración de Java (JMX) 1.2, API de administración de Enterprise Edition 1.0 y API de implementación de Enterprise Edition 1.1 incluidos
 
-Casi al mismo tiempo, se tomó la decisión de retirar el nombre Java 2 Platform, Standard Edition en favor de Java Platform, Standard Edition y abreviar este nuevo nombre como Java SE. Los cambios se hicieron formales con Java SE 6, lanzado en diciembre de 2006, y hasta el día de hoy el nombre y la convención de la versión se han mantenido sin cambios. Java SE 6 es internamente 1.6, Java SE 7 es internamente 1.7 y Java SE 8 es internamente 1.8.
 
-Las mismas decisiones de cambio de nombre y número se aplicaron a J2EE, pero como J2EE 1.5 se iba a lanzar entre J2SE 5.0 y Java SE 6, los cambios se aplicaron una versión anterior. Java Platform, Enterprise Edition 5, o Java EE 5, se lanzó en mayo de 2006, aproximadamente 18 meses después de J2SE 5.0 y 7 meses antes de Java SE 6. Internamente, Java EE 5 es 1.5, Java EE 6 es 1.6 y Java EE 7 es 1.7. Siempre que vea los términos J2SE o Java SE, son intercambiables, y el nombre preferido y aceptado hoy es Java EE. Del mismo modo, J2EE y Java EE son intercambiables, pero Java EE es el preferido hoy. El resto de este libro se refiere a ellos exclusivamente como Java SE y Java EE.
+### La era de los cambios de nombre
+
+Entramos en la era de los cambios de nombre, que suelen ser una fuente de confusión para los desarrolladores de Java. Se destacan aquí para que comprendas completamente las convenciones de nombres utilizadas en este libro y cómo se relacionan con las convenciones de nombres anteriores con las que quizás ya estés familiarizado. **Java** y **J2SE 5.0** se lanzaron en septiembre de 2004 e incluyeron genéricos, anotaciones y enumeraciones, tres de los cambios de sintaxis de lenguaje más radicales en la historia de Java. Este número de versión se apartó de los patrones anteriores, y se volvió más confuso por el hecho de que las API de J2SE y la herramienta `java` de línea de comandos informaban que el número de versión era 1.5. Sun había tomado la decisión de eliminar el 1 del número de versión publicado y utilizar en su lugar la versión menor. Reconoció rápidamente que el "dot-oh" al final del número de versión era una fuente de confusión y rápidamente comenzó a referirse a él simplemente como la versión 5.
+
+Casi al mismo tiempo, se tomó la decisión de retirar el nombre **Java 2 Platform, Standard Edition** en favor de **Java Platform, Standard Edition** y abreviar este nuevo nombre como **Java SE**. Los cambios se hicieron formales con **Java SE 6**, lanzado en diciembre de 2006, y hasta el día de hoy el nombre y la convención de la versión se han mantenido sin cambios. **Java SE 6** es internamente **1.6**, **Java SE 7** es internamente **1.7** y **Java SE 8** es internamente **1.8**.
+
+Las mismas decisiones de cambio de nombre y número se aplicaron a J2EE, pero como J2EE 1.5 se iba a lanzar entre J2SE 5.0 y Java SE 6, los cambios se aplicaron una versión anterior. **Java Platform, Enterprise Edition 5**, o **Java EE 5**, se lanzó en mayo de 2006, aproximadamente 18 meses después de J2SE 5.0 y 7 meses antes de Java SE 6. Internamente, **Java EE 5** es **1.5**, **Java EE 6** es **1.6** y **Java EE 7** es **1.7**. Siempre que vea los términos **J2SE** o **Java SE**, son intercambiables, y el nombre preferido y aceptado hoy es **Java EE**. Del mismo modo, **J2EE** y **Java EE** son intercambiables, pero Java EE es el preferido hoy. El resto de este libro se refiere a ellos exclusivamente como **Java SE** y **Java EE**.
 
 Java EE 5 creció e incluyó numerosos cambios y mejoras nuevamente, y hoy en día sigue siendo una de las versiones de Java EE más ampliamente implementadas. Incluyó los siguientes cambios y adiciones:
 
-JAXP y JMX se trasladaron a J2SE 5.0 y no se incluyeron en Java EE 5.
-Se agregaron a la tecnología de servicios web la API de Java para servicios web basados ​​en XML (JAX-WS) 2.0, la arquitectura Java para enlace XML (JAXB) 2.0, los metadatos de servicios web para la plataforma Java 2.0, la API de SOAP con archivos adjuntos para Java (SAAJ) 1.2 y la API de transmisión para XML (StAX) 1.0.
-Se agregaron Java Persistence API (JPA) 1.0 y Common Annotations API 1.0 a la Tecnología de Aplicaciones Empresariales.
-La sequía de Java SE y EE
-El lanzamiento de Java SE 6 en diciembre de 2006 marcó el comienzo de una sequía de lanzamientos de Java SE que duró aproximadamente 5 años. Esta vez fue un período de frustración e incluso enojo para muchos en la comunidad Java. Sun continuó prometiendo nuevas características del lenguaje y API para Java SE 7, pero el cronograma continuó demorándose año tras año sin un final a la vista. Mientras tanto, otras tecnologías, como el lenguaje C# y la plataforma .NET, alcanzaron y superaron a Java en características del lenguaje y API de la plataforma, lo que provocó que algunos especularan sobre si Java había llegado al final de su vida útil. Para empeorar las cosas, Java EE entró en su propio período de sequía y para 2009, más de 3 años después, Java SE 7 ya había sido lanzado.Habían pasado muchos años desde que se lanzó Java EE 5. Sin embargo, no todo estaba perdido. El desarrollo de Java EE 6 se reanudó a principios de 2009 y se lanzó en diciembre de 2009, 3 años y 7 meses después de Java EE 5 y 3 años casi al día después de Java SE 6.
+* JAXP y JMX se trasladaron a J2SE 5.0 y no se incluyeron en Java EE 5.
+* Se agregaron a la tecnología de servicios web la API de Java para servicios web basados ​​en XML (JAX-WS) 2.0, la arquitectura Java para enlace XML (JAXB) 2.0, los metadatos de servicios web para la plataforma Java 2.0, la API de SOAP con archivos adjuntos para Java (SAAJ) 1.2 y la API de transmisión para XML (StAX) 1.0.
+* Se agregaron Java Persistence API (JPA) 1.0 y Common Annotations API 1.0 a la Tecnología de Aplicaciones Empresariales.
+
+
+### La sequía de Java SE y EE
+
+El lanzamiento de **Java SE 6 en diciembre de 2006** marcó el comienzo de una sequía de lanzamientos de Java SE que *duró aproximadamente 5 años*. Esta vez fue un período de frustración e incluso enojo para muchos en la comunidad Java. Sun continuó prometiendo nuevas características del lenguaje y API para Java SE 7, pero el cronograma continuó demorándose año tras año sin un final a la vista. Mientras tanto, otras tecnologías, como el lenguaje C# y la plataforma .NET, alcanzaron y superaron a Java en características del lenguaje y API de la plataforma, lo que provocó que algunos especularan sobre si Java había llegado al final de su vida útil. Para empeorar las cosas, Java EE entró en su propio período de sequía y para 2009, más de 3 años después, Java SE 7 ya había sido lanzado. Habían pasado muchos años desde que se lanzó Java EE 5. Sin embargo, no todo estaba perdido. El desarrollo de **Java EE 6** se reanudó a principios de 2009 y se lanzó en diciembre de 2009, 3 años y 7 meses después de Java EE 5 y 3 años casi al día después de Java SE 6.
 
 En ese momento, Java Enterprise Edition ya se había convertido en algo enorme:
 
-SAAJ, StAX y JAF se trasladaron a Java SE 6.
-Se agregaron las especificaciones de la API de Java para servicios web RESTful (JAX-RS) 1.1 y de las API de Java para mensajería XML (JAXM) 1.3 a Tecnologías de servicios web.
-El lenguaje de expresión unificado Java (JUEL o simplemente EL) 2.0 se agregó a Tecnologías de aplicaciones web.
-Las tecnologías de administración y seguridad vieron la incorporación de la Interfaz de proveedor de servicios de autenticación de Java para contenedores (JASPIC) 1.0.
-Enterprise Application Technologies logró el aumento más espectacular en funciones, incluidos Contexts and Dependency Injection para Java (CDI) 1.0, Dependency Injection para Java 1.0, Bean Validation 1.0, Managed Beans 1.0 e Interceptors 1.1, además de actualizaciones de todos sus demás componentes.
+* SAAJ, StAX y JAF se trasladaron a Java SE 6.
+* Se agregaron las especificaciones de la API de Java para servicios web RESTful (JAX-RS) 1.1 y de las API de Java para mensajería XML (JAXM) 1.3 a Tecnologías de servicios web.
+* El lenguaje de expresión unificado Java (JUEL o simplemente EL) 2.0 se agregó a Tecnologías de aplicaciones web.
+* Las tecnologías de administración y seguridad vieron la incorporación de la Interfaz de proveedor de servicios de autenticación de Java para contenedores (JASPIC) 1.0.
+* Enterprise Application Technologies logró el aumento más espectacular en funciones, incluidos Contexts and Dependency Injection para Java (CDI) 1.0, Dependency Injection para Java 1.0, Bean Validation 1.0, Managed Beans 1.0 e Interceptors 1.1, además de actualizaciones de todos sus demás componentes.
+
 Java EE 6 también representó un punto de inflexión importante en la arquitectura de Java EE en dos frentes:
 
-Esta versión introdujo una configuración de aplicaciones programática y basada en anotaciones para complementar la configuración XML tradicional utilizada durante más de una década.
-Esta versión marcó la introducción del perfil web Java EE.
+* Esta versión introdujo una configuración de aplicaciones programática y basada en anotaciones para complementar la configuración XML tradicional utilizada durante más de una década.
+* Esta versión marcó la introducción del perfil web Java EE.
+
 Para tener en cuenta el hecho de que Java EE se había vuelto tan grande (y el mantenimiento y la actualización de las implementaciones certificadas se estaba volviendo cada vez más difícil), el programa de certificación Web Profile ofreció la oportunidad de certificar implementaciones de Java EE que incluían solo un subconjunto de toda la plataforma Java EE. Este subconjunto incluía las características consideradas más críticas para una gran cantidad de aplicaciones y excluía las especificaciones que solo se utilizan en una pequeña minoría de aplicaciones. A partir de Java EE 6:
 
-Ninguno de los componentes de Servicios Web o Administración y Seguridad son parte del Perfil Web Java EE.
-El perfil web incluye todo lo relacionado con las tecnologías de aplicaciones web y todo lo relacionado con las tecnologías de aplicaciones empresariales, excepto la arquitectura del conector Java EE, JMS y JavaMail.
+* Ninguno de los componentes de Servicios Web o Administración y Seguridad son parte del Perfil Web Java EE.
+* El perfil web incluye todo lo relacionado con las tecnologías de aplicaciones web y todo lo relacionado con las tecnologías de aplicaciones empresariales, excepto la arquitectura del conector Java EE, JMS y JavaMail.
+
 Fue durante la sequía de cinco años de Java que Oracle Corporation compró Sun Microsystems en enero de 2010. Esto, unido a la sequía de Java SE, trajo consigo toda una serie de nuevas preocupaciones para la comunidad Java. Oracle nunca fue conocida por su agilidad o su voluntad de cooperar con proyectos de código abierto, y mucha gente temía que Oracle hubiera comprado Sun para acabar con Java. Sin embargo, resultó que no fue así.
 
-Desde el principio, Oracle comenzó a reorganizar el equipo de Java, creando canales de comunicación con la comunidad de código abierto y publicando planes para futuras versiones de Java SE y Java EE que eran más realistas que todo lo que Sun había prometido. Se comenzó a trabajar de nuevo en Java SE 7, que se publicó el 1 de junio.El calendario (de Oracle) se fijó en junio de 2011, casi 5 años después de Java SE 6. Una segunda sequía de Java EE terminó con el lanzamiento de Java EE 7 en junio de 2013, 3 años y 7 meses después de Java EE 6. Oracle ahora dice que está en camino de comenzar a lanzar nuevas versiones de ambas plataformas cada 2 años, en años alternos. Queda por ver si eso sucederá.
+Desde el principio, Oracle comenzó a reorganizar el equipo de Java, creando canales de comunicación con la comunidad de código abierto y publicando planes para futuras versiones de Java SE y Java EE que eran más realistas que todo lo que Sun había prometido. Se comenzó a trabajar de nuevo en **Java SE 7**, que se publicó el 1 de junio. El calendario (de Oracle) se fijó en junio de 2011, casi 5 años después de Java SE 6. Una segunda sequía de Java EE terminó con el lanzamiento de **Java EE 7** en junio de 2013, 3 años y 7 meses después de Java EE 6. Oracle ahora dice que está en camino de comenzar a lanzar nuevas versiones de ambas plataformas cada 2 años, en años alternos. Queda por ver si eso sucederá.
 
-Comprender las características más recientes de la plataforma
+### Comprender las características más recientes de la plataforma
+
 Java SE 7 y 8 y Java EE 7 han introducido importantes cambios en el lenguaje y las API que lo respaldan, lo que ha dado lugar a un rejuvenecimiento de las tecnologías Java. En este libro se utilizan estas nuevas funciones, por lo que en esta sección se ofrece una descripción general de ellas.
 
-Java SE 7
+#### Java SE 7
+
 En un principio, Java SE 7 tenía una lista de características muy ambiciosa, pero después de adquirir Sun, Oracle admitió rápidamente que alcanzar los objetivos de Java SE 7 llevaría muchos, muchos años. Cada característica era la más importante para algún grupo de usuarios, por lo que se tomó la decisión de posponer algunas de ellas para versiones futuras. La alternativa era retrasar el lanzamiento de Java SE 7 hasta 2015 o más tarde, una opción que no era aceptable.
 
-Java SE 7 incluía compatibilidad con lenguajes dinámicos, así como punteros comprimidos de 64 bits (para mejorar el rendimiento en JVM de 64 bits). También agregó varias características del lenguaje que hicieron que el desarrollo de aplicaciones Java fuera más productivo. Quizás uno de los cambios más útiles fue diamonds , un atajo para la instanciación genérica. Antes de Java 7, tanto la declaración de variable como la asignación de variable para tipos genéricos tenían que incluir los argumentos de tipo genérico. Por ejemplo, aquí hay una declaración y asignación para una variable muy compleja java.util.Map:
+Java SE 7 incluía compatibilidad con lenguajes dinámicos, así como punteros comprimidos de 64 bits (para mejorar el rendimiento en JVM de 64 bits). También agregó varias características del lenguaje que hicieron que el desarrollo de aplicaciones Java fuera más productivo. Quizás uno de los cambios más útiles fue ***diamonds***, un atajo para la instanciación genérica. Antes de Java 7, tanto la declaración de variable como la asignación de variable para tipos genéricos tenían que incluir los argumentos de tipo genérico. Por ejemplo, aquí hay una declaración y asignación para una variable muy compleja **`java.util.Map`**:
 
-    Map<String, Map<String, Map<Integer, List<MyBean>>>> map =
+```java
+Map<String, Map<String, Map<Integer, List<MyBean>>>> map =
             new Hashtable<String, Map<String, Map<Integer, List<MyBean>>>>();
-Por supuesto, esta declaración contiene mucha información redundante. Asignar cualquier cosa que no sea Map<String, Map<String, Map<Integer, List<MyBean>>>>a a esta variable sería ilegal, entonces, ¿por qué debería especificar todos esos argumentos de tipo nuevamente? Al usar los diamantes de Java 7, esta declaración y asignación se vuelven mucho más simples. El compilador infiere los argumentos de tipo para la instancia java.util.Hashtable.
+```
+  
+Por supuesto, esta declaración contiene mucha información redundante. Asignar cualquier cosa que no sea **`Map<String, Map<String, Map<Integer, List<MyBean>>>>`** a esta variable sería ilegal, entonces, ¿por qué debería especificar todos esos argumentos de tipo nuevamente? Al usar los diamantes de Java 7, esta declaración y asignación se vuelven mucho más simples. El compilador infiere los argumentos de tipo para la instancia **`java.util.Hashtable`**.
 
-    Map<String, Map<String, Map<Integer, List<MyBean>>>> map = new Hashtable<>();
-Otra queja común sobre Java anterior a Java 7 es la gestión de recursos cerrables en relación con try-catch-finallylos bloques. En particular, considere este desagradable fragmento de código JDBC:
+```java
+Map<String, Map<String, Map<Integer, List<MyBean>>>> map = new Hashtable<>();
+```
 
+Otra queja común sobre Java anterior a Java 7 es la gestión de recursos cerrables en relación con los bloques **`try-catch-finally`**. En particular, considere este desagradable fragmento de código JDBC:
+
+```java
     Connection connection = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -168,8 +181,11 @@ Otra queja común sobre Java anterior a Java 7 es la gestión de recursos cerrab
             } catch(SQLException ignore) { }
         }
     }
-La función try-with-resources de Java 7 ha simplificado drásticamente esta tarea. Cualquier clase que implemente java.lang.AutoCloseablees elegible para usarse en una construcción try-with-resources. Las interfaces JDBC Connection, PreparedStatementy ResultSetextienden esta interfaz. Cuando se utiliza try-with-resources como se muestra en el siguiente ejemplo, los recursos que se declaran dentro de los tryparéntesis de la palabra clave se cierran automáticamente en un bloque implícito finally. Cualquier excepción lanzada durante esta limpieza se agrega a las excepciones suprimidas de una excepción existente o, si no existe ninguna excepción, se lanza después de que se hayan cerrado todos los recursos.
+```
+    
+La función ***try-with-resources*** de Java 7 ha simplificado drásticamente esta tarea. Cualquier clase que implemente **`java.lang.AutoCloseable`** es elegible para usarse en una construcción try-with-resources. Las interfaces JDBC **`Connection`**, **`PreparedStatement`** y **`ResultSet`** extienden esta interfaz. Cuando se utiliza try-with-resources como se muestra en el siguiente ejemplo, los recursos que se declaran dentro de los paréntesis de la palabra clave **`try`** se cierran automáticamente en un bloque implícito **`finally`**. Cualquier excepción lanzada durante esta limpieza se agrega a las excepciones suprimidas de una excepción existente o, si no existe ninguna excepción, se lanza después de que se hayan cerrado todos los recursos.
 
+```java
     try(Connection connection = dataSource.getConnection();
         PreparedStatement statement = connection.prepareStatement(...))
     {
@@ -183,8 +199,12 @@ La función try-with-resources de Java 7 ha simplificado drásticamente esta tar
     {
         // do something with exception
     }
-Otra mejora que se hizo en try-catch-finally es la incorporación de multi-catch . A partir de Java 7, ahora es posible capturar varias excepciones dentro de un solo catchbloque, separando los tipos de excepción con una sola barra vertical. Por ejemplo:
+```
 
+Otra mejora que se hizo en try-catch-finally es la incorporación de ***multi-catch***. A partir de Java 7, ahora es posible capturar varias excepciones dentro de un solo bloque **`catch`**, separando los tipos de excepción con una sola barra vertical. Por ejemplo:
+
+
+```java
     try
     {
         // do something
@@ -193,28 +213,39 @@ Otra mejora que se hizo en try-catch-finally es la incorporación de multi-catch
     {
         // handle these exceptions the same way
     }
-Una advertencia que se debe tener en cuenta es que no se pueden capturar dos o más excepciones de forma múltiple de modo que una herede de la otra. Por ejemplo, lo siguiente está prohibido porque FileNotFoundExceptionse extiende IOException:
+```
 
+Una advertencia que se debe tener en cuenta es que no se pueden capturar dos o más excepciones de forma múltiple de modo que una herede de la otra. Por ejemplo, lo siguiente está prohibido porque **`FileNotFoundExceptionse`** extiende **`IOException`**:
+
+
+```java
     try {
         // do something
     } catch(IOException | FileNotFoundException e) {
         // handle these exceptions the same way
     }
-Por supuesto, esto puede considerarse fácilmente una cuestión de sentido común. En este caso, simplemente capturarías IOException, lo que detectaría ambos tipos de excepciones.
+```
 
-Algunas otras características diversas del lenguaje Java 7 incluyen literales binarios para bytes y números enteros (puede escribir el literal 1928como 0b11110001000) y guiones bajos en literales numéricos (puede escribir los mismos literales como 1_928y 0b111_1000_1000, si lo desea). Además, puede usar Strings como switchargumento.
+Por supuesto, esto puede considerarse fácilmente una cuestión de sentido común. En este caso, simplemente capturarías **`IOException`**, lo que detectaría ambos tipos de excepciones.
 
-Java EE 7
-Java EE 7, publicado el 12 de junio de 2013, contiene una serie de cambios y nuevas funciones. Muchas de estas nuevas funciones se tratarán a lo largo de este libro, por lo que no se detallarán aquí. En resumen, los cambios de Java EE 7 son los siguientes:
+Algunas otras características diversas del lenguaje Java 7 incluyen literales binarios para bytes y números enteros (puede escribir el literal **`1928`** como **`0b11110001000`**) y guiones bajos en literales numéricos (puede escribir los mismos literales como **`1_928`** y **`0b111_1000_1000`**, si lo desea). Además, puede usar **`Strings`** como argumento en un **`switch`** .
 
-JAXB se agregó a Java SE 7 y ya no está incluido en Java EE.
-Se agregaron aplicaciones por lotes para la plataforma Java 1.0 y utilidades de concurrencia para Java EE 1.0 a Tecnologías de aplicaciones empresariales.
-Web Application Technologies adoptó la API de Java para WebSockets 1.0 (que conocerá en el Capítulo 10) y la API de Java para procesamiento JSON 1.0.
-El lenguaje de expresión unificado de Java se ha ampliado significativamente para incluir expresiones lambda y un análogo de la API de flujo de colecciones de Java SE 8. (Obtendrá más información sobre esto en el Capítulo 6).
-El perfil web se amplió ligeramente para incluir especificaciones que probablemente sean más necesarias en aplicaciones web comunes: JAX-RS, API de Java para WebSockets y API de Java para procesamiento JSON.
-Java SE 8
-Las nuevas características de Java SE 8 pueden resultar muy útiles a medida que trabaja con los ejemplos de este libro. Quizás la más visible sea la incorporación de expresiones lambda (conocidas extraoficialmente como cierres ). Las expresiones lambda son funciones anónimas que se definen y posiblemente se invocan sin ser asignadas.un nombre de tipo o vinculado a un identificador. Las expresiones Lambda son particularmente útiles para implementar de forma anónima las interfaces de un solo método que son tan comunes en las aplicaciones Java. Por ejemplo, una Threadque se instanciaba previamente con un anónimo Runnablecomo este:
+#### Java EE 7
 
+**Java EE 7, publicado el 12 de junio de 2013**, contiene una serie de cambios y nuevas funciones. Muchas de estas nuevas funciones se tratarán a lo largo de este libro, por lo que no se detallarán aquí. En resumen, los cambios de Java EE 7 son los siguientes:
+
+* JAXB se agregó a Java SE 7 y ya no está incluido en Java EE.
+* Se agregaron aplicaciones por lotes para la plataforma Java 1.0 y utilidades de concurrencia para Java EE 1.0 a Tecnologías de aplicaciones empresariales.
+* Web Application Technologies adoptó la API de Java para WebSockets 1.0 (que conocerá en el Capítulo 10) y la API de Java para procesamiento JSON 1.0.
+* El lenguaje de expresión unificado de Java se ha ampliado significativamente para incluir expresiones lambda y un análogo de la API de flujo de colecciones de Java SE 8. (Obtendrá más información sobre esto en el Capítulo 6).
+* El perfil web se amplió ligeramente para incluir especificaciones que probablemente sean más necesarias en aplicaciones web comunes: JAX-RS, API de Java para WebSockets y API de Java para procesamiento JSON.
+
+#### Java SE 8
+
+Las nuevas características de Java SE 8 pueden resultar muy útiles a medida que trabaja con los ejemplos de este libro. Quizás la más visible sea la incorporación de expresiones lambda (conocidas extraoficialmente como ***closures-cierres*** ). Las expresiones lambda son funciones anónimas que se definen y posiblemente se invocan sin ser asignadas, un nombre de tipo o vinculado a un identificador. Las expresiones Lambda son particularmente útiles para implementar de forma anónima las interfaces de un solo método que son tan comunes en las aplicaciones Java. Por ejemplo, una **`Thread`** que se instanciaba previamente con un anónimo **`Runnable`** como este:
+
+    
+```java
     public String doSomethingInThread(String someArgument)
     {
         ...
@@ -227,8 +258,12 @@ Las nuevas características de Java SE 8 pueden resultar muy útiles a medida qu
         });
         ...
     }
+```
+
 Ahora se puede simplificar con una expresión lambda:
 
+    
+```java
     public String doSomethingInThread(String someArgument)
     {
         ...
@@ -237,8 +272,12 @@ Ahora se puede simplificar con una expresión lambda:
         });
         ...
     }
+```
+AQUIII
 Las expresiones lambda pueden tener argumentos, tipos de retorno y genéricos. Y, cuando lo desee, puede utilizar una referencia de método en lugar de una expresión lambda para pasar una referencia a un método que coincida con la interfaz. El siguiente código también es equivalente a las dos instancias anteriores de Thread. También puede asignar referencias de método y expresiones lambda a variables.
 
+    
+```java
     public String doSomethingInThread(String someArgument)
     {
         ...
@@ -250,6 +289,8 @@ Las expresiones lambda pueden tener argumentos, tipos de retorno y genéricos. Y
     {
         // do something
     }
+```
+
 Una de las mayores quejas entre los usuarios de Java desde sus inicios es la falta de una API de fecha y hora decente. java.util.Datesiempre ha estado plagada de problemas, y la adición de java.util.Calendarsolo empeoró muchos de ellos. Java SE 8 finalmente aborda eso con JSR 310, una nueva API de fecha y hora. Esta API se basa en gran medida en Joda Time, pero con mejoras en la arquitectura subyacente para solucionar los problemas que señaló el inventor de Joda Time. Esta API es una adición revolucionaria a las API de la plataforma Java SE y finalmente trae una API de fecha y hora poderosa y bien diseñada a Java.
 
 Una evolución continua
