@@ -50,28 +50,32 @@ En la Figura 1-1 no se muestra el desarrollo de otros lenguajes capaces de utili
 
 ### El nacimiento de Enterprise Java
 
-Esta breve lección de historia puede parecer innecesaria (como desarrollador de Java, probablemente ya haya oído la mayor parte de esto antes). Sin embargo, es importante incluir el contexto de la historia de la Plataforma Java, Edición Estándar, porque está estrechamente entrelazada con el nacimiento y la evolución de la Plataforma Java, Edición Empresarial. Sun ya era consciente de la necesidad de herramientas más avanzadas para el desarrollo de aplicaciones, en particular en el ámbito de la creciente Internet y la popularidad de las aplicaciones web. En 1998, poco antes del lanzamiento de J2SE 1.2, Sun anunció que estaba trabajando en un producto llamado Java Professional Edition o JPE. Ya se había comenzado a trabajar en una tecnología conocida como Servlets , que son aplicaciones en miniatura capaces de responder a solicitudes HTTP. En 1997, Java Servlets 1.0 se lanzó junto con Java Web Server con poca fanfarria porque carecía de muchas características que la comunidad Java quería.
+Esta breve lección de historia puede parecer innecesaria (como desarrollador de Java, probablemente ya haya oído la mayor parte de esto antes). Sin embargo, es importante incluir el contexto de la historia de la **Java Platform, Standard Edition**, porque está estrechamente entrelazada con el nacimiento y la evolución de la **Java Platform, Enterprise Edition**. Sun ya era consciente de la necesidad de herramientas más avanzadas para el desarrollo de aplicaciones, en particular en el ámbito de la creciente Internet y la popularidad de las aplicaciones web. En 1998, poco antes del lanzamiento de **J2SE 1.2**, Sun anunció que estaba trabajando en un producto llamado **Java Professional Edition**, o **JPE**. Ya se había comenzado a trabajar en una tecnología conocida como ***Servlets***, que son aplicaciones en miniatura capaces de responder a solicitudes HTTP. En 1997, **Java Servlets 1.0** se lanzó junto con **Java Web Server** con poca fanfarria porque carecía de muchas características que la comunidad Java quería.
 
-Después de varias iteraciones internas de Servlets y JPE, Sun lanzó Java 2 Platform, Enterprise Edition (o J2EE ) versión 1.2 el 12 de diciembre de 1999. El número de versión correspondía con la versión actual de Java y J2SE en ese momento, y la especificación incluía:
+Después de varias iteraciones internas de Servlets y JPE, Sun lanzó ** Java 2 Platform, Enterprise Edition** (o **J2EE**) versión 1.2 el 12 de diciembre de 1999. El número de versión correspondía con la versión actual de Java y J2SE en ese momento, y la especificación incluía:
 
-Servlets 2.2
-API de extensión JDBC 2.0
-Interfaz de nombres y directorios de Java (JNDI) 1.0
-Páginas JavaServer (JSP) 1.2
-JavaBeans empresariales (EJB) 1.1
-Servicio de mensajes Java (JMS) 1.0
-API de transacciones Java (JTA) 1.0
-API de JavaMail 1.1
-Marco de activación de JavaBeans (JAF) 1.0.
-Al igual que J2SE, J2EE era una mera especificación. Sun proporcionaba una implementación de referencia de los componentes de la especificación, pero las empresas también tenían libertad para crear los suyos propios. Se desarrollaron muchas implementaciones, y en el próximo capítulo aprenderá sobre algunas de ellas. Estas implementaciones incluían y aún incluyen soluciones comerciales y de código abierto. J2EE se convirtió rápidamente en un complemento exitoso de J2SE y, con el paso de los años, algunos componentes se consideraron tan indispensables que migraron de J2EE a J2SE.
+* Servlets 2.2
+* JDBC Extension API 2.0
+* Java Naming and Directory Interface (JNDI) 1.0
+* JavaServer Pages (JSP) 1.2
+* Enterprise JavaBeans (EJB) 1.1
+* Java Message Service (JMS) 1.0
+* Java Transaction API (JTA) 1.0
+* JavaMail API 1.1
+* JavaBeans Activation Framework (JAF) 1.0.
 
-Java SE y Java EE evolucionan juntos
-J2EE 1.3 se lanzó en septiembre de 2001, poco más de un año después de Java y J2SE 1.3 y antes de Java/J2SE 1.4. La mayoría de sus componentes recibieron actualizaciones menores y se agregaron nuevas características. Los siguientes se unieron a la especificación J2EE y la gama de implementaciones se expandió y mejoró:
+Al igual que **J2SE**, **J2EE** era una mera especificación. Sun proporcionaba una implementación de referencia de los componentes de la especificación, pero las empresas también tenían libertad para crear los suyos propios. Se desarrollaron muchas implementaciones, y en el próximo capítulo aprenderá sobre algunas de ellas. Estas implementaciones incluían y aún incluyen soluciones comerciales y de código abierto. J2EE se convirtió rápidamente en un complemento exitoso de J2SE y, con el paso de los años, algunos componentes se consideraron tan indispensables que migraron de J2EE a J2SE.
 
-API de Java para procesamiento XML (JAXP) 1.1
-Biblioteca de etiquetas estándar de JavaServer Pages (JSTL) 1.0
-Arquitectura del conector J2EE 1.0
-Servicio de autenticación y autorización de Java (JAAS) 1.0
+### Java SE y Java EE evolucionan juntos
+
+**J2EE 1.3** se lanzó en septiembre de 2001, poco más de un año después de Java y J2SE 1.3 y antes de Java/J2SE 1.4. La mayoría de sus componentes recibieron actualizaciones menores y se agregaron nuevas características. Los siguientes se unieron a la especificación J2EE y la gama de implementaciones se expandió y mejoró:
+
+* Java API for XML Processing (JAXP) 1.1
+* JavaServer Pages Standard Tag Library (JSTL) 1.0
+* J2EE Connector Architecture 1.0
+* Java Authentication and Authorization Service (JAAS) 1.0
+
+
 En ese momento la tecnología estaba madurando considerablemente, pero todavía tenía mucho margen de mejora.
 
 J2EE 1.4 representó un gran salto en la evolución de la Plataforma Java, Enterprise Edition. Lanzada en noviembre de 2003 (aproximadamente un año antes que Java/J2SE 5.0 y dos años después de Java/J2SE 1.4), incluía Servlet 2.4 y JSP 2.0. Fue en esta versión en la que se eliminaron las especificaciones de la API de extensión JDBC, JNDI y JAAS porque se habían considerado esenciales para Java y se trasladaron a Java/J2SE 1.4. Esta versión también representó el punto en el que los componentes J2EE se dividieron en varias categorías de nivel superior:
