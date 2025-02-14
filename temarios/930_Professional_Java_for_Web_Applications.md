@@ -248,6 +248,6 @@ Professional Java for Web Applications es la guía completa de Wrox para desarro
 5. Creación de una aplicación cliente OAuth
 6. Resumen
 
-### Introducción
-### Anuncios
-### Acuerdo de licencia de usuario final
+#### Introducción
+#### Anuncios
+#### Acuerdo de licencia de usuario final
