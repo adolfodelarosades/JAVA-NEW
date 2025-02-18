@@ -77,7 +77,8 @@ Ya se han esbozado muchas de las ventajas de Apache Tomcat (al que se hace refer
 
 Aunque algunos desarrolladores prefieren utilizar otros contenedores web (y con el conocimiento adecuado, casi cualquier contenedor web puede resultar útil en una máquina de desarrollo), es difícil argumentar en contra del uso de Tomcat. Al utilizar Tomcat para este libro, puede centrarse en el código y las prácticas de desarrollo, prestando poca o ninguna atención a la gestión de su contenedor. El resto de este capítulo le ayudará a instalar y configurar Tomcat en su máquina. También le presenta la implementación y anulación de la implementación de aplicaciones con el administrador de Tomcat y la depuración de Tomcat en su IDE de Java.
 
-INSTALACIÓN DE TOMCAT EN SU MÁQUINA
+## INSTALACIÓN DE TOMCAT EN SU MÁQUINA
+
 Antes de poder instalar Tomcat en su máquina, debe descargarlo desde el sitio del proyecto Tomcat. Vaya a la página de descargas de Tomcat 8.0 y desplácese hacia abajo hasta la sección “Distribuciones binarias”. Hay muchas descargas en esta página y las únicas que necesita para este libro están bajo el encabezado “Core”. Como usuario de Windows, las dos descargas que le interesan son “32-bit/64-bit Windows Service Installer”(funciona para cualquier arquitectura de sistema) y el “zip de Windows de 32 bits” o el “zip de Windows de 64 bits” (según la arquitectura de su máquina). Si utiliza Linux, Mac OS X o algún otro sistema operativo, necesitará el zip que no sea de Windows, que se llama simplemente “zip”.
 
 Instalación como servicio de Windows
@@ -137,7 +138,8 @@ export CLASSPATH=/path/to/jdk8/lib/tools.jar:/path/to/ant/lib/ant.jar:
 /path/to/ant/lib/ant-launcher.jar
 Al ejecutar Tomcat con una configuración de compilación JSP personalizada, asegúrese de observar atentamente la salida en los registros de Tomcat. Si Tomcat no puede encontrar Ant o Ant no puede encontrar el compilador JDK, Tomcat recurre automáticamente al compilador Eclipse y solo muestra una advertencia en los registros.
 
-IMPLEMENTACIÓN Y ANULACIÓN DE APLICACIONES EN TOMCAT
+## IMPLEMENTACIÓN Y ANULACIÓN DE APLICACIONES EN TOMCAT
+
 En esta sección aprenderá a implementar y anular la implementación de aplicaciones web Java EE en Tomcat. Tiene dos opciones para lograrlo:
 
 Manualmente colocando la aplicación en el webappsdirectorio
@@ -172,7 +174,8 @@ Ahora ha implementado la aplicación utilizando el administrador Tomcat.
 
 La anulación de la implementación es igual de sencilla. En la página del administrador de Tomcat que vio anteriormente, debería ver un botón Anular implementación junto a la aplicación de muestra (consulte la Figura 2-5 ). Haga clic en este botón y la aplicación de muestra se anulará la implementación y se eliminará del webappsdirectorio. Cuando finalice, ya no podrá acceder a la aplicación en http://localhost:8080/sample-deployment/ .
 
-DEPURACIÓN DE TOMCAT DESDE SU IDE
+## DEPURACIÓN DE TOMCAT DESDE SU IDE
+
 Como desarrollador de Java EE, una de las habilidades más importantes que puede tener es la capacidad de implementar y depurar aplicaciones en Tomcat desde su IDE de Java. Esto le proporciona inconmensurables habilidades de resolución de problemas para determinar por qué una aplicación no se ejecuta o averiguar por qué ocurre el error que informó su cliente. Esta sección cubre la configuración, ejecución y depuración de aplicaciones web en Tomcat utilizando IntelliJ IDEA y Eclipse. Puede leer ambos conjuntos de instrucciones o solo el conjunto que pertenece al IDE que ha elegido; esa elección depende de usted.
 
 En el resto de este libro hay muy pocas instrucciones para hacer esto. Esto mantiene el texto desvinculado de cualquier IDE en particular. Tampoco verá ninguna captura de pantalla específica de IDE después de este capítulo. Asegúrese de estar familiarizado y cómodo con la implementación y depuración de aplicaciones en Tomcat usando su IDE antes de continuar, incluso si eso significa repasar esta sección varias veces.
@@ -276,7 +279,8 @@ ADVERTENCIA Cuando ejecuta Tomcat desde Eclipse, Eclipse anula cualquier archivo
 
 NOTA Probablemente haya notado que el JSP en Eclipse solo tiene un punto de interrupción, mientras que el JSP en IntelliJ IDEA tiene dos puntos de interrupción. El depurador JSP de Eclipse es mucho más limitado que el depurador JSP de IDEA, por lo que no es posible colocar un punto de interrupción en la línea 7 de este JSP en Eclipse.
 
-RESUMEN
+## RESUMEN
+
 En este capítulo, aprendió sobre los servidores de aplicaciones Java EE y los contenedores web y exploró varias implementaciones populares de ambos. Instaló Tomcat 8.0 en su máquina local, configuró la compilación JSP, la inició desde la línea de comandos y experimentó con la implementación y anulación de la implementación de aplicaciones en Tomcat. Por último, aprendió a configurar y ejecutar Tomcat 8.0 y a depurar sus aplicaciones utilizando IntelliJ IDEA y Eclipse IDE para desarrolladores de Java EE.
 
 En el siguiente capítulo crearás Servlets y aprenderás cómo funcionan las aplicaciones web Java EE.
