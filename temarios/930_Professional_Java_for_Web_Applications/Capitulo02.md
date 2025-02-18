@@ -6,26 +6,29 @@
 4. Depuración de Tomcat desde su IDE
 5. Resumen
 
-EN ESTE CAPÍTULO
+### EN ESTE CAPÍTULO
 
-Elección de un contenedor web
-Instalación de Tomcat en su máquina
-Implementación y anulación de la implementación de aplicaciones en Tomcat
-Depuración de Tomcat desde IntelliJ IDEA
-Depuración de Tomcat desde Eclipse
-DESCARGAS DE CÓDIGOS DE WROX.COM PARA ESTE CAPÍTULO
+* Elección de un contenedor web
+* Instalación de Tomcat en su máquina
+* Implementación y anulación de la implementación de aplicaciones en Tomcat
+* Depuración de Tomcat desde IntelliJ IDEA
+* Depuración de Tomcat desde Eclipse
+
+### DESCARGAS DE CÓDIGOS DE WROX.COM PARA ESTE CAPÍTULO
 
 Puede encontrar las descargas de código de wrox.com para este capítulo en http://www.wrox.com/go/projavaforwebapps en la pestaña Descargar código. El código para este capítulo se divide en los siguientes ejemplos principales:
 
-Archivo de aplicación WAR de implementación de muestra
-Ejemplo de proyecto de depuración de IntelliJ
-Ejemplo de depuración del proyecto Eclipse
-NUEVAS DEPENDENCIAS DE MAVEN PARA ESTE CAPÍTULO
+* Archivo de aplicación WAR de implementación de muestra
+* Ejemplo de proyecto de depuración de IntelliJ
+* Ejemplo de depuración del proyecto Eclipse
+
+### NUEVAS DEPENDENCIAS DE MAVEN PARA ESTE CAPÍTULO
 
 No hay dependencias de Maven para este capítulo.
 
-ELEGIR UN CONTENEDOR WEB
-En el capítulo anterior, se le presentó la plataforma Java, Enterprise Edition, y los conceptos de servlets, filtros y otros componentes de Java EE. También aprendió sobre algunas de las nuevas características de Java 7 y 8. Las aplicaciones web de Java EE se ejecutan dentro de servidores de aplicaciones Java EE y contenedores web (también conocidos como contenedores de servlets , y este libro utiliza los términos indistintamente).
+## ELEGIR UN CONTENEDOR WEB
+
+En el capítulo anterior, se le presentó la plataforma Java, Enterprise Edition, y los conceptos de servlets, filtros y otros componentes de Java EE. También aprendió sobre algunas de las nuevas características de Java 7 y 8. Las aplicaciones web de Java EE se ejecutan dentro de servidores de aplicaciones Java EE y contenedores web (también conocidos como contenedores de servlets, y este libro utiliza los términos indistintamente).
 
 Aunque la especificación Java EE está llena de muchas subespecificaciones más pequeñas, la mayoría de los contenedores web implementan solo las especificaciones Servlet, JSP y JSTL. Esto es diferente de los servidores de aplicaciones Java EE completos, que implementan toda la especificación Java EE. Cada servidor de aplicaciones contiene un contenedor web, que es responsable de administrar el ciclo de vida de los servlets, mapear las URL de solicitud al código de servlet, aceptar y responder a las solicitudes HTTP y administrar la cadena de filtros, cuando corresponda. Sin embargo, los contenedores web independientes suelen ser más livianos y más fáciles de usar cuando no se requiere todo el conjunto de características de Java EE.
 
