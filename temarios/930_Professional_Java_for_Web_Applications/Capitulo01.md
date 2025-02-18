@@ -273,8 +273,8 @@ Ahora se puede simplificar con una expresión lambda:
         ...
     }
 ```
-AQUIII
-Las expresiones lambda pueden tener argumentos, tipos de retorno y genéricos. Y, cuando lo desee, puede utilizar una referencia de método en lugar de una expresión lambda para pasar una referencia a un método que coincida con la interfaz. El siguiente código también es equivalente a las dos instancias anteriores de Thread. También puede asignar referencias de método y expresiones lambda a variables.
+
+Las expresiones lambda pueden tener argumentos, tipos de retorno y genéricos. Y, cuando lo desee, puede utilizar una ***method reference - referencia de método*** en lugar de una expresión lambda para pasar una referencia a un método que coincida con la interfaz. El siguiente código también es equivalente a las dos instancias anteriores de **`Thread`**. También puede asignar referencias de método y expresiones lambda a variables.
 
     
 ```java
@@ -291,40 +291,46 @@ Las expresiones lambda pueden tener argumentos, tipos de retorno y genéricos. Y
     }
 ```
 
-Una de las mayores quejas entre los usuarios de Java desde sus inicios es la falta de una API de fecha y hora decente. java.util.Datesiempre ha estado plagada de problemas, y la adición de java.util.Calendarsolo empeoró muchos de ellos. Java SE 8 finalmente aborda eso con JSR 310, una nueva API de fecha y hora. Esta API se basa en gran medida en Joda Time, pero con mejoras en la arquitectura subyacente para solucionar los problemas que señaló el inventor de Joda Time. Esta API es una adición revolucionaria a las API de la plataforma Java SE y finalmente trae una API de fecha y hora poderosa y bien diseñada a Java.
+Una de las mayores quejas entre los usuarios de Java desde sus inicios es la falta de una API de fecha y hora decente. **`java.util.Date`** siempre ha estado plagada de problemas, y la adición de **`java.util.Calendar`** solo empeoró muchos de ellos. Java SE 8 finalmente aborda eso con **JSR 310**, una nueva API de fecha y hora. Esta API se basa en gran medida en **Joda Time**, pero con mejoras en la arquitectura subyacente para solucionar los problemas que señaló el inventor de Joda Time. Esta API es una adición revolucionaria a las API de la plataforma Java SE y finalmente trae una API de fecha y hora poderosa y bien diseñada a Java.
 
-Una evolución continua
+#### Una evolución continua
+
 Como puede ver, las plataformas Java SE y EE nacieron juntas y han evolucionado de la mano durante casi dos décadas. Es probable que sigan evolucionando juntas durante muchos años o décadas más. Debería estar bastante familiarizado con Java SE, pero es posible que no sepa absolutamente nada sobre el uso de Java EE. También es posible que esté familiarizado con versiones anteriores de Java EE, pero desee aprender más sobre las nuevas características de Java EE.
 
 La Parte I de este libro le enseña las características más importantes de Java EE, incluidas:
 
-Servidores de aplicaciones y contenedores web (Capítulo 2)
-Servlets (Capítulo 3)
-JSP (Capítulos 4, 6, 7 y 8)
-Sesiones HTTP (Capítulo 5)
-Filtros (Capítulo 9)
-WebSockets (Capítulo 10).
-COMPRENDER LA ESTRUCTURA BÁSICA DE LA APLICACIÓN WEB
-Para crear una aplicación web Java EE se necesitan muchos componentes. En primer lugar, tienes el código y las bibliotecas de terceros de las que depende. Luego tienes el descriptor de implementación, que incluye instrucciones para implementar e iniciar tu aplicación. También tienes el descriptor de implementación, que ClassLoaderes responsable de aislar tu aplicación de otras aplicaciones web en el mismo servidor. Por último, debes empaquetar tu aplicación de alguna manera y para eso tienes los archivos WAR y EAR.
+* Servidores de aplicaciones y contenedores web (Capítulo 2)
+* Servlets (Capítulo 3)
+* JSP (Capítulos 4, 6, 7 y 8)
+* Sesiones HTTP (Capítulo 5)
+* Filtros (Capítulo 9)
+* WebSockets (Capítulo 10).
 
-Servlets, filtros, oyentes y JSP
-Los servlets son un componente clave de cualquier aplicación web Java EE. Los servlets, sobre los que aprenderá en el Capítulo 3, son clases Java responsables de aceptar y responder a las solicitudes HTTP. Casi todas las solicitudes a su aplicación pasan por un servlet de algún tipo, excepto aquellas solicitudes que son erróneas o que son interceptadas por algún otro componente. Un filtro es uno de esos componentes que puede interceptar las solicitudes a sus servlets. Puede utilizar filtros para satisfacer una variedad de necesidades, desde el formato de datos hasta la compresión de respuestas, pasando por la autenticación y la autorización. Explorará los diversos usos de los filtros en el Capítulo 9.
+### COMPRENDER LA ESTRUCTURA BÁSICA DE LA APLICACIÓN WEB
 
-Al igual que muchos otros tipos de aplicaciones, las aplicaciones web tienen un ciclo de vida. Existen procesos de inicio y cierre, y durante estas etapas ocurren muchas cosas diferentes. Las aplicaciones web Java EE admiten varios tipos de oyentes, sobre los que aprenderá en las Partes I y II. Estos oyentes pueden notificar a su código sobre varios eventos, como el inicio de la aplicación, el cierre de la aplicación, la creación de una sesión HTTP y la destrucción de la sesión.
+Para crear una aplicación web Java EE se necesitan muchos componentes. En primer lugar, tienes el código y las bibliotecas de terceros de las que depende. Luego tienes el descriptor de implementación(deployment descriptor), que incluye instrucciones para deploying e iniciar tu aplicación. También tienes **`ClassLoadere`**s, responsables de aislar tu aplicación de otras aplicaciones web en el mismo servidor. Por último, debes empaquetar tu aplicación de alguna manera y para eso tienes los archivos **WAR** y **EAR**.
 
-Quizás una de las herramientas Java EE más potentes a su disposición es la tecnología JavaServer Pages o JSP. Las JSP le proporcionan los medios para crear fácilmente interfaces gráficas de usuario dinámicas basadas en HTML para sus aplicaciones web sin tener que escribir manualmente Stringarchivos HTML en un archivo OutputStreamo PrintWriter. El tema de las JSP abarca muchas facetas diferentes, incluidas lasBiblioteca de etiquetas estándar de JavaServer Pages, lenguaje de expresión unificado de Java, etiquetas personalizadas e internacionalización y localización. Dedicará mucho tiempo a estas funciones en el capítulo 4 y en los capítulos 6 a 9.
+### Servlets, Filters, Listeners y JSPs
 
-Por supuesto, Java EE tiene muchas más funciones que servlets, filtros, oyentes y JSP. En este libro, cubrirá muchas de ellas, pero no todas.
+Los **servlets** son un componente clave de cualquier aplicación web Java EE. Los servlets, sobre los que aprenderá en el Capítulo 3, ***son clases Java responsables de aceptar y responder a las solicitudes HTTP***. Casi todas las requests a su aplicación pasan por un servlet de algún tipo, excepto aquellas requests que son erróneas o que son interceptadas por algún otro componente. Un **filter** ***es uno de esos componentes que puede interceptar las solicitudes a sus servlets***. Puede utilizar filtros para satisfacer una variedad de necesidades, desde el formato de datos hasta la compresión de respuestas, pasando por la autenticación y la autorización. Explorará los diversos usos de los filtros en el Capítulo 9.
 
-Estructura de directorios y archivos WAR
-Las aplicaciones web estándar de Java EE se implementan como archivos WAR o directorios de aplicaciones web "descompuestos" (sin archivar). Ya debería estar familiarizado con los archivos JAR o Java Archive . Recuerde que un archivo JAR es simplemente un archivo con formato ZIP con una estructura de directorio estándar reconocida por las JVM. No hay nada propietario sobre el formato de archivo JAR, y cualquier aplicación de archivo ZIP puede crear y leer archivos JAR. Un archivo Web Application Archive o WAR es el archivo de almacenamiento equivalente para las aplicaciones web Java EE.
+Al igual que muchos otros tipos de aplicaciones, las aplicaciones web tienen un ciclo de vida. Existen procesos de startup y shutdown, y durante estas etapas ocurren muchas cosas diferentes. Las aplicaciones web Java EE admiten varios tipos de **listeners**, sobre los que aprenderá en las Partes I y II. Estos listeners pueden notificar a su código sobre varios eventos, como el inicio de la aplicación, el cierre de la aplicación, la creación de una sesión HTTP y la destrucción de la sesión.
 
-Todos los servidores de aplicaciones web Java EE admiten archivos de aplicación WAR. La mayoría también admiten directorios de aplicaciones expandidos. Ya sea que estén archivados o expandidos, la convención de estructura de directorios, como se muestra en la Figura 1-2 , es la misma. Al igual que un archivo JAR, esta estructura contiene clases y otros recursos de la aplicación, pero esas clases no se almacenan en relación con la raíz de la aplicación como en un archivo JAR. En cambio, los archivos de clase se encuentran en /WEB-INF/classes. El WEB-INFdirectorio almacena archivos informativos e instructivos que los servidores de aplicaciones web Java EE utilizan para determinar cómo implementar y ejecutar la aplicación. Su classesdirectorio actúa como la raíz del paquete. Todos los archivos de clase de aplicación compilados y otros recursos se encuentran dentro de este directorio.
+Quizás una de las herramientas Java EE más potentes a su disposición es la tecnología **JavaServer Pages** o **JSP**. Las JSP le proporcionan los medios para crear fácilmente interfaces gráficas de usuario dinámicas basadas en HTML para sus aplicaciones web sin tener que escribir manualmente **`String`** en HTML a un **`OutputStream`** o **`PrintWriter`**. El tema de las JSP abarca muchas facetas diferentes, incluidas **JavaServer Pages Standard Tag Library**, **Java Unified Expression Language**, **custom tags**, **internationalization** y **localization**. Dedicará mucho tiempo a estas funciones en el capítulo 4 y en los capítulos 6 a 9.
 
+Por supuesto, Java EE tiene muchas más funciones que Servlets, filters, listeners, y JSPs. En este libro, cubrirá muchas de ellas, pero no todas.
 
-FIGURA 1-2
+### Estructura de directorios y archivos WAR
 
-A diferencia de los archivos JAR estándar, los archivos WAR pueden contener archivos JAR agrupados, que se encuentran en /WEB-INF/lib. Todas las clases de los archivos JAR de este directorio también están disponibles para la aplicación en la ruta de clases de la aplicación. Los directorios /WEB-INF/tagsy /WEB-INF/tldestán reservados para almacenar archivos de etiquetas JSP y descriptores de bibliotecas de etiquetas, respectivamente. Explorará el tema de los archivos de etiquetas y las bibliotecas de etiquetas en profundidad en el Capítulo 8. El i18ndirectorio no es en realidad parte de las especificaciones de Java EE, pero es una convención que la mayoría de los desarrolladores de aplicaciones siguen para almacenar archivos de internacionalización (i18n) y localización (L10n).
+Las aplicaciones web estándar de Java EE se implementan como **archivos WAR** o “exploded” (unarchived) Web Application Directories. Ya debería estar familiarizado con los **archivos JAR** o **Java Archive**. Recuerde que ***un archivo JAR es simplemente un archivo con formato ZIP con una estructura de directorio estándar reconocida por las JVM***. No hay nada propietario sobre el formato de archivo JAR, y cualquier aplicación de archivo ZIP puede crear y leer archivos JAR. Un archivo **WAR** o **Web Application Archive** es el archivo de almacenamiento equivalente para las aplicaciones web Java EE.
+
+Todos los servidores de aplicaciones web Java EE admiten archivos de aplicación WAR. La mayoría también admiten directorios de aplicaciones expandidos. Ya sea que estén archivados o expandidos, la convención de estructura de directorios, como se muestra en la Figura 1-2, es la misma. Al igual que un archivo JAR, esta estructura contiene clases y otros recursos de la aplicación, pero esas clases no se almacenan en relación con la raíz de la aplicación como en un archivo JAR. En cambio, ***los archivos de clase se encuentran en `/WEB-INF/classes`***. El directorio **`WEB-INF`** almacena archivos informativos e instructivos que los servidores de aplicaciones web Java EE utilizan para determinar cómo implementar y ejecutar la aplicación. Su directorio **`classes`** actúa como la raíz del paquete. Todos los archivos de clase de aplicación compilados y otros recursos se encuentran dentro de este directorio.
+
+![image](https://github.com/user-attachments/assets/f0287478-ddfe-4c6b-9df0-ad03bd6a6b33)
+
+**FIGURA 1-2**
+
+A diferencia de los archivos JAR estándar, los archivos WAR pueden contener archivos JAR agrupados, que se encuentran en **`/WEB-INF/lib`**. Todas las clases de los archivos JAR de este directorio también están disponibles para la aplicación en la ruta de clases de la aplicación. Los directorios /WEB-INF/tagsy /WEB-INF/tldestán reservados para almacenar archivos de etiquetas JSP y descriptores de bibliotecas de etiquetas, respectivamente. Explorará el tema de los archivos de etiquetas y las bibliotecas de etiquetas en profundidad en el Capítulo 8. El i18ndirectorio no es en realidad parte de las especificaciones de Java EE, pero es una convención que la mayoría de los desarrolladores de aplicaciones siguen para almacenar archivos de internacionalización (i18n) y localización (L10n).
 
 Probablemente también haya notado la presencia de dos META-INFdirectorios diferentes. Esto puede ser una fuente de confusión para algunos desarrolladores, pero si recuerda las reglas de ruta de clases simples, puede diferenciarlos fácilmente. Al igual que META-INFlos directorios de archivos JAR, el directorio de nivel raíz /META-INFcontiene el archivo de manifiesto de la aplicación. También puede contener recursos para contenedores web o servidores de aplicaciones específicos. Por ejemplo, Apache Tomcat (sobre el que aprenderá en el Capítulo 2) busca y usa un context.xmlarchivo en este directorio para ayudar a personalizar cómo se implementa la aplicación en Tomcat. Ninguno de estos archivosson parte de la especificación Java EE, y los archivos compatibles pueden variar de un servidor de aplicaciones o contenedor web a otro.
 
