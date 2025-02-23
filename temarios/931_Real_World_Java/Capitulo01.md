@@ -12,17 +12,23 @@
 
 Ya aprendiste Java y estás listo para comenzar a usarlo en el trabajo. O ya lo estás usando en el trabajo, pero has descubierto el intimidante ecosistema que nunca te enseñaron en la escuela. Este libro es para aquellos que ya aprendieron a codificar en Java y están buscando el siguiente paso. Ya seas estudiante, un programador profesional que cambia de lenguaje o que está cambiando de carrera, esta es tu oportunidad de aprender sobre el ecosistema de Java.
 
-Este libro no pretende ser una guía completa del ecosistema Java; eso requeriría muchos tomos de miles de páginas. Si recién está aprendiendo Java, le recomendamos Head First Java , 3.ª edición (O'Reilly Media, 2022) o Java For Dummies (For Dummies, 2025). Luego, vuelva a leer este libro. El objetivo de este libro es exponer al lector a algunos de los marcos, herramientas y técnicas más comunes que se utilizan en los talleres de desarrollo empresarial de Java, con suficientes antecedentes y ejemplos para sumergirse en ellos.
+Este libro no pretende ser una guía completa del ecosistema Java; eso requeriría muchos tomos de miles de páginas. Si recién está aprendiendo Java, le recomendamos *Head First Java*, 3.ª edición (O'Reilly Media, 2022) o *Java For Dummies* (For Dummies, 2025). Luego, vuelva a leer este libro. El objetivo de este libro es exponer al lector a algunos de los frameworks, herramientas y técnicas más comunes que se utilizan en los talleres de desarrollo empresarial de Java, con suficientes antecedentes y ejemplos para sumergirse en ellos.
 
 En este capítulo, cubriremos información general sobre Java antes de abordar temas especializados en los capítulos posteriores. Si bien los capítulos se pueden leer sin seguir el orden establecido, recomendamos leer los capítulos 1 a 4 antes de saltearlos.
 
-DESCARGAS DE CÓDIGOS PARA ESTE CAPÍTULO
-El código fuente de este capítulo está disponible en la página del libro en www.wiley.com. Haga clic en el enlace Descargas. El código también se puede encontrar en https://github.com/realworldjava/Ch01-History. Consulte el README.mdarchivo en ese repositorio para obtener más detalles.
+<hr>
 
-COMPRENDIENDO LA ADMINISTRACIÓN DE JAVA
-Java fue creado por James Gosling en Sun Microsystems y lanzado al mundo en 1995.
+**DESCARGAS DE CÓDIGOS PARA ESTE CAPÍTULO**
 
-Según cuenta la leyenda, Java comenzó como “Oak”, un nuevo lenguaje para crear software integrado en dispositivos inteligentes. La idea era novedosa: en lugar de escribir software para cada sistema operativo integrado, diseñar un lenguaje compilado, orientado a objetos, que se escribiera una vez y se ejecutara en cualquier lugar y que produjera código de bytes, y diseñar un intérprete de código de bytes para cada plataforma que pudiera ejecutarlo.
+El código fuente de este capítulo está disponible en la página del libro en www.wiley.com. Haga clic en el enlace Descargas. El código también se puede encontrar en https://github.com/realworldjava/Ch01-History. Consulte el archivo README.md en ese repositorio para obtener más detalles.
+
+<hr>
+
+## COMPRENDIENDO LA ADMINISTRACIÓN DE JAVA
+
+Java fue creado por **James Gosling** en Sun Microsystems y lanzado al mundo en 1995.
+
+Según cuenta la leyenda, Java comenzó como **“Oak”**, un nuevo lenguaje para crear software integrado en dispositivos inteligentes. La idea era novedosa: en lugar de escribir software para cada sistema operativo integrado, diseñar un lenguaje compilado, orientado a objetos, que se escribiera una vez y se ejecutara en cualquier lugar y que produjera código de bytes, y diseñar un intérprete de código de bytes para cada plataforma que pudiera ejecutarlo.
 
 Mientras tanto, incluían marcos integrados que, en otros lenguajes, eran complementos, como diseñadores de UI o de concurrencia. Luego, completaban todo esto con la gestión de memoria en forma de recolección de basura y la optimizaban mediante compilación en tiempo real (JIT) y listo , tenían todo lo necesario para una plataforma de lenguaje integrado.
 
