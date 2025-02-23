@@ -1,12 +1,15 @@
 # 1 Cómo llegamos hasta aquí: la historia de Java en pocas palabras
 
-¿QUÉ HAY EN ESTE CAPÍTULO?
-Entendiendo la administración de Java
-Diferenciación de las principales versiones de Java
-Trabajar con depreciación y jubilación
-Identificación de cambios de nombre
-Comprender los principios del cambio
-INTRODUCCIÓN
+#### ¿QUÉ HAY EN ESTE CAPÍTULO?
+
+* Entendiendo la administración de Java
+* Diferenciación de las principales versiones de Java
+* Trabajar con depreciación y jubilación
+* Identificación de cambios de nombre
+* Comprender los principios del cambio
+
+## INTRODUCCIÓN
+
 Ya aprendiste Java y estás listo para comenzar a usarlo en el trabajo. O ya lo estás usando en el trabajo, pero has descubierto el intimidante ecosistema que nunca te enseñaron en la escuela. Este libro es para aquellos que ya aprendieron a codificar en Java y están buscando el siguiente paso. Ya seas estudiante, un programador profesional que cambia de lenguaje o que está cambiando de carrera, esta es tu oportunidad de aprender sobre el ecosistema de Java.
 
 Este libro no pretende ser una guía completa del ecosistema Java; eso requeriría muchos tomos de miles de páginas. Si recién está aprendiendo Java, le recomendamos Head First Java , 3.ª edición (O'Reilly Media, 2022) o Java For Dummies (For Dummies, 2025). Luego, vuelva a leer este libro. El objetivo de este libro es exponer al lector a algunos de los marcos, herramientas y técnicas más comunes que se utilizan en los talleres de desarrollo empresarial de Java, con suficientes antecedentes y ejemplos para sumergirse en ellos.
