@@ -20,7 +20,7 @@ En este capítulo, cubriremos información general sobre Java antes de abordar t
 
 **DESCARGAS DE CÓDIGOS PARA ESTE CAPÍTULO**
 
-El código fuente de este capítulo está disponible en la página del libro en www.wiley.com. Haga clic en el enlace Descargas. El código también se puede encontrar en https://github.com/realworldjava/Ch01-History. Consulte el archivo README.md en ese repositorio para obtener más detalles.
+El código fuente de este capítulo está disponible en la página del libro en www.wiley.com. Haga clic en el enlace Descargas. El código también se puede encontrar en https://github.com/realworldjava/Ch01-History. Consulte el archivo **README.md** en ese repositorio para obtener más detalles.
 
 <hr>
 
@@ -30,11 +30,11 @@ Java fue creado por **James Gosling** en Sun Microsystems y lanzado al mundo en 
 
 Según cuenta la leyenda, Java comenzó como **“Oak”**, un nuevo lenguaje para crear software integrado en dispositivos inteligentes. La idea era novedosa: en lugar de escribir software para cada sistema operativo integrado, diseñar un lenguaje compilado, orientado a objetos, que se escribiera una vez y se ejecutara en cualquier lugar y que produjera código de bytes, y diseñar un intérprete de código de bytes para cada plataforma que pudiera ejecutarlo.
 
-Mientras tanto, incluían marcos integrados que, en otros lenguajes, eran complementos, como diseñadores de UI o de concurrencia. Luego, completaban todo esto con la gestión de memoria en forma de recolección de basura y la optimizaban mediante compilación en tiempo real (JIT) y listo , tenían todo lo necesario para una plataforma de lenguaje integrado.
+Mientras tanto, incluían frameworks integrados que, en otros lenguajes, eran complementos, como diseñadores de UI o de concurrencia. Luego, completaban todo esto con la gestión de memoria en forma de recolección de basura y la optimizaban mediante compilación en tiempo real (just-in-time JIT) y listo, tenían todo lo necesario para una plataforma de lenguaje integrado.
 
 Pero, por desgracia, pronto se descubrió que ya se estaba gestando una plataforma llamada Oak. Una larga noche en una cafetería tomando un café caliente y el resto es historia.
 
-Muchos años después, en 2009, Oracle adquirió Sun y la propiedad de Java pasó a manos de Oracle. Hasta el día de hoy, Oracle sigue siendo el administrador o custodio de Java.
+Muchos años después, *en 2009, Oracle adquirió Sun* y la propiedad de Java pasó a manos de Oracle. Hasta el día de hoy, Oracle sigue siendo el administrador o custodio de Java.
 
 El compromiso de la comunidad Java de garantizar que Java sea compatible con versiones anteriores y su sólida serie de miles de pruebas Technology Compatibility Kit (TCK) que deben aprobarse para cada característica proporcionan la estabilidad y confiabilidad que han colocado a Java en su lugar como uno de los lenguajes de programación más exitosos de la historia.
 
@@ -42,41 +42,38 @@ Oracle reconoce que su gestión es una responsabilidad fundamental, dada la gran
 
 Uno de los cambios introducidos bajo la dirección de Oracle fue un cronograma de lanzamientos más frecuente y predecible. Observe en la Figura 1.1 que los lanzamientos han variado tanto en frecuencia como en mes. En un caso, los usuarios de Java tuvieron que esperar más de cinco años para obtener una nueva versión.
 
+![image](https://github.com/user-attachments/assets/d071c757-9e85-4372-b788-e1cba98e3c47)
 
-FIGURA 1.1 :Versiones de Java
+**FIGURA 1.1: Versiones de Java**
 
-Con el nuevo ritmo de lanzamiento, cada seis meses sale una nueva versión de Java. Puede que pienses que muchas empresas no quieren actualizar cada seis meses, ¡y tienes razón! También hay lanzamientos menos frecuentes llamados lanzamientos de soporte a largo plazo ( LTS ). Cuando comenzó el nuevo ciclo de lanzamiento, los lanzamientos de LTS se hacían cada tres años. Ahora se hacen cada dos años.
+Con el nuevo ritmo de lanzamiento, cada seis meses sale una nueva versión de Java. Puede que pienses que muchas empresas no quieren actualizar cada seis meses, ¡y tienes razón! También hay lanzamientos menos frecuentes llamados lanzamientos de soporte a largo plazo ( Long-Term Support - LTS ). Cuando comenzó el nuevo ciclo de lanzamiento, los lanzamientos de LTS se hacían cada tres años. Ahora se hacen cada dos años.
 
 La Tabla 1.1 muestra los lanzamientos desde el inicio de la nueva cadencia de lanzamientos hasta la publicación de este libro. Como puede ver, ahora hay lanzamientos regulares y predecibles. Este libro utiliza Java 21, que era la última versión de larga duración en el momento de la impresión.
 
 La figura 1.2 muestra el cronograma de lanzamiento de LTS. Ahora que existe un patrón, es posible predecir las fechas de lanzamiento de LTS en el futuro, lo que ayuda a las empresas a planificar.
 
-Muchas empresas ejecutan sus programas Java de forma remota, por ejemplo, a través de un sitio web. Hasta 2020, esto se hacía a menudo a través de Spring o Java EE (Enterprise Edition). Consulte el Capítulo 6 , “Conocimiento del marco Spring” y el Capítulo 14 , “Conocimiento más sobre el ecosistema”, para obtener más detalles. En 2020, Oracle entregó la administración de Java EE a una fundación de código abierto. Dado que “Java” es una marca comercial, el marco Java EE pasó a llamarse “Jakarta EE” en ese momento.
+Muchas empresas ejecutan sus programas Java de forma remota, por ejemplo, a través de un sitio web. Hasta 2020, esto se hacía a menudo a través de Spring o Java EE (Enterprise Edition). Consulte el Capítulo 6 , “Conocimiento del Spring Framework” y el Capítulo 14 , “Conocimiento más sobre el ecosistema”, para obtener más detalles. En 2020, Oracle entregó la administración de Java EE a una fundación de código abierto. Dado que “Java” es una marca comercial, el marco Java EE pasó a llamarse **“Jakarta EE”** en ese momento.
 
-TABLA 1.1 :Versiones de Java
+**TABLA 1.1: Versiones de Java**
 
-AÑO	LANZAMIENTO DE MARZO	LANZAMIENTO EN SEPTIEMBRE
-2017	n/a (cadencia iniciada en septiembre)	Java 9
-2018	Java 10	Java 11 (LTS)
-2019	Java 12	Java 13
-2020	Java 14	Java 15
-2021	Java 16	Java 17 (LTS)
-2022	Java 18	Java 19
-2023	Java 20	Java 21 (LTS)
-2024	Java 22	Java 23
+![image](https://github.com/user-attachments/assets/124cb8e2-a339-46dc-b031-f8e949fa1ade)
 
-FIGURA 1.2 :Calendario de lanzamiento de LTS, con predicciones futuras
+![image](https://github.com/user-attachments/assets/7c5a01f3-19b5-43e0-a378-f5bf5a404901)
+**FIGURA 1.2: Calendario de lanzamiento de LTS, con predicciones futuras**
 
-Diferenciación de versiones clave de Java
+## Diferenciación de versiones clave de Java
+
 El lenguaje Java ha evolucionado bastante con el tiempo. Si observa las características clave que se agregaron con el tiempo, podrá tener una idea de esta evolución y de la expectativa de que el lenguaje seguirá mejorando. Además, sabrá qué esperar si su proyecto de trabajo no está en la última versión.
 
 Tenga en cuenta que esta sección no es ni de lejos una lista completa de funciones. Hemos seleccionado las funciones más importantes de cada versión analizada.
 
-Quizás se pregunte por qué no incluimos la inferencia de tipos con la varpalabra clave en esta sección. Si bien ambos autores de este libro utilizan varen algunos casos en nuestro código de trabajo, pensamos que sería más claro en este libro especificar cuáles son los tipos y asegurarnos de que se representen todas las importaciones.
+Quizás se pregunte por qué no incluimos la inferencia de tipos con la palabra clave **`var`** en esta sección. Si bien ambos autores de este libro utilizan **`var`** en algunos casos en nuestro código de trabajo, pensamos que sería más claro en este libro especificar cuáles son los tipos y asegurarnos de que se representen todas las importaciones.
 
-Codificación de genéricos en Java 5
-Antes de Java 5, el compilador no tenía forma de saber qué se quería incluir en una lista. Java 5 introdujo los genéricos , que permiten especificar el tipo; en el caso del siguiente ejemplo, un String:
+### Codificación de genéricos en Java 5
 
+Antes de Java 5, el compilador no tenía forma de saber qué se quería incluir en una lista. Java 5 introdujo los genéricos, que permiten especificar el tipo; en el caso del siguiente ejemplo, un **`String`**:
+
+```java
 1:  import java.util.ArrayList;
 2:  import java.util.List;
 3:
@@ -94,15 +91,19 @@ Antes de Java 5, el compilador no tenía forma de saber qué se quería incluir 
 15:       System.out.println(buildingNames);  // [Firehouse]
 16:    }
 17: }
-Ahora que hemos informado al compilador sobre nuestra intención, es nuestro asistente. El compilador producirá un error si intentamos agregar un Integero LocalDateo cualquier otra cosa a buildingNames.
+```
 
-Quizás te preguntes por qué la línea 7 no lo dice new ArrayList<>()y, en su lugar, utiliza una versión más larga. El operador de diamante ( <>) se agregó en Java 7 y este ejemplo es para Java 5. ¡Pero incluso esto muestra la evolución del lenguaje!
+Ahora que hemos informado al compilador sobre nuestra intención, es nuestro asistente. El compilador producirá un error si intentamos agregar un **`Integer`** o **`LocalDate`** o cualquier otra cosa a **`buildingNames`**.
 
-Codificación con programación funcional desde Java 8
+Quizás te preguntes por qué la línea 7 no lo dice **`new ArrayList<>()`** y, en su lugar, utiliza una versión más larga. El operador de diamante ( **`<>`** ) se agregó en Java 7 y este ejemplo es para Java 5. ¡Pero incluso esto muestra la evolución del lenguaje!
+
+### Codificación con programación funcional desde Java 8
+
 La programación funcional es una forma de escribir código de forma más declarativa. Se especifica lo que se quiere hacer en lugar de ocuparse del estado de los objetos. Se presta más atención a las expresiones que a los bucles.
 
-Java 8 introdujo lambdas y referencias a métodos para facilitar la escritura de código con ejecución diferida , también conocido como “código que se ejecuta más tarde”. Ambos permiten pasar fácilmente código ejecutable a un método. En el siguiente código, puedes ver dos lambdas y una referencia a un método:
+Java 8 introdujo lambdas y referencias a métodos para facilitar la escritura de código con *ejecución diferida - deferred execution*, también conocido como “código que se ejecuta más tarde”. Ambos permiten pasar fácilmente código ejecutable a un método. En el siguiente código, puedes ver dos lambdas y una referencia a un método:
 
+```java
 1:  import java.util.Arrays;
 2:  import java.util.List;
 3:
@@ -119,17 +120,23 @@ Java 8 introdujo lambdas y referencias a métodos para facilitar la escritura de
 14:          .forEach(System.out::println);
 15:    }
 16: }
+```
+
 Este código genera estas dos líneas:
 
+```text
 *Lenovo
 *Microsoft
-La línea 10 inicia la secuencia de comandos. Las líneas 11 y 12 utilizan lambdas para especificar lo que debe suceder en cada paso. Esto ->te da una pista de que estás viendo una lambda. La línea 11 solo permite nombres con al menos cinco caracteres a través de la secuencia de comandos. La línea 12 agrega un asterisco al comienzo de cada línea de la secuencia de comandos. Ten en cuenta que no cambia el computerCompaniescontenido original.
+```
 
-Luego, en la línea 14, puede ver la primera referencia de método. ::Le indica que es una referencia de método y, en este caso, imprime los valores. Una referencia de método es una versión más compacta de una lambda. Escribirla n -> System.out.println(n)hubiera sido equivalente.
+La línea 10 inicia la secuencia de comandos. Las líneas 11 y 12 utilizan lambdas para especificar lo que debe suceder en cada paso. Esto **`->`** te da una pista de que estás viendo una lambda. La línea 11 solo permite nombres con al menos cinco caracteres a través de la secuencia de comandos. La línea 12 agrega un asterisco al comienzo de cada línea de la secuencia de comandos. Ten en cuenta que no cambia el **`computerCompanies`** contenido original.
 
-Quizás hayas notado que no llamamos List.of()en lugar de Arrays.asList()en la línea 8. List.of()¡se agregó en Java 9!
+Luego, en la línea 14, puede ver la primera referencia de método. **`::`** Le indica que es una referencia de método y, en este caso, imprime los valores. Una referencia de método es una versión más compacta de una lambda. Escribirla **`n -> System.out.println(n)`** hubiera sido equivalente.
 
-Módulos de codificación de Java 11
+Quizás hayas notado que no llamamos **`List.of()`** en lugar de **`Arrays.asList()`** en la línea 8. **`List.of()`** ¡se agregó en Java 9!
+
+### Módulos de codificación de Java 11
+
 El sistema de módulos de la plataforma Java (JPMS) agrupa el código en un nivel superior al de los paquetes. El objetivo principal de un módulo es proporcionar grupos de paquetes relacionados para ofrecer un conjunto particular de funciones a los desarrolladores. Es como un archivo JAR, excepto que el desarrollador elige qué paquetes son accesibles fuera del módulo. Muchas empresas optan por no utilizar módulos y, de hecho, su uso es opcional.
 
 Los módulos de Java se introdujeron en Java 9, no en Java 11. Los incluimos en Java 11 porque esa fue la primera versión LTS de Java que admitió módulos. Todos los proyectos en una versión de Java anterior a la 8 se actualizarán a Java 11, 17, 21, etc. No pasarán a la 9, ya que el soporte para Java 9 finalizó en marzo de 2018 (seis meses después de su lanzamiento en septiembre de 2017).
