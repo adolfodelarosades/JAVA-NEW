@@ -59,6 +59,7 @@ Muchas empresas ejecutan sus programas Java de forma remota, por ejemplo, a trav
 ![image](https://github.com/user-attachments/assets/124cb8e2-a339-46dc-b031-f8e949fa1ade)
 
 ![image](https://github.com/user-attachments/assets/7c5a01f3-19b5-43e0-a378-f5bf5a404901)
+
 **FIGURA 1.2: Calendario de lanzamiento de LTS, con predicciones futuras**
 
 ## Diferenciación de versiones clave de Java
@@ -137,33 +138,30 @@ Quizás hayas notado que no llamamos **`List.of()`** en lugar de **`Arrays.asLis
 
 ### Módulos de codificación de Java 11
 
-El sistema de módulos de la plataforma Java (JPMS) agrupa el código en un nivel superior al de los paquetes. El objetivo principal de un módulo es proporcionar grupos de paquetes relacionados para ofrecer un conjunto particular de funciones a los desarrolladores. Es como un archivo JAR, excepto que el desarrollador elige qué paquetes son accesibles fuera del módulo. Muchas empresas optan por no utilizar módulos y, de hecho, su uso es opcional.
+El sistema de módulos de la plataforma Java ( Java Platform Module System - JPMS) agrupa el código en un nivel superior al de los paquetes. El objetivo principal de un módulo es proporcionar grupos de paquetes relacionados para ofrecer un conjunto particular de funciones a los desarrolladores. Es como un archivo JAR, excepto que el desarrollador elige qué paquetes son accesibles fuera del módulo. Muchas empresas optan por no utilizar módulos y, de hecho, su uso es opcional.
 
 Los módulos de Java se introdujeron en Java 9, no en Java 11. Los incluimos en Java 11 porque esa fue la primera versión LTS de Java que admitió módulos. Todos los proyectos en una versión de Java anterior a la 8 se actualizarán a Java 11, 17, 21, etc. No pasarán a la 9, ya que el soporte para Java 9 finalizó en marzo de 2018 (seis meses después de su lanzamiento en septiembre de 2017).
 
-Un módulo es un archivo Java (JAR) que consta de un module-info.javaarchivo en la raíz del proyecto y uno o más paquetes Java. Por ejemplo, aquí hay un módulo con dos paquetes que contienen una clase cada uno:
+Un módulo es un archivo Java ( Java Archive - JAR ) que consta de un archivo **`module-info.java`** en la raíz del proyecto y uno o más paquetes Java. Por ejemplo, aquí hay un módulo con dos paquetes que contienen una clase cada uno:
 
-book-module
-| -- module-info.class
-| -- com
-   | -- wiley
-      | -- realworldjava
-         | -- modulecode
-            | -- internal
-               | -- PrivateHelper.class
-            | -- utils
-               | -- BookUtils.class
-Este ejemplo muestra .classarchivos en lugar de .javaarchivos porque el archivo JAR contiene código de bytes ejecutable. Pero espere. No desea que quienes llaman a su módulo hagan referencia a PrivateHelper. Ahí es donde module-infoentra en juego el archivo:
+![image](https://github.com/user-attachments/assets/2309c235-9e4c-4bb1-a6fd-6a47e53fc6d1)
 
+Este ejemplo muestra archivos **`.class`** en lugar de archivos **`.java`** porque el archivo JAR contiene código de bytes ejecutable. Pero espere. No desea que quienes llaman a su módulo hagan referencia a **`PrivateHelper`**. Ahí es donde **`module-info`** entra en juego el archivo:
+
+```java
 module com.wiley.realworldjava.modulecode {
    exports com.wiley.realworldjava.modulecode.utils;
    requires java.sql;
 }
-La modulepalabra clave permite que Java sepa que estamos especificando un módulo aquí en lugar de un classo interfaceu otro tipo de nivel superior de Java. La exportsdirectiva le dice a Java que los llamantes pueden hacer referencia al utilspaquete directamente desde su código. Dado que el internalpaquete no se menciona en el archivo module-info, los llamantes no pueden usarlo directamente, solo a través de BookUtils. Finalmente, la requiresdirectiva especifica que usamos el java.sqlmódulo, que es proporcionado por Oracle con el JDK. Hay otro módulo que usamos llamado java.base, pero ese se proporciona automáticamente sin tener que especificarlo. Contiene clases comunes como Stringy List.
+```
 
-Codificación de bloques de texto y registros desde Java 17
-Fue difícil elegir un favorito de Java 17, por lo que elegimos dos. Los bloques de texto también se conocen como cadenas multilínea . Los bloques de texto se agregaron en Java 15. Al igual que los módulos, los enumeramos en la primera versión LTS que los puso a disposición. Puede ver un bloque de texto aquí rodeado por tres comillas dobles ( "):
+La palabra clave **`module`** permite que Java sepa que estamos especificando un módulo aquí en lugar de un **`class`** o **`interface`** u otro tipo de nivel superior de Java. La directiva **`exports`** le dice a Java que los callers pueden hacer referencia al paquete **`utils`** directamente desde su código. Dado que el paquete **`internal`** no se menciona en el archivo **`module-info`**, los callers no pueden usarlo directamente, solo a través de **`BookUtils`**. Finalmente, la directiva **`requires`** especifica que usamos el módulo **`java.sql`**, que es proporcionado por Oracle con el JDK. Hay otro módulo que usamos llamado **`java.base`**, pero ese se proporciona automáticamente sin tener que especificarlo. Contiene clases comunes como **`String`** y **`List`**.
 
+### Codificación de Text Blocks y Records desde Java 17
+
+Fue difícil elegir un favorito de Java 17, por lo que elegimos dos. Los bloques de texto también se conocen como *multiline strings - cadenas multilínea*. Los bloques de texto se agregaron en Java 15. Al igual que los módulos, los enumeramos en la primera versión LTS que los puso a disposición. Puede ver un bloque de texto aquí rodeado por tres comillas dobles ( **`"`** ):
+
+```java
 1:  public class Java17TextBlocks {
 2:
 3:     public static void main(String[] args) {
@@ -178,16 +176,22 @@ Fue difícil elegir un favorito de Java 17, por lo que elegimos dos. Los bloques
 12:       System.out.println(formatted);
 13:    }
 14: }
+```
+
 Esto genera estas cuatro líneas:
 
+```text
 *Apple,Fruit
  Banana,Fruit
 Potato,Vegetable
 *
-Tenga en cuenta que la sangría de nuestro bloque de texto se conserva y el espacio en blanco incidental utilizado para el formato IDE no. Tenga en cuenta también que las comillas triples en la línea 9 introducirán una línea en blanco en la cadena. Si desea omitir el salto de línea final, coloque las tres comillas dobles de cierre ( ") al final de la línea 8.
+```
+
+Tenga en cuenta que la sangría de nuestro bloque de texto se conserva y el espacio en blanco incidental utilizado para el formato IDE no. Tenga en cuenta también que las comillas triples en la línea 9 introducirán una línea en blanco en la cadena. Si desea omitir el salto de línea final, coloque las tres comillas dobles de cierre ( **`"`** ) al final de la línea 8.
 
 Los registros se introdujeron en Java 17 y eliminaron una gran cantidad de código repetitivo al crear una clase inmutable. En este ejemplo se utiliza un registro simple:
 
+```java
 1:  public class Java17Records {
 2:
 3:     record Coordinate(double x, double y) {}
@@ -199,29 +203,38 @@ Los registros se introdujeron en Java 17 y eliminaron una gran cantidad de códi
 9:        System.out.println(coord);
 10:    }
 11: }
+```
+
 Esto produce el siguiente resultado:
 
+```text
 1.2
 Coordinate[x=1.2, y=5.9]
+```
+
 La línea 3 crea un registro con dos campos. Un registro es como una clase inmutable que incluye lo siguiente:
 
-Una variable de instancia para cada parámetro enumerado
-Captadores (sin el prefijo get/ is)
-Un constructor que toma un parámetro para cada variable de instancia
-equals()y hashCode()métodos que incluyen el valor de cada variable de instancia
-Un toString()método que imprime cada campo del registro en un formato conveniente y fácil de leer.
-La línea 8 demuestra que el método getter es x()en lugar de getX(). Finalmente, la línea 9 llama implícitamente a , toString()lo que demuestra que se puede obtener una implementación útil sin escribir ningún código.
+* Una variable de instancia para cada parámetro enumerado
+* Getters (sin el prefijo **`get`**/**`is`**)
+* Un constructor que toma un parámetro para cada variable de instancia
+* Los métodos **` equals()`** y **`hashCode()`** que incluyen el valor de cada variable de instancia
+* Un método **`toString()`** que imprime cada campo del registro en un formato conveniente y fácil de leer.
 
-Los registros son convenientes cuando se necesita una clase inmutable simple. Puede anular métodos en el cuerpo del registro o agregar sus propios métodos. Cuando necesita más poder de personalización o establecedores, como para entidades de Java Persistence API (JPA), Project Lombok puede satisfacer mejor sus necesidades. Consulte el Capítulo 8 , “Código basado en anotaciones con Project Lombok”, para obtener más detalles.
+La línea 8 demuestra que el método getter es **`x()`** en lugar de **`getX()`**. Finalmente, la línea 9 llama implícitamente a, **`toString()`** lo que demuestra que se puede obtener una implementación útil sin escribir ningún código.
 
-Aprendiendo sobre subprocesos virtuales desde Java 21
-Hace mucho tiempo, Java utilizaba la Threadclase sin procesar para la concurrencia. Aunque esta sigue siendo la unidad de concurrencia de bajo nivel, el lenguaje luego agregó la Executorsclase y técnicas de concurrencia más poderosas, como fork join y parallelStream(). Sin embargo, la paralelización no es gratuita; existen costos de configuración y coordinación además de los recursos de memoria de los propios subprocesos.
+Los registros son convenientes cuando se necesita una clase inmutable simple. Puede anular métodos en el cuerpo del registro o agregar sus propios métodos. Cuando necesita más poder de personalización o establecedores, como para entidades de Java Persistence API (JPA), Project Lombok puede satisfacer mejor sus necesidades. Consulte el Capítulo 8, “Código basado en anotaciones con Project Lombok”, para obtener más detalles.
 
-A medida que las computadoras cuentan con más unidades centrales de procesamiento (CPU), la paralelización se vuelve más importante. Java 21 introdujo hilos virtuales para reducir en gran medida el costo de la concurrencia. Consulte el Capítulo 9 , “Paralelización de su aplicación mediante la concurrencia de Java”, para obtener una explicación más detallada y un ejemplo de hilos virtuales.
+### Aprendiendo sobre subprocesos virtuales desde Java 21
 
-TRABAJAR CON LA DEPRECACIÓN Y LA JUBILACIÓN
-A medida que se agregan más y más elementos al lenguaje Java, es posible que se pregunte cómo se eliminan. Primero, los desarrolladores identifican las clases o métodos como obsoletos , lo que significa que se desaconseja su uso posterior, pero aún se permite. Suponga que desea que los usuarios dejen de pasar un parámetro a magicNumber().
+Hace mucho tiempo, Java utilizaba la clase **`Thread`** sin procesar para la concurrencia. Aunque esta sigue siendo la unidad de concurrencia de bajo nivel, el lenguaje luego agregó la clase **`Executors`** y técnicas de concurrencia más poderosas, como fork join y **`parallelStream()`**. Sin embargo, la paralelización no es gratuita; existen costos de configuración y coordinación además de los recursos de memoria de los propios subprocesos.
 
+A medida que las computadoras cuentan con más unidades centrales de procesamiento (CPU), la paralelización se vuelve más importante. Java 21 introdujo hilos virtuales para reducir en gran medida el costo de la concurrencia. Consulte el Capítulo 9, “Paralelización de su aplicación mediante la concurrencia de Java”, para obtener una explicación más detallada y un ejemplo de hilos virtuales.
+
+## TRABAJAR CON LA DEPRECACIÓN Y LA JUBILACIÓN
+
+A medida que se agregan más y más elementos al lenguaje Java, es posible que se pregunte cómo se eliminan. Primero, los desarrolladores identifican las clases o métodos como *deprecated-obsoletos*, lo que significa que se desaconseja su uso posterior, pero aún se permite. Suponga que desea que los usuarios dejen de pasar un parámetro a **`magicNumber()`**.
+
+```java
 1:  public class DeprecationExample {
 2:     /**
 3:      * Returns a number
@@ -238,9 +251,11 @@ A medida que se agregan más y más elementos al lenguaje Java, es posible que s
 14:       return 42;
 15:    }
 16: }
-La línea 4 utiliza una etiqueta Javadoc, @deprecated, para incluir en la documentación que no se recomienda utilizar este método. La @linketiqueta se utiliza para explicar que magicNumber()se prefiere la llamada sin un parámetro.
+```
 
-La línea 8 muestra la anotación que marca el método como @Deprecated. Los IDE muestran el uso de código obsoleto como advertencia para llamar su atención sobre él. Consulte el Capítulo 2 , “Conociendo su IDE: el secreto del éxito”, para obtener más información sobre los IDE.
+La línea 4 utiliza una etiqueta Javadoc, **`@deprecated`**, para incluir en la documentación que no se recomienda utilizar este método. La etiqueta **`@link`** se utiliza para explicar que se prefiere la llamada **`magicNumber()`** sin un parámetro.
+AQUUIIIIIIII
+La línea 8 muestra la anotación que marca el método como **`@Deprecated`**. Los IDE muestran el uso de código obsoleto como advertencia para llamar su atención sobre él. Consulte el Capítulo 2 , “Conociendo su IDE: el secreto del éxito”, para obtener más información sobre los IDE.
 
 La línea 8 también muestra el forRemovalatributo, que se agregó en Java 9. Esto se utiliza para indicar si la intención es eliminar el código obsoleto en el futuro o simplemente fomentar interfaces de programación de aplicaciones (API) alternativas. Esto permite a los desarrolladores tomar decisiones inteligentes sobre si migrar el código.
 
