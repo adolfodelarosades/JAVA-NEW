@@ -42,7 +42,7 @@ Ampliarás tu conjunto de herramientas de desarrollo de Java con frameworks y ut
 * FURTHER REFERENCES
 * SUMMARY
 
-### 2 Getting to Know your IDE: The Secret to Success
+### [2 Getting to Know your IDE: The Secret to Success](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/931_Real_World_Java/Capitulo02.md)
 * UNDERSTANDING IDE HISTORY
 * STARTING A NEW PROJECT
 * CREATING A RUN CONFIGURATION
