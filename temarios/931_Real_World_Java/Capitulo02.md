@@ -1,61 +1,78 @@
-# 2
-Conozca su IDE: el secreto del éxito
-¿QUÉ HAY EN ESTE CAPÍTULO?
-Comprender la historia de IDE
-Comenzando un nuevo proyecto
-Creación de una configuración de ejecución
-Conozca los atajos del teclado
-Depuración de su código
-Refactorizando su código
-Explotando al editor
-Ampliación del IDE
-Mirando hacia Eclipse
-Echando un vistazo a VS Code
-Comparación de IDE
+# 2. Conozca su IDE: el secreto del éxito
+
+**¿QUÉ HAY EN ESTE CAPÍTULO?**
+
+* Comprender la historia de IDE
+* Comenzando un nuevo proyecto
+* Creación de una configuración de ejecución
+* Conozca los atajos del teclado
+* Depuración de su código
+* Refactorizando su código
+* Explotando al editor
+* Ampliación del IDE
+* Mirando hacia Eclipse
+* Echando un vistazo a VS Code
+* Comparación de IDE
+
 Ya seas carpintero o programador, la primera decisión crítica que tomarás será la selección de herramientas. Elegir tu entorno de desarrollo integrado (IDE) y conocerlo bien será una de las cosas más importantes que harás en tu carrera como programador.
 
 En los primeros tiempos de Java, uno podía leer una copia de la API de Java, un libro de 200 páginas que contenía todo lo que necesitaba saber para hacer grandes cosas. Hoy en día, necesitaría una docena de libros de 500 páginas para entender lo mismo. O bien, podía ahorrar algo de tiempo y confiar en su IDE para obtener asistencia y orientación profesional.
 
-En este capítulo, analizaremos los tres grandes IDE (IntelliJ, Eclipse y Visual Studio Code) y cubriremos los siguientes temas:
+En este capítulo, analizaremos los tres grandes IDE (**IntelliJ**, **Eclipse** y **Visual Studio Code**) y cubriremos los siguientes temas:
 
-Conozca los atajos de teclado: su IDE es una herramienta de productividad y, a menudo, puede identificar a los profesionales de la codificación por el uso de atajos de teclado. Hay muchos, pero en esta sección, analizaremos algunos de los más importantes y cómo aprenderlos, y le mostraremos cómo descubrir más.
-Refactorización de código profesional: si haces tantas revisiones de código como las que hemos hecho nosotros, podrás detectar fácilmente a los no profesionales por la forma en que repiten fragmentos de código en toda su base de código. Verás cómo tu IDE puede ayudarte a localizar y corregir el código "copiado y pegado".
-Otras perlas de productividad: ¡No olvides que el objetivo principal de tu IDE es la edición ! Revisaremos algunas funciones de edición potentes y menos conocidas.
+* **Conozca los atajos de teclado**: su IDE es una herramienta de productividad y, a menudo, puede identificar a los profesionales de la codificación por el uso de atajos de teclado. Hay muchos, pero en esta sección, analizaremos algunos de los más importantes y cómo aprenderlos, y le mostraremos cómo descubrir más.
+* **Refactorización de código profesional**: si haces tantas revisiones de código como las que hemos hecho nosotros, podrás detectar fácilmente a los no profesionales por la forma en que repiten fragmentos de código en toda su base de código. Verás cómo tu IDE puede ayudarte a localizar y corregir el código "copiado y pegado".
+* **Otras perlas de productividad**: ¡No olvides que el objetivo principal de tu IDE es la *edición*! Revisaremos algunas funciones de edición potentes y menos conocidas.
+
 Este capítulo no pretende ser una guía completa de todas las funciones. Puede obtenerla en los manuales de usuario. En lugar de ello, haremos hincapié en las técnicas para aprovechar las funciones de su IDE y mejorar enormemente su productividad.
 
-DESCARGAS DE CÓDIGOS PARA ESTE CAPÍTULO
+<hr>
+
+**DESCARGAS DE CÓDIGOS PARA ESTE CAPÍTULO**
+
 El código fuente de este capítulo está disponible en la página del libro en www.wiley.com. Haga clic en el enlace Descargas. El código también se puede encontrar en https://github.com/realworldjava/Ch02-IDEs. Consulte el README.mdarchivo en ese repositorio para obtener más detalles.
 
-COMPRENDIENDO LA HISTORIA DE IDE
-Hay un viejo dicho que aconseja no hablar nunca de religión o política en compañía de otras personas. A eso deberíamos añadir el hecho de hablar de tu IDE favorito. Pero en los círculos de élite, el IDE de elección parece ser IntelliJ IDE. “¿Por qué?”, te preguntarás.
+<hr>
 
-Para responder a esta pregunta, repasemos un poco la historia. Cuando Java apareció por primera vez en escena, había algunos IDE populares llamados Symantec Visual Café (el primer IDE de Java), Microsoft Visual J++, Borland JBuilder y una variedad de otras ofertas especializadas. Estos IDE ofrecían funciones como la finalización de código y una serie de detalles interesantes diseñados para ayudar a los desarrolladores a abrirse paso entre la maleza cada vez más compleja.
+## COMPRENDIENDO LA HISTORIA DE IDE
 
-Visual J++ habría ganado la batalla de los IDE si no hubiera sido por la batalla más grande que tuvieron con el fundador de Java, Sun Microsystems, que finalmente resultó en su propio lenguaje de bytecode C# y la repentina retirada de Visual J++ del planeta. Pero las guerras de los IDE estallaron cuando aparecieron el proyecto gratuito Eclipse, respaldado por la industria, y el propio NetBeans de Sun Micro (también gratuito), seguidos poco después por el súper ingenioso IntelliJ Idea, una oferta paga con muchas funciones de una empresa llamada JetBrains.
+Hay un viejo dicho que aconseja no hablar nunca de religión o política en compañía de otras personas. A eso deberíamos añadir el hecho de hablar de tu IDE favorito. Pero en los círculos de élite, el IDE de elección parece ser **IntelliJ IDE**. “¿Por qué?”, te preguntarás.
 
-Veinticinco años después, IntelliJ y Eclipse siguen innovando, y Microsoft Visual Studio ahora ofrece compatibilidad con Java y ha estado creciendo de manera constante, especialmente entre los desarrolladores jóvenes o aquellos que comenzaron con otros lenguajes como JavaScript o Python. Hace algunos años, IntelliJ presentó una "edición comunitaria" (CE) gratuita para competir con las otras ofertas gratuitas. CE incluye la mayoría de las características que la gente usa todos los días, siendo la excepción más notable su falta de integración especial con Spring; todavía funciona con Spring, por supuesto, pero si desea la rica experiencia Spring al estilo IntelliJ, le piden que pague.
+Para responder a esta pregunta, repasemos un poco la historia. Cuando Java apareció por primera vez en escena, había algunos IDE populares llamados **Symantec Visual Café** (el primer IDE de Java), **Microsoft Visual J++**, **Borland JBuilder** y una variedad de otras ofertas especializadas. Estos IDE ofrecían funciones como la finalización de código y una serie de detalles interesantes diseñados para ayudar a los desarrolladores a abrirse paso entre la maleza cada vez más compleja.
+
+**Visual J++** habría ganado la batalla de los IDE si no hubiera sido por la batalla más grande que tuvieron con el fundador de Java, Sun Microsystems, que finalmente resultó en su propio lenguaje de bytecode **C#** y la repentina retirada de Visual J++ del planeta. Pero las guerras de los IDE estallaron cuando aparecieron el proyecto gratuito **Eclipse**, respaldado por la industria, y el propio **NetBeans** de Sun Micro (también gratuito), seguidos poco después por el súper ingenioso **IntelliJ Idea**, una oferta paga con muchas funciones de una empresa llamada JetBrains.
+
+Veinticinco años después, **IntelliJ** y **Eclipse** siguen innovando, y **Microsoft Visual Studio** ahora ofrece compatibilidad con Java y ha estado creciendo de manera constante, especialmente entre los desarrolladores jóvenes o aquellos que comenzaron con otros lenguajes como JavaScript o Python. Hace algunos años, **IntelliJ** presentó una **"edición comunitaria" (CE)** gratuita para competir con las otras ofertas gratuitas. CE incluye la mayoría de las características que la gente usa todos los días, siendo la excepción más notable su falta de integración especial con Spring; todavía funciona con Spring, por supuesto, *pero si desea la rica experiencia Spring al estilo IntelliJ, le piden que pague.
 
 En nuestra humilde opinión, IntelliJ tiene una característica destacada: está muy centrado en la experiencia del desarrollador, por lo que el IDE puede hacer casi cualquier cosa que puedas imaginar. Hay muchas capacidades, como puedes ver al mirar los menús.Hay un localizador de código integrado que encuentra código duplicado en distintos archivos, incluso en una base de código grande, y las refactorizaciones son siempre intuitivas, precisas y confiables. Dicho esto, Eclipse todavía se usa ampliamente y Visual Studio ha estado creciendo tanto en capacidad como en tracción.
 
-En este capítulo, analizaremos los tres grandes IDE, empezando por IntelliJ y concluyendo con las diferencias importantes entre él, Eclipse y Visual Studio. En el resto de este libro, utilizaremos principalmente IntelliJ. No obstante, si eres un usuario fiel de Eclipse o VS Code, gran parte de esta discusión se traducirá fácilmente, diferenciándose principalmente en los atajos de teclado y las ofertas de menú. IntelliJ proporciona un atajo de teclado para todas sus funciones importantes, y puedes agregarlos y modificarlos como quieras. También puedes seleccionar un tema de Eclipse que tome prestados muchos de esos atajos, en caso de que tengas una amplia experiencia con Eclipse. Los otros IDE también proporcionan asignaciones de teclas básicas listas para usar y te permiten crear tus propias asignaciones personalizadas. Pero si disfrutas del poder de los atajos de teclado, descubrirás que IntelliJ ofrece la mayor selección de estos de forma predeterminada.
+En este capítulo, analizaremos los tres grandes IDE, empezando por IntelliJ y concluyendo con las diferencias importantes entre él, Eclipse y Visual Studio. ***En el resto de este libro, utilizaremos principalmente IntelliJ***. No obstante, si eres un usuario fiel de Eclipse o VS Code, gran parte de esta discusión se traducirá fácilmente, diferenciándose principalmente en los atajos de teclado y las ofertas de menú. IntelliJ proporciona un atajo de teclado para todas sus funciones importantes, y puedes agregarlos y modificarlos como quieras. También puedes seleccionar un tema de Eclipse que tome prestados muchos de esos atajos, en caso de que tengas una amplia experiencia con Eclipse. Los otros IDE también proporcionan asignaciones de teclas básicas listas para usar y te permiten crear tus propias asignaciones personalizadas. Pero si disfrutas del poder de los atajos de teclado, descubrirás que IntelliJ ofrece la mayor selección de estos de forma predeterminada.
 
-SUGERENCIA:  Cuando inicie IntelliJ, aparecerá una ventana con sugerencias sobre funciones. ¡Léalas!
+<hr>
+**TIP**:  Cuando inicie IntelliJ, aparecerá una ventana con sugerencias sobre funciones. ¡Léalas!
+<hr>
 
 Existen versiones de los tres IDE principales disponibles para Windows, Mac y Linux. Cuanto más potente sea su computadora, más rápido y con mayor capacidad de respuesta será su IDE. Consulte la sección “Más referencias” para descargar un nuevo IDE si desea probar uno diferente al que está acostumbrado.
 
 Comencemos analizando IntelliJ. Recuerde leerlo incluso si planea usar Eclipse o VS Code, ya que esas secciones suponen que ha leído el capítulo completo. Es, sin duda, nuestro IDE favorito y, quién sabe, ¡quizás incluso decida probar IntelliJ una vez que vea lo que puede hacer!
 
-INICIANDO UN NUEVO PROYECTO
+## INICIANDO UN NUEVO PROYECTO
+
 Cuando desee iniciar un nuevo proyecto, puede elegir entre varias opciones, como se muestra en la Figura 2.1 .
 
+![image](https://github.com/user-attachments/assets/a35e64a2-0474-4095-8e14-99a0e4b23212)
 
-FIGURA 2.1 :Creación de un nuevo proyecto
+**FIGURA 2.1 :Creación de un nuevo proyecto**
 
-Creando un proyecto desde cero
-Para crear un proyecto desde cero, seleccione Proyecto en el menú. Se mostrará una lista grande de tipos de proyectos para que elija, como se muestra en la Figura 2.2 . Realice su selección en función del tipo de proyecto. Al comenzar, deberá seleccionar Nuevo proyecto para crear un proyecto mínimo con solo una clase principal.
+### Creando un proyecto desde cero
 
+Para crear un proyecto desde cero, seleccione Proyecto en el menú. Se mostrará una lista grande de tipos de proyectos para que elija, como se muestra en la Figura 2.2 . Realice su selección en función del tipo de proyecto. Al comenzar, deberá seleccionar New Project para crear un proyecto mínimo con solo una clase principal.
 
-FIGURA 2.2 :Creación de una nueva aplicación desde cero
+![image](https://github.com/user-attachments/assets/ea7879b7-c2d8-4b76-8efd-326ee475744d)
+
+**FIGURA 2.2: Creación de una nueva aplicación desde cero**
+
+AQUIIIIIIIIIIIIII
 
 Hay muchas otras opciones, incluida la de si desea utilizar una herramienta de compilación, que se cubre en profundidad en el Capítulo 4 , “Automatización de sus compilaciones CI/CD con Maven, Gradle y Jenkins”.
 
