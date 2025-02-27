@@ -1,4 +1,4 @@
-# 1 Cómo llegamos hasta aquí: la historia de Java en pocas palabras
+# 1. Cómo llegamos hasta aquí: la historia de Java en pocas palabras
 
 #### ¿QUÉ HAY EN ESTE CAPÍTULO?
 
