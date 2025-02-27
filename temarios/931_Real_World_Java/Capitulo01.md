@@ -230,7 +230,7 @@ Hace mucho tiempo, Java utilizaba la clase **`Thread`** sin procesar para la con
 
 A medida que las computadoras cuentan con más unidades centrales de procesamiento (CPU), la paralelización se vuelve más importante. Java 21 introdujo hilos virtuales para reducir en gran medida el costo de la concurrencia. Consulte el Capítulo 9, “Paralelización de su aplicación mediante la concurrencia de Java”, para obtener una explicación más detallada y un ejemplo de hilos virtuales.
 
-## TRABAJAR CON LA DEPRECACIÓN Y LA JUBILACIÓN
+## TRABAJAR CON LA DEPRECACIÓN Y LA JUBILACIÓN(DEPRECATION AND RETIREMENT)
 
 A medida que se agregan más y más elementos al lenguaje Java, es posible que se pregunte cómo se eliminan. Primero, los desarrolladores identifican las clases o métodos como *deprecated-obsoletos*, lo que significa que se desaconseja su uso posterior, pero aún se permite. Suponga que desea que los usuarios dejen de pasar un parámetro a **`magicNumber()`**.
 
@@ -254,59 +254,70 @@ A medida que se agregan más y más elementos al lenguaje Java, es posible que s
 ```
 
 La línea 4 utiliza una etiqueta Javadoc, **`@deprecated`**, para incluir en la documentación que no se recomienda utilizar este método. La etiqueta **`@link`** se utiliza para explicar que se prefiere la llamada **`magicNumber()`** sin un parámetro.
-AQUUIIIIIIII
+
 La línea 8 muestra la anotación que marca el método como **`@Deprecated`**. Los IDE muestran el uso de código obsoleto como advertencia para llamar su atención sobre él. Consulte el Capítulo 2 , “Conociendo su IDE: el secreto del éxito”, para obtener más información sobre los IDE.
 
-La línea 8 también muestra el forRemovalatributo, que se agregó en Java 9. Esto se utiliza para indicar si la intención es eliminar el código obsoleto en el futuro o simplemente fomentar interfaces de programación de aplicaciones (API) alternativas. Esto permite a los desarrolladores tomar decisiones inteligentes sobre si migrar el código.
+La línea 8 también muestra el atributo **`forRemoval`**, que se agregó en Java 9. Esto se utiliza para indicar si la intención es eliminar el código obsoleto en el futuro o simplemente fomentar interfaces de programación de aplicaciones ( Application Programming Interfaces - API) alternativas. Esto permite a los desarrolladores tomar decisiones inteligentes sobre si migrar el código.
 
 Oracle mantiene una lista de las API que se eliminaron en https://docs.oracle.com/en/java/javase/21/migrate/removed-apis.html. Esta página muestra lo que se eliminó en cada versión entre Java 9 y Java 21. Por ejemplo, en Java 21, esta fue una de las dos API que se eliminaron:
 
-java.lang.ThreadGroup.allowThreadSuspension(boolean) 
-Es poco probable que haya utilizado este método. Oracle valora la compatibilidad con versiones anteriores y no elimina el código de uso generalizado. De hecho, algunos de los métodos java.util.Datehan quedado obsoletos desde Java 1.1.
+```java
+java.lang.ThreadGroup.allowThreadSuspension(boolean)
+```
+ 
+Es poco probable que haya utilizado este método. Oracle valora la compatibilidad con versiones anteriores y no elimina el código de uso generalizado. De hecho, algunos de los métodos **`java.util.Date`** han quedado obsoletos desde Java 1.1.
 
-IDENTIFICACIÓN DE CAMBIOS DE NOMBRE
+## IDENTIFICACIÓN DE CAMBIOS DE NOMBRE
+
 Dada la evolución del ecosistema Java a lo largo de los años, hay algunos cambios de nombre que debería conocer. Esta sección le ayudará a identificar si las guías o la documentación antiguas son equivalentes o están obsoletas.
 
-Cambiar a Jakarta EE
-Como se mencionó, en 2020, Oracle anunció la migración de Java EE a Jakarta EE. Como no fue hace tanto tiempo, la documentación que menciona Java EE sigue siendo relativamente útil. Después de todo, un tutorial de Java EE sobre servlets , que se usan comúnmente para ofrecer páginas web, es en su mayoría lo mismo que sobre servlets de Jakarta EE, y todos los conceptos descritos en buenos tutoriales se aplicarán.
+### Cambiar a Jakarta EE
 
-La diferencia clave es que Jakarta EE 9 cambió el nombre del prefijo del nombre del paquete de javaxa, jakartaya que Java es una marca registrada de Oracle. Además, las nuevas funciones solo se tratan en la documentación de Jakarta EE.
+Como se mencionó, en 2020, Oracle anunció la migración de Java EE a Jakarta EE. Como no fue hace tanto tiempo, la documentación que menciona Java EE sigue siendo relativamente útil. Después de todo, un tutorial de Java EE sobre *servlets*, que se usan comúnmente para ofrecer páginas web, es en su mayoría lo mismo que sobre servlets de Jakarta EE, y todos los conceptos descritos en buenos tutoriales se aplicarán.
 
-Cambio de nombre de las certificaciones
-Oracle ofrecía una serie de certificaciones, entre ellas, Sun Certified Java Associate (SCJA), Sun Certified Java Professional (SCJP) y Sun Certified Master Java Developer (SCMJD), que se podían obtener. Todas estas certificaciones se renombraron para comenzar con “O”, de Oracle, lo que nos dio certificaciones como OCJA, OCJP y OCMJD. Cuando mires tu currículum, recuerda que todas estas certificaciones son equivalentes.
+La diferencia clave es que Jakarta EE 9 cambió el nombre del prefijo del nombre del paquete de **`javax`** a, **`jakarta`** ya que Java es una marca registrada de Oracle. Además, las nuevas funciones solo se tratan en la documentación de Jakarta EE.
+
+### Cambio de nombre de las certificaciones
+
+Oracle ofrecía una serie de certificaciones, entre ellas, **Sun Certified Java Associate (SCJA)**, **Sun Certified Java Professional (SCJP)** y **Sun Certified Master Java Developer (SCMJD)**, que se podían obtener. Todas estas certificaciones se renombraron para comenzar con “O”, de Oracle, lo que nos dio certificaciones como **OCJA**, **OCJP** y **OCMJD**. Cuando mires tu currículum, recuerda que todas estas certificaciones son equivalentes.
 
 Muchas de estas certificaciones ya no existen o han cambiado significativamente desde el cambio de nombre, por lo que aprender de sitios web con los antiguos nombres de certificados de Sun probablemente no sea útil.
 
-COMPRENDIENDO LOS PRINCIPIOS DEL CAMBIO
+## COMPRENDIENDO LOS PRINCIPIOS DEL CAMBIO
+
 El cambio es constante en Java y mantiene el lenguaje actualizado y útil. Algunos cambios están inspirados en otros lenguajes. Es de esperar que el lenguaje siga evolucionando a medida que se publiquen más versiones. Estos cambios incluirán mejoras en el lenguaje y nuevas API.
 
 Los cambios en el ecosistema Java provienen de tres lugares principales.
 
-Corrección de errores: Java proporciona correcciones a los errores que se informan en la base de datos de errores. Es poco probable que se produzcan estos cambios, pero es importante tener en cuenta que Java se compromete a corregir los errores informados.
-Propuestas de mejora de Java (JEP): por ejemplo, los subprocesos virtuales son JEP 444. Algunas características de Java se lanzan como versiones preliminares antes de que se confirmen como definitivas. Los subprocesos virtuales tuvieron su primera versión preliminar en Java 19 como JEP 425 y su segunda versión preliminar en Java 20 como JEP 436 antes de su lanzamiento completo en Java 21.
-Solicitudes de especificación de Java (JSR): las JSR son más grandes y tienen mayor impacto que las JEP. Por ejemplo, las lambdas eran JSR 335.
+* **Bug fixes-Corrección de errores**: Java proporciona correcciones a los errores que se informan en la base de datos de errores. 
+   Es poco probable que se produzcan estos cambios, pero es importante tener en cuenta que Java se compromete a corregir los errores informados.
+* **Java Enhancement Proposals (JEPs) Propuestas de mejora de Java**: Por ejemplo, los subprocesos virtuales son JEP 444. Algunas características de Java se lanzan como versiones preliminares antes de que se confirmen como definitivas. Los subprocesos virtuales tuvieron su primera versión preliminar en Java 19 como JEP 425 y su segunda versión preliminar en Java 20 como JEP 436 antes de su lanzamiento completo en Java 21.
+* **Java Specification Requests (JSRs) Solicitudes de especificación de Java**: Las JSR son más grandes y tienen mayor impacto que las JEP. Por ejemplo, las lambdas eran JSR 335.
+  
 Si bien Java se ha comprometido a implementar un ciclo de lanzamiento de seis meses, valora mucho la compatibilidad con versiones anteriores tanto del lenguaje como de las API. El uso de una versión posterior de Java no debería impedir que el código se compile o ejecute. La compatibilidad con versiones anteriores no siempre se cumple, pero Oracle intenta minimizar el cambio tanto como sea posible.
 
 Las funciones de vista previa ayudan a lograr este objetivo, ya que aún no están limitadas a la compatibilidad con versiones anteriores. Por eso, no deberías usar funciones de vista previa en producción, ya que podrían cambiar de cualquier manera. La compatibilidad con versiones anteriores es la razón por la que se eliminan tan pocas API obsoletas.
 
-REFERENCIAS ADICIONALES
-https://docs.oracle.com/en/java/javase/15/text-blocks/index.html
-Guía de bloques de texto de Oracle
+## REFERENCIAS ADICIONALES
 
-https://docs.oracle.com/en/java/javase/14/language/records.html
-Guía de registros de Oracle
+* https://docs.oracle.com/en/java/javase/15/text-blocks/index.html
+   Guía de bloques de texto de Oracle
 
-Guía de estudio para desarrolladores de Java SE 17 certificados por OCP (Sybex, 2022)
-Guía de estudio de certificación de Jeanne para obtener más detalles sobre todas las funciones
+* https://docs.oracle.com/en/java/javase/14/language/records.html
+   Guía de registros de Oracle
 
-El sistema de módulos de Java (Manning, 2019)
-Libro sobre módulos con gran detalle
+* *OCP Certified Professional Java SE 17 Developer Study Guide (Sybex, 2022)*
+   Guía de estudio de certificación de Jeanne para obtener más detalles sobre todas las funciones
 
-RESUMEN
+* *The Java Module System (Manning, 2019)*
+   Libro sobre módulos con gran detalle
+
+## RESUMEN
+
 Las siguientes son las conclusiones clave del capítulo:
 
-Java es propiedad de Oracle y otros ayudan a guiar el proceso.
-Cada seis meses se lanzan nuevas versiones de Java, y con menor frecuencia se lanzan versiones LTS.
-Continuamente se añaden nuevas funciones.
-Las API cuyo uso ya no se recomienda quedan obsoletas y, opcionalmente, se etiquetan para su eliminación.
-La compatibilidad con versiones anteriores es un principio central de la evolución de Java y garantiza que las aplicaciones Java existentes se ejecutarán sin problemas sin necesidad de realizar modificaciones importantes cuando se lance una nueva versión de Java.
+* Java es propiedad de Oracle y otros ayudan a guiar el proceso.
+* Cada seis meses se lanzan nuevas versiones de Java, y con menor frecuencia se lanzan versiones LTS.
+* Continuamente se añaden nuevas funciones.
+* Las API cuyo uso ya no se recomienda quedan obsoletas y, opcionalmente, se etiquetan para su eliminación.
+* La compatibilidad con versiones anteriores es un principio central de la evolución de Java y garantiza que las aplicaciones Java existentes se ejecutarán sin problemas sin necesidad de realizar modificaciones importantes cuando se lance una nueva versión de Java.
