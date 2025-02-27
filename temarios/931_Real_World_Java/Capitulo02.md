@@ -49,7 +49,9 @@ En nuestra humilde opinión, IntelliJ tiene una característica destacada: está
 En este capítulo, analizaremos los tres grandes IDE, empezando por IntelliJ y concluyendo con las diferencias importantes entre él, Eclipse y Visual Studio. ***En el resto de este libro, utilizaremos principalmente IntelliJ***. No obstante, si eres un usuario fiel de Eclipse o VS Code, gran parte de esta discusión se traducirá fácilmente, diferenciándose principalmente en los atajos de teclado y las ofertas de menú. IntelliJ proporciona un atajo de teclado para todas sus funciones importantes, y puedes agregarlos y modificarlos como quieras. También puedes seleccionar un tema de Eclipse que tome prestados muchos de esos atajos, en caso de que tengas una amplia experiencia con Eclipse. Los otros IDE también proporcionan asignaciones de teclas básicas listas para usar y te permiten crear tus propias asignaciones personalizadas. Pero si disfrutas del poder de los atajos de teclado, descubrirás que IntelliJ ofrece la mayor selección de estos de forma predeterminada.
 
 <hr>
-**TIP**:  Cuando inicie IntelliJ, aparecerá una ventana con sugerencias sobre funciones. ¡Léalas!
+
+**TIP** :  Cuando inicie IntelliJ, aparecerá una ventana con sugerencias sobre funciones. ¡Léalas!
+
 <hr>
 
 Existen versiones de los tres IDE principales disponibles para Windows, Mac y Linux. Cuanto más potente sea su computadora, más rápido y con mayor capacidad de respuesta será su IDE. Consulte la sección “Más referencias” para descargar un nuevo IDE si desea probar uno diferente al que está acostumbrado.
