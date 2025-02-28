@@ -74,78 +74,103 @@ Para crear un proyecto desde cero, seleccione Proyecto en el menú. Se mostrará
 
 **FIGURA 2.2: Creación de una nueva aplicación desde cero**
 
-AQUIIIIIIIIIIIIII
-
 Hay muchas otras opciones, incluida la de si desea utilizar una herramienta de compilación, que se cubre en profundidad en el Capítulo 4 , “Automatización de sus compilaciones CI/CD con Maven, Gradle y Jenkins”.
 
-NOTA:  Una vez que aprenda sobre Spring Boot en el Capítulo 6 , “Conociendo el marco Spring”, a menudo elegirá el tipo Spring Initializer.
+<hr>
 
-Creación de un proyecto a partir de fuentes existentes
-También puede importar el código fuente desde un directorio existente a IntelliJ seleccionando Proyecto desde fuentes existentes y apuntando al directorio que contiene el proyecto existente. IntelliJ hace un gran trabajo al ubicar sus herramientas de compilación, pruebas, etc., y preparar todo para que usted lo ejecute.
+**NOTA**:  Una vez que aprenda sobre Spring Boot en el Capítulo 6 , “Conociendo el Framework Spring”, a menudo elegirá el tipo Spring Initializer.
 
-SUGERENCIA:  Crear un proyecto a partir de fuentes existentes es particularmente útil si está cambiando desde otro IDE como Eclipse o si está usando una herramienta de compilación y ya tiene los directorios en su máquina.
+<hr>
 
-Creación de un proyecto desde el control de versiones
+### Creación de un proyecto a partir de fuentes existentes
+
+También puede importar el código fuente desde un directorio existente a IntelliJ seleccionando Project From Existing Sources y apuntando al directorio que contiene el proyecto existente. IntelliJ hace un gran trabajo al ubicar sus herramientas de compilación, pruebas, etc., y preparar todo para que usted lo ejecute.
+
+<hr>
+
+**TIP**:  Crear un proyecto a partir de fuentes existentes es particularmente útil si está cambiando desde otro IDE como Eclipse o si está usando una herramienta de compilación y ya tiene los directorios en su máquina.
+
+<hr>
+
+### Creación de un proyecto desde el control de versiones
+
 Cuando trabajas en un proyecto con un equipo, lo más frecuente es que importes un proyecto existente desde el control de versiones. Para ello, clonarás un repositorio remoto. (Para obtener más información sobre la clonación de un repositorio, consulta el Capítulo 3 , “Colaboración en toda la empresa con Git, Jira y Confluence”).
 
-Cómo agregar un proyecto al control de versiones
+### Cómo agregar un proyecto al control de versiones
+
 En la mayoría de los casos, clonarás un proyecto existente, pero cada proyecto tiene un inicio y, si ese es el caso, deberás agregar tu nuevo proyecto al control de versiones después de crearlo. Para ello, realiza los siguientes pasos. (Usamos GitHub, pero el proceso es similar para otros tipos de repositorios. Para obtener más información sobre Git, consulta el Capítulo 3 ).
 
-En su navegador, cree un repositorio en GitHub y obtenga la URL.
-En IntelliJ, seleccione el elemento de menú VCS ➪ Habilitar integración de control de versiones en el menú desplegable.
-Seleccione un sistema de control de versiones (en nuestro caso Git).
-Agregue algunos archivos a su proyecto y quizás un README.mdarchivo.
-Seleccione el elemento de menú Git ➪ Confirmar.
-Ahora haz un push al control remoto (selecciona el menú Git ➪ Push, o presiona Ctrl+Shift+K/Cmd+Shift+K).
-En la ventana Push Commits, haga clic en el botón Definir remoto.
+1. En su navegador, cree un repositorio en GitHub y obtenga la URL.
+2. En IntelliJ, seleccione el elemento de menú VCS ➪ Enable Version Control Integration en el menú desplegable.
+3. Seleccione un sistema de control de versiones (en nuestro caso Git).
+4. Agregue algunos archivos a su proyecto y quizás un archivo **`README.md`**.
+5. Seleccione el elemento de menú Git ➪ Commit.
+6. Ahora haz un push al control remoto (selecciona el menú Git ➪ Push, o presiona Ctrl+Shift+K/Cmd+Shift+K).
+7. En la ventana Push Commits, haga clic en el botón Define Remote.
+
 Ahora puedes navegar a la URL que proporcionaste, donde encontrarás tu código, como se muestra en la Figura 2.3 .
 
+![image](https://github.com/user-attachments/assets/56146ed9-b428-4974-acb4-10977f4a8d2b)
 
-FIGURA 2.3 :Definición de Git Remote
+**FIGURA 2.3: Definición de Git Remote**
 
-Cómo agregar un módulo a un proyecto existente
-Es común tener varios servicios (que son esencialmente aplicaciones distintas) que prestan servicio a una sola aplicación. En tales casos, es posible que desee que esos servicios residan en un proyecto maestro. Para lograrlo, puede elegir el elemento de menú Archivo ➪ Nuevo módulo o Archivo ➪ Nuevo módulo a partir de fuentes existentes, que ofrece opciones similares a las del elemento de menú Archivo ➪ Nuevo proyecto.
+### Cómo agregar un módulo a un proyecto existente
 
-CREACIÓN DE UNA CONFIGURACIÓN DE EJECUCIÓN
-Existen muchas formas de ejecutar el main()método de una clase. Si bien todas requieren una configuración de ejecución (que contiene la clase principal, los argumentos de tiempo de ejecución, la versión de Java que se utilizará, etc.), IntelliJ creará una para usted con valores predeterminados si simplemente ejecuta la aplicación. Para ejecutar la aplicación, puede realizar una de las siguientes acciones:
+Es común tener varios servicios (que son esencialmente aplicaciones distintas) que prestan servicio a una sola aplicación. En tales casos, es posible que desee que esos servicios residan en un proyecto maestro. Para lograrlo, puede elegir el elemento de menú File ➪ New Module o File ➪ New Module From Existing Sources, que ofrece opciones similares a las del elemento de menú File ➪ New Project.
 
-Haga clic en la flecha verde a la izquierda del nombre de la clase, como se muestra en la Figura 2.4 .
-Haga clic en la flecha verde a la izquierda del main()método.
-Haga clic derecho en el editor de clases.
+## CREACIÓN DE UNA CONFIGURACIÓN DE EJECUCIÓN
 
-FIGURA 2.4 :Ejecución y depuración
+Existen muchas formas de ejecutar el método **`main()`** de una clase. Si bien todas requieren una configuración de ejecución (que contiene la  main class, runtime arguments, Java version que se utilizará, etc.), IntelliJ creará una para usted con valores predeterminados si simplemente ejecuta la aplicación. Para ejecutar la aplicación, puede realizar una de las siguientes acciones:
 
-Todas estas opciones le ofrecen la opción de elegir Ejecutar en el menú contextual, lo que creará una configuración de ejecución predeterminada. (La depuración también es una opción. Consulte la sección “Depuración del código” para obtener más información sobre la depuración). Todas estas opciones también le ofrecen la opción Modificar la configuración de ejecución, posiblemente en un submenú que le permite especificar los detalles de su configuración de ejecución.
+* Haga clic en la flecha verde a la izquierda del nombre de la clase, como se muestra en la Figura 2.4 .
+* Haga clic en la flecha verde a la izquierda del método **`main()`**.
+* Haga clic derecho en el editor de clases.
 
-Como alternativa, puede hacer clic en Archivo actual en la parte superior y elegir Editar configuraciones en el menú desplegable que aparece ( Figura 2.5 ). A pesar del nombre, tiene la opción de agregar una nueva configuración de tiempo de ejecución además de editar las existentes.
+![image](https://github.com/user-attachments/assets/f5bd7732-0dec-4805-ad26-666adace993f)
 
+**FIGURA 2.4: Ejecución y depuración**
 
-FIGURA 2.5 :Edición de la configuración
+Todas estas opciones le ofrecen la opción de elegir Run en el menú contextual, lo que creará una configuración de ejecución predeterminada. (La depuración también es una opción. Consulte la sección “Depuración del código” para obtener más información sobre la depuración). Todas estas opciones también le ofrecen la opción Modify The Run Configuration, posiblemente en un submenú que le permite especificar los detalles de su configuración de ejecución.
 
-Seleccione un tipo de aplicación adecuado (por ejemplo, Aplicación para una aplicación Java estándar). Consulte la Figura 2.6 .
+Como alternativa, puede hacer clic en Current File en la parte superior y elegir Edit Configurations en el menú desplegable que aparece ( Figura 2.5 ). A pesar del nombre, tiene la opción de agregar una nueva configuración de tiempo de ejecución además de editar las existentes.
 
+![image](https://github.com/user-attachments/assets/8d1ecc23-88c1-4e98-8222-baff5d9a2230)
 
-FIGURA 2.6 :Agregar una configuración de aplicación
+**FIGURA 2.5: Edición de la configuración**
+
+Seleccione un tipo de aplicación adecuado (por ejemplo, Application for a vanilla Java application). Consulte la Figura 2.6 .
+
+![image](https://github.com/user-attachments/assets/0ec71480-fa97-44a0-baad-086cd29e0290)
+
+**FIGURA 2.6: Agregar una configuración de aplicación**
 
 Luego complete el formulario de configuración ingresando una clase principal, una versión de Java, etc., como en la Figura 2.7 .
 
-Si está en una clase de prueba (anotada con @Test; consulte el Capítulo 7 , “Cómo probar su código con herramientas de prueba automatizadas”), puede hacer clic en la flecha verde junto a cualquier método de prueba y seleccionar la opción Ejecutar.
+Si está en una clase de prueba (anotada con **`@Test`**; consulte el Capítulo 7 , “Cómo probar su código con herramientas de prueba automatizadas”), puede hacer clic en la flecha verde junto a cualquier método de prueba y seleccionar la opción Run.
 
+![image](https://github.com/user-attachments/assets/b91cf021-1e05-4351-8088-cad4154a2945)
 
-FIGURA 2.7 :Adición de unmain()método
+**FIGURA 2.7: Adición de un método `main()`**
 
-CONOZCA LOS ATAJOS DE TECLADO
+## CONOZCA LOS ATAJOS DE TECLADO
+
 Sea cual sea el IDE que le resulte más cómodo, nuestro consejo es que aprenda los atajos y los utilice. ¿Cómo se hace eso? Cada vez que busque una función en el menú, mire el atajo de teclado para esa función (que aparece a la derecha del elemento del menú, como se muestra en la Figura 2.8 ), luego cierre el menú y utilice el atajo. Comience con las funciones que utiliza con más frecuencia hasta que sus dedos las recuerden sin pensar.
 
+![image](https://github.com/user-attachments/assets/6fec6ab1-257a-4672-8f90-971d46961aef)
 
-FIGURA 2.8 :Uso de menús para descubrir atajos de teclado
+**FIGURA 2.8: Uso de menús para descubrir atajos de teclado**
 
 Por ejemplo, para obtener una lista de los archivos en los que ha trabajado recientemente, presione Ctrl+E/Cmd+E. Le llevará varias veces recordarla, así que siga estos consejos:
 
-Búscalo en el menú.
-Cerrar el menú.
-Utilice el atajo.
-SUGERENCIA  Muchos atajos difieren entre Windows y Mac. Cuando eso sucede, escribimos el atajo de Windows seguido de una barra y luego la versión de Mac. Si usa Linux, siga los atajos de Windows, ya que suelen ser los mismos.
+1. Búscalo en el menú.
+2. Cerrar el menú.
+3. Utilice el atajo(shortcut).
+
+<hr>
+
+**TIP**  Muchos atajos difieren entre Windows y Mac. Cuando eso sucede, escribimos el atajo de Windows seguido de una barra y luego la versión de Mac. Si usa Linux, siga los atajos de Windows, ya que suelen ser los mismos.
+
+<hr>
 
 En las siguientes secciones, verá muchos atajos útiles. Habrá otros a lo largo del capítulo a medida que cubramos temas específicos. Después de un breve período, los atajos del teclado se habrán grabado en su memoria y notará que su productividad aumenta considerablemente.
 
