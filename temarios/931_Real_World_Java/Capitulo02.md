@@ -50,7 +50,7 @@ En este capítulo, analizaremos los tres grandes IDE, empezando por IntelliJ y c
 
 <hr>
 
-**TIP** :  Cuando inicie IntelliJ, aparecerá una ventana con sugerencias sobre funciones. ¡Léalas!
+**TIP**: Cuando inicie IntelliJ, aparecerá una ventana con sugerencias sobre funciones. ¡Léalas!
 
 <hr>
 
@@ -78,7 +78,7 @@ Hay muchas otras opciones, incluida la de si desea utilizar una herramienta de c
 
 <hr>
 
-**NOTA**:  Una vez que aprenda sobre Spring Boot en el Capítulo 6 , “Conociendo el Framework Spring”, a menudo elegirá el tipo Spring Initializer.
+**NOTA**: Una vez que aprenda sobre Spring Boot en el Capítulo 6 , “Conociendo el Framework Spring”, a menudo elegirá el tipo Spring Initializer.
 
 <hr>
 
@@ -88,7 +88,7 @@ También puede importar el código fuente desde un directorio existente a Intell
 
 <hr>
 
-**TIP**:  Crear un proyecto a partir de fuentes existentes es particularmente útil si está cambiando desde otro IDE como Eclipse o si está usando una herramienta de compilación y ya tiene los directorios en su máquina.
+**TIP**: Crear un proyecto a partir de fuentes existentes es particularmente útil si está cambiando desde otro IDE como Eclipse o si está usando una herramienta de compilación y ya tiene los directorios en su máquina.
 
 <hr>
 
@@ -294,101 +294,128 @@ Si hace clic con el botón derecho en un punto de interrupción(breakpoint), pod
 
 <hr>
 
-**TIP** *Supongamos que estás ejecutando el depurador y recibes una excepción inesperada que te lleva lejos de donde estabas. ¿Dónde se produjo esa excepción? Presiona Ctrl+Alt+Izquierda/Cmd+Alt+Flecha izquierda para volver a la ubicación anterior*.
+**TIP**: *Supongamos que estás ejecutando el depurador y recibes una excepción inesperada que te lleva lejos de donde estabas. ¿Dónde se produjo esa excepción? Presiona Ctrl+Alt+Izquierda/Cmd+Alt+Flecha izquierda para volver a la ubicación anterior*.
 
 <hr>
 
 ### Aceleración del rendimiento del depurador
 
-Si la memoria de su computadora es limitada o si su programa es muy grande, es posible que note que su depurador se vuelve más lento. Puede acelerar considerablemente las cosas ajustando el depurador. Para ello, navegue a Archivo ➪ Configuración en Windows o al menú IntelliJ IDEA en Mac. Luego seleccione Generar, Ejecución, Depurador ➪ Vistas de datos ➪ Java y desactive la configuración, como se muestra en la Figura 2.15 . Si el depurador es lento, ajuste estas configuraciones y notará una mejora considerable en el rendimiento.
+Si la memoria de su computadora es limitada o si su programa es muy grande, es posible que note que su depurador se vuelve más lento. Puede acelerar considerablemente las cosas ajustando el depurador. Para ello, navegue a File ➪ Settings en Windows o IntelliJ IDEA menu en Mac. Luego seleccione Build, Execution, Debugger ➪ Data Views ➪ Java y desactive la configuración, como se muestra en la Figura 2.15 . Si el depurador es lento, ajuste estas configuraciones y notará una mejora considerable en el rendimiento.
 
+![image](https://github.com/user-attachments/assets/c808eaad-775a-43ee-94ca-1a9be6b1f1ed)
 
-FIGURA 2.15 :Ajuste de la configuración de depuración
+**FIGURA 2.15: Ajuste de la configuración de depuración**
 
-Puede realizar mejoras de rendimiento adicionales si realiza ajustes en la configuración de diseño, en la parte superior derecha de la ventana de depuración. Las opciones Subprocesos, Memoria y Gastos generales deben estar desmarcadas, como se muestra en la Figura 2.16 .
+Puede realizar mejoras de rendimiento adicionales si realiza ajustes en la configuración de diseño, en la parte superior derecha de la ventana de depuración. Las opciones Threads, Memory, y Overhead generales deben estar unchecked, como se muestra en la Figura 2.16 .
 
+![image](https://github.com/user-attachments/assets/932743e8-bda5-4958-bade-6bf7f059ad08)
 
-FIGURA 2.16 :Más configuraciones de optimización de depuración
+**FIGURA 2.16: Más configuraciones de optimización de depuración**
 
-Depuración remota
+### Depuración remota
+
 La depuración es una herramienta muy útil cuando se escribe una aplicación y se diagnostican problemas que se pueden reproducir fácilmente. Sin embargo, como dice la ley de Murphy, "todo lo que puede salir mal, saldrá mal". Esto se manifiesta como un problema que puede salir mal, saldrá mal en el servidor, pero no se puede reproducir localmente. En estos casos, Java admite la depuración remota, que permite depurar código que se ejecuta en un servidor remoto, establecer puntos de interrupción y ver variables, como si la aplicación se estuviera ejecutando localmente.
 
-No mostramos un ejemplo aquí, pero para realizar una depuración remota en el trabajo, cree una nueva configuración de ejecución y seleccione Depuración remota de JVM como tipo. Ingrese el nombre del host, pero conserve los valores predeterminados a menos que el sistema remoto le solicite que los cambie.
+No mostramos un ejemplo aquí, pero para realizar una depuración remota en el trabajo, cree una nueva configuración de ejecución y seleccione Remote JVM Debug como tipo. Ingrese el nombre del host, pero conserve los valores predeterminados a menos que el sistema remoto le solicite que los cambie.
 
-Antes de poder realizar una depuración remota, debe iniciar el servidor mediante un agente de depuración remota especial. Para ello, copie los argumentos de la línea de comandos agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005de la configuración de tiempo de ejecución, como se muestra en la Figura 2.17 , y agréguelos a los argumentos de tiempo de ejecución de la aplicación.
+Antes de poder realizar una depuración remota, debe iniciar el servidor mediante un agente de depuración remota especial. Para ello, copie los argumentos de la línea de comandos **`agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005`** de la configuración de tiempo de ejecución, como se muestra en la Figura 2.17 , y agréguelos a los argumentos de tiempo de ejecución de la aplicación.
 
 Una vez configurada la depuración remota, puedes depurar la aplicación como si se estuviera ejecutando localmente, siguiendo los pasos que vamos a analizar.
 
+![image](https://github.com/user-attachments/assets/4c2e6dee-7982-4a70-9f73-2a7026a35e76)
 
-FIGURA 2.17 :Argumentos de la línea de comandos
+**FIGURA 2.17: Argumentos de la línea de comandos**
 
-Depuración con intercambio en caliente
-Durante la depuración, es posible que encuentre errores en su programa (después de todo, ¡se llama depuración !). Mucha gente piensa que necesita reiniciar la aplicación después de cada cambio; sin embargo, ese no siempre es el caso. Si realiza cambios simples, no tiene que reiniciar su sesión. Simplemente vuelva a compilar la clase donde realizó el cambio (seleccione el elemento de menú Generar ➪ Recompilar o presione Ctrl+Shift+F9/Cmd+Shift+F9), y voilá , la característica Hot Swap de Java volverá a cargar las clases y su programa simplemente funcionará. Sin embargo, algunas advertencias: Hot Swap funcionará solo si no se cambian las firmas de clase. Eso significa que no puede haber nuevas variables de clase o variables de instancia, ningún método nuevo o eliminado y ningún cambio en la firma del método o en la anotación. Si intenta aplicar Hot Swap después de cualquiera de esos cambios más grandes, el IDE le advertirá que el Hot Swap no funcionó y deberá reiniciar la aplicación.
+### Debugging con Hot Swap
 
-DESPLAZAMIENTO DE REGISTRO
+Durante la depuración, es posible que encuentre errores en su programa (después de todo, ¡se llama depuración!). Mucha gente piensa que necesita reiniciar la aplicación después de cada cambio; sin embargo, ese no siempre es el caso. Si realiza cambios simples, no tiene que reiniciar su sesión. Simplemente vuelva a compilar la clase donde realizó el cambio (seleccione el elemento de menú Build ➪ Recompile o presione **Ctrl+Shift+F9/Cmd+Shift+F9**), y voilá , la característica Hot Swap de Java volverá a cargar las clases y su programa simplemente funcionará. Sin embargo, algunas advertencias: Hot Swap funcionará solo si no se cambian las firmas de clase. Eso significa que no puede haber nuevas variables de clase o variables de instancia, ningún método nuevo o eliminado y ningún cambio en la firma del método o en la anotación. Si intenta aplicar Hot Swap después de cualquiera de esos cambios más grandes, el IDE le advertirá que el Hot Swap no funcionó y deberá reiniciar la aplicación.
+
+<hr>
+
+**LOG SCROLLING**
+
 Una última palabra sobre la depuración: cuando esté en la pestaña del depurador, si desea ver la salida del registro, cambie a la pestaña de la consola. Si el registro se está enviando a la consola muy rápidamente, puede detener el desplazamiento simplemente haciendo clic en la ventana de la consola. Los mensajes de registro se seguirán adjuntando en la parte inferior, pero el desplazamiento se detendrá en la línea en la que hizo clic. Esta función de pausa con un clic también está disponible en la consola de ejecución, no solo en la consola de depuración.
+
+<hr>
 
 La depuración es una habilidad fundamental para que su IDE le permita conocer el flujo de ejecución de su código. Todos los IDE tienen capacidades de depuración similares a las que se describen aquí. En la siguiente sección, analizaremos otra habilidad fundamental, que es la refactorización de código.
 
-Refactorizando su código
-En palabras del gran Martin Fowler, quien popularizó por primera vez el término refactorización , “Cualquier tonto puede escribir código que una computadora pueda entender. Los buenos programadores escriben código que un humano puede entender”.
+## Refactorizando su código
+
+En palabras del gran Martin Fowler, quien popularizó por primera vez el término refactorización , **“Cualquier tonto puede escribir código que una computadora pueda entender. Los buenos programadores escriben código que un humano puede entender”**.
 
 La refactorización es el arte de mejorar el código existente mediante la aplicación de patrones conocidos para reorganizarlo. Algunos ejemplos de refactorización incluyen la eliminación de variables superfluas y la eliminación del código copiado y pegado. Pero tenga en cuenta que la refactorización tiene un riesgo: cuando cambia el código existente, está exponiendo oportunidades para problemas de regresión; es decir, corre el riesgo de romper cosas que funcionaban antes. Aquí es donde entra en juego el IDE. Verá, todos los IDE principales ofrecen un menú Refactor, y las refactorizaciones automatizadas son mucho más seguras que las manuales.
 
 Recomendamos encarecidamente familiarizarse con cada uno de los elementos del menú de refactorización, especialmente los de extracción e inserción. Se ha escrito mucho sobre el tema de la refactorización, pero incluso sin leerlo todo, puede aprender bastante sobre refactorización con sentido común simplemente con el menú de refactorización.
 
-CONSEJO  IntelliJ tiene por lejos las opciones de refactorización más amplias de los principales IDE de Java.
+<hr>
 
-Cómo evitar el código duplicado
+**TIP**: IntelliJ tiene por lejos las opciones de refactorización más amplias de los principales IDE de Java.
+
+<hr>
+
+### Cómo evitar el código duplicado
+
 Nuestra primera regla de refactorización es no copiar y pegar nunca código. Si necesitas introducir alguna funcionalidad en dos o más lugares, extrae esa funcionalidad en un método. Si alguno de esos métodos está contenido en clases diferentes, llévalos a una superclase común o extráelos a una clase de utilidad. Si estás trabajando en una base de código que tiene código repetitivo, hazte cargo de refactorizarlo.
 
-Para extraer código en un método, seleccione el código, vaya al menú Refactorizar y seleccione Extraer/Introducir ➪ Método, como se muestra en la Figura 2.18 . El atajo es Ctrl+Alt+M/Cmd+Opción+M y será uno de los atajos más utilizados, así que úselo hasta que lo recuerde.
+Para extraer código en un método, seleccione el código, vaya al menú Refactorizar y seleccione Extract/Introduce ➪ Method, como se muestra en la Figura 2.18 . El atajo es **Ctrl+Alt+M/Cmd+Option+M** y será uno de los atajos más utilizados, así que úselo hasta que lo recuerde.
 
+![image](https://github.com/user-attachments/assets/406b83e1-d652-41d2-a6c8-ab18f683e6ff)
 
-FIGURA 2.18 :Menú de refactorización de IntelliJ IDE
+**FIGURA 2.18: Menú de refactorización de IntelliJ IDE**
 
-En la Figura 2.19 , tenemos dos métodos para enviar correos electrónicos. El primero lo hace semanalmente y el segundo lo hace cada dos semanas. Una mirada más de cerca revela que los dos métodos están haciendo básicamente lo mismo, con algunas ligeras variaciones. ¿Por qué no extraer la funcionalidad común en un método y pasar las diferencias como parámetros? Esta es la técnica: comience con un método, digamos el primero, processWeeklyReminders()en la Figura 2.19 .
+En la Figura 2.19, tenemos dos métodos para enviar correos electrónicos. El primero lo hace semanalmente y el segundo lo hace cada dos semanas. Una mirada más de cerca revela que los dos métodos están haciendo básicamente lo mismo, con algunas ligeras variaciones. ¿Por qué no extraer la funcionalidad común en un método y pasar las diferencias como parámetros? Esta es la técnica: comience con un método, digamos el primero,**`processWeeklyReminders()`** en la Figura 2.19.
 
+![image](https://github.com/user-attachments/assets/9d7b7de7-b3f2-4682-a158-d1aee56e3a6c)
 
-FIGURA 2.19 :Extracción de funcionalidad común a un método
+**FIGURA 2.19: Extracción de funcionalidad común a un método**
 
-El paso 1 es factorizar los elementos no comunes extrayendo las diferencias de las variables. En nuestro ejemplo, nuestros métodos semanales y quincenales son similares, aunque tienen elementos no comunes, específicamente el número de semanas y el método para enviar el correo electrónico. Seleccione el número 1 (la weeksToAddvariable en la línea 10) y elija el elemento de menú Refactorizar ➪ Extraer/Introducir ➪ Variable y asígnelo a la variable denominada numWeeks. Reorganice las líneas si es necesario para que numWeeksy Comsumerestén antes del código para extraer (consulte la Figura 2.20 ).
+El paso 1 es factorizar los elementos no comunes extrayendo las diferencias de las variables. En nuestro ejemplo, nuestros métodos semanales y quincenales son similares, aunque tienen elementos no comunes, específicamente el número de semanas y el método para enviar el correo electrónico. Seleccione el número 1 (la variable **`weeksToAdd`** en la línea 10) y elija el elemento de menú Refactor ➪ Extract/Introduce ➪ Variable y asígnelo a la variable denominada **`numWeeks`**. Reorganice las líneas si es necesario para que **`numWeeks`** y **`Comsumer`** estén antes del código para extraer (consulte la Figura 2.20 ).
 
+![image](https://github.com/user-attachments/assets/970dc56e-290b-4dbc-8258-3ebd532de341)
 
-FIGURA 2.20 :Extracción de diferencias en variables
+**FIGURA 2.20: Extracción de diferencias en variables**
 
-A continuación, seleccione la funcionalidad común que desea extraer, como en la Figura 2.21 .
+A continuación, seleccione la funcionalidad común que desea extraer, como en la Figura 2.21.
 
+![image](https://github.com/user-attachments/assets/47a16b24-405f-437e-81a5-ae3c66981e27)
 
-FIGURA 2.21 :Selección de la funcionalidad común
+**FIGURA 2.21: Selección de la funcionalidad común**
 
-Seleccione Ctrl+Alt+M/Cmd+Opción+M, el atajo para extraer un método. El IDE le asignará un nombre, que usted desea cambiar por algo significativo, sendIfTimeen nuestro caso, como se muestra en la Figura 2.22 .
+Seleccione **Ctrl+Alt+M/Cmd+Option+M**, el atajo para extraer un método. El IDE le asignará un nombre, que usted desea cambiar por algo significativo, **`sendIfTime`** en nuestro caso, como se muestra en la Figura 2.22 .
 
 El IDE ofrecerá reemplazar otros lugares con el método extraído, como se muestra en la Figura 2.23 .
 
+![image](https://github.com/user-attachments/assets/f73176d4-78dc-4598-b619-90ccbef6975c)
 
-FIGURA 2.22 :Extracción del método
+**FIGURA 2.22: Extracción del método**
 
+![image](https://github.com/user-attachments/assets/a0f4543c-a222-4731-b92e-999546d3ebcb)
 
-FIGURA 2.23 :El IDE ayuda a localizar oportunidades para aplicar el nuevo método.
+**FIGURA 2.23: El IDE ayuda a localizar oportunidades para aplicar el nuevo método.**
 
-Puede colocar el cursor en el nombre del método y usar Ctrl+Shift/Cmd+Shift con las teclas de flecha arriba o abajo para mover los métodos hacia arriba y hacia abajo en la clase, como se muestra en la Figura 2.24 .
+Puede colocar el cursor en el nombre del método y usar **Ctrl+Shift/Cmd+Shift** con las teclas de flecha arriba o abajo para mover los métodos hacia arriba y hacia abajo en la clase, como se muestra en la Figura 2.24 .
 
-El código se vería mucho más ordenado si incorporara los mailerparámetros en el código. Simplemente haga clic en el nombre de la variable y elija Refactorizar ➪ Variable en línea (Ctrl+Alt+N) para incorporar las variables, como se muestra en la Figura 2.25 . Verá la incorporación nuevamente en breve.
+El código se vería mucho más ordenado si incorporara los parámetros **`mailer`** en el código. Simplemente haga clic en el nombre de la variable y elija Refactor ➪ Inline Variable (Ctrl+Alt+N) para incorporar las variables, como se muestra en la Figura 2.25 . Verá la incorporación nuevamente en breve.
 
+![image](https://github.com/user-attachments/assets/c1cf9f02-754f-4190-8ea1-808973fa9faa)
 
-FIGURA 2.24 :El primer borrador refactorizado
+**FIGURA 2.24: El primer borrador refactorizado**
+ 
+![image](https://github.com/user-attachments/assets/68763723-f1fa-42f1-ae03-f38827c7b8f3)
 
-
-FIGURA 2.25 :La versión refactorizada final. Compárese conla Figura 2.19.
+**FIGURA 2.25: La versión refactorizada final. Compárese conla Figura 2.19.**
 
 Puedes ver que el código ahora está mucho más ordenado, con dos métodos más pequeños que delegan al método extraído que contiene el código principal. Usa esta técnica para refactorizar de forma segura código del mundo real mucho más complejo.
 
-CONSEJO:  No es necesario que el código duplicado sea útil para que el método de extracción sea útil. También resulta útil para lidiar con métodos que son demasiado largos tener métodos más pequeños con nombres claros para encargarse de parte de la lógica.
+<hr>
+
+**TIP**: No es necesario que el código duplicado sea útil para que el método de extracción sea útil. También resulta útil para lidiar con métodos que son demasiado largos tener métodos más pequeños con nombres claros para encargarse de parte de la lógica.
 
 Se podría decir que la extracción de métodos es el patrón de refactorización más importante, pero todos los patrones de refactorización contribuyen a un código limpio y de calidad. Veamos otra refactorización importante: el cambio de nombre de miembros, es decir, el cambio de nombre de métodos y variables.
 
-Cambiar el nombre de los miembros
+### Cambiar el nombre de los miembros
+
 Nuestra siguiente regla para la refactorización es nombrar los métodos y las variables con nombres significativos. Recuerde que, al cambiar los nombres, debe evitar las abreviaturas no estándar. Esto es importante para que su código se autodocumente. Si está trabajando con código heredado con nombres de variables o métodos que son demasiado cortos o confusos, será útil cambiar el nombre de las variables y los métodos por algo significativo.
 
 Para cambiar el nombre de una variable, haz clic en ella (no es necesario seleccionarla por completo, solo haz clic en cualquier parte de ella), presiona Shift+F6 y luego escribe el nuevo nombre. Se reemplazará con la nueva versión en todo el código base. ¿Y adivina qué? ¡Este es otro atajo que es el mismo en Windows y Mac!
