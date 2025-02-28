@@ -190,95 +190,116 @@ De manera similar, puede abrir un archivo que no sea un archivo de clase utiliza
 
 **FIGURA 2.10: Navegación hacia un símbolo**
 
-Puedes navegar hasta la última posición que hayas visitado, y luego a la anterior, y así sucesivamente, usando Ctrl+Alt+Flecha izquierda/Cmd+[. Luego, puedes navegar hacia adelante usando Ctrl+Alt+Flecha derecha/Cmd+].
+Puedes navegar hasta la última posición que hayas visitado, y luego a la anterior, y así sucesivamente, usando **`Ctrl+Alt+Left Arrow/Cmd+[`**. Luego, puedes navegar hacia adelante usando **`Ctrl+Alt+Right Arrow/Cmd+]`**.
 
-Puedes navegar hasta la última posición de edición usando Ctrl+Shift+Backspace/Cmd+Shift+Backspace. Si bien eso te permite retroceder a través de las ediciones recientes, no hemos visto un atajo para avanzar después. Como solución alternativa, puedes mover el cursor a cualquier lugar y luego la siguiente combinación de Ctrl+Shift+Backspace/Cmd+Shift+Backspace comenzará nuevamente desde la posición de edición más reciente.
+Puedes navegar hasta la última posición de edición usando **Ctrl+Shift+Backspace/Cmd+Shift+Backspace**. Si bien eso te permite retroceder a través de las ediciones recientes, no hemos visto un atajo para avanzar después. Como solución alternativa, puedes mover el cursor a cualquier lugar y luego la siguiente combinación de **Ctrl+Shift+Backspace/Cmd+Shift+Backspace** comenzará nuevamente desde la posición de edición más reciente.
 
-Si desea buscar usos de un método determinado, puede hacer clic en el nombre del método mientras mantiene presionada la tecla Ctrl/Cmd para obtener una ventana emergente con esta información. También puede usar Alt+F7/Opción+F7 para ver la lista en una ventana en la parte inferior de su IDE.
+Si desea buscar usos de un método determinado, puede hacer clic en el nombre del método mientras mantiene presionada la tecla **Ctrl/Cmd** para obtener una ventana emergente con esta información. También puede usar **Alt+F7/Option+F7** para ver la lista en una ventana en la parte inferior de su IDE.
 
-Puede crear su propia navegación personalizada mediante marcadores. En IntelliJ, Ctrl+Shift+1 (o cualquier número del 1 al 9) establecerá un marcador numerado en la ubicación del cursor. Luego, puede regresar a ese marcador utilizando Ctrl+1 (o el número que haya utilizado para crear el marcador). ¡Estos son algunos de los pocos atajos que son iguales en Windows y Mac!
+Puede crear su propia navegación personalizada mediante marcadores. En IntelliJ, **Ctrl+Shift+1** (o cualquier número del 1 al 9) establecerá un marcador numerado en la ubicación del cursor. Luego, puede regresar a ese marcador utilizando **Ctrl+1** (o el número que haya utilizado para crear el marcador). ¡Estos son algunos de los pocos atajos que son iguales en Windows y Mac!
 
-Para obtener un esquema rápido de la API del archivo actual, utilice Ctrl+F12/Cmd+F12, como se muestra en la Figura 2.11 . Puede hacer clic dentro del esquema para ir directamente a esa parte del archivo.
+Para obtener un esquema rápido de la API del archivo actual, utilice **Ctrl+F12/Cmd+F12**, como se muestra en la Figura 2.11 . Puede hacer clic dentro del esquema para ir directamente a esa parte del archivo.
 
+![image](https://github.com/user-attachments/assets/f66f7367-0a3a-43ab-8e5f-cb203f4a9ef8)
 
-FIGURA 2.11 :Vista de esquema
+**FIGURA 2.11: Outline view**
 
-Copiar y pegar atajos
-¿Copiar y pegar? Ya sabes cómo hacerlo. Sin embargo, Ctrl+C/Cmd+C funciona de forma diferente a lo que estás acostumbrado con otras herramientas. La filosofía de IntelliJ es no perder el tiempo intentando seleccionar una línea entera; simplemente coloca el cursor en la línea que quieres copiar, pulsa Ctrl+C/Cmd+C y la línea entera se copiará en el portapapeles. Por supuesto, si quieres copiar parte de una línea o varias líneas, puedes seleccionarlas como siempre y pulsar Ctrl+C/Cmd+C.
+### Copiar y pegar atajos(Shortcuts)
 
-Para cortar toda la línea, se utiliza Ctrl+X/Cmd+X. Nuevamente, sin seleccionar nada, se corta toda la línea del cursor y se guarda en el portapapeles.
+¿Copiar y pegar? Ya sabes cómo hacerlo. Sin embargo, **Ctrl+C/Cmd+C** funciona de forma diferente a lo que estás acostumbrado con otras herramientas. La filosofía de IntelliJ es no perder el tiempo intentando seleccionar una línea entera; simplemente coloca el cursor en la línea que quieres copiar, pulsa **Ctrl+C/Cmd+C** y la línea entera se copiará en el portapapeles. Por supuesto, si quieres copiar parte de una línea o varias líneas, puedes seleccionarlas como siempre y pulsar **Ctrl+C/Cmd+C**.
 
-Para recuperar el portapapeles, Ctrl+V/Cmd+V funciona en IntelliJ igual que en otras herramientas. Sin embargo, la combinación más útil Ctrl+Shift+V/Cmd+Shift+V muestra el historial del portapapeles y le permite seleccionar qué corte del portapapeles desea pegar, como se muestra en la Figura 2.12 .
+Para cortar toda la línea, se utiliza **Ctrl+X/Cmd+X**. Nuevamente, sin seleccionar nada, se corta toda la línea del cursor y se guarda en el portapapeles.
 
-Código de reordenamiento
-A continuación, pruebe las combinaciones únicas Ctrl+W/Opción+Flecha arriba y Ctrl+Shift+W/Opción+Flecha abajo. Cada vez que presione Ctrl+W/Opción+Flecha arriba, comenzará en el cursor y seleccionará un alcance creciente: primero una palabra, luego una frase, luego un bloque, un método, una clase, etc. Ctrl+Shift+W/Opción+Flecha abajo invierte el orden y lo lleva de regreso a un clic.a la vez a su selección original. Si aplica Ctrl+W/Opción+Flecha arriba a una expresión aritmética, cada Ctrl+W/Opción+Flecha arriba selecciona en el orden en que se calculará.
+Para recuperar el portapapeles, **Ctrl+V/Cmd+V** funciona en IntelliJ igual que en otras herramientas. Sin embargo, la combinación más útil **Ctrl+Shift+V/Cmd+Shift+V** muestra el historial del portapapeles y le permite seleccionar qué corte del portapapeles desea pegar, como se muestra en la Figura 2.12 .
 
+### Código de reordenamiento
 
-FIGURA 2.12 :Menú contextual de Pegado especial
+A continuación, pruebe las combinaciones únicas **Ctrl+W/Option+Up Arrow** y **Ctrl+Shift+W/Option+Down Arrow**. Cada vez que presione **Ctrl+W/Option+Up Arrow**, comenzará en el cursor y seleccionará un alcance creciente: primero una palabra, luego una frase, luego un bloque, un método, una clase, etc. **Ctrl+Shift+W/Option+Down Arrow** invierte el orden y lo lleva de regreso a un clic a la vez a su selección original. Si aplica **Ctrl+W/Option+Up Arrow** a una expresión aritmética, cada **Ctrl+W/ Option+Up Arrow** selecciona en el orden en que se calculará.
 
-Hay un truco para seleccionar un método completo en dos clics, y es colocar el cursor en cualquier espacio a la izquierda del nombre del método y presionar Ctrl+W/Option+Flecha arriba dos veces. Otro clic seleccionará Javadoc y anotaciones. Esto es muy útil para reordenar los métodos en el código, porque con el método completo seleccionado, puede usar Ctrl+Shift+Flecha arriba/Cmd+Shift+Flecha arriba y Ctrl+Shift+Flecha abajo/Cmd+Shift+Flecha abajo para mover el método hacia arriba o hacia abajo en el archivo, más allá del siguiente método por encima o por debajo de él, y también moverá cualquier Javadoc junto con él. (¡El buen código se autodocumenta; el gran código tiene un gran Javadoc!)
+![image](https://github.com/user-attachments/assets/3cb247e3-163e-422c-801b-419dc3591e78)
 
-Cómo usar otros atajos útiles
+**FIGURA 2.12: Menú contextual de Pegado especial**
+
+Hay un truco para seleccionar un método completo en dos clics, y es colocar el cursor en cualquier espacio a la izquierda del nombre del método y presionar **Ctrl+W/ Option+Up Arrow** dos veces. Otro clic seleccionará Javadoc y anotaciones. Esto es muy útil para reordenar los métodos en el código, porque con el método completo seleccionado, puede usar **Ctrl+Shift+Up Arrow/Cmd+Shift+Up Arrow** y **Ctrl+Shift+Down Arrow/Cmd+Shift+Down Arrow** para mover el método hacia arriba o hacia abajo en el archivo, más allá del siguiente método por encima o por debajo de él, y también moverá cualquier Javadoc junto con él. (¡El buen código se autodocumenta; el gran código tiene un gran Javadoc!)
+
+### Cómo usar otros atajos(Shortcuts) útiles
+
 Primero vienen tres atajos cuando se trabaja con líneas.
 
-Ctrl+D/Cmd+D duplica la línea actual.
-Ctrl+Y/Cmd+Retroceso elimina la línea actual.
-Ctrl+Alt+Flecha arriba/Opción+Mayús+Flecha arriba y Flecha abajo mueven la línea actual hacia arriba o hacia abajo, respectivamente.
-A continuación, cuando desee encontrar errores y advertencias en su código, utilice F2 para encontrar los que están después del cursor y utilice Shift+F2 para navegar hacia atrás lejos del cursor.
+* **Ctrl+D/Cmd+D** duplica la línea actual.
+* **Ctrl+Y/Cmd+Backspace** elimina la línea actual.
+* **Ctrl+Alt+Up Arrow/Option+Shift+Up Arrow and Down Arrow** mueven la línea actual hacia arriba o hacia abajo, respectivamente.
 
-El atajo Alt+Enter/Option+Enter abre un menú contextual. Por ejemplo, puede usarlo para corregir un error del compilador o generar código para su clase.
+A continuación, cuando desee encontrar errores y advertencias en su código, utilice **F2** para encontrar los que están después del cursor y utilice **Shift+F2** para navegar hacia atrás lejos del cursor.
 
-Cada IDE tiene sus propios atajos de teclado. En esta sección, hemos visto algunos ejemplos de algunos de los atajos de teclado más útiles y, a medida que vayamos cubriendo más funciones, mencionaremos los atajos relacionados. Está más allá del alcance de este libro cubrir todos los atajos, pero le animamos a que los explore y los domine. Puede obtener la lista completa desde el IDE de su sistema operativo: seleccione el elemento de menú Ayuda ➪ Atajos de teclado PDF. Anímese a aprender atajos. El dominio de los atajos de teclado le convertirá en un programador mejor, más rápido y más profesional.
+El atajo **Alt+Enter/Option+Enter** abre un menú contextual. Por ejemplo, puede usarlo para corregir un error del compilador o generar código para su clase.
 
-ATAJOS META
+Cada IDE tiene sus propios atajos de teclado. En esta sección, hemos visto algunos ejemplos de algunos de los atajos de teclado más útiles y, a medida que vayamos cubriendo más funciones, mencionaremos los atajos relacionados. Está más allá del alcance de este libro cubrir todos los atajos, pero le animamos a que los explore y los domine. Puede obtener la lista completa desde el IDE de su sistema operativo: seleccione el elemento de menú Help ➪ Keyboard Shortcuts PDF. Anímese a aprender atajos. El dominio de los atajos de teclado le convertirá en un programador mejor, más rápido y más profesional.
+
+<hr>
+
+**META SHORTCUTS**
+
 IntelliJ tiene una filosofía de “primero el teclado”, lo que genera algunos atajos muy poderosos. Afortunadamente, hay tres atajos más generales que conviene aprender a medida que se dominan otros más específicos.
 
-Shift+Shift abre una función llamada Buscar en cualquier lugar. Es una forma rápida de buscar archivos o símbolos o incluso acciones de IntelliJ.
-Control+Control abre la función Ejecutar cualquier cosa, que le permite ejecutar cosas como un método principal o una prueba.
-Ctrl+Shift+A/Cmd+Shift+A abre la posibilidad de buscar cualquier acción. Este es un subconjunto de Shift+Shift, pero resulta útil para ir directamente a esa lista.
-DEPURACIÓN DEL CÓDIGO
-El verdadero poder de su IDE comienza a emerger cuando utiliza el depurador. El depurador le permite establecer puntos de interrupción en su código de modo que cuando su programa alcance un punto de interrupción, pausará la ejecución. Inicie su programa en modo de depuración y, cuando el código alcance un punto de interrupción, se pausará, lo que le permitirá ver los valores actuales de las variables que están visibles en el ámbito actual. Puede cambiar los valores. Desde allí, puede avanzar un paso a la vez o hacer que la ejecución continúe hasta el siguiente punto de interrupción. O puede ingresar a un método o pasar por encima o salir de un método. También le permite navegar por la pila de llamadas , lo que le permite ver las variables disponibles para los métodos que llamaron al que está en el punto de interrupción. La depuración es valiosa no solo para perseguir errores, sino también para comprender bien el funcionamiento interno de su código. Cuando intenta comprender el código, no hay nada mejor que establecer algunos puntos de interrupción estratégicos y dejar que su depurador lo lleve a un recorrido por el código.
+* **Shift+Shift** abre una función llamada Buscar en cualquier lugar. Es una forma rápida de buscar archivos o símbolos o incluso acciones de IntelliJ.
+* **Control+Control** abre la función Run Anything, que le permite ejecutar cosas como un método principal o un test.
+* **Ctrl+Shift+A/Cmd+Shift+A** abre la posibilidad de buscar cualquier acción. Este es un subconjunto de **Shift+Shift**, pero resulta útil para ir directamente a esa lista.
 
-Depuración de un programa
+<hr>
+
+## DEPURACIÓN DEL CÓDIGO
+
+El verdadero poder de su IDE comienza a emerger cuando utiliza el depurador. El depurador le permite establecer puntos de interrupción en su código de modo que cuando su programa alcance un punto de interrupción, pausará la ejecución. Inicie su programa en modo de depuración y, cuando el código alcance un punto de interrupción, se pausará, lo que le permitirá ver los valores actuales de las variables que están visibles en el ámbito actual. Puede cambiar los valores. Desde allí, puede avanzar un paso a la vez o hacer que la ejecución continúe hasta el siguiente punto de interrupción. O puede ingresar a un método o pasar por encima o salir de un método. También le permite navegar por la *call stack*, lo que le permite ver las variables disponibles para los métodos que llamaron al que está en el punto de interrupción. La depuración es valiosa no solo para perseguir errores, sino también para comprender bien el funcionamiento interno de su código. Cuando intenta comprender el código, no hay nada mejor que establecer algunos puntos de interrupción estratégicos y dejar que su depurador lo lleve a un recorrido por el código.
+
+### Depuración de un programa
+
 El código de muestra en el repositorio de GitHub para este capítulo es un sistema de procesamiento de pedidos simulado, donde un cliente puede pedir una pieza y el sistema verificará (de manera simulada) la cuenta de cobro del cliente, así como el inventario. Si el pedido se realiza correctamente, enviará un correo electrónico indicando que se realizó correctamente. De lo contrario, enviará un correo electrónico indicando que se canceló el pedido. (En nuestro ejemplo, solo imprimirá un mensaje en la consola).
 
-Primero, debes importar el proyecto. Puedes usar el elemento de menú Archivo ➪ Nuevo ➪ Proyecto desde el control de versiones y proporcionar la URL de GitHub https://github.com/realworldjava/Ch02-IDEs.
+Primero, debes importar el proyecto. Puedes usar el elemento de menú File ➪ New ➪ Project From Version Control y proporcionar la URL de GitHub https://github.com/realworldjava/Ch02-IDEs.
 
-Antes de iniciar una sesión de depuración, tómese un momento para comprender qué hace este código. El flujo del programa comienza llamando al mainmétodo, que a su vez crea un nuevo método OrderProcessory luego lo llama processOrder.
+Antes de iniciar una sesión de depuración, tómese un momento para comprender qué hace este código. El flujo del programa comienza llamando al método **`main`**, que a su vez crea un nuevo método **`OrderProcessory`** luego lo llama **`processOrder`**.
 
-Para ver el depurador en acción, establezca dos puntos de interrupción donde se indica en los comentarios, uno en el mainmétodo en la línea 6 y otro en chargeAndAdjustInventoryla línea 28.
+Para ver el depurador en acción, establezca dos puntos de interrupción donde se indica en los comentarios, uno en el método **`main`** en la línea 6 y otro en **`chargeAndAdjustInventory`** la línea 28.
 
-A continuación, inicie el programa haciendo clic en la flecha verde en el margen a la izquierda del mainmétodo y seleccionando Depurar OrderProcessor.main(), o haga clic en el ícono de depuración del menú.
+A continuación, inicie el programa haciendo clic en la flecha verde en el margen a la izquierda del método **`main`** y seleccionando Depurar **`OrderProcessor.main()`**, o haga clic en el ícono de depuración del menú.
 
 Esto abrirá la ventana de depuración (ver Figura 2.13 ).
 
-El programa se interrumpirá en la línea 6. Seleccione Pasar a la siguiente línea (o presione F8) y observe cómo la ejecución avanza una línea. Ahora seleccione Reanudar programa (F9) y la ejecución continuará hasta que alcance el siguiente punto de interrupción en el chargeAndAdjustInventorymétodo.
+El programa se interrumpirá en la línea 6. Seleccione **Step Over** (o presione **F8**) y observe cómo la ejecución avanza una línea. Ahora seleccione **Resume Program** (**F9**) y la ejecución continuará hasta que alcance el siguiente punto de interrupción en el método **`chargeAndAdjustInventory`**.
 
 Cuando el programa falla, observe las variables en la ventana del depurador (consulte la Figura 2.14 ).
 
-Ahora haga clic en el siguiente cuadro de la pila de llamadas ( processOrderlínea 13) y observe las variables en ese ámbito. Luego haga lo mismo para el maincuadro :7.
+Ahora haga clic en el siguiente cuadro de la call stack - pila de llamadas ( **`processOrder`**: línea 13) y observe las variables en ese ámbito. Luego haga lo mismo para el **`main`**:7 frame.
 
-De esta manera, puede recorrer la pila de llamadas y ver e incluso modificar las variables en cada ámbito. Para modificar una variable, haga clic en la variable en la ventana de variables, haga clic con el botón derecho en la variable y elija Establecer valor (o presione la tecla F2).
+De esta manera, puede recorrer la call stack y ver e incluso modificar las variables en cada ámbito. Para modificar una variable, haga clic en la variable en la ventana de variables, haga clic con el botón derecho en la variable y elija Set Value (o presione la tecla **F2**).
 
+![image](https://github.com/user-attachments/assets/349f89f7-dded-49ea-aace-6d25d819cc83)
 
-FIGURA 2.13 :Descripción general de la ventana de depuración
+**FIGURA 2.13: Descripción general de la ventana Debug**
 
+![image](https://github.com/user-attachments/assets/04b37a09-77b7-417f-af07-b37f18e71aed)
 
-FIGURA 2.14 :Variables del depurador
+**FIGURA 2.14: Debugger Variables**
 
-Si hay clases de biblioteca en la pila de llamadas, puede elegir ignorarlas haciendo clic en el ícono de embudo Ocultar marcos de las bibliotecas en la parte superior de la ventana de marcos de depuración, como en la Figura 2.14 .
+Si hay clases de biblioteca en la pila de llamadas - call stack, puede elegir ignorarlas haciendo clic en el ícono de embudo Hide Frames From Libraries en la parte superior de la debug frames window, como en la Figura 2.14 .
 
 También puede pasar el ratón sobre una variable en el editor para ver su valor. Los valores de cadena también se muestran (en una fuente alternativa) junto a la variable en el editor. Las cadenas y los primitivos se mostrarán tal como están. En cuanto a otros tipos de objetos, puede hacer clic en los valores para obtener información detallada sobre ellos.
 
-Si se aleja del punto de ejecución abriendo otras ventanas o desplazándose, siempre puede regresar al punto de ejecución presionando el ícono Mostrar punto de ejecución (Alt+F10/Opción+F10).
+Si se aleja del punto de ejecución abriendo otras ventanas o desplazándose, siempre puede regresar al punto de ejecución presionando el ícono Show Execution Point icon (**Alt+F10/Option+F10**).
 
-Puede silenciar todos los puntos de interrupción pulsando el icono Silenciar puntos de interrupción y, a continuación, haciendo clic en Reanudar programa (F9). La ejecución continuará sin interrupciones hasta que active el sonido.
+Puede silenciar todos los puntos de interrupción pulsando el icono Mute Breakpoints y, a continuación, haciendo clic en Resume Program (F9). La ejecución continuará sin interrupciones hasta que active el sonido.
 
-Si hace clic con el botón derecho en un punto de interrupción, podrá encontrar configuraciones para desactivarlo temporalmente, establecer una condición que debe ser verdadera para que se pause y habilitar otras configuraciones. Si coloca un punto de interrupción en un método de interfaz, cualquier ejecución que llegue a ese método provocará la interrupción del depurador.
+Si hace clic con el botón derecho en un punto de interrupción(breakpoint), podrá encontrar configuraciones para desactivarlo temporalmente, establecer una condición que debe ser verdadera para que se pause y habilitar otras configuraciones. Si coloca un punto de interrupción en un método de interfaz, cualquier ejecución que llegue a ese método provocará la interrupción del depurador.
 
-SUGERENCIA  Supongamos que estás ejecutando el depurador y recibes una excepción inesperada que te lleva lejos de donde estabas. ¿Dónde se produjo esa excepción? Presiona Ctrl+Alt+Izquierda/Cmd+Alt+Flecha izquierda para volver a la ubicación anterior.
+<hr>
 
-Aceleración del rendimiento del depurador
+**TIP** *Supongamos que estás ejecutando el depurador y recibes una excepción inesperada que te lleva lejos de donde estabas. ¿Dónde se produjo esa excepción? Presiona Ctrl+Alt+Izquierda/Cmd+Alt+Flecha izquierda para volver a la ubicación anterior*.
+
+<hr>
+
+### Aceleración del rendimiento del depurador
+
 Si la memoria de su computadora es limitada o si su programa es muy grande, es posible que note que su depurador se vuelve más lento. Puede acelerar considerablemente las cosas ajustando el depurador. Para ello, navegue a Archivo ➪ Configuración en Windows o al menú IntelliJ IDEA en Mac. Luego seleccione Generar, Ejecución, Depurador ➪ Vistas de datos ➪ Java y desactive la configuración, como se muestra en la Figura 2.15 . Si el depurador es lento, ajuste estas configuraciones y notará una mejora considerable en el rendimiento.
 
 
