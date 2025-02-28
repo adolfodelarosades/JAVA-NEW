@@ -174,18 +174,21 @@ Por ejemplo, para obtener una lista de los archivos en los que ha trabajado reci
 
 En las siguientes secciones, verá muchos atajos útiles. Habrá otros a lo largo del capítulo a medida que cubramos temas específicos. Después de un breve período, los atajos del teclado se habrán grabado en su memoria y notará que su productividad aumenta considerablemente.
 
-Navegando por su base de código
+### Navegando por su base de código
+
 Quiere poder navegar por su código base sin hacer demasiados clics con el mouse. El IDE lo hace fácil.
 
-Para abrir un archivo de clase en IntelliJ, utilice el atajo Ctrl+N/Cmd+O. No necesita escribir el nombre de archivo completo, e incluso puede utilizar el método CamelCase para ingresar prefijos para partes del nombre. Por ejemplo, la Figura 2.9 muestra cómo puede buscar el comienzo de Order Processor escribiendo .OrPro
+Para abrir un archivo de clase en IntelliJ, utilice el atajo Ctrl+N/Cmd+O. No necesita escribir el nombre de archivo completo, e incluso puede utilizar el método Camel Case para ingresar prefijos para partes del nombre. Por ejemplo, la Figura 2.9 muestra cómo puede buscar el comienzo de **Or**der **Pro**cessor escribiendo **`OrPro`**.
 
+![image](https://github.com/user-attachments/assets/e7eb4eb2-c8f5-470b-9b6d-54712d7a490b)
 
-FIGURA 2.9 :Navegación a una clase
+**FIGURA 2.9: Navegación a una clase**
 
-De manera similar, puede abrir un archivo que no sea un archivo de clase utilizando el atajo Ctrl+Shift+N/Cmd+Shift+O. Y puede buscar un nombre de método o un nombre de variable de clase/instancia utilizando Ctrl+Alt+Shift+N/Cmd+Option+O. La Figura 2.10 utiliza la técnica de mayúsculas y minúsculas para buscar el método sendEma il Confirmation escribiendo sendEmaCon.
+De manera similar, puede abrir un archivo que no sea un archivo de clase utilizando el atajo Ctrl+Shift+N/Cmd+Shift+O. Y puede buscar un nombre de método o un nombre de variable de clase/instancia utilizando Ctrl+Alt+Shift+N/Cmd+Option+O. La Figura 2.10 utiliza la técnica de mayúsculas y minúsculas para buscar el método **sendEma**il**Con**firmation escribiendo **`sendEmaCon`**.
 
+![image](https://github.com/user-attachments/assets/91512d77-88f1-4209-85b4-ac9ac71573bc)
 
-FIGURA 2.10 :Navegación hacia un símbolo
+**FIGURA 2.10: Navegación hacia un símbolo**
 
 Puedes navegar hasta la última posición que hayas visitado, y luego a la anterior, y así sucesivamente, usando Ctrl+Alt+Flecha izquierda/Cmd+[. Luego, puedes navegar hacia adelante usando Ctrl+Alt+Flecha derecha/Cmd+].
 
