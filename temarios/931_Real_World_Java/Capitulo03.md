@@ -8,12 +8,17 @@
 
 Cuando un equipo de desarrolladores está trabajando en una aplicación, la colaboración es absolutamente fundamental para que nadie se meta con el código de los demás. La situación se agrava cuando los equipos están distribuidos por todo el mundo, desde la India hasta los Estados Unidos, donde el desarrollo activo se lleva a cabo en un continente mientras los desarrolladores de otro continente duermen profundamente. ¿Cómo se avanza al unísono? ¿Cómo se da marcha atrás cuando surge la necesidad? Además, se deben publicar estándares y respetarlos. Sin una buena coordinación y colaboración, se perdería mucho tiempo entregando código y arreglando cosas.
 
-Existen muchas herramientas populares que se utilizan en las empresas modernas para facilitar la colaboración. Para el control de versiones, es posible que encuentre empresas que utilicen Git, Mercurial, SVN o ClearCase. Para la gestión de requisitos, Jira se ha convertido en sinónimo de seguimiento de problemas, aunque GitHub, Gitlab y otros también ofrecen capacidades de seguimiento de problemas. Para compartir conocimientos, Confluence se ha vuelto muy popular, pero también hay equipos que utilizan Twiki o Jive, entre muchos otros.
+Existen muchas herramientas populares que se utilizan en las empresas modernas para facilitar la colaboración. Para el control de versiones, es posible que encuentre empresas que utilicen **Git**, **Mercurial**, **SVN** o **ClearCase**. Para la gestión de requisitos, **Jira** se ha convertido en sinónimo de seguimiento de problemas, aunque **GitHub**, **Gitlab** y otros también ofrecen capacidades de seguimiento de problemas. Para compartir conocimientos, **Confluence** se ha vuelto muy popular, pero también hay equipos que utilizan **Twiki** o **Jive**, entre muchos otros.
 
-En este capítulo, nos centramos en algunas de las herramientas más populares para compartir código, hacer un seguimiento de problemas y gestionar el conocimiento, a saber, Git, Jira y Confluence. Pero si su equipo utiliza otras soluciones, el conocimiento es fácilmente transferible.
+En este capítulo, nos centramos en algunas de las herramientas más populares para compartir código, hacer un seguimiento de problemas y gestionar el conocimiento, a saber, **Git**, **Jira** y **Confluence**. Pero si su equipo utiliza otras soluciones, el conocimiento es fácilmente transferible.
 
-DESCARGAS DE CÓDIGOS PARA ESTE CAPÍTULO
-El código fuente de este capítulo está disponible en la página del libro en www.wiley.com. Haga clic en el enlace Descargas. El código también se puede encontrar en https://github.com/realworldjava/Ch03-Collaboration. Consulte el README.mdarchivo en ese repositorio para obtener más detalles.
+<hr>
+
+**DESCARGAS DE CÓDIGOS PARA ESTE CAPÍTULO**
+
+El código fuente de este capítulo está disponible en la página del libro en www.wiley.com. Haga clic en el enlace Descargas. El código también se puede encontrar en https://github.com/realworldjava/Ch03-Collaboration. Consulte el archivo **`README.md`** en ese repositorio para obtener más detalles.
+
+<hr>
 
 ## COLABORANDO CON GIT
 
@@ -25,38 +30,44 @@ Pero, para mi horror, cuando fui a ejecutarlo, descubrí que mi nuevo código es
 
 La historia tuvo un final feliz. Empecé desde cero y, después de unos días, tenía una versión bonita, brillante y funcional, mejor que la original. Pero rápidamente aprendí a las malas cómo usar el control de versiones. Y aquí va una reflexión: esto le puede pasar a cualquiera.
 
-Los sistemas de control de versiones (VCS) actuales son mucho más maduros que en aquel entonces. En el siglo XX, el control de versiones se realizaba en un servidor de middleware. Se invocaba un bloqueo en un archivo, se extraía, se trabajaba en él y, a continuación, se volvía a introducir y se liberaba el bloqueo.
+Los **Version control systems (VCSs) Sistemas de Control de Versiones** actuales son mucho más maduros que en aquel entonces. En el siglo XX, el control de versiones se realizaba en un servidor de middleware. Se invocaba un bloqueo en un archivo, se extraía, se trabajaba en él y, a continuación, se volvía a introducir y se liberaba el bloqueo.
 
 El proceso era extremadamente lento. Había que esperar a que llegaran los archivos; luego, cuando se realizaba el check-in, había que esperar a que los archivos llegaran al servidor y a que este hiciera lo suyo para integrar los cambios y, finalmente, se liberara el bloqueo.
 
 Si fuiste a almorzar o te fuiste temprano y olvidaste desbloquear, entonces tu equipo quedaría bloqueado durante el día porque tú mantuviste el candado.
 
-Ése era el modelo operativo de los sistemas de control de versiones como RCS, CVS y, en cierta medida, el siempre popular Subversion (SVN). Luego, cuando se acercaba el siglo XXI, Linus Torvalds (el inventor de Linux) creó Git, con un nuevo y revolucionario modelo operativo.
+Ése era el modelo operativo de los sistemas de control de versiones como **RCS**, **CVS** y, en cierta medida, el siempre popular **Subversion (SVN)**. Luego, cuando se acercaba el siglo XXI, **Linus Torvalds (el inventor de Linux) creó Git**, con un nuevo y revolucionario modelo operativo.
 
-En cambio, Git es un sistema de control de versiones descentralizado. No hay bloqueos y muchas operaciones de control de versiones se realizan en el equipo local, por lo que es increíblemente rápido.
+En cambio, ***Git es un sistema de control de versiones descentralizado. No hay bloqueos y muchas operaciones de control de versiones se realizan en el equipo local, por lo que es increíblemente rápido***.
 
-Introducción a los conceptos básicos de Git
-Veamos un día en la vida de un desarrollador que usa Git. Supongamos que desea realizar un cambio en algunos archivos. Primero, clona el repositorio remoto, que coloca una copia de él, incluido todo el historial, en su computadora. A continuación, realiza el cambio deseado en el archivo.
+### Introducción a los conceptos básicos de Git
 
-Una vez que estés satisfecho con los cambios, puedes actualizar localmente cualquier código que otros hayan modificado mientras tanto. Si un compañero de equipo ha realizado algún cambio, Git determinará si puede conciliar automáticamente o si necesitas fusionar manualmente los cambios. Por último, es hora de confirmar los cambios. Haz una inserción para que los cambios estén disponibles para tus compañeros de equipo.
+Veamos un día en la vida de un desarrollador que usa Git. Supongamos que desea realizar un cambio en algunos archivos. Primero, ***clona*** el repositorio remoto, que coloca una copia de él, incluido todo el historial, en su computadora. A continuación, realiza el cambio deseado en el archivo.
 
-Aprendiendo conceptos clave
+Una vez que estés satisfecho con los cambios, puedes hacer un ***pull(actualizar)*** para actualizar localmente cualquier código que otros hayan modificado mientras tanto. Si un compañero de equipo ha realizado algún cambio, Git determinará si puede conciliar automáticamente o si necesitas hacer un ***merge*(fusionar)** manualmente los cambios. Por último, es hora de hacer un ***commit(confirmar)*** para confirmar los cambios. Haz un ***push(inserción)*** para que los cambios estén disponibles para tus compañeros de equipo.
+
+### Aprendiendo conceptos clave
+
 Git mantiene tres áreas clave en cada instalación:
 
-Área de trabajo: donde viven y evolucionan sus archivos
-Área de preparación: donde se preparan los archivos para su confirmación
-Repositorio: donde se guardan las confirmaciones
-Además, puedes acceder a repositorios de Git en otras máquinas remotas (siempre que tengas los permisos adecuados). De hecho, técnicamente cualquier instancia de Git puede actuar como un servidor remoto de Git, aunque en la mayoría de las empresas todos comparten un servidor remoto centralizado que usa GitHub, GitLab, Bitbucket o similares.
+* **Working area**: Donde viven y evolucionan sus archivos
+* **Staging area**: Donde se preparan los archivos para ser ***committed***
+* **Repository**: Donde se guardan los commits
+  
+Además, puedes acceder a repositorios de Git en otras máquinas remotas (siempre que tengas los permisos adecuados). De hecho, técnicamente cualquier instancia de Git puede actuar como un servidor remoto de Git, aunque en la mayoría de las empresas todos comparten un servidor remoto centralizado que usa **GitHub**, **GitLab**, **Bitbucket** o similares.
 
-Para extraer los archivos de un proyecto remoto a su computadora local, debe clonar el repositorio del proyecto. Luego, todos los archivos se descargan y se incluyen automáticamente en su área de trabajo, donde Git realiza un seguimiento de ellos.
+Para descargar los archivos de un proyecto remoto a su computadora local, debe ***clonar*** el repositorio del proyecto. Luego, todos los archivos se descargan y se incluyen automáticamente en su working area - área de trabajo, donde Git realiza un seguimiento de ellos.
 
-Si estás creando un nuevo proyecto desde cero y quieres añadirlo a Git, debes inicializar el proyecto llamando git inita la raíz del directorio del proyecto. Luego, para cualquier archivo que quieras que Git rastree, debes llamar git add <file1> <file2>especificando el nombre de cada archivo (o un patrón de nombres de archivo con *comodines) o llamar git add .para añadir todo lo que se encuentre en ese directorio y debajo.
+Si estás creando un nuevo proyecto desde cero y quieres añadirlo a Git, debes inicializar el proyecto ejecutando **`git init`** en la raíz del directorio del proyecto. Luego, para cualquier archivo que quieras que Git rastree(track), debes ejecutar **`git add <file1> <file2>`** especificando el nombre de cada archivo (o un patrón de nombres de archivo con comodines **`*`**) o ejecutar **`git add .`** para añadir todo lo que se encuentre en ese directorio y debajo.
 
-De manera similar, cuando cambias archivos, deseas llamar git addpara preparar los cambios. Puedes preparar y confirmar en una sola operación usando git commit -am "some meaningful log message.".
+De manera similar, cuando cambias archivos, deseas ejecutar **`git add`** para preparar(to stage) los cambios. Puedes preparar(to stage) y confirmar(commit) en una sola operación usando **`git commit -am "some meaningful log message."`**.
 
 Una vez que haya preparado los cambios y esté conforme con ellos, deberá guardarlos en su repositorio. El proceso para ello consiste en confirmarlos.
 
-Diferenciación de confirmaciones
+### Diferenciación de Commits
+
+AQUIIIIIIIII
+
 La palabra commit es tanto un verbo como un sustantivo. Como verbo, commit se refiere a la acción de mover los cambios a tu repositorio Git local. Como sustantivo, un commit se refiere a todos los archivos y la información de contexto incluidos en esa acción de commit. Se aplica un algoritmo amplio a los archivos, sus commits anteriores, el nombre de usuario del commiter, el mensaje de registro y otra información para producir un ID de commit hexadecimal único de 40 caracteres , también conocido como hash de commit .
 
 Visualización del estado de Git
