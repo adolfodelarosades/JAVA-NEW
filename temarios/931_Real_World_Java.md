@@ -57,7 +57,7 @@ Ampliarás tu conjunto de herramientas de desarrollo de Java con frameworks y ut
 * FURTHER REFERENCES
 * SUMMARY
 
-### 3 Collaborating Across the Enterprise with Git, Jira, and Confluence
+### [3 Collaborating Across the Enterprise with Git, Jira, and Confluence](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/931_Real_World_Java/Capitulo03.md)
 * COLLABORATING WITH GIT
 * USING JIRA FOR ENTERPRISE PROCESS COLLABORATION
 * WORKING WITH CONFLUENCE, THE ENTERPRISE KNOWLEDGE MANAGEMENT SYSTEM
