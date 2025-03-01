@@ -418,147 +418,193 @@ Se podría decir que la extracción de métodos es el patrón de refactorizació
 
 Nuestra siguiente regla para la refactorización es nombrar los métodos y las variables con nombres significativos. Recuerde que, al cambiar los nombres, debe evitar las abreviaturas no estándar. Esto es importante para que su código se autodocumente. Si está trabajando con código heredado con nombres de variables o métodos que son demasiado cortos o confusos, será útil cambiar el nombre de las variables y los métodos por algo significativo.
 
-Para cambiar el nombre de una variable, haz clic en ella (no es necesario seleccionarla por completo, solo haz clic en cualquier parte de ella), presiona Shift+F6 y luego escribe el nuevo nombre. Se reemplazará con la nueva versión en todo el código base. ¿Y adivina qué? ¡Este es otro atajo que es el mismo en Windows y Mac!
+Para cambiar el nombre de una variable, haz clic en ella (no es necesario seleccionarla por completo, solo haz clic en cualquier parte de ella), presiona **Shift+F6** y luego escribe el nuevo nombre. Se reemplazará con la nueva versión en todo el código base. ¿Y adivina qué? ¡Este es otro atajo que es el mismo en Windows y Mac!
 
-También puedes cambiar el nombre de los métodos y clases usando el mismo atajo Shift+F6, y puedes estar seguro de que tu código seguirá compilando y conservará la misma semántica.
+También puedes cambiar el nombre de los métodos y clases usando el mismo atajo **Shift+F6**, y puedes estar seguro de que tu código seguirá compilando y conservará la misma semántica.
 
 Cambiar el nombre de los miembros es un patrón importante para que el código sea más legible. Pero a veces hay variables o métodos que son simplemente innecesarios y, en esos casos, nos beneficiaremos de la incorporación de valores en línea.
 
-Inserción en línea
-El uso de variables puede hacer que el código sea más claro, pero no siempre. Habrá ocasiones en las que la declaración de la variable simplemente ocupe una línea adicional sin agregar claridad en absoluto. Por ejemplo, en el siguiente fragmento de código, la declaración de la variable rgbIntocupa una línea adicional, posiblemente sin agregar claridad en absoluto. En tales casos, tendría sentido simplemente incluir la expresión en línea y eliminar la declaración de la variable, como se muestra en la Figura 2.26 .
+### Inlining
 
+El uso de variables puede hacer que el código sea más claro, pero no siempre. Habrá ocasiones en las que la declaración de la variable simplemente ocupe una línea adicional sin agregar claridad en absoluto. Por ejemplo, en el siguiente fragmento de código, la declaración de la variable **`rgbInt`** ocupa una línea adicional, posiblemente sin agregar claridad en absoluto. En tales casos, tendría sentido simplemente incluir la expresión en línea y eliminar la declaración de la variable, como se muestra en la Figura 2.26 .
 
-FIGURA 2.26 :La declaración de variable en la línea 8 no agrega claridad; inclúyala en línea.
+<img width="911" alt="image" src="https://github.com/user-attachments/assets/1a4fd079-5d36-4d5b-b141-54ef437be745" />
 
-Puede insertar en línea la variable no deseada haciendo clic en cualquier aparición de la variable en el código (por ejemplo, puede ver la ubicación del cursor de inserción en la Figura 2.26 , línea 6) y luego presionar Ctrl+Alt+N/Cmd+Option+N. Lo anterior cambia a lo que puede ver en la Figura 2.27 .
+**FIGURA 2.26: La declaración de variable en la línea 8 no agrega claridad; inclúyala en línea.**
 
+Puede insertar en línea la variable no deseada haciendo clic en cualquier aparición de la variable en el código (por ejemplo, puede ver la ubicación del cursor de inserción en la Figura 2.26 , línea 6) y luego presionar **Ctrl+Alt+N/Cmd+Option+N**. Lo anterior cambia a lo que puede ver en la Figura 2.27 .
 
-FIGURA 2.27 :La variable está en línea.
+<img width="909" alt="image" src="https://github.com/user-attachments/assets/1e5ab7da-36cf-4e2a-b0bc-539eabdaa4b5" />
 
-No repasaremos todos los aspectos de la refactorización aquí, pero si desea llevar sus habilidades de programación al siguiente nivel, consulte la sección “Referencias adicionales” para obtener un excelente libro sobre refactorización.
+**FIGURA 2.27: La variable está en línea.**
+
+No repasaremos todos los aspectos de la refactorización aquí, pero si desea llevar sus habilidades de programación al siguiente nivel, ***consulte la sección “Referencias adicionales” para obtener un excelente libro sobre refactorización***.
 
 Hubo un tiempo en que los IDE tenían capacidades de refactorización muy limitadas, si es que tenían alguna. Había técnicas para realizar la refactorización de la manera más segura posible. Pero ahora que la mayoría de los patrones de refactorización comunes están integrados en los IDE, es necesario hacer un esfuerzo para estudiarlos y utilizarlos.
 
 Pero la refactorización no es lo único en lo que los IDE son excelentes. Veamos otras herramientas interesantes.
 
-Cambiar firmas: agregar y eliminar parámetros
+### Cambiar Signatures: agregar y eliminar parámetros
+
 Con frecuencia, encontrará métodos en los que no se utilizan argumentos o que se pueden obtener de alguna otra manera. O puede descubrir que los argumentos de los métodos se prestan a un orden más natural en la lista de argumentos.
 
-Puede agregar, eliminar o reordenar fácilmente los argumentos en la firma de un método haciendo clic en el nombre del método y presionando Ctrl+F6/Cmd+F6 para abrir la ventana emergente Cambiar firma. Luego, puede mover los elementos como desee. No tiene que navegar hasta la declaración del método; la refactorización se puede aplicar en cualquier lugar donde se invoque el nombre del método.
+Puede agregar, eliminar o reordenar fácilmente los argumentos en la firma de un método haciendo clic en el nombre del método y presionando **Ctrl+F6/Cmd+F6** para abrir la ventana emergente Change Signature. Luego, puede mover los elementos como desee. No tiene que navegar hasta la declaración del método; la refactorización se puede aplicar en cualquier lugar donde se invoque el nombre del método.
 
-EXPLOTANDO AL EDITOR
+## EXPLOTANDO AL EDITOR
+
 Un IDE es, ante todo, un editor, e IntelliJ ofrece un conjunto sólido de capacidades de edición con las que debería familiarizarse. En esta sección, aprenderá algunas capacidades de edición importantes y mejoras de productividad. Le recomendamos que mantenga abierto su IDE y siga los ejemplos que describimos aquí.
 
-Una nota importante: esto no debería ser necesario decirlo, pero si no estás conforme con algo, simplemente presiona Ctrl+Z/Cmd+Z para deshacerlo. Hemos visto a desarrolladores no adoctrinados tratando de deshacer una maraña de ediciones o refactorizaciones insatisfechas cuando todo lo que necesitaban hacer era presionar Ctrl+Z/Cmd+Z para deshacerlo.
+Una nota importante: esto no debería ser necesario decirlo, pero si no estás conforme con algo, simplemente presiona **Ctrl+Z/Cmd+Z** para deshacerlo. Hemos visto a desarrolladores no adoctrinados tratando de deshacer una maraña de ediciones o refactorizaciones insatisfechas cuando todo lo que necesitaban hacer era presionar **Ctrl+Z/Cmd+Z** para deshacerlo.
 
-En IntelliJ, puedes agregar comillas alrededor de una cadena seleccionando la cadena y simplemente presionando la tecla de comillas dobles ("). Por ejemplo, supongamos que tienes la siguiente línea:
+En IntelliJ, puedes agregar comillas alrededor de una cadena seleccionando la cadena y simplemente presionando la tecla de comillas dobles (**`"`**). Por ejemplo, supongamos que tienes la siguiente línea:
 
+```java
 public static final String TEXT = text;
-Resalte las letras texty presione la comilla doble ( "). El código se transforma en esto:
+```
 
+Resalte las letras texty presione la comilla doble (**`"`**). El código se transforma en esto:
+
+```java
 public static final String TEXT = "text";
+```
+
 Las comillas simples, los paréntesis y los corchetes deberían funcionar de manera similar, aunque hemos encontrado resultados variables al usar diferentes asignaciones de teclado.
 
-Si tiene dos líneas de código que desea fusionar en una sola, simplemente presione Ctrl+J/Ctrl+Shift+J. Esto es ideal para cambiar el formato de los comentarios o para fusionar una declaración con una tarea. Por ejemplo, si tiene las siguientes dos líneas:
+Si tiene dos líneas de código que desea fusionar en una sola, simplemente presione **Ctrl+J/Ctrl+Shift+J**. Esto es ideal para cambiar el formato de los comentarios o para fusionar una declaración con una tarea. Por ejemplo, si tiene las siguientes dos líneas:
 
+```java
 11: String name = null;
 12: name = "Henry";
 13: // Assignment was done
-Coloque el cursor en cualquier lugar de la línea 11 y presione Ctrl+J/Ctrl+Shift+J. Esto dará como resultado lo siguiente:
+```
 
+Coloque el cursor en cualquier lugar de la línea 11 y presione **Ctrl+J/Ctrl+Shift+J**. Esto dará como resultado lo siguiente:
+
+```java
 11: String name = "Henry";
 12: // Assignment was done
-Reformateo automático del código
+```
+
+### Reformateo automático del código
+
 IntelliJ ofrece algunas opciones para organizar el código de forma más ordenada, lo que puede darle un aspecto más profesional.
 
-Organizando las importaciones
-Mantener limpias las importaciones es una cuestión sencilla: solo hay que utilizar la opción de menú Código ➪ Optimizar importaciones (Ctrl+Alt+O/Ctrl+Opción+O). Esta opción elimina las importaciones no utilizadas y las ordena para que estén más organizadas.
+#### Organizando las importaciones
 
-Código de reformateo
-Para reformatear el código, puede seleccionar el elemento de menú Código ➪ Reformatear (Ctrl+Alt+L/Cmd+Opción+L), que aplicará el formato a todo el archivo. Si selecciona un fragmento de código, ese mismo comando solo reformateará el código.fragmento de código seleccionado. También puede seleccionar un paquete o directorio en el Explorador de proyectos y ese mismo comando reformateará todo lo que contenga ese directorio.
+Mantener limpias las importaciones es una cuestión sencilla: solo hay que utilizar la opción de menú Code ➪ Optimize Imports (**Ctrl+Alt+O/Ctrl+Option+O**). Esta opción elimina las importaciones no utilizadas y las ordena para que estén más organizadas.
+
+#### Código de reformateo
+
+Para reformatear el código, puede seleccionar el elemento de menú Code ➪ Reformat (**Ctrl+Alt+L/Cmd+Option+L**), que aplicará el formato a todo el archivo. Si selecciona un fragmento de código, ese mismo comando solo reformateará el fragmento de código seleccionado. También puede seleccionar un package o directory en el Explorador de proyectos y ese mismo comando reformateará todo lo que contenga ese directorio.
 
 El comando de reformateo entiende los tipos de archivos que se están reformateando y aplicará el formato apropiado para Java, JSON, CSS, XML, etc.
 
-El cambio de formato utiliza formatos estándar para cada tipo de archivo, pero puede modificar aspectos como agregar espacios alrededor de un signo igual en las asignaciones o dónde colocar el corchete ondulado al final de una declaración de método. Estos se encuentran en el elemento de menú Archivo para Windows o en el elemento de menú IntelliJ para Mac. Luego, seleccione Configuración ➪ Estilo de código para cada tipo de archivo. Por ejemplo, la Figura 2.28 muestra las opciones de Java.
+El cambio de formato utiliza formatos estándar para cada tipo de archivo, pero puede modificar aspectos como agregar espacios alrededor de un signo igual en las asignaciones o dónde colocar el corchete ondulado al final de una declaración de método. Estos se encuentran en el elemento de menú File para Windows o en el elemento de menú IntelliJ para Mac. Luego, seleccione Settings ➪ Code Style para cada tipo de archivo. Por ejemplo, la Figura 2.28 muestra las opciones de Java.
 
+<img width="914" alt="image" src="https://github.com/user-attachments/assets/ff75843f-df0a-4199-b125-b176cb8bdafa" />
 
-FIGURA 2.28 :Opciones de reformateo
+**FIGURA 2.28: Opciones de reformateo**
 
-Desempaquetado
-Un código que encontramos a menudo, incluso entre desarrolladores experimentados, tiene que ver con el manejo de excepciones. Somos alérgicos a cualquier código que diga throw new Exception("some message");. La forma correcta de manejar excepciones es manejar la excepción lo antes posible. Si debe lanzar una excepción, lance una excepción lo más específica posible.
+### Unwrapping
 
-Una técnica que utilizamos para descubrir oportunidades de corregir el manejo de excepciones es buscar instancias de catch(Exception e). Si hay una throws Exceptioncláusula en la firma del método, simplemente elimínela. Luego, elimine un carácter de la palabra Exceptionen el catchbloque, lo que hará que el IDE crea que la excepción no se manejó y colocará un subrayado rojo debajo de cada excepción que se debe manejar. Si no hay ninguna, puede desenrollar el try-catchbloque utilizando la función Desenrollar. Simplemente coloque el cursor dentro del try-catchbloque y presione Ctrl+Shift+Delete/Cmd+Shift+Delete. Se le solicitará que desenrolle el intento. Después de confirmar, desaparece.
+Un código que encontramos a menudo, incluso entre desarrolladores experimentados, tiene que ver con el manejo de excepciones. Somos alérgicos a cualquier código que diga **`throw new Exception("some message");`**. La forma correcta de manejar excepciones es manejar la excepción lo antes posible. Si debe lanzar una excepción, lance una excepción lo más específica posible.
 
-SUGERENCIA:  También puedes desenrollar cláusulas if and else , cadenas, etc. ¡Pruébalo!
+Una técnica que utilizamos para descubrir oportunidades de corregir el manejo de excepciones es buscar instancias de **`catch(Exception e)`**. Si hay una cláusula **`throws Exception`** en la firma del método, simplemente elimínela. Luego, elimine un carácter de la palabra **`Exception`** en el bloque **`catch`**, lo que hará que el IDE crea que la excepción no se manejó y colocará un subrayado rojo debajo de cada excepción que se debe manejar. Si no hay ninguna, puede unwrap el bloque **`try-catch`** utilizando la función Unwrap. Simplemente coloque el cursor dentro del bloque **`try-catch`** y presione **Ctrl+Shift+Delete/Cmd+Shift+Delete**. Se le solicitará que unwrap el try. Después de confirmar, desaparece.
 
-Comparando código
-Debemos mencionar otra alergia: el código duplicado. Si cree que hay archivos similares y que pueden necesitar ser refactorizados, puede hacer una comparación lado a lado seleccionando los dos o más archivos en el Explorador de proyectos y eligiendo el elemento de menú Ver ➪ Comparar archivos (Ctrl+D/Cmd+D). Esto abrirá los archivos en ventanas contiguas, donde puede editarlos en ambos lados.
+<hr>
 
-De manera similar, puede copiar una selección al portapapeles y luego hacer otra selección, hacer clic derecho y elegir Comparar con portapapeles.
+**TIP**: También puedes unwrap las cláusulas **`if`** y **`else`** , Strings, etc. ¡Pruébalo!
 
-Uso del modo columna
+<hr>
+
+#### Comparando código
+
+Debemos mencionar otra alergia: ***el código duplicado***. Si cree que hay archivos similares y que pueden necesitar ser refactorizados, puede hacer una comparación lado a lado seleccionando los dos o más archivos en el Project Explorer y eligiendo el elemento de menú View ➪ Compare Files (**Ctrl+D/Cmd+D**). Esto abrirá los archivos en ventanas contiguas, donde puede editarlos en ambos lados.
+
+De manera similar, puede copiar una selección al portapapeles y luego hacer otra selección, hacer clic derecho y elegir Compare With Clipboard.
+
+### Uso del modo columna
+
 Existen situaciones en las que es necesario editar una serie de líneas similares en un archivo, por ejemplo, cuando es necesario agregar una función común delante de una serie de líneas similares. Para activar el modo de columna, siga estos pasos:
 
-Presione Ctrl/Opción una vez.
-Presione nuevamente, pero esta vez manteniéndolo presionado.
-Presione la flecha hacia abajo hasta que haya seleccionado toda la columna que desea editar. (Ver Figura 2.29 ).
-Ahora puedes pegar en esa columna desde el portapapeles o puedes editar en el lugar. Pulsa la tecla Fin para mover los cursores al final de la línea y la tecla Inicio los llevará al principio. También puedes utilizar Ctrl+Flecha izquierda/Cmd+Opción+Mayús+Flecha izquierda y Ctrl+Flecha derecha/Cmd+Opción+Mayús+Flecha izquierda para moverlos hacia la izquierda o hacia la derecha, una palabra a la vez.
+1. Presione Ctrl/Option una vez.
+2. Presione nuevamente, pero esta vez manteniéndolo presionado.
+3. Presione la flecha hacia abajo hasta que haya seleccionado toda la columna que desea editar. (Ver Figura 2.29 ).
 
-En el siguiente fragmento, hay una serie de triples RGB. Digamos que desea cambiar el triple del medio a 255 para cada línea. Coloque el cursor en cualquier lugar de la línea superior y seleccione la columna que desea editar utilizando la secuencia de teclado de tres teclas Ctrl/Opción, Ctrl/Opción, Flecha hacia abajo, hasta que se seleccione cada fila que desee cambiar, como se muestra en la Figura 2.29 .
+Ahora puedes pegar en esa columna desde el portapapeles o puedes editar en el lugar. Pulsa la tecla End para mover los cursores al final de la línea y la tecla Home los llevará al principio. También puedes utilizar **Ctrl+Left Arrow/Cmd+Option+Shift+Left Arrow** y **Ctrl+Right Arrow/Cmd+Option+Shift+Left Arrow** para moverlos hacia la izquierda o hacia la derecha, una palabra a la vez.
 
+En el siguiente fragmento, hay una serie de triples RGB. Digamos que desea cambiar el triple del medio a 255 para cada línea. Coloque el cursor en cualquier lugar de la línea superior y seleccione la columna que desea editar utilizando la secuencia de teclado de tres teclas **Ctrl/Option**, **Ctrl/Option**, **Down Arrow**, hasta que se seleccione cada fila que desee cambiar, como se muestra en la Figura 2.29 .
 
-FIGURA 2.29 :Selección del modo de columna
+<img width="931" alt="image" src="https://github.com/user-attachments/assets/1a8953d3-4a65-4733-973f-60c68fbb9142" />
 
-Luego presione la tecla Fin y los cursores se moverán al final de cada línea, como se muestra en la Figura 2.30 .
+**FIGURA 2.29: Selección del modo de columna**
 
+Luego presione la tecla End y los cursores se moverán al final de cada línea, como se muestra en la Figura 2.30 .
 
-FIGURA 2.30 :Todos los cursores al final de la línea
-
-Ahora presione Ctrl+Flecha izquierda/Opción+Flecha izquierda para mover todos los cursores una palabra a la izquierda, y presione una Flecha izquierda más para llevarlos a la izquierda de la coma, como se muestra en la Figura 2.31 .
-
-
-FIGURA 2.31 :Todos los cursores se mueven hacia la izquierda
-
-Por último, al presionar Ctrl+Retroceso/Opción+Retroceso se eliminará todo el segmento central, como se muestra en la Figura 2.32 .
+<img width="920" alt="image" src="https://github.com/user-attachments/assets/3b0b6c49-8654-4ed5-8e2c-c44013309156" />
 
 
-FIGURA 2.32 :Todas las líneas eliminando el segmento medio
+**FIGURA 2.30: Todos los cursores al final de la línea**
+
+Ahora presione **Ctrl+Left Arrow/Option+Left Arrow** para mover todos los cursores una palabra a la izquierda, y presione una **Left Arrow** más para llevarlos a la izquierda de la coma, como se muestra en la Figura 2.31 .
+
+<img width="897" alt="image" src="https://github.com/user-attachments/assets/5e01a236-30ce-4a29-90dc-9b646c4f7ce1" />
+
+**FIGURA 2.31: Todos los cursores se mueven hacia la izquierda**
+
+Por último, al presionar **Ctrl+Backspace/Option+Backspace** se eliminará todo el segmento central, como se muestra en la Figura 2.32 .
+
+<img width="858" alt="image" src="https://github.com/user-attachments/assets/ce38af89-1789-46ef-a73d-48fb59af73bb" />
+
+**FIGURA 2.32: Todas las líneas eliminando el segmento medio**
 
 Ahora simplemente escriba el texto de reemplazo, como se muestra en la Figura 2.33 .
 
+<img width="909" alt="image" src="https://github.com/user-attachments/assets/9c76c876-cffb-48f7-830d-ce1a4c93e778" />
 
-FIGURA 2.33 :Texto de reemplazo en todas las líneas
+**FIGURA 2.33: Texto de reemplazo en todas las líneas**
 
 Encontrará esta técnica útil al cambiar configuraciones similares, como cadenas de conexión, indicaciones de texto e incluso al cambiar líneas adyacentes de código similar.
 
-AMPLIACIÓN DEL IDE
-Si bien IntelliJ tiene muchas funciones integradas, hay muchas más funciones disponibles a través de complementos . Un complemento es un fragmento de código que se ejecuta en el IDE para agregar o personalizar el comportamiento. Muchos complementos vienen incluidos con IntelliJ. Otros se descargan desde una ubicación llamada Marketplace.
+## AMPLIACIÓN DEL IDE
 
-Para instalar un complemento desde el Marketplace, comience en el elemento de menú Archivo para Windows o en el elemento de menú IntelliJ para Mac. Luego elija Configuración ➪ Complementos. Esto abre el Marketplace donde puede elegir el complemento que desea, como se muestra en la Figura 2.34 . Por ejemplo, Key Promoter es bueno para aprender atajos de teclado. Cuando hace algo con el mouse, una ventana emergente le muestra qué atajo podría haber usado. Haga clic en Instalar y se descargará el complemento. Luego se le solicitará que reinicie el IDE y el complemento estará disponible.
+Si bien IntelliJ tiene muchas funciones integradas, hay muchas más funciones disponibles a través de *plugins-complementos*. Un plugins es un fragmento de código que se ejecuta en el IDE para agregar o personalizar el comportamiento. Muchos plugins vienen incluidos con IntelliJ. Otros se descargan desde una ubicación llamada Marketplace.
 
+Para instalar un plugin desde el Marketplace, comience en el elemento de menú File para Windows o en el elemento de menú IntelliJ para Mac. Luego elija Settings ➪ Plugins. Esto abre el Marketplace donde puede elegir el complemento que desea, como se muestra en la Figura 2.34 . Por ejemplo, **Key Promoter** es bueno para aprender atajos de teclado. Cuando hace algo con el mouse, una ventana emergente le muestra qué atajo podría haber usado. Haga clic en Install y se descargará el complemento. Luego se le solicitará que reinicie el IDE y el complemento estará disponible.
 
-FIGURA 2.34 :Instalación de un complemento en IntelliJ
+<img width="911" alt="image" src="https://github.com/user-attachments/assets/b77e305e-c6ed-46b5-a9e2-64a1e97f3c5b" />
 
-Mirando al eclipse
-Ahora que comprende IntelliJ, es hora de analizar Eclipse. Primero, hay dos diferencias de vocabulario importantes que debe comprender. En IntelliJ, abre un proyecto , que consta de uno o más módulos . En Eclipse, abre un espacio de trabajo , que también consta de uno o más módulos . Por lo tanto, proyecto significa cosas diferentes en los IDE: en IntelliJ, proyecto se refiere a la entidad de nivel superior y en Eclipse se refiere a un artefacto compilable. Eclipse es de código abierto y, por lo tanto, de uso gratuito. Recibe contribuciones de empresas importantes como IBM y Oracle.
+**FIGURA 2.34: Instalación de un plugin en IntelliJ**
 
-¿SIEMPRE VERDE?
-IntelliJ tiene un principio rector llamado "siempre verde". En IntelliJ, se espera que el código se compile en todo momento. Si tiene un error de compilación en cualquier clase del módulo, no podrá ejecutar ningún método principal ni ninguna prueba. Por el contrario, Eclipse hace todo lo posible para ejecutar el código. Si el código que no se compila no necesita ser ejecutado por su ruta de código, Eclipse le permitirá ejecutarlo.
+## Mirando ECLIPSE
 
-Para comenzar a utilizar Eclipse, abra un nuevo proyecto seleccionando Archivo ➪ Nuevo ➪ Proyecto Java, como se muestra en la Figura 2.35 .
+Ahora que comprende IntelliJ, es hora de analizar Eclipse. Primero, hay dos diferencias de vocabulario importantes que debe comprender. En IntelliJ, abre un *project*, que consta de uno o más *modules*. En Eclipse, abre un *workspace*, que también consta de uno o más *modules*. Por lo tanto, *project* significa cosas diferentes en los IDE: en IntelliJ, *project* se refiere a la entidad de nivel superior y en Eclipse se refiere a un artefacto compilable. Eclipse es de código abierto y, por lo tanto, de uso gratuito. Recibe contribuciones de empresas importantes como IBM y Oracle.
 
+<hr>
 
-FIGURA 2.35 :Creación de un proyecto en Eclipse
+**¿Always Green?**
 
-Al igual que en IntelliJ, se te solicita un nombre de proyecto y la versión de Java como mínimo. Como alternativa, puedes usar Archivo ➪ Importar ➪ Git ➪ Proyectos desde Git para extraer un proyecto del control de versiones, o puedes usar Archivo ➪ Importar ➪ General ➪ Proyectos existentes en el espacio de trabajo para usar un proyecto que ya se haya creado.
+IntelliJ tiene un principio rector llamado "always green". En IntelliJ, se espera que el código se compile en todo momento. Si tiene un error de compilación en cualquier clase del módulo, no podrá ejecutar ningún método main ni ninguna test. Por el contrario, Eclipse hace todo lo posible para ejecutar el código. Si el código que no se compila no necesita ser ejecutado por su ruta de código, Eclipse le permitirá ejecutarlo.
+
+<hr>
+
+Para comenzar a utilizar Eclipse, abra un nuevo proyecto seleccionando File ➪ New ➪ Java Project, como se muestra en la Figura 2.35 .
+
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/d53ea1a7-f748-4eac-9aa6-9de8438db0db" />
+
+**FIGURA 2.35: Creación de un proyecto en Eclipse**
+
+Al igual que en IntelliJ, se te solicita un nombre de proyecto y la versión de Java como mínimo. Como alternativa, puedes usar File ➪ Import ➪ Git ➪ Projects from Git para extraer un proyecto del control de versiones, o puedes usar File ➪ Import ➪ General ➪ Existing Projects Into Workspace para usar un proyecto que ya se haya creado.
 
 Hay tres formas comunes de ejecutar una aplicación Java:
 
-Seleccione el menú desplegable en el icono de flecha verde y seleccione Ejecutar como ➪ Aplicación Java, como se muestra en la Figura 2.36 .
-Haga clic derecho en el nombre de la clase Java y elija una de las opciones de ejecución.
-Seleccione la opción de menú Ejecutar y luego Ejecutar como ➪ Aplicación Java.
+* Seleccione el menú desplegable en el icono de flecha verde y seleccione Run As ➪ Java Application, como se muestra en la Figura 2.36 .
+* Haga clic derecho en el nombre de la clase Java y elija una de las opciones de ejecución.
+* Seleccione la opción de menú Run y luego Run As ➪ Java Application.
 
-FIGURA 2.36 :Ejecución de una aplicación en Eclipse
+<img width="884" alt="image" src="https://github.com/user-attachments/assets/18f1afe0-be81-4e3f-9e66-74dcc0bb306b" />
+
+**FIGURA 2.36: Ejecución de una aplicación en Eclipse**
 
 Todos estos enfoques tienen una opción para configurar la ejecución, al igual que en IntelliJ, donde puede guardar configuraciones para ejecutar la aplicación. Para usar el depurador, inicie su programa utilizando el ícono de error en lugar del ícono de flecha. El ícono de error pone su programa en modo de depuración.
 
