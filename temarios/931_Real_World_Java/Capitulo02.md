@@ -606,110 +606,106 @@ Hay tres formas comunes de ejecutar una aplicación Java:
 
 **FIGURA 2.36: Ejecución de una aplicación en Eclipse**
 
-Todos estos enfoques tienen una opción para configurar la ejecución, al igual que en IntelliJ, donde puede guardar configuraciones para ejecutar la aplicación. Para usar el depurador, inicie su programa utilizando el ícono de error en lugar del ícono de flecha. El ícono de error pone su programa en modo de depuración.
+Todos estos enfoques tienen una opción para configurar la ejecución, al igual que en IntelliJ, donde puede guardar configuraciones para ejecutar la aplicación. Para usar el depurador, inicie su programa utilizando el ícono de bug en lugar del ícono de arrow. El ícono bug pone su programa en modo de depuración.
 
-Al igual que IntelliJ, puedes ampliar el comportamiento del IDE a través de complementos. Ve al menú Ayuda ➪ Eclipse Marketplace. Una vez que hayas elegido el complemento que deseas, instálalo y reinicia Eclipse para que surta efecto.
+Al igual que IntelliJ, puedes ampliar el comportamiento del IDE a través de plugins. Ve al menú Help ➪ Eclipse Marketplace. Una vez que hayas elegido el plugin que deseas, instálalo y reinicia Eclipse para que surta efecto.
 
-Si planeas usar Eclipse, te recomendamos que mires la configuración. En Windows, se encuentra en Ventana ➪ Preferencias. En Mac, se encuentra en Eclipse ➪ Configuración.
+Si planeas usar Eclipse, te recomendamos que mires la configuración. En Windows, se encuentra en Window ➪ Preferences. En Mac, se encuentra en Eclipse ➪ Settings.
 
-Eclipse tiene muchos atajos de teclado. Exploraremos algunos en la sección “Comparación de IDE”. Uno particularmente útil es Ctrl+3/Cmd+3, que abre una ventana emergente donde puedes escribir el nombre de cualquier comando para ejecutar.
+Eclipse tiene muchos atajos de teclado. Exploraremos algunos en la sección “Comparación de IDE”. Uno particularmente útil es **Ctrl+3/Cmd+3**, que abre una ventana emergente donde puedes escribir el nombre de cualquier comando para ejecutar.
 
-ECHANDO UN VISTAZO AL CÓDIGO VS
-Visual Studio (VS) Code de Microsoft tiene su propio conjunto de vocabulario. Al igual que Eclipse, la entidad de nivel superior es un espacio de trabajo. Las unidades de nivel inferior se denominan simplemente carpetas . VS Code se denomina editor , en lugar de entorno de desarrollo integrado.
+## ECHANDO UN VISTAZO A VS CODE
 
-Visual Studio es un producto independiente, que no debe confundirse con VS Code. Ambos son distribuidos por Microsoft, pero Visual Studio es un IDE comercial que suelen utilizar los desarrolladores de .NET, mientras que VS Code es un editor gratuito. Esta distinción entre editor e IDE suele manifestarse en la funcionalidad limitada, aunque ha ido mejorando rápidamente.
+Visual Studio (VS) Code de Microsoft tiene su propio conjunto de vocabulario. Al igual que Eclipse, la entidad de nivel superior es un workspace. Las unidades de nivel inferior se denominan simplemente *folders*. VS Code se denomina *editor*, en lugar de entorno de desarrollo integrado.
 
-SUGERENCIA  Dado que VS Code es un editor, te permite abrir fácilmente un solo archivo y editarlo.
+**Visual Studio** es un producto independiente, que no debe confundirse con **VS Code**. Ambos son distribuidos por Microsoft, pero Visual Studio es un IDE comercial que suelen utilizar los desarrolladores de .NET, mientras que VS Code es un editor gratuito. Esta distinción entre editor e IDE suele manifestarse en la funcionalidad limitada, aunque ha ido mejorando rápidamente.
 
-Al igual que con IntelliJ y Eclipse, puedes descargar código que amplíe la funcionalidad del IDE. VS Code llama a esas extensiones en lugar de a complementos. Debes instalar la extensión de Java antes de comenzar a escribir código en el IDE. Las extensiones se encuentran en Archivo ➪ Preferencias ➪ Extensiones en Windows y Código ➪ Configuración ➪ Extensiones en Mac. En Marketplace, busca “Paquete de extensiones para Java”, haz clic en Instalar y reinicia VS Code.
+<hr>
 
-¿QUÉ EXTENSIÓN DE JAVA?
+**TIP**: Dado que VS Code es un editor, te permite abrir fácilmente un solo archivo y editarlo.
+
+<hr>
+
+Al igual que con IntelliJ y Eclipse, puedes descargar código que amplíe la funcionalidad del IDE. VS Code llama a esas extensiones en lugar de a complementos. Debes instalar la extensión de Java antes de comenzar a escribir código en el IDE. Las extensiones se encuentran en File ➪ Preferences ➪ Extensions en Windows y Code ➪ Settings ➪ Extensions en Mac. En Marketplace, busca “Paquete de extensiones para Java”, haz clic en Instalar y reinicia VS Code.
+
+<hr>
+
+**¿QUÉ EXTENSIÓN DE JAVA?**
+
 Hay al menos dos paquetes de extensión que agregan soporte para Java a VS Code.
 
-Paquete de extensión para Java (de Microsoft)
-Extensión de la plataforma Oracle para Visual Studio Code
+* Paquete de extensión para Java (de Microsoft)
+* Extensión de la plataforma Oracle para Visual Studio Code
+
 Dado que la compatibilidad de Java con VS Code es más reciente, estos complementos están evolucionando rápidamente. Vale la pena explorar los de Microsoft y Oracle para ver cuál es el mejor en el momento en que estás leyendo esto.
 
 También hay soporte de lenguaje para Java de RedHat, pero el de Microsoft lo incluye en su extensión, por lo que no es necesario probarlo de forma independiente.
 
+<hr>
+
 Cuando abre una nueva ventana en VS Code, tiene tres opciones. Puede abrir una carpeta existente en el disco, obtener el código del control de versiones o crear un nuevo proyecto Java, como se muestra en la Figura 2.37 .
 
+<img width="878" alt="image" src="https://github.com/user-attachments/assets/6c165dc8-c446-4927-a7aa-4c1dddc7f199" />
 
-FIGURA 2.37 :Creación de un proyecto en VS Code
+**FIGURA 2.37: Creación de un proyecto en VS Code**
 
 Si elige crear un nuevo proyecto, primero se le preguntará qué herramienta de compilación desea utilizar. Puede elegir no usar ninguna herramienta de compilación por ahora. En el Capítulo 4 , aprenderá sobre herramientas de compilación como Maven y Gradle. Luego, se le solicitará que navegue hasta el directorio donde desea almacenar el proyecto. Finalmente, ingrese un nombre de proyecto.
 
 Hay tres formas comunes de ejecutar un programa Java.
 
-Haga clic en el texto Ejecutar en el archivo, como se muestra en la Figura 2.38 .
-Haga clic con el botón derecho en el nombre de la clase Java y seleccione Ejecutar Java.
-En el menú Ejecutar, elija Ejecutar sin depurar.
+* Haga clic en Run en el texto del archivo, como se muestra en la Figura 2.38 .
+* Haga clic con el botón derecho en el nombre de la clase Java y seleccione Run Java.
+* En el menú Run, elija Run sin depurar.
 
-FIGURA 2.38 :Ejecución de una aplicación en VS Code
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/5d732180-29b8-4a7a-9930-9e301ea6adad" />
+
+**FIGURA 2.38: Ejecución de una aplicación en VS Code**
 
 La opción para ejecutar en modo de depuración se encuentra en las mismas ubicaciones. VS Code invoca las configuraciones guardadas para ejecutar y depurar una configuración de lanzamiento. Haga clic en el ícono en la navegación izquierda (que muestra una flecha y un error) para obtener la opción para crear una configuración de lanzamiento, como se muestra en la Figura 2.39 .
 
+<img width="867" alt="image" src="https://github.com/user-attachments/assets/3cba58c0-03e8-4b5f-bbfe-b16284ad0dfe" />
 
-FIGURA 2.39 :Creación de una configuración de lanzamiento en VS Code
+**FIGURA 2.39: Creación de una configuración de lanzamiento en VS Code**
 
-Si planeas usar VS Code, te recomendamos que mires la configuración. En Windows, selecciona Archivo ➪ Preferencias ➪ Configuración. En Mac, selecciona Código ➪ Configuración ➪ Configuración.
+Si planeas usar VS Code, te recomendamos que mires la configuración. En Windows, selecciona File ➪ Preferences ➪ Settings. En Mac, selecciona Code ➪ Settings ➪ Settings.
 
-VS Code tiene muchos atajos de teclado. Exploraremos algunos en la sección “Comparación de IDE”. Uno particularmente útil es el atajo para abrir la paleta de comandos. Al presionar Ctrl+Shift+P/Cmd+Shift+P se abre la paleta para que puedas escribir el nombre de cualquier comando de VS Code.
+VS Code tiene muchos atajos de teclado. Exploraremos algunos en la sección “Comparación de IDE”. Uno particularmente útil es el atajo para abrir la paleta de comandos. Al presionar **Ctrl+Shift+P/Cmd+Shift+P** se abre la paleta para que puedas escribir el nombre de cualquier comando de VS Code.
 
-COMPARACIÓN DE IDE
+## COMPARACIÓN DE IDE
+
 En algunas empresas, todos usan el mismo IDE. En otras, cada desarrollador puede usar su favorito. Incluso en esos casos, deberías poder entender de qué están hablando las personas que usan un IDE diferente. La Tabla 2.1 muestra las principales diferencias de vocabulario.
 
 Todos los IDE ofrecen una amplia variedad de atajos de teclado. La Tabla 2.2 compara algunos de los más comunes para que te hagas una idea de la variedad. Ten en cuenta que algunos IDE te permiten importar asignaciones de teclado de otros. Si estás acostumbrado a un IDE, es posible que puedas mantener esas configuraciones en otro. Sin embargo, aprender los atajos predeterminados tiene sus ventajas, de modo que puedas trabajar más fácilmente con otras personas que utilicen ese IDE.
 
-TABLA 2.1 :Terminología IDE
+**TABLE 2.1: IDE Terminology**
 
-ARTÍCULO	INTELIGENCIA	ECLIPSE	Código VS
-Unidad construible	Módulo	Espacio de trabajo	Espacio de trabajo
-Configuraciones compartidas y hogar para unidades construibles	Proyecto	Proyecto	Carpeta
-Bibliotecas opcionales para personalizar el comportamiento del IDE	Complemento	Complemento	Extensión
-Configuraciones guardadas para ejecuciones	Ejecutar configuración	Ejecutar configuración	Configuración de lanzamiento
-TABLA 2.2 :Resumen de atajos de teclado IDE
+<img width="907" alt="image" src="https://github.com/user-attachments/assets/582b182a-95fd-4587-8a82-a58afc768126" />
 
-DOMINIO	INTELIGENCIA	ECLIPSE	Código VS
-Ejecutar cualquier comando	Mayús+Mayús	Ctrl+3/
-Cmd+3	Ctrl+Mayús+P/
-Cmd+Mayús+P
-Abrir un archivo	Ctrl+N/
-Cmd+O	Ctrl+Mayús+T/
-Cmd+Mayús+R	Ctrl+P/
-Cmd+P
-Ejecutar una aplicación	Mayús+F10/
-Ctrl+R	Ctrl+Mayús+F11/
-Cmd+Mayús+F11	Ctrl+F5
-Extraer un método	Ctrl+Alt+M/
-Cmd+Alt+M	Ctrl+Alt+M/
-Cmd+Opción+M	Ctrl+Shift+R y luego Ctrl+E
-Organizando las importaciones	Ctrl+Alt+O/
-Ctrl+Opción+O	Ctrl+Mayús+O/
-Cmd+Mayús+O	Opción+Mayús+O/
-Alt+Mayús+0
-Código de formato	Ctrl+Alt+L/
-Ctrl+Opción+L	Ctrl+Mayús+F/
-Cmd+Mayús+F	Ctrl+Mayús+I/
-Cmd+Mayús+I
-REFERENCIAS ADICIONALES
-https://www.jetbrains.com/idea
-Descargar IntelliJ IDEA
+**TABLA 2.2 :Resumen de atajos de teclado IDE**
 
-https://www.eclipse.org/downloads
-Descargar Eclipse
+<img width="915" alt="image" src="https://github.com/user-attachments/assets/09697aac-0478-43f3-8fb1-dcfd07924142" />
 
-https://code.visualstudio.com/download
-Descargar VS Code
+## REFERENCIAS ADICIONALES
 
-Refactorización: mejora del diseño del código existente (Addison-Wesley, 2018)
-Libro clásico sobre refactorización de Kent Beck y Martin Fowler
+* https://www.jetbrains.com/idea
+   Descargar IntelliJ IDEA
 
-https://dev.java/learn/debugging
-Artículo de Jeanne sobre el uso de un depurador
+* https://www.eclipse.org/downloads
+   Descargar Eclipse
 
-RESUMEN
+* https://code.visualstudio.com/download
+   Descargar VS Code
+
+* Refactorización: mejora del diseño del código existente (Addison-Wesley, 2018)
+  Libro clásico sobre refactorización de Kent Beck y Martin Fowler
+
+* https://dev.java/learn/debugging
+   Artículo de Jeanne sobre el uso de un depurador
+
+## RESUMEN
+
 Se podría decir que el IDE es el elemento más importante del ecosistema Java, y el éxito como programador comienza cuando aprendes a utilizar todo el poder de esta herramienta vital. Los elementos más importantes son dominar los atajos de teclado, utilizar las funciones de refactorización y aprender a utilizar todas las sutilezas del propio editor.
 
-En este capítulo, exploramos la evolución del IDE de Java y aprendimos cómo la familiaridad con el IDE puede convertirlo en un programador experto. Analizamos en profundidad algunas de las características más importantes de IntelliJ IDEA, incluidos los atajos de teclado, la refactorización y otras funciones importantes del editor.
-En el resto del libro, nos centraremos más en la programación, pero analizaremos otras capacidades del IDE apropiadas para las tecnologías que cubrimos.
+* En este capítulo, exploramos la evolución del IDE de Java y aprendimos cómo la familiaridad con el IDE puede convertirlo en un programador experto. Analizamos en profundidad algunas de las características más importantes de IntelliJ IDEA, incluidos los atajos de teclado, la refactorización y otras funciones importantes del editor.
+
+* En el resto del libro, nos centraremos más en la programación, pero analizaremos otras capacidades del IDE apropiadas para las tecnologías que cubrimos.
