@@ -304,7 +304,10 @@ Si desea que la recursión sea explícita, puede decir **/logs, lo que ignorará
 
 No puedes ignorar los archivos que ya están rastreados. Para dejar de rastrear un archivo rastreado, puedes hacer lo siguiente:
 
-git rm --cached -r com/wiley/realworldjava/gitplay/
+```sh
+
+```
+
 En nuestro caso utilizaremos el siguiente .gitignorearchivo:
 
 # Ignore the entire .idea directory
@@ -314,42 +317,68 @@ En nuestro caso utilizaremos el siguiente .gitignorearchivo:
 out/
 Recuerde preparar y confirmar esto para que Git lo rastree.
 
-git add .gitignore
-git commit -m "Added .gitignore"
+```sh
+
+```
+
 El addcomando sirve para preparar el archivo. El commitcomando sirve para registrarlo. La -mbandera especifica un mensaje de registro que se asociará con esa confirmación.
 
 Como todos los buenos desarrolladores, no queremos enviar nuestro código hasta que esté terminado y probado. Sin embargo, queremos hacer un seguimiento de nuestro código a medida que evoluciona. ¿Cómo podemos enviar nuestros cambios al repositorio remoto sin afectar a otros desarrolladores? La respuesta es crear una rama y realizar los cambios en ella. Luego, puede realizar cambios en esa rama, o incluso colaborar con otros en esa rama, sin afectar a la rama principal.
 
 Llamemos a esta rama refactoring1 . El comando para ello se muestra aquí:
 
-git branch refactoring1
+```sh
+
+```
+
 Esto creará una nueva rama llamada refactoring1 a partir de la confirmación actual. Si desea eliminar una rama, puede hacer lo siguiente (pero por ahora, no la elimine):
 
-git branch -d refactoring1
+```sh
+
+```
+
 Luego, para verificar la sucursal, haga lo siguiente:
 
-git checkout refactoring1
+```sh
+
+```
+
 Puedes crear y extraer la rama en una sola instrucción usando esto:
 
-git checkout -b refactoring1
+```sh
+
+```
+
 La -bbandera indica la checkoutinstrucción para crear la rama y luego verificarla. Más tarde, Git agregó una switchinstrucción con un nombre quizás más indicativo.
 
 Para cambiar a una rama existente mediante el conmutador, utilice lo siguiente:
 
-git switch refactoring1
+```sh
+
+```
+
 Usando switch, la sintaxis para crear y extraer una nueva rama es la siguiente:
 
-git switch -c refactoring1
+```sh
+
+```
+
 Para enumerar los nombres de todas las ramas conocidas en su computadora (la rama actual aparece *resaltada con un color), utilice lo siguiente:
 
-git branch
+```sh
+
+```
+
 muestra:
 
 * refactoring1
   main
 Si también desea enumerar las ramas remotas, utilice esto:
 
-git branch -a
+```sh
+
+```
+
 A continuación, debe realizar algunos cambios y modificar algunos archivos. Modifiquemos nuestro método principal agregando las líneas 19 a 22 como se muestra en el Listado 3.2 .
 
 **LISTADO 3.2: ARCHIVO MODIFICADO**
@@ -359,10 +388,16 @@ A continuación, debe realizar algunos cambios y modificar algunos archivos. Mod
 
 Ahora, confirme esos cambios. Para mayor comodidad, primero vayamos cdal directorio que contiene el archivo.
 
-cd ./main/java/com/wiley/realworldjava/gitplay
+```sh
+
+```
+
 Luego, preparemos nuestros cambios usando esto:
 
-git add GitDemo.java
+```sh
+
+```
+
 Observa el git status, que muestra lo siguiente:
 
 On branch refactoring1
@@ -372,81 +407,122 @@ Changes to be committed:
         modified:   GitDemo.java
 y confirmamos nuestros cambios en la rama actual:
 
-git commit -m "Added a line to GitDemo"
+```sh
+
+```
+
 Esos cambios ahora están confirmados en tu repositorio local, y puedes ver las confirmaciones, junto con los archivos que contienen y sus mensajes de confirmación, usando cualquier variación del git logcomando (¡permanece atento!).
 
 Por supuesto, desea compartir esos cambios con el resto del equipo de desarrollo. El proceso para ello es enviarlos al repositorio remoto. (Puede haber cero o más repositorios remotos con nombre y, de manera predeterminada, el repositorio remoto se llama origin ).
 
-git push origin refactoring1
+```sh
+
+```
+
 Esto significa enviar cualquier confirmación desde su repositorio local a la máquina remota ( origin por defecto) a la rama llamada main . (Más información sobre ramificaciones próximamente).
 
 Para enviar el código a la rama actual y al origen desde el que lo clonaste, puedes prescindir de la formalidad y simplemente llamar a lo siguiente:
 
-git push
+```sh
+
+```
+
 Para ver la URL del origen, utiliza esto:
 
-git remote get-url origin
+```sh
+
+```
+
 Para establecer la URL o el origen o nombrar un nuevo control remoto, como other-machine, simplemente use esto:
 
-git remote add other-machine <url>
+```sh
+
+```
+
 También puede obtener una lista de los controles remotos actuales y las URL asociadas a través de esto:
 
-git remote -v
+```sh
+
+```
+
 Esto mostrará una lista de URL de búsqueda y envío para cada repositorio remoto. Las URL de búsqueda y envío pueden ser las mismas, pero no tienen por qué serlo. Por ejemplo, si su red requiere protocolos diferentes para enviar y buscar, serán diferentes. O si tiene repositorios reflejados, donde envía a un repositorio "central" pero extrae de un nodo "radial" en su región, las URL de búsqueda y envío serán diferentes.
 
 Obtener, fusionar y extraer
 El git fetchcomando obtendrá la rama especificada del servidor remoto especificado. Esto la hace disponible en su máquina local, pero no la integra con el código extraído, donde el origen y el nombre de la rama son opcionales.
 
-git fetch origin my-branch 
+```sh
+
+```
+
 El git mergecomando fusionará una rama de origen especificada de un remoto especificado en la rama actualmente extraída. Esto tiene el efecto de combinar todas las confirmaciones de la rama de origen en la rama actualmente extraída.Rama extraída. En el siguiente ejemplo, estás ordenando a Git que fusione una rama llamada my-branch que se encuentra en el origen remoto con la rama extraída actualmente en tu máquina.
 
-git merge origin my-branch
+```sh
+
+```
+
 Puedes omitirlo originy Git fusionará la rama especificada del repositorio local en la rama actualmente extraída.
 
 Es común tener una rama de integración , también conocida como rama de desarrollo , que es esencialmente una rama general compartida por todo el equipo de desarrollo. Esta rama se usa generalmente para preparar funciones que se planea incluir en la próxima versión. (Consulta la sección “Uso de Gitflow para colaboración” más adelante en este capítulo para obtener una explicación detallada).
 
 Al fusionarse con developotras ramas compartidas, es una buena práctica utilizar el no-ffinterruptor “sin avance rápido” ( ).
 
-git checkout develop
-git merge –no-ff my-branch 
+```sh
+
+```
+
 De forma predeterminada, las fusiones se realizan con avance rápido . Eso significa que Git analiza todas las confirmaciones de la rama de origen entre el momento en que se creó esa rama y ahora. Si no hay conflictos con el estado actual de la rama, esas confirmaciones se moverán al final de la rama de destino. Por el contrario, si realiza una fusión sin avance rápido , la rama en la que ha estado realizando sus confirmaciones permanecerá como una rama paralela separada, con una única confirmación de fusión para unirlas. Esto facilita la identificación de las confirmaciones que comprenden una característica determinada. La Figura 3.5 ilustra este flujo.
 
+<img width="814" alt="image" src="https://github.com/user-attachments/assets/15a3ddca-a74c-4ee2-b6cb-f60f36b2b020" />
 
 **FIGURA 3.5: Fusión de Git sin y con avance rápido**
 
 El git pullcomando combina git fetchy git mergeen un solo comando, extrayendo la rama del servidor remoto y fusionándola con la rama actual.
 
-git pull origin my-branch
+```sh
+
+```
+
 El --no-ffinterruptor no se puede usar directamente en una operación de extracción, pero puedes indicarle a Git que lo use de manera predeterminada en no-fflas extracciones configurando la variable global pull-ff.
 
-git config --global pull.ff only
+```sh
+
+```
+
 Jugando con ramas
 A esta altura, ya has modificado la GitDemoclase y has confirmado los cambios. Ahora viene la magia de Git.
 
 Volviendo a la línea de comandos, volvamos a la rama principal.
 
-git switch main
+```sh
+
+```
+
 Ahora mira la GitDemoclase, pero no te asustes. El código nuevo que agregaste antes ya no está allí, porque esos cambios de código están en la rama refactoring1, pero tú estás en la rama principal .
 
 Vamos a crear una nueva rama llamada refactoring2 .
 
-git switch -c refactoring2
+```sh
+
+```
+
 Ahora es una réplica de la clase principal . Ahora modifique la GitDemoclase en una parte diferente del código agregando el método setAndDisplayDescription.
 
-10: public void displayDescription() {
-11:    System.out.println("Description: " + description);
-12: }
-13:
-14: public void setAndDisplayDescription(String description) {
-15:    this.description = description;
-16:    System.out.println("Description: " + description);
-17: }
+```java
+
+```
+
 Ahora hazlo.
 
-git commit -am "added setAndDisplayDescription"
+```sh
+
+```
+
 Aquí viene la parte divertida. ¿Qué sucede cuando fusionamos los cambios de la primera rama con los cambios de la segunda rama? (Puede aparecer una ventana de Git con un mensaje de confirmación predeterminado; puedes dejar ese mensaje y escribir :qcomo antes).
 
-git merge refactoring1 
+```sh
+
+```
+
 Git hace un trabajo fabuloso al fusionar la rama refactoring1 en refactoring2 , produciendo una clase híbrida:
 
 ```java
@@ -459,8 +535,10 @@ Pero habrá ocasiones (especialmente cuando dejes pasar muchos días antes de fu
 
 Vamos a crear una nueva rama de la rama principal, llamada refactoring3 .
 
-git switch main
-git switch -c refactoring3
+```sh
+
+```
+
 La nueva rama refactoring3 contiene la versión original del GitDemoListado 3.1 . Agreguemos algo de código nuevo (líneas 19 a 22).
 
 ```java
@@ -468,11 +546,16 @@ La nueva rama refactoring3 contiene la versión original del GitDemoListado 3.1 
 
 Y comprometerse a ello.
 
-git add GitDemo.java
-git commit -m "added conflicting code"
+```sh
+
+```
+
 Ahora intentemos fusionar refactoring1 ( Listado 3.2 ) en nuestra rama recientemente modificada refactoring3 :
 
-git merge refactoring1
+```sh
+
+```
+
 El resultado es un mensaje:
 
 Automatic merge failed; fix conflicts and then commit the result.
@@ -511,7 +594,10 @@ Puedes agregar varias opciones al git logcomando para controlar aspectos como el
 
 Una opción que mencionaremos aquí es la opción apropiadamente nombrada --oneline, que muestra una vista concisa del registro de una confirmación por línea. Cuando agrega la --graphopción, también muestra una vista gráfica de sus ramas.
 
-git log --graph --oneline 
+```sh
+
+```
+
 A continuación se muestra un historial de confirmaciones para la rama actual:
 
 *   00cdd10 (HEAD -> refactoring3) Merge branch 'refactoring1' into refactoring3
@@ -595,7 +681,10 @@ Realice algunas confirmaciones en la refactoring3rama y agregue las líneas 17 a
 
 y luego confirma:
 
-git commit -am "more changes to refactoring3"
+```sh
+
+```
+
 SUGERENCIA  Si no incluye un -m mensaje de confirmación, aparecerá una ventana del editor VI y le solicitará un mensaje de confirmación. Si eso sucede, presione i para ingresar al modo de edición y escriba su mensaje; luego presione Enter para comenzar una nueva línea. Cuando haya terminado, presione Esc para salir del modo de edición, escriba :w para escribir su mensaje en la confirmación y escriba :q para salir. Esa es la edición VI básica, con la que los usuarios de Unix/Linux están íntimamente familiarizados.
 
 Copiar rama refactoring3a refactoring3a.
@@ -632,15 +721,22 @@ La respuesta es que la rebase reescribe el historial de confirmaciones. Recuerda
 
 Como puede ver en la Figura 3.6 , ambas ramas refactoring3tienen refactoring3aexactamente la misma versión del código, pero refactoring3a(la rama fusionada) consta de dos ramas paralelas que se fusionan en una única confirmación, mientras que refactoring3(la rama rebasada) es una rama recta.
 
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/076bffc5-ec06-4d09-9cda-f3e317246529" />
 
 **FIGURA 3.6: Fusión versus rebase**
 
-LA REGLA DE ORO DEL REBASING
+<hr>
+
+**LA REGLA DE ORO DEL REBASING**
+
 La regla de oro del rebase dice que nunca se debe rebasear una rama que se comparte con otros desarrolladores o que se ha enviado o fusionado a un repositorio remoto. En lugar de eso, solo se deben rebasear ramas locales o privadas a su propio repositorio.
 
 Lo que esto significa en la práctica es no volver a basar nada que ya se haya enviado al control remoto, ni nada que se haya fusionado en otra rama que se enviará en el futuro.
 
-Selección de cerezas
+<hr>
+
+### Cherry-Picking
+
 Aprendió a desarrollar sus cambios en una rama y luego fusionar o reorganizar esos cambios en otras ramas. Pero ¿qué sucede si desea integrar de forma selectiva algunos cambios, pero no todos, de una rama a otra?
 
 Git ofrece una solución a este problema en forma de cherry-picking . Cherry-picking es la capacidad de aplicar commits específicos de una rama a otra. Para ello, cambia a la rama de destino, localiza el ID de commit del commit que quieres seleccionar y luego llama al git cherry-pickcomando. No necesitas especificar el ID de commit completo; basta con los primeros caracteres que identifican el commit de forma única. Por ejemplo, para seleccionar el ID de commit 4954034c… en la rama refactoring1 , haz lo siguiente:
@@ -672,16 +768,15 @@ Para comprender mejor las diferencias semánticas, consulte la comparación en l
 
 **TABLA 3.1: Revertir y restablecer**
 
-DOMINIO	CREA UN NUEVO COMPROMISO	HISTORIA DE DESCARTES	MANTIENE LOS CAMBIOS LOCALES
-git revert <commit id>	Sí	No	No
-git reset --soft <commit id>	No	Sí	Sí
-git reset --hard <commit id>	No	Sí	No
-git reset <commit id>	No	Sí	Sí, pero sin escenificar
-Optimización con soporte IDE
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/ffd17bd6-dd24-4dcb-97a0-9d187e11c3e2" />
+
+### Optimización con soporte IDE
+
 Todos los IDE más importantes ofrecen compatibilidad de primer nivel con Git. En esta sección, abordaremos la compatibilidad con IntelliJ IDEA.
 
 Un archivo sin seguimiento aparecerá en color marrón. IntelliJ le ofrecerá comenzar a realizar el seguimiento, como se muestra en la Figura 3.7 .
 
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/72d6a845-8e2b-4bfe-8fac-a581994d960e" />
 
 **FIGURA 3.7: Seguimiento de un nuevo archivo**
 
@@ -689,9 +784,11 @@ La primera vez que se realiza un seguimiento de un archivo, se lo coloreará en 
 
 Si ya se creó un archivo de forma externa (quizás se lo movió al proyecto desde el sistema de archivos), aún puede rastrearlo; simplemente haga clic derecho en el archivo y seleccione Git y luego Agregar. Esto lo agregará al área de preparación, como se muestra en la Figura 3.9 .
 
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/764386f0-f5dc-4dcd-a789-04d7a30ef2e8" />
 
 **FIGURA 3.8: Codificación de colores para un archivo recién rastreado**
 
+<img width="747" alt="image" src="https://github.com/user-attachments/assets/f16fd39f-0880-4ec9-bf4f-02a1de4c5ca9" />
 
 **FIGURA 3.9: Seguimiento de un archivo externo**
 
@@ -706,6 +803,7 @@ Los cambios a los archivos rastreados se preparan automáticamente y aparecerán
 
 Al hacer clic derecho en la ventana de confirmación, aparecerá una ventana de contexto. La mayoría de las opciones se explican por sí solas, pero llame su atención sobre la opción Nueva lista de cambios (consulte la Figura 3.10 ). IntelliJ garantiza que solo pueda confirmar una lista de cambios a la vez, por lo que si desea mantener algunos archivos fuera de su confirmación por ahora, puede crear una nueva lista de cambios y mover esos archivos a esa lista de cambios para separar sus confirmaciones.
 
+<img width="638" alt="image" src="https://github.com/user-attachments/assets/30a59e97-c429-4bb6-912c-9e8f3e370554" />
 
 **FIGURA 3.10: Ventana de contexto de confirmación**
 
@@ -718,6 +816,7 @@ F7 es un atajo conveniente para navegar de un cambio al siguiente. Shift+F7 te l
 
 Las líneas modificadas aparecerán en la ventana del visor de diferencias, como se muestra en la Figura 3.11 , con un resaltado azul claro y una casilla de verificación en el margen. Puede elegir qué cambios confirmar marcando o desmarcando la casilla de verificación junto a cada cambio en la ventana del visor de diferencias. Solo se confirmarán los cambios seleccionados. Si hace clic derecho en un cambio, puede elegir enviar ese cambio a otra lista de cambios para que las confirmaciones en ese archivo no incluyan esos cambios.
 
+<img width="831" alt="image" src="https://github.com/user-attachments/assets/35a6ff7b-a3e5-4768-84bd-e26cc10d4ddf" />
 
 **FIGURA 3.11: Ventana del visor de diferencias**
 
@@ -731,6 +830,7 @@ someMoreCodeToNotCommit();
 ///////// Don't Commit ///////////
 El menú Git proporciona todos los comandos descritos y más, como puede ver en la Figura 3.12 .
 
+<img width="786" alt="image" src="https://github.com/user-attachments/assets/f37c289c-d72b-494b-8e58-1d85bd099dc6" />
 
 **FIGURA 3.12: Menú Git de IntelliJ**
 
@@ -751,6 +851,8 @@ SUGERENCIA  Un parche es un archivo que contiene las diferencias entre los con
 
 Cambios no confirmados: Vale la pena analizar este tema en todos sus submenús; la Figura 3.13 muestra las opciones del submenú Cambios no confirmados.
 
+<img width="701" alt="image" src="https://github.com/user-attachments/assets/fcfc6188-205b-4bf9-b54e-360e90be32ad" />
+
 **FIGURA 3.13: Submenú de cambios no confirmados de IntelliJ**
 
 Archivar cambios: le permite dejar de lado o archivar temporalmente los cambios actuales en el repositorio de IntelliJ, donde puede inspeccionarlos y recuperarlos más tarde.
@@ -760,6 +862,8 @@ Deshacer cambios guardados: le permite volver a aplicar los cambios guardados.
 Revertir: selecciona archivos para restaurarlos al estado original.
 Mostrar cambios locales como UML: dibuja un diagrama de clases UML que contiene las clases y métodos que contienen cambios locales.
 Archivo actual: Este también merece una exploración de sus submenús; consulte la Figura 3.14 .
+
+<img width="739" alt="image" src="https://github.com/user-attachments/assets/b093f288-49d4-4c09-aea1-e854c6f5bb6a" />
 
 **FIGURA 3.14:S ubmenú Archivo actual de IntelliJ**
 
@@ -774,11 +878,13 @@ Mostrar historial del método: muestra una lista de todas las confirmaciones par
 Mostrar historial de la selección: aparece solo cuando se ha seleccionado algo. Este elemento del menú muestra una lista de todas las confirmaciones de esa selección y permite compararlas con estados anteriores.
 Puede obtener una lista más amplia de opciones de Git haciendo clic derecho en un archivo en el editor y eligiendo Git, como se muestra en la Figura 3.15 .
 
+<img width="663" alt="image" src="https://github.com/user-attachments/assets/f9afc8c7-7e0e-44d3-9971-fe2ff28ab3a5" />
 
 **FIGURA 3.15: Menú contextual de Git**
 
 IntelliJ tiene una ventana de registro de Git que se puede abrir haciendo clic en el icono de Git en la parte inferior izquierda. Incluye una pantalla de registro gráfica que permite seleccionar una rama, un ID de confirmación, etc., y muestra un árbol que ilustra las ramas. Esto es mucho más fácil de usar que escribir comandos de registro, como se puede ver en la Figura 3.16 .
 
+<img width="676" alt="image" src="https://github.com/user-attachments/assets/485bdf42-dd07-448d-877f-a7f654f2670b" />
 
 **FIGURA 3.16: Ventana de registro de Git de IntelliJ**
 
@@ -860,6 +966,7 @@ Con esta estrategia, cada característica obtiene una rama de características ,
 
 La figura 3.17 muestra los pasos.
 
+<img width="855" alt="image" src="https://github.com/user-attachments/assets/33930ac8-e570-4724-9d90-908f03de1137" />
 
 **FIGURA 3.17: Flujo de trabajo de Gitflow**
 
@@ -904,6 +1011,7 @@ Generalmente, las epopeyas se utilizan como padre de un grupo de historias, erro
 
 Estos problemas más pequeños pueden contener sus propios problemas, que se denominan subtareas. Se pueden crear en cualquier orden, pero en el desarrollo empresarial una práctica común es adjuntar la mayoría de los problemas a una epopeya. Además, cada subtarea pertenece a un problema principal, como en la Figura 3.18 .
 
+<img width="859" alt="image" src="https://github.com/user-attachments/assets/b80fb3bc-83df-45b7-8f4d-e86db7cb2f53" />
 
 **FIGURA 3.18: Jerarquía de problemas de Jira**
 
@@ -912,17 +1020,20 @@ Jira utiliza esta jerarquía para proporcionar una vista de arriba hacia abajo a
 Creando un proyecto
 Los problemas se asignan a los proyectos. Si se incorpora a un equipo existente, normalmente habrá uno o más proyectos configurados. Si necesita crear un nuevo proyecto, vaya a la pestaña Proyectos y seleccione Crear proyecto, seleccione una plantilla adecuada y siga las instrucciones que aparecen allí, como se muestra en la Figura 3.19 .
 
+<img width="837" alt="image" src="https://github.com/user-attachments/assets/b8997124-3e06-4241-ad16-9aaca614beca" />
 
 **FIGURA 3.19: Creación de un nuevo proyecto**
 
 Existen tipos de tableros estándar para cada plantilla. Por ejemplo, para el desarrollo de software, puede seleccionar Kanban, Scrum, etc. Elegiremos Scrum para nuestro proyecto de ejemplo. Scrum le permite administrar sus entregas en sprints con límites de tiempo, que duran dos semanas de manera predeterminada. Kanban no tiene límites de tiempo, pero divide el tablero en columnas que representan tareas generales o equipos, y hay un límite de trabajo en proceso para cada columna del tablero, como en la Figura 3.20 .
 
+<img width="833" alt="image" src="https://github.com/user-attachments/assets/4a51b39a-4395-4948-9178-fe96a50596b9" />
 
 **FIGURA 3.20: Selección de una plantilla de proyecto**
 
 Creando un problema
 Para crear un nuevo problema en Jira, haga clic en el botón Crear, como en la Figura 3.21 .
 
+<img width="829" alt="image" src="https://github.com/user-attachments/assets/f8de3626-0136-42e1-9b50-fbd08d2090b7" />
 
 **FIGURA 3.21: Creación de un nuevo problema**
 
@@ -930,12 +1041,14 @@ Seleccione el tipo de problema y complete todos los detalles. Como todo lo relac
 
 Ingrese un resumen, una descripción, un cesionario (si se conoce) y otros campos según lo requiera su equipo, como en la Figura 3.22 .
 
+<img width="655" alt="image" src="https://github.com/user-attachments/assets/823cad34-7246-4c81-b861-fdb264b4e226" />
 
 **FIGURA 3.22: Completar el nuevo número**
 
 Vinculación a una epopeya
 Como práctica recomendada, la mayoría de los equipos tendrán una política de asignar la mayoría de los problemas a una épica principal. Puede vincular un problema a una épica cuando crea el problema, o puede agregar o cambiar el vínculo de la épica más tarde. Luego puede obtener una vista general de todo el proyecto al ver las épicas en el tablero del proyecto como en la Figura 3.23 .
 
+<img width="663" alt="image" src="https://github.com/user-attachments/assets/b089a967-4287-4fb2-8dfd-705f99de324f" />
 
 **FIGURA 3.23: Asignación de una epopeya a un problema**
 
@@ -948,6 +1061,7 @@ Existe un rol conocido como Administrador del tablero. Los administradores del t
 
 El flujo de trabajo del proyecto, como se muestra en la Figura 3.24 , define todas las opciones de estado del proyecto y sus transiciones. Puede ver por el flujo de flechas que un problema ABIERTO puede pasar a EN PROGRESO, RESUELTO o CERRADO.
 
+<img width="678" alt="image" src="https://github.com/user-attachments/assets/eb1219f2-5d1a-4988-b2fd-26f9f0a3539d" />
 
 **FIGURA 3.24: Diseño de un flujo de trabajo**
 
@@ -956,9 +1070,11 @@ Ahora que ha creado algunos problemas de Jira, es hora de asignar el trabajo. El
 
 A partir de la pestaña de backlog en la Figura 3.25 , encontrará todos sus problemas en la parte inferior de la página, en la sección Backlog. Su primer sprint aparecerá con un nombre predeterminado y sin fechas, pero puede hacer clic en el ícono Agregar fechas para administrar el sprint. También puede crear sprints futuros, utilizando el mismo método que se muestra en la Figura 3.26 .
 
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/b4c5cd37-1019-4938-aca0-ce32ab3edb3a" />
 
 **FIGURA 3.25: Pestaña de cartera de pedidos**
 
+<img width="749" alt="image" src="https://github.com/user-attachments/assets/cd1245ee-fecc-4f74-92ca-66f387cdcd58" />
 
 **FIGURA 3.26: Creación de un sprint**
 
@@ -966,6 +1082,7 @@ Ahora que se han creado uno o más sprints, puedes arrastrar y soltar problemas 
 
 Una vez asignado el sprint, se puede iniciar haciendo clic en el botón Iniciar sprint en la parte superior izquierda.
 
+<img width="746" alt="image" src="https://github.com/user-attachments/assets/be17cc1d-1859-4a1a-9f97-005d189881df" />
 
 **FIGURA 3.27: Asignación de jiras a un sprint**
 
@@ -977,16 +1094,19 @@ Una vez que se hayan agregado usuarios al proyecto, haga clic en Volver al proye
 Agregar columnas
 Para agregar, eliminar o volver a secuenciar columnas, un administrador del tablero debe hacer clic en Columnas y estados en el lado izquierdo para iniciar la pantalla de mantenimiento de columnas.
 
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/fc3568da-aaf0-446c-bd2b-a860396ff44d" />
 
 **FIGURA 3.28: Adición de usuarios**
 
 Haga clic en el botón Crear columna + signo en el lado derecho para agregar columnas, como en la Figura 3.29 .
 
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/fb0b09bd-a74a-474c-bc74-76306cab9119" />
 
 **FIGURA 3.29: Adición de nuevas columnas**
 
 Ahora el administrador del tablero puede agregar nuevas columnas, renombrar las existentes, volver a secuenciarlas y asignar un estado del flujo de trabajo a cada columna, como en la Figura 3.30 .
 
+<img width="908" alt="image" src="https://github.com/user-attachments/assets/69fbf131-acb3-4b68-b100-6556248ba0a2" />
 
 **FIGURA 3.30: Mantenimiento de la columna**
 
@@ -1000,6 +1120,7 @@ Puede ver todos sus problemas, en todos los tableros y en la lista de trabajos p
 
 Desde la misma pantalla, puede ingresar consultas en JQL haciendo clic en Cambiar a JQL.
 
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/9725ccb2-7d1b-4e2a-a42a-fdea1fb13475" />
 
 **FIGURA 3.31: Visualización de mis problemas**
 
@@ -1011,6 +1132,8 @@ Una consulta JQL consta de una o más cláusulas de selección de campo seguidas
 Una cláusula de selección de campo consta de un campo seguido de un operador y un valor. Las tablas 3.2 , 3.3 y 3.4 muestran los operadores válidos.
 
 **TABLA 3.2: Operadores de comparación**
+
+<img width="348" alt="image" src="https://github.com/user-attachments/assets/ab46e46d-a727-47a0-b84c-ee120d650daa" />
 
 OPERADOR	DESCRIPCIÓN
 =	El valor del campo es igual al valor especificado
@@ -1031,7 +1154,11 @@ BY	El campo fue cambiado por un usuario específico
 AFTER	El campo de fecha cayó después de una fecha u hora especificada
 BEFORE	El campo de fecha cayó antes de una fecha u hora especificada
 DURING	El campo de fecha se produjo durante un rango de fechas específico
-TABLA 3.3 :Operadores lógicos
+
+**TABLA 3.3 :Operadores lógicos**
+
+<img width="382" alt="image" src="https://github.com/user-attachments/assets/41159c12-4feb-4a3e-9dd7-167429c4e419" />
+
 
 OPERADOR	DESCRIPCIÓN
 AND	Y lógico
@@ -1040,6 +1167,8 @@ NOT	NO lógico
 Las cláusulas se pueden separar con las palabras clave AND, OR, y NOT. Para ordenar por uno o más campos, puede finalizar la consulta con ORDER BYy un nombre de campo. Puede controlar el orden de clasificación con ASC(predeterminado) o DESC.
 
 **TABLA 3.4: Operadores especiales**
+
+<img width="765" alt="image" src="https://github.com/user-attachments/assets/4764d427-1c5e-45d2-ab8f-07eaf54959f7" />
 
 OPERADOR	DESCRIPCIÓN
 EMPTY	El valor del campo está vacío.
@@ -1064,14 +1193,17 @@ project = "Value Mark" and assignee = currentUser() AND resolution = Unresolved 
 Realizar cambios masivos
 Puede modificar una selección de Jiras en función de una consulta JQL. Desde la pantalla JQL, puede hacer clic en el botón Cambio masivo y luego hacer clic en la casilla de verificación junto a cada problema que desee cambiar, como en la Figura 3.32 .
 
+<img width="827" alt="image" src="https://github.com/user-attachments/assets/3da57064-9a47-43ce-8f8d-a64454f379cb" />
 
 **FIGURA 3.32: Edición masiva**
 
 Luego puede elegir editar los problemas seleccionados, moverlos a un nuevo proyecto, realizar la transición, etc., como en la Figura 3.33 y la Figura 3.34 .
 
+<img width="907" alt="image" src="https://github.com/user-attachments/assets/b2194ff5-2495-47bb-a09e-93889a77a6a4" />
 
 **FIGURA 3.33: Edición masiva, Elegir acción masiva**
 
+<img width="909" alt="image" src="https://github.com/user-attachments/assets/9f0aa76e-6eac-4b6b-82ea-283b6346678c" />
 
 **FIGURA 3.34: Edición masiva, detalles de la operación**
 
@@ -1112,9 +1244,11 @@ Puede cambiar el tamaño de la imagen arrastrando y soltando los bordes. Al hace
 
 Seleccione Tabla para insertar una nueva tabla. Puede seleccionar una celda, varias celdas, filas enteras, columnas enteras o la tabla completa. Cuando realiza una selección, aparece una pequeña flecha en la parte superior derecha de una celda. Haga clic en la flecha para abrir un menú contextual con opciones para cambiar el fondo o agregar o eliminar filas o columnas. La Figura 3.36 muestra cómo insertar una tabla.
 
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/215d8fbb-9cba-4ca6-9132-5ea77d93872a" />
 
 **FIGURA 3.35: Inserción de una imagen**
 
+<img width="908" alt="image" src="https://github.com/user-attachments/assets/449d956c-6f43-49bd-9c5b-a2e946bca314" />
 
 **FIGURA 3.36: Inserción de una tabla**
 
@@ -1123,6 +1257,8 @@ La Tabla 3.5 muestra algunas macros útiles para que puedas hacerte una idea de 
 A medida que use Confluence, aprenderá optimizaciones divertidas como escribir {note} para crear un cuadro de nota o pegar una URL de Jira para conectar automáticamente el ticket a la página, incluido el estado en el momento de la representación de la página.
 
 **TABLA 3.5: Macros de Confluence seleccionadas**
+
+<img width="904" alt="image" src="https://github.com/user-attachments/assets/2d5fefd5-883e-415b-a2e3-662273311ffe" />
 
 OPERADOR	DESCRIPCIÓN
 Mesa	Crea una tabla
@@ -1149,6 +1285,6 @@ Documentación de Confluence
 
 En este capítulo, analizamos algunas de las herramientas más utilizadas para la colaboración empresarial.
 
-Git para la colaboración de código
-Jira para la colaboración en procesos
-Confluence para la gestión del conocimiento empresarial
+* Git para la colaboración de código
+* Jira para la colaboración en procesos
+* Confluence para la gestión del conocimiento empresarial
