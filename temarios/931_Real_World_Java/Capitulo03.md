@@ -211,51 +211,89 @@ git clone https://github.com/<your git id>/Ch03-Collaboration
 
 Esto clonará e inicializará el repositorio en el directorio actual, lo que te permitirá trabajar en él. (Git clone moverá todos los archivos directamente al directorio actual, por lo que siempre querrás comenzar desde un directorio vacío). La operación de clonación solo traerá la rama predeterminada y descargará la lista de ramas remotas. Si quieres extraer otras ramas, debes extraerlas explícitamente.
 
-CLONACIÓN VÍA SSH
-El indicador uniforme de recursos (URI) que usamos en la operación de clonación de Git anterior era simplemente la URL HTTPS de nuestro repositorio de GitHub. Esta es una práctica de clonación común para los repositorios públicos de GitHub y puedes seguir usando ese enfoque para este libro. Sin embargo, en las empresas, a veces te pedirán que uses un URI SSH seguro, lo que significa que debes generar y agregar claves SSH a tu repositorio. Eso no es tan aterrador como parece.
+<hr>
+
+**CLONACIÓN VÍA SSH**
+
+El Uniform Resource Indicator (URI) que usamos en la operación de clonación de Git anterior era simplemente la URL HTTPS de nuestro repositorio de GitHub. Esta es una práctica de clonación común para los repositorios públicos de GitHub y puedes seguir usando ese enfoque para este libro. Sin embargo, en las empresas, a veces te pedirán que uses un URI SSH seguro, lo que significa que debes generar y agregar claves SSH a tu repositorio. Eso no es tan aterrador como parece.
 
 Desde un shell de Linux o macOS o desde Git Bash, genere las claves usando esto:
 
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -C "github keys"
+**`ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -C "github keys"`**
+
 O desde un shell estándar de Windows, use esto:
 
-ssh-keygen -t rsa -b 4096 -f %USERPROFILE%\.ssh\id_rsa1 -C "github keys"
+**`ssh-keygen -t rsa -b 4096 -f %USERPROFILE%\.ssh\id_rsa1 -C "github keys"`**
+
 Puedes usar la clave generada con todos tus repositorios de GitHub. Deberás enviar la clave a GitHub. A continuación, te indicamos cómo hacerlo:
 
-Copie el contenido del ~/.ssh/id_rsaarchivo que acaba de generar al portapapeles.
-Haz clic en tu foto de perfil en la esquina superior derecha y elige la opción Configuración.
-En la navegación izquierda, seleccione la entrada para las claves SSH y GPG, como se muestra en la Figura 3.3 .
-Seleccione Claves SSH y Nueva Clave SSH.
+1. Copie el contenido del archivo **`~/.ssh/id_rsa`** que acaba de generar al portapapeles.
+2. Haz clic en tu foto de perfil en la esquina superior derecha y elige la opción Settings.
+3. En la navegación izquierda, seleccione la entrada para las claves SSH y GPG, como se muestra en la Figura 3.3 .
+4. Seleccione SSH Keys y New SSH Key.
+
+<img width="832" alt="image" src="https://github.com/user-attachments/assets/ae9dac87-7694-42a6-8aac-a88b12b71e0f" />
 
 **FIGURA 3.3: Cómo agregar claves SSH a su repositorio de GitHub**
 
-Pegue el contenido del id_rsaarchivo que copió en el paso 1 y haga clic en Agregar clave SSH. En unos segundos, debería recibir un correo electrónico que le anunciará que su clave se ha configurado, como se muestra en la Figura 3.4 .
+Pegue el contenido del archivo **`id_rsa`** que copió en el paso 1 y haga clic en Add SSH Key. En unos segundos, debería recibir un correo electrónico que le anunciará que su clave se ha configurado, como se muestra en la Figura 3.4 .
+
+<img width="834" alt="image" src="https://github.com/user-attachments/assets/a344bf34-7678-46c3-87b0-d568187c977b" />
 
 **FIGURA 3.4: Agregar nuevas claves SSH**
 
-A continuación veremos un ejemplo de los comandos checkouty switch.
+A continuación veremos un ejemplo de los comandos **`checkout`** y **`switch`**.
 
-Por favor cdal directorio main/java/com/wiley/realworldjava/gitplay.
-Hay un archivo allí (ver Listado 3.1 ).
+1. Por favor **`cd`** al directorio **`main/java/com/wiley/realworldjava/gitplay`**.
+2. Hay un archivo allí (ver Listado 3.1 ).
 
 **LISTADO 3.1: ARCHIVO ORIGINAL**
 
 ```java
+1:  package com.wiley.realworldjava.gitplay;
+2:
+3:  public class GitDemo {
+4:     private String description;
+5:
+6:     public GitDemo(String description) {
+7:        this.description = description;
+8:     }
+9:
+10:    public void displayDescription() {
+11:       System.out.println("Description: " + description);
+12:    }
+  13:
+14:    public static void main(String[] args) {
+15:       GitDemo demo = new GitDemo("Hello, Git!");
+16:
+17:       // Display the initial description
+18:       demo.displayDescription();
+19:    }
+20: }
 ```
 
 Para facilitar la edición y la compilación, cree un nuevo proyecto en su IDE desde el control de versiones. Consulte el Capítulo 2 , “Conozca su IDE: el secreto del éxito”, para aprender a crear un proyecto desde el control de versiones.
 
-El git statuscomando te tomará de la mano, mostrando tu estado actual y mostrándote las opciones disponibles sobre qué hacer a continuación.
+El comando **`git status`** te tomará de la mano, mostrando tu estado actual y mostrándote las opciones disponibles sobre qué hacer a continuación.
 
+```sh
 git status
+```
+
 Para mi entorno, esto muestra lo siguiente:
 
+```sh
 Your branch is up to date with 'origin/main'.
  
 Untracked files:
   (use "git add <file>…" to include in what will be committed)
         .idea/
-Ahora no desea realizar el check-in en su .ideadirectorio (después de todo, no desea dictar su estado dinámico .idea a otros o incluso a su yo futuro), y ciertamente no desea realizar el check-in en su directorio de salida de compilación; Git es para código fuente, no para salida compilada.
+```
+
+AQUIIIIIII
+
+
+Ahora no desea realizar el check-in en su directorio **`.idea`** (después de todo, no desea dictar su estado dinámico .idea a otros o incluso a su yo futuro), y ciertamente no desea realizar el check-in en su directorio de salida de compilación; Git es para código fuente, no para salida compilada.
 
 ¿No sería fantástico si pudieras indicarle a Git que ignore por completo esos archivos? Afortunadamente, Git ofrece una función para ignorar archivos y directorios seleccionados. Para ello, crea un archivo con el nombre .gitignoreen la raíz del proyecto e incluye los nombres de los archivos y directorios que deseas ignorar. Puedes incluir el nombre de archivo exacto ( temp.txt), un comodín ( temp*.*) o directorios. Puedes ignorar directorios enteros especificando los nombres de los directorios. Por ejemplo:
 
