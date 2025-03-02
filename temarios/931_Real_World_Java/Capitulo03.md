@@ -66,105 +66,148 @@ Una vez que haya preparado los cambios y esté conforme con ellos, deberá guard
 
 ### Diferenciación de Commits
 
-AQUIIIIIIIII
+La palabra *commit* es tanto un verbo como un sustantivo. Como verbo, *commit* se refiere a la acción de mover los cambios a tu repositorio Git local. Como sustantivo, un *commit* se refiere a todos los archivos y la información de contexto incluidos en esa acción de commit. Se aplica un algoritmo amplio a los archivos, sus commits anteriores, el nombre de usuario del commiter, el log message y otra información para producir un *commit ID* hexadecimal único de 40 caracteres, también conocido como *commit hash*.
 
-La palabra commit es tanto un verbo como un sustantivo. Como verbo, commit se refiere a la acción de mover los cambios a tu repositorio Git local. Como sustantivo, un commit se refiere a todos los archivos y la información de contexto incluidos en esa acción de commit. Se aplica un algoritmo amplio a los archivos, sus commits anteriores, el nombre de usuario del commiter, el mensaje de registro y otra información para producir un ID de commit hexadecimal único de 40 caracteres , también conocido como hash de commit .
+### Visualización del Git Status
 
-Visualización del estado de Git
-El git statuscomando es una herramienta útil para visualizar el estado de sus archivos. Le mostrará una lista de archivos modificados, no rastreados y almacenados, así como la rama actual y una lista de comandos específicos que puede ejecutar para cambiar el estado.
+El comando **`git status`** es una herramienta útil para visualizar el estado de sus archivos. Le mostrará una lista de archivos modificados, untracked(no rastreados) y staged files(almacenados), así como la current branch(rama actual) y una lista de comandos específicos que puede ejecutar para cambiar el estado.
 
-Si hay archivos que no quieres que Git rastree en absoluto (como archivos de configuración IDE o archivos locales que nunca quieres confirmar), puedes agregar sus nombres (o directorios o un patrón de nombre) a un archivo llamado .gitignoreen la raíz de tu área de trabajo (más sobre esto más adelante).
+Si hay archivos que no quieres que Git rastree(to track) en absoluto (como archivos de configuración IDE o archivos locales que nunca quieres confirmar(commit)), puedes agregar sus nombres (o directorios o un patrón de nombre) a un archivo llamado **`.gitignore`** en la raíz de tu working area(área de trabajo) (más sobre esto más adelante).
 
 Git no realiza un seguimiento de los archivos ignorados, no se muestran en el estado y sus cambios no se incluyen al comprobar si hay modificaciones. Puedes cambiarlos y usarlos, pero en lo que respecta a Git, no existen.
 
-Derivación
-Todas las confirmaciones de Git residen en una rama. Una rama es un puntero con nombre a un conjunto de confirmaciones; o, más precisamente, es un puntero a una confirmación HEAD en particular , que incluye todas las confirmaciones históricas que produjeron esa confirmación. A medida que realiza más confirmaciones en esa rama, el puntero de la rama se mueve hacia adelante para apuntar a la última confirmación.
+### Branching
 
-Puedes crear una rama a partir de una rama seleccionada, trabajar en la nueva rama, luego comparar esa rama con la rama original para revisar los cambios y, finalmente, fusionar tu rama con la rama original. Tradicionalmente, Git asignaba una rama predeterminada llamada master . Pero recientemente han estado haciendo la transición para usar el nombre main en lugar de master para promover la inclusión. Dependiendo de tu proveedor y versión de Git, verás uno u otro.
+Todos los Git commits residen en una branch. Una *branch* es un pointer con nombre a un conjunto de commits; o, más precisamente, es un pointer a un particular *HEAD* commit, que incluye todos la s históricas de commits que produjeron ese commit. A medida que realiza más commits en esa branch, el branch pointer se mueve hacia adelante para apuntar al último commit.
 
-Etiquetado
-Las etiquetas son como ramas, excepto que son estáticas. Mientras que un puntero de rama se mueve continuamente a la última confirmación, un puntero de etiqueta nunca se mueve y, por lo tanto, captura el estado de su base de código en un momento dado. Una etiqueta es como un nombre legible para el hash de confirmación.
+Puedes crear una branch a partir de una rama seleccionada, trabajar en la nueva rama, luego comparar esa rama con la rama original para revisar los cambios y, finalmente, fusionar(merge) tu rama con la rama original. Tradicionalmente, Git asignaba una rama predeterminada llamada ***master***. Pero recientemente han estado haciendo la transición para usar el nombre ***main*** en lugar de ***master*** para promover la inclusión. Dependiendo de tu proveedor y versión de Git, verás uno u otro.
 
-SUGERENCIA:  Si bien el hash de confirmación al que hace referencia el puntero de etiqueta es inmutable, el nombre de etiqueta en sí se puede eliminar y volver a crear.
+### Tagging
 
-Fusión
-La fusión se refiere a la actividad de integrar los cambios de una rama en otra rama. Este es un paso en un flujo de trabajo común en Git: comienzas con una rama existente, generalmente la rama común que todos usan, que puede tener cualquier nombre, pero tradicionalmente se llama desarrollo . Creas tu rama a partir de esa rama existente en una nueva rama con tu propio nombre, por ejemplo, feature-123 . Tú, y quizás otros miembros de tu equipo, trabajan en feature-123 , ejecutas tus pruebas, todo pasa y estás listo para publicar el código. Debes fusionar feature-123 en desarrollo y luego enviarlo al servidor remoto.
+Los ***Tags*** son como branches, excepto que son estáticas. Mientras que un puntero de rama(branch pointer) se mueve continuamente al último commit, un tag pointer nunca se mueve y, por lo tanto, captura el estado de su base de código en un momento dado. Un tag es como un nombre legible para el commit hash.
 
-SUGERENCIA  En las empresas, es habitual nombrar la rama de funciones utilizando el número de ticket de JIRA para facilitar el seguimiento. Veremos un ejemplo de esto en la sección “Uso de Jira para la colaboración en procesos empresariales”, más adelante en este capítulo.
+<hr>
 
-Lectura de registros de Git
-Git te brinda la posibilidad de ver un registro de tu historial de confirmaciones en niveles de detalle configurables. git logmuestra una lista bastante detallada de todo tu historial de confirmaciones.
+**TIP**: Si bien el commit hash al que hace referencia el tag pointer es inmutable, el nombre de tag en sí se puede eliminar y volver a crear.
 
-A continuación se muestra una entrada de una git logcarrera reciente:
+<hr>
 
+### Merging
+
+***Merging(La fusión)*** se refiere a la actividad de integrar los cambios de una rama en otra rama. Este es un paso en un flujo de trabajo común en Git - comienzas con una rama existente, generalmente la rama común que todos usan, que puede tener cualquier nombre, pero tradicionalmente se llama ***develop***. Creas tu rama a partir de esa rama existente en una nueva rama con tu propio nombre, por ejemplo, ***feature-123***. Tú, y quizás otros miembros de tu equipo, trabajan en *feature-123*, ejecutas tus pruebas, todo pasa y estás listo para publicar el código. Debes fusionar *feature-123* en *develop* y luego enviarlo al servidor remoto.
+
+<hr>
+
+**TIP**: En las empresas, es habitual nombrar la feature branch(rama de funciones) utilizando el número de ticket de JIRA para facilitar el seguimiento. Veremos un ejemplo de esto en la sección “Uso de Jira para la colaboración en procesos empresariales”, más adelante en este capítulo.
+
+<hr>
+
+### Reading Git Logs
+
+Git te brinda la posibilidad de ver un ***log(registro)*** de tu historial de commits en niveles de detalle configurables. **`git log`** muestra una lista bastante detallada de todo tu historial de commits.
+
+A continuación se muestra la ejecución de un **`git log`** reciente:
+
+```sh
 commit f162588e53d536dd0738968e952adf7e86740a8f (refactoring1)
 Author: vgrazi <vgrazi@gmail.com>
 Date:   Mon Feb 19 19:54:05 2024 -0500
  
     added a display
-Aquí se muestra el ID de la confirmación, la rama, el autor, la fecha de confirmación y el mensaje de confirmación.
+```
 
-SUGERENCIA:  Si ve dos puntos al final del registro, eso indica un salto de página; presione la barra espaciadora para ver más opciones o escriba q para salir y volver a la línea de comandos.
+Aquí se muestra commit ID, branch, author, commit date, y commit message.
 
-Preparando sus cambios
-Como se mencionó, Git mantiene un área de almacenamiento local ; todos los archivos que desee rastrear deben agregarse al área de almacenamiento mediante el git addcomando. Puede almacenar archivos específicos mediante lo siguiente:
+<hr>
 
+**TIP**: Si ve dos puntos al final del log, eso indica un salto de página; presione la barra espaciadora para ver más opciones o escriba `q` para salir y volver a la línea de comandos.
+
+<hr>
+
+### Staging sus cambios
+
+Como se mencionó, Git mantiene un área de almacenamiento local(staging area); todos los archivos que desee rastrear(to track) deben agregarse al área de almacenamiento(staging area) mediante el comando **`git add`**. Puede almacenar archivos específicos mediante lo siguiente:
+
+```java
 git add <file1> <file2> <file3> <etc>
-o puedes organizar cada archivo modificado usando un punto para indicarlos todos.
+```
 
+o puedes organizar(stage) cada archivo modificado usando un punto para indicarlos todos.
+
+```java
 git add .
-La git addoperación prepara los archivos nuevos, modificados y eliminados. Cuando se utiliza git add ., la preparación es recursiva y recoge los archivos modificados del directorio actual y de los directorios inferiores. ¿Qué sucede con los archivos movidos? Git hará todo lo posible por reconocer los archivos y directorios movidos y conservar su historial de versiones.
+```
 
-Para anular la etapa de preparación de un archivo que ya se agregó, utilice lo siguiente:
+La operación **`git add`** prepara(stages) los archivos nuevos, modificados y eliminados. Cuando se utiliza **`git add .`**, la preparación(staging) es recursiva y recoge los archivos modificados del directorio actual y de los directorios inferiores. ¿Qué sucede con los archivos movidos? Git hará todo lo posible por reconocer los archivos y directorios movidos y conservar su historial de versiones.
 
+Para anular la etapa de preparación(unstage) de un archivo que ya se agregó, utilice lo siguiente:
+
+```java
 git rm –cached <file>
-que es esencialmente el inverso de add.
+```
 
-Después de ejecutar git add, el siguiente paso generalmente será confirmar el área de ensayo en el repositorio local. Deberá agregar un mensaje de confirmación usando el -minterruptor (para “mensaje”).
+que es esencialmente el inverso de **`add`**.
 
+Después de ejecutar **`git add`**, el siguiente paso generalmente será confirmar el área de ensayo en el repositorio local(commit the staging area to the local repo). Deberá agregar un mensaje de confirmación usando el interruptor **`-m`** (por “message”).
+
+```java
 git commit -m "Some meaningful commit message"
-Cuando estés conforme con los cambios, agrégalos al área de ensayo, nuevamente usando el git addcomando . Luego, envías el área de ensayo (con todos los archivos agregados) al repositorio Git (que se encuentra en tu computadora local) usando el comando git commit -m "Some meaningful commit message"y, finalmente, envías tu repositorio a un servidor remoto usando el git pushcomando .
+```
 
-Puedes agregar y confirmar en un solo comando llamando git commit -am. Por ejemplo:
+Cuando estés conforme con los cambios, *agrégalos-add* al staging area(área de ensayo), nuevamente usando el comando **`git add`**. Luego, *envías-commit* el staging area - área de ensayo (con todos los archivos agregados) al repositorio Git (que se encuentra en tu computadora local) usando el comando **`git commit -m "Some meaningful commit message"`** y, finalmente, envías tu repositorio a un servidor remoto usando el comando **`git push`**.
 
+Puedes agregar y confirmar(add and commit) en un solo comando **`git commit -am`**. Por ejemplo:
+
+```java
 git commit -am "Some meaningful commit message"
+```
+
 En resumen, Git es un sistema de colaboración de código fundamental que se utiliza en la mayoría de los talleres de desarrollo y es conveniente familiarizarse con él desde el principio.
 
 Practiquemos un poco, pero primero, instale Git y luego siga las instrucciones.
 
-Instalación de Git
+### Instalación de Git
+
 Para instalar Git, dirígete a https://git-scm.com/downloads. Encontrarás instrucciones de instalación para Windows, macOS y Linux.
 
-Git para Windows generalmente funciona desde el shell de comandos normal de Windows, pero muchos desarrolladores prefieren usar Git Bash, que se instala con Git para Windows. Git Bash es una implementación para Windows del popular shell bash de Unix/Linux , que reconoce todos los comandos de Linux, como grep, ls, y ps, y es ideal para desarrolladores con experiencia en Unix/Linux.
+Git para Windows generalmente funciona desde el shell de comandos normal de Windows, pero muchos desarrolladores prefieren usar Git Bash, que se instala con Git para Windows. Git Bash es una implementación para Windows del popular shell bash de Unix/Linux , que reconoce todos los comandos de Linux, como **`grep`**, **`ls`**, y **`ps`**, y es ideal para desarrolladores con experiencia en Unix/Linux.
 
 Una vez instalado Git, configure su correo electrónico y nombre.
 
+```sh
 git config --global user.name "Your Name"
 git config --global user.email you@example.com
-El nombre se utilizará para anotar todas tus confirmaciones. El proveedor de Git puede utilizar la dirección de correo electrónico para comunicarse contigo.
+```
 
-Este libro utiliza GitHub, por lo que si aún no tiene una cuenta configurada, le recomendamos que visite github.comy cree una cuenta gratuita.
+El nombre se utilizará para anotar todas tus commits. El proveedor de Git puede utilizar la dirección de correo electrónico para comunicarse contigo.
 
-Comprender el flujo de trabajo de Git con ejemplos
+Este libro utiliza GitHub, por lo que si aún no tiene una cuenta configurada, le recomendamos que visite github.com y cree una cuenta gratuita.
+
+### Comprender el flujo de trabajo de Git con ejemplos
+
 Vamos a sumergirnos directamente en el proceso siguiendo la secuencia de comandos típica. Le recomendamos que siga escribiendo todos los comandos; la experiencia le ayudará a adquirir una comprensión visceral del flujo de trabajo de Git.
 
-En primer lugar, bifurca el repositorio del libro. La bifurcación es el proceso de crear una copia personal de un repositorio existente. En teoría, podrías usar el repositorio original sin bifurcarlo; sin embargo, el repositorio es de solo lectura, por lo que no podrás enviar cambios. Una copia bifurcada se convierte en tuya para que puedas hacer lo que quieras.
+En primer lugar, bifurca(fork) el repositorio del libro. La bifurcación(Forking) es el proceso de crear una copia personal de un repositorio existente. En teoría, podrías usar el repositorio original sin bifurcarlo(forking); sin embargo, el repositorio es de solo lectura, por lo que no podrás enviar cambios. Una copia bifurcada(forked copy) se convierte en tuya para que puedas hacer lo que quieras.
 
-Dirígete al repositorio del proyecto en https://github.com/realworldjava/Ch03-Collaboration. Como se muestra en la Figura 3.1 , bifurca el repositorio del proyecto. Esto crea un nuevo repositorio con tu ID de usuario, como https://github.com/<your git id>/Ch03-Collaboration.
+Dirígete al repositorio del proyecto en https://github.com/realworldjava/Ch03-Collaboration. Como se muestra en la Figura 3.1, bifurca(fork) el repositorio del proyecto. Esto crea un nuevo repositorio con tu ID de usuario, como **`https://github.com/<your git id>/Ch03-Collaboration`**.
 
-Haga clic en el botón Bifurcar. En la pantalla de bifurcación, conserve todos los valores predeterminados y haga clic en el botón Crear bifurcación, como se muestra en la Figura 3.2 .
+Haga clic en el botón Fork. En la pantalla fork, conserve todos los valores predeterminados y haga clic en el botón Create Fork, como se muestra en la Figura 3.2 .
 
+<img width="907" alt="image" src="https://github.com/user-attachments/assets/4cba38bb-2be3-42aa-b883-2f36c11644ee" />
 
 **FIGURA 3.1: Bifurcación de un proyecto de GitHub**
 
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/fe2c92d0-8101-479e-a3e5-9b7f7e64337f" />
 
 **FIGURA 3.2: Completando la bifurcación**
 
-Ahora clona la bifurcación de nuestro repositorio de proyectos. La clonación es la operación de llevar el proyecto Git a tu máquina de desarrollo para verlo y editarlo.
+Ahora clone el fork de nuestro repositorio de proyectos. La clonación es la operación de llevar el proyecto Git a tu máquina de desarrollo para verlo y editarlo.
 
-Para clonar el repositorio, abra un shell de comandos cden un directorio vacío y clone su bifurcación de nuestro proyecto de libro usando lo siguiente:
+Para clonar el repositorio, abra un shell de comandos, **`cd`** en un directorio vacío y clone su fork de nuestro proyecto de libro usando lo siguiente:
 
+```sh
 git clone https://github.com/<your git id>/Ch03-Collaboration
+```
 
 Esto clonará e inicializará el repositorio en el directorio actual, lo que te permitirá trabajar en él. (Git clone moverá todos los archivos directamente al directorio actual, por lo que siempre querrás comenzar desde un directorio vacío). La operación de clonación solo traerá la rama predeterminada y descargará la lista de ramas remotas. Si quieres extraer otras ramas, debes extraerlas explícitamente.
 
