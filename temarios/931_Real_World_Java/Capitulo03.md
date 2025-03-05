@@ -290,93 +290,98 @@ Untracked files:
         .idea/
 ```
 
-AQUIIIIIII
+Ahora no desea realizar el check-in en su directorio **`.idea`** (después de todo, no desea dictar su estado dinámico **`.idea`** a otros o incluso a su yo futuro), y ciertamente no desea realizar el check-in en su directorio de salida de compilación; Git es para código fuente, no para salida compilada.
 
+¿No sería fantástico si pudieras indicarle a Git que ignore por completo esos archivos? Afortunadamente, Git ofrece una función para ignorar archivos y directorios seleccionados. Para ello, crea un archivo con el nombre **`.gitignore`** en la raíz del proyecto e incluye los nombres de los archivos y directorios que deseas ignorar. Puedes incluir el nombre de archivo exacto (**`temp.txt`**), un comodín (**`temp*.*`**) o directorios. Puedes ignorar directorios enteros especificando los nombres de los directorios. Por ejemplo:
 
-Ahora no desea realizar el check-in en su directorio **`.idea`** (después de todo, no desea dictar su estado dinámico .idea a otros o incluso a su yo futuro), y ciertamente no desea realizar el check-in en su directorio de salida de compilación; Git es para código fuente, no para salida compilada.
+* **`/logs/`** ignorará el directorio **`logs`** en la raíz.
+* **`logs/`** ignorará cualquier directorio nombrado **`logs`** en cualquier nivel.
+* **`logs`** Sin un separador de ruta coincidirá con el directorio **`logs/`** y cualquier archivo llamado **`logs`**.
 
-¿No sería fantástico si pudieras indicarle a Git que ignore por completo esos archivos? Afortunadamente, Git ofrece una función para ignorar archivos y directorios seleccionados. Para ello, crea un archivo con el nombre .gitignoreen la raíz del proyecto e incluye los nombres de los archivos y directorios que deseas ignorar. Puedes incluir el nombre de archivo exacto ( temp.txt), un comodín ( temp*.*) o directorios. Puedes ignorar directorios enteros especificando los nombres de los directorios. Por ejemplo:
+Si desea que la recursión sea explícita, puede decir **`**/logs`**, lo que ignorará todo lo que se encuentre en cualquier directorio llamado **`logs`**. Puede agregar comentarios al archivo **`.gitignore`** comenzando con **`#`**. Las líneas en blanco se ignoran.
 
-/logs/ignorará el logsdirectorio en la raíz.
-logs/ ignorará cualquier directorio nombrado logsen cualquier nivel.
-logsSin un separador de ruta coincidirá con el logs/directorio y cualquier archivo llamado logs.
-Si desea que la recursión sea explícita, puede decir **/logs, lo que ignorará todo lo que se encuentre en cualquier directorio llamado logs. Puede agregar comentarios al .gitignorearchivo comenzando con #. Las líneas en blanco se ignoran.
-
-No puedes ignorar los archivos que ya están rastreados. Para dejar de rastrear un archivo rastreado, puedes hacer lo siguiente:
+No puedes ignorar los archivos que ya están rastreados(tracked). Para dejar de rastrear un archivo rastreado(untrack a tracked file), puedes hacer lo siguiente:
 
 ```sh
-
+git rm --cached -r com/wiley/realworldjava/gitplay/
 ```
 
-En nuestro caso utilizaremos el siguiente .gitignorearchivo:
+En nuestro caso utilizaremos el siguiente archivo **`.gitignore`**:
 
+```sh
 # Ignore the entire .idea directory
 .idea
  
 # Ignore the output directory. 
 out/
-Recuerde preparar y confirmar esto para que Git lo rastree.
-
-```sh
-
 ```
 
-El addcomando sirve para preparar el archivo. El commitcomando sirve para registrarlo. La -mbandera especifica un mensaje de registro que se asociará con esa confirmación.
-
-Como todos los buenos desarrolladores, no queremos enviar nuestro código hasta que esté terminado y probado. Sin embargo, queremos hacer un seguimiento de nuestro código a medida que evoluciona. ¿Cómo podemos enviar nuestros cambios al repositorio remoto sin afectar a otros desarrolladores? La respuesta es crear una rama y realizar los cambios en ella. Luego, puede realizar cambios en esa rama, o incluso colaborar con otros en esa rama, sin afectar a la rama principal.
-
-Llamemos a esta rama refactoring1 . El comando para ello se muestra aquí:
+Recuerde preparar(stage) y confirmar(commit) esto para que Git lo rastree(track it).
 
 ```sh
-
+git add .gitignore
+git commit -m "Added .gitignore"
 ```
 
-Esto creará una nueva rama llamada refactoring1 a partir de la confirmación actual. Si desea eliminar una rama, puede hacer lo siguiente (pero por ahora, no la elimine):
+El comando **`add`** sirve para preparar(to stage) el archivo. El comando **`commit`** sirve para registrarlo(to check it in). La bandera(flag) **`-m`** especifica un mensaje de registro(log) que se asociará con ese commit.
+
+***Como todos los buenos desarrolladores, no queremos enviar nuestro código hasta que esté terminado y probado***. Sin embargo, queremos hacer un seguimiento de nuestro código a medida que evoluciona. ¿Cómo podemos enviar nuestros cambios al repositorio remoto sin afectar a otros desarrolladores? La respuesta es crear una rama y realizar los cambios en ella. Luego, puede realizar cambios en esa rama, o incluso colaborar con otros en esa rama, sin afectar a la rama principal.
+
+Llamemos a esta rama **`refactoring1`**. El comando para ello se muestra aquí:
 
 ```sh
-
+git branch refactoring1
 ```
 
-Luego, para verificar la sucursal, haga lo siguiente:
+Esto creará una nueva rama llamada **`refactoring1`** a partir del commit actual. Si desea eliminar una rama, puede hacer lo siguiente (pero por ahora, no la elimine):
 
 ```sh
-
+git branch -d refactoring1
 ```
 
-Puedes crear y extraer la rama en una sola instrucción usando esto:
+Luego, para verificar la rama(check out the branch), haga lo siguiente:
 
 ```sh
-
+git checkout refactoring1
 ```
 
-La -bbandera indica la checkoutinstrucción para crear la rama y luego verificarla. Más tarde, Git agregó una switchinstrucción con un nombre quizás más indicativo.
-
-Para cambiar a una rama existente mediante el conmutador, utilice lo siguiente:
+Puedes crear y extraer la rama(create and check out) en una sola instrucción usando esto:
 
 ```sh
-
+git checkout -b refactoring1
 ```
 
-Usando switch, la sintaxis para crear y extraer una nueva rama es la siguiente:
+La bandera **`-b`** indica la instrucción **`checkout`** para crear la rama y luego verificarla. Más tarde, Git agregó una instrucción **`switch`** con un nombre quizás más indicativo.
+
+Para cambiar a una rama existente mediante el switch, utilice lo siguiente:
 
 ```sh
-
+git switch refactoring1
 ```
 
-Para enumerar los nombres de todas las ramas conocidas en su computadora (la rama actual aparece *resaltada con un color), utilice lo siguiente:
+Usando **`switch`**, la sintaxis para crear y extraer una nueva rama es la siguiente:
 
 ```sh
+git switch -c refactoring1
+```
 
+Para listar los nombres de todas las ramas conocidas en su computadora (la rama actual aparece resaltada con un **` *`** y un color), utilice lo siguiente:
+
+```sh
+git branch
 ```
 
 muestra:
 
+```sh
 * refactoring1
   main
-Si también desea enumerar las ramas remotas, utilice esto:
+```
+
+Si también desea listar las ramas remotas, utilice esto:
 
 ```sh
-
+git branch -a
 ```
 
 A continuación, debe realizar algunos cambios y modificar algunos archivos. Modifiquemos nuestro método principal agregando las líneas 19 a 22 como se muestra en el Listado 3.2 .
@@ -384,90 +389,105 @@ A continuación, debe realizar algunos cambios y modificar algunos archivos. Mod
 **LISTADO 3.2: ARCHIVO MODIFICADO**
 
 ```java
+14: public static void main(String[] args) {
+15:    GitDemo demo = new GitDemo("Hello, Git!");
+16:
+17:    // Display the initial description
+18:    demo.displayDescription();      // Make some changes and commit
+19:
+20:    // Make more changes and commit
+21:    demo.description = "Version control with Git is fun and easy.";
+22:    demo.displayDescription();
+23: }
 ```
 
-Ahora, confirme esos cambios. Para mayor comodidad, primero vayamos cdal directorio que contiene el archivo.
+Ahora, confirme esos cambios. Para mayor comodidad, primero vayamos **`cd`** al directorio que contiene el archivo.
 
 ```sh
-
+cd ./main/java/com/wiley/realworldjava/gitplay
 ```
 
-Luego, preparemos nuestros cambios usando esto:
+Luego, preparemos(stage) nuestros cambios usando esto:
 
 ```sh
-
+git add GitDemo.java
 ```
 
-Observa el git status, que muestra lo siguiente:
+Observa el **`git status`**, que muestra lo siguiente:
 
+```sh
 On branch refactoring1
  
 Changes to be committed:
   (use "git restore --staged <file>…" to unstage)
         modified:   GitDemo.java
+```
+
 y confirmamos nuestros cambios en la rama actual:
 
 ```sh
-
+git commit -m "Added a line to GitDemo"
 ```
 
-Esos cambios ahora están confirmados en tu repositorio local, y puedes ver las confirmaciones, junto con los archivos que contienen y sus mensajes de confirmación, usando cualquier variación del git logcomando (¡permanece atento!).
+Esos cambios ahora están committed en tu repositorio local, y puedes ver los commits, junto con los archivos que contienen y sus mensajes de commit, usando cualquier variación del comando **`git log`** (¡permanece atento!).
 
-Por supuesto, desea compartir esos cambios con el resto del equipo de desarrollo. El proceso para ello es enviarlos al repositorio remoto. (Puede haber cero o más repositorios remotos con nombre y, de manera predeterminada, el repositorio remoto se llama origin ).
+Por supuesto, desea compartir esos cambios con el resto del equipo de desarrollo. El proceso para ello es enviarlos al repositorio remoto. (Puede haber cero o más repositorios remotos con nombre y, de manera predeterminada, el repositorio remoto se llama **`origin`** ).
 
 ```sh
-
+git push origin refactoring1
 ```
 
-Esto significa enviar cualquier confirmación desde su repositorio local a la máquina remota ( origin por defecto) a la rama llamada main . (Más información sobre ramificaciones próximamente).
+Esto significa ***enviar(push)*** cualquier commits desde su repositorio local a la máquina remota ( ***origin*** por defecto) a la rama llamada ***main***. (Más información sobre ramificaciones próximamente).
 
-Para enviar el código a la rama actual y al origen desde el que lo clonaste, puedes prescindir de la formalidad y simplemente llamar a lo siguiente:
+Para enviar(push) el código a la rama actual y al origen desde el que lo clonaste, puedes prescindir de la formalidad y simplemente llamar a lo siguiente:
 
 ```sh
-
+git push
 ```
 
 Para ver la URL del origen, utiliza esto:
 
 ```sh
-
+git remote get-url origin
 ```
 
-Para establecer la URL o el origen o nombrar un nuevo control remoto, como other-machine, simplemente use esto:
+Para establecer la URL o el origen o nombrar un nuevo control remoto, como **`other-machine`**, simplemente use esto:
 
 ```sh
-
+git remote add other-machine <url>
 ```
 
-También puede obtener una lista de los controles remotos actuales y las URL asociadas a través de esto:
+También puede obtener una lista de los current remotes actuales y las URL asociadas a través de esto:
 
 ```sh
-
+git remote -v
 ```
 
-Esto mostrará una lista de URL de búsqueda y envío para cada repositorio remoto. Las URL de búsqueda y envío pueden ser las mismas, pero no tienen por qué serlo. Por ejemplo, si su red requiere protocolos diferentes para enviar y buscar, serán diferentes. O si tiene repositorios reflejados, donde envía a un repositorio "central" pero extrae de un nodo "radial" en su región, las URL de búsqueda y envío serán diferentes.
+Esto mostrará una lista de URL de ***fetch*** y ***push*** para cada repositorio remoto. Las URL de ***fetch*** y ***push*** pueden ser las mismas, pero no tienen por qué serlo. Por ejemplo, si su red requiere protocolos diferentes para enviar y buscar(pushing and fetching), serán diferentes. O si tiene repositorios reflejados(mirrored repos), donde envía(push) a un repositorio "central"(hub) pero extrae(pull) de un nodo "radial"(spoke) en su región, las URL de búsqueda y envío serán diferentes.
 
-Obtener, fusionar y extraer
-El git fetchcomando obtendrá la rama especificada del servidor remoto especificado. Esto la hace disponible en su máquina local, pero no la integra con el código extraído, donde el origen y el nombre de la rama son opcionales.
+### Fetching, Merging y Pulling
+
+El comando **`git fetch`** obtendrá(fetch) la rama especificada del servidor remoto especificado. Esto la hace disponible en su máquina local, pero no la integra con el código extraído(checked-out), donde el origen(origin ) y el nombre de la rama son opcionales.
 
 ```sh
-
+git fetch origin my-branch
 ```
 
-El git mergecomando fusionará una rama de origen especificada de un remoto especificado en la rama actualmente extraída. Esto tiene el efecto de combinar todas las confirmaciones de la rama de origen en la rama actualmente extraída.Rama extraída. En el siguiente ejemplo, estás ordenando a Git que fusione una rama llamada my-branch que se encuentra en el origen remoto con la rama extraída actualmente en tu máquina.
+El comando **`git merge`** fusionará(merge) una source branch especificada de un branch remota especificada en la rama actualmente extraída(checked-out branch). Esto tiene el efecto de combinar todos los commits de la source branch en la rama actualmente extraída(checked-out branch). En el siguiente ejemplo, estás ordenando a Git que fusione una rama llamada **`my-branch`** que se encuentra en el remote origin con la rama extraída actualmente(currently checked-out branch) en tu máquina.
 
 ```sh
-
+git merge origin my-branch
 ```
 
-Puedes omitirlo originy Git fusionará la rama especificada del repositorio local en la rama actualmente extraída.
+Puedes omitir **`origin`** y Git fusionará la rama especificada del repositorio local en la rama actualmente extraída(currently checked-out branch).
 
-Es común tener una rama de integración , también conocida como rama de desarrollo , que es esencialmente una rama general compartida por todo el equipo de desarrollo. Esta rama se usa generalmente para preparar funciones que se planea incluir en la próxima versión. (Consulta la sección “Uso de Gitflow para colaboración” más adelante en este capítulo para obtener una explicación detallada).
+Es común tener una rama de *integración*, también conocida como rama de desarrollo ***develop***, que es esencialmente una rama general compartida por todo el equipo de desarrollo. Esta rama se usa generalmente para preparar funciones que se planea incluir en la próxima versión. (Consulta la sección “Uso de Gitflow para colaboración” más adelante en este capítulo para obtener una explicación detallada).
 
-Al fusionarse con developotras ramas compartidas, es una buena práctica utilizar el no-ffinterruptor “sin avance rápido” ( ).
+Al fusionarse con **`develop`** otras ramas compartidas, es una buena práctica utilizar el switch “no fast-forward” (**`no-ff`**) 
 
 ```sh
-
+git checkout develop
+git merge –no-ff my-branch
 ```
 
 De forma predeterminada, las fusiones se realizan con avance rápido . Eso significa que Git analiza todas las confirmaciones de la rama de origen entre el momento en que se creó esa rama y ahora. Si no hay conflictos con el estado actual de la rama, esas confirmaciones se moverán al final de la rama de destino. Por el contrario, si realiza una fusión sin avance rápido , la rama en la que ha estado realizando sus confirmaciones permanecerá como una rama paralela separada, con una única confirmación de fusión para unirlas. Esto facilita la identificación de las confirmaciones que comprenden una característica determinada. La Figura 3.5 ilustra este flujo.
