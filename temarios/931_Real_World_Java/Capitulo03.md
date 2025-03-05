@@ -768,47 +768,84 @@ Estas son las definiciones placeholder que puedes pasar al formateador. Se reemp
 
 ### Rebasing
 
+Cuando fusionas ramas(merge branches), Git crea un extra “merge” commit (confirmación de “fusión”) adicional que contiene los resultados del merge. Esto es útil en situaciones en las que quieres destacar los commits que dieron lugar a esta branch. Por otro lado, esto tiende a saturar el historial de commits con commits adicionales.
 
-AQUIIIIIIIIIII
+Si desea omitir esa extra merge commit, existe una solución alternativa en algunas situaciones: realizar un ***rebase*** en lugar de un merge. Un rebase es como un merge, excepto que mueve sus commits al final de la target branch, en lugar de crear una rama paralela y crear un merge commit.
 
+Para comprenderlo, es necesario experimentarlo, así que vamos a crear un ejemplo. Vamos a crear una feature branch, realizar algunos commits y comparar los resultados de una merge versus a rebase.
 
-Cuando fusionas ramas(merge branches), Git crea una confirmación de “fusión” adicional que contiene los resultados de la fusión. Esto es útil en situaciones en las que quieres destacar las confirmaciones que dieron lugar a esta rama. Por otro lado, esto tiende a saturar el historial de confirmaciones con confirmaciones adicionales.
+1. Crea una feature branch desde **`refactoring3`** y llámala **`feature`**.
 
-Si desea omitir esa confirmación de fusión adicional, existe una solución alternativa en algunas situaciones: realizar una rebase en lugar de una fusión. Una rebase es como una fusión, excepto que mueve sus confirmaciones al final de la rama de destino, en lugar de crear una rama paralela y crear una confirmación de fusión.
-
-Para comprenderlo, es necesario experimentarlo, así que vamos a crear un ejemplo. Vamos a crear una rama de funciones, realizar algunas confirmaciones y comparar los resultados de una fusión con los de una reorganización.
-
-Crea una rama de características desde refactoring3y llámala feature.
-git switch -c feature
-Realice algunas confirmaciones en la featurerama: agregue las líneas 23 a 26 y luego confirme.
+   ```sh
+   git switch -c feature
+   ```
+   
+2. Realice algunos commits en la rama **`feature`**: agregue las líneas 23 a 26 y luego commit.
 
 ```java
+20: // Make more changes and commit
+21: demo.description = "Git is fun and easy, and very powerful.";
+22: demo.displayDescription();
+23:
+24: // Make another change
+25: demo.description = "Changes for rebase";
+26: demo.displayDescription();
 ```
 
-y luego comprometerse.
+y luego commit.
 
+```sh
 git commit -am "changes to feature for rebase"
+```
+
 Realice algunos cambios más agregando las líneas 27 a 30.
 
 ```java
+24:    // Make another change
+25:    demo.description = "Change1 for rebase";
+26:    demo.displayDescription();
+27:
+28:    // And yet another change
+29:    demo.description = "Change2 for rebase";
+30:    demo.displayDescription();
+31:}
 ```
-y luego confirma:
 
-git commit -am "more changes to feature for rebase"
-Volver a refactoring3:
-git switch refactoring3
-Realice algunas confirmaciones en la refactoring3rama y agregue las líneas 17 a 19.
-
-```java
-```
-
-y luego confirma:
+y luego commit:
 
 ```sh
-
+git commit -am "more changes to feature for rebase"
 ```
 
-SUGERENCIA  Si no incluye un -m mensaje de confirmación, aparecerá una ventana del editor VI y le solicitará un mensaje de confirmación. Si eso sucede, presione i para ingresar al modo de edición y escriba su mensaje; luego presione Enter para comenzar una nueva línea. Cuando haya terminado, presione Esc para salir del modo de edición, escriba :w para escribir su mensaje en la confirmación y escriba :q para salir. Esa es la edición VI básica, con la que los usuarios de Unix/Linux están íntimamente familiarizados.
+4. Volver a **`refactoring3`**:
+
+```sh
+git switch refactoring3
+```
+
+5. Realice algunas commits en la rama **`refactoring3`** y agregue las líneas 17 a 19.
+
+```java
+14: public static void main(String[] args) {
+15:    GitDemo demo = new GitDemo("Hello, Git!");
+16:
+17:    demo.description = "Continuing on branch";
+18:    demo.displayDescription();
+19:
+```
+
+y luego commit:
+
+```sh
+git commit -am "more changes to refactoring3"
+```
+
+<hr>
+
+AQUIIIIIIIIIIIIIIII
+
+
+**TIP** Si no incluye un commit message **`-m`**, aparecerá una ventana del editor VI y le solicitará un mensaje de confirmación. Si eso sucede, presione i para ingresar al modo de edición y escriba su mensaje; luego presione Enter para comenzar una nueva línea. Cuando haya terminado, presione Esc para salir del modo de edición, escriba :w para escribir su mensaje en la confirmación y escriba :q para salir. Esa es la edición VI básica, con la que los usuarios de Unix/Linux están íntimamente familiarizados.
 
 Copiar rama refactoring3a refactoring3a.
 git branch -c refactoring3a
