@@ -490,136 +490,225 @@ git checkout develop
 git merge –no-ff my-branch
 ```
 
-De forma predeterminada, las fusiones se realizan con avance rápido . Eso significa que Git analiza todas las confirmaciones de la rama de origen entre el momento en que se creó esa rama y ahora. Si no hay conflictos con el estado actual de la rama, esas confirmaciones se moverán al final de la rama de destino. Por el contrario, si realiza una fusión sin avance rápido , la rama en la que ha estado realizando sus confirmaciones permanecerá como una rama paralela separada, con una única confirmación de fusión para unirlas. Esto facilita la identificación de las confirmaciones que comprenden una característica determinada. La Figura 3.5 ilustra este flujo.
+De forma predeterminada, los merges se realizan con ***fast-forwarded - avance rápido***. Eso significa que Git analiza todos los commits de la source branch entre el momento en que se creó esa rama y ahora. Si no hay conflictos con el estado actual de la rama, esos commits se moverán al final de la rama de destino(target). Por el contrario, si realiza un merge sin ***no-ff - avance rápido***, la rama en la que ha estado realizando sus commits permanecerá como una rama paralela separada, con un único merge commit para unirlas(to join). Esto facilita la identificación de los commits que comprenden una característica determinada. La Figura 3.5 ilustra este flujo.
 
 <img width="814" alt="image" src="https://github.com/user-attachments/assets/15a3ddca-a74c-4ee2-b6cb-f60f36b2b020" />
 
 **FIGURA 3.5: Fusión de Git sin y con avance rápido**
 
-El git pullcomando combina git fetchy git mergeen un solo comando, extrayendo la rama del servidor remoto y fusionándola con la rama actual.
+El comando **`git pull`** combina **`git fetch`** y **`git merge`** en un solo comando, extrayendo(pulling) la rama del servidor remoto y fusionándola(merging) con la rama actual.
 
 ```sh
-
+git pull origin my-branch
 ```
 
-El --no-ffinterruptor no se puede usar directamente en una operación de extracción, pero puedes indicarle a Git que lo use de manera predeterminada en no-fflas extracciones configurando la variable global pull-ff.
+El switch **`--no-ff`** no se puede usar directamente en una operación pull(extracción), pero puedes indicarle a Git que lo use de manera predeterminada **`no-ff`** en pulls(extracciones) configurando la variable global **`pull-ff`**.
 
 ```sh
-
+git config --global pull.ff only
 ```
 
-Jugando con ramas
-A esta altura, ya has modificado la GitDemoclase y has confirmado los cambios. Ahora viene la magia de Git.
+### Jugando con Branches
 
-Volviendo a la línea de comandos, volvamos a la rama principal.
+A esta altura, ya has modificado la clase **`GitDemo`** y has confirmado(committed) los cambios. Ahora viene la magia de Git.
+
+Volviendo a la línea de comandos, volvamos a la main branch.
 
 ```sh
-
+git switch main
 ```
 
-Ahora mira la GitDemoclase, pero no te asustes. El código nuevo que agregaste antes ya no está allí, porque esos cambios de código están en la rama refactoring1, pero tú estás en la rama principal .
+Ahora mira la clase **`GitDemo`**, pero no te asustes. El código nuevo que agregaste antes ya no está allí, porque esos cambios de código están en la rama **`refactoring1`**, pero tú estás en la main branch.
 
-Vamos a crear una nueva rama llamada refactoring2 .
+Vamos a crear una nueva rama llamada ***refactoring2***.
 
 ```sh
-
+git switch -c refactoring2
 ```
 
-Ahora es una réplica de la clase principal . Ahora modifique la GitDemoclase en una parte diferente del código agregando el método setAndDisplayDescription.
+Ahora es una réplica de ***main***. Ahora modifique la clase **`GitDemo`** en una parte diferente del código agregando el método **`setAndDisplayDescription`**.
 
 ```java
-
+10: public void displayDescription() {
+11:    System.out.println("Description: " + description);
+12: }
+13:
+14: public void setAndDisplayDescription(String description) {
+15:    this.description = description;
+16:    System.out.println("Description: " + description);
+17: }
 ```
 
-Ahora hazlo.
+Ahora commit.
 
 ```sh
-
+git commit -am "added setAndDisplayDescription"
 ```
 
-Aquí viene la parte divertida. ¿Qué sucede cuando fusionamos los cambios de la primera rama con los cambios de la segunda rama? (Puede aparecer una ventana de Git con un mensaje de confirmación predeterminado; puedes dejar ese mensaje y escribir :qcomo antes).
+Aquí viene la parte divertida. ¿Qué sucede cuando fusionamos(merge) los cambios de la primera rama con los cambios de la segunda rama? (Puede aparecer una ventana de Git con un mensaje de confirmación predeterminado; puedes dejar ese mensaje y escribir **`:q`** como antes).
 
 ```sh
-
+git merge refactoring1 
 ```
 
-Git hace un trabajo fabuloso al fusionar la rama refactoring1 en refactoring2 , produciendo una clase híbrida:
+Git hace un trabajo fabuloso al fusionar(merging) la rama **`refactoring1`** en **`refactoring2`**, produciendo una clase híbrida:
 
 ```java
+1:  package com.wiley.realworldjava.gitplay;
+2:
+3:  public class GitDemo {
+4:     private String description;
+5:
+6:     public GitDemo(String description) {
+7:        this.description = description;
+8:     }
+9:
+10:    public void displayDescription() {
+11:       System.out.println("Description: " + description);
+12:    }
+13:
+14:    public void setAndDisplayDescription(String description) {
+15:       this.description = description;
+16:       System.out.println("Description: " + description);
+17:    }
+18:
+19:    public static void main(String[] args) {
+20:       GitDemo demo = new GitDemo("Hello, Git!");
+21:
+22:       // Display the initial description
+23:       demo.displayDescription();
+24:
+25:       // Make more changes and commit
+26:       demo.description = "Version control with Git is fun and easy.";
+27:       demo.displayDescription();
+28:    }
+29: }
 ```
 
-Resolución de conflictos de fusión
+### Resolución Merge Conflicts
+
 Ese es el camino correcto, donde varios desarrolladores trabajan en el mismo conjunto de archivos y tú haces cambios en un lugar de un archivo, mientras que otra persona hizo cambios en otro lugar del mismo archivo o incluso en archivos diferentes. Cuando intentas fusionar sus cambios con los tuyos, Git hace un gran trabajo al producir un resultado híbrido.
 
-Pero habrá ocasiones (especialmente cuando dejes pasar muchos días antes de fusionar) en las que tú y ellos hayan realizado cambios en la misma área general del archivo, y Git no pueda resolver la fusión. En tales casos, se produce un conflicto de fusión . Cuando eso sucede, Git le pedirá a la persona que realizó la fusión que resuelva el conflicto manualmente y continúe. La resolución de un conflicto se puede hacer manualmente, pero es mucho más fácil contar con la ayuda del IDE. Todos los IDE principales tienen un gran soporte para la resolución manual de conflictos en paralelo; más sobre esto más adelante.
+Pero habrá ocasiones (especialmente cuando dejes pasar muchos días antes de merging) en las que tú y ellos hayan realizado cambios en la misma área general del archivo, y Git no pueda resolver el merge. En tales casos, se produce un ***merge-conflict***. Cuando eso sucede, Git le pedirá a la persona que realizó la fusión que resuelva el conflicto manualmente y continúe. La resolución de un conflicto se puede hacer manualmente, pero es mucho más fácil contar con la ayuda del IDE. Todos los IDE principales tienen un gran soporte para la resolución manual de conflictos en paralelo; más sobre esto más adelante.
 
-Vamos a crear una nueva rama de la rama principal, llamada refactoring3 .
+Vamos a crear una nueva rama de la rama principal, llamada **`refactoring3`**.
 
 ```sh
-
+git switch main
+git switch -c refactoring3
 ```
 
-La nueva rama refactoring3 contiene la versión original del GitDemoListado 3.1 . Agreguemos algo de código nuevo (líneas 19 a 22).
+La nueva rama **`refactoring3`** contiene la versión original de **`GitDemo`** Listado 3.1 . Agreguemos algo de código nuevo (líneas 19 a 22).
 
 ```java
+14: public static void main(String[] args) {
+15:    GitDemo demo = new GitDemo("Hello, Git!");
+16:
+17:    // Display the initial description
+18:    demo.displayDescription();
+19:
+20:    // Make more changes and commit
+21:    demo.description = "Git is powerful.";
+22:    demo.displayDescription();
+23: }
 ```
 
-Y comprometerse a ello.
+Y hacer commit.
 
 ```sh
-
+git add GitDemo.java
+git commit -m "added conflicting code"
 ```
 
-Ahora intentemos fusionar refactoring1 ( Listado 3.2 ) en nuestra rama recientemente modificada refactoring3 :
+Ahora intentemos mergear **`refactoring1`** ( Listado 3.2 ) en nuestra rama recientemente modificada **`refactoring3`**:
 
 ```sh
-
+git merge refactoring1
 ```
 
 El resultado es un mensaje:
 
+```sh
 Automatic merge failed; fix conflicts and then commit the result.
+```
+
 Mirando el código, encontramos esta horrible mezcla:
 
 ```java
+14: public static void main(String[] args) {
+15:    GitDemo demo = new GitDemo("Hello, Git!");
+16:
+17:    // Display the initial description
+18:    demo.displayDescription();
+19: <<<<<<< HEAD
+20:    // Make more changes and commit
+21:    demo.description = "Git is powerful.";
+22: =======
+23:
+24:    // Make more changes and commit
+25:    demo.description = "Version control with Git is fun and easy.";
+26: >>>>>>> refactoring1
+27:    demo.displayDescription();
+28: }
 ```
 
-Puede ver que el código que sigue a <<<<<<< HEADy hasta =======es el código de la rama actual, y el código que sigue a ese, hasta >>>>>>> refactoring1, es de la rama refactoring1 .
+Puede ver que el código que sigue a **`<<<<<<< HEAD`** y hasta **`=======`** es el código de la rama actual, y el código que sigue a ese, hasta **`>>>>>>> refactoring1`**, es de la rama **`refactoring1`**.
 
-Cuando se produce un conflicto de fusión como este, hay dos opciones: cancelar la fusión o solucionarlo. Para cancelar una fusión después de un conflicto y restaurar todo a como estaba antes de la fusión, utilice lo siguiente:
-
-git merge --abort
-Inténtalo y, ¡listo!, ¡se restaurará el código original! Por otro lado, puedes optar por solucionarlo: elimina las líneas <<<<<<< HEAD, =======y >>>>>>> refactoring1y ajusta el código a tu gusto.
-
-```java
-```
-
-Luego, llame git addpara marcar el conflicto como resuelto y llame git commitpara indicarle a Git que continúe con la fusión.
-
-git add GitDemo.java
-git commit -m "resolved conflict"
-¡Viva la paz en la Tierra!
-
-Uso de solicitudes de extracción/combinación
-Cuando se trabaja en un entorno colaborativo, especialmente en un gran proyecto de código abierto, las empresas asignarán acceso de lectura al equipo más grande y reservarán el acceso de escritura solo para los "colaboradores". En tales casos, el equipo podría tener la capacidad de crear ramas, pero podría no tener la capacidad de fusionarse en las ramas principales compartidas, como main y development . O en casos más extremos, el equipo tendría que clonar el repositorio y realizar todos los cambios en el clon.
-
-En este tipo de empresas, cuando se quieren incorporar los cambios a las ramas principales del repositorio principal, es necesario solicitarlo a un administrador mediante una solicitud de incorporación de cambios. Para crear una solicitud de incorporación de cambios, se debe iniciar sesión en el proveedor y elegir la opción para crear una nueva solicitud de incorporación de cambios (o una solicitud de combinación en GitLab).
-
-CONSEJO  Las solicitudes de extracción y las solicitudes de combinación son simplemente nombres diferentes para, en esencia, lo mismo. GitHub y Bitbucket utilizan el término solicitud de extracción, mientras que GitLab utiliza el término solicitud de combinación. Para los fines de este libro, utilizaremos el término solicitud de extracción, a menudo abreviado como PR.
-
-Uso del registro de Git
-Vimos que el git logcomando enumera todas las confirmaciones en la rama actual.
-
-Puedes agregar varias opciones al git logcomando para controlar aspectos como el rango de confirmaciones, opciones de formato, opciones de gráficos, etc. No entraremos en detalles aquí; consulta la documentación de Git en https://git-scm.com/docs/git-log.
-
-Una opción que mencionaremos aquí es la opción apropiadamente nombrada --oneline, que muestra una vista concisa del registro de una confirmación por línea. Cuando agrega la --graphopción, también muestra una vista gráfica de sus ramas.
+Cuando se produce un merge conflict como este, hay dos opciones: cancelar el merge o solucionarlo. Para cancelar un merge después de un conflicto y restaurar todo a como estaba antes del merge, utilice lo siguiente:
 
 ```sh
+git merge --abort
+```
 
+Inténtalo y, ¡listo!, ¡se restaurará el código original! Por otro lado, puedes optar por solucionarlo: elimina las líneas **`<<<<<<< HEAD`**, **`=======`** y **`>>>>>>> refactoring1`** y ajusta el código a tu gusto.
+
+```java
+14: public static void main(String[] args) {
+15:    GitDemo demo = new GitDemo("Hello, Git!");
+16:
+17:    // Display the initial description
+18:    demo.displayDescription();
+19:  
+20:    // Make more changes and commit
+21:    demo.description = "Git is fun and easy, and very powerful.";
+22:    demo.displayDescription();
+23: }
+```
+
+Luego, llame **`git add`** para marcar el conflicto como resuelto y llame **`git commit`** para indicarle a Git que continúe con el merge.
+
+```sh
+git add GitDemo.java
+git commit -m "resolved conflict"
+```
+
+¡Viva la paz en la Tierra!
+
+### Uso de Pull/Merge Requests
+
+Cuando se trabaja en un entorno colaborativo, especialmente en un gran proyecto de código abierto, las empresas asignarán acceso de lectura al equipo más grande y reservarán el acceso de escritura solo para los "colaboradores - committers". En tales casos, el equipo podría tener la capacidad de crear ramas, pero podría no tener la capacidad de fusionarse en las ramas principales compartidas, como **`main`** y **`development`**. O en casos más extremos, el equipo tendría que clonar el repositorio y realizar todos los cambios en el clon.
+
+En este tipo de empresas, cuando se quieren incorporar los cambios a las ramas principales del repositorio principal, es necesario solicitarlo a un administrador mediante un ***pull request - solicitud de incorporación*** de cambios. Para crear un pull request de cambios, se debe iniciar sesión en el proveedor y elegir la opción para crear una nueva pull request de cambios (o una  merge request en GitLab).
+
+<hr>
+
+**TIP**: Los Pull requests y merge requests son simplemente nombres diferentes para, en esencia, lo mismo. GitHub y Bitbucket utilizan el término pull request, mientras que GitLab utiliza el término merge request. Para los fines de este libro, utilizaremos el término pull request, a menudo abreviado como ***PR***.
+
+### Uso del Git Log
+
+Vimos que el comando **`git log`** lista todos los commits en la rama actual.
+
+Puedes agregar varias opciones al comando **`git log`** para controlar aspectos como el range of commits, formatting options, graphing options, etc. No entraremos en detalles aquí; consulta la documentación de Git en https://git-scm.com/docs/git-log.
+
+Una opción que mencionaremos aquí es la opción apropiadamente nombrada **`--oneline`**, que muestra una vista concisa del one-commit-per-line por línea. Cuando agrega la opción **`--graph`**, también muestra una vista gráfica de sus ramas.
+
+```sh
+git log --graph --oneline
 ```
 
 A continuación se muestra un historial de confirmaciones para la rama actual:
 
+```sh
 *   00cdd10 (HEAD -> refactoring3) Merge branch 'refactoring1' into refactoring3
 |\
 | * f162588 (refactoring1) added a display
@@ -630,8 +719,11 @@ A continuación se muestra un historial de confirmaciones para la rama actual:
 * 55de6c6 (origin/main, origin/HEAD) added detail
 * 53753a2 renaming
 * ed46f26 Initial commit
-También puede mostrar el historial de confirmaciones de cualquier rama específica agregando el nombre de la rama.
+```
 
+También puede mostrar el historial de commit de cualquier rama específica agregando el nombre de la rama.
+
+```sh
 git log --graph --oneline refactoring1 
 * f162588 (refactoring1) added a display
 * 822d223 (main) Formatting
@@ -639,8 +731,11 @@ git log --graph --oneline refactoring1
 * 53753a2 renaming
 * ed46f26 Initial commit
 * 283d86f Initial commit
-Para ver todas las ramas, utilice la --allopción . También puede formatear la salida, como en el siguiente ejemplo:
+```
 
+Para ver todas las ramas, utilice la opción **`--all`**. También puede formatear la salida, como en el siguiente ejemplo:
+
+```sh
 git log --graph --oneline --all --pretty=format:'%h %an %ar - %s'
 *   00cdd10 vgrazi 2 days ago - Merge branch 'refactoring1' into refactoring3
 |\
@@ -662,14 +757,22 @@ git log --graph --oneline --all --pretty=format:'%h %an %ar - %s'
 * 53753a2 vgrazi 2 days ago - renaming
 * ed46f26 vgrazi 2 days ago - Initial commit
 * 283d86f realworldjava 7 days ago - Initial commit
-Estas son las definiciones de marcadores de posición que puedes pasar al formateador. Se reemplazarán con información de cada confirmación.
+```
 
-%h: Hash de confirmación abreviado
-%an: Nombre del autor
-%ar:Autor fecha, relativa
-%s: Asunto de confirmación
-Rebase
-Cuando fusionas ramas, Git crea una confirmación de “fusión” adicional que contiene los resultados de la fusión. Esto es útil en situaciones en las que quieres destacar las confirmaciones que dieron lugar a esta rama. Por otro lado, esto tiende a saturar el historial de confirmaciones con confirmaciones adicionales.
+Estas son las definiciones placeholder que puedes pasar al formateador. Se reemplazarán con información de cada commit.
+
+* **`%h`**: Abbreviated commit hash
+* **`%an`**: Author name
+* **`%ar`**: Author date, relative
+* **`%s`**: Commit subject
+
+### Rebasing
+
+
+AQUIIIIIIIIIII
+
+
+Cuando fusionas ramas(merge branches), Git crea una confirmación de “fusión” adicional que contiene los resultados de la fusión. Esto es útil en situaciones en las que quieres destacar las confirmaciones que dieron lugar a esta rama. Por otro lado, esto tiende a saturar el historial de confirmaciones con confirmaciones adicionales.
 
 Si desea omitir esa confirmación de fusión adicional, existe una solución alternativa en algunas situaciones: realizar una rebase en lugar de una fusión. Una rebase es como una fusión, excepto que mueve sus confirmaciones al final de la rama de destino, en lugar de crear una rama paralela y crear una confirmación de fusión.
 
