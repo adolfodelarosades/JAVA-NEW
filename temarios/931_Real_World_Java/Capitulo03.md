@@ -842,14 +842,17 @@ git commit -am "more changes to refactoring3"
 
 <hr>
 
-AQUIIIIIIIIIIIIIIII
+**TIP** Si no incluye un commit message **`-m`**, aparecerá una ventana del editor VI y le solicitará un mensaje de confirmación. Si eso sucede, presione **`i`** para ingresar al modo de edición y escriba su mensaje; luego presione Enter para comenzar una nueva línea. Cuando haya terminado, presione Esc para salir del modo de edición, escriba **`:w`** para escribir su mensaje en el commit y escriba **`:q`** para salir. Esa es la edición VI básica, con la que los usuarios de Unix/Linux están íntimamente familiarizados.
 
+<hr>
 
-**TIP** Si no incluye un commit message **`-m`**, aparecerá una ventana del editor VI y le solicitará un mensaje de confirmación. Si eso sucede, presione i para ingresar al modo de edición y escriba su mensaje; luego presione Enter para comenzar una nueva línea. Cuando haya terminado, presione Esc para salir del modo de edición, escriba :w para escribir su mensaje en la confirmación y escriba :q para salir. Esa es la edición VI básica, con la que los usuarios de Unix/Linux están íntimamente familiarizados.
+6. Copiar la rama **`refactoring3`** a **`refactoring3a`**.
 
-Copiar rama refactoring3a refactoring3a.
-git branch -c refactoring3a
-Fusionar featureen refactoring3a(como en la última fusión, puede aparecer una ventana de Git con un mensaje de confirmación predeterminado; puedes dejar ese mensaje y escribir :qcomo antes).
+   ```sh
+   git branch -c refactoring3a
+   ```
+
+7. Merge **`feature`** en**`refactoring3a`**(como en la última fusión, puede aparecer una ventana de Git con un mensaje de confirmación predeterminado; puedes dejar ese mensaje y escribir :qcomo antes).
 git merge feature
 Cambiar a refactoring3.
 git switch refactoring3
