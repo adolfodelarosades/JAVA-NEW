@@ -776,9 +776,9 @@ Para comprenderlo, es necesario experimentarlo, así que vamos a crear un ejempl
 
 1. Crea una feature branch desde **`refactoring3`** y llámala **`feature`**.
 
-   ```sh
-   git switch -c feature
-   ```
+```sh
+git switch -c feature
+```
    
 2. Realice algunos commits en la rama **`feature`**: agregue las líneas 23 a 26 y luego commit.
 
@@ -842,34 +842,54 @@ git commit -am "more changes to refactoring3"
 
 <hr>
 
-**TIP** Si no incluye un commit message **`-m`**, aparecerá una ventana del editor VI y le solicitará un mensaje de confirmación. Si eso sucede, presione **`i`** para ingresar al modo de edición y escriba su mensaje; luego presione Enter para comenzar una nueva línea. Cuando haya terminado, presione Esc para salir del modo de edición, escriba **`:w`** para escribir su mensaje en el commit y escriba **`:q`** para salir. Esa es la edición VI básica, con la que los usuarios de Unix/Linux están íntimamente familiarizados.
+**TIP**: Si no incluye un commit message **`-m`**, aparecerá una ventana del editor VI y le solicitará un mensaje de confirmación. Si eso sucede, presione **`i`** para ingresar al modo de edición y escriba su mensaje; luego presione Enter para comenzar una nueva línea. Cuando haya terminado, presione Esc para salir del modo de edición, escriba **`:w`** para escribir su mensaje en el commit y escriba **`:q`** para salir. Esa es la edición VI básica, con la que los usuarios de Unix/Linux están íntimamente familiarizados.
 
 <hr>
 
 6. Copiar la rama **`refactoring3`** a **`refactoring3a`**.
 
-   ```sh
-   git branch -c refactoring3a
-   ```
+```sh
+git branch -c refactoring3a
+```
 
-7. Merge **`feature`** en**`refactoring3a`**(como en la última fusión, puede aparecer una ventana de Git con un mensaje de confirmación predeterminado; puedes dejar ese mensaje y escribir :qcomo antes).
+7. Merge **`feature`** en **`refactoring3a`** (como en la última fusión, puede aparecer una ventana de Git con un mensaje de confirmación predeterminado; puedes dejar ese mensaje y escribir **`:q`** como antes).
+
+```sh
 git merge feature
-Cambiar a refactoring3.
+```   
+
+8. Cambiar a **`refactoring3`**.
+
+```sh
 git switch refactoring3
-Rebasar la función en refactoring3.
+```
+
+9. Rebase la función en **`refactoring3`**.
+
+```sh
 git rebase feature
-Compara los registros refactoring3ade la parte superior (fusión) y de refactoring3 en la parte inferior (rebase). Puedes ver que rebase movió el historial de confirmaciones al final de la rama de destino, mientras que la fusión creó una nueva confirmación de fusión .
+``` 
+
+10. Compara los logs de **`refactoring3a`** de la parte superior (merge) y de **`refactoring3`** en la parte inferior (rebase). Puedes ver que *rebase* movió el historial de commits al final de la rama de destino, mientras que el merge creó un nuevo *merge* commit.
+    
+```sh
 git log --graph --oneline refactoring3
+```
+
 Esto incluye lo siguiente:
 
+```sh
 * 019f4f7 (HEAD -> refactoring3) more changes to refactoring3
 * 4954034 (feature) more changes to feature for rebase
 * 607d6bb changes to feature for rebase
 * 502f3b3 resolved conflict
  
 git log --graph --oneline refactoring3a
+``` 
+
 que incluye lo siguiente:
 
+```sh
 *   7f5c82c (refactoring3a) Merge branch 'feature' into refactoring3a
 |\
 | * 4954034 (feature) more changes to feature for rebase
@@ -877,55 +897,66 @@ que incluye lo siguiente:
 * | 4821d9c more changes to refactoring3
 |/
 * 502f3b3 resolved conflict
+``` 
  
-De cualquier manera, el código es idéntico, pero la rebase produce un historial mucho más limpio. Entonces, ¿cuál es la desventaja? ¿Por qué usaríamos la combinación y no la rebase?
+De cualquier manera, el código es idéntico, pero la rebase produce un historial mucho más limpio. Entonces, ¿cuál es la desventaja? ¿Por qué usaríamos merge y no rebase?
 
-La respuesta es que la rebase reescribe el historial de confirmaciones. Recuerda que dijimos que el ID de la confirmación incluye la versión anterior. Bueno, dado que estamos moviendo el historial de confirmaciones al final de la rama, la versión anterior es diferente y, por lo tanto, el ID de la confirmación es diferente. ¿Por qué es malo eso? Bueno, no es malo si estás trabajando solo en la rama y si no has fusionado tu trabajo en ninguna otra rama. Pero si estás colaborando o si has fusionado esta rama en cualquier otra rama compartida, entonces cualquiera que comparta ese trabajo tendrá problemas para fusionarlo nuevamente en su propio código.
+La respuesta es que el rebase reescribe el historial de commits. Recuerda que dijimos que el commit ID incluye la versión anterior. Bueno, dado que estamos moviendo el historial de commits al final de la rama, la versión anterior es diferente y, por lo tanto, el commit ID es diferente. ¿Por qué es malo eso? Bueno, no es malo si estás trabajando solo en la rama y si no has mergedo tu trabajo en ninguna otra rama. Pero si estás colaborando o si has mergedo esta rama en cualquier otra rama compartida, entonces cualquiera que comparta ese trabajo tendrá problemas para mergearo nuevamente en su propio código.
 
-Como puede ver en la Figura 3.6 , ambas ramas refactoring3tienen refactoring3aexactamente la misma versión del código, pero refactoring3a(la rama fusionada) consta de dos ramas paralelas que se fusionan en una única confirmación, mientras que refactoring3(la rama rebasada) es una rama recta.
+Como puede ver en la Figura 3.6 , ambas ramas **`refactoring3`** y **`refactoring3a`** tienen  exactamente la misma versión del código, pero **`refactoring3a`** (la rama mergeada) consta de dos ramas paralelas que se mergean en un único commit, mientras que **`refactoring3`** (la rama rebased) es una rama recta(straight branch).
 
 <img width="827" alt="image" src="https://github.com/user-attachments/assets/076bffc5-ec06-4d09-9cda-f3e317246529" />
 
-**FIGURA 3.6: Fusión versus rebase**
+**FIGURA 3.6: Merge versus rebase**
 
 <hr>
 
 **LA REGLA DE ORO DEL REBASING**
 
-La regla de oro del rebase dice que nunca se debe rebasear una rama que se comparte con otros desarrolladores o que se ha enviado o fusionado a un repositorio remoto. En lugar de eso, solo se deben rebasear ramas locales o privadas a su propio repositorio.
+La regla de oro del rebasing dice que nunca se debe rebasear una rama que se comparte con otros desarrolladores o que se ha pushed o merged a un repositorio remoto. En lugar de eso, solo se deben rebasear ramas locales o privadas a su propio repositorio.
 
-Lo que esto significa en la práctica es no volver a basar nada que ya se haya enviado al control remoto, ni nada que se haya fusionado en otra rama que se enviará en el futuro.
+Lo que esto significa en la práctica es no volver a rebase nada que ya se haya pushed al control remoto, ni nada que se haya mergeado en otra rama que se enviará en el futuro.
 
 <hr>
 
 ### Cherry-Picking
 
-Aprendió a desarrollar sus cambios en una rama y luego fusionar o reorganizar esos cambios en otras ramas. Pero ¿qué sucede si desea integrar de forma selectiva algunos cambios, pero no todos, de una rama a otra?
+Aprendió a desarrollar sus cambios en una rama y luego merging o rebasing esos cambios en otras ramas. Pero ¿qué sucede si desea integrar de forma selectiva algunos cambios, pero no todos, de una rama a otra?
 
-Git ofrece una solución a este problema en forma de cherry-picking . Cherry-picking es la capacidad de aplicar commits específicos de una rama a otra. Para ello, cambia a la rama de destino, localiza el ID de commit del commit que quieres seleccionar y luego llama al git cherry-pickcomando. No necesitas especificar el ID de commit completo; basta con los primeros caracteres que identifican el commit de forma única. Por ejemplo, para seleccionar el ID de commit 4954034c… en la rama refactoring1 , haz lo siguiente:
+Git ofrece una solución a este problema en forma de ***cherry-picking***. Cherry-picking es la capacidad de aplicar commits específicos de una rama a otra. Para ello, cambia a la rama de destino(target branch), localiza el commit ID del commit que quieres seleccionar y luego llama al comando **`git cherry-pick`**. No necesitas especificar el commit ID completo; basta con los primeros caracteres que identifican el commit de forma única. Por ejemplo, para cherry-pick commit ID 4954034c… en la rama **`refactoring1`**, haz lo siguiente:
 
+```sh
 git switch refactoring1
 git cherry-pick 4954
-Recuerda que tendrás diferentes ID de confirmación si estás siguiendo el proceso, así que usa git logpara encontrar una que puedas elegir. Ten cuidado: en muchos casos, la selección de la información adecuada dará lugar a un conflicto de fusión que tendrás que resolver, así que ten cuidado. En este caso, tenemos un conflicto; resuélvelo manualmente como antes y, para continuar, llama a esto:
+```
 
+Recuerda que tendrás diferentes commit IDs si estás siguiendo el proceso, así que usa **`git log`** para encontrar una que puedas elegir. Ten cuidado: en muchos casos, la selección de la información adecuada dará lugar a un merge-conflict que tendrás que resolver, así que ten cuidado. En este caso, tenemos un conflicto; resuélvelo manualmente como antes y, para continuar, llama a esto:
+
+```sh
 git commit -am "Cherry picked and then resolved conflict"
+```
+
 Git responde amablemente con esto:
 
+```sh
 1 file changed, 8 insertions(+)
-Revertir y restablecer
-¿Cómo se deshace una confirmación? Hay dos formas: git reverty git reset.
+```
 
-git revert <commit id>crea una nueva confirmación para cambiar los archivos al estado en el que estaban en el momento de ese ID de confirmación.
+### Revertir y restablecer (Reverting and Resetting)
 
-git reset <commit id>es más intrusivo; en realidad, cambia el historial y descarta las confirmaciones que siguieron al ID de confirmación. Este comando viene en tres versiones:
+¿Cómo se deshace un commit? Hay dos formas: **`git revert`** y **`git reset`**.
 
-git reset --soft <commit id>Restablece el puntero de la rama actual para que apunte a la confirmación especificada. Sin embargo, conserva los cambios que haya realizado en el directorio de trabajo y el área de preparación. Esto tiene el efecto de "desconfirmar" sus cambios.
+**`git revert <commit id>`** crea un nuevo commit para cambiar los archivos al estado en el que estaban en el momento de ese commit ID.
 
-git reset –hard <commit id>También restablece el puntero de la rama para que apunte a la confirmación especificada. Sin embargo, descarta todos los cambios tanto en el directorio de trabajo como en el área de preparación, y restablece la rama a la confirmación especificada. Con un restablecimiento completo, se pierden todos los cambios.
+**`git reset <commit id>`** es más intrusivo; en realidad, cambia el historial y descarta los commits que siguieron al commit ID. Este comando viene en tres versiones:
 
-git reset <commit id>sin especificar --softo --hardes un “reinicio mixto”. Como con todos los reinicios, restablece el puntero de la rama a la confirmación especificada. Al igual que un reinicio suave, conserva los cambios, pero los desorganiza. Esto es útil cuando desea comenzar su preparación desde el principio y reevaluar qué preparar y qué no preparar para la próxima confirmación.
+**`git reset --soft <commit id>`** Restablece el pointer de la rama actual para que apunte al commit especificado. Sin embargo, conserva los cambios que haya realizado en el directorio de trabajo y el área de preparación. Esto tiene el efecto de "uncommitting" sus cambios.
 
-En lugar de especificar una confirmación, puedes especificar la cantidad de confirmaciones de las que debes deshacerte mediante la sintaxis HEAD~. Por ejemplo, git reset HEAD~1hará un reinicio mixto, estableciendo el puntero de la rama en una confirmación antes de la última. HEAD~2lo establecerá en dos confirmaciones antes de la última, y ​​así sucesivamente. Se puede usar cualquier número entero positivo después de HEAD~.
+**`git reset –hard <commit id>`** También restablece el pointer de la rama para que apunte al commit especificada. Sin embargo, descarta todos los cambios tanto en el directorio de trabajo (working directory) como en el área de preparación (staging area), y restablece la rama al commit especificado. Con un hard reset, se pierden todos los cambios.
+
+**`git reset <commit id>`** sin especificar **`--soft`** o **`--hard`** es un “mixed reset”. Como con todos los resets, restablece el pointer de la rama al commit especificado. Al igual que un soft reset, conserva los cambios, pero los desorganiza. Esto es útil cuando desea comenzar su preparación desde el principio y reevaluar qué preparar y qué no preparar para la próximo commit.
+
+En lugar de especificar un commit, puedes especificar la cantidad de commits de las que debes deshacerte mediante la sintaxis **`HEAD~`**. Por ejemplo, **`git reset HEAD~1`** hará un reinicio mixto(mixed reset), estableciendo el pointer de la rama en un commit antes del último. **`HEAD~2`** lo establecerá en dos commits antes del último, y ​​así sucesivamente. Se puede usar cualquier número entero positivo después de **`HEAD~`**.
 
 Para comprender mejor las diferencias semánticas, consulte la comparación en la Tabla 3.1 .
 
@@ -933,19 +964,19 @@ Para comprender mejor las diferencias semánticas, consulte la comparación en l
 
 <img width="825" alt="image" src="https://github.com/user-attachments/assets/ffd17bd6-dd24-4dcb-97a0-9d187e11c3e2" />
 
-### Optimización con soporte IDE
+### Optimización con el Soporte del IDE
 
-Todos los IDE más importantes ofrecen compatibilidad de primer nivel con Git. En esta sección, abordaremos la compatibilidad con IntelliJ IDEA.
+Todos los IDEs más importantes ofrecen compatibilidad de primer nivel con Git. En esta sección, abordaremos la compatibilidad con IntelliJ IDEA.
 
-Un archivo sin seguimiento aparecerá en color marrón. IntelliJ le ofrecerá comenzar a realizar el seguimiento, como se muestra en la Figura 3.7 .
+Un archivo sin seguimiento aparecerá en color marrón. IntelliJ le ofrecerá comenzar a realizar el seguimiento(tracking ), como se muestra en la Figura 3.7 .
 
 <img width="913" alt="image" src="https://github.com/user-attachments/assets/72d6a845-8e2b-4bfe-8fac-a581994d960e" />
 
-**FIGURA 3.7: Seguimiento de un nuevo archivo**
+**FIGURA 3.7: Tracking de un nuevo archivo**
 
-La primera vez que se realiza un seguimiento de un archivo, se lo coloreará en verde para indicar que se trata de un archivo recién rastreado que nunca se ha confirmado, según la Figura 3.8 . (La HelloWorldclase que está en un círculo está coloreada en una fuente verde).
+La primera vez que se realiza un tracked de un archivo, se lo coloreará en verde para indicar que se trata de un archivo recién tracked que nunca se ha committed, según la Figura 3.8 . (La clase **`HelloWorld`** que está en un círculo está coloreada en una fuente verde).
 
-Si ya se creó un archivo de forma externa (quizás se lo movió al proyecto desde el sistema de archivos), aún puede rastrearlo; simplemente haga clic derecho en el archivo y seleccione Git y luego Agregar. Esto lo agregará al área de preparación, como se muestra en la Figura 3.9 .
+Si se creó un archivo de forma externa (quizás se movió al proyecto desde el sistema de archivos), aún puede trackear; simplemente haga clic derecho en el archivo y seleccione Git y luego Add. Esto lo agregará al staging area(área de preparación), como se muestra en la Figura 3.9 .
 
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/764386f0-f5dc-4dcd-a789-04d7a30ef2e8" />
 
@@ -953,24 +984,30 @@ Si ya se creó un archivo de forma externa (quizás se lo movió al proyecto des
 
 <img width="747" alt="image" src="https://github.com/user-attachments/assets/f16fd39f-0880-4ec9-bf4f-02a1de4c5ca9" />
 
-**FIGURA 3.9: Seguimiento de un archivo externo**
+**FIGURA 3.9: Tracking de un archivo externo**
 
-Mirando la ventana de confirmación
-La creación de cambios es una operación habitual, por lo que, para mayor comodidad, configuramos Ctrl+Alt+A como el acceso directo del mapa de teclas de Windows para esta operación. Consulte el Capítulo 2 para crear accesos directos del mapa de teclas.
+### Mirando la Commit Window
 
-Para confirmar los cambios, seleccione la opción de menú Git/Commit (el atajo de teclado en Windows es Ctrl+K; el atajo de teclado en Mac es Cmd+K). Esto abrirá la ventana de confirmación donde podrá ver todos los archivos preparados.
+La creación de cambios es una operación habitual, por lo que, para mayor comodidad, configuramos Ctrl+Alt+A como el acceso directo(shortcut) del Windows Key Map para esta operación. Consulte el Capítulo 2 para crear shortcuts del Key Map.
 
-CONSEJO  Ctrl+K (o Cmd+K) también es útil cuando solo quieres ver qué ha cambiado. Abre la ventana de confirmación, que muestra todos los cambios. Usa F7 y Shift+F7 para navegar hacia adelante y hacia atrás a través de todos los cambios.
+Para confirmar(commitear) los cambios, seleccione la opción de menú  Git/Commit (the Windows shortcut is Ctrl+K; the Mac shortcut is Cmd+K). Esto abrirá la *commit window* donde podrá ver todos los archivos preparados(staged files).
 
-Los cambios a los archivos rastreados se preparan automáticamente y aparecerán en la ventana de confirmación, pero si aún no está listo para confirmar, puede deshacer la preparación de los mismos desmarcando la casilla de verificación junto al nombre del archivo en la ventana de confirmación.
+<hr>
 
-Al hacer clic derecho en la ventana de confirmación, aparecerá una ventana de contexto. La mayoría de las opciones se explican por sí solas, pero llame su atención sobre la opción Nueva lista de cambios (consulte la Figura 3.10 ). IntelliJ garantiza que solo pueda confirmar una lista de cambios a la vez, por lo que si desea mantener algunos archivos fuera de su confirmación por ahora, puede crear una nueva lista de cambios y mover esos archivos a esa lista de cambios para separar sus confirmaciones.
+**TIP**: ***Ctrl+K (or Cmd+K)*** también es útil cuando solo quieres ver qué ha cambiado. Abre la commit window, que muestra todos los cambios. Usa F7 y Shift+F7 para navegar hacia adelante y hacia atrás a través de todos los cambios.
+
+<hr>
+
+Los cambios a los tracked files se preparan automáticamente y aparecerán en la commit window, pero si aún no está listo para commitear, puede deshacer(unstage) la preparación de los mismos desmarcando(unclearing) la casilla de verificación(check box) junto al nombre del archivo en la ventana de confirmación.
+
+Al hacer clic derecho en la ventana de confirmación, aparecerá una ventana de contexto(context window). La mayoría de las opciones se explican por sí solas, pero llame su atención sobre la opción Nueva lista de cambios - New Changelist (consulte la Figura 3.10 ). IntelliJ garantiza que solo pueda commitear una lista de cambios a la vez, por lo que si desea mantener algunos archivos fuera de su commit por ahora, puede crear una nueva lista de cambios(changelist) y mover esos archivos a esa lista de cambios para separar sus commits.
 
 <img width="638" alt="image" src="https://github.com/user-attachments/assets/30a59e97-c429-4bb6-912c-9e8f3e370554" />
 
 **FIGURA 3.10: Ventana de contexto de confirmación**
 
-Uso de la ventana Diff-Viewer
+### Uso de la ventana Diff-Viewer(Diff-Viewer Window)
+AQUIIIIIIII
 Si hace doble clic en los archivos en la ventana de confirmación, aparecerá la ventana del visor de diferencias, donde se muestran las versiones anterior y actual una al lado de la otra. Puede realizar modificaciones directamente en la ventana del visor de diferencias. Puede elegir desde el selector en la parte superior de la ventana del visor de diferencias si desea ignorar los cambios de espacios en blanco, cambios de líneas en blanco, etc.
 
 CONSEJO  Es una buena práctica hacer doble clic en los archivos en la ventana de confirmación para abrir la ventana del visor de diferencias, donde puede revisar los cambios. Esto le permite echar un último vistazo antes de confirmar el código. Al hacerlo, invariablemente encontrará oportunidades para eliminar código duplicado, corregir errores tipográficos y realizar limpiezas similares.
