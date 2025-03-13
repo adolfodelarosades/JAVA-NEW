@@ -1423,31 +1423,36 @@ project = "Value Mark" and assignee = currentUser() AND resolution = Unresolved 
 
 ### Realizar Bulk Changes
 
-Puede modificar una selección de Jiras en función de una consulta JQL. Desde la pantalla JQL, puede hacer clic en el botón Cambio masivo y luego hacer clic en la casilla de verificación junto a cada problema que desee cambiar, como en la Figura 3.32 .
+Puede modificar una selección de Jiras en función de una consulta JQL. Desde la pantalla JQL, puede hacer clic en el botón Bulk Change y luego hacer clic en la check box junto a cada problema que desee cambiar, como en la Figura 3.32 .
 
 <img width="827" alt="image" src="https://github.com/user-attachments/assets/3da57064-9a47-43ce-8f8d-a64454f379cb" />
 
-**FIGURA 3.32: Edición masiva**
+**FIGURA 3.32: Bulk editing**
 
 Luego puede elegir editar los problemas seleccionados, moverlos a un nuevo proyecto, realizar la transición, etc., como en la Figura 3.33 y la Figura 3.34 .
 
 <img width="907" alt="image" src="https://github.com/user-attachments/assets/b2194ff5-2495-47bb-a09e-93889a77a6a4" />
 
-**FIGURA 3.33: Edición masiva, Elegir acción masiva**
+**FIGURA 3.33: Bulk editing, Choose bulk action - Edición masiva, Elegir acción masiva**
 
 <img width="909" alt="image" src="https://github.com/user-attachments/assets/9f0aa76e-6eac-4b6b-82ea-283b6346678c" />
 
-**FIGURA 3.34: Edición masiva, detalles de la operación**
+**FIGURA 3.34: Bulk editing, Operation details - Edición masiva, detalles de la operación**
 
-Conectarse a Git
-Tu administrador de Jira puede conectar tu proyecto de Jira a tu proveedor de Git. Una vez que el proveedor de Git esté conectado, incluye la clave de Jira en tus mensajes de confirmación para adjuntar tu confirmación al Jira asociado.
+### Conectarse a Git
+
+Tu administrador de Jira puede conectar tu proyecto de Jira a tu proveedor de Git. Una vez que el proveedor de Git esté conectado, incluye la clave de Jira en tus commit messages para adjuntar tu commit al Jira asociado.
 
 He aquí un ejemplo:
 
+```sh
 git commit -m "Implemented credentials validation. VM-8"
-Luego, podrá ver una lista de confirmaciones asociadas con cualquier Jira dentro del propio ticket de Jira.
+```
 
-TRABAJANDO CON CONFLUENCE, EL SISTEMA DE GESTIÓN DEL CONOCIMIENTO EMPRESARIAL
+Luego, podrá ver una lista de commits asociadas con cualquier Jira dentro del propio ticket de Jira.
+
+## TRABAJANDO CON CONFLUENCE, THE ENTERPRISE KNOWLEDGE MANAGEMENT SYSTEM
+
 Hemos hablado sobre cómo colaborar con código usando Git y cómo colaborar en procesos usando Jira. Terminaremos nuestro capítulo sobre colaboración con un análisis de Atlassian Confluence, la popular herramienta de documentación.
 
 Confluence es una encarnación omnipresente del concepto wiki, una herramienta genérica para compartir conocimientos. Aunque existen otras marcas de wiki que también son populares en el ámbito empresarial, son similares y elegimos Confluence, por ser una de las más extendidas.
