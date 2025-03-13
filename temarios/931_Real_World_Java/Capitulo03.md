@@ -1179,46 +1179,53 @@ Para especificar el código, puede especificar el idioma y el código mediante l
 
 He aquí un ejemplo:
 
-```sh
-```java
-public class HelloMarkdown {
-    public static void main(String[] args) {
-        System.out.println("Hello, Markdown!");
-    }
-}
-```
-```sh
+![image](https://github.com/user-attachments/assets/bdd7d785-4a18-4b40-ab46-56e6367c8c23)
+
 
 Nuevamente, te animamos a que juegues con todos ellos para familiarizarte con el uso de Markdown.
 
-Uso de Gitflow para la colaboración
-Como has visto, Git es una gran herramienta para mantener versiones en evolución de tu código base de software. ¡Pero este capítulo trata sobre la colaboración ! ¿Cómo podemos aprovechar las capacidades de Git para colaborar en un entorno dinámico y en constante cambio?
+### Uso de Gitflow para la colaboración
 
-Existen algunas metodologías populares. Por ejemplo, el desarrollo basado en trunk es un proceso en el que el código se fusiona frecuentemente con la rama principal (también conocida como trunk) y se ejecutan pruebas unitarias automatizadas en cada confirmación. Si el trunk se compila, está listo para su lanzamiento. En algunos casos, los desarrolladores realizan confirmaciones directamente en main . En otros, utilizan ramas de corta duración y una solicitud de incorporación de cambios cuando la rama está lista para fusionarse con main .
+Como has visto, Git es una gran herramienta para mantener versiones en evolución de tu código base de software. ¡Pero este capítulo trata sobre la *colaboración*! ¿Cómo podemos aprovechar las capacidades de Git para colaborar en un entorno dinámico y en constante cambio?
 
-En entornos grandes y altamente regulados, como los bancos y otras instituciones financieras, las publicaciones deben estar mucho más controladas. Para esos requisitos, Gitflow es una metodología común.
+Existen algunas metodologías populares. Por ejemplo, el desarrollo ***trunk-based*** es un proceso en el que el código se mergea frecuentemente con la rama *main* (también conocida como trunk) y se ejecutan pruebas unitarias automatizadas en cada commit. Si el trunk se compila, está listo para su lanzamiento(release). En algunos casos, los desarrolladores realizan commits directamente en *main*. En otros, utilizan ramas de corta duración y un pull request(solicitud de incorporación) de cambios cuando la rama está lista para mergearse con *main*.
+
+En entornos grandes y altamente regulados, como los bancos y otras instituciones financieras, las releases deben estar mucho más controladas. Para esos requisitos, Gitflow es una metodología común.
 
 En pocas palabras, Gitflow es un proceso que permite a un equipo de desarrolladores dividirse en grupos más pequeños de uno o más desarrolladores. Cada grupo trabaja en alguna característica y todo el equipo comparte una base de código común.
 
-Con esta estrategia, cada característica obtiene una rama de características , que se confirma periódicamente, se crea y se prueba y, cuando se termina, la rama de características se fusiona con la rama común, normalmente denominada desarrollo . Finalmente, cuando se planifica un lanzamiento, las ramas de características se fusionan en una nueva rama de lanzamiento , que se crea, se prueba y se prepara para el lanzamiento. Esta estrategia permite que todos colaboren y recuperen características que podrían haberse preparado prematuramente para el lanzamiento.
+Con esta estrategia, cada característica(feature) obtiene una ***feature branch***, que se committed periódicamente, se crea y se prueba y, cuando se termina, la rama ***feature*** se merged con la rama common, normalmente denominada ***develop***. Finalmente, cuando se planifica una release, las ramas feature se merged en una nueva rama ***release***, que se crea, se prueba y se prepara para el release. Esta estrategia permite que todos colaboren y recuperen features que podrían haberse preparado prematuramente para el release.
 
 La figura 3.17 muestra los pasos.
 
 <img width="855" alt="image" src="https://github.com/user-attachments/assets/33930ac8-e570-4724-9d90-908f03de1137" />
 
-**FIGURA 3.17: Flujo de trabajo de Gitflow**
+**FIGURA 3.17: Gitflow workflow**
 
-El primer paso es crear una nueva rama llamada desarrollo a partir de la rama principal . Esta es una tarea que se realiza una sola vez. La rama desarrollo es una rama que recopila todo, pero nada se asigna directamente a desarrollo . La rama desarrollo solo recibe fusiones de otras ramas. Una vez que se crea desarrollo , permanece durante la vida útil del proyecto.
-Cuando se acuerda una característica, se crea una rama de características para esa característica. Normalmente, la empresa definirá un requisito para esa característica y lo rastreará en algún sistema de seguimiento como Jira (que abordaremos en la siguiente sección). El sistema de seguimiento asignará una clave a este requisito y, aunque el nombre de la rama de características es flexible, es común darle un nombre que comience con feature/ seguido de la clave y una descripción extremadamente breve pero explicativa (no se permiten espacios, así que use guiones). Un ejemplo de nombre de rama de características podría ser algo como feature/RWJ-1234-add-ui-login , donde RWJ-1234 es la clave de Jira para esta nueva característica de "agregar un inicio de sesión de UI".
-A medida que los equipos trabajan en sus ramas de funciones, continúan desarrollando código y confirmando. El servidor de compilación ejecuta una compilación en cada confirmación. Consulte el Capítulo 4 , “Automatización de sus compilaciones de CI/CD con Maven, Gradle y Jenkins”, para obtener más detalles.
-Cuando se considera que una característica está completa, se vuelve a fusionar con la rama de desarrollo . Recuerde que la developrama ha estado evolucionando en paralelo mientras usted trabajaba, ya que otros miembros del equipo estaban escribiendo su propio código. Por lo tanto, se verá diferente a cuando originalmente ramificó la rama de la característica. Por lo tanto, se requiere nuevamente un nuevo ciclo de compilación y prueba, y eso es exactamente lo que hace el servidor de compilación.
-La rama de desarrollo está lista para su lanzamiento. Cree una nueva rama de lanzamiento a partir de la rama de desarrollo denominada release / seguida de una versión de lanzamiento. Pero el proceso no termina aquí. Ahora que se ha cortado la rama de lanzamiento, el desarrollo puede seguir evolucionando en la rama de desarrollo para futuros lanzamientos, y solo este lanzamiento se mantiene en la rama de lanzamiento .
-La rama de lanzamiento ahora está probada, posiblemente por un equipo de control de calidad (QA).
-Se informan los errores, se corrigen y se vuelven a fusionar para desarrollarlos.
-Cuando se certifica que la rama de lanzamiento está lista para su lanzamiento, se fusiona con la rama principal y se corta una etiqueta de lanzamiento en la rama principal . La rama principal realiza un seguimiento de todos los lanzamientos históricos y es fácil reproducir un lanzamiento anterior consultando la etiqueta de lanzamiento de cualquier lanzamiento.
-Hemos publicado el código en producción, pero aún no hemos terminado. Alguien descubre un error en producción, se crea una rama de revisión, se trabaja para solucionar el error y repetimos el proceso desde el paso 5.
-Al igual que con los cambios en cualquier rama, los cambios realizados en la rama de revisión deben fusionarse nuevamente con la rama de desarrollo .
-Cuando esté lista, la rama de revisión se fusionará con la principal y se etiquetará para su lanzamiento.
+AQUIIIIIIII
+
+1. El primer paso es crear una nueva rama llamada desarrollo a partir de la rama principal . Esta es una tarea que se realiza una sola vez. La rama desarrollo es una rama que recopila todo, pero nada se asigna directamente a desarrollo . La rama desarrollo solo recibe fusiones de otras ramas. Una vez que se crea desarrollo , permanece durante la vida útil del proyecto.
+
+2. Cuando se acuerda una característica, se crea una rama de características para esa característica. Normalmente, la empresa definirá un requisito para esa característica y lo rastreará en algún sistema de seguimiento como Jira (que abordaremos en la siguiente sección). El sistema de seguimiento asignará una clave a este requisito y, aunque el nombre de la rama de características es flexible, es común darle un nombre que comience con feature/ seguido de la clave y una descripción extremadamente breve pero explicativa (no se permiten espacios, así que use guiones). Un ejemplo de nombre de rama de características podría ser algo como feature/RWJ-1234-add-ui-login , donde RWJ-1234 es la clave de Jira para esta nueva característica de "agregar un inicio de sesión de UI".
+
+3. A medida que los equipos trabajan en sus ramas de funciones, continúan desarrollando código y confirmando. El servidor de compilación ejecuta una compilación en cada confirmación. Consulte el Capítulo 4 , “Automatización de sus compilaciones de CI/CD con Maven, Gradle y Jenkins”, para obtener más detalles.
+
+4. Cuando se considera que una característica está completa, se vuelve a fusionar con la rama de desarrollo . Recuerde que la developrama ha estado evolucionando en paralelo mientras usted trabajaba, ya que otros miembros del equipo estaban escribiendo su propio código. Por lo tanto, se verá diferente a cuando originalmente ramificó la rama de la característica. Por lo tanto, se requiere nuevamente un nuevo ciclo de compilación y prueba, y eso es exactamente lo que hace el servidor de compilación.
+
+5. La rama de desarrollo está lista para su lanzamiento. Cree una nueva rama de lanzamiento a partir de la rama de desarrollo denominada release / seguida de una versión de lanzamiento. Pero el proceso no termina aquí. Ahora que se ha cortado la rama de lanzamiento, el desarrollo puede seguir evolucionando en la rama de desarrollo para futuros lanzamientos, y solo este lanzamiento se mantiene en la rama de lanzamiento .
+
+6. La rama de lanzamiento ahora está probada, posiblemente por un equipo de control de calidad (QA).
+
+7. Se informan los errores, se corrigen y se vuelven a fusionar para desarrollarlos.
+
+8. Cuando se certifica que la rama de lanzamiento está lista para su lanzamiento, se fusiona con la rama principal y se corta una etiqueta de lanzamiento en la rama principal . La rama principal realiza un seguimiento de todos los lanzamientos históricos y es fácil reproducir un lanzamiento anterior consultando la etiqueta de lanzamiento de cualquier lanzamiento.
+
+9. Hemos publicado el código en producción, pero aún no hemos terminado. Alguien descubre un error en producción, se crea una rama de revisión, se trabaja para solucionar el error y repetimos el proceso desde el paso 5.
+
+10. Al igual que con los cambios en cualquier rama, los cambios realizados en la rama de revisión deben fusionarse nuevamente con la rama de desarrollo .
+
+11. Cuando esté lista, la rama de revisión se fusionará con la principal y se etiquetará para su lanzamiento.
+
 Algunos de los beneficios de Gitflow:
 
 Las características están aisladas, lo que facilita la gestión de sus propios cambios de características de forma aislada.
