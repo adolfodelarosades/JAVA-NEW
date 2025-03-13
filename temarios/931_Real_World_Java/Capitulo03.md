@@ -1007,94 +1007,109 @@ Al hacer clic derecho en la ventana de confirmación, aparecerá una ventana de 
 **FIGURA 3.10: Ventana de contexto de confirmación**
 
 ### Uso de la ventana Diff-Viewer(Diff-Viewer Window)
-AQUIIIIIIII
-Si hace doble clic en los archivos en la ventana de confirmación, aparecerá la ventana del visor de diferencias, donde se muestran las versiones anterior y actual una al lado de la otra. Puede realizar modificaciones directamente en la ventana del visor de diferencias. Puede elegir desde el selector en la parte superior de la ventana del visor de diferencias si desea ignorar los cambios de espacios en blanco, cambios de líneas en blanco, etc.
 
-CONSEJO  Es una buena práctica hacer doble clic en los archivos en la ventana de confirmación para abrir la ventana del visor de diferencias, donde puede revisar los cambios. Esto le permite echar un último vistazo antes de confirmar el código. Al hacerlo, invariablemente encontrará oportunidades para eliminar código duplicado, corregir errores tipográficos y realizar limpiezas similares.
+Si hace doble clic en los archivos en la commit window, aparecerá la diff-viewer window, donde se muestran las versiones anterior y actual una al lado de la otra. Puede realizar modificaciones directamente en la diff-viewer window. Puede elegir desde el selector en la parte superior de la diff-viewer window si desea ignorar los cambios de espacios en blanco, cambios de líneas en blanco, etc.
+
+<hr>
+
+**TIP**: Es una buena práctica hacer doble clic en los archivos en la commit window para abrir la diff-viewer window, donde puede revisar los cambios. Esto le permite echar un último vistazo antes de commitear el código. Al hacerlo, invariablemente encontrará oportunidades para eliminar código duplicado, corregir errores tipográficos y realizar limpiezas similares.
+
+<hr>
 
 F7 es un atajo conveniente para navegar de un cambio al siguiente. Shift+F7 te llevará de regreso al cambio anterior. Cuando llegues al final del archivo y hagas clic en F7 nuevamente, IntelliJ te indicará que pases al siguiente archivo.
 
-Las líneas modificadas aparecerán en la ventana del visor de diferencias, como se muestra en la Figura 3.11 , con un resaltado azul claro y una casilla de verificación en el margen. Puede elegir qué cambios confirmar marcando o desmarcando la casilla de verificación junto a cada cambio en la ventana del visor de diferencias. Solo se confirmarán los cambios seleccionados. Si hace clic derecho en un cambio, puede elegir enviar ese cambio a otra lista de cambios para que las confirmaciones en ese archivo no incluyan esos cambios.
+Las líneas modificadas aparecerán en la diff-viewer window, como se muestra en la Figura 3.11 , con un resaltado azul claro y una casilla de verificación en el margen. Puede elegir qué cambios commitear marcando o desmarcando la check box junto a cada cambio en la diff-viewer window. Solo se committed los cambios seleccionados. Si hace clic derecho en un cambio, puede elegir enviar ese cambio a otra lista de cambios para que las confirmaciones en ese archivo no incluyan esos cambios.
 
 <img width="831" alt="image" src="https://github.com/user-attachments/assets/35a6ff7b-a3e5-4768-84bd-e26cc10d4ddf" />
 
-**FIGURA 3.11: Ventana del visor de diferencias**
+**FIGURA 3.11: Diff-viewer window**
 
-Para estar seguro, si tiene una gran cantidad de cambios, es fácil desmarcar algo que realmente quería confirmar o marcar algo que no quería.
+Para estar seguro, si tiene una gran cantidad de cambios, es fácil desmarcar algo que realmente quería commitear  o marcar algo que no quería.
 
-Cuando tienes código que no quieres confirmar, es bueno rodearlo de algo muy visible, como lo siguiente. ¡Esto hará que sea difícil confirmarlo por accidente!
+Cuando tienes código que no quieres commitear, es bueno rodearlo de algo muy visible, como lo siguiente. ¡Esto hará que sea difícil commitear por accidente!
 
+```sh
 ///////// Don't Commit ///////////
 someCodeToNotCommit();
 someMoreCodeToNotCommit();
 ///////// Don't Commit ///////////
+```
+
 El menú Git proporciona todos los comandos descritos y más, como puede ver en la Figura 3.12 .
 
 <img width="786" alt="image" src="https://github.com/user-attachments/assets/f37c289c-d72b-494b-8e58-1d85bd099dc6" />
 
-**FIGURA 3.12: Menú Git de IntelliJ**
+**FIGURA 3.12: IntelliJ Git menu**
 
-Confirmar: confirma los cambios en todos los archivos rastreados en el repositorio local.
-Push: envía los cambios al servidor remoto.
-Actualizar proyecto: obtiene del servidor remoto las últimas versiones de todos los archivos en la rama actualmente extraída; use Git ➪ Actualizar proyecto o Ctrl+T (Cmd+T en Mac).
-Pull: actualiza una rama específica desde el control remoto seleccionado.
-Obtener: actualiza una rama específica del servidor sin realmente extraerla. En caso de que haya un conflicto que el IDE no pueda resolver, abortará la obtención. En este caso, puede archivar o guardar sus cambios, realizar la obtención y luego desarchivar sus cambios y resolver manualmente los conflictos. (Más información sobre archivar cambios más adelante en este capítulo).
-Fusionar: fusiona la rama especificada en la rama actual.
-Rebase: rebase la rama especificada en la rama actual.
-Ramas: Un submenú para todas las operaciones de ramificación, incluida la creación de una nueva rama o el cambio a otra rama.
-Nueva rama: un menú dedicado para crear ramas.
-Nueva etiqueta: crea una nueva etiqueta en la rama actual.
-Restablecer HEAD: le permite volver a una versión anterior mediante restablecimientos completos, suaves o mixtos.
-Mostrar registro de Git: proporciona una representación gráfica del registro de confirmaciones y ramas de Git.
-Parche: Herramientas para crear un parche , que puede aplicarse posteriormente para reproducir un determinado estado.
-SUGERENCIA  Un parche es un archivo que contiene las diferencias entre los conjuntos de archivos modificados y la versión original. Puede aplicar un parche a un conjunto de archivos de origen para producir una versión de destino que contenga los cambios capturados en el archivo de parche. También puede compartir archivos de parche con otras personas para que produzcan el estado de destino de los cambios.
+* **Commit**: Confirma los cambios en todos los archivos tracked en el repositorio local.
+* **Push**: Pushes(envía) los cambios al servidor remoto.
+* **Update Project**: Obtiene del servidor remoto las últimas versiones de todos los archivos en la rama actualmente extraída; use Git ➪ Update Project o Ctrl+T (Cmd+T on Mac).
+* **Pull**: Actualiza una rama específica desde el remoto seleccionado.
+* **Fetch**: Actualiza una rama específica del servidor sin realmente extraerla(checking it out). En caso de que haya un conflicto que el IDE no pueda resolver, abortará el fetch(obtención). En este caso, puede archivar(shelve) o guardar(stash) sus cambios, realizar el fetch y luego desarchivar(unshelve) sus cambios y resolver manualmente los conflictos. (Más información sobre archivar cambios más adelante en este capítulo).
+* **Merge**: Fusiona(Merges ) la rama especificada en la rama actual.
+* **Rebase**: Rebase la rama especificada en la rama actual.
+* **Branches**: Un submenú para todas las operaciones de ramificación, incluida la creación de una nueva rama o el cambio a otra rama.
+* **New Branch**: Un menú dedicado para crear ramas.
+* **New Tag**: Crea un nuevo tag  en la rama actual.
+* **Reset HEAD**: Le permite volver a una versión anterior mediante Hard, Soft, o Mixed resets.
+* **Show Git Log**: Proporciona una representación gráfica del registro de confirmaciones y ramas de Git.
+* **Patch**: Herramientas para crear un *patch*, que puede aplicarse posteriormente para reproducir un determinado estado.
 
-Cambios no confirmados: Vale la pena analizar este tema en todos sus submenús; la Figura 3.13 muestra las opciones del submenú Cambios no confirmados.
+   <hr>
 
-<img width="701" alt="image" src="https://github.com/user-attachments/assets/fcfc6188-205b-4bf9-b54e-360e90be32ad" />
+   **TIP** Un patch es un archivo que contiene las diferencias entre los conjuntos de archivos modificados y la versión original. Puede aplicar un patch a un conjunto de archivos de origen para producir una versión de destino que contenga los cambios capturados en el archivo de patch. También puede compartir archivos de patch con otras personas para que produzcan el estado de destino de los cambios.
 
-**FIGURA 3.13: Submenú de cambios no confirmados de IntelliJ**
+   <hr>
 
-Archivar cambios: le permite dejar de lado o archivar temporalmente los cambios actuales en el repositorio de IntelliJ, donde puede inspeccionarlos y recuperarlos más tarde.
-Mostrar estante: muestra todos los cambios archivados y proporciona herramientas de selección para recuperar algunas o todas las líneas de cambio.
-Cambios en Stash: como el almacenamiento, pero utiliza herramientas Git en segundo plano. Si usa el IDE, la función de almacenamiento de IntelliJ es conveniente, pero si prefiere ejecutar cosas desde la línea de comandos, es posible que prefiera el almacenamiento.
-Deshacer cambios guardados: le permite volver a aplicar los cambios guardados.
-Revertir: selecciona archivos para restaurarlos al estado original.
-Mostrar cambios locales como UML: dibuja un diagrama de clases UML que contiene las clases y métodos que contienen cambios locales.
-Archivo actual: Este también merece una exploración de sus submenús; consulte la Figura 3.14 .
+* **Uncommitted Changes**: Vale la pena analizar este tema en todos sus submenús; la Figura 3.13 muestra las opciones del submenú Uncommitted Changes.
 
-<img width="739" alt="image" src="https://github.com/user-attachments/assets/b093f288-49d4-4c09-aea1-e854c6f5bb6a" />
+   <img width="701" alt="image" src="https://github.com/user-attachments/assets/fcfc6188-205b-4bf9-b54e-360e90be32ad" />
 
-**FIGURA 3.14:S ubmenú Archivo actual de IntelliJ**
+   **FIGURA 3.13: Submenú de cambios no confirmados de IntelliJ**
 
-Archivo de confirmación: abre la ventana de confirmación, donde puede seleccionar los cambios que desea confirmar.
-Agregar: le dice a Git que rastree un nuevo archivo.
-Anotar con Git Blame: muestra en el margen el nombre de la persona que actualizó por última vez cada línea del archivo actual.
-Mostrar diferencias: muestra en paralelo la ventana del visor de diferencias del archivo actual tal como está ahora y cómo estaba cuando se extrajo.
-Comparar con revisión: proporciona una lista de confirmaciones recientes para que pueda comparar con el estado local.
-Comparar con sucursal: proporciona una lista de sucursales para que pueda comparar con el estado local.
-Mostrar historial: muestra una lista de todas las confirmaciones para este archivo y le permite compararlo con estados anteriores.
-Mostrar historial del método: muestra una lista de todas las confirmaciones para el método actual y le permite comparar con estados anteriores.
-Mostrar historial de la selección: aparece solo cuando se ha seleccionado algo. Este elemento del menú muestra una lista de todas las confirmaciones de esa selección y permite compararlas con estados anteriores.
+   * **Shelve Changes**: Le permite dejar de lado o archivar temporalmente los cambios actuales en el repositorio de IntelliJ, donde puede inspeccionarlos y recuperarlos más tarde.
+   * **Show Shelf**: Muestra todos los cambios archivados y proporciona herramientas de selección para recuperar algunas o todas las líneas de cambio.
+   * **Stash Changes**: Como el almacenamiento, pero utiliza herramientas Git en segundo plano. Si usa el IDE, la función de almacenamiento de IntelliJ es conveniente, pero si prefiere ejecutar cosas desde la línea de comandos, es posible que prefiera el almacenamiento.
+   * **Unstash changes**: Le permite volver a aplicar los cambios guardados.
+   * **Rollback**: Selecciona archivos para restaurarlos al estado original.
+   * **Show Local Changes as UML**: Dibuja un diagrama de clases UML que contiene las clases y métodos que contienen cambios locales.
+   
+* **Current File**: Este también merece una exploración de sus submenús; consulte la Figura 3.14 .
+
+   <img width="739" alt="image" src="https://github.com/user-attachments/assets/b093f288-49d4-4c09-aea1-e854c6f5bb6a" />
+
+   **FIGURA 3.14:S IntelliJ Current File submenu**
+
+   * **Commit File**: Abre la commit window, donde puede seleccionar los cambios que desea commitear.
+   * **Add**: Le dice a Git que rastree(track) un nuevo archivo.
+   * **Annotate with Git Blame**: Muestra en el margen el nombre de la persona que actualizó por última vez cada línea del archivo actual.
+   * **Show Diff**: Muestra en paralelo la diff-viewer window del archivo actual tal como está ahora y cómo estaba cuando se extrajo(pulled).
+   * **Compare with Revision**: Proporciona una lista de commits recientes para que pueda comparar con el estado local.
+   * **Compare with Branch**: Proporciona una lista de branches para que pueda comparar con el estado local.
+   * **Show History**: Muestra una lista de todos los commits para este archivo y le permite compararlo con estados anteriores.
+   * **Show History for Method**: Muestra una lista de todos los commits para el método actual y le permite comparar con estados anteriores.
+   * **Show History for Selection**: aparece solo cuando se ha seleccionado algo. Este elemento del menú muestra una lista de todos los commits de esa selección y permite compararlas con estados anteriores.
+
 Puede obtener una lista más amplia de opciones de Git haciendo clic derecho en un archivo en el editor y eligiendo Git, como se muestra en la Figura 3.15 .
 
 <img width="663" alt="image" src="https://github.com/user-attachments/assets/f9afc8c7-7e0e-44d3-9971-fe2ff28ab3a5" />
 
 **FIGURA 3.15: Menú contextual de Git**
 
-IntelliJ tiene una ventana de registro de Git que se puede abrir haciendo clic en el icono de Git en la parte inferior izquierda. Incluye una pantalla de registro gráfica que permite seleccionar una rama, un ID de confirmación, etc., y muestra un árbol que ilustra las ramas. Esto es mucho más fácil de usar que escribir comandos de registro, como se puede ver en la Figura 3.16 .
+IntelliJ tiene una ventana de registro de Git que se puede abrir haciendo clic en el icono de Git en la parte inferior izquierda. Incluye una pantalla de registro gráfica que permite seleccionar una rama, un commit ID, etc., y muestra un árbol que ilustra las ramas. Esto es mucho más fácil de usar que escribir comandos de registro, como se puede ver en la Figura 3.16 .
 
 <img width="676" alt="image" src="https://github.com/user-attachments/assets/485bdf42-dd07-448d-877f-a7f654f2670b" />
 
-**FIGURA 3.16: Ventana de registro de Git de IntelliJ**
+**FIGURA 3.16: IntelliJ Git log window**
 
-Puede seleccionar ramas locales o remotas, pero tenga en cuenta que la lista de ramas y el contenido de las ramas serán los de la última actualización. Seleccione Git ➪ Actualizar para ver una lista actualizada de ramas y para actualizar la rama que se encuentra actualmente extraída del servidor. Para actualizar otras ramas, puede seleccionarlas individualmente desde el menú Git ➪ Extraer.
+Puede seleccionar ramas locales o remotas, pero tenga en cuenta que la lista de ramas y el contenido de las ramas serán los de la última actualización. Seleccione Git ➪ Update para ver una lista actualizada de ramas y para actualizar la rama que se encuentra actualmente extraída(checked-out branch) del servidor. Para actualizar otras ramas, puede seleccionarlas individualmente desde el menú Git ➪ Pull.
 
-Otra característica que debes conocer es la función Git ➪ Historial. Puedes hacer clic derecho en cualquier archivo administrado y elegir Git ➪ Historial para obtener una lista de todas las versiones de ese archivo. Es un salvavidas cuando descubres que algo está roto y quieres encontrar la última versión buena conocida. Puedes obtener el historial de un archivo completo o puedes hacer una selección y ver el historial solo de esa selección.
+Otra característica que debes conocer es la función Git ➪ History. Puedes hacer clic derecho en cualquier archivo administrado y elegir Git ➪ History para obtener una lista de todas las versiones de ese archivo. Es un salvavidas cuando descubres que algo está roto y quieres encontrar la última versión buena conocida. Puedes obtener el historial de un archivo completo o puedes hacer una selección y ver el historial solo de esa selección.
 
-En noticias relacionadas, IntelliJ también ofrece una función de historial local , donde puedes obtener un historial de versiones rápido sin Git, e incluso para archivos que no son rastreados por Git.
+En noticias relacionadas, IntelliJ también ofrece una función de *local history - historial local*, donde puedes obtener un historial de versiones rápido sin Git, e incluso para archivos que no son rastreados(tracked ) por Git.
 
-Creación de archivos README con lenguaje Markdown
+### Creación de archivos README con lenguaje Markdown
+
 Cuando navegues a la página de inicio de un proyecto de Git en GitHub o en uno de los otros proveedores de Git, generalmente verás una descripción del proyecto, quizás algunas instrucciones de uso y enlaces útiles. Como ejemplo, dirígete al repositorio de capítulos de este capítulo en https://github.com/realworldjava/Ch03-Collaboration. Puedes crear dicha documentación en tus propios proyectos incluyendo un archivo llamado README.mden la raíz de tu proyecto. La .mdextensión significa Markdown, un lenguaje de marcado ligero que se utiliza en la documentación de Git.
 
 SUGERENCIA:  Si bien cualquier .md archivo se considerará Markdown en GitHub, solo el README.md archivo se muestra automáticamente en la página de inicio del repositorio.
