@@ -1110,55 +1110,76 @@ En noticias relacionadas, IntelliJ también ofrece una función de *local histor
 
 ### Creación de archivos README con lenguaje Markdown
 
-Cuando navegues a la página de inicio de un proyecto de Git en GitHub o en uno de los otros proveedores de Git, generalmente verás una descripción del proyecto, quizás algunas instrucciones de uso y enlaces útiles. Como ejemplo, dirígete al repositorio de capítulos de este capítulo en https://github.com/realworldjava/Ch03-Collaboration. Puedes crear dicha documentación en tus propios proyectos incluyendo un archivo llamado README.mden la raíz de tu proyecto. La .mdextensión significa Markdown, un lenguaje de marcado ligero que se utiliza en la documentación de Git.
+Cuando navegues a la página de inicio de un proyecto de Git en GitHub o en uno de los otros proveedores de Git, generalmente verás una descripción del proyecto, quizás algunas instrucciones de uso y enlaces útiles. Como ejemplo, dirígete al repositorio de capítulos de este capítulo en https://github.com/realworldjava/Ch03-Collaboration. Puedes crear dicha documentación en tus propios proyectos incluyendo un archivo llamado **`README.md`** en la raíz de tu proyecto. La extensión **`.md`** significa Markdown, un lenguaje de marcado ligero que se utiliza en la documentación de Git.
 
-SUGERENCIA:  Si bien cualquier .md archivo se considerará Markdown en GitHub, solo el README.md archivo se muestra automáticamente en la página de inicio del repositorio.
+<hr>
 
-Markdown admite texto simple, así como encabezados, énfasis, listas, enlaces y bloques de código. El lenguaje es bastante simple y solo hay unos pocos elementos de sintaxis que necesitarás aprender. IntelliJ y VS Code son lo suficientemente buenos como para mostrarte una vista en paralelo de tu código de marcado y su representación visual, por lo que te recomendamos que experimentes con el README.docrepositorio de este capítulo. Eclipse no tiene una vista en paralelo, pero sí tiene una pestaña de vista previa.
+**TIP**: Si bien cualquier archivo **`.md`** se considerará Markdown en GitHub, solo el archivo **`README.md`** se muestra automáticamente en la página de inicio del repositorio.
+
+<hr>
+
+Markdown admite texto simple, así como eheadings, emphasis, lists, links, y code blocks. El lenguaje es bastante simple y solo hay unos pocos elementos de sintaxis que necesitarás aprender. IntelliJ y VS Code son lo suficientemente buenos como para mostrarte una vista en paralelo de tu código de marcado y su representación visual, por lo que te recomendamos que experimentes con el **`README.doc`** del repositorio de este capítulo. Eclipse no tiene una vista en paralelo, pero sí tiene una pestaña de vista previa.
 
 Se puede introducir texto directamente. Las líneas de texto contiguas se fusionarán en una sola línea, a menos que estén seguidas de una línea en blanco, en cuyo caso se iniciará un nuevo párrafo. Si desea anular este comportamiento y comenzar una nueva línea, simplemente agregue dos espacios al final de la línea, lo que hará que la siguiente línea comience en una nueva línea.
 
-Markdown admite seis niveles de encabezados. Para designar un encabezado de nivel uno, comience la línea con #seguido de un espacio. Un encabezado de nivel dos comienza con ##y un espacio, y así sucesivamente.
+Markdown admite seis niveles de encabezados. Para designar un encabezado de nivel uno, comience la línea con **`#`** seguido de un espacio. Un encabezado de nivel dos comienza con **`##`** y un espacio, y así sucesivamente.
 
-Para agregar cursiva, rodee el texto con *. A continuación, se muestra un ejemplo:
+Para agregar cursiva, rodee el texto con  **`*`**. A continuación, se muestra un ejemplo:
 
+```sh
 *This is italicized*
+```
+
 Asegúrese de no incluir un espacio después del primer asterisco.
 
-Para poner en negrita el texto seleccionado, rodéelo con **. A continuación, se muestra un ejemplo:
+Para poner en negrita el texto seleccionado, rodéelo con **`**`** A continuación, se muestra un ejemplo:
 
+```sh
 **This is bold**
-Nuevamente, no hay espacios después del primer **.
+```
 
-Las listas se presentan en versiones ordenadas y desordenadas. Para crear una lista desordenada, coloque un *como primer carácter en la línea, seguido de un espacio. A continuación, se muestra un ejemplo:
+Nuevamente, no hay espacios después del primer **`**`**.
 
+Las listas se presentan en versiones ordenadas y desordenadas. Para crear una lista desordenada, coloque un **`*`** como primer carácter en la línea, seguido de un espacio. A continuación, se muestra un ejemplo:
+
+```sh
 * This is the first item
 * This is the second item
 * Etc.
+```
+
 Para crear una lista ordenada, comience la línea con un número de elemento, seguido de un punto y un espacio. A continuación, se muestra un ejemplo:
 
+```sh
 1. This is the first item
 2. This is the second item
 3. Etc.
-Independientemente de los números que escribas, Markdown los mostrará en el orden natural. Nos gusta numerar cada elemento de la lista 1.para que, si cambiamos los elementos, Markdown se encargue de la numeración adecuada para que no tengamos que hacerlo nosotros.
+```
 
-Para especificar un enlace, simplemente comience con http://o https://y Markdown lo representará como un enlace. Si desea proporcionar texto para el enlace, utilice esta sintaxis:
+Independientemente de los números que escribas, Markdown los mostrará en el orden natural. Nos gusta numerar cada elemento de la lista **`1.`** para que, si cambiamos los elementos, Markdown se encargue de la numeración adecuada para que no tengamos que hacerlo nosotros.
 
+Para especificar un enlace, simplemente comience con **`http://`** o **`https://`** y Markdown lo representará como un enlace. Si desea proporcionar texto para el enlace, utilice esta sintaxis:
+
+```sh
 [This is the text](https://www.some-link.com)
+```
+
 Se mostrará el texto entre corchetes y el texto entre corchetes será el enlace.
 
-Para especificar el código, puede especificar el idioma y el código mediante la sintaxis de “tres comillas invertidas”. Markdown reconoce las muchas etiquetas de idioma, incluidas las siguientes:
+Para especificar el código, puede especificar el idioma y el código mediante la sintaxis de “tres comillas invertidas”. Markdown reconoce las muchas etiquetas de lenguajes, incluidas las siguientes:
 
-java
-python
-javascript
-html
-css
-markdown(para bloques de código anidados)
-bash
-sql
+* **`java`**
+* **`python`**
+* **`javascript`**
+* **`html`**
+* **`css`**
+* **`markdown`** (for nested code blocks)
+* **`bash`**
+* **`sql`**
+
 He aquí un ejemplo:
 
+```sh
 ```java
 public class HelloMarkdown {
     public static void main(String[] args) {
@@ -1166,6 +1187,8 @@ public class HelloMarkdown {
     }
 }
 ```
+```sh
+
 Nuevamente, te animamos a que juegues con todos ellos para familiarizarte con el uso de Markdown.
 
 Uso de Gitflow para la colaboración
