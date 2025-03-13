@@ -1453,7 +1453,7 @@ Luego, podrá ver una lista de commits asociadas con cualquier Jira dentro del p
 
 ## TRABAJANDO CON CONFLUENCE, THE ENTERPRISE KNOWLEDGE MANAGEMENT SYSTEM
 
-Hemos hablado sobre cómo colaborar con código usando Git y cómo colaborar en procesos usando Jira. Terminaremos nuestro capítulo sobre colaboración con un análisis de Atlassian Confluence, la popular herramienta de documentación.
+Hemos hablado sobre cómo colaborar con código usando Git y cómo colaborar en procesos usando Jira. Terminaremos nuestro capítulo sobre colaboración con un análisis de **Atlassian Confluence**, la popular herramienta de documentación.
 
 Confluence es una encarnación omnipresente del concepto wiki, una herramienta genérica para compartir conocimientos. Aunque existen otras marcas de wiki que también son populares en el ámbito empresarial, son similares y elegimos Confluence, por ser una de las más extendidas.
 
@@ -1463,23 +1463,24 @@ Confluence representa la culminación de la evolución de las herramientas wiki 
 
 Estos son algunos de los tipos de páginas compatibles con Confluence de manera predeterminada:
 
-Página de documentación: se utiliza para crear documentación. Como todas las páginas, puede incluir encabezados, viñetas, listas numeradas, tablas y otros estilos que esperaría encontrar en la documentación técnica.
-Notas de la reunión: diseñado específicamente para capturar actas de reuniones y cosas como elementos de acción, así como otra información discutida durante las reuniones.
-Entrada de blog: generalmente se utiliza para aportar ideas informales en un formato similar a un blog.
-Página en blanco: una página vacía donde puedes crear contenido utilizando las herramientas de edición de Confluence.
+* **Documentation Page**: Se utiliza para crear documentación. Como todas las páginas, puede incluir encabezados, viñetas, listas numeradas, tablas y otros estilos que esperaría encontrar en la documentación técnica.
+* **Meeting Notes**: Diseñado específicamente para capturar actas de reuniones y cosas como elementos de acción, así como otra información discutida durante las reuniones.
+* **Blog Post**: Generalmente se utiliza para aportar ideas informales en un formato similar a un blog.
+* **Blank Page**: Una página vacía donde puedes crear contenido utilizando las herramientas de edición de Confluence.
+
 Para crear su propia versión en la nube de Confluence, diríjase a https://www.atlassian.com/software/confluence.
 
 Confluence se divide en espacios que representan a los equipos. Los espacios pueden tener permisos para determinar quién puede ver, editar y crear páginas dentro de un espacio. Dentro de un espacio, las páginas individuales pueden tener restricciones más granulares, por lo que, por ejemplo, si estás colaborando en una página pero aún no estás listo para compartirla, puedes otorgar permisos solo al grupo de trabajo de la página y restringir a todos los demás.
 
-Para crear una página nueva, haga clic en el botón Crear y seleccione una plantilla adecuada. Déle un título a la página y, a continuación, pase la tecla Tab o haga clic en el marco de contenido que se encuentra debajo del título.
+Para crear una página nueva, haga clic en el botón Create y seleccione una plantilla adecuada. Déle un título a la página y, a continuación, pase la tecla Tab o haga clic en el frame de contenido que se encuentra debajo del título.
 
-Ahora puede escribir libremente en el marco de contenido o puede presionar la tecla / para seleccionar entre las muchas opciones, como Imagen, Tabla o Fragmento de código. Si otra persona está editando al mismo tiempo que usted, Confluence mostrará una pequeña bandera con sus iniciales, que marcará su ubicación.
+Ahora puede escribir libremente en el frame de contenido o puede presionar la tecla **`/`** para seleccionar entre las muchas opciones, como Imagen, Tabla o Fragmento de código. Si otra persona está editando al mismo tiempo que usted, Confluence mostrará una pequeña bandera con sus iniciales, que marcará su ubicación.
 
-Para insertar una imagen, puede arrastrar y soltar un archivo de imagen desde el sistema de archivos a su página de Confluence, o puede copiar y pegar imágenes desde el portapapeles, o puede hacer clic en / y seleccionar Imagen, Video o Archivo y luego seleccionar el archivo de imagen.
+Para insertar una imagen, puede arrastrar y soltar un archivo de imagen desde el sistema de archivos a su página de Confluence, o puede copiar y pegar imágenes desde el portapapeles, o puede hacer clic en **`/`** y seleccionar Imagen, Video o Archivo y luego seleccionar el archivo de imagen.
 
 Puede cambiar el tamaño de la imagen arrastrando y soltando los bordes. Al hacer clic en la imagen, aparecen opciones de edición adicionales debajo de la imagen, como bordes, alineación de la imagen, etc. La figura 3.35 muestra cómo insertar una imagen.
 
-Seleccione Tabla para insertar una nueva tabla. Puede seleccionar una celda, varias celdas, filas enteras, columnas enteras o la tabla completa. Cuando realiza una selección, aparece una pequeña flecha en la parte superior derecha de una celda. Haga clic en la flecha para abrir un menú contextual con opciones para cambiar el fondo o agregar o eliminar filas o columnas. La Figura 3.36 muestra cómo insertar una tabla.
+Seleccione Table para insertar una nueva tabla. Puede seleccionar una celda, varias celdas, filas enteras, columnas enteras o la tabla completa. Cuando realiza una selección, aparece una pequeña flecha en la parte superior derecha de una celda. Haga clic en la flecha para abrir un menú contextual con opciones para cambiar el fondo o agregar o eliminar filas o columnas. La Figura 3.36 muestra cómo insertar una tabla.
 
 <img width="912" alt="image" src="https://github.com/user-attachments/assets/215d8fbb-9cba-4ca6-9132-5ea77d93872a" />
 
@@ -1491,32 +1492,25 @@ Seleccione Tabla para insertar una nueva tabla. Puede seleccionar una celda, var
 
 La Tabla 3.5 muestra algunas macros útiles para que puedas hacerte una idea de su funcionalidad. Puedes experimentar con ellas cuando quieras.
 
-A medida que use Confluence, aprenderá optimizaciones divertidas como escribir {note} para crear un cuadro de nota o pegar una URL de Jira para conectar automáticamente el ticket a la página, incluido el estado en el momento de la representación de la página.
+A medida que use Confluence, aprenderá optimizaciones divertidas como escribir **` {note}`** para crear un cuadro de nota o pegar una URL de Jira para conectar automáticamente el ticket a la página, incluido el estado en el momento de la representación de la página.
 
 **TABLA 3.5: Macros de Confluence seleccionadas**
 
 <img width="904" alt="image" src="https://github.com/user-attachments/assets/2d5fefd5-883e-415b-a2e3-662273311ffe" />
 
-OPERADOR	DESCRIPCIÓN
-Mesa	Crea una tabla
-Fragmento de código	Crea código formateado
-Panel de notas/sugerencias/éxito/advertencia/error	Crea texto con un icono apropiado para marcar la atención.
-Título 1, 2, 3, etc.	Crea un esquema
-Tabla de contenido	Muestra los encabezados en una tabla de contenido para la navegación.
-Expandir	Muestra un enlace que se puede expandir para mostrar más detalles.
-Sobresalir	Incorpora una pestaña de hoja de cálculo
-REFERENCIAS ADICIONALES
-https://git-scm.com/docs
-Documentación de referencia completa de Git
+## REFERENCIAS ADICIONALES
 
-https://nvie.com/posts/a-successful-git-branching-model
-Artículo original de Gitflow de Vincent Driessen
+* https://git-scm.com/docs
+   Documentación de referencia completa de Git
 
-https://www.atlassian.com/software/jira
-Documentación de Jira
+* https://nvie.com/posts/a-successful-git-branching-model
+   Artículo original de Gitflow de Vincent Driessen
 
-https://www.atlassian.com/software/confluence
-Documentación de Confluence
+* https://www.atlassian.com/software/jira
+   Documentación de Jira
+
+* https://www.atlassian.com/software/confluence
+   Documentación de Confluence
 
 ## RESUMEN
 
