@@ -1181,7 +1181,6 @@ He aquí un ejemplo:
 
 ![image](https://github.com/user-attachments/assets/bdd7d785-4a18-4b40-ab46-56e6367c8c23)
 
-
 Nuevamente, te animamos a que juegues con todos ellos para familiarizarte con el uso de Markdown.
 
 ### Uso de Gitflow para la colaboración
@@ -1202,148 +1201,159 @@ La figura 3.17 muestra los pasos.
 
 **FIGURA 3.17: Gitflow workflow**
 
-AQUIIIIIIII
+1. El primer paso es crear una nueva rama llamada ***develop*** a partir de la rama ***main***. Esta es una tarea que se realiza una sola vez. La rama ***develop*** es una rama que recopila todo, pero nada se asigna directamente a ***develop***. La rama ***develop*** solo recibe merges de otras ramas. Una vez que se crea ***develop***, permanece durante la vida útil del proyecto.
 
-1. El primer paso es crear una nueva rama llamada desarrollo a partir de la rama principal . Esta es una tarea que se realiza una sola vez. La rama desarrollo es una rama que recopila todo, pero nada se asigna directamente a desarrollo . La rama desarrollo solo recibe fusiones de otras ramas. Una vez que se crea desarrollo , permanece durante la vida útil del proyecto.
+2. Cuando se acuerda una característica, se crea una rama ***feature*** para esa feature. Normalmente, la empresa definirá un requisito para esa feature y lo rastreará(track it) en algún sistema de seguimiento como **Jira** (que abordaremos en la siguiente sección). El sistema de seguimiento(tracking system) asignará una clave(key) a este requisito y, aunque el nombre de la rama de características es flexible, es común darle un nombre que comience con ***`feature/`*** seguido de la clave y una descripción extremadamente breve pero explicativa (no se permiten espacios, así que use guiones). Un ejemplo de nombre de rama de características podría ser algo como ***`feature/RWJ-1234-add-ui-login`****, donde ***RWJ-1234*** es la Jira key para esta nueva feature de "add a UI login".
 
-2. Cuando se acuerda una característica, se crea una rama de características para esa característica. Normalmente, la empresa definirá un requisito para esa característica y lo rastreará en algún sistema de seguimiento como Jira (que abordaremos en la siguiente sección). El sistema de seguimiento asignará una clave a este requisito y, aunque el nombre de la rama de características es flexible, es común darle un nombre que comience con feature/ seguido de la clave y una descripción extremadamente breve pero explicativa (no se permiten espacios, así que use guiones). Un ejemplo de nombre de rama de características podría ser algo como feature/RWJ-1234-add-ui-login , donde RWJ-1234 es la clave de Jira para esta nueva característica de "agregar un inicio de sesión de UI".
+3. A medida que los equipos trabajan en sus ramas feature, continúan desarrollando código y commitear. El servidor de compilación ejecuta una compilación en cada commit. Consulte el Capítulo 4 , “Automating Your CI/CD Builds with Maven, Gradle, and Jenkins”, para obtener más detalles.
 
-3. A medida que los equipos trabajan en sus ramas de funciones, continúan desarrollando código y confirmando. El servidor de compilación ejecuta una compilación en cada confirmación. Consulte el Capítulo 4 , “Automatización de sus compilaciones de CI/CD con Maven, Gradle y Jenkins”, para obtener más detalles.
+4. Cuando se considera que una feature está completa, se vuelve a merged con la rama ***develop***. Recuerde que la rama ***develop*** ha estado evolucionando en paralelo mientras usted trabajaba, ya que otros miembros del equipo estaban escribiendo su propio código. Por lo tanto, se verá diferente a cuando originalmente ramificó la rama de la feature. Por lo tanto, se requiere nuevamente un nuevo ciclo de compilación y prueba, y eso es exactamente lo que hace el servidor de compilación(build server).
 
-4. Cuando se considera que una característica está completa, se vuelve a fusionar con la rama de desarrollo . Recuerde que la developrama ha estado evolucionando en paralelo mientras usted trabajaba, ya que otros miembros del equipo estaban escribiendo su propio código. Por lo tanto, se verá diferente a cuando originalmente ramificó la rama de la característica. Por lo tanto, se requiere nuevamente un nuevo ciclo de compilación y prueba, y eso es exactamente lo que hace el servidor de compilación.
+5. La rama ***develop*** está lista para su lanzamiento(release). Cree una nueva rama ***release*** a partir de la rama ***develop*** denominada ***`release/`*** seguida de una release version. Pero el proceso no termina aquí. Ahora que se ha cortado la rama release, el desarrollo puede seguir evolucionando en la rama ***develop*** para futuros releases, y solo este release se mantiene en la rama ***release***.
 
-5. La rama de desarrollo está lista para su lanzamiento. Cree una nueva rama de lanzamiento a partir de la rama de desarrollo denominada release / seguida de una versión de lanzamiento. Pero el proceso no termina aquí. Ahora que se ha cortado la rama de lanzamiento, el desarrollo puede seguir evolucionando en la rama de desarrollo para futuros lanzamientos, y solo este lanzamiento se mantiene en la rama de lanzamiento .
+6. La rama ***release*** ahora está probada, posiblemente por un equipo de **control de calidad - quality assurance (QA)**.
 
-6. La rama de lanzamiento ahora está probada, posiblemente por un equipo de control de calidad (QA).
+7. Se informan los errores(Bugs), se corrigen y se vuelven a mergear para develop.
 
-7. Se informan los errores, se corrigen y se vuelven a fusionar para desarrollarlos.
+8. Cuando se certifica que la rama release está lista para su release, se merged con la rama ***main*** y se corta una release *tag* en la rama ***main***. La rama ***main*** realiza un seguimiento(tracks) de todos los releases históricos y es fácil reproducir un release anterior consultando la release tag de cualquier release. 
 
-8. Cuando se certifica que la rama de lanzamiento está lista para su lanzamiento, se fusiona con la rama principal y se corta una etiqueta de lanzamiento en la rama principal . La rama principal realiza un seguimiento de todos los lanzamientos históricos y es fácil reproducir un lanzamiento anterior consultando la etiqueta de lanzamiento de cualquier lanzamiento.
+9. Hemos publicado(released) el código en producción, pero aún no hemos terminado. Alguien descubre un error(bug) en producción, se crea una hotfix branch, se trabaja para solucionar el error y repetimos el proceso desde el paso 5.
 
-9. Hemos publicado el código en producción, pero aún no hemos terminado. Alguien descubre un error en producción, se crea una rama de revisión, se trabaja para solucionar el error y repetimos el proceso desde el paso 5.
+10. Al igual que con los cambios en cualquier rama, los cambios realizados en la hotfix branch deben fusionarse nuevamente con la rama ***develop***.
 
-10. Al igual que con los cambios en cualquier rama, los cambios realizados en la rama de revisión deben fusionarse nuevamente con la rama de desarrollo .
-
-11. Cuando esté lista, la rama de revisión se fusionará con la principal y se etiquetará para su lanzamiento.
+11. Cuando esté lista, la hotfix branch se merged con la ***main*** y se etiquetará(tagged) para su release.
 
 Algunos de los beneficios de Gitflow:
 
-Las características están aisladas, lo que facilita la gestión de sus propios cambios de características de forma aislada.
-Fácil mantenimiento de diferentes versiones.
-Las características están separadas, lo que le permite decidir qué características incluir en la versión.
-CONSEJO  Una desventaja: si está descargando las compilaciones de instantáneas, puede encontrar conflictos de versiones cuando diferentes equipos compilan sus funciones. Cuando eso sucede, los binarios generados tendrán todos el mismo -SNAPSHOT número de versión para conjuntos de funciones completamente diferentes. Esto no es un impedimento, porque si está implementando instantáneas, los equipos pueden coordinarse entre sí para decidir qué publicar.
+* Las features están aisladas, lo que facilita la gestión de sus propios cambios de feature de forma aislada.
+* Fácil mantenimiento de diferentes versiones.
+* Las features están separadas, lo que le permite decidir qué features incluir en la versión.
+
+<hr>
+
+**TIP**: Una desventaja: si está descargando las snapshot builds (compilaciones de instantáneas), puede encontrar conflictos de versiones cuando diferentes equipos compilan sus features. Cuando eso sucede, los binarios generados tendrán todos el mismo **`-SNAPSHOT`** número de versión para conjuntos de feature completamente diferentes. Esto no es un impedimento, porque si está implementando instantáneas(deploying snapshots), los equipos pueden coordinarse entre sí para decidir qué publicar.
+
+<hr>
 
 ## USO DE JIRA PARA LA COLABORACIÓN DE PROCESOS EMPRESARIALES
 
 Antiguamente, el software se desarrollaba siguiendo un método en cascada, es decir, un proceso secuencial por fases en el que el progreso fluía hacia abajo, como una cascada.
 
-Primero se prepararon y aprobaron los requisitos funcionales. Luego vino la fase de diseño seguida de la implementación, que duraría algún tiempo. Finalmente, se probaría, implementaría y entregaría al cliente. El proceso completo podría llevar meses o años y, al final, el cliente podría haber quedado satisfecho o no, y era difícil asignar recursos porque las fases eran secuenciales y requerían analistas de negocios (BA) al principio, arquitectos y desarrolladores en el medio, y probadores y personal de lanzamiento al final.
+Primero se prepararon y aprobaron los requisitos funcionales. Luego vino la fase de diseño seguida de la implementación, que duraría algún tiempo. Finalmente, se probaría, implementaría y entregaría al cliente. El proceso completo podría llevar meses o años y, al final, el cliente podría haber quedado satisfecho o no, y era difícil asignar recursos porque las fases eran secuenciales y requerían analistas de negocios (BA) al principio, arquitectos y desarrolladores en el medio, y testers y personal de lanzamiento al final.
 
-En 2001, nació el Manifiesto Ágil, que presentó al mundo un enfoque en capas para el desarrollo de software. Escucharás procesos ágiles con nombres como Scrum y Programación Extrema . Cada dos o tres semanas comenzaría un nuevo sprint , encargado de la entrega de un subconjunto completo de requisitos. Las tareas se asignarían al sprint y progresarían a través de un flujo de trabajo. Todos los roles estaban involucrados en cada sprint, incluidos el negocio, los diseñadores, los desarrolladores, el control de calidad, etc. Los requisitos eran dinámicos, potencialmente evolucionaban con cada sprint, y cada pocos ciclos se entregaba algún producto al negocio. Otro enfoque ágil llamado Kanban observó que los trabajos no siempre están limitados en el tiempo, e incluso si lo estuvieran, no necesariamente eran las mismas ventanas de tiempo. Kanban eliminó los sprints y, en su lugar, pidió a los equipos que analizaran su proceso y lo dividieran en una secuencia de columnas como diseño, desarrollo, prueba, lanzamiento. Imponían límites de trabajo en proceso (WIP) en cada columna y utilizaban un sistema de extracción en el que los tickets de trabajo comenzaban en la izquierda y se extraían hacia la derecha a medida que avanzaban. A medida que los desarrolladores terminaban el trabajo en su columna, extraían más trabajo de la columna anterior.
+En 2001, nació el Manifiesto Ágil, que presentó al mundo un enfoque en capas para el desarrollo de software. Escucharás procesos ágiles con nombres como ***Scrum*** y ***Extreme Programming***. Cada dos o tres semanas comenzaría un nuevo ***sprint***, encargado de la entrega de un subconjunto completo de requisitos. Las tareas se asignarían al sprint y progresarían a través de un flujo de trabajo. Todos los roles estaban involucrados en cada sprint, incluidos el negocio, los diseñadores, los desarrolladores, el control de calidad, etc. Los requisitos eran dinámicos, potencialmente evolucionaban con cada sprint, y cada pocos ciclos se entregaba algún producto al negocio. Otro enfoque ágil llamado ***Kanban*** observó que los trabajos no siempre están limitados en el tiempo, e incluso si lo estuvieran, no necesariamente eran las mismas ventanas de tiempo. Kanban eliminó los sprints y, en su lugar, pidió a los equipos que analizaran su proceso y lo dividieran en una secuencia de columnas como design, develop, test, release. Imponían límites de trabajo en proceso (WIP) en cada columna y utilizaban un sistema de extracción en el que los tickets de trabajo comenzaban en la izquierda y se extraían hacia la derecha a medida que avanzaban. A medida que los desarrolladores terminaban el trabajo en su columna, extraían más trabajo de la columna anterior.
 
-Jira de Atlassian es una de las herramientas de software más populares para gestionar todo lo relacionado con Agile. Puedes seleccionar un tablero Scrum donde el trabajo se divide en sprints de tamaño configurable o un tablero Kanban con límites de trabajo en progreso.
+**Jira de Atlassian** es una de las herramientas de software más populares para gestionar todo lo relacionado con Agile. Puedes seleccionar un tablero Scrum donde el trabajo se divide en sprints de tamaño configurable o un tablero Kanban con límites de trabajo en progreso.
 
-Jira tiene integración con GitHub y muchos otros sistemas de control de versiones, por lo que cuando realiza confirmaciones, puede incluir una clave de problema y luego puede ver las confirmaciones asociadas con cualquier ticket de Jira.
+Jira tiene integración con GitHub y muchos otros sistemas de control de versiones, por lo que cuando realiza commits, puede incluir una clave de problema(issue key) y luego puede ver los commits asociados con cualquier ticket de Jira.
 
-Introducción a Jira
+### Introducción a Jira
+
 La mayoría de las empresas ya tienen Jira instalado, pero le recomendamos que lo pruebe por su cuenta. Puede utilizar la versión gratuita en la nube de Jira en https://www.atlassian.com/software/jira. La instalación local que se utiliza en la empresa puede tener un aspecto ligeramente diferente, pero los conceptos son idénticos.
 
 Jira es una interfaz de usuario basada en web que ha evolucionado mucho a lo largo de los años. Comenzó como un complicado programa de gestión de tickets y evolucionó hasta convertirse en una herramienta completa para la planificación y el mantenimiento de sprints, la creación y edición de problemas, la búsqueda, la administración de usuarios, la generación de informes, etc.
 
-Independientemente del tipo de tablero que utilice su proyecto, los tickets de Jira representan una parte del trabajo. Jira comenzó como un sistema de seguimiento de errores; por lo tanto, los tickets se denominan issues , pero muchas personas se refieren a ellos con cariño simplemente como jiras . Los issues vienen en muchos sabores, como epic , story , bug , task , subtask , etc. También puede crear sus propios tipos de issues.
+Independientemente del tipo de tablero(board) que utilice su proyecto, los tickets de Jira representan una parte del trabajo. Jira comenzó como un sistema de seguimiento de errores; por lo tanto, los tickets se denominan ***issues***, pero muchas personas se refieren a ellos con cariño simplemente como ***jiras***. Los issues vienen en muchos sabores, como ***epic***, ***story***, ***bug***, ***task***, ***subtask***, etc. También puede crear sus propios tipos de issues.
 
-Generalmente, las epopeyas se utilizan como padre de un grupo de historias, errores y tareas más pequeños y relacionados.
+Generalmente, los **epics** se utilizan como *parent* de un grupo de historias, errores y tareas más pequeños y relacionados.(group of smaller, related stories, bugs, and tasks.)
 
-Estos problemas más pequeños pueden contener sus propios problemas, que se denominan subtareas. Se pueden crear en cualquier orden, pero en el desarrollo empresarial una práctica común es adjuntar la mayoría de los problemas a una epopeya. Además, cada subtarea pertenece a un problema principal, como en la Figura 3.18 .
+Estos smaller issues pueden contener sus propios problemas, que se denominan subtareas(subtasks). Se pueden crear en cualquier orden, pero en el desarrollo empresarial una práctica común es adjuntar la mayoría de los problemas a una epic. Además, cada subtarea pertenece a un problema principal, como en la Figura 3.18 .
 
 <img width="859" alt="image" src="https://github.com/user-attachments/assets/b80fb3bc-83df-45b7-8f4d-e86db7cb2f53" />
 
-**FIGURA 3.18: Jerarquía de problemas de Jira**
+**FIGURA 3.18: Jira issue hierarchy - Jerarquía de problemas de Jira**
 
-Jira utiliza esta jerarquía para proporcionar una vista de arriba hacia abajo a la gerencia, que podría estar interesada solo en las epopeyas más grandes, y una vista de abajo hacia arriba a los colaboradores individuales, que se preocupan más por los detalles de implementación. Si bien está bien tener un pequeño porcentaje de tareas o errores "sueltos" que no estén en una epopeya, estos no son los que más le interesan a la gerencia.
+Jira utiliza esta jerarquía para proporcionar una vista de arriba hacia abajo a la gerencia, que podría estar interesada solo en las epics más grandes, y una vista de abajo hacia arriba a los colaboradores individuales, que se preocupan más por los detalles de implementación. Si bien está bien tener un pequeño porcentaje de tareas o errores "sueltos" que no estén en una epic, estos no son los que más le interesan a la gerencia.
 
-Creando un proyecto
-Los problemas se asignan a los proyectos. Si se incorpora a un equipo existente, normalmente habrá uno o más proyectos configurados. Si necesita crear un nuevo proyecto, vaya a la pestaña Proyectos y seleccione Crear proyecto, seleccione una plantilla adecuada y siga las instrucciones que aparecen allí, como se muestra en la Figura 3.19 .
+### Creando un proyecto
+
+Los problemas se asignan a los proyectos. Si se incorpora a un equipo existente, normalmente habrá uno o más proyectos configurados. Si necesita crear un nuevo proyecto, vaya a la pestaña Proyectos y seleccione Create Project, seleccione una plantilla adecuada y siga las instrucciones que aparecen allí, como se muestra en la Figura 3.19 .
 
 <img width="837" alt="image" src="https://github.com/user-attachments/assets/b8997124-3e06-4241-ad16-9aaca614beca" />
 
 **FIGURA 3.19: Creación de un nuevo proyecto**
 
-Existen tipos de tableros estándar para cada plantilla. Por ejemplo, para el desarrollo de software, puede seleccionar Kanban, Scrum, etc. Elegiremos Scrum para nuestro proyecto de ejemplo. Scrum le permite administrar sus entregas en sprints con límites de tiempo, que duran dos semanas de manera predeterminada. Kanban no tiene límites de tiempo, pero divide el tablero en columnas que representan tareas generales o equipos, y hay un límite de trabajo en proceso para cada columna del tablero, como en la Figura 3.20 .
+Existen tipos de tableros(board) estándar para cada plantilla. Por ejemplo, para el desarrollo de software, puede seleccionar **Kanban**, **Scrum**, etc. Elegiremos Scrum para nuestro proyecto de ejemplo. ***Scrum le permite administrar sus entregas en sprints con límites de tiempo, que duran dos semanas de manera predeterminada. Kanban no tiene límites de tiempo, pero divide el tablero en columnas que representan tareas generales o equipos, y hay un límite de trabajo en proceso para cada columna del tablero***, como en la Figura 3.20 .
 
 <img width="833" alt="image" src="https://github.com/user-attachments/assets/4a51b39a-4395-4948-9178-fe96a50596b9" />
 
 **FIGURA 3.20: Selección de una plantilla de proyecto**
 
-Creando un problema
-Para crear un nuevo problema en Jira, haga clic en el botón Crear, como en la Figura 3.21 .
+### Creando un Issue
+
+Para crear un nuevo issue en Jira, haga clic en el botón Create, como en la Figura 3.21 .
 
 <img width="829" alt="image" src="https://github.com/user-attachments/assets/f8de3626-0136-42e1-9b50-fbd08d2090b7" />
 
-**FIGURA 3.21: Creación de un nuevo problema**
+**FIGURA 3.21: Creación de un nuevo issue**
 
-Seleccione el tipo de problema y complete todos los detalles. Como todo lo relacionado con Jira, la pantalla se puede personalizar (y normalmente lo hace), por lo que la suya puede tener un aspecto diferente. Cada equipo tendrá sus propios campos, algunos obligatorios. A fines de la década de 1990, se introdujo una metodología ágil temprana llamada Programación extrema (XP) para proporcionar una forma fácil de usar de administrar los requisitos de manera ágil. Muchas organizaciones han adoptado la práctica XP de expresar problemas de tipo Historia en la forma “Como usuario de <rol>, quiero realizar <alguna actividad> para poder lograr <algún beneficio>”.
+Seleccione el tipo de issue y complete todos los detalles. Como todo lo relacionado con Jira, la pantalla se puede personalizar (y normalmente lo hace), por lo que la suya puede tener un aspecto diferente. Cada equipo tendrá sus propios campos, algunos obligatorios. A fines de la década de 1990, se introdujo una metodología ágil temprana llamada Programación extrema (XP) para proporcionar una forma fácil de usar de administrar los requisitos de manera ágil. Muchas organizaciones han adoptado la práctica XP de expresar problemas de tipo Historia en la forma “Como usuario de `<`rol`>`, quiero realizar `<`alguna actividad`>` para poder lograr `<`algún beneficio`>`”.
 
-Ingrese un resumen, una descripción, un cesionario (si se conoce) y otros campos según lo requiera su equipo, como en la Figura 3.22 .
+Ingrese un resumen, una descripción, un cesionario (si se conoce) y otros campos según lo requiera su equipo, como en la Figura 3.22.
 
 <img width="655" alt="image" src="https://github.com/user-attachments/assets/823cad34-7246-4c81-b861-fdb264b4e226" />
 
-**FIGURA 3.22: Completar el nuevo número**
+**FIGURA 3.22: Completar el nuevo issue**
 
-Vinculación a una epopeya
-Como práctica recomendada, la mayoría de los equipos tendrán una política de asignar la mayoría de los problemas a una épica principal. Puede vincular un problema a una épica cuando crea el problema, o puede agregar o cambiar el vínculo de la épica más tarde. Luego puede obtener una vista general de todo el proyecto al ver las épicas en el tablero del proyecto como en la Figura 3.23 .
+### Linking to an Epic - Vinculación a una Epic
+
+Como práctica recomendada, la mayoría de los equipos tendrán una política de asignar la mayoría de los issues(problemas) a una épica principal(parent epic). Puede vincular un issue a una epic cuando crea el issue, o puede agregar o cambiar el epic link(vínculo de la épica) más tarde. Luego puede obtener una vista general de todo el proyecto al ver las épicas en el tablero del proyecto como en la Figura 3.23 .
 
 <img width="663" alt="image" src="https://github.com/user-attachments/assets/b089a967-4287-4fb2-8dfd-705f99de324f" />
 
-**FIGURA 3.23: Asignación de una epopeya a un problema**
+**FIGURA 3.23: Asignación de una epic a un issue**
 
-Trabajando con tableros
-El verdadero beneficio de Jira comienza con el tablero . Nuestro proyecto de muestra es un sitio web basado en microservicios llamado Value Mark, que guía a los usuarios en la elección de empresas en las que invertir. Un usuario inicia sesión, el back end autentica al usuario y el navegador muestra marcos de interfaz de usuario relevantes para su función.
+### Trabajando con Boards
 
-De forma predeterminada, Jira lanza un tablero Scrum con tres columnas predeterminadas: To Do (Por hacer) , In Progress (En progreso ) y Done (Hecho) . También hay un área de backlog (que se puede mostrar como la primera columna) donde se recopila el trabajo y luego se puede asignar a un sprint adecuado. Arrastras jiras de una columna a otra para proporcionar una visualización del estado actual del proyecto y todos sus problemas. Cada columna se asigna a un estado y cada Jira tiene un campo llamado Status (Estado). Siempre que haces la transición de un jira a una nueva columna, el campo Status de ese Jira se actualiza con el estado de la columna de destino.
+El verdadero beneficio de Jira comienza con el ***board***. Nuestro proyecto de muestra es un sitio web basado en microservicios llamado **Value Mark**, que guía a los usuarios en la elección de empresas en las que invertir. Un usuario inicia sesión, el back end autentica al usuario y el navegador muestra UI frames relevantes para su función.
 
-Existe un rol conocido como Administrador del tablero. Los administradores del tablero tienen la capacidad de agregar, eliminar y secuenciar columnas, de acuerdo con el flujo de trabajo del proyecto .
+De forma predeterminada, Jira lanza un tablero Scrum con tres columnas predeterminadas: ***To Do (Por hacer), In Progress (En progreso ) y Done (Hecho)***. También hay un área ***backlog*** (que se puede mostrar como la primera columna) donde se recopila el trabajo y luego se puede asignar a un sprint adecuado. Arrastras jiras de una columna a otra para proporcionar una visualización del estado actual del proyecto y todos sus problemas. Cada columna se asigna a un estado y cada Jira tiene un campo llamado **Status**(Estado). Siempre que haces la transición de un jira a una nueva columna, el campo Status de ese Jira se actualiza con el estado de la columna de destino.
 
-El flujo de trabajo del proyecto, como se muestra en la Figura 3.24 , define todas las opciones de estado del proyecto y sus transiciones. Puede ver por el flujo de flechas que un problema ABIERTO puede pasar a EN PROGRESO, RESUELTO o CERRADO.
+Existe un rol conocido como Administrador del tablero(Board Administrator). Los administradores del tablero tienen la capacidad de agregar, eliminar y secuenciar columnas, de acuerdo con el ***project workflow***.
+
+El flujo de trabajo del proyecto, como se muestra en la Figura 3.24, define todas las opciones de estado del proyecto y sus transiciones. Puede ver por el flujo de flechas que un OPEN issue puede pasar a IN PROGRESS, RESOLVED, o CLOSED.
 
 <img width="678" alt="image" src="https://github.com/user-attachments/assets/eb1219f2-5d1a-4988-b2fd-26f9f0a3539d" />
 
 **FIGURA 3.24: Diseño de un flujo de trabajo**
 
-Creando un Sprint
+### Creando un Sprint
+
 Ahora que ha creado algunos problemas de Jira, es hora de asignar el trabajo. El trabajo que el equipo debe realizar se divide en sprints. Un sprint es un período con nombre (por ejemplo, VM Sprint 4 Aug 12-Aug 23), delimitado en el tiempo (por ejemplo, dos semanas), en el que se asigna trabajo al equipo.
 
-A partir de la pestaña de backlog en la Figura 3.25 , encontrará todos sus problemas en la parte inferior de la página, en la sección Backlog. Su primer sprint aparecerá con un nombre predeterminado y sin fechas, pero puede hacer clic en el ícono Agregar fechas para administrar el sprint. También puede crear sprints futuros, utilizando el mismo método que se muestra en la Figura 3.26 .
+A partir de la backlog tab en la Figura 3.25, encontrará todos sus issues en la parte inferior de la página, en la sección Backlog. Su primer sprint aparecerá con un nombre predeterminado y sin fechas, pero puede hacer clic en el ícono Add Dates para administrar el sprint. También puede crear sprints futuros, utilizando el mismo método que se muestra en la Figura 3.26 .
 
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/b4c5cd37-1019-4938-aca0-ce32ab3edb3a" />
 
-**FIGURA 3.25: Pestaña de cartera de pedidos**
+**FIGURA 3.25: Backlog tab**
 
 <img width="749" alt="image" src="https://github.com/user-attachments/assets/cd1245ee-fecc-4f74-92ca-66f387cdcd58" />
 
 **FIGURA 3.26: Creación de un sprint**
 
-Ahora que se han creado uno o más sprints, puedes arrastrar y soltar problemas en el sprint apropiado, como en la Figura 3.27 .
+Ahora que se han creado uno o más sprints, puedes arrastrar y soltar issues en el sprint apropiado, como en la Figura 3.27 .
 
-Una vez asignado el sprint, se puede iniciar haciendo clic en el botón Iniciar sprint en la parte superior izquierda.
+Una vez asignado el sprint, se puede iniciar haciendo clic en el botón Start Sprint en la parte superior izquierda.
 
 <img width="746" alt="image" src="https://github.com/user-attachments/assets/be17cc1d-1859-4a1a-9f97-005d189881df" />
 
 **FIGURA 3.27: Asignación de jiras a un sprint**
 
-Agregar usuarios
+### Agregar Users
+
 Un administrador de proyecto puede agregar y mantener usuarios y asignar roles. Haga clic en el ícono de engranaje en la parte inferior izquierda y haga clic en Acceso. Agregue sus usuarios y asígneles un rol.
 
-Una vez que se hayan agregado usuarios al proyecto, haga clic en Volver al proyecto a la izquierda. Ahora puede asignar usuarios a los problemas, como se muestra en la Figura 3.28 .
+Una vez que se hayan agregado usuarios al proyecto, haga clic en Back To Project a la izquierda. Ahora puede asignar usuarios a los issues, como se muestra en la Figura 3.28 .
 
-Agregar columnas
-Para agregar, eliminar o volver a secuenciar columnas, un administrador del tablero debe hacer clic en Columnas y estados en el lado izquierdo para iniciar la pantalla de mantenimiento de columnas.
+### Agregar columnas
+
+Para agregar, eliminar o volver a secuenciar columnas, un administrador del tablero debe hacer clic en Columns And Statuses en el lado izquierdo para iniciar la pantalla de mantenimiento de columnas.
 
 <img width="910" alt="image" src="https://github.com/user-attachments/assets/fc3568da-aaf0-446c-bd2b-a860396ff44d" />
 
-**FIGURA 3.28: Adición de usuarios**
+**FIGURA 3.28: Adición de users**
 
-Haga clic en el botón Crear columna + signo en el lado derecho para agregar columnas, como en la Figura 3.29 .
+Haga clic en el botón Create Column + sign en el lado derecho para agregar columnas, como en la Figura 3.29 .
 
 <img width="912" alt="image" src="https://github.com/user-attachments/assets/fb0b09bd-a74a-474c-bc74-76306cab9119" />
 
@@ -1355,24 +1365,27 @@ Ahora el administrador del tablero puede agregar nuevas columnas, renombrar las 
 
 **FIGURA 3.30: Mantenimiento de la columna**
 
-Uso de filtros
-A medida que más y más Jiras llenan el tablero, puede resultar difícil separar los problemas. Por ejemplo, durante las reuniones de pie, los equipos pueden pasar de una persona a otra para preguntar qué logró ayer, en qué trabajará hoy y si hay algún obstáculo. Cuando llegue su turno, ¿no sería conveniente mostrar el tablero solo con sus Jiras y ocultar todos los demás? Ese es el propósito de los filtros.
+### Uso de filtros
+
+A medida que más y más Jiras llenan el tablero, puede resultar difícil separar los issues. Por ejemplo, durante las reuniones stand-up, los equipos pueden pasar de una persona a otra para preguntar qué logró ayer, en qué trabajará hoy y si hay algún obstáculo. Cuando llegue su turno, ¿no sería conveniente mostrar el tablero solo con sus Jiras y ocultar todos los demás? Ese es el propósito de los filtros.
 
 Los filtros se pueden configurar para filtrar por usuarios o de hecho por cualquier otra propiedad o propiedades de tus jiras, usando JQL, como veremos en los siguientes apartados.
 
-Viendo mis problemas
-Puede ver todos sus problemas, en todos los tableros y en la lista de trabajos pendientes, seleccionando Filtros/Mis problemas abiertos según la Figura 3.31 .
+### Viendo mis Issues
 
-Desde la misma pantalla, puede ingresar consultas en JQL haciendo clic en Cambiar a JQL.
+Puede ver todos sus Issues, en todos los tableros y en la lista de trabajos pendientes, seleccionando Filters/My Open Issues según la Figura 3.31 .
+
+Desde la misma pantalla, puede ingresar consultas en *JQL* haciendo clic en Switch To JQL.
 
 <img width="910" alt="image" src="https://github.com/user-attachments/assets/9725ccb2-7d1b-4e2a-a42a-fdea1fb13475" />
 
-**FIGURA 3.31: Visualización de mis problemas**
+**FIGURA 3.31: Visualización de mis Issues**
 
-Consultas con JQL
-El lenguaje de consulta de Jira ( JQL ) ofrece a cualquier usuario la posibilidad de seleccionar Jira en función de criterios de selección. Es un lenguaje sencillo: se especifican uno o más campos y valores para esos campos y una order bycláusula.
+### Consultas con JQL
 
-Una consulta JQL consta de una o más cláusulas de selección de campo seguidas de una order bycláusula. Las cláusulas de selección de campo están separadas por ANDo ORy se pueden agrupar mediante paréntesis.
+El ***Jira Query Language (JQL)*** ofrece a cualquier usuario la posibilidad de seleccionar Jira en función de criterios de selección. Es un lenguaje sencillo: se especifican uno o más campos y valores para esos campos y una cláusula **`order by`**.
+
+Una consulta JQL consta de una o más cláusulas de selección de campo seguidas de una cláusula **`order by`**. Las cláusulas de selección de campo están separadas por **`AND`** o **`OR`** y se pueden agrupar mediante paréntesis.
 
 Una cláusula de selección de campo consta de un campo seguido de un operador y un valor. Las tablas 3.2 , 3.3 y 3.4 muestran los operadores válidos.
 
@@ -1380,62 +1393,36 @@ Una cláusula de selección de campo consta de un campo seguido de un operador y
 
 <img width="348" alt="image" src="https://github.com/user-attachments/assets/ab46e46d-a727-47a0-b84c-ee120d650daa" />
 
-OPERADOR	DESCRIPCIÓN
-=	El valor del campo es igual al valor especificado
-!=	No es igual
-<	Menos que
->	Más que
-<=	Menor o igual a
->=	Mayor o igual a
-IN	En una lista de valores
-NOT IN	No está en una lista de valores
-IS	Es un valor especificado
-IS NOT	No es un valor especificado
-WAS	Tenía un valor específico en el pasado
-WAS IN	Estaba en una lista de valores en el pasado.
-WAS NOT IN	No estaba en una lista de valores en el pasado
-CHANGED	El campo fue cambiado a un valor especificado
-BY	El campo fue cambiado por un usuario específico
-AFTER	El campo de fecha cayó después de una fecha u hora especificada
-BEFORE	El campo de fecha cayó antes de una fecha u hora especificada
-DURING	El campo de fecha se produjo durante un rango de fechas específico
-
 **TABLA 3.3 :Operadores lógicos**
 
 <img width="382" alt="image" src="https://github.com/user-attachments/assets/41159c12-4feb-4a3e-9dd7-167429c4e419" />
 
-
-OPERADOR	DESCRIPCIÓN
-AND	Y lógico
-OR	OR lógico
-NOT	NO lógico
-Las cláusulas se pueden separar con las palabras clave AND, OR, y NOT. Para ordenar por uno o más campos, puede finalizar la consulta con ORDER BYy un nombre de campo. Puede controlar el orden de clasificación con ASC(predeterminado) o DESC.
+Las cláusulas se pueden separar con las palabras clave **`AND`**, **`OR`**, y **`NOT`**. Para ordenar por uno o más campos, puede finalizar la consulta con **`ORDER BY`** y un nombre de campo. Puede controlar el orden de clasificación con **`ASC`**(predeterminado) o **`DESC`**.
 
 **TABLA 3.4: Operadores especiales**
 
 <img width="765" alt="image" src="https://github.com/user-attachments/assets/4764d427-1c5e-45d2-ab8f-07eaf54959f7" />
 
-OPERADOR	DESCRIPCIÓN
-EMPTY	El valor del campo está vacío.
-NOT EMPTY	El valor del campo no está vacío.
-NULL	El campo tiene un valor nulo.
-NOT NULL	El campo no es nulo.
-~	Coincide con una expresión regular.
-~*	Coincide con una expresión regular, sin distinguir entre mayúsculas y minúsculas.
-!~	No coincide con una expresión regular.
-!~*	No coincide con una expresión regular, no distingue entre mayúsculas y minúsculas.
-CURRENTUSER	Usuario actual.
-currentUser	Igual que CURRENTUSER, pero sin distinguir entre mayúsculas y minúsculas.
-También puede utilizar caracteres comodín ( *) para coincidencias parciales. Por ejemplo, esta consulta busca todos los jira con un resumen que comience con improvement:
+También puede utilizar caracteres comodín (**`*`**) para coincidencias parciales. Por ejemplo, esta consulta busca todos los jira con un resumen que comience con improvement:
 
+```sh
 summary ~* "improvement*
-Puede utilizar los caracteres especiales dpara días, hhoras, etc., como se muestra en esta consulta para encontrar todos los jiras resueltos en los últimos tres días:
+```
 
+Puede utilizar los caracteres especiales **`d`** para días, **`h`** horas, etc., como se muestra en esta consulta para encontrar todos los jiras resueltos en los últimos tres días:
+
+```sh
 status = resolved AND resolved>= -3d
-Los paréntesis se pueden utilizar para agrupar cláusulas y controlar a qué se aplican los operadores lógicos. Esta consulta busca los jiras en el proyecto Value Mark que se encuentran en estado Sin resolver, asignados al usuario que ha iniciado sesión actualmente, con prioridad Alta o Crítica:
+```
 
+Los paréntesis se pueden utilizar para agrupar cláusulas y controlar a qué se aplican los operadores lógicos. Esta consulta busca los jiras en el proyecto Value Mark que se encuentran en estado Unresolved (Sin resolver), asignados al usuario que ha iniciado sesión actualmente, con prioridad High o Critical:
+
+```sh
 project = "Value Mark" and assignee = currentUser() AND resolution = Unresolved AND priority in (High, Critical) order by updated DESC
-Realizar cambios masivos
+```
+
+### Realizar Bulk Changes
+
 Puede modificar una selección de Jiras en función de una consulta JQL. Desde la pantalla JQL, puede hacer clic en el botón Cambio masivo y luego hacer clic en la casilla de verificación junto a cada problema que desee cambiar, como en la Figura 3.32 .
 
 <img width="827" alt="image" src="https://github.com/user-attachments/assets/3da57064-9a47-43ce-8f8d-a64454f379cb" />
