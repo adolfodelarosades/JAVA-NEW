@@ -46,7 +46,7 @@ Uno de los cambios introducidos bajo la dirección de Oracle fue un cronograma d
 
 **FIGURA 1.1: Versiones de Java**
 
-Con el nuevo ritmo de lanzamiento, cada seis meses sale una nueva versión de Java. Puede que pienses que muchas empresas no quieren actualizar cada seis meses, ¡y tienes razón! También hay lanzamientos menos frecuentes llamados lanzamientos de soporte a largo plazo ( Long-Term Support - LTS ). Cuando comenzó el nuevo ciclo de lanzamiento, los lanzamientos de LTS se hacían cada tres años. Ahora se hacen cada dos años.
+Con el nuevo ritmo de lanzamiento, cada seis meses sale una nueva versión de Java. Puede que pienses que muchas empresas no quieren actualizar cada seis meses, ¡y tienes razón! También hay lanzamientos menos frecuentes llamados lanzamientos de soporte a largo plazo (**Long-Term Support - LTS**). Cuando comenzó el nuevo ciclo de lanzamiento, los lanzamientos de LTS se hacían cada tres años. Ahora se hacen cada dos años.
 
 La Tabla 1.1 muestra los lanzamientos desde el inicio de la nueva cadencia de lanzamientos hasta la publicación de este libro. Como puede ver, ahora hay lanzamientos regulares y predecibles. Este libro utiliza Java 21, que era la última versión de larga duración en el momento de la impresión.
 
