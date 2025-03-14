@@ -138,7 +138,7 @@ Quizás hayas notado que no llamamos **`List.of()`** en lugar de **`Arrays.asLis
 
 ### Módulos de codificación de Java 11
 
-El sistema de módulos de la plataforma Java ( Java Platform Module System - JPMS) agrupa el código en un nivel superior al de los paquetes. El objetivo principal de un módulo es proporcionar grupos de paquetes relacionados para ofrecer un conjunto particular de funciones a los desarrolladores. Es como un archivo JAR, excepto que el desarrollador elige qué paquetes son accesibles fuera del módulo. Muchas empresas optan por no utilizar módulos y, de hecho, su uso es opcional.
+El sistema de módulos de la plataforma Java (**Java Platform Module System - JPMS**) agrupa el código en un nivel superior al de los paquetes. El objetivo principal de un módulo es proporcionar grupos de paquetes relacionados para ofrecer un conjunto particular de funciones a los desarrolladores. Es como un archivo JAR, excepto que el desarrollador elige qué paquetes son accesibles fuera del módulo. Muchas empresas optan por no utilizar módulos y, de hecho, su uso es opcional.
 
 Los módulos de Java se introdujeron en Java 9, no en Java 11. Los incluimos en Java 11 porque esa fue la primera versión LTS de Java que admitió módulos. Todos los proyectos en una versión de Java anterior a la 8 se actualizarán a Java 11, 17, 21, etc. No pasarán a la 9, ya que el soporte para Java 9 finalizó en marzo de 2018 (seis meses después de su lanzamiento en septiembre de 2017).
 
