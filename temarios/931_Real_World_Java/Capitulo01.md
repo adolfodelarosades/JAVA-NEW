@@ -96,7 +96,7 @@ Antes de Java 5, el compilador no tenía forma de saber qué se quería incluir 
 
 Ahora que hemos informado al compilador sobre nuestra intención, es nuestro asistente. El compilador producirá un error si intentamos agregar un **`Integer`** o **`LocalDate`** o cualquier otra cosa a **`buildingNames`**.
 
-Quizás te preguntes por qué la línea 7 no lo dice **`new ArrayList<>()`** y, en su lugar, utiliza una versión más larga. El operador de diamante (**`<>`**) se agregó en Java 7 y este ejemplo es para Java 5. ¡Pero incluso esto muestra la evolución del lenguaje!
+Quizás te preguntes por qué la línea 7 no dice **`new ArrayList<>()`** y, en su lugar, utiliza una versión más larga. El operador de diamante (**`<>`**) se agregó en Java 7 y este ejemplo es para Java 5. ¡Pero incluso esto muestra la evolución del lenguaje!
 
 ### Codificación con programación funcional desde Java 8
 
