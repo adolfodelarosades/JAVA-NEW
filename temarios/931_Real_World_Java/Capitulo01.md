@@ -142,7 +142,7 @@ El sistema de módulos de la plataforma Java (**Java Platform Module System - JP
 
 Los módulos de Java se introdujeron en Java 9, no en Java 11. Los incluimos en Java 11 porque esa fue la primera versión LTS de Java que admitió módulos. Todos los proyectos en una versión de Java anterior a la 8 se actualizarán a Java 11, 17, 21, etc. No pasarán a la 9, ya que el soporte para Java 9 finalizó en marzo de 2018 (seis meses después de su lanzamiento en septiembre de 2017).
 
-Un módulo es un archivo Java ( Java Archive - JAR ) que consta de un archivo **`module-info.java`** en la raíz del proyecto y uno o más paquetes Java. Por ejemplo, aquí hay un módulo con dos paquetes que contienen una clase cada uno:
+**Un módulo es un archivo Java (Java Archive - JAR)** que consta de un archivo **`module-info.java`** en la raíz del proyecto y uno o más paquetes Java. Por ejemplo, aquí hay un módulo con dos paquetes que contienen una clase cada uno:
 
 ![image](https://github.com/user-attachments/assets/2309c235-9e4c-4bb1-a6fd-6a47e53fc6d1)
 
