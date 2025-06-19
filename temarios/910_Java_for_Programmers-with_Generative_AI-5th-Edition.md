@@ -536,928 +536,928 @@ Registre su libro para acceder fácilmente a descargas, actualizaciones y correc
 
    * 9.12 Other Interface Features
 
-9.12.1 default Interface Methods
+      * 9.12.1 default Interface Methods
 
-9.12.2 static Interface Methods
+      * 9.12.2 static Interface Methods
 
-9.12.3 Functional Interfaces
+      * 9.12.3 Functional Interfaces
 
-9.12.4 private Interface Methods
+      * 9.12.4 private Interface Methods
 
-9.13 Program to an Interface, Not an Implementation
+   * 9.13 Program to an Interface, Not an Implementation
 
-9.13.1 CompensationModel Interface
+      * 9.13.1 CompensationModel Interface
 
-9.13.2 An Employee Has a CompensationModel—Composition and Dependency Injection
+      * 9.13.2 An Employee Has a CompensationModel—Composition and Dependency Injection
 
-9.13.3 CompensationModel Implementations
+      * 9.13.3 CompensationModel Implementations
 
-9.13.4 Testing the CompensationModel Hierarchy
+      * 9.13.4 Testing the CompensationModel Hierarchy
 
-9.13.5 Dependency Injection Design Benefits
+      * 9.13.5 Dependency Injection Design Benefits
 
-9.13.6 interfaces vs. abstract Classes
+      * 9.13.6 interfaces vs. abstract Classes
 
-9.14 sealed Classes and Interfaces
+   * 9.14 sealed Classes and Interfaces
 
-9.15 private Constructors
+   * 9.15 private Constructors
 
-9.16 protected Members
+   * 9.16 protected Members
 
-9.17 Wrap-Up
+   * 9.17 Wrap-Up
 
-10 Exception Handling: A Deeper Look
+* 10 Exception Handling: A Deeper Look
 
-10.1 Introduction
+   * 10.1 Introduction
 
-10.2 Example: Divide by Zero without Exception Handling
+   * 10.2 Example: Divide by Zero without Exception Handling
 
-10.3 Example: Handling ArithmeticExceptions and InputMismatchExceptions
+   * 10.3 Example: Handling ArithmeticExceptions and InputMismatchExceptions
 
-10.4 Java Exception Hierarchy
+   * 10.4 Java Exception Hierarchy
 
-10.5 Checked vs. Unchecked Exceptions
+   * 10.5 Checked vs. Unchecked Exceptions
 
-10.6 finally Block
+   * 10.6 finally Block
 
-10.7 Stack Unwinding and Obtaining Information from an Exception
+   * 10.7 Stack Unwinding and Obtaining Information from an Exception
 
-10.8 Chained Exceptions
+   * 10.8 Chained Exceptions
 
-10.9 Declaring Custom Exceptions
+   * 10.9 Declaring Custom Exceptions
 
-10.10 Preconditions and Postconditions
+   * 10.10 Preconditions and Postconditions
 
-10.11 Assertions
+   * 10.11 Assertions
 
-10.12 try-with-Resources Statement: Automatic Resource Deallocation
+   * 10.12 try-with-Resources Statement: Automatic Resource Deallocation
 
-10.13 Unnamed Variables in catch Handlers
+   * 10.13 Unnamed Variables in catch Handlers
 
-10.14 Wrap-Up
+   * 10.14 Wrap-Up
 
-11 Files, I/O Streams, JSON Serialization & CSV Files
+* 11 Files, I/O Streams, JSON Serialization & CSV Files
 
-11.1 Introduction
+   * 11.1 Introduction
 
-11.2 Files and Streams
+   * 11.2 Files and Streams
 
-11.3 Using NIO Classes and Interfaces to Get File and Directory Information
+   * 11.3 Using NIO Classes and Interfaces to Get File and Directory Information
 
-11.4 Sequential Text Files
+   * 11.4 Sequential Text Files
 
-11.4.1 Creating a Sequential Text File
+      * 11.4.1 Creating a Sequential Text File
 
-11.4.2 Reading Data from a Sequential Text File
+      * 11.4.2 Reading Data from a Sequential Text File
 
-11.4.3 Updating Sequential Files
+      * 11.4.3 Updating Sequential Files
 
-11.5 Case Study: JavaScript Object Notation (JSON) Serialization
+   * 11.5 Case Study: JavaScript Object Notation (JSON) Serialization
 
-11.5.1 Serializing a List<Account>
+      * 11.5.1 Serializing a List<Account>
 
-11.5.2 Deserializing a List<Account>
+      * 11.5.2 Deserializing a List<Account>
 
-11.6 Case Study: Processing a JSON Response from a Web Service
+   * 11.6 Case Study: Processing a JSON Response from a Web Service
 
-11.7 Case Study: Creating and Reading CSV Files
+   * 11.7 Case Study: Creating and Reading CSV Files
 
-11.7.1 Creating a CSV File
+      * 11.7.1 Creating a CSV File
 
-11.7.2 Reading a CSV File
+      * 11.7.2 Reading a CSV File
 
-11.8 Case Study: Reading and Analyzing a CSV File Containing the Titanic Disaster Dataset
+   * 11.8 Case Study: Reading and Analyzing a CSV File Containing the Titanic Disaster Dataset
 
-11.9 Objects-Natural Security Case Study: RSA Public-Key Cryptography
+   * 11.9 Objects-Natural Security Case Study: RSA Public-Key Cryptography
 
-11.10 Wrap-Up
+   * 11.10 Wrap-Up
 
-12 Generic Collections
+* 12 Generic Collections
 
-12.1 Introduction
+   * 12.1 Introduction
 
-12.2 Collections Overview
+   * 12.2 Collections Overview
 
-12.3 Type-Wrapper Classes
+   * 12.3 Type-Wrapper Classes
 
-12.4 Boxing and Unboxing
+   * 12.4 Boxing and Unboxing
 
-12.5 Lists
+   * 12.5 Lists
 
-12.5.1 ArrayList and Iterator
+      * 12.5.1 ArrayList and Iterator
 
-12.5.2 LinkedList
+      * 12.5.2 LinkedList
 
-12.5.3 Views into Collections and Arrays Method asList
+      * 12.5.3 Views into Collections and Arrays Method asList
 
-12.6 Collections Methods
+   * 12.6 Collections Methods
 
-12.6.1 Method sort
+      * 12.6.1 Method sort
 
-12.6.2 Method shuffle
+      * 12.6.2 Method shuffle
 
-12.6.3 Methods reverse, fill, copy, max and min
+      * 12.6.3 Methods reverse, fill, copy, max and min
 
-12.6.4 Method binarySearch
+      * 12.6.4 Method binarySearch
 
-12.6.5 Methods addAll, frequency and disjoint
+      * 12.6.5 Methods addAll, frequency and disjoint
 
-12.7 Class PriorityQueue and Interface Queue
+   * 12.7 Class PriorityQueue and Interface Queue
 
-12.8 Hash Tables
+   * 12.8 Hash Tables
 
-12.9 Sets
+   * 12.9 Sets
 
-12.10 Maps
+   * 12.10 Maps
 
-12.11 Convenience Factory Methods for Creating Immutable Collections
+   * 12.11 Convenience Factory Methods for Creating Immutable Collections
 
-12.12 Concurrent Collections
+   * 12.12 Concurrent Collections
 
-12.13 Wrap-Up
+   * 12.13 Wrap-Up
 
-13 Generic Classes and Methods: A Deeper Look
+* 13 Generic Classes and Methods: A Deeper Look
 
-13.1 Introduction
+   * 13.1 Introduction
 
-13.2 Motivation for Generic Methods
+   * 13.2 Motivation for Generic Methods
 
-13.3 Generic Methods: Implementation and Compile-Time Translation
+   * 13.3 Generic Methods: Implementation and Compile-Time Translation
 
-13.3.1 Generic Method printArray
+      * 13.3.1 Generic Method printArray
 
-13.3.2 Type Parameter Section of a Generic Method
+      * 13.3.2 Type Parameter Section of a Generic Method
 
-13.3.3 Testing the Generic Method
+      * 13.3.3 Testing the Generic Method
 
-13.3.4 Erasure at Compilation Time
+      * 13.3.4 Erasure at Compilation Time
 
-13.4 Additional Compile-Time Translation Issues: Methods That Use a Type Parameter as the Return Type
+   * 13.4 Additional Compile-Time Translation Issues: Methods That Use a Type Parameter as the Return Type
 
-13.5 Overloading Generic Methods
+   * 13.5 Overloading Generic Methods
 
-13.6 Generic Classes
+   * 13.6 Generic Classes
 
-13.6.1 Parameterized Types
+      * 13.6.1 Parameterized Types
 
-13.6.2 Implementing a Generic Stack Class
+      * 13.6.2 Implementing a Generic Stack Class
 
-13.6.3 Testing the Generic Stack Class
+      * 13.6.3 Testing the Generic Stack Class
 
-13.6.4 Refactoring the Test Program to Manipulate Stack<E> Objects with Generic Methods
+      * 13.6.4 Refactoring the Test Program to Manipulate Stack<E> Objects with Generic Methods
 
-13.7 Wildcards in Methods That Accept Type Parameters
+   * 13.7 Wildcards in Methods That Accept Type Parameters
 
-13.7.1 Summing a List<Number>
+      * 13.7.1 Summing a List<Number>
 
-13.7.2 Reimplementing Method sum with a Wildcard Type Argument in Its Parameter
+      * 13.7.2 Reimplementing Method sum with a Wildcard Type Argument in Its Parameter
 
-13.8 Wrap-Up
+   * 13.8 Wrap-Up
 
-14 Functional Programming with Lambdas & Streams
+* 14 Functional Programming with Lambdas & Streams
 
-14.1 Introduction
+   * 14.1 Introduction
 
-14.2 Streams and Reduction
+   * 14.2 Streams and Reduction
 
-14.2.1 Summing the Integers from 1 through 10 with a for Loop
+      * 14.2.1 Summing the Integers from 1 through 10 with a for Loop
 
-14.2.2 External Iteration with for Is Error Prone
+      * 14.2.2 External Iteration with for Is Error Prone
 
-14.2.3 Summing with a Stream and Reduction
+      * 14.2.3 Summing with a Stream and Reduction
 
-14.2.4 Internal Iteration
+      * 14.2.4 Internal Iteration
 
-14.3 Mapping and Lambdas
+   * 14.3 Mapping and Lambdas
 
-14.3.1 Lambda Expressions
+      * 14.3.1 Lambda Expressions
 
-14.3.2 Lambda Syntax
+      * 14.3.2 Lambda Syntax
 
-14.3.3 Intermediate and Terminal Operations
+      * 14.3.3 Intermediate and Terminal Operations
 
-14.4 Filtering
+   * 14.4 Filtering
 
-14.5 How Elements Move Through Stream Pipelines
+   * 14.5 How Elements Move Through Stream Pipelines
 
-14.6 Method References
+   * 14.6 Method References
 
-14.6.1 Creating an IntStream of Random Values
+      * 14.6.1 Creating an IntStream of Random Values
 
-14.6.2 Performing a Task on Each Stream Element with forEach and a Method Reference
+      * 14.6.2 Performing a Task on Each Stream Element with forEach and a Method Reference
 
-14.6.3 Mapping Integers to String Objects with mapToObj
+      * 14.6.3 Mapping Integers to String Objects with mapToObj
 
-14.6.4 Concatenating Strings with collect
+      * 14.6.4 Concatenating Strings with collect
 
-14.7 IntStream Operations
+   * 14.7 IntStream Operations
 
-14.7.1 Creating an IntStream and Displaying Its Values
+      * 14.7.1 Creating an IntStream and Displaying Its Values
 
-14.7.2 Terminal Operations count, min, max, sum and average
+      * 14.7.2 Terminal Operations count, min, max, sum and average
 
-14.7.3 Terminal Operation reduce
+      * 14.7.3 Terminal Operation reduce
 
-14.7.4 Sorting IntStream Values
+      * 14.7.4 Sorting IntStream Values
 
-14.8 Functional Interfaces
+   * 14.8 Functional Interfaces
 
-14.9 Lambdas: A Deeper Look
+   * 14.9 Lambdas: A Deeper Look
 
-14.10 Stream<Integer> Manipulations
+   * 14.10 Stream<Integer> Manipulations
 
-14.10.1 Creating a Stream<Integer>, Sorting It and Collecting the Results
+      * 14.10.1 Creating a Stream<Integer>, Sorting It and Collecting the Results
 
-14.10.2 Filtering a Stream and Storing the Results for Later Use
+      * 14.10.2 Filtering a Stream and Storing the Results for Later Use
 
-14.10.3 Filtering and Sorting a Stream and Collecting the Results
+      * 14.10.3 Filtering and Sorting a Stream and Collecting the Results
 
-14.10.4 Sorting Previously Collected Results
+      * 14.10.4 Sorting Previously Collected Results
 
-14.11 Stream<String> Manipulations
+   * 14.11 Stream<String> Manipulations
 
-14.11.1 Mapping Strings to Uppercase
+      * 14.11.1 Mapping Strings to Uppercase
 
-14.11.2 Filtering Strings Then Sorting Them in Case-Insensitive Ascending Order
+      * 14.11.2 Filtering Strings Then Sorting Them in Case-Insensitive Ascending Order
 
-14.11.3 Filtering Strings Then Sorting Them in Case-Insensitive Descending Order
+      * 14.11.3 Filtering Strings Then Sorting Them in Case-Insensitive Descending Order
 
-14.12 Stream<Employee> Manipulations
+   * 14.12 Stream<Employee> Manipulations
 
-14.12.1 Creating and Displaying a List<Employee>
+      * 14.12.1 Creating and Displaying a List<Employee>
 
-14.12.2 Filtering Employees with Salaries in a Specified Range
+      * 14.12.2 Filtering Employees with Salaries in a Specified Range
 
-14.12.3 Sorting Employees By Multiple Fields
+      * 14.12.3 Sorting Employees By Multiple Fields
 
-14.12.4 Mapping Employees to Unique-Last-Name Strings
+      * 14.12.4 Mapping Employees to Unique-Last-Name Strings
 
-14.12.5 Grouping Employees By Department
+      * 14.12.5 Grouping Employees By Department
 
-14.12.6 Counting the Number of Employees in Each Department
+      * 14.12.6 Counting the Number of Employees in Each Department
 
-14.12.7 Summing and Averaging Employee Salaries
+      * 14.12.7 Summing and Averaging Employee Salaries
 
-14.13 Creating a Stream<String> from a File
+   * 14.13 Creating a Stream<String> from a File
 
-14.14 Streams of Random Values
+   * 14.14 Streams of Random Values
 
-14.15 Infinite Streams
+   * 14.15 Infinite Streams
 
-14.16 Additional Notes on Interfaces
+   * 14.16 Additional Notes on Interfaces
 
-14.17 Wrap-Up
+   * 14.17 Wrap-Up
 
-15 JavaFX Graphical User Interfaces: Part 1
+* 15 JavaFX Graphical User Interfaces: Part 1
 
-15.1 Introduction
+   * 15.1 Introduction
 
-15.2 JavaFX Scene Builder
+   * 15.2 JavaFX Scene Builder
 
-15.3 JavaFX Application Window Structure
+   * 15.3 JavaFX Application Window Structure
 
-15.4 Welcome Application: Displaying Text and an Image
+   * 15.4 Welcome Application: Displaying Text and an Image
 
-15.4.1 Opening Scene Builder and Creating the File Welcome.fxml
+      * 15.4.1 Opening Scene Builder and Creating the File Welcome.fxml
 
-15.4.2 Adding an Image to the Folder Containing Welcome.fxml
+      * 15.4.2 Adding an Image to the Folder Containing Welcome.fxml
 
-15.4.3 Creating a VBox Layout Container
+      * 15.4.3 Creating a VBox Layout Container
 
-15.4.4 Configuring the VBox Layout Container
+      * 15.4.4 Configuring the VBox Layout Container
 
-15.4.5 Adding and Configuring a Label
+      * 15.4.5 Adding and Configuring a Label
 
-15.4.6 Adding and Configuring an ImageView
+      * 15.4.6 Adding and Configuring an ImageView
 
-15.4.7 Previewing the Welcome GUI
+      * 15.4.7 Previewing the Welcome GUI
 
-15.5 Tip Calculator Application: Intro to Event Handling
+   * 15.5 Tip Calculator Application: Intro to Event Handling
 
-15.5.1 Test-Driving the Tip Calculator
+      * 15.5.1 Test-Driving the Tip Calculator
 
-15.5.2 Technologies Overview
+      * 15.5.2 Technologies Overview
 
-15.5.3 Building the Application’s GUI
+      * 15.5.3 Building the Application’s GUI
 
-15.5.4 TipCalculator Class
+      * 15.5.4 TipCalculator Class
 
-15.5.5 TipCalculatorController Class; Implementing an Event Handler with a Lambda
+      * 15.5.5 TipCalculatorController Class; Implementing an Event Handler with a Lambda
 
-15.6 Features Covered in the Other JavaFX Chapters
+   * 15.6 Features Covered in the Other JavaFX Chapters
 
-15.7 Wrap-Up
+   * 15.7 Wrap-Up
 
-16 JavaFX GUI: Part 2
+* 16 JavaFX GUI: Part 2
 
-16.1 Introduction
+   * 16.1 Introduction
 
-16.2 Laying Out Nodes in a Scene Graph
+   * 16.2 Laying Out Nodes in a Scene Graph
 
-16.3 Painter Application: RadioButtons, Mouse Events and Shapes
+   * 16.3 Painter Application: RadioButtons, Mouse Events and Shapes
 
-16.3.1 Technologies Overview
+      * 16.3.1 Technologies Overview
 
-16.3.2 Creating the Painter.fxml File
+      * 16.3.2 Creating the Painter.fxml File
 
-16.3.3 Building the GUI
+      * 16.3.3 Building the GUI
 
-16.3.4 Painter Subclass of Application
+      * 16.3.4 Painter Subclass of Application
 
-16.3.5 PainterController Class
+      * 16.3.5 PainterController Class
 
-16.4 Color Chooser Application: Property Bindings and Property Listeners
+   * 16.4 Color Chooser Application: Property Bindings and Property Listeners
 
-16.4.1 Technologies Overview
+      * 16.4.1 Technologies Overview
 
-16.4.2 Building the GUI
+      * 16.4.2 Building the GUI
 
-16.4.3 ColorChooser Subclass of Application
+      * 16.4.3 ColorChooser Subclass of Application
 
-16.4.4 ColorChooserController Class
+      * 16.4.4 ColorChooserController Class
 
-16.5 Cover Viewer Application: Data-Driven GUIs with JavaFX Collections
+   * 16.5 Cover Viewer Application: Data-Driven GUIs with JavaFX Collections
 
-16.5.1 Technologies Overview
+      * 16.5.1 Technologies Overview
 
-16.5.2 Building the GUI
+      * 16.5.2 Building the GUI
 
-16.5.3 CoverViewer Subclass of Application
+      * 16.5.3 CoverViewer Subclass of Application
 
-16.5.4 CoverViewerController Class
+      * 16.5.4 CoverViewerController Class
 
-16.6 Cover Viewer Application: Customizing ListView Cells
+   * 16.6 Cover Viewer Application: Customizing ListView Cells
 
-16.6.1 Technologies Overview
+      * 16.6.1 Technologies Overview
 
-16.6.2 Copying the CoverViewer Application
+      * 16.6.2 Copying the CoverViewer Application
 
-16.6.3 ImageTextCell Custom ListView Cell Layout
+      * 16.6.3 ImageTextCell Custom ListView Cell Layout
 
-16.6.4 CoverViewerController Class
+      * 16.6.4 CoverViewerController Class
 
-16.7 FileChooser and DirectoryChooser Dialogs
+   * 16.7 FileChooser and DirectoryChooser Dialogs
 
-16.8 Other JavaFX Capabilities and JavaFX Accessibility
+   * 16.8 Other JavaFX Capabilities and JavaFX Accessibility
 
-16.9 JavaFX Updates
+   * 16.9 JavaFX Updates
 
-16.10 JavaFX Resources and Libraries
+   * 16.10 JavaFX Resources and Libraries
 
-16.11 Wrap-Up
+   * 16.11 Wrap-Up
 
-17 JavaFX Graphics and Multimedia
+* 17 JavaFX Graphics and Multimedia
 
-17.1 Introduction
+   * 17.1 Introduction
 
-17.2 Controlling Fonts with Cascading Style Sheets (CSS)
+   * 17.2 Controlling Fonts with Cascading Style Sheets (CSS)
 
-17.2.1 CSS That Styles the GUI
+      * 17.2.1 CSS That Styles the GUI
 
-17.2.2 FXML That Defines the GUI—Introduction to XML Markup
+      * 17.2.2 FXML That Defines the GUI—Introduction to XML Markup
 
-17.2.3 Referencing the CSS File from FXML
+      * 17.2.3 Referencing the CSS File from FXML
 
-17.2.4 Specifying the VBox’s Style Class
+      * 17.2.4 Specifying the VBox’s Style Class
 
-17.2.5 Programmatically Loading CSS
+      * 17.2.5 Programmatically Loading CSS
 
-17.3 Displaying Two-Dimensional Shapes
+   * 17.3 Displaying Two-Dimensional Shapes
 
-17.3.1 Defining Two-Dimensional Shapes with FXML
+      * 17.3.1 Defining Two-Dimensional Shapes with FXML
 
-17.3.2 CSS That Styles the Two-Dimensional Shapes
+      * 17.3.2 CSS That Styles the Two-Dimensional Shapes
 
-17.4 Polylines, Polygons and Paths
+   * 17.4 Polylines, Polygons and Paths
 
-17.4.1 GUI and CSS
+      * 17.4.1 GUI and CSS
 
-17.4.2 PolyShapesController Class
+      * 17.4.2 PolyShapesController Class
 
-17.5 Transforms
+   * 17.5 Transforms
 
-17.6 Playing Video with Media, MediaPlayer and MediaView
+   * 17.6 Playing Video with Media, MediaPlayer and MediaView
 
-17.6.1 VideoPlayer GUI
+      * 17.6.1 VideoPlayer GUI
 
-17.6.2 VideoPlayerController Class
+      * 17.6.2 VideoPlayerController Class
 
-17.7 Transition Animations
+   * 17.7 Transition Animations
 
-17.7.1 TransitionAnimations.fxml
+      * 17.7.1 TransitionAnimations.fxml
 
-17.7.2 TransitionAnimationsController Class
+      * 17.7.2 TransitionAnimationsController Class
 
-17.8 Timeline Animations
+   * 17.8 Timeline Animations
 
-17.9 Frame-by-Frame Animation with AnimationTimer
+   * 17.9 Frame-by-Frame Animation with AnimationTimer
 
-17.10 CSS Transitions
+   * 17.10 CSS Transitions
 
-17.11 Drawing on a Canvas
+   * 17.11 Drawing on a Canvas
 
-17.12 Three-Dimensional Shapes
+   * 17.12 Three-Dimensional Shapes
 
-17.13 FXGL: A Brief Intro to Game Programming with JavaFX
+   * 17.13 FXGL: A Brief Intro to Game Programming with JavaFX
 
-17.14 Wrap-Up
+   * 17.14 Wrap-Up
 
-18 Concurrency: Platform Threads to Virtual Threads
+* 18 Concurrency: Platform Threads to Virtual Threads
 
-18.1 Introduction
+   * 18.1 Introduction
 
-18.2 sort/parallelSort Timings with the Date/Time API
+   * 18.2 sort/parallelSort Timings with the Date/Time API
 
-18.3 Sequential vs. Parallel Streams
+   * 18.3 Sequential vs. Parallel Streams
 
-18.4 Creating and Executing Platform Threads with the Executor Framework
+   * 18.4 Creating and Executing Platform Threads with the Executor Framework
 
-18.5 Project Loom Overview
+   * 18.5 Project Loom Overview
 
-18.6 Creating and Executing Virtual Threads with the Executor Framework
+   * 18.6 Creating and Executing Virtual Threads with the Executor Framework
 
-18.6.1 Launching Virtual Threads with a Thread-Per-Task Executor
+      * 18.6.1 Launching Virtual Threads with a Thread-Per-Task Executor
 
-18.6.2 Other Ways to Launch Virtual Threads
+      * 18.6.2 Other Ways to Launch Virtual Threads
 
-18.7 Profiling Platform vs. Virtual Threads
+   * 18.7 Profiling Platform vs. Virtual Threads
 
-18.7.1 Future and Callable Interfaces
+      * 18.7.1 Future and Callable Interfaces
 
-18.7.2 Threading Approaches We’ll Use
+      * 18.7.2 Threading Approaches We’ll Use
 
-18.7.3 Launching and Timing Large Numbers of Concurrent Tasks
+      * 18.7.3 Launching and Timing Large Numbers of Concurrent Tasks
 
-18.7.4 Testing the Threading Approaches
+      * 18.7.4 Testing the Threading Approaches
 
-18.7.5 Performance Analysis
+      * 18.7.5 Performance Analysis
 
-18.8 Structured Concurrency and Scoped Values
+   * 18.8 Structured Concurrency and Scoped Values
 
-18.9 Thread Synchronization Overview
+   * 18.9 Thread Synchronization Overview
 
-18.10 Producer/Consumer Relationship with ArrayBlockingQueue
+   * 18.10 Producer/Consumer Relationship with ArrayBlockingQueue
 
-18.10.1 Synchronization and State Dependence
+      * 18.10.1 Synchronization and State Dependence
 
-18.10.2 Class ArrayBlockingQueue
+      * 18.10.2 Class ArrayBlockingQueue
 
-18.10.3 Overview of the Producer/Consumer Example
+      * 18.10.3 Overview of the Producer/Consumer Example
 
-18.10.4 Interface Buffer
+      * 18.10.4 Interface Buffer
 
-18.10.5 Class BlockingBuffer
+      * 18.10.5 Class BlockingBuffer
 
-18.10.6 Class BlockingBufferTest
+      * 18.10.6 Class BlockingBufferTest
 
-18.10.7 Bounded Buffers
+      * 18.10.7 Bounded Buffers
 
-18.10.8 Other Concurrent Collections
+      * 18.10.8 Other Concurrent Collections
 
-18.11 Multithreading in JavaFX
+      * 18.11 Multithreading in JavaFX
 
-18.11.1 Performing Computations in a Worker Thread: Fibonacci Numbers
+      * 18.11.1 Performing Computations in a Worker Thread: Fibonacci Numbers
 
-18.11.2 Processing Intermediate Results: Sieve of Eratosthenes
+      * 18.11.2 Processing Intermediate Results: Sieve of Eratosthenes
 
-18.12 Wrap-Up
+   * 18.12 Wrap-Up
 
-19 Building API-Based Java Generative AI Applications
+* 19 Building API-Based Java Generative AI Applications
 
-19.1 Introduction
+   * 19.1 Introduction
 
-19.2 OpenAI APIs
+   * 19.2 OpenAI APIs
 
-19.2.1 Some of OpenAI’s Models
+      * 19.2.1 Some of OpenAI’s Models
 
-19.2.2 OpenAI API Capabilities
+      * 19.2.2 OpenAI API Capabilities
 
-19.2.3 Get an OpenAI Developer Account
+      * 19.2.3 Get an OpenAI Developer Account
 
-19.2.4 OpenAI Developer API Key
+      * 19.2.4 OpenAI Developer API Key
 
-19.3 Setting Up a Java Environment
+   * 19.3 Setting Up a Java Environment
 
-19.3.1 Simple-OpenAI Open Source Library: Connecting to | OpenAI from Java
+      * 19.3.1 Simple-OpenAI Open Source Library: Connecting to | OpenAI from Java
 
-19.3.2 IntelliJ Maven-Based Java Project
+      * 19.3.2 IntelliJ Maven-Based Java Project
 
-19.4 Text Generation Via Chat Completions
+   * 19.4 Text Generation Via Chat Completions
 
-19.4.1 Text Summarization
+      * 19.4.1 Text Summarization
 
-19.4.2 Sentiment Analysis
+      * 19.4.2 Sentiment Analysis
 
-19.4.3 Accessible Image Descriptions
+      * 19.4.3 Accessible Image Descriptions
 
-19.4.4 Language Detection and Translation
+      * 19.4.4 Language Detection and Translation
 
-19.4.5 Code Generation
+      * 19.4.5 Code Generation
 
-19.4.6 Named Entity Recognition (NER) and Structured Outputs
+      * 19.4.6 Named Entity Recognition (NER) and Structured Outputs
 
-19.5 Speech Synthesis and Speech Recognition
+   * 19.5 Speech Synthesis and Speech Recognition
 
-19.5.1 English Speech-to-Text for Audio Transcription
+      * 19.5.1 English Speech-to-Text for Audio Transcription
 
-19.5.2 Text-to-Speech
+      * 19.5.2 Text-to-Speech
 
-19.6 Image Generation
+   * 19.6 Image Generation
 
-19.7 Video
+   * 19.7 Video
 
-19.7.1 Generating Video Closed Captions
+      * 19.7.1 Generating Video Closed Captions
 
-19.7.2 Sora
+      * 19.7.2 Sora
 
-19.7.3 Other Video GenAIs
+      * 19.7.3 Other Video GenAIs
 
-19.8 Moderation
+   * 19.8 Moderation
 
-19.9 Class OpenAIUtilities
+   * 19.9 Class OpenAIUtilities
 
-19.9.1 Builder Design Pattern
+      * 19.9.1 Builder Design Pattern
 
-19.9.2 package and import Statements
+      * 19.9.2 package and import Statements
 
-19.9.3 Nested record Class Message
+      * 19.9.3 Nested record Class Message
 
-19.9.4 SimpleOpenAI Client Object
+      * 19.9.4 SimpleOpenAI Client Object
 
-19.9.5 chat Method
+      * 19.9.5 chat Method
 
-19.9.6 Helper Method makeChatMessages
+      * 19.9.6 Helper Method makeChatMessages
 
-19.9.7 describeImage Method
+      * 19.9.7 describeImage Method
 
-19.9.8 translate Method
+      * 19.9.8 translate Method
 
-19.9.9 chatWithStructuredOutput Method
+      * 19.9.9 chatWithStructuredOutput Method
 
-19.9.10 speechToText Method
+      * 19.9.10 speechToText Method
 
-19.9.11 textToSpeech Method
+      * 19.9.11 textToSpeech Method
 
-19.9.12 image Method
+      * 19.9.12 image Method
 
-19.9.13 speechToVTT Method
+      * 19.9.13 speechToVTT Method
 
-19.9.14 checkPrompt Method
+      * 19.9.14 checkPrompt Method
 
-19.10 Wrap-Up
+   * 19.10 Wrap-Up
 
-20 Accessing Databases with JDBC and SQLite
+* 20 Accessing Databases with JDBC and SQLite
 
-20.1 Introduction
+   * 20.1 Introduction
 
-20.2 Relational Databases
+   * 20.2 Relational Databases
 
-20.3 Setting Up the SQLite RDBMS
+   * 20.3 Setting Up the SQLite RDBMS
 
-20.4 A books Database
+   * 20.4 A books Database
 
-20.4.1 SELECT Queries
+      * 20.4.1 SELECT Queries
 
-20.4.2 WHERE Clause
+      * 20.4.2 WHERE Clause
 
-20.4.3 ORDER BY Clause
+      * 20.4.3 ORDER BY Clause
 
-20.4.4 Merging Data from Multiple Tables with INNER JOIN
+      * 20.4.4 Merging Data from Multiple Tables with INNER JOIN
 
-20.4.5 INSERT INTO Statement
+      * 20.4.5 INSERT INTO Statement
 
-20.4.6 UPDATE Statement
+      * 20.4.6 UPDATE Statement
 
-20.4.7 DELETE FROM Statement
+      * 20.4.7 DELETE FROM Statement
 
-20.5 Connecting to and Querying a Database with JDBC
+   * 20.5 Connecting to and Querying a Database with JDBC
 
-20.5.1 Automatic Driver Discovery
+      * 20.5.1 Automatic Driver Discovery
 
-20.5.2 Connecting to the Database
+      * 20.5.2 Connecting to the Database
 
-20.5.3 Creating a Statement for Executing Queries
+      * 20.5.3 Creating a Statement for Executing Queries
 
-20.5.4 Executing a Query
+      * 20.5.4 Executing a Query
 
-20.5.5 Processing a Query’s ResultSet
+      * 20.5.5 Processing a Query’s ResultSet
 
-20.6 Querying the books Database
+   * 20.6 Querying the books Database
 
-20.6.1 DisplayQueryResults App’s GUI
+      * 20.6.1 DisplayQueryResults App’s GUI
 
-20.6.2 DisplayQueryResultsController Class
+      * 20.6.2 DisplayQueryResultsController Class
 
-20.7 PreparedStatements
+   * 20.7 PreparedStatements
 
-20.7.1 AddressBook App That Uses PreparedStatements
+      * 20.7.1 AddressBook App That Uses PreparedStatements
 
-20.7.2 record Class Person
+      * 20.7.2 record Class Person
 
-20.7.3 Class PersonQueries
+      * 20.7.3 Class PersonQueries
 
-20.7.4 AddressBook GUI
+      * 20.7.4 AddressBook GUI
 
-20.7.5 Class AddressBookController
+      * 20.7.5 Class AddressBookController
 
-20.8 Stored Procedures
+   * 20.8 Stored Procedures
 
-20.9 Transaction Processing
+   * 20.9 Transaction Processing
 
 20.10 Wrap-Up
 
-21 Java Platform Module System
+* 21 Java Platform Module System
 
-21.1 Introduction
+   * 21.1 Introduction
 
-21.2 Module Declarations
+   * 21.2 Module Declarations
 
-21.2.1 requires
+      * 21.2.1 requires
 
-21.2.2 requires transitive—Implied Readability
+      * 21.2.2 requires transitive—Implied Readability
 
-21.2.3 exports and exports…to
+      * 21.2.3 exports and exports…to
 
-21.2.4 uses
+      * 21.2.4 uses
 
-21.2.5 provides…with
+      * 21.2.5 provides…with
 
-21.2.6 open, opens and opens…to
+      * 21.2.6 open, opens and opens…to
 
-21.2.7 Restricted Keywords
+      * 21.2.7 Restricted Keywords
 
-21.3 Modularized Welcome App
+   * 21.3 Modularized Welcome App
 
-21.3.1 Welcome App’s Structure
+      * 21.3.1 Welcome App’s Structure
 
-21.3.2 Class Welcome
+      * 21.3.2 Class Welcome
 
-21.3.3 module-info.java
+      * 21.3.3 module-info.java
 
-21.3.4 Module-Dependency Graph
+      * 21.3.4 Module-Dependency Graph
 
-21.3.5 Compiling a Module
+      * 21.3.5 Compiling a Module
 
-21.3.6 Running an App from a Module’s Exploded Folders
+      * 21.3.6 Running an App from a Module’s Exploded Folders
 
-21.3.7 Packaging a Module into a Modular JAR File
+      * 21.3.7 Packaging a Module into a Modular JAR File
 
-21.3.8 Running the Welcome App from a Modular JAR File
+      * 21.3.8 Running the Welcome App from a Modular JAR File
 
-21.3.9 Aside: Classpath vs. Module Path
+      * 21.3.9 Aside: Classpath vs. Module Path
 
-21.4 Creating and Using a Custom Module
+   * 21.4 Creating and Using a Custom Module
 
-21.4.1 Exporting a Package for Use in Other Modules
+      * 21.4.1 Exporting a Package for Use in Other Modules
 
-21.4.2 Using a Class from a Package in Another Module
+      * 21.4.2 Using a Class from a Package in Another Module
 
-21.4.3 Compiling and Running the Example
+      * 21.4.3 Compiling and Running the Example
 
-21.4.4 Packaging the App into Modular JAR Files
+      * 21.4.4 Packaging the App into Modular JAR Files
 
-21.4.5 Strong Encapsulation and Accessibility
+      * 21.4.5 Strong Encapsulation and Accessibility
 
-21.5 Module-Dependency Graphs: A Deeper Look
+   * 21.5 Module-Dependency Graphs: A Deeper Look
 
-21.5.1 java.sql
+      * 21.5.1 java.sql
 
-21.5.2 java.se
+      * 21.5.2 java.se
 
-21.5.3 Error: Module Graph with a Cycle
+      * 21.5.3 Error: Module Graph with a Cycle
 
-21.6 Migrating Code to Modules
+   * 21.6 Migrating Code to Modules
 
-21.6.1 Unnamed Module
+      * 21.6.1 Unnamed Module
 
-21.6.2 Automatic Modules
+      * 21.6.2 Automatic Modules
 
-21.6.3 jdeps Tool for Java Dependency Analysis
+      * 21.6.3 jdeps Tool for Java Dependency Analysis
 
-21.7 Resources in Modules
+   * 21.7 Resources in Modules
 
-21.7.1 Requiring Multiple Modules
+      * 21.7.1 Requiring Multiple Modules
 
-21.7.2 Opening a Module for Reflection
+      * 21.7.2 Opening a Module for Reflection
 
-21.7.3 Compiling the Module
+      * 21.7.3 Compiling the Module
 
-21.7.4 Running a Modularized App
+      * 21.7.4 Running a Modularized App
 
-21.7.5 Module-Dependency Graph
+      * 21.7.5 Module-Dependency Graph
 
-21.8 Creating Custom Runtimes with jlink
+   * 21.8 Creating Custom Runtimes with jlink
 
-21.8.1 Custom Runtime Containing Only java.base
+      * 21.8.1 Custom Runtime Containing Only java.base
 
-21.8.2 Creating a Custom Runtime for the Welcome App
+      * 21.8.2 Creating a Custom Runtime for the Welcome App
 
-21.8.3 Executing the Welcome App Using a Custom Runtime
+      * 21.8.3 Executing the Welcome App Using a Custom Runtime
 
-21.8.4 Using the Module Resolver on a Custom Runtime
+      * 21.8.4 Using the Module Resolver on a Custom Runtime
 
-21.9 Services and ServiceLoader
+   * 21.9 Services and ServiceLoader
 
-21.9.1 Service-Provider Interface
+      * 21.9.1 Service-Provider Interface
 
-21.9.2 Loading and Consuming Service Providers
+      * 21.9.2 Loading and Consuming Service Providers
 
-21.9.3 uses Module Directive and Service Consumers
+      * 21.9.3 uses Module Directive and Service Consumers
 
-21.9.4 Running the App with No Service Providers
+      * 21.9.4 Running the App with No Service Providers
 
-21.9.5 Implementing a Service Provider
+      * 21.9.5 Implementing a Service Provider
 
-21.9.6 provides…with Module Directive and Declaring a Service Provider
+      * 21.9.6 provides…with Module Directive and Declaring a Service Provider
 
-21.9.7 Running the App with One Service Provider
+      * 21.9.7 Running the App with One Service Provider
 
-21.9.8 Implementing a Second Service Provider
+      * 21.9.8 Implementing a Second Service Provider
 
-21.9.9 Running the App with Two Service Providers
+      * 21.9.9 Running the App with Two Service Providers
 
-21.10 Wrap-Up
+   * 21.10 Wrap-Up
 
-22 Recursion and Big O
+* 22 Recursion and Big O
 
-22.1 Introduction
+   * 22.1 Introduction
 
-22.2 Recursion Concepts
+   * 22.2 Recursion Concepts
 
-22.3 Recursion Example: Factorials
+   * 22.3 Recursion Example: Factorials
 
-22.4 Recursion Example: Fibonacci Series
+   * 22.4 Recursion Example: Fibonacci Series
 
-22.5 Recursion vs. Iteration
+   * 22.5 Recursion vs. Iteration
 
-22.6 Towers of Hanoi
+   * 22.6 Towers of Hanoi
 
-22.7 Fractals
+   * 22.7 Fractals
 
-22.7.1 Koch Curve Fractal
+      * 22.7.1 Koch Curve Fractal
 
-22.7.2 (Optional) Case Study: Lo Feather Fractal
+      * 22.7.2 (Optional) Case Study: Lo Feather Fractal
 
-22.7.3 (Optional) Fractal App GUI
+      * 22.7.3 (Optional) Fractal App GUI
 
-22.7.4 (Optional) FractalController Class
+      * 22.7.4 (Optional) FractalController Class
 
-22.8 Recursive Backtracking
+   * 22.8 Recursive Backtracking
 
-22.9 Big O Notation
+   * 22.9 Big O Notation
 
-22.9.1 O(1) Algorithms
+      * 22.9.1 O(1) Algorithms
 
-22.9.2 O(n) Algorithms
+      * 22.9.2 O(n) Algorithms
 
-22.9.3 O(n2) Algorithms
+      * 22.9.3 O(n2) Algorithms
 
-22.10 Common Big O Notations
+   * 22.10 Common Big O Notations
 
-22.11 Wrap-Up
+   * 22.11 Wrap-Up
 
-A Introduction to JShell for Interactive Java
+* A Introduction to JShell for Interactive Java
 
-A.1 Introduction
+   * A.1 Introduction
 
-A.2 Introduction to JShell
+   * A.2 Introduction to JShell
 
-A.2.1 Starting a JShell Session
+      * A.2.1 Starting a JShell Session
 
-A.2.2 Executing Statements
+      * A.2.2 Executing Statements
 
-A.2.3 Declaring Variables Explicitly
+      * A.2.3 Declaring Variables Explicitly
 
-A.2.4 Listing and Executing Prior Snippets
+      * A.2.4 Listing and Executing Prior Snippets
 
-A.2.5 Evaluating Expressions and Declaring Variables Implicitly
+      * A.2.5 Evaluating Expressions and Declaring Variables Implicitly
 
-A.2.6 Using Implicitly Declared Variables
+      * A.2.6 Using Implicitly Declared Variables
 
-A.2.7 Viewing a Variable’s Value
+      * A.2.7 Viewing a Variable’s Value
 
-A.2.8 Resetting a JShell Session
+      * A.2.8 Resetting a JShell Session
 
-A.2.9 Writing Multiline Statements
+      * A.2.9 Writing Multiline Statements
 
-A.2.10 Editing Code Snippets
+      * A.2.10 Editing Code Snippets
 
-A.2.11 Exiting JShell
+      * A.2.11 Exiting JShell
 
-A.3 Command-Line Input in JShell
+   * A.3 Command-Line Input in JShell
 
-A.4 Declaring and Using Classes
+   * A.4 Declaring and Using Classes
 
-A.4.1 Creating a Class in JShell
+      * A.4.1 Creating a Class in JShell
 
-A.4.2 Explicitly Declaring Reference-Type Variables
+      * A.4.2 Explicitly Declaring Reference-Type Variables
 
-A.4.3 Creating Objects
+      * A.4.3 Creating Objects
 
-A.4.4 Manipulating Objects
+      * A.4.4 Manipulating Objects
 
-A.4.5 Creating a Meaningful Variable Name for an Expression
+      * A.4.5 Creating a Meaningful Variable Name for an Expression
 
-A.4.6 Saving and Opening Code-Snippet Files
+      * A.4.6 Saving and Opening Code-Snippet Files
 
-A.5 Discovery with JShell Auto-Completion
+   * A.5 Discovery with JShell Auto-Completion
 
-A.5.1 Auto-Completing Identifiers
+      * A.5.1 Auto-Completing Identifiers
 
-A.5.2 Auto-Completing JShell Commands
+      * A.5.2 Auto-Completing JShell Commands
 
-A.6 Exploring a Class’s Members and Viewing Documentation
+   * A.6 Exploring a Class’s Members and Viewing Documentation
 
-A.6.1 Listing Class Math’s static Members
+      * A.6.1 Listing Class Math’s static Members
 
-A.6.2 Viewing a Method’s Parameters
+      * A.6.2 Viewing a Method’s Parameters
 
-A.6.3 Viewing a Method’s Documentation
+      * A.6.3 Viewing a Method’s Documentation
 
-A.6.4 Viewing a public Field’s Documentation
+      * A.6.4 Viewing a public Field’s Documentation
 
-A.6.5 Viewing a Class’s Documentation
+      * A.6.5 Viewing a Class’s Documentation
 
-A.6.6 Viewing Method Overloads
+      * A.6.6 Viewing Method Overloads
 
-A.6.7 Exploring Members of a Specific Object
+      * A.6.7 Exploring Members of a Specific Object
 
-A.7 Declaring Methods
+   * A.7 Declaring Methods
 
-A.7.1 Forward Referencing an Undeclared Method—Declaring Method displayCubes
+      * A.7.1 Forward Referencing an Undeclared Method—Declaring Method displayCubes
 
-A.7.2 Declaring a Previously Undeclared Method
+      * A.7.2 Declaring a Previously Undeclared Method
 
-A.7.3 Testing cube and Replacing Its Declaration
+      * A.7.3 Testing cube and Replacing Its Declaration
 
 A.7.4 Testing Updated Method cube and Method displayCubes
 
-A.8 Exceptions
+   * A.8 Exceptions
 
-A.9 Importing Classes and Adding Packages to the CLASSPATH
+   * A.9 Importing Classes and Adding Packages to the CLASSPATH
 
-A.10 Using an External Editor
+   * A.10 Using an External Editor
 
-A.11 Summary of JShell Commands
+   * A.11 Summary of JShell Commands
 
-A.11.1 Getting Help in JShell
+      * A.11.1 Getting Help in JShell
 
-A.11.2 /edit Command: Additional Features
+      * A.11.2 /edit Command: Additional Features
 
-A.11.3 /reload Command
+      * A.11.3 /reload Command
 
-A.11.4 /drop Command
+      * A.11.4 /drop Command
 
-A.11.5 Feedback Modes
+      * A.11.5 Feedback Modes
 
-A.11.6 Other JShell Features Configurable with /set
+      * A.11.6 Other JShell Features Configurable with /set
 
-A.12 Keyboard Shortcuts for Snippet Editing
+   * A.12 Keyboard Shortcuts for Snippet Editing
 
-A.13 How JShell Reinterprets Java for Interactive Use
+   * A.13 How JShell Reinterprets Java for Interactive Use
 
-A.14 IDE JShell Support
+   * A.14 IDE JShell Support
 
-A.15 Wrap-Up
+   * A.15 Wrap-Up
 
-B Formatted Output
+* B Formatted Output
 
-B.1 Introduction
+   * B.1 Introduction
 
-B.2 Output with printf
+   * B.2 Output with printf
 
-B.3 Integer Formatting
+   * B.3 Integer Formatting
 
-B.4 Floating-Point Number Formatting
+   * B.4 Floating-Point Number Formatting
 
-B.5 String and Character Formatting
+   * B.5 String and Character Formatting
 
-B.6 Other Conversion Characters
+   * B.6 Other Conversion Characters
 
-B.7 Field Widths and Precisions
+   * B.7 Field Widths and Precisions
 
-B.8 Formatting Flags
+   * B.8 Formatting Flags
 
-B.9 Argument Indices for Explicit Positioning in Format Strings
+   * B.9 Argument Indices for Explicit Positioning in Format Strings
 
-B.10 Escape Sequences
+   * B.10 Escape Sequences
 
-B.11 Formatting Strings in Memory
+   * B.11 Formatting Strings in Memory
 
-B.12 Wrap-Up
+   * B.12 Wrap-Up
 
-C Number Systems
+* C Number Systems
 
-C.1 Introduction
+   * C.1 Introduction
 
-C.2 Abbreviating Binary Numbers as Octal and Hexadecimal Numbers
+   * C.2 Abbreviating Binary Numbers as Octal and Hexadecimal Numbers
 
-C.3 Converting Octal and Hexadecimal Numbers to Binary Numbers
+   * C.3 Converting Octal and Hexadecimal Numbers to Binary Numbers
 
-C.4 Converting from Binary, Octal or Hexadecimal to Decimal
+   * C.4 Converting from Binary, Octal or Hexadecimal to Decimal
 
-C.5 Converting from Decimal to Binary, Octal or Hexadecimal
+   * C.5 Converting from Decimal to Binary, Octal or Hexadecimal
 
-C.6 Negative Binary Numbers: Two’s Complement Notation
+   * C.6 Negative Binary Numbers: Two’s Complement Notation
 
-Index
+* Index
