@@ -72,469 +72,469 @@ Registre su libro para acceder fácilmente a descargas, actualizaciones y correc
 
 * Before You Begin
 
-1 Intro, Test-Driving a Java Application, and Generative AI
+* 1 Intro, Test-Driving a Java Application, and Generative AI
 
-1.1 Introduction
+   * 1.1 Introduction
 
-1.2 Hardware
+   * 1.2 Hardware
 
-1.3 Java
+   * 1.3 Java
 
-1.4 A Brief Review of Object Orientation
+   * 1.4 A Brief Review of Object Orientation
 
-1.5 Java Application Programming Interface (API) and Open-Source Libraries
+   * 1.5 Java Application Programming Interface (API) and Open-Source Libraries
 
-1.6 Typical Java Program Development Environment
+   * 1.6 Typical Java Program Development Environment
 
-1.7 Test-Driving a Java Program with the Java Development Kit (JDK)
+   * 1.7 Test-Driving a Java Program with the Java Development Kit (JDK)
 
-1.7.1 Compiling and Running the Program with javac and java
+      * 1.7.1 Compiling and Running the Program with javac and java
 
-1.7.2 Running the Program’s Source-Code File Directly with the java Command
+      * 1.7.2 Running the Program’s Source-Code File Directly with the java Command
 
-1.8 Internet, World Wide Web, the Cloud and IoT
+   * 1.8 Internet, World Wide Web, the Cloud and IoT
 
-1.8.1 The Internet: A Network of Networks
+      * 1.8.1 The Internet: A Network of Networks
 
-1.8.2 The World Wide Web: Making the Internet User-Friendly
+      * 1.8.2 The World Wide Web: Making the Internet User-Friendly
 
-1.8.3 The Cloud
+      * 1.8.3 The Cloud
 
-1.8.4 The Internet of Things (IoT)
+      * 1.8.4 The Internet of Things (IoT)
 
-1.8.5 Edge Computing
+      * 1.8.5 Edge Computing
 
-1.8.6 Mashups
+      * 1.8.6 Mashups
 
-1.9 Metaverse
+   * 1.9 Metaverse
 
-1.9.1 Virtual Reality (VR)
+      * 1.9.1 Virtual Reality (VR)
 
-1.9.2 Augmented Reality (AR)
+      * 1.9.2 Augmented Reality (AR)
 
-1.9.3 Mixed Reality
+      * 1.9.3 Mixed Reality
 
-1.9.4 Blockchain
+      * 1.9.4 Blockchain
 
-1.9.5 Bitcoin and Cryptocurrency
+      * 1.9.5 Bitcoin and Cryptocurrency
 
-1.9.6 Ethereum
+      * 1.9.6 Ethereum
 
-1.9.7 Non-Fungible Tokens (NFTs)
+      * 1.9.7 Non-Fungible Tokens (NFTs)
 
-1.9.8 Web3
+      * 1.9.8 Web3
 
-1.10 Software Development Technologies
+   * 1.10 Software Development Technologies
 
-1.11 Data Analytics and Data Science
+   * 1.11 Data Analytics and Data Science
 
-1.12 How Big Is Big Data?
+   * 1.12 How Big Is Big Data?
 
-1.12.1 Big-Data Analytics
+      * 1.12.1 Big-Data Analytics
 
-1.12.2 Data Science and Big Data Are Making a Difference: Use Cases
+      * 1.12.2 Data Science and Big Data Are Making a Difference: Use Cases
 
-1.13 AI—at the Intersection of Computer Science and Data Science
+   * 1.13 AI—at the Intersection of Computer Science and Data Science
 
-1.13.1 Artificial Intelligence (AI)
+      * 1.13.1 Artificial Intelligence (AI)
 
-1.13.2 Artificial General Intelligence (AGI)
+      * 1.13.2 Artificial General Intelligence (AGI)
 
-1.13.3 Artificial Intelligence Milestones
+      * 1.13.3 Artificial Intelligence Milestones
 
-1.13.4 Machine Learning
+      * 1.13.4 Machine Learning
 
-1.13.5 Deep Learning
+      * 1.13.5 Deep Learning
 
-1.13.6 Reinforcement Learning
+      * 1.13.6 Reinforcement Learning
 
-1.14 Generative AI
+   * 1.14 Generative AI
 
-1.15 Wrap-Up
+   * 1.15 Wrap-Up
 
-2 Intro to Java Programming
+* 2 Intro to Java Programming
 
-2.1 Introduction
+   * 2.1 Introduction
 
-2.2 Your First Program in Java: Printing a Line of Text
+   * 2.2 Your First Program in Java: Printing a Line of Text
 
-2.2.1 Compiling the Program
+      * 2.2.1 Compiling the Program
 
-2.2.2 Executing the Program
+      * 2.2.2 Executing the Program
 
-2.3 Modifying Your First Program
+   * 2.3 Modifying Your First Program
 
-2.4 Displaying Text with printf
+   * 2.4 Displaying Text with printf
 
-2.5 Another Program: Adding Integers
+   * 2.5 Another Program: Adding Integers
 
-2.6 Arithmetic
+   * 2.6 Arithmetic
 
-2.7 Decision Making: Equality and Relational Operators
+   * 2.7 Decision Making: Equality and Relational Operators
 
-2.8 Objects-Natural Case Study: Creating and Using Objects of the Java API’s String Class
+   * 2.8 Objects-Natural Case Study: Creating and Using Objects of the Java API’s String Class
 
-2.9 Wrap-Up
+   * 2.9 Wrap-Up
 
-3 Control Statements: Part 1
+* 3 Control Statements: Part 1
 
-3.1 Introduction
+   * 3.1 Introduction
 
-3.2 Control Structures
+   * 3.2 Control Structures
 
-3.2.1 Sequence Structure
+      * 3.2.1 Sequence Structure
 
-3.2.2 Selection Statements
+      * 3.2.2 Selection Statements
 
-3.2.3 Iteration Statements
+      * 3.2.3 Iteration Statements
 
-3.2.4 Summary of Control Statements
+      * 3.2.4 Summary of Control Statements
 
-3.3 if Single-Selection Statement
+   * 3.3 if Single-Selection Statement
 
-3.4 if…else Double-Selection Statement
+   * 3.4 if…else Double-Selection Statement
 
-3.4.1 Nested if…else Statements
+      * 3.4.1 Nested if…else Statements
 
-3.4.2 Blocks
+      * 3.4.2 Blocks
 
-3.4.3 Conditional Operator (?:)
+      * 3.4.3 Conditional Operator (?:)
 
-3.5 while Iteration Statement
+   * 3.5 while Iteration Statement
 
-3.6 Counter-Controlled Iteration
+   * 3.6 Counter-Controlled Iteration
 
-3.6.1 Implementing the Algorithm
+      * 3.6.1 Implementing the Algorithm
 
-3.6.2 Integer Division and Truncation
+      * 3.6.2 Integer Division and Truncation
 
-3.6.3 Arithmetic Overflow
+      * 3.6.3 Arithmetic Overflow
 
-3.6.4 Input Validation
+      * 3.6.4 Input Validation
 
-3.7 Sentinel-Controlled Iteration
+   * 3.7 Sentinel-Controlled Iteration
 
-3.7.1 Implementing Sentinel-Controlled Iteration
+      * 3.7.1 Implementing Sentinel-Controlled Iteration
 
-3.7.2 Explicitly and Implicitly Converting Between Primitive Types
+      * 3.7.2 Explicitly and Implicitly Converting Between Primitive Types
 
-3.7.3 Formatting Floating-Point Numbers
+      * 3.7.3 Formatting Floating-Point Numbers
 
-3.8 Nested Control Statements
+   * 3.8 Nested Control Statements
 
-3.8.1 Problem Statement
+      * 3.8.1 Problem Statement
 
-3.8.2 Implementing the Program
+      * 3.8.2 Implementing the Program
 
-3.9 Compound Assignment Operators
+   * 3.9 Compound Assignment Operators
 
-3.10 Increment and Decrement Operators
+   * 3.10 Increment and Decrement Operators
 
-3.11 Primitive Types
+   * 3.11 Primitive Types
 
-3.12 Objects-Natural Case Study: Super-Sized Integers
+   * 3.12 Objects-Natural Case Study: Super-Sized Integers
 
-3.13 Wrap-Up
+   * 3.13 Wrap-Up
 
-4 Control Statements: Part 2
+* 4 Control Statements: Part 2
 
-4.1 Introduction
+   * 4.1 Introduction
 
-4.2 Essentials of Counter-Controlled Iteration
+   * 4.2 Essentials of Counter-Controlled Iteration
 
-4.3 for Iteration Statement
+   * 4.3 for Iteration Statement
 
-4.4 Examples Using the for Statement
+   * 4.4 Examples Using the for Statement
 
-4.5 Summing the Even Integers from 2 to 20 with the for Statement
+   * 4.5 Summing the Even Integers from 2 to 20 with the for Statement
 
-4.6 Calculating Compound Interest with the for Statement
+   * 4.6 Calculating Compound Interest with the for Statement
 
-4.7 do…while Iteration Statement
+   * 4.7 do…while Iteration Statement
 
-4.8 switch Multiple-Selection Statement
+   * 4.8 switch Multiple-Selection Statement
 
-4.9 break and continue Statements
+   * 4.9 break and continue Statements
 
-4.10 Logical Operators
+   * 4.10 Logical Operators
 
-4.10.1 Conditional AND (&&) Operator
+      * 4.10.1 Conditional AND (&&) Operator
 
-4.10.2 Conditional OR (||) Operator
+      * 4.10.2 Conditional OR (||) Operator
 
-4.10.3 Short-Circuit Evaluation of Complex Conditions
+      * 4.10.3 Short-Circuit Evaluation of Complex Conditions
 
-4.10.4 Boolean Logical AND (&) and Inclusive OR (|) Operators
+      * 4.10.4 Boolean Logical AND (&) and Inclusive OR (|) Operators
 
-4.10.5 Boolean Logical Exclusive OR (^) Operator
+      * 4.10.5 Boolean Logical Exclusive OR (^) Operator
 
-4.10.6 Logical Complement (!) Operator
+      * 4.10.6 Logical Complement (!) Operator
 
-4.10.7 Example: Generating Logical-Operator Truth Tables
+      * 4.10.7 Example: Generating Logical-Operator Truth Tables
 
-4.11 Objects-Natural Case Study: Precise Monetary Calculations with Java API Class BigDecimal
+   * 4.11 Objects-Natural Case Study: Precise Monetary Calculations with Java API Class BigDecimal
 
-4.12 Wrap-Up
+   * 4.12 Wrap-Up
 
-5 Methods
+* 5 Methods
 
-5.1 Introduction
+   * 5.1 Introduction
 
-5.2 Declaring Methods
+   * 5.2 Declaring Methods
 
-5.3 Notes on Declaring and Using Methods
+   * 5.3 Notes on Declaring and Using Methods
 
-5.4 Case Study: Die Rolling Simulation with Random-Number Generation
+   * 5.4 Case Study: Die Rolling Simulation with Random-Number Generation
 
-5.5 Case Study: A Game of Chance; Introducing enums
+   * 5.5 Case Study: A Game of Chance; Introducing enums
 
-5.6 Scope of Declarations
+   * 5.6 Scope of Declarations
 
-5.7 Method Overloading
+   * 5.7 Method Overloading
 
-5.8 Class Math: static Methods and Variables
+   * 5.8 Class Math: static Methods and Variables
 
-5.9 Java API Packages
+   * 5.9 Java API Packages
 
-5.10 Method-Call Stack and Activation Records
+   * 5.10 Method-Call Stack and Activation Records
 
-5.11 Argument Promotion and Casting
+   * 5.11 Argument Promotion and Casting
 
-5.12 Objects-Natural Case Study: Java Date/Time API
+   * 5.12 Objects-Natural Case Study: Java Date/Time API
 
-5.12.1 Data/Time Manipulations
+      * 5.12.1 Data/Time Manipulations
 
-5.12.2 Running the Program for a Different Locale Than Your Own
+      * 5.12.2 Running the Program for a Different Locale Than Your Own
 
-5.13 Wrap-Up
+   * 5.13 Wrap-Up
 
-6 Arrays and ArrayLists
+* 6 Arrays and ArrayLists
 
-6.1 Introduction
+   * 6.1 Introduction
 
-6.2 Primitive Types vs. Reference Types
+   * 6.2 Primitive Types vs. Reference Types
 
-6.3 Arrays
+   * 6.3 Arrays
 
-6.4 Declaring and Creating Arrays
+   * 6.4 Declaring and Creating Arrays
 
-6.5 Creating and Initializing an Array
+   * 6.5 Creating and Initializing an Array
 
-6.6 Array Initializers
+   * 6.6 Array Initializers
 
-6.7 Calculating Array Element Values
+   * 6.7 Calculating Array Element Values
 
-6.8 Totaling Array Elements
+   * 6.8 Totaling Array Elements
 
-6.9 Intro to Visualization: Using a Bar Chart to Display Array Data Graphically
+   * 6.9 Intro to Visualization: Using a Bar Chart to Display Array Data Graphically
 
-6.10 Using Array Elements as Counters
+   * 6.10 Using Array Elements as Counters
 
-6.11 Analyzing Survey Results
+   * 6.11 Analyzing Survey Results
 
-6.12 Exception Handling
+   * 6.12 Exception Handling
 
-6.12.1 The try Statement
+      * 6.12.1 The try Statement
 
-6.12.2 The catch Block
+      * 6.12.2 The catch Block
 
-6.13 Enhanced for Statement: Totaling Array Elements
+   * 6.13 Enhanced for Statement: Totaling Array Elements
 
-6.14 Passing Arrays to Methods
+   * 6.14 Passing Arrays to Methods
 
-6.15 Pass-By-Value vs. Pass-By-Reference
+   * 6.15 Pass-By-Value vs. Pass-By-Reference
 
-6.16 Multidimensional Arrays
+   * 6.16 Multidimensional Arrays
 
-6.17 Variable-Length Argument Lists
+   * 6.17 Variable-Length Argument Lists
 
-6.18 Command-Line Arguments
+   * 6.18 Command-Line Arguments
 
-6.19 Class Arrays
+   * 6.19 Class Arrays
 
-6.20 Objects-Natural Case Study: Intro to Collections and Class ArrayList
+   * 6.20 Objects-Natural Case Study: Intro to Collections and Class ArrayList
 
-6.21 Wrap-Up
+   * 6.21 Wrap-Up
 
-7 Strings, NLP and Regex: Generative AI Foundations
+* 7 Strings, NLP and Regex: Generative AI Foundations
 
-7.1 Introduction
+   * 7.1 Introduction
 
-7.2 Fundamentals of Characters and Strings
+   * 7.2 Fundamentals of Characters and Strings
 
-7.3 Class String
+   * 7.3 Class String
 
-7.3.1 Creating String Objects
+      * 7.3.1 Creating String Objects
 
-7.3.2 String Methods length, charAt and getChars
+      * 7.3.2 String Methods length, charAt and getChars
 
-7.3.3 Comparing Strings
+      * 7.3.3 Comparing Strings
 
-7.3.4 Locating Characters and Substrings in Strings
+      * 7.3.4 Locating Characters and Substrings in Strings
 
-7.3.5 Extracting Substrings from Strings
+      * 7.3.5 Extracting Substrings from Strings
 
-7.3.6 Concatenating Strings
+      * 7.3.6 Concatenating Strings
 
-7.3.7 Miscellaneous String Methods
+      * 7.3.7 Miscellaneous String Methods
 
-7.3.8 String Method valueOf
+      * 7.3.8 String Method valueOf
 
-7.4 Class StringBuilder
+   * 7.4 Class StringBuilder
 
-7.4.1 Creating StringBuilder Objects
+      * 7.4.1 Creating StringBuilder Objects
 
-7.4.2 Methods length, capacity, setLength and ensureCapacity
+      * 7.4.2 Methods length, capacity, setLength and ensureCapacity
 
-7.4.3 Methods charAt, setCharAt, getChars and reverse
+      * 7.4.3 Methods charAt, setCharAt, getChars and reverse
 
-7.4.4 append Methods
+      * 7.4.4 append Methods
 
-7.4.5 Insertion and Deletion Methods
+      * 7.4.5 Insertion and Deletion Methods
 
-7.5 Class Character
+   * 7.5 Class Character
 
-7.5.1 Character Testing and Case Conversion Methods
+      * 7.5.1 Character Testing and Case Conversion Methods
 
-7.5.2 Character/Digit Conversions
+      * 7.5.2 Character/Digit Conversions
 
-7.5.3 Other Character Methods
+      * 7.5.3 Other Character Methods
 
-7.6 Tokenizing Strings
+   * 7.6 Tokenizing Strings
 
-7.7 Intro to Natural Language Processing (NLP)—at the Root of Generative AI
+   * 7.7 Intro to Natural Language Processing (NLP)—at the Root of Generative AI
 
-7.8 Objects-Natural Case Study: Intro to Regular Expressions in NLP
+   * 7.8 Objects-Natural Case Study: Intro to Regular Expressions in NLP
 
-7.8.1 Matching Complete Strings to Patterns
+      * 7.8.1 Matching Complete Strings to Patterns
 
-7.8.2 Replacing Substrings
+      * 7.8.2 Replacing Substrings
 
-7.8.3 Searching for Matches with Classes Pattern and Matcher
+      * 7.8.3 Searching for Matches with Classes Pattern and Matcher
 
-7.8.4 Simple Data Wrangling Steps Used to Prepare Text for Training NLP and Generative AI Models
+      * 7.8.4 Simple Data Wrangling Steps Used to Prepare Text for Training NLP and Generative AI Models
 
-7.9 Objects-Natural Security Case Study: pMa5tfEKwk59dTvC04Ft1IFQz9mEXnkfYXZwxk4ujGE=
+   * 7.9 Objects-Natural Security Case Study: pMa5tfEKwk59dTvC04Ft1IFQz9mEXnkfYXZwxk4ujGE=
 
-7.10 Wrap-Up
+   * 7.10 Wrap-Up
 
-8 Real-World Modeling with Custom Classes
+* 8 Real-World Modeling with Custom Classes
 
-8.1 Introduction
+   * 8.1 Introduction
 
-8.2 Instance Variables, set Methods and get Methods
+   * 8.2 Instance Variables, set Methods and get Methods
 
-8.2.1 Account Class with an Instance Variable, and set and get Methods
+      * 8.2.1 Account Class with an Instance Variable, and set and get Methods
 
-8.2.2 AccountTest Class That Creates and Uses an Account Object
+      * 8.2.2 AccountTest Class That Creates and Uses an Account Object
 
-8.2.3 Compiling and Executing a Program with Multiple Classes
+      * 8.2.3 Compiling and Executing a Program with Multiple Classes
 
-8.2.4 Account UML Class Diagram
+      * 8.2.4 Account UML Class Diagram
 
-8.2.5 Notes on Class AccountTest
+      * 8.2.5 Notes on Class AccountTest
 
-8.2.6 Software Engineering with private Instance Variables and public set and get Methods
+      * 8.2.6 Software Engineering with private Instance Variables and public set and get Methods
 
-8.3 Default and Explicit Instance Variable Initialization
+   * 8.3 Default and Explicit Instance Variable Initialization
 
-8.4 Account Class: Initializing Objects with Constructors
+   * 8.4 Account Class: Initializing Objects with Constructors
 
-8.4.1 Declaring an Account Constructor for Custom Object Initialization
+      * 8.4.1 Declaring an Account Constructor for Custom Object Initialization
 
-8.4.2 Class AccountTest: Initializing New Account Objects
+      * 8.4.2 Class AccountTest: Initializing New Account Objects
 
-8.5 Account Class with a Balance
+   * 8.5 Account Class with a Balance
 
-8.5.1 Account Class with a BigDecimal balance Instance Variable
+      * 8.5.1 Account Class with a BigDecimal balance Instance Variable
 
-8.5.2 AccountTest Class
+      * 8.5.2 AccountTest Class
 
-8.6 Case Study: Card Shuffling and Dealing Simulation
+   * 8.6 Case Study: Card Shuffling and Dealing Simulation
 
-8.7 Case Study: Time Class
+   * 8.7 Case Study: Time Class
 
-8.8 Controlling Access to Members
+   * 8.8 Controlling Access to Members
 
-8.9 Referring to the Current Object’s Members with the this Reference
+   * 8.9 Referring to the Current Object’s Members with the this Reference
 
-8.10 Case Study: Time Class Overloaded Constructors
+   * 8.10 Case Study: Time Class Overloaded Constructors
 
-8.11 Default and No-Argument Constructors
+   * 8.11 Default and No-Argument Constructors
 
-8.12 Notes on Set and Get Methods
+   * 8.12 Notes on Set and Get Methods
 
-8.13 Composition
+   * 8.13 Composition
 
-8.14 enum Types
+   * 8.14 enum Types
 
-8.15 Garbage Collection
+   * 8.15 Garbage Collection
 
-8.16 static Class Members
+   * 8.16 static Class Members
 
-8.17 static Import
+   * 8.17 static Import
 
-8.18 final Instance Variables
+   * 8.18 final Instance Variables
 
-8.19 Package Access
+   * 8.19 Package Access
 
-8.20 record Classes
+   * 8.20 record Classes
 
-8.20.1 Pattern Matching for switch Expressions
+      * 8.20.1 Pattern Matching for switch Expressions
 
-8.20.2 Decomposing records in switch Expressions
+      * 8.20.2 Decomposing records in switch Expressions
 
-8.21 Wrap-Up
+   * 8.21 Wrap-Up
 
-9 Real-World Modeling with Inheritance, Polymorphism & Interfaces
+* 9 Real-World Modeling with Inheritance, Polymorphism & Interfaces
 
-9.1 Introduction
+   * 9.1 Introduction
 
-9.2 Superclasses and Subclasses
+   * 9.2 Superclasses and Subclasses
 
-9.3 Relationship Between Superclasses and Subclasses
+   * 9.3 Relationship Between Superclasses and Subclasses
 
-9.3.1 Creating and Using a SalariedEmployee Class
+      * 9.3.1 Creating and Using a SalariedEmployee Class
 
-9.3.2 Creating a SalariedEmployee/SalariedCommissionEmployee Inheritance Hierarchy
+      * 9.3.2 Creating a SalariedEmployee/SalariedCommissionEmployee Inheritance Hierarchy
 
-9.4 Class Object
+   * 9.4 Class Object
 
-9.5 Intro to Polymorphism: Polymorphic Video Game
+   * 9.5 Intro to Polymorphism: Polymorphic Video Game
 
-9.6 Demonstrating Polymorphic Behavior
+   * 9.6 Demonstrating Polymorphic Behavior
 
-9.7 abstract Classes and Methods
+   * 9.7 abstract Classes and Methods
 
-9.8 Case Study: Payroll System Using Polymorphism
+   * 9.8 Case Study: Payroll System Using Polymorphism
 
-9.8.1 abstract Superclass Employee
+      * 9.8.1 abstract Superclass Employee
 
-9.8.2 Concrete Subclass SalariedEmployee
+      * 9.8.2 Concrete Subclass SalariedEmployee
 
-9.8.3 Concrete Subclass CommissionEmployee
+      * 9.8.3 Concrete Subclass CommissionEmployee
 
-9.8.4 Polymorphic Processing, Operator instanceof and Downcasting
+      * 9.8.4 Polymorphic Processing, Operator instanceof and Downcasting
 
-9.9 final Methods and Classes
+   * 9.9 final Methods and Classes
 
-9.10 Issues with Constructors Calling Instance Methods
+   * 9.10 Issues with Constructors Calling Instance Methods
 
-9.11 Creating and Using Interfaces
+   * 9.11 Creating and Using Interfaces
 
-9.11.1 Developing a Payable Hierarchy
+      * 9.11.1 Developing a Payable Hierarchy
 
-9.11.2 Interface Payable
+      * 9.11.2 Interface Payable
 
-9.11.3 Class Invoice
+      * 9.11.3 Class Invoice
 
-9.11.4 Modifying Class Employee to Implement Interface Payable
+      * 9.11.4 Modifying Class Employee to Implement Interface Payable
 
-9.11.5 Using Interface Payable to Process Invoices and Employees Polymorphically
+      * 9.11.5 Using Interface Payable to Process Invoices and Employees Polymorphically
 
-9.11.6 Some Common Java API Interfaces
+      * 9.11.6 Some Common Java API Interfaces
 
-9.12 Other Interface Features
+   * 9.12 Other Interface Features
 
 9.12.1 default Interface Methods
 
