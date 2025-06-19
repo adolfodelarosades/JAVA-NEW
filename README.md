@@ -17,6 +17,7 @@ Serie de varios cursos Java.
 # [O'Reilly](https://learning.oreilly.com)
 
 * [900 Beginning Java Objects From Concepts to Code](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/900_Beginning_Java_Objects.md)
+* [910_Java_for_Programmers-with_Generative_AI-5th-Edition](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/910_Java_for_Programmers-with_Generative_AI-5th-Edition.md)
 * [930 Professional Java for Web Applications](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/930_Professional_Java_for_Web_Applications.md)
 * [931 Real-World Java](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/931_Real_World_Java.md)
 * [980 ChatGPT for Java: A Hands-on Developer's Guide to ChatGPT and Open AI APIs](https://github.com/adolfodelarosades/JAVA-NEW/blob/main/temarios/980_ChatGPT_for_Java.md)
