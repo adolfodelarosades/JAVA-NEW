@@ -47,32 +47,32 @@ En este libro, ofrecemos una introducción amigable, contemporánea, intensiva e
 
    * Minecraft (uno de los videojuegos más populares de todos los tiempos), <sup>6</sup>
 
-   <hr>
-   6. «Minecraft», Wikipedia. Última modificación: 20 de enero de 2025. Consultado el 20 de enero de 2025 https://en.wikipedia.org/wiki/Minecraft.
+<hr>
+6. «Minecraft», Wikipedia. Última modificación: 20 de enero de 2025. Consultado el 20 de enero de 2025 https://en.wikipedia.org/wiki/Minecraft.
 
-   * plataformas de comercio financiero (por ejemplo, el SDK en tiempo real LSEG 7 )
+* plataformas de comercio financiero (por ejemplo, el SDK en tiempo real LSEG <sup>7</sup> )
+<hr>
+7. Desarrolladores de LSEG. “SDK en tiempo real para Java”. Consultado el 20 de enero de 2025 https://developers.lseg.com/en/api-catalog/real-time-opnsrc/rt-sdk-java.
 
-   7. Desarrolladores de LSEG. “SDK en tiempo real para Java”. Consultado el 20 de enero de 2025 https://developers.lseg.com/en/api-catalog/real-time-opnsrc/rt-sdk-java.
+* API de la Administración Federal de Aviación (FAA) para información de vuelos y aeropuertos, <sup>8</sup>
+<hr>
+8. Administración Federal de Aviación, Repositorio de GitHub. Consultado el 20 de enero de 2025 https://github.com/Federal-Aviation-Administration.
 
-   * API de la Administración Federal de Aviación (FAA) para información de vuelos y aeropuertos, <sup>8</sup>
+* Desarrollo de aplicaciones móviles Android <sup>9</sup> —Android es el sistema operativo líder para dispositivos móviles, con una participación de mercado del 73,5% en todo el mundo, <sup>10</sup>
+<hr>
+9. “Bienvenidos a Android Developers”. Consultado el 15 de enero de 2025 https://developer.android.com/.
 
-   8. Administración Federal de Aviación, Repositorio de GitHub. Consultado el 20 de enero de 2025 https://github.com/Federal-Aviation-Administration.
+10. “Cuota de mercado mundial de sistemas operativos móviles”. StatCounter. Consultado el 20 de enero de 2025 https://gs.statcounter.com/os-market-share/mobile/worldwide.
 
-   * Desarrollo de aplicaciones móviles Android <sup>9</sup> —Android es el sistema operativo líder para dispositivos móviles, con una participación de mercado del 73,5% en todo el mundo, <sup>10</sup>
+* Software<sup>11</sup> del rover de la NASA en Marte
+<hr>
+11. Ross, Philip. “Java ejecuta un rover marciano controlado remotamente”. CNET. Java 16, 2004. Consultado el 20 de enero de 2025 https://www.cnet.com/tech/tech-industry/java-runs-remote-controlled-mars-rover/.
 
-   9. “Bienvenidos a Android Developers”. Consultado el 15 de enero de 2025 https://developer.android.com/.
+* herramientas para analizar datos genéticos de secuenciación de ADN y ARN. <sup>12</sup>
+<hr>
+12. Instituto Broad. “Introducción a GATK4”. Documentación de GATK. Actualizado el 20 de julio de 2024. Consultado el 20 de enero de 2025 https://gatk.broadinstitute.org/hc/en-us/articles/360036194592-Getting-started-with-GATK4.
 
-   10. “Cuota de mercado mundial de sistemas operativos móviles”. StatCounter. Consultado el 20 de enero de 2025 https://gs.statcounter.com/os-market-share/mobile/worldwide.
-
-   * Software<sup>11</sup> del rover de la NASA en Marte
-
-   11. Ross, Philip. “Java ejecuta un rover marciano controlado remotamente”. CNET. Java 16, 2004. Consultado el 20 de enero de 2025 https://www.cnet.com/tech/tech-industry/java-runs-remote-controlled-mars-rover/.
-
-   * herramientas para analizar datos genéticos de secuenciación de ADN y ARN. <sup>12</sup>
-
-   12. Instituto Broad. “Introducción a GATK4”. Documentación de GATK. Actualizado el 20 de julio de 2024. Consultado el 20 de enero de 2025 https://gatk.broadinstitute.org/hc/en-us/articles/360036194592-Getting-started-with-GATK4.
-
-Otros usos de Java enumerados por los populares chatbots genAI ChatGPT, 13 Gemini, 14 Claude 15 y Perplexity que utilizarás a lo largo de este libro 16 incluyen:
+Otros usos de Java enumerados por los populares chatbots genAI ChatGPT, <sup>13</sup> Gemini, <sup>14</sup> Claude <sup>15</sup> y Perplexity que utilizarás a lo largo de este libro <sup>16</sup> incluyen:
 
 * aplicaciones GUI de escritorio (como hacemos a partir de JavaFX en los capítulos 15 a 17 ),
 
