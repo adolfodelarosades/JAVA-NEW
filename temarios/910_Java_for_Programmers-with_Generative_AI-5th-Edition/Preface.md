@@ -7,6 +7,7 @@
 <hr>
 1. Jensen Huang, conferencia principal de NVIDIA COMPUTEX 2024, 2 de junio de 2024. Consultado el 2 de marzo de 2025. https://www.youtube.com/watch?v=pKXDVsWZmUU.
 
+
 Bienvenido a ***Java for Programmers with Generative AI, Fifth Edition***. En este prefacio, presentamos el alma del libro. El tema clave de esta edición es el **apalancamiento(leverage)**. Aprenderás programación Java de forma más rápida, amplia y profunda con tres de las últimas metodologías pedagógicas complementarias. Harás cosas más efectivas que con enfoques de aprendizaje anteriores y estarás mejor preparado para afrontar los retos de programación y desarrollo de software que encontrarás en tu carrera profesional.
 
 * **Powerful: We use code to teach code.** Aprenderás con nuestro enfoque tradicional de código en vivo. Aprovecharás tu experiencia de aprendizaje y dominarás los fundamentos de Java al sumergirte en cientos de ejemplos de código completos y funcionales con resultados significativos.
@@ -45,8 +46,7 @@ En este libro, ofrecemos una introducción amigable, contemporánea, intensiva e
 
 5. Respuesta de ChatGPT a «Enumerar cosas interesantes para las que se ha usado Java, como el rover de Marte». 15 de enero de 2025. https://chatgpt.comEditamos la respuesta.
 
-   * Minecraft (uno de los videojuegos más populares de todos los tiempos), <sup>6</sup>
-
+* Minecraft (uno de los videojuegos más populares de todos los tiempos), <sup>6</sup>
 <hr>
 6. «Minecraft», Wikipedia. Última modificación: 20 de enero de 2025. Consultado el 20 de enero de 2025 https://en.wikipedia.org/wiki/Minecraft.
 
