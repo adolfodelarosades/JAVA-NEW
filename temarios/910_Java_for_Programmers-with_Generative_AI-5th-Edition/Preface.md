@@ -120,67 +120,71 @@ Otros usos de Java enumerados por los populares chatbots genAI ChatGPT, <sup>13<
 
 La arquitectura modular del libro (ver la “Descripción general de alto nivel” a continuación) lo hace apropiado para varios públicos:
 
-Cursos de formación profesional en programación Java, introductorios e intermedios, basados ​​en las recomendaciones curriculares de las sociedades profesionales ACM e IEEE . 17
+* Cursos de formación profesional en programación Java, introductorios e intermedios, basados ​​en las recomendaciones curriculares de las sociedades profesionales ACM e IEEE. <sup>17</sup>
+
+<hr>
 
 17. ACM/IEEE (Assoc. Comput. Mach./Inst. Electr. Electron. Eng.). 2023. Computer Science Curricula 2023 (Nueva York: ACM). Consultado el 18 de enero de 2025 https://csed.acm.org/wp-content/uploads/2023/03/Version-Beta-v2.pdf.
 
-Programadores con experiencia en otros lenguajes que deben aprender Java para utilizarlo en próximos proyectos.
+* Programadores con experiencia en otros lenguajes que deben aprender Java para utilizarlo en próximos proyectos.
 
-Programadores que saben algo de Java y necesitan aprender las últimas características y modismos de Java para prepararse para próximos proyectos.
+* Programadores que saben algo de Java y necesitan aprender las últimas características y modismos de Java para prepararse para próximos proyectos.
 
-También le ayudará a prepararse para la mayoría de los temas cubiertos por el examen de certificación Oracle Java SE (Standard Edition) Developer Professional . 18 , 19
+También le ayudará a prepararse para la mayoría de los temas cubiertos por el examen de certificación Oracle Java SE (Standard Edition) Developer Professional. <sup>18, 19</sup>
+
+<hr>
 
 18. Jeanne Boyarsky y Scott Selikoff, Guía de estudio para desarrolladores de Java SE 21 de Oracle Certified Professional (OCP) (Nueva York: Wiley, 2024). [Jeanne Boyarsky fue revisora ​​técnica de Java para programadores con IA generativa, 5/e .]
 
 19 . “Examen: Java SE 21 Developer Professional (1Z0-830)”. Consultado el 18 de enero de 2025. https://mylearn.oracle.com/ou/exam/java-se-21-developer-professional-1z0-830/40805/139080/220555.
 
-Enfoque de código en vivo
-El enfoque de código en vivo, característico de Deitel, es fundamental en el libro . En lugar de fragmentos de código, aprenderás Java de forma práctica con más de 200 ejemplos y casos prácticos totalmente codificados, con resultados en vivo provenientes de la informática, la ciencia de datos, la IA y otros campos. Lee la sección "Antes de empezar" que sigue a este prefacio para aprender a descargar los ejemplos de código y configurar tu ordenador Windows o macOS para ejecutarlos.
+### Enfoque de código en vivo
+
+El enfoque de código en vivo, característico de Deitel, es fundamental en el libro. En lugar de fragmentos de código, aprenderás Java de forma práctica con más de 200 ejemplos y casos prácticos totalmente codificados, con resultados en vivo provenientes de la informática, la ciencia de datos, la IA y otros campos. Lee la sección "Antes de empezar" que sigue a este prefacio para aprender a descargar los ejemplos de código y configurar tu ordenador Windows o macOS para ejecutarlos.
 
 La sección 1.7 del capítulo 1 muestra cómo compilar y ejecutar los ejemplos de código con la versión gratuita y de código abierto OpenJDK del Java Development Kit. Ejecutar cada programa en paralelo con la lectura del texto hará que su experiencia de aprendizaje de Java sea aún más emocionante. También ofrecemos pruebas de las siguientes herramientas populares para desarrolladores de Java en https://deitel.com/javafp5:
 
-Edición comunitaria JetBrains IntelliJ IDEA
+* JetBrains IntelliJ IDEA Community Edition
+* The Eclipse IDE for Java Developers
+* Microsoft Visual Studio Code
 
-El IDE de Eclipse para desarrolladores de Java
-
-Código de Microsoft Visual Studio
-
-Java para programadores con IA generativa, 5/e
+#### Java para programadores con IA generativa, 5/e
 
 Descripción general de alto nivel
 
+![image](https://github.com/user-attachments/assets/e4028c2d-8a76-4954-a7d9-9ee7e6e0e453)
 
-Paradigmas de programación
+#### Paradigmas de programación
 
-Procedimental ( Capítulos 2 – 7 ), orientado a objetos ( Capítulos 8 – 10 ), genérico ( Capítulos 12 y 13 ), funcional ( Capítulo 14 ), concurrente ( Capítulo 18 ) y mejorado con genAI ( Capítulo 19 ).
+Procedural (Chapters 2–7), object-oriented (Chapters 8–10), generic (Chapters 12 and 13), functional (Chapter 14), concurrent (Chapter 18) and genAI-enhanced (Chapter 19).
 
-Parte 1: Introducción
+#### Parte 1: Introducción
 
-Capítulo 1 , Introducción, Pruebas de una aplicación Java e IA generativa: Internet y la Web. «Nube». Internet de las cosas (IoT). Metaverso. Introducción a la IA/genAI. Pruebas del Kit de Desarrollo de Java (JDK). 27 ejercicios de genAI .
+**Capítulo 1, Introducción, Pruebas de una aplicación Java e IA generativa**: Internet y la Web. «Nube». Internet de las cosas (IoT). Metaverso. Introducción a la IA/genAI. Pruebas del Kit de Desarrollo de Java (JDK). 27 ejercicios de genAI .
 
-Capítulo 2 , Introducción a la Programación Java : Fundamentos de Java. Entrada/Salida. Tipos primitivos. Aritmética. Toma de decisiones. Caso práctico de Objetos Naturales (ON): String clase . 12 ejercicios de genAI.
+**Capítulo 2, Introducción a la Programación Java**: Fundamentos de Java. Entrada/Salida. Tipos primitivos. Aritmética. Toma de decisiones. Caso práctico de Objetos Naturales (ON): String clase. 12 ejercicios de genAI.
 
-Parte 2: Fundamentos de programación adicionales
+#### Parte 2: Fundamentos de programación adicionales
 
-Capítulo 3 , Sentencias de control: Parte 1 —if,if/else,while. Iteración controlada por contador/controlada por centinela. Sentencias de control anidadas. Caso práctico de ON: BigInteger para enteros de gran tamaño . 16 ejercicios de indicaciones de genAI.
+**Capítulo 3, Sentencias de control: Parte 1** — `if`, `if/else`, `while`. Iteración controlada por contador/controlada por centinela. Sentencias de control anidadas. Caso práctico de ON: BigInteger para enteros de gran tamaño. 16 ejercicios de indicaciones de genAI.
 
-Capítulo 4 , Sentencias de control: Parte 2 —for,do/while,switch,break,continueOperadores lógicos. Caso práctico de ON: BigDecimal para cálculos monetarios precisos . 13 indicaciones de genAI.
+**Capítulo 4, Sentencias de control: Parte 2** —`for`, `do/while`, `switch`, `break`, `continue` Operadores lógicos. Caso práctico de ON: BigDecimal para cálculos monetarios precisos. 13 indicaciones de genAI.
 
-Capítulo 5 , Métodos : Métodos personalizados. Números aleatorios. Simulación. Caso práctico de ON: API de fecha/hora . 16 ejercicios con indicaciones de genAI.
+**Capítulo 5, Métodos**: Métodos personalizados. Números aleatorios. Simulación. Caso práctico de ON: API de fecha/hora. 16 ejercicios con indicaciones de genAI.
 
-Capítulo 6 , Matrices y estructuras de ArrayListdatos . Matrices integradas. Caso práctico de ON: ArrayList para matrices redimensionables dinámicamente . 28 ejercicios de indicaciones de genAI.
+**Capítulo 6, Arrays y ArrayLists**. Matrices integradas. Caso práctico de ON: `ArrayList` para matrices redimensionables dinámicamente. 28 ejercicios de indicaciones de genAI.
 
-Capítulo 7 , Cadenas, PLN y expresiones regulares: Fundamentos de IA generativa —String,Character,StringBuilderclases. Introducción al procesamiento del lenguaje natural (PLN). Casos prácticos de ON: 1. Expresiones regulares para la coincidencia de patrones en texto , 2. Protección de datos con criptografía de clave privada AES . 22 ejercicios de genAI.
+**Capítulo 7, Strings, NLP and Regex: Generative AI Foundations**:  — clases `String`, `Character`, `StringBuilder`. Introducción al procesamiento del lenguaje natural (PLN). Casos prácticos de ON: 1. Expresiones regulares para la coincidencia de patrones en texto, 2. Protección de datos con criptografía de clave privada AES. 22 ejercicios de genAI.
 
-Parte 3: Programación orientada a objetos
+#### Parte 3: Programación orientada a objetos
 
-Capítulo 8 , Modelado del mundo real con clases personalizadas : Creación de clases valiosas.AccountCaso práctico de clase. Simulación de barajar y repartir cartas.TimeControl de acceso a miembros de clase. Constructores. Métodos set / get . Validación de datos. Lanzamiento de excepciones.static33finalejerciciosrecordcon indicaciones de genAI.
+**Capítulo 8, Modelado del mundo real con clases personalizadas**: Creación de clases valiosas. Caso práctico de clase `Account`. Simulación de barajar y repartir cartas. `Time` Control de acceso a miembros de clase. Constructores. Métodos set/get . Validación de datos. Lanzamiento de excepciones. `static` y `final` class members. record classes. 33  ejercicios de genAI.
 
-Capítulo 9 , Modelado del mundo real con herencia, polimorfismo e interfaces : Jerarquías de herencia. Polimorfismo en tiempo de ejecución. Relación de herencia -es-una vs. relación de composición -tiene- una. Interfaces. Programación para una interfaz, no para una implementación. Inyección de dependencias.sealedClases e interfaces. 31 ejercicios de indicaciones de genAI.
+**Capítulo 9, Modelado del mundo real con herencia, polimorfismo e interfaces**: Jerarquías de herencia. Polimorfismo en tiempo de ejecución. Relación de herencia -es-una vs. relación de composición -tiene- una. Interfaces. Programación para una interfaz, no para una implementación. Inyección de dependencias. `sealed` Clases e interfaces. 31 ejercicios de indicaciones de genAI.
 
-Capítulo 10 , Manejo de Excepciones: Una Mirada Más Profunda —tryDeclaración para capturar y manejar excepciones.ThrowableJerarquía. Excepciones verificadas y no verificadas.tryDeclaración con recursos. 30 ejercicios con indicaciones de genAI.
+**Capítulo 10, Manejo de Excepciones**: Una Mirada Más Profunda —Declaración `try` para capturar y manejar excepciones. `Throwable` Jerarquía. Excepciones verificadas y no verificadas.Declaración `try` con recursos. 30 ejercicios con indicaciones de genAI.
 
-Capítulo 11 , Archivos, flujos de E/S, serialización JSON y archivos CSV: Persistencia de datos. Archivos de texto vs. binarios. Clases NIO. Recuperación de información de archivos/directorios.FormatterSerialización JSON (Notación de Objetos JavaScript). Invocación de un servicio web OpenWeatherMap conjava.net.httpcaracterísticas. Formato de archivo CSV (valores separados por comas). Conjunto de datos CSV del desastre del Titanic y análisis básico de datos. Caso práctico de ON: Protección de datos y privacidad del usuario con criptografía de clave pública RSA . 38 ejercicios de indicaciones de genAI.
+**Capítulo 11, Files, I/O Streams, JSON Serialization & CSV Files**: Persistencia de datos. Archivos de texto vs. binarios. Clases NIO. Recuperación de información de archivos/directorios. Formatter Serialización JSON (Notación de Objetos JavaScript). Invocación de un servicio web OpenWeatherMap conjava.net.httpcaracterísticas. Formato de archivo CSV (valores separados por comas). Conjunto de datos CSV del desastre del Titanic y análisis básico de datos. Caso práctico de ON: Protección de datos y privacidad del usuario con criptografía de clave pública RSA . 38 ejercicios de indicaciones de genAI.
 
 Parte 4: Estructuras de datos, colecciones genéricas, lambdas y secuencias
 
