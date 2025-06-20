@@ -5,7 +5,7 @@
 —Jensen Huang, CEO de NVIDIA
 
 <hr>
-1 . Jensen Huang, conferencia principal de NVIDIA COMPUTEX 2024, 2 de junio de 2024. Consultado el 2 de marzo de 2025. https://www.youtube.com/watch?v=pKXDVsWZmUU.
+1. Jensen Huang, conferencia principal de NVIDIA COMPUTEX 2024, 2 de junio de 2024. Consultado el 2 de marzo de 2025. https://www.youtube.com/watch?v=pKXDVsWZmUU.
 
 Bienvenido a ***Java for Programmers with Generative AI, Fifth Edition***. En este prefacio, presentamos el alma del libro. El tema clave de esta edición es el **apalancamiento(leverage)**. Aprenderás programación Java de forma más rápida, amplia y profunda con tres de las últimas metodologías pedagógicas complementarias. Harás cosas más efectivas que con enfoques de aprendizaje anteriores y estarás mejor preparado para afrontar los retos de programación y desarrollo de software que encontrarás en tu carrera profesional.
 
@@ -15,8 +15,7 @@ Bienvenido a ***Java for Programmers with Generative AI, Fifth Edition***. En es
 
 * **Most powerful: We use generative AI to teach generative AI.** Como novedad en esta edición, dominarás **genAI**, el conjunto clave de tecnologías de inteligencia artificial que potencian tu creatividad. En los ejemplos y ejercicios de genAI, usarás indicaciones y crearás programas que producen texto original, código Java, imágenes, audio, voz, música e incluso vídeo.
 
- 
- 
+
 #### Una anécdota personal del coautor Harvey Deitel
 
 En la década de 1970, un amigo me sugirió impartir un curso de introducción a la informática en una universidad local. En el segmento sobre la jerarquía de los tipos de lenguajes de programación, desde lenguajes máquina de bajo nivel hasta lenguajes ensambladores de nivel intermedio y lenguajes de alto nivel, en cada uno de los cuales programé, expliqué que la programación se vuelve más productiva a medida que se asciende en esta jerarquía. Uno se aleja de los detalles básicos del hardware de la computadora y se acerca al dominio de la aplicación, donde se piensa en términos de los problemas del mundo real que se intentan resolver. Las declaraciones individuales en estos lenguajes se vuelven más potentes a medida que se asciende en la jerarquía, **lo que potencia la capacidad de resolver problemas más desafiantes con mayor rapidez y, al mismo tiempo, generar soluciones mejor diseñadas**.
@@ -25,7 +24,7 @@ Los estudiantes sentían curiosidad y preguntaban hacia dónde se dirigía todo 
 
 Eso fue en la década de 1970. Luego, en las décadas de 1980 y 1990, la programación orientada a objetos, el modelo de programación clave de Java, irrumpió en escena. Los objetos provienen de "blueprints-planos" llamados clases. Casi cualquier sustantivo o concepto puede ser representado por una clase. Hay, por supuesto, un gran número de ellos en el mundo real. Los programadores comenzaron a construir extensas libraries de clases, aprovechando aún más el proceso de desarrollo de software. Cuando aparecieron las primeras versiones de Java a mediados de la década de 1990, notablemente, eran gratuitas y acompañadas de cientos de potentes clases preconstruidas, lo que facilitó a los programadores crear rápidamente aplicaciones significativas en dominios clave como gráficos, GUI, concurrencia, redes de Internet, estructuras de datos, bases de datos y mucho más. Muchas de estas clases tenían cientos o miles de líneas de código, pero para crear un objeto de una clase, un programador típicamente tenía que escribir solo una línea directa de código y luego usar unas pocas sentencias breves para hacer que ese objeto "se pavoneara". Esto representó una capacidad de programación de muy alto nivel aún más cercana al dominio del problema.
 
-Mientras tanto, el campo de la IA evolucionaba rápidamente desde sus inicios en la década de 1950. Sin embargo, no fue hasta que el artículo de investigación de Google de 2017, «Attention is All You Need» 2, definió el modelo transformador que despegó el auge actual de la IA. Esta es la raíz de los grandes modelos de lenguaje actuales, que impulsan los chatbots y las herramientas genAI que utilizará a lo largo de este libro.
+Mientras tanto, el campo de la IA evolucionaba rápidamente desde sus inicios en la década de 1950. Sin embargo, no fue hasta que el artículo de investigación de Google de 2017, «Attention is All You Need»<sup>2</sup>, definió el modelo transformador que despegó el auge actual de la IA. Esta es la raíz de los grandes modelos de lenguaje actuales, que impulsan los chatbots y las herramientas genAI que utilizará a lo largo de este libro.
 
 <hr>
 2. Ashish Vaswani et al., “Attention Is All You Need”. Preimpresión de arXiv, arXiv:1706.03762, 2017. Consultado el 31 de enero de 2025 https://arxiv.org/abs/1706.03762.
@@ -46,63 +45,65 @@ En este libro, ofrecemos una introducción amigable, contemporánea, intensiva e
 
 5. Respuesta de ChatGPT a «Enumerar cosas interesantes para las que se ha usado Java, como el rover de Marte». 15 de enero de 2025. https://chatgpt.comEditamos la respuesta.
 
-Minecraft (uno de los videojuegos más populares de todos los tiempos), 6
+   * Minecraft (uno de los videojuegos más populares de todos los tiempos), <sup>6</sup>
 
-6. «Minecraft», Wikipedia. Última modificación: 20 de enero de 2025. Consultado el 20 de enero de 2025 https://en.wikipedia.org/wiki/Minecraft.
+   <hr>
+   6. «Minecraft», Wikipedia. Última modificación: 20 de enero de 2025. Consultado el 20 de enero de 2025 https://en.wikipedia.org/wiki/Minecraft.
 
-plataformas de comercio financiero (por ejemplo, el SDK en tiempo real LSEG 7 )
+   * plataformas de comercio financiero (por ejemplo, el SDK en tiempo real LSEG 7 )
 
-7. Desarrolladores de LSEG. “SDK en tiempo real para Java”. Consultado el 20 de enero de 2025 https://developers.lseg.com/en/api-catalog/real-time-opnsrc/rt-sdk-java.
+   7. Desarrolladores de LSEG. “SDK en tiempo real para Java”. Consultado el 20 de enero de 2025 https://developers.lseg.com/en/api-catalog/real-time-opnsrc/rt-sdk-java.
 
-API de la Administración Federal de Aviación (FAA) para información de vuelos y aeropuertos, 8
+   * API de la Administración Federal de Aviación (FAA) para información de vuelos y aeropuertos, <sup>8</sup>
 
-8. Administración Federal de Aviación, Repositorio de GitHub. Consultado el 20 de enero de 2025 https://github.com/Federal-Aviation-Administration.
+   8. Administración Federal de Aviación, Repositorio de GitHub. Consultado el 20 de enero de 2025 https://github.com/Federal-Aviation-Administration.
 
-Desarrollo de aplicaciones móviles Android 9 —Android es el sistema operativo líder para dispositivos móviles, con una participación de mercado del 73,5 % en todo el mundo, 10
+   * Desarrollo de aplicaciones móviles Android <sup>9</sup> —Android es el sistema operativo líder para dispositivos móviles, con una participación de mercado del 73,5% en todo el mundo, <sup>10</sup>
 
-9. “Bienvenidos a Android Developers”. Consultado el 15 de enero de 2025 https://developer.android.com/.
+   9. “Bienvenidos a Android Developers”. Consultado el 15 de enero de 2025 https://developer.android.com/.
 
-10. “Cuota de mercado mundial de sistemas operativos móviles”. StatCounter. Consultado el 20 de enero de 2025 https://gs.statcounter.com/os-market-share/mobile/worldwide.
+   10. “Cuota de mercado mundial de sistemas operativos móviles”. StatCounter. Consultado el 20 de enero de 2025 https://gs.statcounter.com/os-market-share/mobile/worldwide.
 
-Software 11 del rover de la NASA en Marte
+   * Software<sup>11</sup> del rover de la NASA en Marte
 
-11. Ross, Philip. “Java ejecuta un rover marciano controlado remotamente”. CNET. Java 16, 2004. Consultado el 20 de enero de 2025 https://www.cnet.com/tech/tech-industry/java-runs-remote-controlled-mars-rover/.
+   11. Ross, Philip. “Java ejecuta un rover marciano controlado remotamente”. CNET. Java 16, 2004. Consultado el 20 de enero de 2025 https://www.cnet.com/tech/tech-industry/java-runs-remote-controlled-mars-rover/.
 
-herramientas para analizar datos genéticos de secuenciación de ADN y ARN. 12
+   * herramientas para analizar datos genéticos de secuenciación de ADN y ARN. <sup>12</sup>
 
-12. Instituto Broad. “Introducción a GATK4”. Documentación de GATK. Actualizado el 20 de julio de 2024. Consultado el 20 de enero de 2025 https://gatk.broadinstitute.org/hc/en-us/articles/360036194592-Getting-started-with-GATK4.
+   12. Instituto Broad. “Introducción a GATK4”. Documentación de GATK. Actualizado el 20 de julio de 2024. Consultado el 20 de enero de 2025 https://gatk.broadinstitute.org/hc/en-us/articles/360036194592-Getting-started-with-GATK4.
 
 Otros usos de Java enumerados por los populares chatbots genAI ChatGPT, 13 Gemini, 14 Claude 15 y Perplexity que utilizarás a lo largo de este libro 16 incluyen:
 
-aplicaciones GUI de escritorio (como hacemos a partir de JavaFX en los capítulos 15 a 17 ),
+* aplicaciones GUI de escritorio (como hacemos a partir de JavaFX en los capítulos 15 a 17 ),
 
-bibliotecas de desarrollo de juegos 2D y 3D multiplataforma (como FXGL, que abordaremos en una publicación de blog),
+* libraries de desarrollo de juegos 2D y 3D multiplataforma (como FXGL, que abordaremos en una publicación de blog),
 
-sistemas integrados (como tarjetas inteligentes, reproductores de Blu-ray, decodificadores de cable, impresoras y sistemas de “infoentretenimiento” para automóviles),
+* sistemas integrados (como tarjetas inteligentes, reproductores de Blu-ray, decodificadores de cable, impresoras y sistemas de “infoentretenimiento” para automóviles),
 
-software científico y educativo,
+* software científico y educativo,
 
-aplicaciones basadas en web (como los marcos Spring y Spring Boot),
+* aplicaciones basadas en web (como los frameworks Spring y Spring Boot),
 
-software de alto rendimiento del lado del servidor,
+* software de alto rendimiento del lado del servidor,
 
-Soluciones empresariales para banca y finanzas,
+* Soluciones empresariales para banca y finanzas,
 
-sistemas distribuidos a gran escala,
+* sistemas distribuidos a gran escala,
 
-robótica, y
+* robótica, y
 
-tecnologías de big data (como Hadoop, que almacenan y procesan grandes cantidades de datos).
+* tecnologías de big data (como Hadoop, que almacenan y procesan grandes cantidades de datos).
 
-13. Respuesta de ChatGPT a «Dame 100 palabras sobre los tipos de aplicaciones para las que Java es popular». 16 de enero de 2025. Editamos https://chatgpt.comla respuesta.
+13. Respuesta de ChatGPT a «Dame 100 palabras sobre los tipos de aplicaciones para las que Java es popular». 16 de enero de 2025. Editamos https://chatgpt.com la respuesta.
 
-14. Respuesta de Gemini a «Dame 100 palabras sobre los tipos de aplicaciones para las que Java es popular». 16 de enero de 2025. Editamos https://gemini.google.com/appla respuesta.
+14. Respuesta de Gemini a «Dame 100 palabras sobre los tipos de aplicaciones para las que Java es popular». 16 de enero de 2025. Editamos https://gemini.google.com/app la respuesta.
 
-15. Respuesta de Claude a «Dame 100 palabras sobre los tipos de aplicaciones para las que Java es popular». 16 de enero de 2025. Editamos https://claude.aila respuesta.
+15. Respuesta de Claude a «Dame 100 palabras sobre los tipos de aplicaciones para las que Java es popular». 16 de enero de 2025. Editamos https://claude.ai la respuesta.
 
-16. Respuesta de perplejidad a la pregunta "¿En qué tipo de aplicaciones es popular Java?", 16 de enero de 2025. Editamos https://perplexity.aila respuesta.
+16. Respuesta de perplejidad a la pregunta "¿En qué tipo de aplicaciones es popular Java?", 16 de enero de 2025. Editamos https://perplexity.ai la respuesta.
 
-Público objetivo
+### Público objetivo
+
 La arquitectura modular del libro (ver la “Descripción general de alto nivel” a continuación) lo hace apropiado para varios públicos:
 
 Cursos de formación profesional en programación Java, introductorios e intermedios, basados ​​en las recomendaciones curriculares de las sociedades profesionales ACM e IEEE . 17
