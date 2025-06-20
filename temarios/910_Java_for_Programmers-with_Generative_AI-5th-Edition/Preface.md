@@ -1,5 +1,7 @@
 # Prefacio
-Hoy, nos encontramos en el umbral de un cambio importante en la informática. La intersección de la IA y la computación acelerada redefinirá el futuro. —Jensen Huang, CEO de NVIDIA
+
+*Hoy, nos encontramos en el umbral de un cambio importante en la informática. La intersección de la IA y la computación acelerada redefinirá el futuro.* 
+—Jensen Huang, CEO de NVIDIA
 
 1 . Jensen Huang, conferencia principal de NVIDIA COMPUTEX 2024, 2 de junio de 2024. Consultado el 2 de marzo de 2025. https://www.youtube.com/watch?v=pKXDVsWZmUU.
 
