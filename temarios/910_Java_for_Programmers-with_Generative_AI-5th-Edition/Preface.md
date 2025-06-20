@@ -5,6 +5,7 @@
 —Jensen Huang, CEO de NVIDIA
 
 <hr>
+
 1. Jensen Huang, conferencia principal de NVIDIA COMPUTEX 2024, 2 de junio de 2024. Consultado el 2 de marzo de 2025. https://www.youtube.com/watch?v=pKXDVsWZmUU.
 
 
@@ -28,6 +29,7 @@ Eso fue en la década de 1970. Luego, en las décadas de 1980 y 1990, la program
 Mientras tanto, el campo de la IA evolucionaba rápidamente desde sus inicios en la década de 1950. Sin embargo, no fue hasta que el artículo de investigación de Google de 2017, «Attention is All You Need»<sup>2</sup>, definió el modelo transformador que despegó el auge actual de la IA. Esta es la raíz de los grandes modelos de lenguaje actuales, que impulsan los chatbots y las herramientas genAI que utilizará a lo largo de este libro.
 
 <hr>
+
 2. Ashish Vaswani et al., “Attention Is All You Need”. Preimpresión de arXiv, arXiv:1706.03762, 2017. Consultado el 31 de enero de 2025 https://arxiv.org/abs/1706.03762.
 
 En **noviembre de 2022, OpenAI lanzó ChatGPT**, alcanzando un millón de usuarios en cinco días y 100 millones en dos meses. **Ninguna otra aplicación se había extendido tanto en tan poco tiempo, mejorando a la vez la productividad de los usuarios y aprovechando su capacidad para que las computadoras realicen tareas realmente interesantes y potentes**.
